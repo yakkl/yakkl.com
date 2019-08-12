@@ -1,0 +1,135 @@
+{
+  "plans": [
+    {
+      "title": "Personal",
+      "priceAnnually": 0,
+      "priceMonthly": 0,
+      "description": "",
+      "planIncludes": " .",
+      "buttonText": "Get started",
+      "buttonUrl": "https://app.yakkl.com/signup",
+      "planItems": [
+        {
+          "text": "Up to 3 collaborators per site",
+          "info": "Single-site users. Used for clients or external colleagues"
+        },
+        {
+          "text": "Unlimited sites"
+        },
+        {
+          "text": "Community support"
+        },
+        {
+          "text": "Git sync"
+        },
+        {
+          "text": "Automatic build & deploy"
+        },
+        {
+          "text": "Host anywhere"
+        },
+        {
+          "text": "Jekyll plugin support"
+        },
+        {
+          "text": "Yakkl Remote",
+          "info": "Install the Yakkl CMS on your site (mysite.com/admin)"
+        },
+        {
+          "text": "Preview in staging environment"
+        }
+      ]
+    },
+    {
+      "title": "Starter",
+      "priceAnnually": 0,
+      "priceMonthly": 9,
+      "description": "Starting at $29/month which includes your first 5 users",
+      "planIncludes": "Everything in Personal plus",
+      "buttonText": "Get started",
+      "buttonUrl": "https://app.yakkl.com/signup",
+      "planItems": [
+        {
+          "text": "Organization account",
+          "info": "Manage one group of users across all of your sites and branches"
+        },
+        {
+          "text": "Team access controls",
+          "info": "Assign organization members to teams. These teams can be added to sites with admin, developer, or editor access levels"
+        },
+        {
+          "text": "Business support",
+          "info": "Messages to our support queue will be responded to within 24 hours"
+        }
+      ]
+    },
+    {
+      "title": "Pro",
+      "priceAnnually": 0,
+      "priceMonthly": 99,
+      "description": "",
+      "planIncludes": "Everything in Starter plus",
+      "buttonText": "Contact us",
+      "buttonUrl": "/support",
+      "planItems": [
+        {
+          "text": "Single Sign-on",
+          "info": "Support for major identity providers (IdP) such as SAML, OpenID Connect, etc."
+        },
+        {
+          "text": "Access control & custom roles",
+          "info": "Setup custom roles to control who can perform certain actions"
+        },
+        {
+          "text": "Priority support",
+          "info": "Messages to our support queue are given priority and will be responded to within 12 hours"
+        },
+        {
+          "text": "Audit logs",
+          "info": "A ledger of the actions performed by users in your organization"
+        }
+      ]
+    },
+    {
+      "title": "enterprise",
+      "priceAnnually": "_",
+      "priceMonthly": "_",
+      "description": "",
+      "planIncludes": "Everything in Pro plus",
+      "buttonText": "Contact us",
+      "buttonUrl": "/support",
+      "planItems": [
+        {
+          "text": "On-premise available",
+          "info": "Run Yakkl behind your firewall (optional)"
+        },
+        {
+          "text": "Connect to on-premise Git sources",
+          "info": "Support for GitHub Enterprise, GitLab, and Bitbucket Server"
+        },
+        {
+          "text": "Live support",
+          "info": "Your team will have direct access to our engineers in a dedicated Slack channel"
+        },
+        {
+          "text": "Enterprise-level SLAs"
+        },
+        {
+          "text": "Ongoing training",
+          "info": "Training for your editors to help them achieve their content objectives"
+        },
+        {
+          "text": "Dedicated Customer Success Manager",
+          "info": "Your single point of contact to help you and your team"
+        },
+        {
+          "text": "Architectural advice",
+          "info": "Leverage our experts for setting up deployment, CI/CD, micro-services, etc."
+        },
+        {
+          "text": "Customizations and integrations"
+        }
+      ]
+    }
+  ]
+}

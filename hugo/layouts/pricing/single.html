@@ -1,0 +1,38 @@
+{{- define "json-ld" -}}
+  {{- partial "seo/json-ld/organization" . -}}
+  {{- partial "seo/json-ld/pricing" . -}}
+{{- end -}}
+{{- define "main" -}}
+  <section class="section pricing">
+    <div class="plan--top-bar">
+      <div class="container">
+        <div class="plans">
+        {{- range .Site.Data.pricing.plans -}}
+          {{- partial "components/pricing/plan-summary" . -}}
+        {{- end -}}
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="plans">
+      {{- range .Site.Data.pricing.plans -}}
+        {{- partial "components/pricing/plan" . -}}
+      {{- end -}}
+      </div>
+    </div>
+  </section>
+
+  {{- with .Params.faqs -}}
+  <section class="section faq">
+    <div class="container">
+    {{- range . -}}
+      {{- if and .headline .textline -}}
+        {{- partial "components/faq" (dict "headline" .headline "textline" .textline) -}}
+      {{- end -}}
+    {{- end -}}
+    </div>
+  </section>
+  {{- end -}}
+
+  {{- partial "components/cta/basic" -}}
+{{- end -}}

@@ -1,0 +1,19 @@
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">{{ .headline | default "Want to hear it first?" }}</h2>
+    <p class="section--sub is-center">{{ .textline | default "Subscribe to our newsletter to get the posts directly in your inbox as they get posted." }}</p>
+    <br><br>
+    {{- with .ctas -}}
+      {{- range . -}}
+      <a href="{{ .RelPermalink }}"{{ if .button }} class="button primary big"{{ end }}>{{ .textline }}</a>
+      {{- end -}}
+    {{- else -}}
+    <form action="https://www.getrevue.co/profile/yakkl/add_subscriber" method="post" id="revue-form" name="revue-form" target="_blank">
+      <div class="newsletter-signup--field form--joined form--large form--center">
+        <input class="revue-form-field" placeholder="your.name@example.com" type="email" name="member[email]" id="member_email">
+        <button type="submit" value="Subscribe" name="member[subscribe]" id="member_submit" class="button primary small">Subscribe</button>
+      </div>
+    </form>
+    {{- end -}}
+  </div>
+</section>

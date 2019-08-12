@@ -1,0 +1,83 @@
+---
+aliases:
+- "/remote/"
+title: Secure Team Collaboration
+description: Open-Source Secure Team Collaboration
+authors: []
+blocks: 
+hero:
+  headline: An Open-Source Secure Team Collaboration
+  textline: Create secure channels, topics and sub-topics to keep your team organized and on point.
+  ctas:
+  - permalink: https://yakkl.com/signup
+    textline: Free Signup
+    button: true
+  - permalink: https://yakkl.com/quick-start
+    textline: Launch Demo
+    button: false
+  video:
+    fallbackVisual: "/video/fmt-cms-comparison-generic-1.jpg"
+    sources:
+    - permalink: "/video/fmt-cms-comparison-generic-1.webm"
+      type: video/webm
+    - permalink: "/video/fmt-cms-comparison-generic-1.mp4"
+      type: video/mp4
+    mobile:
+    - permalink: "/video/fmt-cms-comparison-generic-1-sm.webm"
+      type: video/webm
+    - permalink: "/video/fmt-cms-comparison-generic-1-sm.mp4"
+      type: video/mp4
+features:
+- headline: Your team, your workflow
+  textline: |
+    Write front-end code with Gatsby, Hugo, Jekyll  or Vuepress and push to your Git repo. Yakkl will pull in your commits and update the CMS.
+
+    Invite your team to create content in a rich UI. Their updates get committed back without merge conflicts.
+  visual:
+    permalink: "/img/dev-illustration-02.png"
+    alt: Dev workflow
+  direction: ltr
+  class: section-roots
+- headline: Empower your editors
+  textline: |
+    Your editing team deserves a powerful admin interface. Customize each page with Yakkl's rich editing fields.
+
+    Login from your **yoursite.com/admin**. With Yakkl Remote, your site will transcend static.
+  visual:
+    permalink: "/img/editor-illustration-02.png"
+    alt: Editor friendly interface
+  direction: rtl
+  class: section-sync
+- headline: Your entire team will be making commits
+  textline: Your editing team won't even realize they're writing Markdown and committing
+    to your repo.
+  visual:
+    permalink: "/img/commits-illustration.png"
+    alt: Editor workflow
+  direction: vertical
+  class: section-sync
+- headline: Own Your Content
+  textline: |
+    Instead of having your content locked behind your CMS's database, we just commit it to your git repository.
+
+    We make it easy for you to grab your content and walk away, although we don't think you will ;)
+  visual:
+    permalink: "/img/deploy-illustration-03.png"
+    alt: Simple deployment
+  direction: ltr
+  class: section-automated
+- headline: Host where you want
+  textline: Your static site can live anywhere you want — including on Netlify, Amazon
+    S3, or GitHub Pages.
+  direction: vertical
+  class: section-deploy
+cta:
+  headline: Build amazing secure team collaboration
+  textline: We have the tools to manage your collaboration. Ready to try Yakkl?
+publishdate: 2019-08-12T04:00:00.000+00:00
+expirydate: 2030-01-01T04:00:00.000+00:00
+type: page
+date: 2019-08-12T04:00:00.000+00:00
+inspectlet: true
+
+---

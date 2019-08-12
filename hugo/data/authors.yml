@@ -1,0 +1,99 @@
+---
+map:
+  Yakkl Team: yakkl-team
+  Austin Jones: austin-jones
+  Hans Jones: hans-jones
+authors:
+- avatar: "/img/yakkl-pos-symbol.svg"
+  bio: |
+    Yakkl.com is an open-source secure team collaboration product that allows you to model your collaboration around how you model your teams.
+  firstName: Yakkl.com
+  fullName: Yakkl Team
+  shortBio: ''
+  twitter: yakklofficial
+  title: "Yakkl Ethusiasts \U0001F332"
+# - avatar: "/uploads/2017/12/Scott_Gallant_square.png"
+#   bio: ''
+#   firstName: Scott
+#   fullName: Scott Gallant
+#   lastName: Gallant
+#   shortBio: ''
+#   twitter: scottgallant
+#   title: CEO & co-founder
+# - avatar: "/uploads/2018/01/avatar_400x400.jpeg"
+#   bio: ''
+#   firstName: Jordan
+#   lastName: Patterson
+#   fullName: Jordan Patterson
+#   shortBio: 'CTO and Co-founder of <a href=''https://yakkl.com'' title=''Yakkl.com
+#     CMS''>Yakkl.com</a>. Backend developer, systems guy, father, builder of houses
+
+# '
+#   twitter: jpatterson
+#   title: CTO and co-founder
+# - avatar: "/uploads/2017/12/AAEAAQAAAAAAAAaSAAAAJGJjNjM0NjAzLTVmZjMtNGNlZC1iZmNhLThhNGZmMWE4ODEwNQ-1-1.jpg"
+#   bio: ''
+#   firstName: Chris
+#   fullName: Chris Macrae
+#   lastName: Macrae
+#   shortBio: ''
+#   twitter: chrisdmacrae
+#   title: Community Writer
+# - avatar: "/uploads/2018/01/nInv8bTI_400x400.jpg"
+#   bio: ''
+#   firstName: Michael
+#   lastName: Soolee
+#   fullName: Michael Soolee
+#   shortBio: "Michael is the author of the upcoming book, [Field Guide to Jekyll](https://michaelsoolee.com/jekyll-field-guide/),\na
+#     step by step guide to building websites with Jekyll. \nYou can find him on Twitter
+#     as [@michaelsoolee](https://twitter.com/michaelsoolee).\n"
+#   twitter: michaelsoolee
+#   title: Author, Jekyll Developer
+# - avatar: "/uploads/2017/12/colin-garvey.jpg"
+#   bio: ''
+#   firstName: Colin
+#   lastName: Garvey
+#   fullName: Colin Garvey
+#   shortBio: 'Marketer. Media Buyer. Open Source Developer.
+
+# '
+#   twitter: desiredpersona
+#   title: Marketing & Developer
+# - avatar: ''
+#   firstName: Matt
+#   fullName: Matt Duffy
+#   twitter: ''
+#   title: Developer
+#   lastName: Duffy
+# - avatar: "/uploads/2018/03/Sebastian.jpg"
+#   bio: ''
+#   firstName: Sebastian
+#   fullName: Sebastian Engels
+#   lastName: Engels
+#   shortBio: ''
+#   twitter: ''
+#   title: Head of Marketing & Growth
+# - avatar: "/uploads/2018/03/DJ.jpg"
+#   bio: ''
+#   firstName: DJ
+#   fullName: DJ Walker
+#   lastName: Walker
+#   shortBio: Musician who writes code to avoid disappointing his parents
+#   twitter: wordsaboutcode
+#   title: Developer Relations
+# - avatar: "/uploads/2018/04/regis-philibert.png"
+#   firstName: Régis
+#   fullName: Régis Philibert
+#   shortBio: I code websites from Montréal. Can’t stop talking about Hugo. Try and
+#     stop me.
+#   twitter: regisphilibert
+#   title: Hugo Evangelist
+#   lastName: Philibert
+# - avatar: "/uploads/2018/07/jdzielak.jpg"
+#   firstName: Josh
+#   lastName: Dzielak
+#   fullName: Josh Dzielak
+#   shortBio: Developer advocate and indie hacker. Blogs at [dzello.com](https://dzello.com/blog/).
+#     Formerly Algolia and Keen IO. American living in Paris.
+#   twitter: dzello
+#   title: Community Writer

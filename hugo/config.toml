@@ -1,0 +1,172 @@
+baseurl = "https://yakkl.com"
+copyright = ""
+defaultContentLanguage = "en"
+destination = "../dist/"
+enableEmoji = true
+enableRobotsTXT = true
+languageCode = "en"
+metaDataFormat = "yaml"
+paginate = 10
+pluralizeListTitles = false
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "monokai"
+relativeURLs = false
+title = "Yakkl.com"
+[blackfriday]
+angledQuotes = false
+hrefTargetBlank = false
+latexDashes = true
+plainIDAnchors = true
+[[menu.docs]]
+name = "Pro"
+weight = 12
+[[menu.docs]]
+name = "Other"
+weight = 11
+[[menu.docs]]
+name = "Developer Guides"
+weight = 10
+[[menu.docs]]
+name = "Hosting"
+weight = 9
+[[menu.docs]]
+name = "Previews"
+weight = 8
+[[menu.docs]]
+name = "Organizations"
+weight = 7
+[[menu.docs]]
+name = "Settings & Configuration"
+weight = 6
+[[menu.docs]]
+name = "Media"
+weight = 5
+[[menu.docs]]
+name = "Git Sync"
+weight = 3
+[[menu.docs]]
+name = "Editing"
+weight = 4
+[[menu.docs]]
+name = "Quick Start"
+weight = 2
+[[menu.docs]]
+name = "Welcome"
+weight = 1
+[[menu.faqs]]
+name = "Glossary"
+weight = 2
+[[menu.footer]]
+name = "Roadmap"
+parent = "Product"
+url = "https://portal.productboard.com/yakkl/"
+weight = 7
+[[menu.footer]]
+name = "Status"
+parent = "Product"
+url = "https://status.yakkl.com"
+weight = 6
+[[menu.footer]]
+name = "Company"
+weight = 2
+[[menu.footer]]
+name = "Product"
+weight = 1
+[[menu.main]]
+identifier = "useraccount"
+name = "My Account"
+url = "https://app.yakkl.com/settings"
+weight = 5
+[[menu.main]]
+identifier = "signup"
+name = "Sign up"
+url = "https://app.yakkl.com/signup"
+weight = 8
+[[menu.main]]
+identifier = "userdashboard"
+name = "Dashboard"
+url = "https://app.yakkl.com/dashboard"
+weight = 7
+[[menu.main]]
+identifier = "login"
+name = "Login"
+url = "https://app.yakkl.com/login"
+weight = 6
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+[outputFormats.OpenSearch]
+baseName = "opensearch"
+isPlainText = true
+mediaType = "application/xml"
+notAlternative = true
+[outputFormats.Redirects]
+baseName = "redirects"
+isPlainText = true
+mediatype = "application/json"
+notAlternative = true
+[outputs]
+home = ["HTML", "RSS", "OpenSearch", "Algolia", "Redirects"]
+[params]
+dateformat = "January 2, 2006"
+description = "A content management system for static sites built with Hugo and Jekyll. Get the speed, security, and reliability of static and the power of a Headless CMS."
+ghrepo = "https://github.com/yakkl/yakkl.com"
+ghrepo_edit = "https://github.com/yakkl/yakkl.com/edit/master/hugo/content/"
+ghrepo_new = "https://github.com/yakkl/yakkl.com/issues/new"
+gtmid = "GTM-KL5HP9Q"
+images = ["/uploads/2018/01/OGimage-01-3x.jpg"]
+mixpanelid = "8aaf5d792dd5bf875adae0b2adac8900"
+[params.algolia]
+params = ["tags", "categories", "authors"]
+vars = ["date", "description", "dir", "path", "expirydate", "fuzzywordcount", "keywords", "kind", "lang", "lastmod", "permalink", "publishdate", "readingtime", "relpermalink", "summary", "title", "type", "url", "weight", "wordcount", "section"]
+[params.cloudinary]
+cloud_name = "yakkl-demo"
+use_upload = false
+[params.cloudinary.lazysizes]
+enabled = true
+[params.cloudinary.presets.content]
+max_width = 1920
+min_width = 320
+quality = 80
+sizes = "auto"
+steps = 10
+width = 640
+[params.cloudinary.presets.default]
+quality = 80
+[params.cloudinary.presets.feature]
+max_width = 1920
+min_width = 320
+quality = 80
+sizes = "(max-width: 76px) 100%, 800px"
+steps = 10
+width = 640
+[related]
+includeNewer = true
+threshold = 10
+toLower = true
+[[related.indices]]
+name = "Section"
+weight = 200
+[[related.indices]]
+name = "keywords"
+weight = 150
+[[related.indices]]
+name = "categories"
+weight = 150
+[[related.indices]]
+name = "tags"
+weight = 100
+[[related.indices]]
+name = "date"
+pattern = "2006"
+weight = 10
+[social]
+email = "support@yakkl.com"
+twitter = "yakklofficial"
+[taxonomies]
+author = "authors"
+category = "categories"
+tag = "tags"

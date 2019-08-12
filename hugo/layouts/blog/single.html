@@ -1,0 +1,99 @@
+{{- define "main" -}}
+  <div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post">
+    {{- with .Params.images -}}
+      {{- range first 1 . -}}
+        <div class="post--feature-image">
+            {{ partial "cloudinary/image" (dict "pg" $ "image" . "alt" ($.Params.headline | default $.Title) "max_width" "2280") }}
+            {{ with $.Params.photo_credit }}
+            <span class="photo-credit">{{ . }}</span>
+            {{ end }}  
+        </div>
+      {{- end -}}
+    {{- end -}}
+    <div class="container">
+      <h1 class="post--title">{{ .Params.headline | default .Title }}</h1>
+      <div class="post--meta">
+        {{- with .Params.authors -}}
+        <div class="author">
+          <span class="post--meta-label">Written by</span>
+          {{- range . -}}
+            {{- $authorName := . -}}
+            {{- range $.Site.Data.authors.authors -}}
+              {{- if eq (urlize .fullName) (urlize $authorName) -}}
+              <a href="{{ "/authors/" | relURL }}{{ .fullName | urlize }}/" class="author--wrapper">
+                <div class="author--avatar">
+                  <img src="{{ .avatar }}" alt="{{ .fullName | default .avatar }}">
+                </div>
+                <div class="author--info">
+                  <span class="author--name">{{ .fullName }}</span>
+                  <span class="author--title">{{ .title }}</span>
+                </div>
+              </a>
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+        </div>
+        {{- end -}}
+        <div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">
+            {{- with .GitInfo -}}
+              <a href="{{$.Site.Params.ghrepo}}/commit/{{ .Hash }}" target="_blank">
+            {{- end -}}
+            {{ .Date.UTC.Format $.Site.Params.dateformat }}
+            {{- with .GitInfo -}}
+              </a>
+            {{- end -}}
+          </span>
+          {{- with .Params.categories -}}
+          {{- $len := len . -}}
+          <span>in {{ range $index, $value := . }}
+            <a href="{{ relURL "/categories/"}}{{ urlize $value }}" class="post--category" data-category="{{ $value | lower }}">
+              {{ $value | humanize }}
+            </a>{{ if not (eq $len ($index | add 1)) }}, {{- end -}}
+            {{- end -}}</span>
+          {{- end -}}
+        </div>
+      </div>
+
+      <div class="md-content">
+        {{ partial "cloudinary/content" (dict "pg" $ "preset" "content") }}
+      </div>
+
+      <hr />
+
+      {{- if not .Params.hideAbout -}}
+      <div class="post--about">
+        {{- range $.Site.Data.authors.authors -}}{{- if eq "yakkl.com" (lower .fullName) -}}
+        <h2>About {{ .fullName }}</h2>
+        {{ markdownify .bio }}
+        {{- end -}}{{- end -}}
+      </div>
+      {{- end -}}
+      {{- partial "components/social-sharing" . -}}
+      {{- if not .Params.hideFeedback -}}
+      <div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the {{ .Section | humanize | lower }}? Edit this page on <a href="{{.Site.Params.ghrepo_edit}}{{.File.Path}}" target="_blank">Github</a>!</small></p>
+      </div>
+      {{- end -}}
+    </div>
+    <!--{{- $related := $.Site.RegularPages.Related . | first 4 -}}
+    {{- with $related -}}
+    <aside class="post--related">
+      <div class="container">
+        <h2 class="post--related-title">Other Articles You Might Like</h2>
+        {{- range . -}}
+          {{ .Render "related" }}
+        {{- end -}}
+      </div>
+    </aside>
+    {{- end -}}-->
+  </main>
+
+    {{- with .Params.cta -}}
+      {{- partial "components/cta/slide-in" . -}}
+    {{- end -}}
+  {{- partial "components/cta/basic" .Params.cta -}}
+{{- end -}}
