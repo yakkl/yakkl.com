@@ -33,5 +33,5 @@ It has been a while since we've updated the changelog. Here's a shortlist of som
 * [Section Configuration](https://yakkl.com/docs/settings/content-sections/ "Content Sections")
 * [Snippet Support](https://yakkl.com/blog/snippets-custom-content-sections-and-more/#snippets "Blog")
 * Site [name and branch](https://yakkl.com/blog/snippets-custom-content-sections-and-more/#site-and-branch-at-a-glance "Blog") are now visible from the sidebar
-* Site branch is now shown in the [Yakkl Dashboard](https://app.yakkl.com/dashboard "Yakkl Dashboard")
+* Site branch is now shown in the [Yakkl Dashboard](https://yakkl.com/dashboard "Yakkl Dashboard")
 * Guests can now be added from within the site

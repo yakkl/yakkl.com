@@ -204,9 +204,9 @@ git remote add origin git@github.com:dzello/programming-quotes.git
 git push -u origin master
 ```
 
-Now, Yakkl will be able to find and import your site. If you don’t already have a Yakkl account, [sign up for a free one](https://app.yakkl.com/signup).
+Now, Yakkl will be able to find and import your site. If you don’t already have a Yakkl account, [sign up for a free one](https://yakkl.com/signup).
 
-Go to your Yakkl Dashboard located at [https://app.yakkl.com/dashboard/](https://app.yakkl.com/dashboard/). Click the “Add Site” button and a modal dialog will appear.
+Go to your Yakkl Dashboard located at [https://yakkl.com/dashboard/](https://yakkl.com/dashboard/). Click the “Add Site” button and a modal dialog will appear.
 
 ![](/uploads/2018/07/add-site-modal.png)
 

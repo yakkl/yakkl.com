@@ -3,7 +3,7 @@ aliases:
 - "/features/blocks/"
 title: Blocks
 layout: blocks
-date: 2018-04-19 01:33:08 -1100
+date: 2019-08-12 01:33:08 -1100
 blocks:
 - template: create-site-button-js
   engine_name: hugo

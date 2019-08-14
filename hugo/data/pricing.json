@@ -7,33 +7,17 @@
       "description": "",
       "planIncludes": " .",
       "buttonText": "Get started",
-      "buttonUrl": "https://app.yakkl.com/signup",
+      "buttonUrl": "https://yakkl.com/signup",
       "planItems": [
         {
-          "text": "Up to 3 collaborators per site",
-          "info": "Single-site users. Used for clients or external colleagues"
+          "text": "Up to 3 collaborators per team",
+          "info": "Free community version of Yakkl for a single small team."
         },
         {
           "text": "Unlimited sites"
         },
         {
           "text": "Community support"
-        },
-        {
-          "text": "Git sync"
-        },
-        {
-          "text": "Automatic build & deploy"
-        },
-        {
-          "text": "Host anywhere"
-        },
-        {
-          "text": "Jekyll plugin support"
-        },
-        {
-          "text": "Yakkl Remote",
-          "info": "Install the Yakkl CMS on your site (mysite.com/admin)"
         },
         {
           "text": "Preview in staging environment"
@@ -44,22 +28,18 @@
       "title": "Starter",
       "priceAnnually": 0,
       "priceMonthly": 9,
-      "description": "Starting at $29/month which includes your first 5 users",
+      "description": "Starting at $5/month (billed annually) which includes up to 10 team members",
       "planIncludes": "Everything in Personal plus",
       "buttonText": "Get started",
-      "buttonUrl": "https://app.yakkl.com/signup",
+      "buttonUrl": "https://yakkl.com/signup",
       "planItems": [
         {
           "text": "Organization account",
-          "info": "Manage one group of users across all of your sites and branches"
-        },
-        {
-          "text": "Team access controls",
-          "info": "Assign organization members to teams. These teams can be added to sites with admin, developer, or editor access levels"
+          "info": "Manage one group of team members"
         },
         {
           "text": "Business support",
-          "info": "Messages to our support queue will be responded to within 24 hours"
+          "info": "Messages to our Yakkl support queue will be responded to within 24 hours"
         }
       ]
     },

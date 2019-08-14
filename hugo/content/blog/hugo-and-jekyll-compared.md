@@ -50,7 +50,7 @@ The value Jekyll offers is that it allows you to take the static HTML from any e
 Explore Jekyll and the Yakkl CMS with our Jekyll Starter Template.
 
 <a href="/docs/quickstart/tour/" class="button small secondary">Getting Started Guide</a>
-<a href="https://app.yakkl.com/signup" class="button small primary">Create Your Yakkl.com Account</a>
+<a href="https://yakkl.com/signup" class="button small primary">Create Your Yakkl.com Account</a>
 {{% /tip %}}
 
 ### Set up

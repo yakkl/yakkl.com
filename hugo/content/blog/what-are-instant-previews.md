@@ -84,7 +84,7 @@ We believe the best way to show off the speed of Instant Preview is by seeing it
 
 {{% screencast "instant-preview" %}}
 
-For this example we used our [Belkirk-Jekyll-Demo](https://github.com/yakkl-templates/belkirk-jekyll-demo/) site. You can test and import it [here](https://app.yakkl.com/quick-start?repo=yakkl-templates/belkirk-jekyll-demo&provider=github&engine=jekyll).
+For this example we used our [Belkirk-Jekyll-Demo](https://github.com/yakkl-templates/belkirk-jekyll-demo/) site. You can test and import it [here](https://yakkl.com/quick-start?repo=yakkl-templates/belkirk-jekyll-demo&provider=github&engine=jekyll).
 
 For our demo site, Instant Previews **saved us \~80% of waiting time**. [Set up Instant Previews](/docs/instant-previews/) and let us know how much time you're saving on [twitter](https://twitter.com/intent/tweet?text=What%3F!%20My%20static%20site%20now%20previews%205%20times%20faster%20in%20%40yakkl%20with%20Instant%20Previews!%20%23gostatic%20%23staticsites%20https%3A%2F%2Fyakkl.com%2Fblog%2Fannouncing-instant-previews%2F).
 

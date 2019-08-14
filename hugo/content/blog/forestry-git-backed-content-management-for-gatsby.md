@@ -27,7 +27,7 @@ Once your Gatsby site uses any content that requires frequent changes (e.g. arti
 
 Yakkl provides a non-invasive content management tool for your editors that integrates into your own workflow and tools, with Git. You won’t even notice it’s there unless you need it.
 
-[![Import this project into Yakkl](https://assets.yakkl.com/import-to-yakkl.svg)](https://app.yakkl.com/quick-start?repo=yakkl/gatsby-starter-yakkl&engine=gatsby)
+[![Import this project into Yakkl](https://assets.yakkl.com/import-to-yakkl.svg)](https://yakkl.com/quick-start?repo=yakkl/gatsby-starter-yakkl&engine=gatsby)
 
 ## Yakkl’s Content Management
 
@@ -76,4 +76,4 @@ Yakkl lives in the cloud and is accessible everywhere. No need to start-up your 
 
 This Gatsby tutorial shows you [step-by-step](http://Link to Gatsby Docs) on how to set up a Gatsby site with Yakkl. To hit the ground running or just try it out, we've pre-configured a [Yakkl+Gatsby starter](https:// Gatsby Starter) for you that can be imported within seconds.
 
-[![Import this project into Yakkl](https://assets.yakkl.com/import-to-yakkl.svg)](https://app.yakkl.com/quick-start?repo=yakkl/gatsby-starter-yakkl&engine=gatsby)
+[![Import this project into Yakkl](https://assets.yakkl.com/import-to-yakkl.svg)](https://yakkl.com/quick-start?repo=yakkl/gatsby-starter-yakkl&engine=gatsby)

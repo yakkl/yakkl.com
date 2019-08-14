@@ -59,4 +59,4 @@ This will make large Media Libraries faster and much more responsive.
 
 ## About Yakkl.com
 
-Do you have a CMS for your Hugo or Jekyll site already? If not, Yakkl can provide a rich editing experience and media library for your editors. [Sign up for free](https://app.yakkl.com/signup).
+Do you have a CMS for your Hugo or Jekyll site already? If not, Yakkl can provide a rich editing experience and media library for your editors. [Sign up for free](https://yakkl.com/signup).

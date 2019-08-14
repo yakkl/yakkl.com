@@ -210,7 +210,7 @@ Both PostCSS and Webpack use `.browserslistrc` to decide on browser support when
   - Javascript can be written using ES6, supporting `require()` and `import` statements from npm packages and local JS files
 - CSS files are compiled from the root of `src/css/` to `css/{filename}.css`
   - Import statements are resolved and included in the compiled CSS files
-- For compatibility with Yakkl or other CMSs, ensure that compiled CSS and JS files in the `hugo/` folder are always committed
+- Ensure that compiled CSS and JS files in the `hugo/` folder are always committed
 - Environment variables are provided to your templates, which can be accessed in templates as follows: `{{ getenv "HUGO_ENV" }}`
   - For development pipelines, this is equal to `development`
   - For production pipelines, this is equal to `production`

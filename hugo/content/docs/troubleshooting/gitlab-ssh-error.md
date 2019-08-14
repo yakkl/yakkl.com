@@ -25,14 +25,14 @@ If you are getting an error when authenticating with GitLab that looks like this
 
     Failed to authenticate SSH session: Waiting for USERAUTH response
 
-1\. Go to https://app.yakkl.com/sites/SITE-ID/disconnect/gitlab   
+1\. Go to https://yakkl.com/sites/SITE-ID/disconnect/gitlab   
 \(where SITE-ID is the unique string in the URL when you visit your Yakkl CMS). This will disconnect your account from GitLab.
 
 2\. Go to [https://gitlab.com/profile/keys](https://gitlab.com/profile/keys "https://gitlab.com/profile/keys") and delete the Yakkl.com key.
 
 3\. Go to [https://gitlab.com/profile/applications](https://gitlab.com/profile/applications "https://gitlab.com/profile/applications") and revoke the Yakkl.com app access.
 
-4\. Go to [https://app.yakkl.com/dashboard](https://app.yakkl.com/dashboard "https://app.yakkl.com/dashboard")
+4\. Go to [https://yakkl.com/dashboard](https://yakkl.com/dashboard "https://yakkl.com/dashboard")
 
 5\. Click _Add Site_
 

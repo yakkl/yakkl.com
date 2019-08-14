@@ -32,4 +32,4 @@ This week we have a short changelog, but keep an eye out as we prepare to releas
 
 * **New Demo Site**: Our demo site was pretty crufty, so we replaced it with a site that's setup to better show off Yakkl.
   * [Source Code](https://github.com/yakkl-templates/belkirk-jekyll-demo "Belkirk Jekyll Demo")
-  * [Try out the demo!](https://app.yakkl.com/dashboard#choose "Yakkl Dashboard")
+  * [Try out the demo!](https://yakkl.com/dashboard#choose "Yakkl Dashboard")

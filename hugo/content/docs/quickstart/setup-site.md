@@ -23,7 +23,7 @@ This doc will walk you through:
 
 ## Import Site from Repo
 
-[Sign up](https://app.yakkl.com/signup/) for a free account with Yakkl.com then add a new site from your [dashboard](https://app.yakkl.com/dashboard).
+[Sign up](https://yakkl.com/signup/) for a free account with Yakkl.com then add a new site from your [dashboard](https://yakkl.com/dashboard).
 
 If you **don't** have a Jekyll, Hugo, VuePress, or Gatsby site already, click the link in the bottom of the _setup window_ to launch the demo site.
 

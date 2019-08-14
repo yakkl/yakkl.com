@@ -51,7 +51,7 @@ Backups of sites imported with a zip archive are available by request, and will 
 
 You can request a backup of your site from the Yakkl Dashboard.
 
-1. Head over to the [Yakkl Dashboard](https://app.yakkl.com/dashboard)  
+1. Head over to the [Yakkl Dashboard](https://yakkl.com/dashboard)  
    ![](/uploads/2017/12/s_8C4CED3D75504D28509A2D9F1536E2FD4FD296FEF40B8A1D45994577317FAA20_1507829464198_Screen+Shot+2017-10-12+at+1.12.42+PM.png)
 2. Click the … icon to the right of the site
 3. From the menu, choose “Download”
@@ -109,7 +109,7 @@ Now that you’ve chosen a provider that meets your needs, you’ll need to set 
 
 Now that you’ve created a Git repository with your site’s source code in it, you can now import it into Yakkl!
 
-1. Head to the [Yakkl Dashboard](https://app.yakkl.com/dashboard) and click “Add site”
+1. Head to the [Yakkl Dashboard](https://yakkl.com/dashboard) and click “Add site”
 
    ![](https://d2mxuefqeaa7sj.cloudfront.net/s_8C4CED3D75504D28509A2D9F1536E2FD4FD296FEF40B8A1D45994577317FAA20_1507914515735_image.png)
 2. In the modal that appears, click “Import existing site”, and then choose your static site generator (Hugo or Jekyll)  

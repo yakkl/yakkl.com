@@ -20,7 +20,7 @@ We recommend to use a dedicated CI/CD platform like [Netlify](https://netlify.co
 Read our docs on [how to deploy with Circle CI](/blog/automate-deploy-w-circle-ci/).
 {{% /warning %}}
 
-This guide assumes you already have an existing [Yakkl Account](https://app.yakkl.com/signup), [Amazon AWS Account](https://aws.amazon.com/free/), and a static site connected to Yakkl. If you don't have an existing project, check out our [Quick start guide](/docs/quickstart/), which contains guides and resources for building your first static site.
+This guide assumes you already have an existing [Yakkl Account](https://yakkl.com/signup), [Amazon AWS Account](https://aws.amazon.com/free/), and a static site connected to Yakkl. If you don't have an existing project, check out our [Quick start guide](/docs/quickstart/), which contains guides and resources for building your first static site.
 
 ## Overview
 

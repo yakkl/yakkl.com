@@ -29,7 +29,7 @@ menu: []
 Want to chat with the Yakkl.com community about team collaboration, best-practices, features, and more? Join the slack community here (we'll get back to you ASAP).
 
 Sign up here:
-<span style="text-decoration-style: initial; text-decoration-color: initial;"><u><a href="https://join.slack.com/t/yakkl-community/shared_invite/enQtNDAxMTU5NzcwMzA3LWUyYTk3NDY2ZDNiMjFhNmVlMjExM2FjYzFhNjJhNjU2NTc2ODVjZTdlYjJiODhhZDgwYTVhYjY0ZGU3ZWFmYzM">Yakkl.com Community</a></u></span>
+<span style="text-decoration-style: initial; text-decoration-color: initial;"><u><a href="https://join.slack.com/t/yakkl/shared_invite/enQtNzEzNzYwNzg0NjQyLWRiNjM5Y2NiMzcxOTgxNzg4OTA3ZjRiZDFlMmY5ZmRjZGUyMGM3ZDc0ZTg5NWMwMmIyNjIzMGE4OTIyZDY5NDM">Yakkl.com Community</a></u></span>
 <!--
 <form action="https://formspree.io/scott@yakkl.com" method="POST" style="position:relative;">
 <label for="_replyto" style="position: relative;

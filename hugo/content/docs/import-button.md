@@ -18,7 +18,7 @@ If you have a static site project &mdash; like a theme or starter site &mdash; t
 
 ## The Add Site URL
 
-Your import button will use our *quick start* flow to clone the project into the user's account and import it into Yakkl. The most basic add site URL will look like this: `https://app.yakkl.com/quick-start?repo=user/project`. In this case, the `repo` parameter is the path to the repo on Github. Quick start accepts the following URL parameters:
+Your import button will use our *quick start* flow to clone the project into the user's account and import it into Yakkl. The most basic add site URL will look like this: `https://yakkl.com/quick-start?repo=user/project`. In this case, the `repo` parameter is the path to the repo on Github. Quick start accepts the following URL parameters:
 
 | Parameter | Description | Type | Default |
 | --- | --- | --- | --- |

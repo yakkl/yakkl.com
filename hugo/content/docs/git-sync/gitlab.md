@@ -21,11 +21,11 @@ Yakkl's allows you to import your static site through public and private GitLab 
 
 ## Importing from GitLab
 
-To import a site with GitLab, [login](https://app.yakkl.com/login) to Yakkl and follow these instructions:
+To import a site with GitLab, [login](https://yakkl.com/login) to Yakkl and follow these instructions:
 
 {{% pretty_screenshot img="/uploads/2019/04/add-site-generator.png" %}}
 
-From the [dashboard](https://app.yakkl.com/dashboard), click "Add Site". In the modal that opens, choose Choose the static site generator your site is built with from the dropdown menu, and then press "Next".
+From the [dashboard](https://yakkl.com/dashboard), click "Add Site". In the modal that opens, choose Choose the static site generator your site is built with from the dropdown menu, and then press "Next".
 
 {{% pretty_screenshot img="/uploads/2019/04/add-site-provider.png" %}}
 

@@ -52,4 +52,4 @@ In addition, all attendees will automatically be entered into our **Luggage Trea
 
 {{% /obnoxious %}}
 
-_Want to make stupid internet jokes like this, but need a good headless CMS?_ [_Sign up for Yakkl_](https://app.yakkl.com/signup)_!_
+_Want to make stupid internet jokes like this, but need a good headless CMS?_ [_Sign up for Yakkl_](https://yakkl.com/signup)_!_

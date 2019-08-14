@@ -1,4 +1,4 @@
-{{- $asbURL := "https://app.yakkl.com/quick-start?" -}}
+{{- $asbURL := "https://yakkl.com/quick-start" -}}
 {{- $repoURL := urls.Parse (.Get "repo") -}}
 {{- $asbURL := printf "%s%s%s" $asbURL "repo=" (index (split (substr $repoURL.Path 1) ".") 0) -}}
 {{- .Scratch.Set "asbURL" $asbURL -}}

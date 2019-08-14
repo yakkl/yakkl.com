@@ -40,4 +40,4 @@ When editing a field, the preview of the field will update live as you make chan
 
 We know this will make your workflow easier and faster, and we’re excited to see how people use these tools!
 
-Do you have a CMS for your Hugo or Jekyll site already? If so, does it work well and give your team the proper inputs, validation, and usability you want? Yakkl will, so [give it a try for free](https://app.yakkl.com/signup).
+Do you have a CMS for your Hugo or Jekyll site already? If so, does it work well and give your team the proper inputs, validation, and usability you want? Yakkl will, so [give it a try for free](https://yakkl.com/signup).

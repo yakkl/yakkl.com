@@ -136,7 +136,7 @@ export default class ASBGenerator {
   }
 
   getAddsiteURL(provider, repoPath, engine, version, branch, config) {
-    let url = `https://app.yakkl.com/quick-start?repo=${repoPath}`
+    let url = `https://yakkl.com/quick-start?repo=${repoPath}`
     if (provider != "github") {
       url += `&provider=${provider}`
     }

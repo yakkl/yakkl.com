@@ -72,7 +72,7 @@ The Gatsby hype train shows no signs of slowing, and for good reason! Gatsby is 
 
 Gatsby sites that source content from Markdown files can now be used with Yakkl. Just select Gatsby as the project type when importing, and you’re good to go!
 
-If you’re curious about using Gatsby with Yakkl but aren’t sure where to start, [check out our demo projec](https://yakkl.github.io/gatsby-starter-yakkl/)t and [import it into Yakkl](https://app.yakkl.com/quick-start?repo=yakkl/gatsby-starter-yakkl&branch=master&engine=gatsby)!
+If you’re curious about using Gatsby with Yakkl but aren’t sure where to start, [check out our demo projec](https://yakkl.github.io/gatsby-starter-yakkl/)t and [import it into Yakkl](https://yakkl.com/quick-start?repo=yakkl/gatsby-starter-yakkl&branch=master&engine=gatsby)!
 
 Once again, we'd like to thank our beta testers who helped us bring Gatsby to Yakkl!
 

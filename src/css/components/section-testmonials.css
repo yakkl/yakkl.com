@@ -29,7 +29,8 @@
   transform: translateX(-50%);
 
   @media screen and (min-width: 48em) {
-    transform: translateX(-29%);
+    transform: translateX(-50%);
+    /* transform: translateX(-29%); */
   }
 }
 

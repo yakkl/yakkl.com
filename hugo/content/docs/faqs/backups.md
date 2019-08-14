@@ -17,9 +17,9 @@ menu:
 ---
 For developers, backups are inherent due to the Git-backed nature of Yakkl. Every change made to your site through Yakkl is stored in version control.
 
-However, a zip backup of your site can be downloaded from the [dashboard](https://app.yakkl.com/dashboard) if necessary.
+However, a zip backup of your site can be downloaded from the [dashboard](https://yakkl.com/dashboard) if necessary.
 
 ## Steps
-1. Navigate to the [dashboard](https://app.yakkl.com/dashboard)
+1. Navigate to the [dashboard](https://yakkl.com/dashboard)
 2. Click the `...` button beside the site you wish to download a backup of
 3. Choose "Download" from the menu

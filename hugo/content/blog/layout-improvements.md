@@ -35,4 +35,4 @@ Do you have a page template that only utilizes markdown fields? We did! That’s
 
 ## What Now?
 
-Do you have a CMS for your site already? If so, does it work well and give your team the proper inputs, validation, and usability you want? Yakkl will, so [give it a try for free](https://app.yakkl.com/signup).
+Do you have a CMS for your site already? If so, does it work well and give your team the proper inputs, validation, and usability you want? Yakkl will, so [give it a try for free](https://yakkl.com/signup).

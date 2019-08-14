@@ -22,8 +22,6 @@ fields:
     source:
       type: simple
     options:
-    - CMS
-    - Jekyll
     - Hugo
     - Static Sites
     - Static Site Generators

@@ -87,7 +87,7 @@ One of WordPress’ biggest selling points is its editing interface (no doubt wh
 Fortunately, there are several CMS solutions out there that can solve this problem. Because these CMSes aren’t tightly coupled with your chosen Static Site Generator, you have the option of trying different ones without having to re-code your entire website each time.
 
 {{% tip %}}
-Yakkl’s approach to static site content management updates your content by committing changes to your git repo. This strategy enables you to use Yakkl alongside other workflows, and your content is never locked in to our service. Try out [our demo site](https://app.yakkl.com/quick-start?repo=yakkl-templates/belkirk-jekyll-demo&provider=github&engine=jekyll) to get a feel for how it works.
+Yakkl’s approach to static site content management updates your content by committing changes to your git repo. This strategy enables you to use Yakkl alongside other workflows, and your content is never locked in to our service. Try out [our demo site](https://yakkl.com/quick-start?repo=yakkl-templates/belkirk-jekyll-demo&provider=github&engine=jekyll) to get a feel for how it works.
 {{% /tip %}}
 
 Being able to adopt a user interface that makes both developers and editors happy has been a tremendous boon to static sites in recent years. With the aforementioned scalability and simpler security landscape, modern static sites are an appealing option for many use cases.

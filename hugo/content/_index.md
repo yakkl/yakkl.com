@@ -30,9 +30,7 @@ hero:
 features:
 - headline: Your team, your workflow
   textline: |
-    Write front-end code with Gatsby, Hugo, Jekyll  or Vuepress and push to your Git repo. Yakkl will pull in your commits and update the CMS.
-
-    Invite your team to create content in a rich UI. Their updates get committed back without merge conflicts.
+    Invite your team to join a flexible team collaboration platform.
   visual:
     permalink: "/img/dev-illustration-02.png"
     alt: Dev workflow

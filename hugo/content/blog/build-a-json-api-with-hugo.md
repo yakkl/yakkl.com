@@ -428,7 +428,7 @@ Thanks to its templating logic we can now change or add keys to our players’ o
 
 Bootstrapping an API this easily is great, but your content editors might not enjoy working with raw markdown files and dealing with a git repo. Fortunately, we can use the Yakkl CMS to instantly add a content management backend for our API!
 
-<div style="text-align: center;"><a href="https://app.yakkl.com/signup" class="button small primary">Get Started With Yakkl</a></div>
+<div style="text-align: center;"><a href="https://yakkl.com/signup" class="button small primary">Get Started With Yakkl</a></div>
 <br /><br />
 From the content side, our JSON API is no different than a conventional Hugo site. This means that managing our content in Yakkl will work the same regardless of whether we plan to output JSON or HTML (or both!)
 

@@ -25,7 +25,7 @@ This tour will walk you through setting up your first site in Yakkl. It demonstr
 
 {{% pretty_screenshot img="/uploads/2019/07/select-generator.png" %}}
 
-[Sign up](https://app.yakkl.com/signup) for a Yakkl account, and then navigate to the [dashboard](https://app.yakkl.com/dashboard).
+[Sign up](https://yakkl.com/signup) for a Yakkl account, and then navigate to the [dashboard](https://yakkl.com/dashboard).
 
 1. Click "Try our Jekyll starter template!"
 2. Select your Git Provider from the list of options. _Bitbucket users need to copy the_ [_demo repository_](https://github.com/yakkl-templates/belkirk-jekyll-demo) _to their account and select "Jekyll" in the first step._

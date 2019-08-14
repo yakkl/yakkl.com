@@ -21,7 +21,7 @@ Read our docs on [how to deploy with Circle CI](/blog/automate-deploy-w-circle-c
 {{% /warning %}}
 
 
-This guide assumes you already have an existing [Yakkl Account](https://app.yakkl.com/signup), [GitHub account](https://github.com/signup), and a repository with a project. If you don't have an existing project, check out our [Quick start guide](/docs/quickstart/), which contains guides and resources for building your first static site.
+This guide assumes you already have an existing [Yakkl Account](https://yakkl.com/signup), [GitHub account](https://github.com/signup), and a repository with a project. If you don't have an existing project, check out our [Quick start guide](/docs/quickstart/), which contains guides and resources for building your first static site.
 
 ## Getting Started
 

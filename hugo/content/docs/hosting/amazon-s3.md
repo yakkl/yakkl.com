@@ -22,7 +22,7 @@ The following guide will show you how to configure web hosting directly from an 
 If you wish to create a website hosting stack with S3 and CloudFront together, please see our [Static Site Hosting on AWS](https://yakkl.com/docs/hosting/s3-cloudfront-stack/) documentation.
 
 
-This guide assumes you already have an existing [Yakkl Account](https://app.yakkl.com/signup), [Amazon AWS Account](https://aws.amazon.com/free/), and a repository with a Jekyll or Hugo project. If you don't have an existing project, check out our [Quick start guide](/docs/quickstart/), which contains guides and resources for building your first static site.
+This guide assumes you already have an existing [Yakkl Account](https://yakkl.com/signup), [Amazon AWS Account](https://aws.amazon.com/free/), and a repository with a Jekyll or Hugo project. If you don't have an existing project, check out our [Quick start guide](/docs/quickstart/), which contains guides and resources for building your first static site.
 
 ## Overview
 

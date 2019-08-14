@@ -59,5 +59,5 @@ For information on how to handle deployment of your site to your production or s
 - [Hugo Usage Guide](https://gohugo.io/overview/usage/)
 
 [1]:	https://gohugo.io/overview/installing/
-[2]:	https://app.yakkl.com/dashboard
+[2]:	https://yakkl.com/dashboard
 [3]:	/docs/hosting/

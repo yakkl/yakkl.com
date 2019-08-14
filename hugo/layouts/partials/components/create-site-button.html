@@ -13,11 +13,11 @@
 <!-- <script type="text/javascript" src="http://localhost:3002/static/js/bundle.js"></script> -->
 
 
-{{ $asbURL := "https://app.yakkl.com/quick-start?" }}
+{{ $asbURL := "https://yakkl.com/quick-start" }}
 {{ $repoURL := urls.Parse .repo_name }}
 {{ $asbURL := printf "%s%s%s" $asbURL "repo=" (index (split (substr $repoURL.Path 1) ".") 0) }}
 
-{{ if eq $repoURL.Host "gitlab.com" }}
+<!-- {{ if eq $repoURL.Host "gitlab.com" }}
 {{ $asbURL := printf "%s%s" $asbURL "&provider=gitlab"}}
 {{ else if eq $repoURL.Host "bitbucket.org" }}
 {{ $asbURL := printf "%s%s" $asbURL "&provider=bitbucket"}}
@@ -26,7 +26,7 @@
 {{ $asbURL := printf "%s%s%s" $asbURL "&engine=" .engine_name }}
 {{ if and (eq .engine_name "hugo") .engine_version }}
 {{ $asbURL := printf "%s%s%s" $asbURL "&version=" .engine_version }}
-{{ end }}
+{{ end }} -->
 
 
 <a target="_blank" href="{{ $asbURL }}">

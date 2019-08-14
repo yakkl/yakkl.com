@@ -4,9 +4,9 @@ aliases:
 - "/docs/"
 weight: 1
 layout: single
-publishdate: 2017-12-31 04:00:00 +0000
+publishdate: 2019-08-12 04:00:00 +0000
 expirydate: 2030-01-01 04:00:00 +0000
-date: 2017-12-31 04:00:00 +0000
+date: 2019-08-12 04:00:00 +0000
 authors:
 - Yakkl Team
 headline: ''
@@ -40,7 +40,7 @@ Yakkl.com is a Git-backed CMS (content management system) for websites and web p
 
 {{% tip %}}
 
-[**Sign up**](https://app.yakkl.com/signup "Yakkl CMS Sign Up") for free today, or learn more about our [**pricing**](https://yakkl.com/pricing "Yakkl.com's Pricing") for teams.
+[**Sign up**](https://yakkl.com/signup "Yakkl CMS Sign Up") for free today, or learn more about our [**pricing**](https://yakkl.com/pricing "Yakkl.com's Pricing") for teams.
 
 {{% /tip %}}
 

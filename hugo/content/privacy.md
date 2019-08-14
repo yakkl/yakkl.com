@@ -2,8 +2,8 @@
 title: Privacy Policy
 date: 2019-08-12 00:00:00 +0000
 weight: 3
-publishdate: 2019-08-12 04:00:00 +0000
-expirydate: 2030-01-01 04:00:00 +0000
+publishdate: 2019-08-12 00:00:00 +0000
+expirydate: 2030-01-01 00:00:00 +0000
 type: page
 menu:
   footer:
@@ -13,13 +13,13 @@ menu:
 ---
 ## 1. Introduction
 
-Yakkl.com Inc., (“**Yakkl.com**”, “**we**”, “**us**”) has created this Privacy Policy (“**Privacy Policy**”) in order to set out how we collect, use, and disclose personal information through our open source Secure Team Collaboration platform and applications (collectively, the “**Platform**”). 
+Yakkl.com, (“**Yakkl.com**”, “**we**”, “**us**”) has created this Privacy Policy (“**Privacy Policy**”) in order to set out how we collect, use, and disclose personal information through our open source Secure Team Collaboration platform and applications (collectively, the “**Platform**”).
 
-The privacy of our customers (“**Customers**”) and their end users (“**End Users**”) is of great importance to us. By visiting any of our website located at [www.yakkl.com](http://www.yakkl.com) (collectively, the “**Website**”) or using the Platform in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy and you hereby consent to the collection, use and disclosure of your Personal Information in accordance with this Privacy Policy.
+The privacy of our customers (“**Customers**”) and their end users (“**End Users**”) is of great importance to us. By visiting our Sites located at [yakkl.com](https://yakkl.com) (collectively, the “**Site**”) or using the Platform in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy and you hereby consent to the collection, use and disclosure of your Personal Information in accordance with this Privacy Policy.
 
 ## 2. What does this Privacy Policy Cover?
 
-This Privacy Policy covers our collection, use and disclosure of information about identifiable individuals and information which can be used to identify an individual (“**Personal Information**”). Personal Information may be collected about our Customers, prospective Customers, visitors to the Website, and End Users of the Platform.
+This Privacy Policy covers our collection, use and disclosure of information about identifiable individuals and information which can be used to identify an individual (“**Personal Information**”). Personal Information may be collected about our Customers, prospective Customers, visitors to the Site, and End Users of the Platform.
 
 This Privacy Policy does not apply to the practices of companies that we do not own or control. Our Customers are responsible for maintaining their own privacy policies governing the collection, use and disclosure of Personal Information. You are responsible for ensuring that you have obtained the necessary authorizations and consents for any Personal Information you make available to us for use in accordance with this Privacy Policy.
 
@@ -43,17 +43,17 @@ We collect names, email addresses and other business contact information about i
 
 If you opt-in to receive marketing communications from us, we will keep you up to date on our products and services.  You may withdraw your consent to receiving marketing communications from us at any time by following the opt-out instructions in each communication, or by contacting us at the email address below in Section 10.
 
-### 3.3 Website Visitors
+### 3.3 Site Visitors
 
-As you visit or browse the Website, we collect information about the device and browser you use, your network connection, your IP address, and information about the cookies installed on your device. This information is logged to help diagnose technical problems for analytics and for quality control purposes. We also collect Personal Information submitted by any visitor to our Website through messaging features we make available on our Website and use such information for the purpose of responding to your requests. 
+As you visit or browse the Site, we collect information about the device and browser you use, your network connection, your IP address, and information about the cookies installed on your device. This information is logged to help diagnose technical problems for analytics and for quality control purposes. We also collect Personal Information submitted by any visitor to our Site through messaging features we make available on our Site and use such information for the purpose of responding to your requests. 
 
 ### 3.4 Cookies
 
-A cookie is a small amount of data, which may include a unique identifier. Cookies are sent to your browser from a website and stored on your device. We assign a different cookie to each device that accesses our Website.
+A cookie is a small amount of data, which may include a unique identifier. Cookies are sent to your browser from a website and stored on your device. We assign a different cookie to each device that accesses our Site.
 
 Cookies are required for End Users to log in to Platform accounts. We use cookies to recognize devices and provide a personalized experience on our Platform. In particular, Yakkl.com uses session cookies containing encrypted information to allow the system to uniquely identify you while you are logged in, which is linked to account User Information. This information allows Yakkl.com to process your online transactions and requests. Session cookies help us make sure you are who you say you are after you’ve logged in and are required in order to use the Platform.
 
-On the Website, we have cookies that are used to track potential customers through the site. These cookies are used to target email campaigns, track users across Intercom chat sessions. Yakkl.com uses the following service providers to administer cookies: Mixpanel, Google Analytics, and Intercom. If you disable cookies, you may not be able to take advantage of all the features of the Website and/or Platform. We do not link any of the information we use in cookies to any personally identifiable information submitted by you when you are on the Website.
+On the Site, we have cookies that are used to track potential customers through the site. These cookies are used to target email campaigns, track users across Intercom chat sessions. Yakkl.com uses the following service providers to administer cookies: Mixpanel, Google Analytics, and Intercom. If you disable cookies, you may not be able to take advantage of all the features of the Site and/or Platform. We do not link any of the information we use in cookies to any personally identifiable information submitted by you when you are on the Site.
 
 ## 4. Storage Location and Transfer of Personal Information
 
@@ -105,7 +105,7 @@ Individuals also have the right to make complaints to regulatory authorities in 
 
 ## 9. Changes to this Privacy Policy
 
-We may amend this Privacy Policy from time to time. Use of Personal Information we collect is subject to the Privacy Policy in effect at the time such information is collected, used or disclosed. If we make material changes or changes in the way we use Personal Information, we will notify you by posting an announcement on our Website or Platform or sending you an email prior to the change becoming effective. You are bound by any changes to the Privacy Policy when you use the Website or Platform after such changes have been first posted
+We may amend this Privacy Policy from time to time. Use of Personal Information we collect is subject to the Privacy Policy in effect at the time such information is collected, used or disclosed. If we make material changes or changes in the way we use Personal Information, we will notify you by posting an announcement on our Site or Platform or sending you an email prior to the change becoming effective. You are bound by any changes to the Privacy Policy when you use the Site or Platform after such changes have been first posted
 
 ## 10. Additional Information
 

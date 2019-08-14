@@ -200,7 +200,7 @@ If you haven't already set up your site in Yakkl, follow our comprehensive [_qui
 
 {{% /tip %}}
 
-Head over to the [Dashboard](https://app.yakkl.com), and select your site.
+Head over to the [Dashboard](https://yakkl.com), and select your site.
 
 Once inside the CMS, select _Settings_ from the sidebar, and then scroll down to _Deployment_.
 

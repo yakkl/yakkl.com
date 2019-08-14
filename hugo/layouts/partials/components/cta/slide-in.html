@@ -8,12 +8,12 @@
       <a href="{{ .RelPermalink }}"{{ if .button }} class="button primary big"{{ end }}>{{ .textline }}</a>
       {{- end -}}
     {{- else -}}
-    <form action="https://www.getrevue.co/profile/yakkl/add_subscriber" method="post" name="revue-form" target="_blank">
+    <!-- <form action="https://www.getrevue.co/profile/yakkl/add_subscriber" method="post" name="revue-form" target="_blank">
       <div class="newsletter-signup--field form--joined">
         <input class="revue-form-field" placeholder="your.name@example.com" type="email" name="member[email]">
         <button type="submit" value="Subscribe" name="member[subscribe]" class="button primary small">Subscribe</button>
       </div>
-    </form>
+    </form> -->
     {{- end -}}
 </div>
 
@@ -59,4 +59,4 @@
   function closeSlideIn() {
     document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
   };
-</script> 
+</script>

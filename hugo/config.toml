@@ -1,5 +1,5 @@
 baseurl = "https://yakkl.com"
-copyright = ""
+copyright = "Copyright (c) 2019 Yakkl.com."
 defaultContentLanguage = "en"
 destination = "../dist/"
 enableEmoji = true
@@ -60,7 +60,7 @@ weight = 2
 [[menu.footer]]
 name = "Roadmap"
 parent = "Product"
-url = "https://portal.productboard.com/yakkl/"
+url = "https://yakkl.com/"
 weight = 7
 [[menu.footer]]
 name = "Status"
@@ -76,22 +76,22 @@ weight = 1
 [[menu.main]]
 identifier = "useraccount"
 name = "My Account"
-url = "https://app.yakkl.com/settings"
+url = "https://yakkl.com/settings"
 weight = 5
 [[menu.main]]
 identifier = "signup"
 name = "Sign up"
-url = "https://app.yakkl.com/signup"
+url = "https://yakkl.com/signup"
 weight = 8
 [[menu.main]]
 identifier = "userdashboard"
 name = "Dashboard"
-url = "https://app.yakkl.com/dashboard"
+url = "https://yakkl.com/dashboard"
 weight = 7
 [[menu.main]]
 identifier = "login"
 name = "Login"
-url = "https://app.yakkl.com/login"
+url = "https://yakkl.com/login"
 weight = 6
 [outputFormats.Algolia]
 baseName = "algolia"
@@ -112,11 +112,11 @@ notAlternative = true
 home = ["HTML", "RSS", "OpenSearch", "Algolia", "Redirects"]
 [params]
 dateformat = "January 2, 2006"
-description = "A content management system for static sites built with Hugo and Jekyll. Get the speed, security, and reliability of static and the power of a Headless CMS."
+description = "An open-source Secure Team Collaboration product."
 ghrepo = "https://github.com/yakkl/yakkl.com"
 ghrepo_edit = "https://github.com/yakkl/yakkl.com/edit/master/hugo/content/"
 ghrepo_new = "https://github.com/yakkl/yakkl.com/issues/new"
-gtmid = "GTM-KL5HP9Q"
+gtmid = "GTM-MRLTPV7"
 images = ["/uploads/2018/01/OGimage-01-3x.jpg"]
 mixpanelid = "8aaf5d792dd5bf875adae0b2adac8900"
 [params.algolia]
@@ -126,7 +126,7 @@ vars = ["date", "description", "dir", "path", "expirydate", "fuzzywordcount", "k
 cloud_name = "yakkl-demo"
 use_upload = false
 [params.cloudinary.lazysizes]
-enabled = true
+enabled = false
 [params.cloudinary.presets.content]
 max_width = 1920
 min_width = 320
@@ -161,7 +161,7 @@ name = "tags"
 weight = 100
 [[related.indices]]
 name = "date"
-pattern = "2006"
+pattern = "2019"
 weight = 10
 [social]
 email = "support@yakkl.com"

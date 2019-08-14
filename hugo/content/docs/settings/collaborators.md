@@ -71,7 +71,7 @@ A user can be added to a site as an individual collaborator but they may also be
 For instance an individual contributor that was added as an individual **editor**, but also belongs to a team with the **developer** access level, has **developer** access to the site. If the user is an **owner** of the organization they are automatically an **admin** on the site.
 
 {{% tip %}}
-Collaborators can always [sign up](https://app.yakkl.com//signup) to Yakkl and will have access to all the sites and organizations they have been invited to.
+Collaborators can always [sign up](https://yakkl.com//signup) to Yakkl and will have access to all the sites and organizations they have been invited to.
 {{%/ tip %}}
 
 ## Site Access Levels
