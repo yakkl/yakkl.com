@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Full Text Searching with Postgres | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content="Implementing full text search with postgres tsvector and proper indexes. /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Full Text Searching with Postgres" />
+<meta property="og:description" content="Implementing full text search with postgres tsvector and proper indexes." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/full-text-searching-with-postgres/" /><meta property="og:image" content="https://yakkl.com/uploads/2019/08/steven-wright-mq8QogEBy00-unsplash.png" /><meta property="og:image:alt" content="Implementing full text search with postgres tsvector and proper indexes." /><meta property="article:published_time" content="2019-08-01T14:07:06-03:00"/>
+  <meta property="article:modified_time" content="2019-08-01T14:07:06-03:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta property="article:tag" content="postgres" /><meta property="article:tag" content="search" /><meta name="news_keywords" content="postgres,search" /><meta itemprop="name" content="Full Text Searching with Postgres">
+<meta itemprop="description" content="Implementing full text search with postgres tsvector and proper indexes."><meta itemprop="datePublished" content="2019-08-01T14:07:06-03:00" /><meta itemprop="dateModified" content="2019-08-01T14:07:06-03:00" /><meta itemprop="wordCount" content="739"><meta itemprop="image" content="https://yakkl.com/uploads/2019/08/steven-wright-mq8QogEBy00-unsplash.png">
+  <meta itemprop="keywords" content="postgres,search," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2019/08/steven-wright-mq8QogEBy00-unsplash.png"/><meta name="twitter:title" content="Full Text Searching with Postgres"/>
+<meta name="twitter:description" content="Implementing full text search with postgres tsvector and proper indexes."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2019/08/steven-wright-mq8QogEBy00-unsplash.png" alt="Full Text Searching with Postgres" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2019/08/steven-wright-mq8QogEBy00-unsplash.png" class="" />
+            
+            <span class="photo-credit">Photo by Steven Wright on Unsplash</span>
+              
+        </div><div class="container">
+      <h1 class="post--title">Full Text Searching with Postgres</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">August 1, 2019</span><span>in 
+            <a href="/categories/engineering" class="post--category" data-category="engineering">
+              Engineering
+            </a></span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+
+<p>At Yakkl, we use Postgres as our primary data store. In this article I’ll show you how we used <code>tsvector</code>to improve searching for documents in the CMS.</p>
+
+<h2 id="the-tsvector-type">The <code>tsvector</code> Type</h2>
+
+<p>Postgres has a data type called <code>tsvector</code> that is used for full text search. A <code>tsvector</code>  value merges different variants of the same word and removes duplicates to create a sorted list of distinct words called <em>lexemes</em>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> to_tsvector(<span style="color:#e6db74">&#39;pg_catalog.english&#39;</span>, <span style="color:#e6db74">&#39;Never gonna give you up. Never gonna let you down&#39;</span>);
+<span style="color:#75715e">-- &#39;give&#39;:3 &#39;gonna&#39;:2,7 &#39;let&#39;:8 &#39;never&#39;:1,6</span></code></pre></div>
+<p>You can see that the word <code>gonna</code> and <code>never</code> were in the original lyrics twice but only in the <code>tsvector</code> once. Those numbers next to the <em>lexemes</em> are their position in the original lyrics.</p>
+
+<h2 id="stop-words">Stop Words</h2>
+
+<p>Something else you might notice in the above example is that the words <code>you</code>, <code>up</code>, and <code>down</code> are missing from the result. The first argument passed to <code>to_tsvector</code> is the name of a dictionary to use. Each dictionary includes a list of /stop words/ that get excluded from the result. Different dictionaries have different stop words.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> to_tsvector(<span style="color:#e6db74">&#39;pg_catalog.simple&#39;</span>, <span style="color:#e6db74">&#39;Never gonna give you up. Never gonna let you down&#39;</span>);
+<span style="color:#75715e">-- &#39;down&#39;:10 &#39;give&#39;:3 &#39;gonna&#39;:2,7 &#39;let&#39;:8 &#39;never&#39;:1,6 &#39;up&#39;:5 &#39;you&#39;:4,9</span></code></pre></div>
+<p>Here we are using the <em>simple</em> dictionary which doesn’t include the stop words <code>you</code>, <code>up</code>, and <code>down</code>.
+You can read more about dictionaries and stop words in the Postgres documentation (<a href="https://www.postgresql.org/docs/11/textsearch-dictionaries.html">PostgreSQL: Documentation: 11: 12.6. Dictionaries</a>).</p>
+
+<h2 id="normalization">Normalization</h2>
+
+<p>Postgres also normalizes different variants of the same word to one word. For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> to_tsvector(<span style="color:#e6db74">&#39;pg_catalog.english&#39;</span>, <span style="color:#e6db74">&#39;Your heart&#39;&#39;s been aching but you&#39;&#39;re too shy to say it&#39;</span>);
+<span style="color:#75715e">-- &#39;ach&#39;:5 &#39;heart&#39;:2 &#39;re&#39;:8 &#39;say&#39;:12 &#39;shi&#39;:10</span></code></pre></div>
+<p>You can see that the word <code>aching</code> is normalized to <code>ach</code> .</p>
+
+<h2 id="adding-a-trigger">Adding a Trigger</h2>
+
+<p>We added a <code>tsvector</code> column called <code>tsv</code> so that we can store and index the vectors instead of creating them on the fly. This obviously made for a much faster search experience.
+To keep the <code>tsv</code> column up-to-date we created a trigger.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TRIGGER</span> tsvectorupdate <span style="color:#66d9ef">BEFORE</span> <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">UPDATE</span>
+<span style="color:#66d9ef">ON</span> pages <span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span> <span style="color:#66d9ef">EXECUTE</span> <span style="color:#66d9ef">PROCEDURE</span>
+tsvector_update_trigger(
+	tsv, <span style="color:#e6db74">&#39;pg_catalog.english&#39;</span>, path, body, search_params
+)</code></pre></div>
+<p>This tells Postgres that every time a row in the pages table is inserted or updated, also update the <code>tsv</code> column and use the <code>path</code>, <code>body</code> , and <code>search_params</code> columns to create the <code>tsvector</code>.</p>
+
+<h2 id="tsvector-size-limit"><code>tsvector</code> Size Limit</h2>
+
+<p>One issue we hit almost immediately was that <code>tsvector</code> has a size limit of 1MB.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">PG::ProgramLimitExceeded: ERROR:  string is too long for tsvector (2466260 bytes, max 1048575 bytes)</pre></div>
+<p>To get around this we had to change our trigger to use a stored procedure that could truncate the input text to the appropriate length. Since 1MB is a lot of data we decided to only index the first 500KB.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">REPLACE</span> <span style="color:#66d9ef">FUNCTION</span> search_params_trigger() <span style="color:#66d9ef">RETURNS</span> <span style="color:#66d9ef">trigger</span> <span style="color:#66d9ef">AS</span> <span style="color:#960050;background-color:#1e0010">$$</span>
+  <span style="color:#66d9ef">begin</span>
+    <span style="color:#66d9ef">new</span>.tsv :<span style="color:#f92672">=</span> to_tsvector(
+	    <span style="color:#e6db74">&#39;pg_catalog.english&#39;</span>, 
+		<span style="color:#66d9ef">substring</span>(
+		  coalesce(<span style="color:#66d9ef">new</span>.path,<span style="color:#e6db74">&#39;&#39;</span>) <span style="color:#f92672">||</span>
+		  coalesce(<span style="color:#66d9ef">new</span>.search_params,<span style="color:#e6db74">&#39;&#39;</span>) <span style="color:#f92672">||</span> 
+		  coalesce(<span style="color:#66d9ef">new</span>.body,<span style="color:#e6db74">&#39;&#39;</span>), 
+		  <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">500000</span>
+		)
+	  );
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span>;
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#960050;background-color:#1e0010">$$</span> <span style="color:#66d9ef">LANGUAGE</span> plpgsql;</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TRIGGER</span> tsvectorupdate <span style="color:#66d9ef">BEFORE</span> <span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">OR</span> <span style="color:#66d9ef">UPDATE</span>
+  <span style="color:#66d9ef">ON</span> pages <span style="color:#66d9ef">FOR</span> <span style="color:#66d9ef">EACH</span> <span style="color:#66d9ef">ROW</span> <span style="color:#66d9ef">EXECUTE</span> <span style="color:#66d9ef">PROCEDURE</span> search_params_trigger();</code></pre></div>
+<h2 id="indexing">Indexing</h2>
+
+<p>All that was left was to index the <code>tsv</code> column using a <em>gin</em> index.</p>
+
+<p>From the Postgres docs:</p>
+
+<blockquote>
+<p>GIN is designed for handling cases where the items to be indexed are composite values, and the queries to be handled by the index need to search for element values that appear within the composite items. For example, the items could be documents, and the queries could be searches for documents containing specific words.</p>
+</blockquote>
+
+<p>Since we are indexing a column with composite values, a gin index is what we want.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> index_pages_on_tsv <span style="color:#66d9ef">ON</span> pages <span style="color:#66d9ef">USING</span> gin (tsv);<span style="color:#f92672">`</span></code></pre></div>
+<h2 id="working-with-json">Working with JSON</h2>
+
+<p>We make use of JSON and JSONB columns in Postgres and we are currently using Postgres 9.6 which doesn’t support creating tsvectors from json so we created the <code>search_params</code> column from our json column like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">UPDATE</span> pages <span style="color:#66d9ef">AS</span> p 
+<span style="color:#66d9ef">SET</span> search_params <span style="color:#f92672">=</span> array_to_string(
+  array(
+    <span style="color:#66d9ef">SELECT</span> value 
+    <span style="color:#66d9ef">FROM</span> pages, json_each_text(pages.params) 
+    <span style="color:#66d9ef">WHERE</span> pages.id <span style="color:#f92672">=</span> p.id
+  ), <span style="color:#e6db74">&#39; &#39;</span>
+)</code></pre></div>
+<p>This strips the top level keys from a json object and concatenates the values all into one long string. It’s not perfect but it’s good enough.</p>
+
+<h2 id="a-note-on-rails">A Note on Rails</h2>
+
+<p>Our main application is built with Ruby on Rails so it is also worth noting that Rails does not support exporting triggers and stored procedures to <code>schema.rb</code>. We were already using <code>structure.sql</code> anyway so it wasn’t an issue for us. But if you need to switch you can do so in <code>application.rb</code> like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">config<span style="color:#f92672">.</span>active_record<span style="color:#f92672">.</span>schema_format <span style="color:#f92672">=</span> <span style="color:#e6db74">:sql</span></code></pre></div>
+<p>Happy searching!</p>
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "Full Text Searching with Postgres";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/full-text-searching-with-postgres\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/full-text-searching-with-postgres.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

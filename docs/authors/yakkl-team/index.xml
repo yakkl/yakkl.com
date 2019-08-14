@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yakkl Team on Yakkl.com</title>
+    <link>https://yakkl.com/authors/yakkl-team/</link>
+    <description>Recent content in Yakkl Team on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Mon, 12 Aug 2019 04:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/authors/yakkl-team/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://yakkl.com/docs/welcome/</link>
+      <pubDate>Mon, 12 Aug 2019 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/welcome/</guid>
+      <description>Introduction Yakkl.com is a Git-backed CMS (content management system) for websites and web products built using static site generators. Yakkl bridges the gap between developers and their teams, by making development fun and easy, while providing powerful content management for their teams.
+Sign up for free today, or learn more about our pricing for teams.
+ What is Yakkl? The main thing to understand is that Yakkl &amp;ndash; unlike other content management systems &amp;ndash; is entirely backed by Git.</description>
+    </item>
+    
+    <item>
+      <title>Introducing Site-based permissions and Teams</title>
+      <link>https://yakkl.com/blog/introducing-teams/</link>
+      <pubDate>Mon, 03 Jun 2019 12:53:59 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/introducing-teams/</guid>
+      <description>We are introducing changes to improve the way you manage collaborators on your sites.
+Our previous model had a few limitations that we wanted to address:
+ Adding a user to an organization gave each of your members access to all organization sites. The only way to give users &amp;ldquo;developer&amp;rdquo; or &amp;ldquo;admin&amp;rdquo; permissions on a site was to make them a &amp;ldquo;developer&amp;rdquo; or &amp;ldquo;admin&amp;rdquo; across the entire organization. Guests on an individual site were restricted to &amp;ldquo;editor&amp;rdquo; permissions (No access to edit front matter templates or site settings)  Site-specific access levels The available roles for users within an organizations are now &amp;ldquo;Member&amp;rdquo; or &amp;ldquo;Owner&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>2019/03/15 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-01-09-changelog/</link>
+      <pubDate>Thu, 14 Mar 2019 16:00:00 -1100</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-01-09-changelog/</guid>
+      <description>Bug Fixes  Default Values: Fixed a bug where default values were not being set when creating documents.  Enhancements  Settings Navigation: Mobile view for Settings removes the tabs in favour of a dropdown field. Preview Errors Notification: The notification for preview errors now contains a link to our troubleshooting doc. Document Sorting: Started to persist the document sorting method between visits. Media View: Started to persist the media view preference between visits.</description>
+    </item>
+    
+    <item>
+      <title>2018/04/09 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-4-9-changelog/</link>
+      <pubDate>Thu, 19 Apr 2018 12:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-4-9-changelog/</guid>
+      <description> Hugo Support for v0.38.1 We updated our support to Hugo v0.38.1 and below. See Hugo News
+Bug Fixes  Documentation: Links to documentation were updated Github Authentication: Increased timeout length and added a more descriptive message on timeout Import: Fixed a bug that prevents a complete list of repositories being listed for Bitbucket users Import: Fixed a bug that prevents import if the config filename was provided in the import path Media: White images can now be detected in the Media Library Notifications: Team members of an Organization now receive notifications without having to refresh the page Redirect: Removing a site from an Organization does not redirect to My Sites anymore UI: Fixed cropping of icons in CMS sidebar UI: Added a more descriptive explanation to the repo step in the starter template flow User Roles: Manage Guests is now unavailable to Guests of a particular site  </description>
+    </item>
+    
+    <item>
+      <title>Could not locate Gemfile or .bundle/ directory</title>
+      <link>https://yakkl.com/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory/</link>
+      <pubDate>Thu, 22 Feb 2018 11:56:06 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory/</guid>
+      <description>When I view an error log from Yakkl I see: Could not locate Gemfile or .bundle/ directory What this error means Gemfiles include a list of project dependencies and where to find them. Bundler is a dependency manager for the Ruby programming language that can read Gemfiles, resolve the dependency graph and install those gems. Jekyll is a ruby application and can use Bundler to manage your project dependencies. Yakkl requires that your Jekyll projects contain a Gemfile at the root of the repository.</description>
+    </item>
+    
+    <item>
+      <title>2018/01/29 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-1-29-changelog/</link>
+      <pubDate>Mon, 29 Jan 2018 14:40:49 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-1-29-changelog/</guid>
+      <description>Bug Fixes  Front matter template: Fix for hidden fields showing in field groups or repeatable field groups. Front matter template: Front matter templates can create a duplicate upon saving. Pages: Clarified copy surrounding unsaved changes on a document. Pages: Linking to a page that a teammate is editing is now handled properly. Pages: Deleting a page from the page form no longer shows &amp;ldquo;Connection Lost&amp;rdquo; modal. Editor: Fixed issue with emphasis and code deleting the next character.</description>
+    </item>
+    
+    <item>
+      <title>2018/01/09 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-1-9-changelog/</link>
+      <pubDate>Tue, 09 Jan 2018 15:02:44 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-1-9-changelog/</guid>
+      <description> Bug Fixes  Front matter template: fix for editing/unediting FMT fields didn&amp;rsquo;t always update the UI git deploy settings: Clarified copy surrounding the Deploy on Git Push feature. inline code: input rule for inline code no longer marks up the previous character.  </description>
+    </item>
+    
+  </channel>
+</rss>

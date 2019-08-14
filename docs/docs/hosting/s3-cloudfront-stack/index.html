@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Static Site Hosting on AWS | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Static Site Hosting on AWS" />
+<meta property="og:description" content="Yakkl will stop building and deploying sites on January 1st, 2020. We recommend to use a dedicated CI/CD platform like Netlify. Read our docs on how to deploy with Circle CI.
+ This guide assumes you already have an existing Yakkl Account, Amazon AWS Account, and a static site connected to Yakkl. If you don&rsquo;t have an existing project, check out our Quick start guide, which contains guides and resources for building your first static site." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/hosting/s3-cloudfront-stack/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg" /><meta property="og:image:alt" content="Yakkl will stop building and deploying sites on January 1st, 2020. We recommend to use a dedicated CI/CD platform like Netlify. Read our docs on how to deploy with Circle CI.
+ This guide assumes you already have an existing Yakkl Account, Amazon AWS Account, and a static site connected to Yakkl. If you don&rsquo;t have an existing project, check out our Quick start guide, which contains guides and resources for building your first static site." /><meta property="article:published_time" content="2017-09-18T04:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2017-09-18T04:00:00&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="docs" />
+  <meta itemprop="name" content="Static Site Hosting on AWS">
+<meta itemprop="description" content="Yakkl will stop building and deploying sites on January 1st, 2020. We recommend to use a dedicated CI/CD platform like Netlify. Read our docs on how to deploy with Circle CI.
+ This guide assumes you already have an existing Yakkl Account, Amazon AWS Account, and a static site connected to Yakkl. If you don&rsquo;t have an existing project, check out our Quick start guide, which contains guides and resources for building your first static site."><meta itemprop="datePublished" content="2017-09-18T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2017-09-18T04:00:00&#43;00:00" /><meta itemprop="wordCount" content="1182"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg"/><meta name="twitter:title" content="Static Site Hosting on AWS"/>
+<meta name="twitter:description" content="Yakkl will stop building and deploying sites on January 1st, 2020. We recommend to use a dedicated CI/CD platform like Netlify. Read our docs on how to deploy with Circle CI.
+ This guide assumes you already have an existing Yakkl Account, Amazon AWS Account, and a static site connected to Yakkl. If you don&rsquo;t have an existing project, check out our Quick start guide, which contains guides and resources for building your first static site."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-docs kind-page type-docs ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container docs">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the docs..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul><div class="docs-nav-items"><h3>Welcome</h3>
+    <ul><li><a href="/docs/welcome/">Introduction</a></li></ul><h3>Quick Start</h3>
+    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li><li><a href="/docs/quickstart/setup-site/">Setup Your Site</a></li><li><a href="/docs/quickstart/configure-cms/">Configure the CMS</a></li></ul><h3>Git Sync</h3>
+    <ul><li><a href="/docs/git-sync/">Connecting to a Source Provider</a></li><li><a href="/docs/git-sync/github/">GitHub</a></li><li><a href="/docs/git-sync/gitlab/">GitLab</a></li><li><a href="/docs/git-sync/bitbucket/">Bitbucket</a></li><li><a href="/docs/git-sync/azure-devops/">Azure DevOps</a></li><li><a href="/docs/git-sync/manual-setup/">Manual Setup</a></li></ul><h3>Editing</h3>
+    <ul><li><a href="/docs/editing/">Managing Content</a></li><li><a href="/docs/editing/markdown-editor/">Markdown Editor</a></li><li><a href="/docs/editing/front-matter/">Front Matter</a></li><li><a href="/docs/editing/data-files/">Data Files</a></li><li><a href="/docs/editing/menus/">Menus</a></li><li><a href="/docs/editing/media-library/">Media Library</a></li><li><a href="/docs/editing/remote-admin/">Remote Admin</a></li></ul><h3>Media</h3>
+    <ul><li><a href="/docs/media/">Storing Media Files</a></li></ul><h3>Settings &amp; Configuration</h3>
+    <ul><li><a href="/docs/settings/">All Settings</a></li><li><a href="/docs/settings/front-matter-templates/">Front Matter Templates</a></li><li><a href="/docs/settings/fields/">Fields</a></li><li><a href="/docs/settings/content-sections/">Sidebar Configuration</a></li><li><a href="/docs/settings/config-files/">Config Files</a></li><li><a href="/docs/settings/snippets/">Snippets</a></li><li><a href="/docs/settings/collaborators/">Collaborators &amp; Teams</a></li></ul><h3>Organizations</h3>
+    <ul><li><a href="/docs/collaboration/organizations/">About Organizations</a></li></ul><h3>Previews</h3>
+    <ul></ul><h3>Hosting</h3>
+    <ul><li><a href="/docs/hosting/">Hosting Options</a></li><li><a href="/docs/hosting/s3-cloudfront-stack/" class="active">AWS</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/hosting/s3-cloudfront-stack/#overview">Overview</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/hosting/s3-cloudfront-stack/#running-the-cloudformation-template">Running the CloudFormation Template</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/hosting/s3-cloudfront-stack/#adding-publish-credentials-to-yakkl">Adding Publish Credentials to Yakkl</a>
+            </li></ul><li><a href="/docs/hosting/github-pages/">GitHub Pages</a></li><li><a href="/docs/hosting/ftp/">FTP/SFTP</a></li><li><a href="/docs/hosting/webhooks/">Webhooks</a></li></ul><h3>Developer Guides</h3>
+    <ul><li><a href="/docs/guides/developing-with-hugo/">Hugo</a></li><li><a href="/docs/guides/developing-with-jekyll/">Jekyll</a></li><li><a href="/docs/guides/developing-with-gatsby/">Gatsby</a></li></ul><h3>Other</h3>
+    <ul><li><a href="/docs/troubleshooting/">Troubleshooting</a></li><li><a href="/docs/faqs/">Frequently Asked Questions</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="/docs/import-button/">Import Button</a></li><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul><h3>Pro</h3>
+    <ul><li><a href="/docs/pro/features/pro-plans/">Pro Plans</a></li><li><a href="/docs/pro/features/audit-logging/">Audit Logging</a></li><li><a href="/docs/pro/features/single-sign-on/">Single Sign-on</a></li></ul></div></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><main class="docs-container">
+    <div class="sidebar">
+      <aside class="sidebar-inner">
+        <h2>
+          <a href="/docs">
+            Docs
+          </a>
+        </h2><div class="docs-nav-items"><h3>Welcome</h3>
+    <ul><li><a href="/docs/welcome/">Introduction</a></li></ul><h3>Quick Start</h3>
+    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li><li><a href="/docs/quickstart/setup-site/">Setup Your Site</a></li><li><a href="/docs/quickstart/configure-cms/">Configure the CMS</a></li></ul><h3>Git Sync</h3>
+    <ul><li><a href="/docs/git-sync/">Connecting to a Source Provider</a></li><li><a href="/docs/git-sync/github/">GitHub</a></li><li><a href="/docs/git-sync/gitlab/">GitLab</a></li><li><a href="/docs/git-sync/bitbucket/">Bitbucket</a></li><li><a href="/docs/git-sync/azure-devops/">Azure DevOps</a></li><li><a href="/docs/git-sync/manual-setup/">Manual Setup</a></li></ul><h3>Editing</h3>
+    <ul><li><a href="/docs/editing/">Managing Content</a></li><li><a href="/docs/editing/markdown-editor/">Markdown Editor</a></li><li><a href="/docs/editing/front-matter/">Front Matter</a></li><li><a href="/docs/editing/data-files/">Data Files</a></li><li><a href="/docs/editing/menus/">Menus</a></li><li><a href="/docs/editing/media-library/">Media Library</a></li><li><a href="/docs/editing/remote-admin/">Remote Admin</a></li></ul><h3>Media</h3>
+    <ul><li><a href="/docs/media/">Storing Media Files</a></li></ul><h3>Settings &amp; Configuration</h3>
+    <ul><li><a href="/docs/settings/">All Settings</a></li><li><a href="/docs/settings/front-matter-templates/">Front Matter Templates</a></li><li><a href="/docs/settings/fields/">Fields</a></li><li><a href="/docs/settings/content-sections/">Sidebar Configuration</a></li><li><a href="/docs/settings/config-files/">Config Files</a></li><li><a href="/docs/settings/snippets/">Snippets</a></li><li><a href="/docs/settings/collaborators/">Collaborators &amp; Teams</a></li></ul><h3>Organizations</h3>
+    <ul><li><a href="/docs/collaboration/organizations/">About Organizations</a></li></ul><h3>Previews</h3>
+    <ul></ul><h3>Hosting</h3>
+    <ul><li><a href="/docs/hosting/">Hosting Options</a></li><li><a href="/docs/hosting/s3-cloudfront-stack/" class="active">AWS</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/hosting/s3-cloudfront-stack/#overview">Overview</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/hosting/s3-cloudfront-stack/#running-the-cloudformation-template">Running the CloudFormation Template</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/hosting/s3-cloudfront-stack/#adding-publish-credentials-to-yakkl">Adding Publish Credentials to Yakkl</a>
+            </li></ul><li><a href="/docs/hosting/github-pages/">GitHub Pages</a></li><li><a href="/docs/hosting/ftp/">FTP/SFTP</a></li><li><a href="/docs/hosting/webhooks/">Webhooks</a></li></ul><h3>Developer Guides</h3>
+    <ul><li><a href="/docs/guides/developing-with-hugo/">Hugo</a></li><li><a href="/docs/guides/developing-with-jekyll/">Jekyll</a></li><li><a href="/docs/guides/developing-with-gatsby/">Gatsby</a></li></ul><h3>Other</h3>
+    <ul><li><a href="/docs/troubleshooting/">Troubleshooting</a></li><li><a href="/docs/faqs/">Frequently Asked Questions</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="/docs/import-button/">Import Button</a></li><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul><h3>Pro</h3>
+    <ul><li><a href="/docs/pro/features/pro-plans/">Pro Plans</a></li><li><a href="/docs/pro/features/audit-logging/">Audit Logging</a></li><li><a href="/docs/pro/features/single-sign-on/">Single Sign-on</a></li></ul></div></aside>
+    </div>
+    <section class="docs-content">
+      <div class="container md-content">
+        <h1>Static Site Hosting on AWS</h1>
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<div class="shortcode-warning"><p><strong>Yakkl will stop building and deploying sites on January 1st, 2020</strong>.<br/>
+We recommend to use a dedicated CI/CD platform like <a href="https://netlify.com">Netlify</a>.<br/>
+Read our docs on <a href="/blog/automate-deploy-w-circle-ci/">how to deploy with Circle CI</a>.</p>
+
+</div>
+
+<p>This guide assumes you already have an existing <a href="https://yakkl.com/signup">Yakkl Account</a>, <a href="https://aws.amazon.com/free/">Amazon AWS Account</a>, and a static site connected to Yakkl. If you don&rsquo;t have an existing project, check out our <a href="/docs/quickstart/">Quick start guide</a>, which contains guides and resources for building your first static site.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>This guide will walk you through setting up a static site hosting stack on AWS with CloudFormation. Using CloudFormation, we can set up our &ldquo;stack&rdquo; of services quickly and easily by just providing a little bit of information.</p>
+
+<p>For more info on how CloudFormation works, as well as how we built our stack, check out our blog post: <a href="https://yakkl.com/blog/automate-your-static-hosting-environment-with-aws-cloudformation/">Automate Your Static Hosting Environment With AWS CloudFormation</a></p>
+
+<p>In this guide, you have the option of using one of two CloudFormation templates.</p>
+
+<hr />
+
+<h3 id="basic-template">Basic Template</h3>
+
+<p>This template will create:</p>
+
+<ul>
+<li>An <strong>S3 bucket</strong> to store your files</li>
+<li>A <strong>CloudFront distribution</strong> to cache and serve your files to the public</li>
+<li>A <strong>Lambda@Edge</strong> function to provide some expected behavior that is not available from CloudFront by default</li>
+<li>An <strong>IAM User</strong> with write access to the bucket. This user is how Yakkl will deploy your website.</li>
+</ul>
+
+<p>The basic template will create a website on a <strong>.cloudfront.net</strong> domain. You might choose this option if you&rsquo;re just testing things out, don&rsquo;t want to bother with a custom domain, or want to handle all the DNS stuff on your own.</p>
+
+<p>To get started with the <strong>basic template</strong>, click the button below:</p>
+
+<a target="_blank" onclick="" title="Launch the basic static site stack" href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=basic-static-site&templateURL=https%3a%2f%2fs3.amazonaws.com%2fyakkl-cf-templates%2fstatic-site-hosting%2fbasic-s3-cloudfront.yml">
+    
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1920w" sizes="auto" alt="Launch stack button" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png" class="no-lightbox" />
+</a>
+
+<hr />
+
+<h3 id="complete-template">Complete Template</h3>
+
+<p>This template will do everything the basic template does, but will also:</p>
+
+<ul>
+<li>Create a <strong>DNS Record</strong> in <strong>Route 53</strong> to route a custom domain to your CloudFront distribution</li>
+<li>Configure the CloudFront distribution to work with this custom domain</li>
+<li>Create a <strong>TLS Certificate</strong> to serve your site over HTTPS</li>
+</ul>
+
+<p>The complete template is recommended if you already have a custom domain that you want routed to your site.</p>
+
+<div class="shortcode-tip"><p>Before you get started with the complete template, you will need to create a Hosted Zone for your domain in Route 53. If you purchased your domain through Route 53, this will be created for you. If not, refer to the <a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingHostedZone.html">AWS Route 53 Documentation</a></p>
+
+</div>
+
+<p>To get started with the <strong>complete template</strong>, click the button below:</p>
+
+<a target="_blank" onclick="" title="Launch the complete static site stack" href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=my-static-site&templateURL=https%3a%2f%2fs3.amazonaws.com%2fyakkl-cf-templates%2fstatic-site-hosting%2fadvanced-route53-acm.yml">
+    
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1920w" sizes="auto" alt="Launch stack button" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png" class="no-lightbox" />
+</a>
+
+<hr />
+
+<h2 id="running-the-cloudformation-template">Running the CloudFormation Template</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-1.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/09/cf-step-1.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/09/cf-step-1.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/09/cf-step-1.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/09/cf-step-1.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/09/cf-step-1.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/09/cf-step-1.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/09/cf-step-1.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/09/cf-step-1.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/09/cf-step-1.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/09/cf-step-1.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/09/cf-step-1.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-1.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-1.png" class="" /></p>
+
+<p>After deciding whether you want to use the <strong>basic</strong> or <strong>complete</strong> template, click the corresponding button above. This will take you to the CloudFormation Stack Creation page (you will be required to log in to your AWS account if you are not already logged in.) This screen will have pre-selected our CloudFormation template for you. Click <strong>Next.</strong></p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-2.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/09/cf-step-2.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/09/cf-step-2.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/09/cf-step-2.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/09/cf-step-2.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/09/cf-step-2.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/09/cf-step-2.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/09/cf-step-2.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/09/cf-step-2.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/09/cf-step-2.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/09/cf-step-2.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/09/cf-step-2.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-2.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-2.png" class="" /></p>
+
+<p>You will then proceed to the <strong>Stack Details</strong> screen. Here, you will configure your stack. Choose a <strong>Stack name</strong> that uniquely identifies this project, as it will be used in the names of your resources, and will be the way you reference this stack from the CloudFormation console. From here, specify the path to your error page, the default index document, and log retention period.</p>
+
+<p>If you&rsquo;re using the <strong>complete</strong> template, you will also need to enter in your domain name and select your hosted zone. If the appropriate hosted zone is not available in the dropdown, ensure that you have created it first. You also have the option to avoid creating the TLS certificate if you wish.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-3.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/09/cf-step-3.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/09/cf-step-3.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/09/cf-step-3.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/09/cf-step-3.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/09/cf-step-3.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/09/cf-step-3.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/09/cf-step-3.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/09/cf-step-3.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/09/cf-step-3.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/09/cf-step-3.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/09/cf-step-3.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-3.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-3.png" class="" /></p>
+
+<p>After clicking <strong>Next</strong>, you are taken to the Options screen. Here you may add tags for the generated resources, delegate the resource creation to a separate IAM role, and add monitoring options. None of this is required and much of it is not necessary for such a simple stack, so go ahead and click <strong>Next</strong> here.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-4.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/09/cf-step-4.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/09/cf-step-4.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/09/cf-step-4.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/09/cf-step-4.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/09/cf-step-4.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/09/cf-step-4.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/09/cf-step-4.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/09/cf-step-4.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/09/cf-step-4.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/09/cf-step-4.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/09/cf-step-4.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-4.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-4.png" class="" /></p>
+
+<p>You will be presented with a screen to review your stack configuration. Because our stack creates an IAM role, you must check the box labeled <strong>I acknowledge that AWS CloudFormation might create IAM resources</strong> before clicking <strong>Next</strong>.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-stack-dashboard.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/09/cf-stack-dashboard.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/09/cf-stack-dashboard.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/09/cf-stack-dashboard.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/09/cf-stack-dashboard.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/09/cf-stack-dashboard.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/09/cf-stack-dashboard.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/09/cf-stack-dashboard.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/09/cf-stack-dashboard.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/09/cf-stack-dashboard.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/09/cf-stack-dashboard.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/09/cf-stack-dashboard.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-stack-dashboard.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-stack-dashboard.png" class="" /></p>
+
+<p>You will then be taken to your CloudFormation dashboard. This is where you will see all of your CloudFormation stacks and their progress. If you don&rsquo;t see the stack you just created, give it a moment and refresh, and it should appear. Click on the name of your stack to view its progress.</p>
+
+<p>View your stack details and open the <strong>Resources</strong> pane to see all of the resources in your stack. This pane will gradually fill up with information as your CloudFormation template executes.</p>
+
+<h3 id="validating-the-certificate">Validating the Certificate</h3>
+
+<p>If you are running the <strong>complete</strong> template and chose to have it create a TLS Certificate for you, you must perform a manual step to enable certificate validation. <strong><em>Until this step is completed, your template will not finish running.</em></strong></p>
+
+<p>Navigate to the <strong>Certificate Manager</strong> Console by searching for it in the services navigation or navigating to <a href="https://console.aws.amazon.com/acm">https://console.aws.amazon.com/acm</a>. You should see a certificate request for your domain with a status of <strong>Pending validation</strong>.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-domain-validation.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/09/cf-domain-validation.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/09/cf-domain-validation.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/09/cf-domain-validation.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/09/cf-domain-validation.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/09/cf-domain-validation.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/09/cf-domain-validation.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/09/cf-domain-validation.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/09/cf-domain-validation.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/09/cf-domain-validation.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/09/cf-domain-validation.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/09/cf-domain-validation.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-domain-validation.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-domain-validation.png" class="" /></p>
+
+<p>Expand this row, and expand the details for your domain. Here you will see a button labeled <strong>Create record in Route 53</strong>. Click this button, and then confirm your action in the modal that pops up.</p>
+
+<p>Once this step is complete, your certificate will be issued after the domain validation finishes. This may take a while, so be patient!</p>
+
+<h2 id="adding-publish-credentials-to-yakkl">Adding Publish Credentials to Yakkl</h2>
+
+<p>Yakkl needs three pieces of information to publish to your S3 Bucket: the <strong>Bucket Name</strong>, <strong>Access Key ID</strong>, and <strong>Secret Key</strong>.</p>
+
+<h3 id="bucket-name">Bucket Name</h3>
+
+<p>To find the name of your bucket, open the <strong>Resources</strong> pane in your stack details. The resource with the Logical ID of <code>S3Bucket</code> is your S3 Bucket. If you don&rsquo;t see this resource, wait a few moments and refresh the page. The Physical ID of this resource is the name of your S3 bucket, and should look something like <code>{stackname}-s3bucket-{randomstring}</code>.</p>
+
+<h3 id="access-keys">Access Keys</h3>
+
+<p>Your CloudFormation stack contains an <strong>IAM User</strong> with access to write files to your S3 Bucket. However, the stack does not create access keys for this user automatically.</p>
+
+<p>To create an access key, again refer to the <strong>Resources</strong> pane in your stack details. Locate the resource with the Logical ID of <code>PublishUser</code> and click on the Physical ID to be taken to the IAM management page for this user.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-5.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/09/cf-step-5.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/09/cf-step-5.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/09/cf-step-5.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/09/cf-step-5.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/09/cf-step-5.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/09/cf-step-5.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/09/cf-step-5.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/09/cf-step-5.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/09/cf-step-5.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/09/cf-step-5.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/09/cf-step-5.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-5.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-5.png" class="" /></p>
+
+<p>Click on the <strong>Security credentials</strong> tab and, under the <strong>Access keys</strong> section, click on <strong>Create access key</strong>. A modal window will pop up containing the <strong>Access key ID</strong> and the <strong>Secret access key</strong>.</p>
+
+<div class="shortcode-warning"><h4>Store your secret access key somewhere safe!</h4><p>The secret access key can only be viewed in this modal. Once you dismiss it, you cannot view the secret access key again. If you lose it, you will have to generate a new pair of keys.</p>
+
+</div>
+
+<h3 id="adding-to-yakkl">Adding to Yakkl</h3>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-6.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/09/cf-step-6.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/09/cf-step-6.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/09/cf-step-6.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/09/cf-step-6.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/09/cf-step-6.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/09/cf-step-6.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/09/cf-step-6.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/09/cf-step-6.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/09/cf-step-6.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/09/cf-step-6.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/09/cf-step-6.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-6.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/cf-step-6.png" class="" /></p>
+
+<p>Once you have these credentials, open your website in Yakkl and navigate to the <strong>Settings</strong>. Click on the <strong>Deployment</strong> tab, and select <strong>Amazon S3</strong> as your connection. You will be presented with fields to fill in your <strong>Bucket</strong>, <strong>Access Key</strong>, and <strong>Secret</strong>.</p>
+
+<div class="shortcode-tip"><p>Under <strong>Advanced options</strong>, do <em>not</em> enable Gzip compression (CloudFront will handle this for you,) and leave the path as <code>/</code>.</p>
+
+</div>
+
+
+        <nav class="pagination"><a href="/docs/hosting/" rel="prev"><span class="prev-doc">Hosting Options</span></a><a href="/docs/hosting/github-pages/" rel="next"><span class="next-doc">GitHub Pages</span></a></nav><hr />
+        <div class="doc--info">
+          <span class="doc--meta-label">Last updated on</span>
+          <span class="doc--date">September 18, 2017</span>
+        </div>
+        <div class="post--feedback">
+          <p><small>Caught a mistake or want to contribute to the docs? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/docs/hosting/s3-cloudfront-stack.md" target="_blank">Github</a>!</small></p>
+        </div></div>
+    </section>
+  </main><footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Developing with Gatsby | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content="Gatsby is a highly flexible static site generator that uses ReactJS under the hood. This guide will explain how Gatsby works, and help you get the most out of your Gatsby site in the Yakkl CMS. /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Developing with Gatsby" />
+<meta property="og:description" content="Gatsby is a highly flexible static site generator that uses ReactJS under the hood. This guide will explain how Gatsby works, and help you get the most out of your Gatsby site in the Yakkl CMS." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/guides/developing-with-gatsby/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/01/OGimage-01-3x.jpg" /><meta property="og:image:alt" content="Gatsby is a highly flexible static site generator that uses ReactJS under the hood. This guide will explain how Gatsby works, and help you get the most out of your Gatsby site in the Yakkl CMS." /><meta property="article:published_time" content="2018-11-20T00:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2018-11-20T00:00:00&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="docs" />
+  <meta itemprop="name" content="Developing with Gatsby">
+<meta itemprop="description" content="Gatsby is a highly flexible static site generator that uses ReactJS under the hood. This guide will explain how Gatsby works, and help you get the most out of your Gatsby site in the Yakkl CMS."><meta itemprop="datePublished" content="2018-11-20T00:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-11-20T00:00:00&#43;00:00" /><meta itemprop="wordCount" content="803"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/OGimage-01-3x.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/OGimage-01-3x.jpg"/><meta name="twitter:title" content="Developing with Gatsby"/>
+<meta name="twitter:description" content="Gatsby is a highly flexible static site generator that uses ReactJS under the hood. This guide will explain how Gatsby works, and help you get the most out of your Gatsby site in the Yakkl CMS."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-docs kind-page type-docs ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container docs">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the docs..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul><div class="docs-nav-items"><h3>Developing with Gatsby</h3>
+    <ul><li><a href="/docs/guides/developing-with-gatsby/" class="active">Introduction</a></li></ul><h3>Developing with Hugo</h3>
+    <ul><li><a href="/docs/guides/developing-with-hugo/">Introduction</a></li><li><a href="/docs/guides/developing-with-hugo/project-structure/">Project Structure</a></li><li><a href="/docs/guides/developing-with-hugo/templating/">Templating</a></li><li><a href="/docs/guides/developing-with-hugo/static-files/">Static Files</a></li><li><a href="/docs/guides/developing-with-hugo/local-development/">Local Development</a></li><li><a href="/docs/guides/developing-with-hugo/environments/">Environments</a></li><li><a href="/docs/guides/developing-with-hugo/asset-pipeline/">Asset Pipeline</a></li><li><a href="/docs/guides/developing-with-hugo/short-codes/">Hugo Shortcodes</a></li><li><a href="/docs/guides/developing-with-hugo/misc/">Misc</a></li></ul><h3>Developing with Jekyll</h3>
+    <ul><li><a href="/docs/guides/developing-with-jekyll/">Introduction</a></li><li><a href="/docs/guides/developing-with-jekyll/project-structure/">Project Structure</a></li><li><a href="/docs/guides/developing-with-jekyll/templating/">Templating</a></li><li><a href="/docs/guides/developing-with-jekyll/static-files/">Static Files</a></li><li><a href="/docs/guides/developing-with-jekyll/local-development/">Local Development</a></li><li><a href="/docs/guides/developing-with-jekyll/environments/">Environments</a></li><li><a href="/docs/guides/developing-with-jekyll/asset-pipeline/">Asset Pipeline</a></li><li><a href="/docs/guides/developing-with-jekyll/plugins/">Jekyll Plugins</a></li><li><a href="/docs/guides/developing-with-jekyll/misc/">Misc</a></li></ul><h3>Hosting</h3>
+    <ul><li><a href="/docs/guides/hosting/github-pages-jekyll/">Using GitHub Pages to Build Your Jekyll Site</a></li></ul><h3>Miscellaneous</h3>
+    <ul><li><a href="/docs/guides/misc/working-with-globs/">Working with Globs</a></li></ul></div></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><main class="docs-container">
+    <div class="sidebar">
+      <aside class="sidebar-inner">
+        <h2>
+          <a href="/docs">
+            Docs
+          </a>
+        </h2><div class="docs-nav-items"><h3>Developing with Gatsby</h3>
+    <ul><li><a href="/docs/guides/developing-with-gatsby/" class="active">Introduction</a></li></ul><h3>Developing with Hugo</h3>
+    <ul><li><a href="/docs/guides/developing-with-hugo/">Introduction</a></li><li><a href="/docs/guides/developing-with-hugo/project-structure/">Project Structure</a></li><li><a href="/docs/guides/developing-with-hugo/templating/">Templating</a></li><li><a href="/docs/guides/developing-with-hugo/static-files/">Static Files</a></li><li><a href="/docs/guides/developing-with-hugo/local-development/">Local Development</a></li><li><a href="/docs/guides/developing-with-hugo/environments/">Environments</a></li><li><a href="/docs/guides/developing-with-hugo/asset-pipeline/">Asset Pipeline</a></li><li><a href="/docs/guides/developing-with-hugo/short-codes/">Hugo Shortcodes</a></li><li><a href="/docs/guides/developing-with-hugo/misc/">Misc</a></li></ul><h3>Developing with Jekyll</h3>
+    <ul><li><a href="/docs/guides/developing-with-jekyll/">Introduction</a></li><li><a href="/docs/guides/developing-with-jekyll/project-structure/">Project Structure</a></li><li><a href="/docs/guides/developing-with-jekyll/templating/">Templating</a></li><li><a href="/docs/guides/developing-with-jekyll/static-files/">Static Files</a></li><li><a href="/docs/guides/developing-with-jekyll/local-development/">Local Development</a></li><li><a href="/docs/guides/developing-with-jekyll/environments/">Environments</a></li><li><a href="/docs/guides/developing-with-jekyll/asset-pipeline/">Asset Pipeline</a></li><li><a href="/docs/guides/developing-with-jekyll/plugins/">Jekyll Plugins</a></li><li><a href="/docs/guides/developing-with-jekyll/misc/">Misc</a></li></ul><h3>Hosting</h3>
+    <ul><li><a href="/docs/guides/hosting/github-pages-jekyll/">Using GitHub Pages to Build Your Jekyll Site</a></li></ul><h3>Miscellaneous</h3>
+    <ul><li><a href="/docs/guides/misc/working-with-globs/">Working with Globs</a></li></ul></div></aside>
+    </div>
+    <section class="docs-content">
+      <div class="container md-content">
+        <h1>Developing with Gatsby</h1>
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+
+<p>Gatsby is a highly flexible static site generator that uses ReactJS under the hood. Pages are implemented as React components and the whole site is bundled as a single page app (SPA), but also uses a static site build process to render a static HTML version of the site. The result is a static site that is SEO friendly, but whose UI is hydrated into a React SPA once a page is loaded.</p>
+
+<h2 id="gatsby-is-a-departure-from-convention-based-ssgs">Gatsby is a Departure From Convention-based SSGs</h2>
+
+<p>Unlike Hugo and Jekyll, which build a static HTML website based on a specific structure of markdown files, Gatsby can be configured to work any way you want.</p>
+
+<p>Out of the box, a vanilla Gatsby install will generate an HTML page for each <code>.js</code> file located in its <code>src/pages</code> directory. These <code>.js</code> files should export a React component containing the markup for the page. However, Gatsby allows a developer to customize the behavior of the SSG at the build stage, using its <code>createPage</code> API to create pages from a variety of data sources, such as different types of files or even data from a remote API.</p>
+
+<h2 id="gatsby-is-focused-on-performance">Gatsby is Focused on Performance</h2>
+
+<p>One of Gatsby&rsquo;s primary goals is to make it easy to create a performant website via a pre-configured, highly optimized asset pipeline. In this way, Gatsby can be seen as a successor to <a href="https://facebook.github.io/create-react-app/">create-react-app</a> with some additional features to enable static site generation.</p>
+
+<h3 id="but-not-at-the-build-stage">&hellip;But Not at the Build Stage</h3>
+
+<p>It should be noted that Gatsby users typically experience slower build times compared to a site built with Hugo or Jekyll. Due to Gatsby&rsquo;s flexibility, build times will vary widely, depending on your setup.</p>
+
+<h3 id="choose-gatsby-if-you">Choose Gatsby if you:</h3>
+
+<ul>
+<li>Plan to use an advanced asset pipeline</li>
+<li>Want to build your templates with React</li>
+<li>Want full control over <em>what</em> pages are built by your SSG, and <em>where</em>.</li>
+<li>Are building a Progressive Web App as opposed to a content-driven website</li>
+</ul>
+
+<h3 id="don-t-choose-gatsby-if-you">Don&rsquo;t choose Gatsby if you:</h3>
+
+<ul>
+<li>Have a site with a large number of pages and want fast build times</li>
+<li>Don&rsquo;t want to work with React or GraphQL</li>
+<li>Want a website that runs little to no JavaScript on the client side</li>
+</ul>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>To get started with Gatsby, you will want to have a rudimentary understanding of <a href="https://reactjs.org/">React</a> and <a href="https://graphql.org/">GraphQL</a>, and have <a href="https://www.npmjs.com/">NPM</a> installed on your system.</p>
+
+<p>We also recommend that you set up a Git repository to manage development of your site. Doing so offers you free backups, enables <a href="/docs/git-sync/">content sync</a> with the CMS, and enables you to use <a href="/docs/settings/#deployment">continuous deployment</a>.</p>
+
+<p>You can create a new Gatsby site by running the following commands in your terminal:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">npm install -g gatsby
+gatsby new my-gatsby-site</pre></div>
+<p>This will create a new Gatsby site in the <code>my-new-site</code> directory. To run your site locally, you can run the following commands:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd my-gatsby-site
+gatsby develop</pre></div>
+<p>This will start a live-reloading development server and your site will appear at <code>localhost:8000</code>.</p>
+
+<h3 id="using-a-starter-instead">Using a Starter Instead</h3>
+
+<p>Because Gatsby&rsquo;s behavior is highly configurable, many different <strong>starter projects</strong> have been created. These projects wire up Gatsby to work for various use cases. You can take a look at the <a href="https://www.gatsbyjs.org/starters/?v=2">full list of starters</a> or, if you&rsquo;re planning to use your Gatsby site with Yakkl, <a href="https://www.gatsbyjs.org/starters/?c=Markdown&amp;v=2">try one of the markdown starters</a> as your starting point.</p>
+
+<p><em>Yakkl&rsquo;s Gatsby Starter</em><br />
+We are working on a blog starter that will make it easy to get started with Yakkl. For the time being, <a href="https://github.com/yakkl/gatsby-starter-blog">we&rsquo;ve forked a blog starter from Gatsby</a> and pre-configured some Yakkl settings. Use the <code>yakkl</code> branch when importing this project into Yakkl.</p>
+
+<div>
+<div class="create-site-block">
+    <h2></h2>
+    <a target="_blank" href="https://yakkl.com/quick-startrepo=yakkl/gatsby-starter-blog&amp;engine=gatsby" class="create-site-button">Import Gatsby Starter to Yakkl</a>
+</div>
+
+
+ </div>
+
+<div class="shortcode-tip"><p>If you&rsquo;re not using the Yakkl starter, be sure to review the following documentation to configure your Gatsby site with Yakkl:</p>
+
+<ul>
+<li><a href="/docs/media/">Media Files</a></li>
+<li><a href="/docs/settings/content-sections/">Sidebar Configuration</a></li>
+<li><a href="/docs/settings/build-commands/">Build Commands</a></li>
+</ul>
+
+</div>
+
+<h2 id="known-limitations">Known Limitations</h2>
+
+<p>The following are some acknowledged bugs or practical limitations of using Gatsby with Yakkl:</p>
+
+<h3 id="yakkl-doesn-t-like-relative-image-urls-gatsby-prefers-them">Yakkl doesn&rsquo;t like relative image URLs; Gatsby Prefers Them</h3>
+
+<p>Depending on how you&rsquo;re querying images from your Gatsby site, you may have issues with Yakkl. If you want to do any transformations on your images, Gatsby will want you to use the <strong>file path</strong> to your image instead of a URL. This is typically accomplished by inserting a <strong>relative path</strong> to the image in markdown files. Unfortunately, keeping track of your relative position in the file system and inserting an accurate relative path is tricky for any CMS, and Yakkl won&rsquo;t do it. Additionally, Gatsby interprets absolute files paths <strong>relative to the system root</strong> and not the project root, so a solution based on absolute paths will not work across different environments.</p>
+
+<p>Here are some options for getting around this:</p>
+
+<ul>
+<li>Store and reference images from the <code>static/</code> directory (this is the solution currently used by our <a href="https://github.com/yakkl/gatsby-starter-blog/blob/yakkl/.yakkl/settings.yml#L20">blog starter</a>). This will not allow you to transform images via GraphQL queries.</li>
+<li>Use <a href="https://www.gatsbyjs.org/packages/gatsby-remark-normalize-paths/">gatsby-remark-normalize-paths</a> to convert project-relative absolute paths to relative paths.</li>
+</ul>
+
+
+        <nav class="pagination"><a href="/docs/guides/developing-with-hugo/" rel="next"><span class="next-doc">Introduction</span></a></nav><hr />
+        <div class="doc--info">
+          <span class="doc--meta-label">Last updated on</span>
+          <span class="doc--date">November 20, 2018</span>
+        </div>
+        <div class="post--feedback">
+          <p><small>Caught a mistake or want to contribute to the docs? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/docs/guides/developing-with-gatsby.md" target="_blank">Github</a>!</small></p>
+        </div></div>
+    </section>
+  </main><footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Gulp and Webpack: Getting the Best of Both Worlds | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Gulp and Webpack: Getting the Best of Both Worlds" />
+<meta property="og:description" content="Once upon a time, I told you that Webpack was an excellent tool for managing JavaScript in your web projects. This is because Webpack allows you to write modular JavaScript for the browser, and handles the dependency resolution and file bundling. I contrasted Webpack with Gulp, a stream processor and taskrunner utility that, while it has its place, doesn’t do the sophisticated module bundling that Webpack does. This makes Gulp a less attractive option for packaging your JavaScript files." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/gulp-and-webpack-best-of-both-worlds/" /><meta property="og:image" content="https://yakkl.com/uploads/buddhabelly.jpg" /><meta property="og:image:alt" content="Once upon a time, I told you that Webpack was an excellent tool for managing JavaScript in your web projects. This is because Webpack allows you to write modular JavaScript for the browser, and handles the dependency resolution and file bundling. I contrasted Webpack with Gulp, a stream processor and taskrunner utility that, while it has its place, doesn’t do the sophisticated module bundling that Webpack does. This makes Gulp a less attractive option for packaging your JavaScript files." /><meta property="article:published_time" content="2019-04-16T09:00:00-03:00"/>
+  <meta property="article:modified_time" content="2019-04-16T09:00:00-03:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta itemprop="name" content="Gulp and Webpack: Getting the Best of Both Worlds">
+<meta itemprop="description" content="Once upon a time, I told you that Webpack was an excellent tool for managing JavaScript in your web projects. This is because Webpack allows you to write modular JavaScript for the browser, and handles the dependency resolution and file bundling. I contrasted Webpack with Gulp, a stream processor and taskrunner utility that, while it has its place, doesn’t do the sophisticated module bundling that Webpack does. This makes Gulp a less attractive option for packaging your JavaScript files."><meta itemprop="datePublished" content="2019-04-16T09:00:00-03:00" /><meta itemprop="dateModified" content="2019-04-16T09:00:00-03:00" /><meta itemprop="wordCount" content="2166"><meta itemprop="image" content="https://yakkl.com/uploads/buddhabelly.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/buddhabelly.jpg"/><meta name="twitter:title" content="Gulp and Webpack: Getting the Best of Both Worlds"/>
+<meta name="twitter:description" content="Once upon a time, I told you that Webpack was an excellent tool for managing JavaScript in your web projects. This is because Webpack allows you to write modular JavaScript for the browser, and handles the dependency resolution and file bundling. I contrasted Webpack with Gulp, a stream processor and taskrunner utility that, while it has its place, doesn’t do the sophisticated module bundling that Webpack does. This makes Gulp a less attractive option for packaging your JavaScript files."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/buddhabelly.jpg" alt="Gulp and Webpack: Getting the Best of Both Worlds" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/buddhabelly.jpg" class="" />
+            
+            <span class="photo-credit">DJ Walker</span>
+              
+        </div><div class="container">
+      <h1 class="post--title">Gulp and Webpack: Getting the Best of Both Worlds</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">April 16, 2019</span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<p><a href="https://yakkl.com/blog/write-better-javascript-with-webpack/">Once upon a time,</a> I told you that Webpack was an excellent tool for managing JavaScript in your web projects. This is because Webpack allows you to write modular JavaScript for the browser, and handles the dependency resolution and file bundling. I contrasted Webpack with Gulp, a stream processor and taskrunner utility that, while it has its place, doesn’t do the sophisticated module bundling that Webpack does. This makes Gulp a less attractive option for packaging your JavaScript files.</p>
+
+<p>One issue with any asset pipeline, though, comes up when using it alongside a static site generator. You have one tool building your JavaScript and CSS, and another tool building your site’s HTML. For the most part this is a pretty minor inconvenience: your deployment script could just run the commands separately, and maybe in your development environment you could run Webpack’s watch command and your SSG’s dev server in separate terminal windows. A slightly inelegant solution, but perfectly serviceable.</p>
+
+<p>Many developers have found creative solutions to this problem, which I learned while we were beta testing our brand new <a href="https://yakkl.com/docs/previews/instant-previews/">Instant Previews</a> feature. With Instant Previews, Yakkl is able to run your static site generator’s development server in our cloud preview environment, drastically reducing the time it takes to rebuild your preview. Unfortunately, some of those <em>imperfect-but-usable</em> solutions that have worked in developers’ preview environments don’t work so great with instant previews —  running multiple commands isn’t straightforward, and multiple parallel commands might lead to race conditions.</p>
+
+<p>To help assist in the adoption of instant previews for users who incorporate Webpack or another asset processing tool, I searched for a simple solution that could be applied to a variety of use cases. This shouldn’t be that hard: what’s a good tool that will allow me to orchestrate a series of commands, watch files for changes, and run a development server?</p>
+
+<figure>
+    
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/03/gulp-logo.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2019/03/gulp-logo.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2019/03/gulp-logo.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2019/03/gulp-logo.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2019/03/gulp-logo.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2019/03/gulp-logo.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2019/03/gulp-logo.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2019/03/gulp-logo.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2019/03/gulp-logo.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2019/03/gulp-logo.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2019/03/gulp-logo.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2019/03/gulp-logo.png 1920w" sizes="auto" alt="Gulp logo" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/03/gulp-logo.png" class="" /> <figcaption>
+            <p>We meet again, old friend.</p>
+        </figcaption>
+</figure>
+
+
+<p>Sure enough, Gulp fits the bill perfectly here.</p>
+
+<p><strong>Before we go any further,</strong> take a deep breath. I kicked off that Webpack article discussing tool fatigue, so I can imagine how you feel right now: <em>I need</em> <strong><em>another build tool</em></strong> <em>to run my build tool?</em></p>
+
+<p>This will be <strong>really easy</strong>, I promise.</p>
+
+<h2 id="getting-started-with-gulp">Getting Started With Gulp</h2>
+
+<p>For the purposes of this tutorial, let’s assume you have a Hugo site that uses Webpack to build assets. If you are using a different static site generator such as Jekyll, keep reading: this will be easy to adapt to several different SSGs.</p>
+
+<p>Since you already have a Webpack build configured, it’s safe to assume you already have Node and NPM in your environment, and your project already has a <code>package.json</code> file with your Webpack dependencies. To add Gulp to your project, simply install it through NPM like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install --save gulp</code></pre></div>
+<p>This tutorial uses the current latest version of Gulp, which is <code>4.0.0</code> at the time of writing. If you are reading this in the future and are running into problems, you may want to make sure you’re using a compatible version of Gulp:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install --save gulp@4.x</code></pre></div>
+<h3 id="creating-tasks">Creating Tasks</h3>
+
+<p>We’re going to define a series of tasks that will run all the essential components of our build, one after another. Ultimately we’ll create two Gulp commands: a <strong>build</strong> command, that will build our site for deployment, and a <strong>develop</strong> command, that will spin of a development server that rebuilds and reloads the site in response to changes.</p>
+
+<p>The <strong>build</strong> command will require two tasks:</p>
+
+<ul>
+<li>Build the Webpack assets</li>
+<li>Run the static site generator</li>
+</ul>
+
+<p>The <strong>develop</strong> command will be similar to the build command, but with a couple of extra steps:</p>
+
+<ul>
+<li>Build the Webpack assets</li>
+<li>Run the static site generator</li>
+<li>Start the development server</li>
+<li>Watch files for changes, re-run the builds, and reload the dev server</li>
+</ul>
+
+<p>After Gulp is installed, create a new file named <code>gulpfile.js</code> in the root of your repository. At the top of this file, add the following line to load the <code>gulp</code> package to load gulp into this context:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">gulp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;gulp&#34;</span>)
+</code></pre></div>
+<p>The simplest way to create a Gulp task is by defining a function in <code>gulpfile.js</code>. Gulp passes a callback function to your task, which should be used to signal that your task is finished.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">someTask</span>(<span style="color:#a6e22e">cb</span>) {
+    <span style="color:#75715e">// do some stuff
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">cb</span>()
+}
+</code></pre></div>
+<p>Alternatively, you can just wrap your code in a <code>Promise</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">someTask</span>(<span style="color:#a6e22e">cb</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+        <span style="color:#75715e">// do some stuff
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">resolve</span>()
+    })
+}
+</code></pre></div>
+<p>In order to run this task on the command line, you need to export it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">someTask</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">someTask</span>
+</code></pre></div>
+<p>At which point you can execute the task with the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gulp someTask</code></pre></div>
+<div class="shortcode-tip"><p>If you don’t have Gulp installed globally, running the <code>gulp</code> command may not work. Eventually we’re going to run our <code>gulp</code> command as an NPM script, which will correctly resolve the path to our installed modules, so this isn’t an issue.</p>
+
+</div>
+
+<h2 id="setting-up-the-build-pipeline">Setting Up The Build Pipeline</h2>
+
+<p>For starters, we will set up the basic build pipeline. This will just run the Webpack build, and wait until the assets are generated before running the SSG build. We can use <code>gulp.series</code> to create a new task to run these two sub-tasks sequentially, and then export it so we can run it on the command line. The structure of <code>gulpfile.js</code> will look something like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">gulp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp&#39;</span>)
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">assets</span>(<span style="color:#a6e22e">cb</span>) {
+    <span style="color:#75715e">// run webpack
+</span><span style="color:#75715e"></span>}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">ssg</span>(<span style="color:#a6e22e">cb</span>) {
+    <span style="color:#75715e">// run the SSG command
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#75715e">// export a build task that runs the above two tasks in series
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">build</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">series</span>(<span style="color:#a6e22e">assets</span>, <span style="color:#a6e22e">ssg</span>)
+</code></pre></div>
+<h3 id="creating-the-webpack-task">Creating the Webpack task</h3>
+
+<p>Fortunately for us, Webpack has a Node API to allow us to invoke it from a Node environment, so incorporating this in to a Gulp task will be super easy.</p>
+
+<p>First, require the webpack module in <code>gulpfile.js</code> (if you’re adding this to an existing Webpack project, you will already have Webpack installed.)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">webpack</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;webpack&#39;</span>)
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">webpackConfig</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./webpack.config.js&#39;</span>)
+</code></pre></div>
+<p>You’ll notice that we are also loading in the Webpack config. If your Webpack config is somewhere other than <code>webpack.config.js</code> in your project root, you will want to adjust the path in the code above.</p>
+
+<p>To run Webpack, we just have to invoke the <code>webpack</code> function from the module and pass it our <code>webpackConfig</code>. However, to make this work well with Gulp, we should wrap it in a Promise that can handle the success and error states:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">assets</span>(<span style="color:#a6e22e">cb</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+        <span style="color:#a6e22e">webpack</span>(<span style="color:#a6e22e">webpackConfig</span>, (<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">stats</span>) =&gt; {
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span>) {
+                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">reject</span>(<span style="color:#a6e22e">err</span>)
+            }
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">stats</span>.<span style="color:#a6e22e">hasErrors</span>()) {
+                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">reject</span>(<span style="color:#66d9ef">new</span> Error(<span style="color:#a6e22e">stats</span>.<span style="color:#a6e22e">compilation</span>.<span style="color:#a6e22e">errors</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;\n&#39;</span>)))
+            }
+            <span style="color:#a6e22e">resolve</span>()
+        })
+    })
+}
+</code></pre></div>
+<p>That’s it! The beauty of this solution is that it will work with <em>any</em> Webpack config, and if you make updates to your asset pipeline, you don’t have to make any changes to this file.</p>
+
+<h3 id="creating-the-ssg-task">Creating the SSG task</h3>
+
+<p>Hugo of course doesn’t have a Node API, but we can reasonably assume we’re going to run our build in an environment that has access to the <code>hugo</code> command, we’ll use Node’s build-in <code>child_process</code> module to run the <code>hugo</code> process as if we were invoking it from the command line.</p>
+
+<p>We’re going to use the <code>child_process</code> module’s <code>execFile</code> function. For best results, it would be great if we could have <code>execFile</code> return a <code>Promise.</code> Fortunately, we can use <code>utils.promisify</code> to provide a version of the function that does just that. Add the following lines to the top of <code>gulpfile.js</code>, with the rest of your imports:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">util</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;util&#39;</span>)
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">execFile</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">promisify</span>(<span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;child_process&#39;</span>).<span style="color:#a6e22e">execFile</span>)
+</code></pre></div>
+<p>Then, all you have to do to implement the <code>ssg</code> function is this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">ssg</span>(<span style="color:#a6e22e">cb</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">execFile</span>(<span style="color:#e6db74">&#39;hugo&#39;</span>)
+}
+</code></pre></div>
+<p>Of course, you might want this function to be more flexible: perhaps you want to run the command with different options depending on whether you’re developing the site or deploying it to the production environment. You could control this with environment variables if you wanted. For our example, I’ve chosen to modify the <code>ssg</code> function to return a new function depending on which environment is passed in as a parameter.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">ssg</span>(<span style="color:#a6e22e">env</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">env</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;production&#39;</span>) {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">hugo</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cb</span> =&gt; <span style="color:#a6e22e">execFile</span>(<span style="color:#e6db74">&#39;hugo&#39;</span>)
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">hugo</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cb</span> =&gt; <span style="color:#a6e22e">execFile</span>(<span style="color:#e6db74">&#39;hugo&#39;</span>, [<span style="color:#e6db74">&#39;-D&#39;</span>,<span style="color:#e6db74">&#39;-F&#39;</span>])
+}
+</code></pre></div>
+<p>If the code above looks a little weird, there’s a good reason for that. You could just <code>return cb =&gt; execFile('hugo')</code> without the unnecessary assignment, but Gulp’s output in the terminal identifies tasks by their function name. Thus, by assigning the arrow function before returning it, the task name will appear in the terminal as <code>hugo</code> (as opposed to <code>&lt;anonymous&gt;</code>).</p>
+
+<p>With this modification, we need to change our <code>build</code> task. Since the <code>ssg</code> function now <em>returns</em> a Gulp task, instead of being a Gulp task itself, we’ll change the line from</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">build</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">series</span>(<span style="color:#a6e22e">assets</span>, <span style="color:#a6e22e">ssg</span>)
+</code></pre></div>
+<p>to</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">build</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">series</span>(<span style="color:#a6e22e">assets</span>, <span style="color:#a6e22e">ssg</span>(<span style="color:#e6db74">&#39;production&#39;</span>))
+</code></pre></div>
+<h3 id="adding-an-npm-script">Adding an NPM Script</h3>
+
+<p>As mentioned earlier, the recommended way to run these tasks is as an NPM script, because in this case it can automatically resolve any locally-installed modules. We’ll do this by adding a <code>scripts</code> section to <code>package.json</code>. If you already have a <code>scripts</code> section in that file, feel free to add or modify the commands in there.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#960050;background-color:#1e0010">...</span>
+    <span style="color:#f92672">&#34;scripts&#34;</span>: {
+    <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;gulp build&#34;</span>
+    }
+}</code></pre></div>
+<p>Once the script is added, you can invoke it from the command line via <code>npm run</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm run build</code></pre></div>
+<h2 id="setting-up-the-development-pipeline">Setting up the Development Pipeline</h2>
+
+<p>Now that we’ve gotten the basic build pipeline nailed down, there are only a couple more steps to add a live-reloading development server. Instead of using <code>hugo serve</code>, we are going to continue to build the site using the <code>hugo</code> command, and run the development server through Gulp.</p>
+
+<h3 id="browsersync">Browsersync</h3>
+
+<p>To run our development server, we’ll use BrowserSync. First, install it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install --save browser-sync</code></pre></div>
+<p>Then, load it at the top of <code>gulpfile.js</code> with the rest of your imports:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">browserSync</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;browser-sync&#39;</span>).<span style="color:#a6e22e">create</span>()
+</code></pre></div>
+<p>Finally, we’ll create a new Gulp task called <code>serve</code> that starts the BrowserSync server by calling its <code>init</code> function. The second parameter passed to <code>init</code> is a callback function that will fire when the server is ready, so we’ll pass Gulp’s signal function as the callback here.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">serve</span>(<span style="color:#a6e22e">cb</span>) {
+    <span style="color:#a6e22e">browserSync</span>.<span style="color:#a6e22e">init</span>({
+        <span style="color:#a6e22e">server</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;./public&#34;</span>,
+        <span style="color:#a6e22e">port</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">8080</span>,
+        <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;0.0.0.0&#34;</span>
+    }, <span style="color:#a6e22e">cb</span>)
+}
+</code></pre></div>
+<p>Because the <code>hugo</code> command will build our site to <code>./public</code>, we set that as the document root of our server. If you’re using a different SSG, or building your site to a different directory, you will want to change this.</p>
+
+<div class="shortcode-tip"><p>We’ve chosen to bind to <code>0.0.0.0:8080</code> here for compatibility with Yakkl’s <a href="https://yakkl.com/docs/previews/instant-previews/">instant previews</a>.</p>
+
+</div>
+
+<p>Additionally, let’s create a task to reload the server:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">reload</span>(<span style="color:#a6e22e">cb</span>) {
+    <span style="color:#a6e22e">browserSync</span>.<span style="color:#a6e22e">reload</span>()
+    <span style="color:#a6e22e">cb</span>()
+}
+</code></pre></div>
+<h3 id="live-reloading">Live Reloading</h3>
+
+<p>We can use Gulp’s <code>watch</code> function to watch files for changes and run a task in response:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">watch</span> (<span style="color:#a6e22e">cb</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">watch</span>(
+        <span style="color:#e6db74">&#39;**/*&#39;</span>, <span style="color:#75715e">// watch everything...
+</span><span style="color:#75715e"></span>        {
+            <span style="color:#a6e22e">ignored</span><span style="color:#f92672">:</span> [
+                <span style="color:#75715e">// ...except for things generated by the build process.
+</span><span style="color:#75715e"></span>                <span style="color:#e6db74">&#39;public/**/*&#39;</span>,
+                <span style="color:#e6db74">&#39;static/assets/**/*&#39;</span>
+            ]
+        },
+        <span style="color:#75715e">// when something changes, rebuild + reload
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">series</span>(<span style="color:#a6e22e">assets</span>, <span style="color:#a6e22e">ssg</span>(<span style="color:#e6db74">&#39;development&#39;</span>), <span style="color:#a6e22e">reload</span>)
+    )
+}
+</code></pre></div>
+<p>There are a couple things that are important to pay attention to here:</p>
+
+<ol>
+<li>To watch all files in the project, we can just use this <strong>globstar</strong> pattern: <code>**/*</code></li>
+<li>We want to be sure to ignore any files generated by the build process, otherwise we might end up in an infinite reload loop. For our project, this means ignoring everything in <code>public</code> (where the site is built to) as well as everything in <code>static/assets</code> (where the assets are generated.) Depending on how your site is set up, you may need to tweak these rules.</li>
+</ol>
+
+<p>Now that this is done, we just need to create and export the <code>develop</code> task by running the following series:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">exports</span>.<span style="color:#a6e22e">develop</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">series</span>(<span style="color:#a6e22e">assets</span>, <span style="color:#a6e22e">ssg</span>(<span style="color:#e6db74">&#39;development&#39;</span>), <span style="color:#a6e22e">serve</span>, <span style="color:#a6e22e">watch</span>)
+</code></pre></div>
+<p>This will run an initial build, start up the BrowserSync server, and then watch files for changes, running the rebuild &amp; reload sequence defined in our <code>watch</code> task.</p>
+
+<p>All that’s left is to add a corresponding NPM script:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#960050;background-color:#1e0010">...</span>
+    <span style="color:#f92672">&#34;scripts&#34;</span>: {
+        <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;gulp build&#34;</span>,
+        <span style="color:#f92672">&#34;develop&#34;</span>: <span style="color:#e6db74">&#34;gulp develop&#34;</span>
+    }
+}</code></pre></div>
+<p>Now, when we run <code>npm run develop</code>, it will start the development server, building both the Webpack assets and the Hugo site in a single sequence. When using the site with Yakkl’s instant previews, you can just set the instant preview command to <code>npm run develop</code>.</p>
+
+<h2 id="gulp-huh-all-right">Gulp, Huh? All Right!</h2>
+
+<p>Wisdom lies in using the right tool for the job. Classifying both Gulp and Webpack as “build tools” will make it sound redundant to use both, but in this case the two work great together. I’ve explained before why I like using Webpack, but here’s what I like about this particular Gulp solution:</p>
+
+<ul>
+<li>Works with any static site generator that can run in your terminal</li>
+<li>Works with a variety of Webpack configs without modification</li>
+<li>Adds BrowserSync and live reloading behavior to any SSG</li>
+<li>Makes it easy to work with Yakkl’s Instant Previews</li>
+</ul>
+
+<p>You can download the entire <code>gulpfile.js</code> from <a href="https://gist.github.com/dwalkr/60a19d6a309455b2552f7bd7989d26e0">this gist</a>. If you’re not using Hugo, it should still be pretty straightforward to adapt it to whatever SSG you’re using.</p>
+
+<p>And with that, all that’s left to say is: <em>welp, seeya later!</em></p>
+
+<div class="youtube-embed--wrapper">
+    <iframe class="youtube-embed" src="https://www.youtube-nocookie.com/embed/N_j5tDuakKU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "Gulp and Webpack: Getting the Best of Both Worlds";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/gulp-and-webpack-best-of-both-worlds\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/gulp-and-webpack-best-of-both-worlds.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

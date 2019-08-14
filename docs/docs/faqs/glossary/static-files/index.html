@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Static Files | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Static Files" />
+<meta property="og:description" content=" Static files are files that are not processed by your static site generator. Instead, they are just copied over as-is at built time.
+Examples  Jekyll: any file without front matter. Hugo: static files live in the staticDir, which defaults to static/ VuePress: static files live in .vuepress/public  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/faqs/glossary/static-files/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg" /><meta property="og:image:alt" content=" Static files are files that are not processed by your static site generator. Instead, they are just copied over as-is at built time.
+Examples  Jekyll: any file without front matter. Hugo: static files live in the staticDir, which defaults to static/ VuePress: static files live in .vuepress/public  " /><meta property="article:published_time" content="2017-12-31T04:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2017-12-31T04:00:00&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="docs" />
+  <meta itemprop="name" content="Static Files">
+<meta itemprop="description" content=" Static files are files that are not processed by your static site generator. Instead, they are just copied over as-is at built time.
+Examples  Jekyll: any file without front matter. Hugo: static files live in the staticDir, which defaults to static/ VuePress: static files live in .vuepress/public  "><meta itemprop="datePublished" content="2017-12-31T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2017-12-31T04:00:00&#43;00:00" /><meta itemprop="wordCount" content="47"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg"/><meta name="twitter:title" content="Static Files"/>
+<meta name="twitter:description" content=" Static files are files that are not processed by your static site generator. Instead, they are just copied over as-is at built time.
+Examples  Jekyll: any file without front matter. Hugo: static files live in the staticDir, which defaults to static/ VuePress: static files live in .vuepress/public  "/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-docs kind-page type-docs ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container docs">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the docs..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul><div class="docs-nav-items"><h3>FAQs</h3>
+    <ul></ul><h3>Glossary</h3>
+    <ul><li><a href="/docs/faqs/glossary/static-sites/">Static Sites</a></li><li><a href="/docs/faqs/glossary/static-site-generators/">Static Site Generators</a></li><li><a href="/docs/faqs/glossary/static-files/" class="active">Static Files</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/faqs/glossary/static-files/#examples">Examples</a>
+            </li></ul><li><a href="/docs/faqs/glossary/content-files/">Content Files</a></li><li><a href="/docs/faqs/glossary/ci-cd/">CI/CD</a></li><li><a href="/docs/faqs/glossary/front-matter/">Front Matter</a></li></ul><h3>FAQs</h3>
+    <ul><li><a href="/docs/faqs/migrating-site-to-different-repo-or-provider/">How to Migrate a Site to a Different Repo or Git Provider</a></li><li><a href="/docs/faqs/how-to-use-yaml-json-front-matter-w-hugo/">How to use YAML or JSON for Front Matter with Hugo?</a></li><li><a href="/docs/faqs/timezones/">Yakkl Isn&#39;t Using My Timezone Setting!</a></li><li><a href="/docs/faqs/transferring-site/">How To Transfer a Site to an Organization?</a></li><li><a href="/docs/faqs/cancel-legacy-plan/">How To Cancel/Downgrade a Per-Site Plan?</a></li><li><a href="/docs/faqs/forestry-changed-code/">Why did Yakkl edit my files?</a></li><li><a href="/docs/faqs/jekyll-version/">What versions of Jekyll do you support?</a></li><li><a href="/docs/faqs/forestry-files/">Why did Yakkl add files to my repo?</a></li><li><a href="/docs/faqs/hugo-version/">What versions of Hugo do you support?</a></li><li><a href="/docs/faqs/front-matter-fallbacks/">How do I set fallback/hidden values for Front Matter?</a></li><li><a href="/docs/faqs/deploying-to-bitbucket/">Why Can&#39;t I Deploy to a Bitbucket Branch?</a></li><li><a href="/docs/faqs/backups/">How do I backup my site?</a></li></ul></div></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><main class="docs-container">
+    <div class="sidebar">
+      <aside class="sidebar-inner">
+        <h2>
+          <a href="/docs">
+            Docs
+          </a>
+        </h2><div class="docs-nav-items"><h3>FAQs</h3>
+    <ul></ul><h3>Glossary</h3>
+    <ul><li><a href="/docs/faqs/glossary/static-sites/">Static Sites</a></li><li><a href="/docs/faqs/glossary/static-site-generators/">Static Site Generators</a></li><li><a href="/docs/faqs/glossary/static-files/" class="active">Static Files</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/faqs/glossary/static-files/#examples">Examples</a>
+            </li></ul><li><a href="/docs/faqs/glossary/content-files/">Content Files</a></li><li><a href="/docs/faqs/glossary/ci-cd/">CI/CD</a></li><li><a href="/docs/faqs/glossary/front-matter/">Front Matter</a></li></ul><h3>FAQs</h3>
+    <ul><li><a href="/docs/faqs/migrating-site-to-different-repo-or-provider/">How to Migrate a Site to a Different Repo or Git Provider</a></li><li><a href="/docs/faqs/how-to-use-yaml-json-front-matter-w-hugo/">How to use YAML or JSON for Front Matter with Hugo?</a></li><li><a href="/docs/faqs/timezones/">Yakkl Isn&#39;t Using My Timezone Setting!</a></li><li><a href="/docs/faqs/transferring-site/">How To Transfer a Site to an Organization?</a></li><li><a href="/docs/faqs/cancel-legacy-plan/">How To Cancel/Downgrade a Per-Site Plan?</a></li><li><a href="/docs/faqs/forestry-changed-code/">Why did Yakkl edit my files?</a></li><li><a href="/docs/faqs/jekyll-version/">What versions of Jekyll do you support?</a></li><li><a href="/docs/faqs/forestry-files/">Why did Yakkl add files to my repo?</a></li><li><a href="/docs/faqs/hugo-version/">What versions of Hugo do you support?</a></li><li><a href="/docs/faqs/front-matter-fallbacks/">How do I set fallback/hidden values for Front Matter?</a></li><li><a href="/docs/faqs/deploying-to-bitbucket/">Why Can&#39;t I Deploy to a Bitbucket Branch?</a></li><li><a href="/docs/faqs/backups/">How do I backup my site?</a></li></ul></div></aside>
+    </div>
+    <section class="docs-content">
+      <div class="container md-content">
+        <h1>Static Files</h1>
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+
+<p>Static files are files that are not processed by your static site generator. Instead, they are just copied over as-is at built time.</p>
+
+<h2 id="examples">Examples</h2>
+
+<ul>
+<li><strong>Jekyll</strong>: any file without front matter.</li>
+<li><strong>Hugo</strong>: static files live in the <code>staticDir</code>, which defaults to <code>static/</code></li>
+<li><strong>VuePress:</strong> static files live in <code>.vuepress/public</code></li>
+</ul>
+
+
+        <nav class="pagination"><a href="/docs/faqs/glossary/static-site-generators/" rel="prev"><span class="prev-doc">Static Site Generators</span></a><a href="/docs/faqs/glossary/content-files/" rel="next"><span class="next-doc">Content Files</span></a></nav><hr />
+        <div class="doc--info">
+          <span class="doc--meta-label">Last updated on</span>
+          <span class="doc--date">December 31, 2017</span>
+        </div>
+        <div class="post--feedback">
+          <p><small>Caught a mistake or want to contribute to the docs? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/docs/faqs/glossary/static-files.md" target="_blank">Github</a>!</small></p>
+        </div></div>
+    </section>
+  </main><footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

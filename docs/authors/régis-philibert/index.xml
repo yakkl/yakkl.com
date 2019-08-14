@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Régis Philibert on Yakkl.com</title>
+    <link>https://yakkl.com/authors/r%C3%A9gis-philibert/</link>
+    <description>Recent content in Régis Philibert on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Fri, 25 May 2018 05:13:41 -1100</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/authors/r%C3%A9gis-philibert/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Enhance Your Hugo JSON API Using Custom Output Formats and Netlify Redirects</title>
+      <link>https://yakkl.com/blog/hugo-json-api-part-2/</link>
+      <pubDate>Fri, 25 May 2018 05:13:41 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/hugo-json-api-part-2/</guid>
+      <description>Hugo makes it super easy to build simple APIs with its built-in output formats. In my previous article, we built a fully functional JSON API. Today we’re going to extend the capabilities of this API and improve the user experience with better URLs.
+At the moment our API can look up specific items, but can’t look at them in relation to each other. Say you want to know what players are in a specific team: with our current API, you can&amp;rsquo;t do that easily.</description>
+    </item>
+    
+    <item>
+      <title>Build a JSON API With Hugo&#39;s Custom Output Formats</title>
+      <link>https://yakkl.com/blog/build-a-json-api-with-hugo/</link>
+      <pubDate>Fri, 13 Apr 2018 16:00:27 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/build-a-json-api-with-hugo/</guid>
+      <description>As developers, we love open and accessible data. For example, you may want to use your local transit data for a mobile app, or maybe you want a service like Zapier or IFTTT to send you an email every time the weather forecast calls for rain. If you’re a super geek like @bdougieyo, you’ve built an app that tells you when to leave work in order to avoid traffic from your local baseball team’s home games (from his excellent talk here).</description>
+    </item>
+    
+  </channel>
+</rss>

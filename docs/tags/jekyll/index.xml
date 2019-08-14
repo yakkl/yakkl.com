@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jekyll on Yakkl.com</title>
+    <link>https://yakkl.com/tags/jekyll/</link>
+    <description>Recent content in Jekyll on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Fri, 27 Apr 2018 09:38:55 -1100</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Instant Production-Ready Scaffolding With Create-Static-Site</title>
+      <link>https://yakkl.com/blog/instant-production-ready-scaffolding-with-create-static-site/</link>
+      <pubDate>Fri, 27 Apr 2018 09:38:55 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/instant-production-ready-scaffolding-with-create-static-site/</guid>
+      <description>Create React App is a utility provided by the Facebook team in support of the React JavaScript framework. The goal of Create React App is to allow developers to quickly bootstrap a React project without having to spend time sorting out the build pipeline. With over 47,000 stars on Github (over half as many as the actual React library,) Create React App&amp;rsquo;s popularity speaks for itself.
+The success and utility of Create React App has inspired the Yakkl.</description>
+    </item>
+    
+  </channel>
+</rss>

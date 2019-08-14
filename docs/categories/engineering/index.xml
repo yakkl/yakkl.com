@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Engineering on Yakkl.com</title>
+    <link>https://yakkl.com/categories/engineering/</link>
+    <description>Recent content in Engineering on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Thu, 01 Aug 2019 14:07:06 -0300</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/categories/engineering/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Full Text Searching with Postgres</title>
+      <link>https://yakkl.com/blog/full-text-searching-with-postgres/</link>
+      <pubDate>Thu, 01 Aug 2019 14:07:06 -0300</pubDate>
+      
+      <guid>https://yakkl.com/blog/full-text-searching-with-postgres/</guid>
+      <description>At Yakkl, we use Postgres as our primary data store. In this article I’ll show you how we used tsvectorto improve searching for documents in the CMS.
+The tsvector Type Postgres has a data type called tsvector that is used for full text search. A tsvector value merges different variants of the same word and removes duplicates to create a sorted list of distinct words called lexemes.
+SELECT to_tsvector(&amp;#39;pg_catalog.english&amp;#39;, &amp;#39;Never gonna give you up.</description>
+    </item>
+    
+  </channel>
+</rss>

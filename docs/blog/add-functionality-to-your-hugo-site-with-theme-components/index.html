@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Add Functionality to Your Hugo Site With Theme Components | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content="Theme components are great for implementing alternative output formats for a site&#39;s content. We previously showed you how to add a JSON API to your Hugo site — in this article, I will be re-implementing this feature as a theme component. The resulting component will be something that can be installed on any existing Hugo site to provide JSON output for all content types, without the user having to write their own layouts. Thanks to theme components, they can install this alongside an existing theme and use both! /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Add Functionality to Your Hugo Site With Theme Components" />
+<meta property="og:description" content="Theme components are great for implementing alternative output formats for a site&#39;s content. We previously showed you how to add a JSON API to your Hugo site — in this article, I will be re-implementing this feature as a theme component. The resulting component will be something that can be installed on any existing Hugo site to provide JSON output for all content types, without the user having to write their own layouts. Thanks to theme components, they can install this alongside an existing theme and use both!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/add-functionality-to-your-hugo-site-with-theme-components/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/07/leaf-group.jpg" /><meta property="og:image:alt" content="Theme components are great for implementing alternative output formats for a site&#39;s content. We previously showed you how to add a JSON API to your Hugo site — in this article, I will be re-implementing this feature as a theme component. The resulting component will be something that can be installed on any existing Hugo site to provide JSON output for all content types, without the user having to write their own layouts. Thanks to theme components, they can install this alongside an existing theme and use both!" /><meta property="article:published_time" content="2018-07-12T17:00:00-11:00"/>
+  <meta property="article:modified_time" content="2018-07-13T01:05:06-11:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta itemprop="name" content="Add Functionality to Your Hugo Site With Theme Components">
+<meta itemprop="description" content="Theme components are great for implementing alternative output formats for a site&#39;s content. We previously showed you how to add a JSON API to your Hugo site — in this article, I will be re-implementing this feature as a theme component. The resulting component will be something that can be installed on any existing Hugo site to provide JSON output for all content types, without the user having to write their own layouts. Thanks to theme components, they can install this alongside an existing theme and use both!"><meta itemprop="datePublished" content="2018-07-12T17:00:00-11:00" /><meta itemprop="dateModified" content="2018-07-13T01:05:06-11:00" /><meta itemprop="wordCount" content="1967"><meta itemprop="image" content="https://yakkl.com/uploads/2018/07/leaf-group.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/07/leaf-group.jpg"/><meta name="twitter:title" content="Add Functionality to Your Hugo Site With Theme Components"/>
+<meta name="twitter:description" content="Theme components are great for implementing alternative output formats for a site&#39;s content. We previously showed you how to add a JSON API to your Hugo site — in this article, I will be re-implementing this feature as a theme component. The resulting component will be something that can be installed on any existing Hugo site to provide JSON output for all content types, without the user having to write their own layouts. Thanks to theme components, they can install this alongside an existing theme and use both!"/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/07/leaf-group.jpg" alt="Add Functionality to Your Hugo Site With Theme Components" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/07/leaf-group.jpg" class="" />
+              
+        </div><div class="container">
+      <h1 class="post--title">Add Functionality to Your Hugo Site With Theme Components</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">July 13, 2018</span><span>in 
+            <a href="/categories/frontend-friday" class="post--category" data-category="frontend-friday">
+              Frontend friday
+            </a></span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+
+<p>Theme Components are a relatively new addition to Hugo, first appearing in the <code>0.42</code> release. When Hugo looks for certain files (such as data and layout files,) it will first look in the top level of your project, and then look in the subdirectory of <code>themes/</code> that matches the theme you have set in <code>config.toml</code>. Previously, you could only specify a single theme in your <code>config.toml</code> file. The way theme components work is pretty simple: they allow you to specify an array of themes in <code>config.toml</code>. The same lookup occurs as before, but now it will check all of the themes in the array, moving from left to right.</p>
+
+<p>Theme components are great for implementing alternative output formats for a site&rsquo;s content. We previously showed you <a href="https://yakkl.com/blog/build-a-json-api-with-hugo/">how to add a JSON API to your Hugo site</a> &mdash; in this article, I will be re-implementing this feature as a theme component. The <a href="https://github.com/dwalkr/hugo-json-api-component">resulting component</a> will be something that can be installed on any existing Hugo site to provide JSON output for all content types, without the user having to write their own layouts. Thanks to theme components, they can install this alongside an existing theme and use both!</p>
+
+<h2 id="planning-the-api-component">Planning The API Component</h2>
+
+<p>Our goal is to create a self-contained component that will enable anyone to add a JSON API to the content on their site.</p>
+
+<p>Since we want this to work for a variety of use cases without modification, the user should be able to define the shape of their data to be rendered as JSON. This may seem like more work at first, but the end result will enable users to define their own schema without having to override and re-implement most of our layout code.</p>
+
+<p>One thing that will also make our layout code simpler and less error-prone will be to use <code>.Scratch</code> to build the data object that we want to output, and then outputting it all at once using Hugo’s <code>jsonify</code> function. We briefly touched on this approach <a href="https://yakkl.com/blog/hugo-json-api-part-2#addendum-creating-json-output-with-jsonify">the last time we talked about rendering JSON with Hugo</a>.</p>
+
+<h2 id="implementing-the-component">Implementing the Component</h2>
+
+<p>Since we’re making this a theme component, we will keep all of our code at <code>themes/json-api</code> inside of our project. Our component will only need a few files:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">data/
+  json_schema.yml
+layouts/
+  _default/
+    list.json.json
+    single.json.json
+  partials/
+    schema_item.tmpl
+theme.toml</pre></div>
+<p><code>json_schema.yml</code> is how we’ll let users define their own schema. More on that later. The files in <code>layouts</code> will do the heavy lifting of rendering our JSON.</p>
+
+<h3 id="the-json-output-format">The JSON Output Format</h3>
+
+<p>JSON is one of <a href="https://gohugo.io/templates/output-formats/#output-format-definitions">Hugo’s built-in output formats</a>. This theme component will follow Hugo’s default JSON behavior, so we don’t need to do any additional configuration. The JSON version of a page or section can be accessed by adding <code>index.json</code> to the end of its URL.</p>
+
+<h3 id="configurable-schema">Configurable Schema</h3>
+
+<p>Our theme component will define the default schema in its <code>json_schema.yml</code> data file, and users can override this file in their project to define their own schema. Our component will read the schema from this data file and generate the appropriate JSON.</p>
+
+<p>Our default schema looks like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">default:
+  list:
+    fields:
+    - key: title
+      field: title
+    - key: date
+      field: date
+  single:
+    fields:
+    - key: title
+      field: title
+    - key: date
+      field: date
+    - key: content
+      field: $PAGECONTENT</code></pre></div>
+<p>The top-level key represents which content section this schema applies to, and the second-level denotes whether the configuration is for the list view or single view. There is one special field I’ve defined here called <code>$PAGECONTENT</code>, which we will deal with later.</p>
+
+<div class="shortcode-tip"><p>Hugo will actually <strong>merge</strong> data files with the same name when resolving theme components. This means that when someone using our theme component overrides <code>json_schema.yml</code> inside their project, they don&rsquo;t need to redefine the <code>default</code> schema if they don&rsquo;t want to: it will still be available from the theme&rsquo;s <code>json_schema.yml</code> file!</p>
+
+</div>
+
+<h3 id="rendering-json-with-jsonify">Rendering JSON with <em>jsonify</em></h3>
+
+<p>If you read our initial article about creating a JSON API with Hugo, you’ll know that there are two layouts we need to create: <code>list.json.json</code> and <code>single.json.json</code>. These layouts will both output JSON, with <code>list.json.json</code> handling lists of content, and <code>single.json.json</code> taking care of single pages.</p>
+
+<p>As mentioned, we’re going to use <a href="https://gohugo.io/functions/scratch/">Hugo’s <code>.Scratch</code> feature</a> to build a data structure instead of us writing out the JSON syntax. Unlike Jekyll, Hugo doesn’t let you create new variables to use within your templates. Instead, it offers <code>.Scratch</code>, a key-value store that we will use to build our data object.</p>
+
+<p>To get a feel for how to use <code>.Scratch</code>, let’s start building <code>list.json.json</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{-</span> <span style="color:#a6e22e">.Scratch.Set</span> <span style="color:#e6db74">&#34;items&#34;</span> <span style="color:#a6e22e">slice</span> <span style="color:#75715e">-}}</span>
+<span style="color:#75715e">{{-</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">.Pages</span> <span style="color:#75715e">-}}</span>
+    <span style="color:#75715e">&lt;!-- 
+</span><span style="color:#75715e">    ...
+</span><span style="color:#75715e">    Load the page&#39;s data into &#34;item&#34; 
+</span><span style="color:#75715e">    ...
+</span><span style="color:#75715e">    --&gt;</span>
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">$.Scratch.Add</span> <span style="color:#e6db74">&#34;items&#34;</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">$.Scratch.Get</span> <span style="color:#e6db74">&#34;item&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">-}}</span>
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">$.Scratch.Delete</span> <span style="color:#e6db74">&#34;item&#34;</span> <span style="color:#75715e">-}}</span>
+<span style="color:#75715e">{{-</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">-}}</span>
+<span style="color:#75715e">{{-</span> <span style="color:#a6e22e">.Scratch.Get</span> <span style="color:#e6db74">&#34;items&#34;</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">jsonify</span> <span style="color:#75715e">-}}</span></code></pre></div>
+<p>Using <code>.Scratch.Set</code> and <code>.Scratch.Get</code>, we can set and retrieve values on the <code>Scratch</code> object. <code>.Scratch.Add</code> adds a value to a slice. In this case, we’re iterating over all of the pages in our list, adding the page’s data into a <code>.Scratch</code> value called <code>item</code>, and then adding that value to the <code>items</code> slice. This slice is then output as JSON.</p>
+
+<p>Alright, here comes the tricky part: parsing the schema from the <code>json_schema.yml</code> datafile and building the appropriate content into our data structure. Since this is something we will need to do for both <code>list</code> and <code>single</code> layouts, it is a good idea to encapsulate this behavior into a partial. Hugo requires us to explicitly pass all of the data to be used in the partial as the second parameter to the <code>partial</code> function, so we&rsquo;re going to use <code>dict</code> to build an object on-the-fly containing all of the values we plan to use.</p>
+
+<div class="shortcode-tip"><p>If you need more help, I&rsquo;ve previously discussed <a href="https://yakkl.com/blog/3-tips-for-mastering-blocks/#pass-page-context-to-your-hugo-block-layouts">using <code>dict</code> to pass more context into partials</a>.</p>
+
+</div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-text-template" data-lang="go-text-template"><span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;schema_item.tmpl&#34;</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">dict</span> <span style="color:#e6db74">&#34;currentPage&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#e6db74">&#34;Root&#34;</span> <span style="color:#960050;background-color:#1e0010">$</span> <span style="color:#e6db74">&#34;SchemaType&#34;</span> <span style="color:#e6db74">&#34;list&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">-}}</span></code></pre></div>
+<p>We’re passing the current page in our loop as <code>currentPage</code>, the root context as <code>Root</code>, and another one called <code>SchemaType</code>. Since we’re planning to use this same partial for the single layout as well, we need some way for the <code>schema_item.tmpl</code> template to know whether we’re in a single or list context, so we create a variable called <code>SchemaType</code> and pass it the value of <code>list</code>.</p>
+
+<p>The way we&rsquo;ve set up our code, we are expecting the <code>schema_item.tmpl</code> file to place our page&rsquo;s data in a <code>.Scratch</code> value with the key of <code>item</code>.</p>
+
+<p>The first thing we need to do is locate a compatible schema configuration. We will initially look for a schema defined for the current content section, falling back to <code>default</code> if it isn’t found. For example, when rendering the list view for posts, we will check for configuration at <code>posts.list</code>, falling back to <code>default.list</code> if that doesn’t exist.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-text-template" data-lang="go-text-template"><span style="color:#75715e">{{-</span> <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">and</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">isset</span> <span style="color:#a6e22e">$.Root.Site.Data.json_schema</span> <span style="color:#a6e22e">.currentPage.Section</span><span style="color:#f92672">)</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">isset</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">index</span> <span style="color:#a6e22e">$.Root.Site.Data.json_schema</span> <span style="color:#a6e22e">.currentPage.Section</span><span style="color:#f92672">)</span> <span style="color:#a6e22e">.SchemaType</span><span style="color:#f92672">)</span> <span style="color:#75715e">-}}</span>
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">$.Root.Scratch.Set</span> <span style="color:#e6db74">&#34;schema&#34;</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">index</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">index</span> <span style="color:#a6e22e">$.Root.Site.Data.json_schema</span> <span style="color:#a6e22e">.currentPage.Section</span><span style="color:#f92672">)</span> <span style="color:#a6e22e">.SchemaType</span><span style="color:#f92672">)</span> <span style="color:#75715e">-}}</span>
+<span style="color:#75715e">{{-</span> <span style="color:#66d9ef">else</span> <span style="color:#75715e">-}}</span>
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">$.Root.Scratch.Set</span> <span style="color:#e6db74">&#34;schema&#34;</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">index</span> <span style="color:#a6e22e">$.Root.Site.Data.json_schema.default</span> <span style="color:#a6e22e">.SchemaType</span><span style="color:#f92672">)</span> <span style="color:#75715e">-}}</span>
+<span style="color:#75715e">{{-</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">-}}</span></code></pre></div>
+<p>We’re using <code>.Scratch</code> again to temporarily store the schema configuration we’re going to use. This will make it easier to reference it in the subsequent code.</p>
+
+<p>The next thing we’re going to do is set the <code>uri</code> value of our data item. This is one value that I decided should always be set in an item&rsquo;s JSON. It&rsquo;s useful not only to locate the single item URL for an item in a list, but also to serve as a unique identifier for the item. We can use <code>.Scratch.SetInMap</code> to add the &lsquo;uri&rsquo; key to our &lsquo;item&rsquo; object.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-text-template" data-lang="go-text-template"><span style="color:#75715e">{{-</span> <span style="color:#a6e22e">$.Root.Scratch.SetInMap</span> <span style="color:#e6db74">&#34;item&#34;</span> <span style="color:#e6db74">&#34;uri&#34;</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">$.currentPage.OutputFormats.Get</span> <span style="color:#e6db74">&#34;json&#34;</span><span style="color:#f92672">)</span><span style="color:#a6e22e">.Permalink</span> <span style="color:#75715e">-}}</span></code></pre></div>
+<p><code>(.OutputFormats.Get</code> <code>&quot;</code><code>json</code><code>&quot;</code><code>).Permalink</code> returns the URL of the item for the JSON output format.</p>
+
+<p>Now that that’s done, all that’s left is to loop over the fields defined in our schema and add each one to the <code>.Scratch</code> object. At this point we need to check for any special fields in our schema, like <code>$PAGECONTENT</code>. The <code>$PAGECONTENT</code> field is just a placeholder for the HTML content of the page. The rest can be accessed via <code>.Params</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-text-template" data-lang="go-text-template"><span style="color:#75715e">{{-</span> <span style="color:#66d9ef">range</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">$.Root.Scratch.Get</span> <span style="color:#e6db74">&#34;schema&#34;</span><span style="color:#f92672">)</span><span style="color:#a6e22e">.fields</span> <span style="color:#75715e">-}}</span>
+    <span style="color:#75715e">{{-</span> <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">eq</span> <span style="color:#a6e22e">.field</span> <span style="color:#e6db74">&#34;$PAGECONTENT&#34;</span> <span style="color:#75715e">-}}</span>
+    <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">$.Root.Scratch.SetInMap</span> <span style="color:#e6db74">&#34;item&#34;</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">default</span> <span style="color:#e6db74">&#34;content&#34;</span> <span style="color:#a6e22e">.key</span><span style="color:#f92672">)</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">index</span> <span style="color:#a6e22e">$.currentPage.Content</span><span style="color:#f92672">)</span> <span style="color:#75715e">-}}</span>
+    <span style="color:#75715e">{{-</span> <span style="color:#66d9ef">else</span> <span style="color:#75715e">-}}</span>
+        <span style="color:#75715e">{{-</span> <span style="color:#a6e22e">$.Root.Scratch.SetInMap</span> <span style="color:#e6db74">&#34;item&#34;</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">default</span> <span style="color:#a6e22e">.field</span> <span style="color:#a6e22e">.key</span><span style="color:#f92672">)</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">index</span> <span style="color:#a6e22e">$.currentPage.Params</span> <span style="color:#a6e22e">.field</span><span style="color:#f92672">)</span> <span style="color:#75715e">-}}</span>
+    <span style="color:#75715e">{{-</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">-}}</span>
+<span style="color:#75715e">{{-</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">-}}</span></code></pre></div>
+<div class="shortcode-tip"><p>Using the <code>default</code> function, we make the <code>key</code> parameter optional when defining a schema. It will default to the name of the front matter field.</p>
+
+</div>
+
+<p>That’s all we have to do for our <code>schema_item.tmpl</code> partial! Deciding to let the user define their own schema may have seemed like more work at first, but it makes our theme component very flexible.</p>
+
+<p>Here’s the cool part: since we made the <code>schema_item.tmpl</code> partial do all the work, our <code>single.json.json</code> layout code is only two lines!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-text-template" data-lang="go-text-template"><span style="color:#75715e">{{-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;schema_item.tmpl&#34;</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">dict</span> <span style="color:#e6db74">&#34;currentPage&#34;</span> <span style="color:#a6e22e">.</span> <span style="color:#e6db74">&#34;Root&#34;</span> <span style="color:#960050;background-color:#1e0010">$</span> <span style="color:#e6db74">&#34;SchemaType&#34;</span> <span style="color:#e6db74">&#34;single&#34;</span><span style="color:#f92672">)</span> <span style="color:#75715e">-}}</span>
+<span style="color:#75715e">{{-</span> <span style="color:#a6e22e">.Scratch.Get</span> <span style="color:#e6db74">&#34;item&#34;</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">jsonify</span> <span style="color:#75715e">-}}</span></code></pre></div>
+<p>We just need to load the <code>schema_item.tmpl</code> partial and tell it we’re using the <code>single</code> schema, and then output the results (stored in <code>.Scratch</code>  as <code>item</code> again) with the <code>jsonify</code> function. Isn’t it great when it’s easy?</p>
+
+<h2 id="installing-the-json-theme-component-on-an-existing-site">Installing the JSON Theme Component On An Existing Site</h2>
+
+<p>To use this theme component on an existing site, we just have to take care of a few quick steps:</p>
+
+<ol>
+<li>Add our theme component to <code>themes/</code> as a submodules</li>
+<li>Update the <code>theme</code> setting in <code>config.toml</code> to include our theme component</li>
+<li>Set up JSON output for pages and sections</li>
+</ol>
+
+<p>To demonstrate this, I&rsquo;ve created a demo site that uses the <a href="https://github.com/nanxiaobei/hugo-paper/">Paper theme</a>. This site has a couple of blog posts, and three pages about different cars. <a href="https://hardcore-knuth-fc0978.netlify.com/">Here&rsquo;s a demo running on Netlify</a>.</p>
+
+<h3 id="setting-up-the-json-component">Setting up the JSON component</h3>
+
+<p>We can install the theme component with the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git submodule add https://github.com/dwalkr/hugo-json-api-component themes/json-api</code></pre></div>
+<p>Then, we just have to open up <code>config.toml</code> and change the following line:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;paper&#34;</span></code></pre></div>
+<p>to this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">theme</span> = [<span style="color:#e6db74">&#34;paper&#34;</span>,<span style="color:#e6db74">&#34;json-api&#34;</span>]</code></pre></div>
+<p>Finally, to enable the JSON output format for our list and single views, we need to specify it in the <code>outputs</code> section of our <code>config.toml</code> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">outputs</span>]
+    <span style="color:#a6e22e">page</span> = [<span style="color:#e6db74">&#34;html&#34;</span>,<span style="color:#e6db74">&#34;json&#34;</span>]
+    <span style="color:#a6e22e">section</span> = [<span style="color:#e6db74">&#34;html&#34;</span>,<span style="color:#e6db74">&#34;json&#34;</span>]</code></pre></div>
+<p>Once this is done, restart your Hugo server and you should be able to access the JSON data by adding <code>/index.json</code> to the end of section and page URLs.</p>
+
+<h3 id="customizing-the-schema">Customizing the Schema</h3>
+
+<p>The default schema works pretty well for our content in <code>posts</code>, but the cars that we added to the <code>garage</code> section have additional front matter that I want to expose in the JSON. Since the JSON API component lets us customize the JSON schema by section, this is really easy to do! Just add a file at <code>data/json_schema.yml</code> and configure it like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">garage:
+  list:
+    fields:
+      - field: year
+      - field: make
+      - field: model
+  single:
+    fields:
+      - field: title
+        key: name
+      - field: year
+      - field: make
+      - field: model
+      - field: engine
+      - field: $PAGECONTENT
+        key: description</code></pre></div>
+<p>Remember that Hugo merges data files, so even though we are overriding this file from our theme component, the <code>default</code> configuration will still be available to Hugo.</p>
+
+<p><a href="https://hardcore-knuth-fc0978.netlify.com/garage/index.json">Check out the list view</a> in our example to see the new schema in action.</p>
+
+<h2 id="the-tip-of-the-iceberg">The Tip of the Iceberg</h2>
+
+<p>While theme components aren&rsquo;t exactly &ldquo;plugins&rdquo;, they are a novel way to provide self-contained functionality to a Hugo site. I&rsquo;m looking forward to seeing themes take advantage of this new feature, and seeing what else might come out of this more modular way to develop Hugo sites. If you&rsquo;ve discovered a great use for theme components, <a href="https://join.slack.com/t/yakkl/shared_invite/enQtNzEzNzYwNzg0NjQyLWRiNjM5Y2NiMzcxOTgxNzg4OTA3ZjRiZDFlMmY5ZmRjZGUyMGM3ZDc0ZTg5NWMwMmIyNjIzMGE4OTIyZDY5NDM" target="_blank">Share it with us in our community Slack!</a></p>
+
+<div style="margin-top: 2em; padding: 20px 40px;background: #f7f7f7;"><h2>Join us every Friday 📅</h2><p><a href="/categories/frontend-friday/">Frontend Friday</a> is a weekly series where we write in-depth posts about modern web development.</p><p><strong>Next week:</strong>We'll show you how to <a href="https://yakkl.com/blog/form-builder-with-formspree-yakkl-blocks">use our Blocks feature to create a form builder.</a></p><p><strong>Last week:</strong> We showed you how <a href="https://yakkl.com/blog/harness-the-power-of-static-to-create-presentations/">Reveal.JS + Hugo and Yakkl make a great team for your next slide deck</a></p></div>
+
+<!--Have something to add?
+
+<a style="background: #F60; display: inline-block; border-radius: 5px; color: white; padding: 2px 9px; font-size: 14px;" href="https://news.ycombinator.com/item?id=17471333">Discuss on Hacker News</a>-->
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "Add Functionality to Your Hugo Site With Theme Components";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/add-functionality-to-your-hugo-site-with-theme-components\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/add-functionality-to-your-hugo-site-with-theme-components.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

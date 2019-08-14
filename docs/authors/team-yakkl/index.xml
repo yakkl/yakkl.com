@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Team Yakkl on Yakkl.com</title>
+    <link>https://yakkl.com/authors/team-yakkl/</link>
+    <description>Recent content in Team Yakkl on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Tue, 06 Aug 2019 09:34:25 +0000</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/authors/team-yakkl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2019/08/06 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2019-08-06-changelog/</link>
+      <pubDate>Tue, 06 Aug 2019 09:34:25 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2019-08-06-changelog/</guid>
+      <description>Features  Generic import: (beta) 🎉: you can now import any Git repository containing Markdown, YAML and JSON files.
+This means you can import Eleventy, Gridsome, Next, Nuxt, Hexo, etc. websites.
+ Better search for pages and in select fields options.
+We even wrote a blog post about how Yakkl does search 🔍 Markdown snippets: you can now use Markdown inside your snippets files. Instant Previews hibernation. 💤 Display last sign in date for organization users.</description>
+    </item>
+    
+    <item>
+      <title>2019/07/26 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2019-07-26-changelog/</link>
+      <pubDate>Fri, 26 Jul 2019 05:28:56 -0300</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2019-07-26-changelog/</guid>
+      <description>Bug fixes  Folders synchronization: Renamed, moved and deleted folders outside of Yakkl are now properly synched. Content sections will auto update after every import. Instant Previews:  Default command for JS-based static site generators should be run as an npm script (npm run yakkl:preview by default now). As the different cli packages are not installed globally in the preview environment, this will avoid errors when Gatsby or VuePress binaries were not found.</description>
+    </item>
+    
+    <item>
+      <title>2019/06/28 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2019-06-28-changelog/</link>
+      <pubDate>Fri, 28 Jun 2019 15:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2019-06-28-changelog/</guid>
+      <description>Features  Custom Preview Environments: Preview times getting you down? You can now pick from 4 preconfigured preview environments, or even bring your own. Some users have already seen preview server startup times go form 10 minutes to 10 seconds. SAML / SSO: Pro plans can now use SSO to allow their users to log in. https://yakkl.com/docs/pro/features/single-sign-on/  Enhancements  Preview Server Logs: Having a hard time reading the preview logs?</description>
+    </item>
+    
+    <item>
+      <title>2019/06/24 Changelog </title>
+      <link>https://yakkl.com/docs/changelog/changelog-2019-06-24/</link>
+      <pubDate>Mon, 24 Jun 2019 12:00:00 -0300</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/changelog-2019-06-24/</guid>
+      <description> Enhancements  Organization Settings: Updated tabs so that they don&amp;rsquo;t reset where you are on page refresh  Bug fixes  Date field formatting:  Fixed an issue where dates would export at {date: ******} while nested in blocks. Updated the default date example in the date field config.  Front Matter Templates: Fixed a few links linking to the front matter template create screen  </description>
+    </item>
+    
+    <item>
+      <title>2019/06/07 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2019-06-07-changelog/</link>
+      <pubDate>Wed, 29 May 2019 12:00:00 -0300</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2019-06-07-changelog/</guid>
+      <description>Enhancements  Teams (starter plan): Allow organizations to handle teams and collaborators to better define permissions on sites. Conditional for template fields (alpha) : Choose to conditionally render a field based on the value of a sibling field. Currently only works with two field types: Bool or Select field. Page Select : Alphabetically sort Documents in the &amp;ldquo;Page Select&amp;rdquo; dropdown.  Bug fixes  Menus: Fixed an issue where you couldn&amp;rsquo;t turn update a menu-item to an internal link from an external link.</description>
+    </item>
+    
+    <item>
+      <title>2019/05/17 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2019-05-17-changelog/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 -0300</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2019-05-17-changelog/</guid>
+      <description>Bug Fixes  Text Fields: When exporting front matter to YAML, Yakkl now makes sure quotes are added around numbers that are in Text Fields.
+Note: if the number is in a Number Field it will not be wrapped with quotes. Cloudinary: Fixed an issue where uploading the same image twice would overwrite the existing image without warning. It now creates a duplicate. This matches the existing behaviour when using Git as the media storage provider.</description>
+    </item>
+    
+    <item>
+      <title>2019/05/10 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2019-05-10-changelog/</link>
+      <pubDate>Fri, 10 May 2019 13:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2019-05-10-changelog/</guid>
+      <description>Enhancements  Front Matter Templates: removing/renaming a template via git will now delete the template from Yakkl. Include Field  Validation: The FMT editing form now validates that all Include Fields reference front matter template that exist. Display: When an Include field references a non-existent FMT a placeholder block will be shown to inform admins/develops of the error.  Blocks Field  Validation: The FMT editing form now validates that all templates listed in a Block Fields exist.</description>
+    </item>
+    
+    <item>
+      <title>2019/05/03 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2019-05-03-changelog/</link>
+      <pubDate>Fri, 03 May 2019 11:00:00 -0300</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2019-05-03-changelog/</guid>
+      <description>Enhancements  Accessing Private Git Submodules: Yakkl now exposes the public key for sites that were setup using oauth. Users experiencing issues with private git submodules can copy the public key and set it as a user/organization level key. Document List Sorting: It is now possible to switch the sorting methods between ascending and descending.  Bug Fixes  Formatting Dates: Fixed a bug with how some dates were exported to YAML Normalizing Front Matter: Fixed a bug that prevented fields defined in blocks, repeatable groups, and includes from being normalized.</description>
+    </item>
+    
+    <item>
+      <title>2019/04/29 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2019-04-29-changelog/</link>
+      <pubDate>Mon, 29 Apr 2019 15:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2019-04-29-changelog/</guid>
+      <description>Features  Import Azure Devops Repositories: Yakkl is now supports importing from git repositories hosted on Azure Devops.  Enhancements  Default Date Prop  &amp;ldquo;date&amp;rdquo; fields are no longer added to new pages by default. If you want this behaviour to continue, you must add a &amp;ldquo;date&amp;rdquo; field to your front matter templates.  Date Picker vs Time Picker  We now conditionally only show the datepicker, or the timepicker based on how your display format is configured.</description>
+    </item>
+    
+    <item>
+      <title>2019/04/23 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/changelog-2019-04-23/</link>
+      <pubDate>Tue, 23 Apr 2019 04:00:00 -0300</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/changelog-2019-04-23/</guid>
+      <description>Enhancements  Front Matter Templates UI: Multiple improvements to the front matter template editing experience, including:  Reorder fields using drag-and-drop Organized field config Improved form validation Add fields at any index by hovering between fields  Default Dates to “Now”: It is now possible to configure date fields to default to the current date when creating a page. “Display Fields” can be from Included templates: When choosing a display field for a template, or for a repeatable field group, you can now choose from the list of fields provided by an Include Fields.</description>
+    </item>
+    
+    <item>
+      <title>2019/04/18 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2019-04-05-changelog/</link>
+      <pubDate>Thu, 18 Apr 2019 12:00:00 -0300</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2019-04-05-changelog/</guid>
+      <description> Bug Fixes  Number Field: Fix validation of number fields when min/max config are null. Select Field: New pages wouldn&amp;rsquo;t always show up in select fields Add Guests: The add guest form wasn&amp;rsquo;t being cleared on cancel  </description>
+    </item>
+    
+    <item>
+      <title>2019/03/29 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2019-03-29-changelog/</link>
+      <pubDate>Fri, 29 Mar 2019 03:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2019-03-29-changelog/</guid>
+      <description>Bug Fixes  Creating Documents: Fixed a bug which told the users that they had no FMTs if the section had no valid templates listed. Validation: Fixed a widely used form validator that would sometimes blow up.  Enhancements  Timezone Settings: Added some descriptive text clarifying the purpose of the timezone in Settings &amp;gt; General. Front Matter Templates: If a front matter template no longer exists, display a warning from the section&amp;rsquo;s template config.</description>
+    </item>
+    
+    <item>
+      <title>2019/03/22</title>
+      <link>https://yakkl.com/docs/changelog/2019-03-22-changelog/</link>
+      <pubDate>Fri, 22 Mar 2019 03:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2019-03-22-changelog/</guid>
+      <description>Enhancements  Front Matter Templates: We smoothed out the creation flow for FMTs. Refresh for Updates: When important changes have been release, the CMS will now display a banner prompting the user to refresh. Focused Commits: Yakkl used to do the equivalent of git add . before committing. This would occasionally result in unwanted changes being pushed to repositories. We have switched to being more explicit about which files we add to the Yakkl commits.</description>
+    </item>
+    
+    <item>
+      <title>2019/03/01 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2019-03-01-changelog/</link>
+      <pubDate>Fri, 01 Mar 2019 20:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2019-03-01-changelog/</guid>
+      <description>We have not been updating our change log recently, but we&amp;rsquo;re getting the habit back. Here are a few of our most recent changes. Keep your eyes out for some fun stuff in the near future!
+Bug Fixes  Sortable Lists Ordering: Fixed an issue that prevented some users from ordering items in their Sortable List fields. Error Modals: Fixed several areas where we were improperly handling errors from the server.</description>
+    </item>
+    
+    <item>
+      <title>2019/02/04 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2019-02-04-changelog/</link>
+      <pubDate>Mon, 04 Feb 2019 12:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2019-02-04-changelog/</guid>
+      <description>Enhancements  Commit Batching: Queued commits are now grouped together to improve processing time. Commit messages show all of the authors who contributed to a commit.  Layout  Settings: Moved build tab contents into the Preview tab and Deploy tab. Settings: Settings tabs are now vertical.  Bug Fixes  Missing Output Directory: Return a helpful error message when your site is missing its output directory. Remote Admin: Fixed an issue that would prevent admins from accessing admin-features in the remote admin.</description>
+    </item>
+    
+    <item>
+      <title>2018/12/18 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-12-18-changelog/</link>
+      <pubDate>Tue, 18 Dec 2018 16:54:05 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-12-18-changelog/</guid>
+      <description>Enhancements  Build Commands UI: It is now possible to edit the build commands for publishing and preview your site from inside the CMS. Go to Settings &amp;gt; Build to edit your configuration. Setup Checklist: In order to help users in setting up their site, we&amp;rsquo;ve added a Setup Checklist to the sidebar. This checklist guides users through the basic steps of configuring a site with Yakkl. Help Banner in Settings: We&amp;rsquo;ve added a help banner to the top of the Sidebar, Media, and Deploy tabs in the Settings.</description>
+    </item>
+    
+    <item>
+      <title>2018/11/27 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-11-27-changelog/</link>
+      <pubDate>Tue, 27 Nov 2018 17:51:59 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-11-27-changelog/</guid>
+      <description>Enhancements  Quick Start: An image of the template to be imported can now be set for the Yakkl Quick Start.  Bug Fixes  Manual Import UI Failure: Fixed a bug that caused the CMS to crash just after importing a site using manual authentication. Front Matter Images: Fixed a bug that prevented images with relative paths from showing up in front matter editor. Jekyll Date Offsets: Fixed a bug which prevented some date fields from being exported in the correct format for Jekyll sites.</description>
+    </item>
+    
+    <item>
+      <title>2018/10/30 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-10-30-changelog/</link>
+      <pubDate>Tue, 30 Oct 2018 14:10:25 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-10-30-changelog/</guid>
+      <description> Enhancements  Media Library  Overall: So pretty 💁‍♀️ New List View: includes their name, thumbnail, and filetype. New Sidebar: Displays more info about selected files. More fun data coming soon.  Markdown Editor  Images: Images referenced via relative paths (e.g. ../static/cat.jpg) are now displayed. This is great for users fo VuePress.   </description>
+    </item>
+    
+    <item>
+      <title>2018/10/18 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-10-18-changelog/</link>
+      <pubDate>Thu, 18 Oct 2018 15:02:43 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-10-18-changelog/</guid>
+      <description>Features  Duplicating Pages: Click on the &amp;ldquo;&amp;hellip;&amp;rdquo; on a page, and create a duplicate! All fields are copied over, and the status is set to &amp;ldquo;draft&amp;rdquo;.  Updates  Switching Templates: Updated the behaviour when switching a page&amp;rsquo;s template:  When switching to an FMT with defaults:
+• New fields should be set to the default
+• Existing fields should not be set to the default
+• Hidden fields should always be set to the default</description>
+    </item>
+    
+    <item>
+      <title>2018/10/16 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-10-16-changelog/</link>
+      <pubDate>Tue, 16 Oct 2018 15:02:43 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-10-16-changelog/</guid>
+      <description>Sunsets  Data Files: We changed the way we handle data files. They are now imported using contenct sections.  Enhancements  Deployment Logs: Yakkl now collects logs from deployment and makes them available through the Notification UI. Sidebar Settings: The list of sections now contains more information about the type of section and the content it includes. Site Brand: The Yakkl Logo inside the CMS now behaves like a link i.</description>
+    </item>
+    
+    <item>
+      <title>2018/10/11 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-10-11-changelog/</link>
+      <pubDate>Thu, 11 Oct 2018 13:24:24 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-10-11-changelog/</guid>
+      <description> Bug Fixes  Read Only Documents: Fixed bug that broke Read Only docs when switching directly from another page. WYSIWYG Editor: Fixed bug that caused the editor to silently break when pasting multiline bold text from Word documents.  Enhancements  Sortable List Field: Items can now be sorted using touch on mobile.  </description>
+    </item>
+    
+    <item>
+      <title>2018/10/05 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/20181005-changelog/</link>
+      <pubDate>Fri, 05 Oct 2018 18:47:44 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/20181005-changelog/</guid>
+      <description>Bug Fixes  VuePress Publishing: Fixed bug preventing publishing to VuePress sites when the build directory was not set in the config. Title Hashes: Fixed issue where having a non-string title for document would cause the document list to blow up.  Improvements  Sidebar Config: Improved the drag and drop experience when re-ordering sections.  Performance  Initial CMS Load: Removed duplicate requests that slowed the initial page load.</description>
+    </item>
+    
+    <item>
+      <title>2018/10/01 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/20181001-changelog/</link>
+      <pubDate>Mon, 01 Oct 2018 17:25:01 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/20181001-changelog/</guid>
+      <description> Bug Fixes  Editor:  Fix for: Readonly documents not being readonly   Minor Adjustments  Allow Select lists to be used as the field label in repeatable groups  </description>
+    </item>
+    
+    <item>
+      <title>2018/09/28 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/20180928-changelog/</link>
+      <pubDate>Fri, 28 Sep 2018 14:19:04 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/20180928-changelog/</guid>
+      <description>Bug Fixes  Editor:  Fix for: having links in a table causes issues. Fix for: ordered list-items in a front matter field repeat after 0-9.   Minor Adjustments  Preview button links to docs in Vuepress sites. Deployment tab links to docs in Vuepress sites. Include Fields &amp;amp; Blocks graduate out of beta. Vuepress graduates out of beta. Importing a Vuepress site links to sidebar config settings page.</description>
+    </item>
+    
+    <item>
+      <title>2018/09/24 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/20180919-changelog/</link>
+      <pubDate>Wed, 19 Sep 2018 18:50:56 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/20180919-changelog/</guid>
+      <description>Features  Publish/Preview Commands: You can now specify the commands to run when publishing and previewing your site. This is noteworthy for two reasons:  Preprocess Scripts (e.g. gulp/webpack) VuePress Support  Create Directories: It is now possible to create directories from inside of Yakkl. This can be configured at the section level.  Bug Fixes  Relative Dir Config: Fixed a bug in Jekyll sites where setting the source value in the _config.</description>
+    </item>
+    
+    <item>
+      <title>2018/09/14 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-09-14-changelog/</link>
+      <pubDate>Fri, 14 Sep 2018 13:26:06 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-09-14-changelog/</guid>
+      <description> Enhancements  Select Fields: If you have &amp;ldquo;Enable Datafile Sections&amp;rdquo; set, you can now hook up select-fields to read from Document Fields  Bug Fixes  Editor: Fixing validation on front matter fields Media: Don&amp;rsquo;t show media delete button in the add-media modal  </description>
+    </item>
+    
+    <item>
+      <title>2018/09/12 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-09-12-changelog/</link>
+      <pubDate>Wed, 12 Sep 2018 14:19:59 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-09-12-changelog/</guid>
+      <description> Enhancements  IPV6: Yakkl now fully support for IPV6 Jekyll Previews: Improved support for users previewing Jekyll sites using Gem-based themes.  Bug Fixes  Markdown Editor: Fixed bug that prevented VuePress users from writing custom containers. Menus: Fixed bug that incremented menu-weights on re-saving new menu items Added horizontal scroll to menus if they overflowed off-screen  </description>
+    </item>
+    
+    <item>
+      <title>2018/09/10 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-09-10-changelog/</link>
+      <pubDate>Mon, 10 Sep 2018 14:28:23 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-09-10-changelog/</guid>
+      <description> Bug Fixes  Create Document Form: Fixed bug that causes the form to be reset &amp;ldquo;randomly&amp;rdquo;. Readonly Documents: No longer are locked when being viewed. Logo: Started suppressing console error that isn&amp;rsquo;t actually a problem. Menus: Fixed issue where menu item weights would sometimes get jumbled after adding a new item. Jekyll Previews: Fixed an issue which caused Jekyll previews to not open at the correct URL.  </description>
+    </item>
+    
+    <item>
+      <title>2018/09/07 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-09-07-changelog/</link>
+      <pubDate>Fri, 07 Sep 2018 18:14:55 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-09-07-changelog/</guid>
+      <description>Features  Datafile Sections: Sections will now import data files (.json, .yaml, and .toml). This is a replacement for the current method of importing datafiles. Visit our docs to learn more.  All new sites will have this feature enabled by default. Users with existing VuePress sites will also have this feature enabled. Existing Jekyll and Hugo sites will continue to use the old method of importing datafiles. You may opt-in to the new importing method from the settings page for your site.</description>
+    </item>
+    
+    <item>
+      <title>2018/08/30 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-08-30-changelog/</link>
+      <pubDate>Thu, 30 Aug 2018 14:40:13 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-08-30-changelog/</guid>
+      <description> Enhancements  Read-Only Document Sections: When read_only: true is set for a Document Section, the body of that document will be rendered into the app for display.  Bug Fixes  Sortable List Validation: Fixed bug which caused the min list length option to be ignored when validating sortable lists.  </description>
+    </item>
+    
+    <item>
+      <title>2018/08/29 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-08-29-changelog/</link>
+      <pubDate>Wed, 29 Aug 2018 14:34:09 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-08-29-changelog/</guid>
+      <description>Enhancements  Directory Sections: A new exclude glob can be set to exclude files from your directory sections. Jekyll Pages Sections: Yakkl now respects the exclude field found in your Jekyll config. Block Labels: You can now label your blocks by setting the Display Field on your fmt partials.  Bug Fixes  Bitbucket SSH Setup: During the setup of a new Bitbucket repo, Yakkl now links directly to the Bitbucket page where you can upload the SSH key.</description>
+    </item>
+    
+    <item>
+      <title>2018/08/28 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-08-28-changelog/</link>
+      <pubDate>Tue, 28 Aug 2018 14:30:53 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-08-28-changelog/</guid>
+      <description>Bug Fixes  Git Connection: We switched from oAuth to SSH keys for connecting to your repositories. This will stabilize the connection to your repo. Visit our blog to learn how to Migrate to Key-based Authentication. Reset Password: With the introduction of ReCaptcha to our reset password page, it is no longer possible to reset your password from the Remote Admin. Instead, we now link to the Yakkl.com domain. Select Field: Fixed issue where empty select fields output null to front matter.</description>
+    </item>
+    
+    <item>
+      <title>2018/08/17 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-08-17-changelog/</link>
+      <pubDate>Fri, 17 Aug 2018 14:11:09 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-08-17-changelog/</guid>
+      <description> Bug Fixes  Notifications: Fixed jitters around the notification spinner. Editor : Fixed bug causing * and \ to be escaped when they should not be.  Performance  General Settings: Improved loading of Timezones and Hugo versions.  </description>
+    </item>
+    
+    <item>
+      <title>2018/08/15 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-08-15-changelog/</link>
+      <pubDate>Wed, 15 Aug 2018 13:53:36 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-08-15-changelog/</guid>
+      <description>Enhancements  Sidebar: Show a link to settings from the sidebar when a site has no sections.  Bug Fixes  WYSIWYG Editor: Fixed bug which caused the following characters to be escaped when at the start of a line $%&amp;amp;&#39;(). Changing Front Matter Templates: Fixed bug which prevented switching a document&amp;rsquo;s front matter template to be persisted between editing sessions. Gallery Field: Images with parenthesis are now visible in Gallery fields.</description>
+    </item>
+    
+    <item>
+      <title>2018/08/10 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-08-10-changelog/</link>
+      <pubDate>Thu, 09 Aug 2018 20:19:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-08-10-changelog/</guid>
+      <description>Features  VuePress Support: You can now manage the content in your VuePress sites with the Yakkl Content Manager!  Enhancements  Welcome to your CMS: Added a landing page to CMS Menus: Updated modal styles and defaults Blocks: Configure the min/max length Sortable List: Configure the min/max length  Bug Fixes  Sections: Prevent accidentally landing on a Heading Section route. Editing Documents: Redirect to a page&amp;rsquo;s section if it&amp;rsquo;s locked.</description>
+    </item>
+    
+    <item>
+      <title>2018/08/06 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-08-06-changelog/</link>
+      <pubDate>Mon, 06 Aug 2018 19:07:22 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-08-06-changelog/</guid>
+      <description> It has been a while since we&amp;rsquo;ve updated the changelog. Here&amp;rsquo;s a shortlist of some of the more recent changes.
+Features  Section Configuration Snippet Support Site name and branch are now visible from the sidebar Site branch is now shown in the Yakkl Dashboard Guests can now be added from within the site  </description>
+    </item>
+    
+    <item>
+      <title>2018/05/28 Changelog</title>
+      <link>https://yakkl.com/docs/changelog/2018-5-28-changelog/</link>
+      <pubDate>Mon, 28 May 2018 17:24:44 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/changelog/2018-5-28-changelog/</guid>
+      <description>Features  Cloudinary Support Data-file templates  Data files can now use templates in the same way that pages can.  Color-picker front-matter field added Text strikethrough ability added to editor OAuth login added to remote admin  Enhancements  Updated Groups, Group-list, and Blocks UI Configurable media paths Date fields can be displayed in UTC instead of local timezone Group-list “Add” button applies smart labels to pluralized group names  (E.</description>
+    </item>
+    
+  </channel>
+</rss>

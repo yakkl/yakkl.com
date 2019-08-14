@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Front Matter Templates | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Front Matter Templates" />
+<meta property="og:description" content="DisclaimerThis guide assumes you already have an understanding of Front Matter and how it works with Yakkl. If this isn&rsquo;t the case, you can read up on it in the Front Matter doc.
+ What are Front Matter Templates? Front Matter Templates (FMTs) enable developers to fully customize the interface of the Markdown and HTML editors. You can think of them as the content model for your front matter." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/settings/front-matter-templates/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg" /><meta property="og:image:alt" content="DisclaimerThis guide assumes you already have an understanding of Front Matter and how it works with Yakkl. If this isn&rsquo;t the case, you can read up on it in the Front Matter doc.
+ What are Front Matter Templates? Front Matter Templates (FMTs) enable developers to fully customize the interface of the Markdown and HTML editors. You can think of them as the content model for your front matter." /><meta property="article:published_time" content="2017-12-31T04:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2019-04-18T04:00:00&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="docs" />
+  <meta itemprop="name" content="Front Matter Templates">
+<meta itemprop="description" content="DisclaimerThis guide assumes you already have an understanding of Front Matter and how it works with Yakkl. If this isn&rsquo;t the case, you can read up on it in the Front Matter doc.
+ What are Front Matter Templates? Front Matter Templates (FMTs) enable developers to fully customize the interface of the Markdown and HTML editors. You can think of them as the content model for your front matter."><meta itemprop="datePublished" content="2017-12-31T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2019-04-18T04:00:00&#43;00:00" /><meta itemprop="wordCount" content="1192"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg"/><meta name="twitter:title" content="Front Matter Templates"/>
+<meta name="twitter:description" content="DisclaimerThis guide assumes you already have an understanding of Front Matter and how it works with Yakkl. If this isn&rsquo;t the case, you can read up on it in the Front Matter doc.
+ What are Front Matter Templates? Front Matter Templates (FMTs) enable developers to fully customize the interface of the Markdown and HTML editors. You can think of them as the content model for your front matter."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-docs kind-page type-docs ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container docs">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the docs..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul><div class="docs-nav-items"><h3>Welcome</h3>
+    <ul><li><a href="/docs/welcome/">Introduction</a></li></ul><h3>Quick Start</h3>
+    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li><li><a href="/docs/quickstart/setup-site/">Setup Your Site</a></li><li><a href="/docs/quickstart/configure-cms/">Configure the CMS</a></li></ul><h3>Git Sync</h3>
+    <ul><li><a href="/docs/git-sync/">Connecting to a Source Provider</a></li><li><a href="/docs/git-sync/github/">GitHub</a></li><li><a href="/docs/git-sync/gitlab/">GitLab</a></li><li><a href="/docs/git-sync/bitbucket/">Bitbucket</a></li><li><a href="/docs/git-sync/azure-devops/">Azure DevOps</a></li><li><a href="/docs/git-sync/manual-setup/">Manual Setup</a></li></ul><h3>Editing</h3>
+    <ul><li><a href="/docs/editing/">Managing Content</a></li><li><a href="/docs/editing/markdown-editor/">Markdown Editor</a></li><li><a href="/docs/editing/front-matter/">Front Matter</a></li><li><a href="/docs/editing/data-files/">Data Files</a></li><li><a href="/docs/editing/menus/">Menus</a></li><li><a href="/docs/editing/media-library/">Media Library</a></li><li><a href="/docs/editing/remote-admin/">Remote Admin</a></li></ul><h3>Media</h3>
+    <ul><li><a href="/docs/media/">Storing Media Files</a></li></ul><h3>Settings &amp; Configuration</h3>
+    <ul><li><a href="/docs/settings/">All Settings</a></li><li><a href="/docs/settings/front-matter-templates/" class="active">Front Matter Templates</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/front-matter-templates/#what-are-front-matter-templates">What are Front Matter Templates?</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/front-matter-templates/#managing-fmts">Managing FMTs</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/front-matter-templates/#creating-an-fmt">Creating an FMT</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/front-matter-templates/#editing-fmts">Editing FMTs</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/front-matter-templates/#template-settings">Template Settings</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/front-matter-templates/#applying-fmts-to-content">Applying FMTs to Content</a>
+            </li></ul><li><a href="/docs/settings/fields/">Fields</a></li><li><a href="/docs/settings/content-sections/">Sidebar Configuration</a></li><li><a href="/docs/settings/config-files/">Config Files</a></li><li><a href="/docs/settings/snippets/">Snippets</a></li><li><a href="/docs/settings/collaborators/">Collaborators &amp; Teams</a></li></ul><h3>Organizations</h3>
+    <ul><li><a href="/docs/collaboration/organizations/">About Organizations</a></li></ul><h3>Previews</h3>
+    <ul></ul><h3>Hosting</h3>
+    <ul><li><a href="/docs/hosting/">Hosting Options</a></li><li><a href="/docs/hosting/s3-cloudfront-stack/">AWS</a></li><li><a href="/docs/hosting/github-pages/">GitHub Pages</a></li><li><a href="/docs/hosting/ftp/">FTP/SFTP</a></li><li><a href="/docs/hosting/webhooks/">Webhooks</a></li></ul><h3>Developer Guides</h3>
+    <ul><li><a href="/docs/guides/developing-with-hugo/">Hugo</a></li><li><a href="/docs/guides/developing-with-jekyll/">Jekyll</a></li><li><a href="/docs/guides/developing-with-gatsby/">Gatsby</a></li></ul><h3>Other</h3>
+    <ul><li><a href="/docs/troubleshooting/">Troubleshooting</a></li><li><a href="/docs/faqs/">Frequently Asked Questions</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="/docs/import-button/">Import Button</a></li><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul><h3>Pro</h3>
+    <ul><li><a href="/docs/pro/features/pro-plans/">Pro Plans</a></li><li><a href="/docs/pro/features/audit-logging/">Audit Logging</a></li><li><a href="/docs/pro/features/single-sign-on/">Single Sign-on</a></li></ul></div></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><main class="docs-container">
+    <div class="sidebar">
+      <aside class="sidebar-inner">
+        <h2>
+          <a href="/docs">
+            Docs
+          </a>
+        </h2><div class="docs-nav-items"><h3>Welcome</h3>
+    <ul><li><a href="/docs/welcome/">Introduction</a></li></ul><h3>Quick Start</h3>
+    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li><li><a href="/docs/quickstart/setup-site/">Setup Your Site</a></li><li><a href="/docs/quickstart/configure-cms/">Configure the CMS</a></li></ul><h3>Git Sync</h3>
+    <ul><li><a href="/docs/git-sync/">Connecting to a Source Provider</a></li><li><a href="/docs/git-sync/github/">GitHub</a></li><li><a href="/docs/git-sync/gitlab/">GitLab</a></li><li><a href="/docs/git-sync/bitbucket/">Bitbucket</a></li><li><a href="/docs/git-sync/azure-devops/">Azure DevOps</a></li><li><a href="/docs/git-sync/manual-setup/">Manual Setup</a></li></ul><h3>Editing</h3>
+    <ul><li><a href="/docs/editing/">Managing Content</a></li><li><a href="/docs/editing/markdown-editor/">Markdown Editor</a></li><li><a href="/docs/editing/front-matter/">Front Matter</a></li><li><a href="/docs/editing/data-files/">Data Files</a></li><li><a href="/docs/editing/menus/">Menus</a></li><li><a href="/docs/editing/media-library/">Media Library</a></li><li><a href="/docs/editing/remote-admin/">Remote Admin</a></li></ul><h3>Media</h3>
+    <ul><li><a href="/docs/media/">Storing Media Files</a></li></ul><h3>Settings &amp; Configuration</h3>
+    <ul><li><a href="/docs/settings/">All Settings</a></li><li><a href="/docs/settings/front-matter-templates/" class="active">Front Matter Templates</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/front-matter-templates/#what-are-front-matter-templates">What are Front Matter Templates?</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/front-matter-templates/#managing-fmts">Managing FMTs</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/front-matter-templates/#creating-an-fmt">Creating an FMT</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/front-matter-templates/#editing-fmts">Editing FMTs</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/front-matter-templates/#template-settings">Template Settings</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/front-matter-templates/#applying-fmts-to-content">Applying FMTs to Content</a>
+            </li></ul><li><a href="/docs/settings/fields/">Fields</a></li><li><a href="/docs/settings/content-sections/">Sidebar Configuration</a></li><li><a href="/docs/settings/config-files/">Config Files</a></li><li><a href="/docs/settings/snippets/">Snippets</a></li><li><a href="/docs/settings/collaborators/">Collaborators &amp; Teams</a></li></ul><h3>Organizations</h3>
+    <ul><li><a href="/docs/collaboration/organizations/">About Organizations</a></li></ul><h3>Previews</h3>
+    <ul></ul><h3>Hosting</h3>
+    <ul><li><a href="/docs/hosting/">Hosting Options</a></li><li><a href="/docs/hosting/s3-cloudfront-stack/">AWS</a></li><li><a href="/docs/hosting/github-pages/">GitHub Pages</a></li><li><a href="/docs/hosting/ftp/">FTP/SFTP</a></li><li><a href="/docs/hosting/webhooks/">Webhooks</a></li></ul><h3>Developer Guides</h3>
+    <ul><li><a href="/docs/guides/developing-with-hugo/">Hugo</a></li><li><a href="/docs/guides/developing-with-jekyll/">Jekyll</a></li><li><a href="/docs/guides/developing-with-gatsby/">Gatsby</a></li></ul><h3>Other</h3>
+    <ul><li><a href="/docs/troubleshooting/">Troubleshooting</a></li><li><a href="/docs/faqs/">Frequently Asked Questions</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="/docs/import-button/">Import Button</a></li><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul><h3>Pro</h3>
+    <ul><li><a href="/docs/pro/features/pro-plans/">Pro Plans</a></li><li><a href="/docs/pro/features/audit-logging/">Audit Logging</a></li><li><a href="/docs/pro/features/single-sign-on/">Single Sign-on</a></li></ul></div></aside>
+    </div>
+    <section class="docs-content">
+      <div class="container md-content">
+        <h1>Front Matter Templates</h1>
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<div class="shortcode-tip"><h4 d="disclaimer">Disclaimer</h4><p>This guide assumes you already have an understanding of Front Matter and how it works with Yakkl. If this isn&rsquo;t the case, you can read up on it in the <a href="/docs/editing/front-matter">Front Matter doc</a>.</p>
+
+</div>
+
+<h2 id="what-are-front-matter-templates">What are Front Matter Templates?</h2>
+
+<p><em>Front Matter Templates</em> (FMTs) enable developers to fully customize the interface of the <a href="/docs/editing/markdown-editor">Markdown</a> and HTML editors. You can think of them as the content model for your <a href="/docs/editing/front-matter">front matter</a>.</p>
+
+<p>FMTs work by allowing developers to define which <em>Front Matter Fields</em> are available to editors when editing <a href="/docs/editing#pages">pages</a> or <a href="/docs/editing#collections">content types</a>.</p>
+
+<h2 id="managing-fmts">Managing FMTs</h2>
+
+<p>FMTs can be creating using the CMS, or by creating <a href="/docs/settings/config-files">Config Files</a>.</p>
+
+<div class="shortcode-warning"><p>FMTs can only be accessed in the CMS by team members with the <em>Developer</em> or <em>Site Owner</em> role.</p>
+
+</div>
+
+<h2 id="creating-an-fmt">Creating an FMT</h2>
+
+<p>FMTs can be created from scratch, or can be created using the fields from an existing page that doesn&rsquo;t have an FMT applied to it.</p>
+
+<h3 id="creating-an-fmt-from-existing-pages">Creating an FMT from Existing Pages</h3>
+
+<figure class="pretty-screenshot">
+    
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/create-fmt-from-page.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2019/04/create-fmt-from-page.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2019/04/create-fmt-from-page.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2019/04/create-fmt-from-page.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2019/04/create-fmt-from-page.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2019/04/create-fmt-from-page.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2019/04/create-fmt-from-page.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2019/04/create-fmt-from-page.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2019/04/create-fmt-from-page.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2019/04/create-fmt-from-page.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2019/04/create-fmt-from-page.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2019/04/create-fmt-from-page.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/create-fmt-from-page.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/create-fmt-from-page.png" class="" />
+    
+</figure>
+
+<p>To create an FMT from an an existing page, navigate to the page you wish to use as the basis for your FMT. Next, click the &ldquo;&hellip;&rdquo; button in the toolbar, then click <em>Create Template</em>.</p>
+
+<figure class="pretty-screenshot">
+    
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/create-fmt-from-page-modal.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2019/04/create-fmt-from-page-modal.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2019/04/create-fmt-from-page-modal.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2019/04/create-fmt-from-page-modal.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2019/04/create-fmt-from-page-modal.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2019/04/create-fmt-from-page-modal.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2019/04/create-fmt-from-page-modal.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2019/04/create-fmt-from-page-modal.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2019/04/create-fmt-from-page-modal.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2019/04/create-fmt-from-page-modal.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2019/04/create-fmt-from-page-modal.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2019/04/create-fmt-from-page-modal.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/create-fmt-from-page-modal.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/create-fmt-from-page-modal.png" class="" />
+    
+</figure>
+
+<p>In the modal that opens, enter a name for the template and click <em>Create Template</em>. This will create the new template and redirect you to the Front Matter Template editor.</p>
+
+<figure class="pretty-screenshot">
+    
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/create-fmt-from-document.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2019/04/create-fmt-from-document.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2019/04/create-fmt-from-document.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2019/04/create-fmt-from-document.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2019/04/create-fmt-from-document.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2019/04/create-fmt-from-document.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2019/04/create-fmt-from-document.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2019/04/create-fmt-from-document.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2019/04/create-fmt-from-document.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2019/04/create-fmt-from-document.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2019/04/create-fmt-from-document.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2019/04/create-fmt-from-document.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/create-fmt-from-document.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/create-fmt-from-document.png" class="" />
+    
+</figure>
+
+<p>Alternatively, you can create a Front Matter Template from an existing page by navigating to the <em>Front Matter</em> page and clicking <em>Add Template</em>. Then, select <em>Create based on existing document</em> from the modal that appears.</p>
+
+<h3 id="creating-an-fmt-from-scratch">Creating an FMT from Scratch</h3>
+
+<p>To create a Front Matter Template from scratch, navigate to the <em>Front Matter</em> page, and click <em>Add Template</em>. From here, select <em>Create new blank template</em>.</p>
+
+<figure class="pretty-screenshot">
+    
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/add-blank-fmt.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2019/04/add-blank-fmt.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2019/04/add-blank-fmt.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2019/04/add-blank-fmt.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2019/04/add-blank-fmt.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2019/04/add-blank-fmt.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2019/04/add-blank-fmt.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2019/04/add-blank-fmt.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2019/04/add-blank-fmt.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2019/04/add-blank-fmt.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2019/04/add-blank-fmt.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2019/04/add-blank-fmt.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/add-blank-fmt.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/add-blank-fmt.png" class="" />
+    
+</figure>
+
+<p>Enter a name for your new FMT, and then select the layout you want to use.</p>
+
+<ul>
+<li>Select <strong>Fields and big content area</strong> if your pages will contain Front Matter combined with markdown content. This is what you&rsquo;ll want to use most of the time.</li>
+<li>Select <strong>Fields</strong> if your pages will be composed exclusively of Front Matter (such as if you are building a page using <a href="/docs/settings/fields/blocks/">Blocks</a>, or using this template for non-markdown data such as JSON or YAML files) and you don&rsquo;t want a markdown editor for your pages.</li>
+</ul>
+
+<p>Click <strong>Create Template</strong> to begin adding fields.</p>
+
+<h2 id="editing-fmts">Editing FMTs</h2>
+
+<p>To edit an FMT, navigate to the <em>Front Matter</em> page in the CMS, and click the FMT you wish to edit from the list. This will take you to the editing screen, where you will see a list of all of the fields in the FMT.</p>
+
+<h3 id="the-field-listing">The Field Listing</h3>
+
+<figure class="pretty-screenshot">
+    
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/fmt-field-listing.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2019/04/fmt-field-listing.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2019/04/fmt-field-listing.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2019/04/fmt-field-listing.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2019/04/fmt-field-listing.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2019/04/fmt-field-listing.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2019/04/fmt-field-listing.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2019/04/fmt-field-listing.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2019/04/fmt-field-listing.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2019/04/fmt-field-listing.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2019/04/fmt-field-listing.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2019/04/fmt-field-listing.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/fmt-field-listing.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/fmt-field-listing.png" class="" />
+    
+    <figcaption>Field listing example</figcaption>
+    
+</figure>
+
+<p>The field listing shows you all of the fields configured for the selected FMT. Click <strong>Add Field</strong> to add a new field to the FMT. New fields are placed at the end of the listing.</p>
+
+<p>You can insert a new field at a different position in the field listing by placing the cursor in between two fields and clicking the <strong>Add Field</strong> button that appears. To reorder fields, click on the <strong>drag handle</strong> (see below) and drag the field to the desired position.</p>
+
+<h3 id="field-listing-legend">Field Listing Legend</h3>
+
+<figure class="pretty-screenshot">
+    
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/fmt-field-card-annotated.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2019/04/fmt-field-card-annotated.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2019/04/fmt-field-card-annotated.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2019/04/fmt-field-card-annotated.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2019/04/fmt-field-card-annotated.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2019/04/fmt-field-card-annotated.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2019/04/fmt-field-card-annotated.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2019/04/fmt-field-card-annotated.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2019/04/fmt-field-card-annotated.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2019/04/fmt-field-card-annotated.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2019/04/fmt-field-card-annotated.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2019/04/fmt-field-card-annotated.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/fmt-field-card-annotated.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/fmt-field-card-annotated.png" class="" />
+    
+    <figcaption>Breakdown of a field in the field listing</figcaption>
+    
+</figure>
+
+<ol>
+<li><strong>Drag handle</strong>. Click and drag this to reorder the field in the listing.</li>
+<li><strong>Field Label</strong></li>
+<li><strong>Visibility Indicator</strong>. This icon appears if the field is configured to be hidden from the page editor.</li>
+<li><strong>Field Type</strong></li>
+<li><strong>Field Settings</strong>. Click this to edit the settings for the field.</li>
+<li><strong>Delete Field</strong></li>
+</ol>
+
+<p>field card: drag handle, field label, hidden, type, settings, delete</p>
+
+<h3 id="adding-and-editing-fields">Adding and Editing Fields</h3>
+
+<figure class="pretty-screenshot">
+    
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/fmt-fields.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2019/04/fmt-fields.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2019/04/fmt-fields.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2019/04/fmt-fields.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2019/04/fmt-fields.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2019/04/fmt-fields.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2019/04/fmt-fields.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2019/04/fmt-fields.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2019/04/fmt-fields.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2019/04/fmt-fields.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2019/04/fmt-fields.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2019/04/fmt-fields.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/fmt-fields.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/fmt-fields.png" class="" />
+    
+    <figcaption>FMT Field Grid</figcaption>
+    
+</figure>
+
+<p>After clicking the <strong>Add Field</strong> button, you will be presented with a grid of field options. For details on the different available fields, refer to the <a href="/docs/settings/fields/">field documentation</a>.</p>
+
+<p>Once you&rsquo;ve selected the field you want, click the <strong>Add Field</strong> button at the bottom of the modal to proceed to the field settings.</p>
+
+<p>Once a field has been added to the field listing, click the gear icon to access the field settings if you want to change them.</p>
+
+<h3 id="field-settings">Field Settings</h3>
+
+<p>The <strong>field settings</strong> modal is how you will configure your front matter field. Field settings are broken out into multiple tabs. All fields have at least three tabs:</p>
+
+<ul>
+<li><strong>General</strong> &mdash; Essential field information common to all field types.
+
+<ul>
+<li><em>Label:</em> the human-friendly label shown above the input field in the editor.</li>
+<li><em>Name:</em> the key stored in your content&rsquo;s front matter. It is used to access this field in your templates.</li>
+<li><em>Description:</em> (Optional) a human friendly description of what the field does and/or instructions for your editors.</li>
+<li><em>Hidden:</em> When activated, this field will not be displayed when editing a document that uses this FMT.</li>
+</ul></li>
+<li><strong>Validation</strong> &mdash; settings to enforce specific rules for data input with this field.
+
+<ul>
+<li><em>Required:</em> Whether or not the user <strong>must</strong> supply a value for this field.</li>
+</ul></li>
+<li><strong>Default</strong> &mdash; supply a default value for this field.</li>
+</ul>
+
+<div class="shortcode-tip"><p>Field defaults are only applied when <em>creating new pages</em> and aren&rsquo;t intended to be used as a fallback value for when no value is provided. For this, see <a href="/docs/faqs/front-matter-fallbacks">How do I set fallback/hidden values for Front Matter?</a></p>
+
+</div>
+
+<div class="shortcode-tip"><p>Hidden fields can be used to set default values when creating new pages for fields that shouldn&rsquo;t be modified by an editor. Check out our post on <a href="https://yakkl.com/blog/3-tips-for-mastering-blocks/#add-default-values-to-hidden-text-fields-for-template-level-config">3 tips for mastering blocks</a> for some examples.</p>
+
+</div>
+
+<p>Some field types will have additional <strong>validation</strong> options, and additional tabs to configure different aspects of the field. Refer to the documentation for specific fields for more information.</p>
+
+<h2 id="template-settings">Template Settings</h2>
+
+<p>To access template-wide settings,  click the gear icon in the top right corner of the FMT editing screen.</p>
+
+<p>From here, you can change the name of the FMT, switch the layout, delete the FMT, and set the <strong>Display Field</strong>.</p>
+
+<h3 id="display-field">Display Field</h3>
+
+<p>After you&rsquo;ve added some fields to your FMT, you can assign one field to act as the <strong>Display Field</strong>. This field is used when displaying the page in the page listing, and is also used in the list of blocks created with a <a href="/docs/settings/fields/blocks">Blocks</a> field type.</p>
+
+<figure class="pretty-screenshot">
+    
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/08/block_labels.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/08/block_labels.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/08/block_labels.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/08/block_labels.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/08/block_labels.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/08/block_labels.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/08/block_labels.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/08/block_labels.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/08/block_labels.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/08/block_labels.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/08/block_labels.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/08/block_labels.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/08/block_labels.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/08/block_labels.png" class="" />
+    
+    <figcaption>Example of a block listing</figcaption>
+    
+</figure>
+
+<div class="shortcode-tip"><p>Accidentally removed a field from your FMT? Fear not! All changes to FMTs are committed to your Git repository, and can easily be reversed by a developer!</p>
+
+</div>
+
+<hr />
+
+<h2 id="applying-fmts-to-content">Applying FMTs to Content</h2>
+
+<p>FMTs can be applied to individual <a href="/docs/editing#pages">pages</a> or to <a href="/docs/editing#collections">content types</a>.</p>
+
+<div class="shortcode-tip"><p>FMTs follow a &ldquo;no-modification&rdquo; rule. When applying an FMT to content, Yakkl will not modify any existing values, and it will not remove values that are not part of the FMT.</p>
+
+</div>
+
+<h3 id="applying-to-pages">Applying to Pages</h3>
+
+<figure class="pretty-screenshot">
+    
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/change-fmt.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2019/04/change-fmt.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2019/04/change-fmt.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2019/04/change-fmt.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2019/04/change-fmt.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2019/04/change-fmt.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2019/04/change-fmt.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2019/04/change-fmt.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2019/04/change-fmt.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2019/04/change-fmt.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2019/04/change-fmt.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2019/04/change-fmt.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/change-fmt.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/change-fmt.png" class="" />
+    
+</figure>
+
+<p>To apply an FMT to an individual page, navigate to the page you want to apply the FMT to and click the <em>Settings</em> button, and then select <em>Change Template.</em></p>
+
+<figure class="pretty-screenshot">
+    
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/change-fmt-modal.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2019/04/change-fmt-modal.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2019/04/change-fmt-modal.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2019/04/change-fmt-modal.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2019/04/change-fmt-modal.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2019/04/change-fmt-modal.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2019/04/change-fmt-modal.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2019/04/change-fmt-modal.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2019/04/change-fmt-modal.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2019/04/change-fmt-modal.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2019/04/change-fmt-modal.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2019/04/change-fmt-modal.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/change-fmt-modal.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2019/04/change-fmt-modal.png" class="" />
+    
+</figure>
+
+<p>In the modal that opens, select the FMT you wish to apply to the page from the dropdown, and then click <em>Change</em>.</p>
+
+<h3 id="applying-to-content-types">Applying to Content Types</h3>
+
+<p>FMTs can be applied to all pages in a content type using the <code>settings.yml</code> config file. See the <a href="/docs/settings/config-files#site-settings">Config Files</a> documentation for more information.</p>
+
+<div class="shortcode-tip"><p>Applying an FMT to a content type will apply the FMT to any page <em>without an FMT already applied to it</em>. It will also make that FMT the default option when creating new pages.</p>
+
+</div>
+
+
+        <nav class="pagination"><a href="/docs/settings/" rel="prev"><span class="prev-doc">All Settings</span></a><a href="/docs/settings/fields/" rel="next"><span class="next-doc">Fields</span></a></nav><hr />
+        <div class="doc--info">
+          <span class="doc--meta-label">Last updated on</span>
+          <span class="doc--date">April 18, 2019</span>
+        </div>
+        <div class="post--feedback">
+          <p><small>Caught a mistake or want to contribute to the docs? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/docs/settings/front-matter-templates.md" target="_blank">Github</a>!</small></p>
+        </div></div>
+    </section>
+  </main><footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

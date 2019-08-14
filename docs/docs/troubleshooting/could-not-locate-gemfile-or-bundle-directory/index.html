@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Could not locate Gemfile or .bundle/ directory | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content="Describes a common error for Jekyll users of Yakkl.com and includes step-by-step instructions for solving the underlying error and testing that the issue is resolved locally. /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Could not locate Gemfile or .bundle/ directory" />
+<meta property="og:description" content="Describes a common error for Jekyll users of Yakkl.com and includes step-by-step instructions for solving the underlying error and testing that the issue is resolved locally." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg" /><meta property="og:image:alt" content="Describes a common error for Jekyll users of Yakkl.com and includes step-by-step instructions for solving the underlying error and testing that the issue is resolved locally." /><meta property="article:published_time" content="2017-12-07T04:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2018-02-22T11:56:06&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="docs" />
+  <meta itemprop="name" content="Could not locate Gemfile or .bundle/ directory">
+<meta itemprop="description" content="Describes a common error for Jekyll users of Yakkl.com and includes step-by-step instructions for solving the underlying error and testing that the issue is resolved locally."><meta itemprop="datePublished" content="2017-12-07T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-02-22T11:56:06&#43;00:00" /><meta itemprop="wordCount" content="631"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg"/><meta name="twitter:title" content="Could not locate Gemfile or .bundle/ directory"/>
+<meta name="twitter:description" content="Describes a common error for Jekyll users of Yakkl.com and includes step-by-step instructions for solving the underlying error and testing that the issue is resolved locally."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-docs kind-page type-docs ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container docs">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the docs..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul><div class="docs-nav-items"><h3>Troubleshooting</h3>
+    <ul><li><a href="/docs/troubleshooting/migrate-select-fields-to-new-data-file-sections/">Migrate Select Fields to New Data File Sections</a></li><li><a href="/docs/troubleshooting/unexpected-status-code-connection-expected-but-not-available/">Unexpected Status Code / Connection Expected but not Available</a></li><li><a href="/docs/troubleshooting/build-issues-for-sites-in-subdirectories/">Build Issues For Sites in Subdirectories</a></li><li><a href="/docs/troubleshooting/using-a-git-submodule-for-your-theme/">Using a Git submodule for your theme</a></li><li><a href="/docs/troubleshooting/using-private-submodules/">Using Private Submodules with Yakkl</a></li><li><a href="/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory/" class="active">Could not locate Gemfile or .bundle/ directory</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory/#what-this-error-means">What this error means</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory/#fixing-the-issue">Fixing the issue</a>
+            </li></ul><li><a href="/docs/troubleshooting/cname/">How do I add a CNAME to my site?</a></li><li><a href="/docs/troubleshooting/cant-publish-preview-or-save/">Can&#39;t publish, preview, or save</a></li><li><a href="/docs/troubleshooting/css-js-and-media-not-working/">CSS, JS, &amp; Media not working</a></li></ul></div></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><main class="docs-container">
+    <div class="sidebar">
+      <aside class="sidebar-inner">
+        <h2>
+          <a href="/docs">
+            Docs
+          </a>
+        </h2><div class="docs-nav-items"><h3>Troubleshooting</h3>
+    <ul><li><a href="/docs/troubleshooting/migrate-select-fields-to-new-data-file-sections/">Migrate Select Fields to New Data File Sections</a></li><li><a href="/docs/troubleshooting/unexpected-status-code-connection-expected-but-not-available/">Unexpected Status Code / Connection Expected but not Available</a></li><li><a href="/docs/troubleshooting/build-issues-for-sites-in-subdirectories/">Build Issues For Sites in Subdirectories</a></li><li><a href="/docs/troubleshooting/using-a-git-submodule-for-your-theme/">Using a Git submodule for your theme</a></li><li><a href="/docs/troubleshooting/using-private-submodules/">Using Private Submodules with Yakkl</a></li><li><a href="/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory/" class="active">Could not locate Gemfile or .bundle/ directory</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory/#what-this-error-means">What this error means</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory/#fixing-the-issue">Fixing the issue</a>
+            </li></ul><li><a href="/docs/troubleshooting/cname/">How do I add a CNAME to my site?</a></li><li><a href="/docs/troubleshooting/cant-publish-preview-or-save/">Can&#39;t publish, preview, or save</a></li><li><a href="/docs/troubleshooting/css-js-and-media-not-working/">CSS, JS, &amp; Media not working</a></li></ul></div></aside>
+    </div>
+    <section class="docs-content">
+      <div class="container md-content">
+        <h1>Could not locate Gemfile or .bundle/ directory</h1>
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+
+<h4 id="when-i-view-an-error-log-from-yakkl-i-see-could-not-locate-gemfile-or-bundle-directory">When I view an error log from Yakkl I see: <code>Could not locate Gemfile or .bundle/ directory</code></h4>
+
+<h2 id="what-this-error-means">What this error means</h2>
+
+<p>Gemfiles include a list of project dependencies and where to find them.  Bundler is a dependency manager for the Ruby programming language that can read Gemfiles, resolve the dependency graph and install those gems.  Jekyll is a ruby application and can use Bundler to manage your project dependencies.  Yakkl requires that your Jekyll projects contain a Gemfile at the root of the repository.</p>
+
+<p>This error message typically means that your Jekyll project doesn&rsquo;t have a Gemfile.  This document will help you to create a Gemfile for your project so that you can use Yakkl to build your project and unlock our powerful Preview and Publish functionality.</p>
+
+<p>Jekyll also allows several methods to specify plugins, including using your project Gemfile.  Yakkl will continue to support all of these options specifically for jekyll plugin dependencies.</p>
+
+<div class="shortcode-tip"><p>Read more about:</p>
+
+<h5 id="jekyll-and-gemfiles-https-jekyllrb-com-docs-quickstart-about-bundler"><a href="https://jekyllrb.com/docs/quickstart/#about-bundler">Jekyll and Gemfiles</a></h5>
+
+<h5 id="bundler-https-bundler-io"><a href="https://bundler.io/">Bundler</a></h5>
+
+<h5 id="gemfiles-https-bundler-io-v1-16-man-gemfile-5-html"><a href="https://bundler.io/v1.16/man/gemfile.5.html">Gemfiles</a></h5>
+
+<h5 id="jekyll-plugins-https-jekyllrb-com-docs-plugins"><a href="https://jekyllrb.com/docs/plugins/">Jekyll-plugins</a></h5>
+
+</div>
+
+<h3 id="but-my-project-works-fine-when-i-build-it-on-my-machine">But my project works fine when I build it on my machine</h3>
+
+<p>This can happen when you can have gems installed globally on your machine.  Since Yakkl&rsquo;s architecture builds your sites in the cloud we need a way to specify to the cloud computer what code it needs to successfully build your site.  The Gemfile serves this purpose.</p>
+
+<h2 id="fixing-the-issue">Fixing the issue</h2>
+
+<h3 id="testing-that-the-gemfile-works-locally">Testing that the Gemfile works locally</h3>
+
+<p>To test this you can open a command line, navigate to your  project repo and execute the command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">bundle exec jekyll build</pre></div>
+<p>If  your site builds and you don&rsquo;t see any errors, your project should also build in Yakkl.  If it still doesn&rsquo;t please contact support and we can help.</p>
+
+<h3 id="adding-a-gemfile-to-an-existing-project">Adding a Gemfile to an existing project</h3>
+
+<p>In our opinion the easiest way to add a Gemfile to a project is to have Jekyll generate the Gemfile for you, then commit that file to your project repo and push it to your source provider.  To achieve you&rsquo;ll need to:</p>
+
+<ul>
+<li>open a command line</li>
+<li>navigate to the project directory</li>
+<li>make sure you have a clean working tree</li>
+<li>execute the <code>jekyll new</code> command with the appropriate options</li>
+<li>install the dependencies with bundler by running <code>bundle install</code></li>
+<li>test that the project works the way that you expect it to with bundler</li>
+<li>commit and push those changes with git</li>
+</ul>
+
+<p>In bash this would correspond to the following set of commands:</p>
+
+<div class="shortcode-tip"><p>Note that the &ldquo;#&rdquo; and everything after are comments to describe what the command should do.</p>
+
+</div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd my-jekyll-project
+
+git status
+
+# you can use &#34;git stash&#34; to set aside any work
+# in progress you might have
+
+# this command will generate a template Gemfile,
+# calculate the dependency graph and install the
+# dependencies with bundler
+jekyll new . --force
+
+# Now you can make  any changes you need to the
+# Gemfile, the template is well commented  with
+# regions to comment and uncomment based on common
+# uses like  gem-based themes and setup for publishing
+# to github pages.
+
+# this command will test that the gemfile works and
+# serve your project to localhost:4000
+bundle exec jekyll serve
+
+# Open a web browser and go to the url localhost:4000
+# to make sure your website looks as expected
+
+git add Gemfile Gemfile.lock
+git commit -m &#34;Dependency management handling via bundler&#34;
+git push
+
+# If you did stash any work above, reapply it
+# now with &#34;git stash pop&#34;</pre></div>
+<p>Going forward, Yakkl recommends that you prepend all your jekyll  commands with <code>bundle exec</code> like we have in the example above. That way Yakkl previews and publishes should match the experience you have on your computer when you serve and build with Jekyll.</p>
+
+<p>If there are any questions or if you run into any issues please don&rsquo;t hesitate to contact our support team.</p>
+
+
+        <nav class="pagination"><a href="/docs/troubleshooting/using-private-submodules/" rel="prev"><span class="prev-doc">Using Private Submodules with Yakkl</span></a><a href="/docs/troubleshooting/cname/" rel="next"><span class="next-doc">How do I add a CNAME to my site?</span></a></nav><hr />
+        <div class="doc--info">
+          <span class="doc--meta-label">Last updated on</span>
+          <span class="doc--date">February 22, 2018</span>
+        </div>
+        <div class="post--feedback">
+          <p><small>Caught a mistake or want to contribute to the docs? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory.md" target="_blank">Github</a>!</small></p>
+        </div></div>
+    </section>
+  </main><footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

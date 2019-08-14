@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frequently Asked Questions on Yakkl.com</title>
+    <link>https://yakkl.com/docs/faqs/</link>
+    <description>Recent content in Frequently Asked Questions on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Sun, 31 Dec 2017 04:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/docs/faqs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Migrate a Site to a Different Repo or Git Provider</title>
+      <link>https://yakkl.com/docs/faqs/migrating-site-to-different-repo-or-provider/</link>
+      <pubDate>Tue, 15 Jan 2019 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/migrating-site-to-different-repo-or-provider/</guid>
+      <description>If you consider switching to a different provider or there is an issue with your current import of your repository in Yakkl, you might consider deleting your current import of your repository and importing it as a new site.
+Every time you make a change to your settings Yakkl immediately commits those changes to your .yakkl folder in the repository. This ensures that your settings persists through different imports of the same site.</description>
+    </item>
+    
+    <item>
+      <title>Why Can&#39;t I Deploy to a Bitbucket Branch?</title>
+      <link>https://yakkl.com/docs/faqs/deploying-to-bitbucket/</link>
+      <pubDate>Fri, 09 Nov 2018 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/deploying-to-bitbucket/</guid>
+      <description>Bitbucket allows you to host a website by pushing static HTML to a branch in your Bitbucket repo, much like GitHub Pages. Previously, users with a Bitbucket repo could configure their site to be deployed back to Bitbucket, much like our GitHub Pages deployment option.
+This behavior relied on using short-lived OAuth tokens to authenticate your account with Bitbucket, which caused problems when deployments were triggered while you were not logged in to Yakkl.</description>
+    </item>
+    
+    <item>
+      <title>Yakkl Isn&#39;t Using My Timezone Setting!</title>
+      <link>https://yakkl.com/docs/faqs/timezones/</link>
+      <pubDate>Wed, 24 Oct 2018 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/timezones/</guid>
+      <description>We hear this one a lot, and the confusion is understandable.
+When you edit a date or time in Yakkl, the times you input are based on the timezone reported by your web browser. You will see this feedback in the Yakkl UI. For example, if you are in the Eastern time zone during daylight savings, you might see 8:00 AM -0500 as the time zone in the date field, because your current timezone is UTC-5.</description>
+    </item>
+    
+    <item>
+      <title>What versions of Hugo do you support?</title>
+      <link>https://yakkl.com/docs/faqs/hugo-version/</link>
+      <pubDate>Mon, 20 Aug 2018 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/hugo-version/</guid>
+      <description> Yakkl supports all stable releases of Hugo. If your project requires a version that is not available in the version dropdown, please let us know and we can add it.
+Extensions Asset Pipeline Yakkl supports all Hugo&amp;rsquo;s pipes including Sass compilation, postCSS, minification, bundling and fingerprinting.
+Content Formats We also support the following software to enable Hugo&amp;rsquo;s optional content formats:
+ asciidoc asciidoctor pandoc  </description>
+    </item>
+    
+    <item>
+      <title>How To Cancel/Downgrade a Per-Site Plan?</title>
+      <link>https://yakkl.com/docs/faqs/cancel-legacy-plan/</link>
+      <pubDate>Wed, 28 Mar 2018 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/cancel-legacy-plan/</guid>
+      <description>To cancel a legacy plan (e.g. the Team Plan) navigate to your dashboard and click on the &amp;ldquo;&amp;hellip;&amp;rdquo; next to your site name. From there, select &amp;ldquo;Downgrade Plan&amp;rdquo; in the dropdown.
+Please read the warning carefully and if you&amp;rsquo;re certain you want take this action please click on &amp;ldquo;Downgrade&amp;rdquo;.
+Please note that when you downgrade a plan you can&amp;rsquo;t have more than 3 Users on a site unless a site is inside an Organization - see Team Management</description>
+    </item>
+    
+    <item>
+      <title>How To Transfer a Site to an Organization?</title>
+      <link>https://yakkl.com/docs/faqs/transferring-site/</link>
+      <pubDate>Wed, 28 Mar 2018 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/transferring-site/</guid>
+      <description>Navigate to a site on your Dashboard (e.g. &amp;ldquo;My Sites&amp;rdquo;). Click on the &amp;ldquo;&amp;hellip;&amp;rdquo; next to a site and select &amp;ldquo;Transfer Site&amp;rdquo; in the dropdown. On the next screen you can choose between &amp;ldquo;My sites&amp;rdquo; or an &amp;ldquo;Organization&amp;rdquo;.
+If you selected &amp;ldquo;Organization&amp;rdquo;, you&amp;rsquo;ll be able to choose the destination from the dropdown menu, once you made your decision click on &amp;ldquo;Transfer&amp;rdquo;.
+ROLESYou can only transfer sites to Organizations if your role for that Organization permits it.</description>
+    </item>
+    
+    <item>
+      <title>CI/CD</title>
+      <link>https://yakkl.com/docs/faqs/glossary/ci-cd/</link>
+      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/glossary/ci-cd/</guid>
+      <description>Continuous Integration (CI) Continuous Integration (CI) is a development practice where developers check-in code to a version control tool multiple times per day. Each time code is checked-in, an automated build is performed, allowing developers to identify problems with code quickly.
+Continuous Delivery (CD) Continuous Delivery (CD) is a development practice where developers produce software in short cycles, ensuring that software can be easily released at any time. This ensures that developers are producing quality code and are identifying problems quickly.</description>
+    </item>
+    
+    <item>
+      <title>Content Files</title>
+      <link>https://yakkl.com/docs/faqs/glossary/content-files/</link>
+      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/glossary/content-files/</guid>
+      <description>Content files are files that are processed by your static site generator and output in a different format (usually .html).
+They are usually Markdown files (.md, .markdown) or HTML files (.html).</description>
+    </item>
+    
+    <item>
+      <title>Front Matter</title>
+      <link>https://yakkl.com/docs/faqs/glossary/front-matter/</link>
+      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/glossary/front-matter/</guid>
+      <description>Front matter is structured metadata that is stored at the top of a content file, and is identified by delimiters before and after the metadata.
+This metadata is available to your templates when generating your site, and allows you to build robust, dynamic features into your static site.
+Depending your static site generator, Front Matter can be formatted as YAML, TOML, or JSON.
+Examples YAML --- title: My New Post date: 2018-07-01 04:00:00 +0000 images: - /uploads/2018/07/01/twitter_card.</description>
+    </item>
+    
+    <item>
+      <title>How do I backup my site?</title>
+      <link>https://yakkl.com/docs/faqs/backups/</link>
+      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/backups/</guid>
+      <description> For developers, backups are inherent due to the Git-backed nature of Yakkl. Every change made to your site through Yakkl is stored in version control.
+However, a zip backup of your site can be downloaded from the dashboard if necessary.
+Steps  Navigate to the dashboard Click the ... button beside the site you wish to download a backup of Choose &amp;ldquo;Download&amp;rdquo; from the menu  </description>
+    </item>
+    
+    <item>
+      <title>How do I set fallback/hidden values for Front Matter?</title>
+      <link>https://yakkl.com/docs/faqs/front-matter-fallbacks/</link>
+      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/front-matter-fallbacks/</guid>
+      <description>Adding Front Matter to your content allows you to add variables and configuration to your pages that can be used in your templates.
+Often times, you will find that you are repeating the same front matter values across many files. For example, setting the same layout, or adding the same author across many posts.
+Or you may want to provide a default value for optional fields.
+In this scenario, it&amp;rsquo;s possible to provide a fallback or hidden value.</description>
+    </item>
+    
+    <item>
+      <title>Static Files</title>
+      <link>https://yakkl.com/docs/faqs/glossary/static-files/</link>
+      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/glossary/static-files/</guid>
+      <description> Static files are files that are not processed by your static site generator. Instead, they are just copied over as-is at built time.
+Examples  Jekyll: any file without front matter. Hugo: static files live in the staticDir, which defaults to static/ VuePress: static files live in .vuepress/public  </description>
+    </item>
+    
+    <item>
+      <title>Static Site Generators</title>
+      <link>https://yakkl.com/docs/faqs/glossary/static-site-generators/</link>
+      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/glossary/static-site-generators/</guid>
+      <description> Static Site Generators are developer tools that convert various data formats into static sites.
+These data formats are generally content files stored in a Git repository. They can also be data pulled from third-party services.
+Examples  Jekyll is the static site generator written in Ruby and created by GitHub founder, Tom Preston Werner. Hugo is the static site generator written in Golang and created by Steve Francia. VuePress is the Vue-powered static site generator created by Evan You  </description>
+    </item>
+    
+    <item>
+      <title>Static Sites</title>
+      <link>https://yakkl.com/docs/faqs/glossary/static-sites/</link>
+      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/glossary/static-sites/</guid>
+      <description>Static sites are websites built using static, unchanging files. They require no server processing time to deliver the content to the user, which makes them very fast and performant.
+Static site generators are the modern way of building static sites. They convert simple, text-based content files in static files ready for the web.
+They’re fantastic for developers because they are extremely fast, are built to work with version-control, and require little-to-no setup compared to existing monolithic CMS solutions like Wordpress.</description>
+    </item>
+    
+    <item>
+      <title>What versions of Jekyll do you support?</title>
+      <link>https://yakkl.com/docs/faqs/jekyll-version/</link>
+      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/jekyll-version/</guid>
+      <description>Yakkl will use whatever version of Jekyll is specified in your Gemfile.
+If you don’t specify a version in your Gemfile, Yakkl will use the default version used by GitHub Pages.
+Defaults These are the ruby gems that Yakkl will bundle with your build by default, without the need for a Gemfile. Yakkl also lets you specify different versions of gems by including a Gemfile with your site.
+ activesupport (4.</description>
+    </item>
+    
+    <item>
+      <title>Why did Yakkl add files to my repo?</title>
+      <link>https://yakkl.com/docs/faqs/forestry-files/</link>
+      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/forestry-files/</guid>
+      <description>Why did you add a .yakkl file? We add a file called .yakkl to the root of your project.
+This file notifies Yakkl that you have previously published to this location and that it is safe to publish to this location again.
+Why did you add a .yakkl folder? We add a folder called .yakkl to the root of your project with the code configuration of your site.
+This enables developers to edit the configuration of the CMS in their local environment, and keep changes to the configuration in version control.</description>
+    </item>
+    
+    <item>
+      <title>Why did Yakkl edit my files?</title>
+      <link>https://yakkl.com/docs/faqs/forestry-changed-code/</link>
+      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/forestry-changed-code/</guid>
+      <description>As devs, we hate when people mess with our code. So we try to do this as little as possible but sometimes it is unavoidable.
+Front Matter Yakkl will remove comments and other formatting from front matter, and will also reorder your fields alphabetically. This is unfortunately unavoidable, as comments and order are not respected in the YAML or TOML specifications.
+New Lines New lines will be normalized so that all line endings are the same.</description>
+    </item>
+    
+    <item>
+      <title>How to use YAML or JSON for Front Matter with Hugo?</title>
+      <link>https://yakkl.com/docs/faqs/how-to-use-yaml-json-front-matter-w-hugo/</link>
+      <pubDate>Tue, 15 Jan 2019 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/faqs/how-to-use-yaml-json-front-matter-w-hugo/</guid>
+      <description>Yakkl respects the configuration set in your Hugo config file. The variable you have to set to change the default Front Matter format is called metaDataFormat.
+## Possible options &amp;#34;yaml&amp;#34;, &amp;#34;toml&amp;#34; or &amp;#34;json&amp;#34; metaDataFormat = &amp;#34;toml&amp;#34; ## Possible options &amp;#34;yaml&amp;#34;, &amp;#34;toml&amp;#34; or &amp;#34;json&amp;#34; metaDataFormat: &amp;#34;yaml&amp;#34;  tomlyaml  </description>
+    </item>
+    
+  </channel>
+</rss>

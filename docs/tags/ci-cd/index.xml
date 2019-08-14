@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ci/Cd on Yakkl.com</title>
+    <link>https://yakkl.com/tags/ci-cd/</link>
+    <description>Recent content in Ci/Cd on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Fri, 24 Aug 2018 05:01:35 -1100</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/tags/ci-cd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>In Search of the Best Continuous Deployment Service</title>
+      <link>https://yakkl.com/blog/5-options-for-automating-your-software-deployments/</link>
+      <pubDate>Fri, 24 Aug 2018 05:01:35 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/5-options-for-automating-your-software-deployments/</guid>
+      <description>We’ve written before about the advantages of automated deployment, particularly for static sites. Continuous Integration and Continuous Deployment are a ubiquitous strategy for managing the release of software. There are several options out there for running your CI/CD pipelines, with their own strengths and weaknesses. Which one should you use? In this article, we will look at 5 different services that you can use to build, test, and deploy your code.</description>
+    </item>
+    
+  </channel>
+</rss>

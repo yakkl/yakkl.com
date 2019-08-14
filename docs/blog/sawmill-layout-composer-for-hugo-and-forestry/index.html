@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Sawmill: A Razor-sharp Layout Composer for Hugo and Yakkl | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Sawmill: A Razor-sharp Layout Composer for Hugo and Yakkl" />
+<meta property="og:description" content="When it comes to creating websites, good content strategy is all about turning ideas into HTML with a minimal amount of friction. Whether using a CMS with a web interface or editing content files for a static site generator, content creators need an easy way to create visually interesting and well-structured content.
+Every approach is a compromise between flexibility and ease-of-use. Even if a developer could anticipate all of a content creator&rsquo;s needs, these needs will change over time." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/sawmill-layout-composer-for-hugo-and-forestry/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/04/logs.jpg" /><meta property="og:image:alt" content="When it comes to creating websites, good content strategy is all about turning ideas into HTML with a minimal amount of friction. Whether using a CMS with a web interface or editing content files for a static site generator, content creators need an easy way to create visually interesting and well-structured content.
+Every approach is a compromise between flexibility and ease-of-use. Even if a developer could anticipate all of a content creator&rsquo;s needs, these needs will change over time." /><meta property="article:published_time" content="2018-04-20T03:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2018-04-20T06:09:13-11:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta itemprop="name" content="Sawmill: A Razor-sharp Layout Composer for Hugo and Yakkl">
+<meta itemprop="description" content="When it comes to creating websites, good content strategy is all about turning ideas into HTML with a minimal amount of friction. Whether using a CMS with a web interface or editing content files for a static site generator, content creators need an easy way to create visually interesting and well-structured content.
+Every approach is a compromise between flexibility and ease-of-use. Even if a developer could anticipate all of a content creator&rsquo;s needs, these needs will change over time."><meta itemprop="datePublished" content="2018-04-20T03:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-04-20T06:09:13-11:00" /><meta itemprop="wordCount" content="1202"><meta itemprop="image" content="https://yakkl.com/uploads/2018/04/logs.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/04/logs.jpg"/><meta name="twitter:title" content="Sawmill: A Razor-sharp Layout Composer for Hugo and Yakkl"/>
+<meta name="twitter:description" content="When it comes to creating websites, good content strategy is all about turning ideas into HTML with a minimal amount of friction. Whether using a CMS with a web interface or editing content files for a static site generator, content creators need an easy way to create visually interesting and well-structured content.
+Every approach is a compromise between flexibility and ease-of-use. Even if a developer could anticipate all of a content creator&rsquo;s needs, these needs will change over time."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/04/logs.jpg" alt="Sawmill: A Razor-sharp Layout Composer for Hugo and Yakkl" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/04/logs.jpg" class="" />
+              
+        </div><div class="container">
+      <h1 class="post--title">Sawmill: A Razor-sharp Layout Composer for Hugo and Yakkl</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">April 20, 2018</span><span>in 
+            <a href="/categories/hugo" class="post--category" data-category="hugo">
+              Hugo
+            </a>,
+            <a href="/categories/frontend-friday" class="post--category" data-category="frontend-friday">
+              Frontend friday
+            </a></span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<p>When it comes to creating websites, good content strategy is all about turning ideas into HTML with a minimal amount of friction. Whether using a CMS with a web interface or editing content files for a static site generator, content creators need an easy way to create visually interesting and well-structured content.</p>
+
+<p>Every approach is a compromise between flexibility and ease-of-use. Even if a developer could anticipate all of a content creator&rsquo;s needs, these needs will change over time. On top of that, developers have to work within UI limitations imposed by the CMS. Finding the right balance can be tricky and depends on the situation.</p>
+
+<p>
+  <img src="/uploads/2018/04/sawmill-full.svg" srcset="/uploads/2018/04/sawmill-full.svg 320w, /uploads/2018/04/sawmill-full.svg 497w, /uploads/2018/04/sawmill-full.svg 674w, /uploads/2018/04/sawmill-full.svg 851w, /uploads/2018/04/sawmill-full.svg 1028w, /uploads/2018/04/sawmill-full.svg 1205w, /uploads/2018/04/sawmill-full.svg 1382w, /uploads/2018/04/sawmill-full.svg 1559w, /uploads/2018/04/sawmill-full.svg 1736w, /uploads/2018/04/sawmill-full.svg 1913w, /uploads/2018/04/sawmill-full.svg 1920w" sizes="auto" alt="Sawmill logo" title="/uploads/2018/04/sawmill-full.svg" class="" /></p>
+
+<p><a href="https://dwalkr.github.io/sawmill/">Sawmill</a> is a Hugo theme that utilizes a modular layout strategy. Pages in Sawmill are composed by stacking together page sections. These sections are self-contained components whose style and information can be configured with front matter, empowering your content creators to create exciting, dynamic layouts.</p>
+
+<p>To make it easy to manage these sections, Sawmill was created to work with Yakkl&rsquo;s CMS straight out of the box via its included Yakkl configuration files. This theme is being released in tandem with Yakkl&rsquo;s new <a href="https://yakkl.com/blog/content-blocks-give-your-editors-the-power-to-built-pages/">Blocks</a> feature and takes full advantage of this new field type for its page builder.</p>
+
+<div id="create-site-with-sawmill" data-proofer-ignore>
+<div class="create-site-block">
+    <h2>Want to Get Started Right Away?</h2>
+    <a target="_blank" href="https://yakkl.com/quick-startrepo=dwalkr/sawmill-starter&amp;engine=hugo&amp;version=0.37.1" class="create-site-button">Create a New Sawmill Site in Yakkl</a>
+</div>
+
+
+</div>
+
+<p>To better understand how Sawmill&rsquo;s page composition works, let&rsquo;s examine some common content strategy solutions:</p>
+
+<h3 id="1-the-content-sandwich">1. The Content Sandwich</h3>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/04/content-sandwich.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/04/content-sandwich.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/04/content-sandwich.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/04/content-sandwich.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/04/content-sandwich.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/04/content-sandwich.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/04/content-sandwich.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/04/content-sandwich.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/04/content-sandwich.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/04/content-sandwich.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/04/content-sandwich.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/04/content-sandwich.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/04/content-sandwich.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/04/content-sandwich.png" class="" /></p>
+
+<p>One of the most straight-forward approaches to dynamic content is to build a carefully-prescribed page layout, and then dump a content section in the middle. This limits content editors to creating content in one small section of the page and is often even limited to specific sections of a site (e.g. Blog, Documentation).</p>
+
+<p>Furthermore, often times the content might be entered in a web interface using a WYSIWYG editor, to provide content creators with the power to create dynamic content without having to know how to write HTML.</p>
+
+<p>WYSIWYG editors provide flexibility where needs can’t be fully anticipated, but when they are too flexible the results can clash with the site’s design or introduce problems in a layout. Additionally, complex layout elements are difficult to achieve within a WYSIWYG editor without falling back to writing plain HTML, at which point using a WYSIWYG starts to seem pointless.</p>
+
+<p>Many systems provide something like <a href="https://gohugo.io/content-management/shortcodes/">shortcodes</a> to allow a developer to define a complex component that can be configured with a few simple values. These are great for reducing code repetition and keeping content sections organized, but require introducing non-standard syntax to your content workflow.</p>
+
+<h3 id="2-building-page-sections-with-front-matter">2. Building Page Sections With Front Matter</h3>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/04/front-matter-content.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/04/front-matter-content.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/04/front-matter-content.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/04/front-matter-content.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/04/front-matter-content.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/04/front-matter-content.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/04/front-matter-content.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/04/front-matter-content.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/04/front-matter-content.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/04/front-matter-content.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/04/front-matter-content.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/04/front-matter-content.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/04/front-matter-content.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/04/front-matter-content.png" class="" /></p>
+
+<p>Static site generators like Hugo and Jekyll have a mechanism for including structured data with a page’s content, in the form of <strong>front matter</strong>. This front matter can be queried anywhere on the page, so developers can set up any part of the layout to be configurable via front matter values. Since front matter can contain complex data structures like lists and maps, a variable number of elements can be generated on a page according to an agreed-upon schema.</p>
+
+<div class="shortcode-tip"><p>Yakkl.com’s CMS is all about manipulating front matter. Yakkl allows you to create <strong>front matter templates</strong> that define a set of fields and their type that are used to configure the CMS interface.</p>
+
+</div>
+
+<p>Using front matter in this way can give your content creators a lot of power over their page layouts, but there are still limits to its flexibility. If you wanted one of these front matter-based sections in the <em>middle</em> of your page content instead of at the <em>end</em>, for example, you would still have to resort to something like a shortcode.</p>
+
+<h3 id="3-making-front-matter-modular">3. Making Front Matter Modular</h3>
+
+<p><em>What if we just build the whole page from front matter?</em></p>
+
+<p>Instead of thinking about a page as a single continuous block of prose with a header and footer at the ends, we can think of it as a series of distinct sections.</p>
+
+<p>Using this paradigm, a block of content is just one of several possible sections that can be chained together to create the page. Each section has its own front matter schema, and any number of these sections can be defined in a page’s front matter in any combination. In your page layout, you just have to iterate over each of these front matter sections and include a corresponding partial that renders the section.</p>
+
+<h4 id="hugo-example">Hugo Example</h4>
+
+<p>A page’s TOML front matter might look something like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">+++
+title = &#34;My example page&#34;
+[[blocks]]
+template = &#34;media-feature&#34;
+background_style = &#34;Dark&#34;
+heading = &#34;Lorem ipsum dolor&#34;
+content = &#34;Proin at finibus ex. Duis sed nisi lectus. Mauris interdum ac nunc quis pharetra. Vivamus rhoncus porttitor ante.&#34;
+image = &#34;/uploads/image.png&#34;
+image_position = &#34;Left&#34;
+image_shadow = true
+[[blocks]]
+template = &#34;call-to-action&#34;
+heading = &#34;Let&#39;s Get Started&#34;
+button_text = &#34;Check out my Github profile&#34;
+button_url = &#34;https://github.com/dwalkr&#34;
++++</pre></div>
+<p>And the page layout might look something like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">{{ define &#34;main&#34; }}
+    {{- range .Params.blocks -}}
+        {{- if eq .template &#34;media-feature&#34; -}}{{ partial &#34;blocks/media-feature&#34; (dict &#34;Params&#34; .) }}{{- end -}}
+        {{- if eq .template &#34;call-to-action&#34; -}}{{ partial &#34;blocks/cta&#34; (dict &#34;Params&#34; .) }}{{- end -}}
+    {{- end -}}
+{{ end }}</pre></div>
+<p>In this example, the <code>blocks</code> parameter can contain a variable number of grouped fields — let&rsquo;s refer to each of these groups of fields as a <strong>block</strong>. Each block has a <code>template</code> field that indicates what type of block it is, and the rest of its fields can be used in constructing the block template. In the layout, we simply have to iterate over all of these blocks and include a different partial depending on the value of the <code>template</code> field. This partial will contain the HTML to build the block and can use any of the fields configured within that block.</p>
+
+<p>This is exactly how Sawmill works.</p>
+
+<h2 id="using-sawmill">Using Sawmill</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/04/sawmill-create-page.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/04/sawmill-create-page.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/04/sawmill-create-page.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/04/sawmill-create-page.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/04/sawmill-create-page.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/04/sawmill-create-page.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/04/sawmill-create-page.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/04/sawmill-create-page.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/04/sawmill-create-page.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/04/sawmill-create-page.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/04/sawmill-create-page.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/04/sawmill-create-page.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/04/sawmill-create-page.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/04/sawmill-create-page.png" class="" /></p>
+
+<p>Sawmill includes a handful of components for building dynamic landing pages, and is packaged with Yakkl configuration files so your front matter templates are already configured. Select the <strong>Page</strong> front matter template when creating a page in Yakkl in order to use this layout builder.</p>
+
+<h3 id="yakkl-blocks">Yakkl Blocks</h3>
+
+<p>Yakkl has a type of front matter field designed for the express purpose of creating modular content sections like this. We call it <a href="https://yakkl.com/blog/content-blocks-give-your-editors-the-power-to-built-pages/">Blocks</a>.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/04/blocks-field-templates.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/04/blocks-field-templates.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/04/blocks-field-templates.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/04/blocks-field-templates.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/04/blocks-field-templates.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/04/blocks-field-templates.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/04/blocks-field-templates.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/04/blocks-field-templates.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/04/blocks-field-templates.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/04/blocks-field-templates.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/04/blocks-field-templates.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/04/blocks-field-templates.png 1920w" sizes="auto" alt="Yakkl blocks template selector" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/04/blocks-field-templates.png" class="" /></p>
+
+<p>When defining a <strong>Blocks</strong> field, you can assign it one or more <strong>front matter partial</strong> templates that can be used as blocks in that section. Front matter partials are just regular front matter templates that have the <strong>is partial</strong> option selected.</p>
+
+<!--[Check out the docs](/) for more information on how to use Blocks.-->
+
+<h2 id="improving-sawmill">Improving Sawmill</h2>
+
+<p>Sawmill is ready for use but, at the time of writing, its features are limited. Adding new components is easy, so <a href="https://github.com/dwalkr/sawmill/issues">post an issue</a> or <a href="https://github.com/dwalkr/sawmill/pulls">submit a PR</a> with your suggestions!</p>
+
+<h2 id="get-started-with-sawmill">Get Started With Sawmill</h2>
+
+<p>Sawmill is available as a <a href="https://github.com/dwalkr/sawmill">theme</a> if you want to try it with an existing Hugo site, or as a <a href="https://github.com/dwalkr/sawmill-starter">starter site</a> if you want to get up and running quickly.</p>
+
+<div style="text-align: center; padding: 1em;">
+<a href="https://yakkl.com/quick-start?repo=dwalkr/sawmill-starter&engine=hugo" class="create-site-button" data-proofer-ignore>Create a New Sawmill Site in Yakkl</a>
+</div>
+
+<div style="margin-top: 2em; padding: 20px 40px;background: #f7f7f7;"><h2>Join us every Friday 📅</h2><p><a href="/categories/frontend-friday/">Frontend Friday</a> is a weekly series where we write in-depth posts about modern web development.</p><p><strong>Next week:</strong>We'll show you one way to <a href="https://yakkl.com/blog/automatically-publish-scheduled-posts-for-static-site/">automatically publish scheduled posts for a static site.</a> </p><p><strong>Last week:</strong> We showed you how to <a href="https://yakkl.com/blog/build-a-json-api-with-hugo">build a JSON API with Hugo.</a></p></div>
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "Sawmill: A Razor-sharp Layout Composer for Hugo and Yakkl";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/sawmill-layout-composer-for-hugo-and-forestry\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/sawmill-layout-composer-for-hugo-and-forestry.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

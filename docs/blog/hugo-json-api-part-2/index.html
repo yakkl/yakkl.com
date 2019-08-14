@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Enhance Your Hugo JSON API Using Custom Output Formats and Netlify Redirects | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Enhance Your Hugo JSON API Using Custom Output Formats and Netlify Redirects" />
+<meta property="og:description" content="Hugo makes it super easy to build simple APIs with its built-in output formats. In my previous article, we built a fully functional JSON API. Today we’re going to extend the capabilities of this API and improve the user experience with better URLs.
+At the moment our API can look up specific items, but can’t look at them in relation to each other. Say you want to know what players are in a specific team: with our current API, you can&rsquo;t do that easily." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/hugo-json-api-part-2/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/05/lanterns.jpg" /><meta property="og:image:alt" content="Hugo makes it super easy to build simple APIs with its built-in output formats. In my previous article, we built a fully functional JSON API. Today we’re going to extend the capabilities of this API and improve the user experience with better URLs.
+At the moment our API can look up specific items, but can’t look at them in relation to each other. Say you want to know what players are in a specific team: with our current API, you can&rsquo;t do that easily." /><meta property="article:published_time" content="2018-05-25T04:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2018-05-25T05:13:41-11:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta itemprop="name" content="Enhance Your Hugo JSON API Using Custom Output Formats and Netlify Redirects">
+<meta itemprop="description" content="Hugo makes it super easy to build simple APIs with its built-in output formats. In my previous article, we built a fully functional JSON API. Today we’re going to extend the capabilities of this API and improve the user experience with better URLs.
+At the moment our API can look up specific items, but can’t look at them in relation to each other. Say you want to know what players are in a specific team: with our current API, you can&rsquo;t do that easily."><meta itemprop="datePublished" content="2018-05-25T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-05-25T05:13:41-11:00" /><meta itemprop="wordCount" content="3477"><meta itemprop="image" content="https://yakkl.com/uploads/2018/05/lanterns.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/05/lanterns.jpg"/><meta name="twitter:title" content="Enhance Your Hugo JSON API Using Custom Output Formats and Netlify Redirects"/>
+<meta name="twitter:description" content="Hugo makes it super easy to build simple APIs with its built-in output formats. In my previous article, we built a fully functional JSON API. Today we’re going to extend the capabilities of this API and improve the user experience with better URLs.
+At the moment our API can look up specific items, but can’t look at them in relation to each other. Say you want to know what players are in a specific team: with our current API, you can&rsquo;t do that easily."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/05/lanterns.jpg" alt="Enhance Your Hugo JSON API Using Custom Output Formats and Netlify Redirects" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/05/lanterns.jpg" class="" />
+              
+        </div><div class="container">
+      <h1 class="post--title">Enhance Your Hugo JSON API Using Custom Output Formats and Netlify Redirects</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">May 25, 2018</span><span>in 
+            <a href="/categories/frontend-friday" class="post--category" data-category="frontend-friday">
+              Frontend friday
+            </a>,
+            <a href="/categories/hugo" class="post--category" data-category="hugo">
+              Hugo
+            </a></span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+
+<p>Hugo makes it super easy to build simple APIs with its built-in output formats. In <a href="https://yakkl.com/blog/build-a-json-api-with-hugo/">my previous article</a>, we built a fully functional JSON API.  Today we’re going to extend the capabilities of this API and improve the user experience with better URLs.</p>
+
+<p>At the moment our API can look up specific items, but can’t look at them in relation to each other. Say you want to know what players are in a specific team: with our current API, you can&rsquo;t do that easily. To solve this, we’ll use Custom Output Formats to create another JSON route to read and use these relationships.</p>
+
+<p>Something else we’ll have to consider is that currently our URLs look very 2005! We’ll look into Custom Media Types to dynamically manage URL rewriting rules as well using Query Parameters in order to end up with something like this:  <code>school.api/players?team=sly-turtles</code>.</p>
+
+<div class="shortcode-tip"><p>Missed the first part? Read <a href="https://yakkl.com/blog/build-a-json-api-with-hugo/">Build a JSON API With Hugo&rsquo;s Custom Output Formats</a></p>
+
+</div>
+
+<h1 id="1-linking-models-with-relationships">1 Linking Models With Relationships</h1>
+
+<p>The different models of our API are our <code>players</code> and <code>teams</code>. Both can be accessed separately. However, we can retrieve a lot more information if we can see how these different items relate to each other. In our example it makes sense to find out what <code>players</code> are in a specific <code>team</code>.  After all, each player has to be part of a team!</p>
+
+<h2 id="1-1-creating-the-relationship">1.1 Creating the relationship</h2>
+
+<p>We should take a second to understand how to structure our data best.
+First, it can be assumed that each player will only belong to one team at any given time. Thus, we’ll organize our players by team.</p>
+
+<p>Second, the most obvious way to look up a team would be by their name, i.e. <code>sly-turtles</code> or <code>flying-toasters</code>. However, if the team names look like this <code>🐯❤️🐈</code>  or <code>cool-tiger-sparkly-cat-hot-fish-quick-whale-wet-snake-boring-baracudas</code> - looking up <code>teams</code>  could quickly become cumbersome and error prone. We would like to make it a little simpler.</p>
+
+<p>To do that we’ll set an alias in through a  <code>uniqueID</code> parameter like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    ---
+    title: Sly Turtles
+    uniqueID: turtles</pre></div>
+<p>To connect our players to their team we simply add the team-alias to their respective Front Matter:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    ---
+    title: &#34;Frank J. Robinson&#34;
+    team: turtles</pre></div>
+<h2 id="1-2-listing-players-by-team">1.2 Listing players by team</h2>
+
+<p>Now that our players and teams are linked, we want be able to list all players of a given team. We already have an endpoint URL for accessing a team, using Hugo’s Built-In JSON Output Format: <code>school.api/teams/sly-turtles/index.json</code>.</p>
+
+<p>To access the players, we need to create a new endpoint URL at <code>school.api/teams/sly-turtles/players.json</code>.</p>
+
+<p>For this, we need to create a <code>teams/sly-turles/players.json</code> file to be generated by Hugo in addition to the existing <code>teams/sly-turtles/index.json</code> file.</p>
+
+<p>In order to achieve this we’ll have to create a <a href="https://yakkl.com/blog/build-a-json-api-with-hugo/#output-formats">custom output format</a>.</p>
+
+<p>In our <code>config.toml</code> we’ll add these configurations:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">[outputFormats.players]
+baseName = &#34;players&#34;
+mediatype =&#34;application/json&#34;</pre></div>
+<p>Let’s have a closer look at what we’re doing here.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    [outputFormats.players]</pre></div>
+<p>This adds an Output Format called « players » to the list of our project’s existing output formats.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    mediatype =&#34;application/json&#34;</pre></div>
+<p>Our players output format will use the same Media Type as the other previous one: <code>application/json</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    baseName = &#34;players&#34;</pre></div>
+<p>Lastly, we’ll have to name the file which will be generated by our players output format, since the default is « index » and it is already in use by the endpoint <code>school.api/teams/sly-turtles/index.json</code>. To have our new endpoint look like <code>school.api/teams/sly-turtles/players.json</code> we need to set its <code>baseName</code> to « players ».</p>
+
+<p>Lastly we’ll need to create a template for our output format. In <a href="https://yakkl.com/blog/build-a-json-api-with-hugo/">Part 1</a> we explained how to name our template files for Hugo to pick them up. It requires the following naming convention:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">{pageKind}.{outputFormatName}.{extension}</pre></div>
+<p>So in <code>layouts/teams/</code> we’ll create <code>single.players.json</code> and add this code to it. I explain the following lines in detail below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    {{ define &#34;response&#34; }}
+    {{- $players := where (where .Site.RegularPages &#34;Type&#34; &#34;players&#34;) &#34;Params.team&#34; .Params.uniqueID -}}
+        {
+            &#34;team&#34; : &#34;{{ .Title }}&#34;,
+            &#34;count&#34; : &#34;{{ len $players }}&#34;
+            ,&#34;players&#34; : [
+            {{ range $index, $e := $players }}
+                {{ if $index }}, {{ end }}{{ .Render &#34;item&#34; }}
+            {{ end }}
+            ]
+        }
+    {{ end }}</pre></div>
+<p>We need to consider our context here: Since we are actually in a single team template, the usual <code>.Data.Pages</code> loop isn&rsquo;t helpful to us. We will need to query all of the single pages in our site (Hugo calls these <code>RegularPages</code>) and then do the following things:</p>
+
+<ol>
+<li>Filter the results to only include pages with a <code>Type</code> of <code>players</code>.</li>
+<li>Filter the resulting <code>players</code> to only include pages where the <code>team</code> matches the <code>uniqueID</code> of the team we&rsquo;re currently viewing.</li>
+<li>Store these results in a variable called <code>$players</code>, because we will need to use this information in a couple of places.</li>
+</ol>
+
+<p>We do all of these things with a one-liner on the second line of our example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">{{- $players := where (where .Site.RegularPages &#34;Type&#34; &#34;players&#34;) &#34;Params.team&#34; .Params.uniqueID -}}</pre></div>
+<p>On line 5 we’ve got our players, to output their count we use Hugo’s template function len:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#34;count&#34; : &#34;{{ len $players }}&#34;</pre></div>
+<p>Finally, we get to iterate over our players to render good old <code>item.json.json</code> and use <code>$index</code> to guard those trailing commas to ensure we’re outputting valid <code>JSON</code>.</p>
+
+<p>At the moment Hugo only uses the <code>JSON</code> output format from the previous article’s <code>index.json</code>. we need to tell Hugo to use our new <code>players</code> output format as well in our <code>config.toml</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    [outputs]
+    page = [&#34;json&#34;, &#34;players&#34;]</pre></div>
+<p>Check out your new team players endpoint URL at <code>http://localhost:1313/teams/sly-turtles/players.json</code>. It should look something like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    {
+        &#34;data&#34;: {
+            &#34;team&#34;: &#34;Sly Turtles&#34;,
+            &#34;count&#34;: &#34;3&#34;,
+            &#34;players&#34;: [
+                {
+                    &#34;name&#34;: &#34;Frank J. Robinson&#34;,
+                    &#34;contact&#34;: &#34;+1 (555) 555 5555&#34;,
+                    &#34;permalink&#34;: &#34;http://localhost:1313/players/frank-j-robinson/index.json&#34;,
+                    &#34;year&#34;: &#34;junior&#34;
+                },
+                {...},
+                {...}
+            ]
+        }
+    }</pre></div>
+<h2 id="2-filtering-players-by-taxonomy">2 Filtering Players by Taxonomy</h2>
+
+<h3 id="2-1-listing-players-by-sport">2.1 Listing Players by Sport</h3>
+
+<p>Now it becomes very easy to port our Players Custom Output to, say, one of our sports! Contrary to a regular page like a team, a taxonomy page uses a <strong>list template</strong>, so we need to create <code>layouts/_default/list.players.json</code>.
+If we wanted to use this template only for <code>taxonomy</code> pages we could also use <code>layouts/_default/taxonomy.players.json</code>.
+We can use our previous template code with only one difference. Since we’re in a list context, we can use <code>.Data.Pages</code> instead of <code>.Site.RegularPages</code>. The only drawback is that it will contain pages of all types that have a relation to our taxonomy (sport). So just like in our <code>single.players.json</code> we need to use a <code>where</code> statement to filter our base data to pages of Type <code>players</code>.</p>
+
+<p>Looking at our code we need to change the following line:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">{{- $players := where (where .Site.RegularPages &#34;Type&#34; &#34;players&#34;) &#34;Params.team&#34; .uniqueID -}} </pre></div>
+<p>Our new line of code includes <code>.Data.Pages</code> and should look like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    {{- $players := where .Data.Pages &#34;Type&#34; &#34;players&#34; -}}</pre></div>
+<p>We’ll also insert <code>.Title</code> and <code>.Type</code> to identify the taxonomy we are displaying in the following way:
+<code>Type</code> will output the Taxonomy while <code>Title</code> will output the Term</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    &#34;group&#34; : &#34;{{.Type}}::{{ .Title }}&#34;</pre></div>
+<p>After our adjustments, our code will look like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    {{ define &#34;response&#34; }}
+    {{- $players := where .Data.Pages &#34;Type&#34; &#34;players&#34; -}}
+        {
+            &#34;group&#34; : &#34;{{.Type}}::{{ .Title }}&#34;,
+            &#34;count&#34; : &#34;{{ len $players }}&#34;
+            ,&#34;players&#34; : [
+            {{ range $i, $e := $players }}
+                {{ if $i }}, {{ end }}{{ .Render &#34;item&#34; }}
+            {{ end }}
+            ]
+        }
+    {{ end }}</pre></div>
+<p>Then, in <code>config.toml</code> we add the <code>players</code> Custom Output Format to taxonomy pages:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    [outputs]
+      page = [&#34;json&#34;,&#34;players&#34;]
+      taxonomy = [&#34;json&#34;, &#34;players&#34;]</pre></div>
+<p>Now we can access our players by sport with <code>http://localhost:1313/sports/football/players.json</code> and it should show our fresh new output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    {
+        &#34;data&#34;: {
+            &#34;group&#34;: &#34;sport::Football&#34;,
+            &#34;count&#34;: &#34;2&#34;,
+            &#34;players&#34;: [
+                {
+                    &#34;name&#34;: &#34;Jody Garland&#34;,
+    &#34;contact&#34;: &#34;+1 (555) 555 5555&#34;,
+                    &#34;permalink&#34;: &#34;http://localhost:1313/players/jody-garland/index.json&#34;,
+                },
+                {
+                    &#34;name&#34;: &#34;John Artfield&#34;,
+                    &#34;contact&#34;: &#34;+1 (555) 555 5555&#34;,
+                    &#34;permalink&#34;: &#34;http://localhost:1313/players/john-artfield/index.json&#34;,
+                }
+            ]
+        }
+    }</pre></div>
+<h3 id="2-2-adding-a-second-taxonomy">2.2 Adding a Second Taxonomy</h3>
+
+<p>If we were to create a new taxonomy, say <code>practice</code> to identify the weekdays when each player practices, this taxonomy will instantly inherit the <code>players</code> Custom Output Format already assigned to taxonomies.
+Let’s try it.
+In our <code>config.toml</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    [taxonomies]
+      sport = &#34;sports&#34;
+      practice = &#34;practices&#34;</pre></div>
+<p>We also need to add practice days to our <code>players</code> in a list format:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    ---
+    title: &#34;Frank J. Robinson&#34;
+    [ ... ]
+    team: turtles
+    practices: [&#34;Monday&#34;, &#34;Thursday&#34;]
+    ---</pre></div>
+<p>That’s it! We can now look up players sorted by the day they have practice.
+Go to <code>http://localhost:1313/practices/thursday/players.json</code> to see this in action.</p>
+
+<h2 id="3-beautifying-urls">3 Beautifying URLs</h2>
+
+<p>Our API now serves Endpoints for all these different URLs:</p>
+
+<ul>
+<li><code>school.api/index.json</code></li>
+<li><code>school.api/players/index.json</code></li>
+<li><code>school.api/players/{:slug}/index.json</code></li>
+<li><code>school.api/teams/index.json</code></li>
+<li><code>school.api/team/{:slug}/index.json</code></li>
+<li><code>school.api/{:taxonomy}/{:term}/index.json</code></li>
+<li><code>school.api/{team}/players.json</code></li>
+<li><code>school.api/{taxonomy}/{term}/players.json</code></li>
+</ul>
+
+<p>This is great! The most important part is done. However, the developer experience of using our API could stand to be improved. For this step, I have identified two problems that I would like to solve:</p>
+
+<ol>
+<li>It would be nice if developers didn&rsquo;t have to append <code>index.json</code> to all of these requests.</li>
+<li>Our API would be more intuitive if looking up players by team or sport used the same route as looking up all players, since the type of data being returned is fundamentally the same. Ideally, we would like for the developer to feel as if they&rsquo;re applying a filter to the base <code>players</code> route.</li>
+</ol>
+
+<p>We can solve these problems with URL rewrites. Reviewing the two problems above, I propose the following changes to our URLs:</p>
+
+<ol>
+<li>Assume <code>index.json</code>  by default, so that <code>school.api/players/PLAYER-NAME/index.json</code> becomes <code>school.api/players/PLAYER-NAME/</code></li>
+<li>Change <code>school.api/TEAM-NAME/players.json</code> to <code>school.api/players?team=TEAM-NAME</code></li>
+<li>Use the same convention as #2 for our taxonomies: change <code>school.api/TAXONOMY/TERM/players.json</code> to <code>school.api/players?TAXONOMY=TERM</code></li>
+</ol>
+
+<p>In order to create URL rewrites, we need to be able to modify our webserver configuration. The two most popular options for webserver software, <a href="https://httpd.apache.org/" title="Apache Project Homepage">Apache</a> and <a href="https://www.nginx.com/" title="NGINX Home Page">NGINX</a>, each have their own way of exposing their configuration for this purpose. They are of no use to us though, as they require us to manage our own server. <strong>We built a static API!</strong> We want to use serverless tech and host it on a CDN!</p>
+
+<p>Fortunately, Netlify gives us the serverless power we are looking for and also allows us to rewrite URLs. To handle these rewrites, Netlify looks for a file called <code>_redirects</code> in the root of our website.</p>
+
+<div class="shortcode-tip"><p>For those of you not familiar with Netlify, the Hugo website has a great start up guide on <a href="https://gohugo.io/hosting-and-deployment/hosting-on-netlify/">hosting your Hugo site with Netlify</a>.</p>
+
+</div>
+
+<h3 id="3-1-getting-rid-of-index-json">3.1 Getting rid of <em>index.json</em></h3>
+
+<p>Let’s start by getting rid of this <code>index.json</code> at the end of each of our main endpoint URLs.
+We create a file called <code>_redirects</code> and put it in our <code>/static</code> directory. Because it is at the root of static, Hugo puts it a the root of our project where Netlify will pick it up.
+To tell Netlify to forego of the <code>index.json</code>, we’ll add this one simple rule to <code>_redirect</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">/* /:splat/index.json 200</pre></div>
+<p>We can break this line down into three parts:</p>
+
+<ol>
+<li>The first part is the string to match using simple RegEx. The <code>\\\*</code> matches everything following the root <code>/</code>.</li>
+<li>The second part is the URL that should be called. Here <code>:splat</code> is where the matched string will go, just before our <code>index.json</code></li>
+<li>The third part is the response code. <code>200</code> means it is not a redirect, but a rewriting.</li>
+</ol>
+
+<p>From now on, Netlify will automatically point any URL to their <code>index.json</code> file. Meaning <code>school.api/players/index.json</code> will be called via <code>school.api/players/</code>, <code>api.com/players/jacky-f-robinson/index.json</code> will be called via <code>school.api/players/jacky-f-robinson/</code>, and so on.</p>
+
+<p>That simple line makes our URLs already so beautiful. But we can do more!</p>
+
+<h3 id="3-2-adding-query-parameters-to-list-players-by-team">3.2 Adding Query Parameters to List Players by Team</h3>
+
+<p>In this part our main objective is to clarify the « players by team » endpoint URL. We’ll use query parameters to create a path that clarifies that we’re looking up players by team: <code>school.api/players/?team=sly-turtles</code>
+Netlify has a very convenient way to deal with query string parameters.
+In order for <code>/teams/{team}/players.json</code> to be called via <code>players/?team={team}</code>
+We add this extra line in our <code>_redirect</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">/players team=:id /teams/:id/players.json 200</pre></div>
+<p>Again, we have three parts here: <strong>what to match</strong>, <strong>what to fetch</strong>, and the <strong>response code</strong>.
+Netlify knows to replace <code>:id</code> with the value of the <code>team</code> parameter and where to place it when fetching data for this URL.
+Now in our <code>_redirects</code> file we have:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    /players team=:id  /teams/:id/players.json 200
+    /* /:splat/index.json 200</pre></div>
+<p>Note that we added the new « team » rule at the top. The redirect rules need to start with the most specific rules at the top, and get more general as we go down the file. This is because Netlify will use the first matching rule that it finds. It is important that the general « splat » rule remains at the bottom so it does not override the more specific « team » rule.</p>
+
+<h3 id="3-3-adding-query-parameters-to-list-players-by-taxonomy">3.3 Adding Query Parameters to List Players by Taxonomy</h3>
+
+<p>The last part of this chapter is concerned with fixing the URLs for our <code>players</code> lists that are filtered by our taxonomies <code>sports</code> and <code>practices</code>.
+Inspired by the step above we could just add those two lines to <code>_redirects</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    /players sport=:id  /sports/:id/players.json 200
+    /players practice=:id  /practices/:id/players.json 200</pre></div>
+<p>But this would mean modifying by hand the <code>_redirects</code> file each time a new taxonomy is added to the project. We cannot expect the content manager or the development team to modify <code>_redirects</code> every time we need an extra layer of information on a player.
+We need to create an output format which will generate our <code>_redirects</code> file at the root of our website and add one redirect rule for each taxonomy.
+Up to this point, we’ve used a Built-In Output Format for our <code>index.json,</code> and a Custom Output Format for our <code>players.json</code>. However, they both use a common Built-In Media Type: JSON.</p>
+
+<p><code>_redirects</code> is not a common Media Type, it doesn’t even have an extension. Hugo’s Built-In Media Types therefore can’t help us here: we need to create a Custom Media Type in <code>config.toml</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    [mediaTypes.&#34;text/netlify&#34;]
+    suffix = &#34;&#34;
+    delimiter = &#34;&#34;</pre></div>
+<p>The first line adds a Media Type called <code>text/netlify</code>. You can call this whatever you want, but I like to match the media type convention, hence the <code>/</code> in the middle.
+<code>suffix</code> is the extension. Here we don’t have any extension, so it’s blank.
+<code>delimiter</code> is whatever joins the extension to the file name. Since there is no extension, we don’t need a delimiter, so it’ll stay blank.
+Now that we have created our Media Type, we can add it to our Custom Output Formats:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    [outputFormats.redirect]
+    mediatype = &#34;text/netlify&#34;
+    baseName = &#34;_redirects&#34;
+    isPlainText = true</pre></div>
+<p>You can call the output format whatever you’d like, but for our purposes <code>redirect</code> makes the most sense.
+We assign it the <code>mediatype</code> we just created.
+The <code>baseName</code> is the name of the file to output, we need it to be <code>_redirects</code>.
+And just like JSON or CSS, our file will be plain text.</p>
+
+<p>Because we only need one <code>_redirects</code> at the root of our website, we’ll assign it to the home page in <code>config.toml</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    [outputs]
+      page = [&#34;json&#34;,&#34;players&#34;]
+      taxonomy = [&#34;json&#34;, &#34;players&#34;]
+      home = [&#34;json&#34;, &#34;redirect&#34;] # create it along side the homepage.</pre></div>
+<p>Just like before, we now have to create a template for our file and add it to the <code>layouts/_default/</code> folder.
+Following the name convention discussed before, we will name it <code>index.redirect</code>.
+Here, <code>index</code> is what Hugo will look for when searching for any template for the homepage while <code>redirect</code> is the name of our Custom Output Format, that’s what Hugo will look for when needing a template for this output.
+We don’t have any file extension, so we can stop here.
+From this template, we’ll start by adding the line from our previous static file, remember the splat rule will go at the bottom of our <code>_redirect</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    /players team=:id  /teams/:id/players.json 200 
+
+    # Always at the bottom
+    /* /:splat/index.json 200</pre></div>
+<p>Then, all we have to do in between those lines is to iterate over our site&rsquo;s taxonomies to create the redirect rules.
+The <code>.Site.Taxonomies</code> map lists all taxonomies of our project with their pluralized name as keys and a list of the corresponding terms as values.
+Looking at it in a formatted way it would look something like the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    - sports :
+        - football
+        - baseball
+        [ .. ]
+    - practice
+        - monday
+        - tuesday
+        [ .. ]</pre></div>
+<p>So in our template:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    {{- range $key, $value := .Site.Taxonomies }}
+    /players {{ $key | singularize }}=:id  /{{ $key }}/:id/players.json 200
+    {{- end }}</pre></div>
+<p>The <code>$key</code> is the pluralized name of our taxonomy. Because we can only pass one sport or practice day per URL, we will use <code>singularize</code> to make sure our parameter names reflect this limitation:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">/players/?sport=football to /sports/football/players.json</pre></div>
+<p>and not <code>/players/?sports=football</code>.</p>
+
+<div class="shortcode-tip"><p>Those<code>-</code>attached to the opening of our<code>range</code>and<code>end</code> curly braces is to make sure Hugo does not add too many line breaks.</p>
+
+</div>
+
+<p>Now, from your Netlify hosted website, you can access the list of players playing football with</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    school.api/players?sport=football</pre></div>
+<p>Of course, as previously mentioned, there are many other server technologies out there and all come with their particular URL rewriting logic. This Netlify introduction detailed above was only one of them. But after experimenting with it, it does not take much to add another rewriting file like <code>.htaccess</code> for Apache or <code>Web.config</code> for IIS. All you’d have to do is create the dedicated Custom Output Format and Media Type to have Hugo generate the redirect file your server environment needs.</p>
+
+<h2 id="implementing-the-api-alongside-a-conventional-html-website">Implementing the API Alongside a Conventional HTML Website</h2>
+
+<p>As seen in Part 1, it does not take any more work to make this API live alongside a conventional HTML static site. Just one thing to remember when dealing with URL Rewriting.</p>
+
+<p>When navigating to a url like <code>school.site/players/frank-j-robinson/</code>, the browser will look for an <code>index.html</code> file present in the directory. This is why with no server configuration whatsoever the URL above will conveniently point to <code>school.site/players/frank-j-robinson/index.html</code>.</p>
+
+<p>Problem is, the current redirect rules of our API would conflict heavily with this behaviour.
+To make sure our JSON files work nicely with our HTML files, we have to distinguish our page URLs from our API URLs. For this, we’ll prepend every API URL with something like <code>/api/</code>.
+Every redirect rule including our bottom line universal one should reflect this.
+Provided your website is more or less conventional like our school’s, this is what you’d have in your <code>layouts/_default/index.redirect</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    # Every api/players/?team={team} rewrites to /teams/{team}/players.json
+    /api/players team=:id  /teams/:id/players.json 200
+
+    # Every api/players/?{taxonomy}={taxonomyTerm} redirects to {taxonomy}/{taxonomyTerms}/players.json
+    {{- range $key, $value := .Site.Taxonomies }}
+    /api/players {{ $key | singularize }}=:id  /{{ $key }}/:id/players.json 200
+    {{- end }}
+
+    # Every API endpoints URL redirect to its /index.json
+    /api/* /:splat/index.json 200</pre></div>
+<h2 id="conclusion">Conclusion</h2>
+
+<p>During the process of building an API with Hugo, we were able to see how, using Output Formats, you can generate different files for each of your pages. Not only can we output basic content of our pages with the Built-In JSON Output Format’s <code>index.json</code>, we can use our own Custom Output Format to create another file like <code>players.json</code> which, sitting next to the page’s <code>index.json</code>, outputs another set of detailed information for the page.</p>
+
+<p>Not satisfied with our ugly URLs, we were able to use our Custom Media Type, to create another Custom Output Format which creates a redirect file in which our rewriting rules are dynamically listed by Hugo’s Custom Output Format template.</p>
+
+<h3 id="addendum-creating-json-output-with-jsonify">Addendum: Creating JSON Output With <em>jsonify</em></h3>
+
+<p>The JSON templates we created in this article were designed around being easy to read and follow along. However, a more reliable way to create JSON output in Hugo would be to build a native data object using <a href="https://gohugo.io/functions/scratch/">Scratch</a>, and formatting the results with <a href="https://gohugo.io/functions/jsonify">jsonify</a>.</p>
+
+<p>Using <code>Scratch</code>, we can create temporary variables to store the data structure we ultimately want to send over the API. We could do that for our example using something like the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">{{- .Scratch.Set &#34;items&#34; slice -}}
+{{- range .Pages -}}
+    {{- .Render &#34;transformer&#34; -}}
+    {{- $.Scratch.Add &#34;items&#34; (slice (.Scratch.Get &#34;item&#34;)) -}}
+{{- end -}}
+{{ with eq .Kind &#34;section&#34; }}
+{{- $.Scratch.SetInMap &#34;data&#34; &#34;section&#34; $.Section -}}
+{{ end }}
+{{ with eq .Kind &#34;taxonomy&#34; }}
+{{- $.Scratch.SetInMap &#34;data&#34; &#34;taxonomy&#34; $.Data.Singular -}}
+{{- $.Scratch.SetInMap &#34;data&#34; &#34;term&#34; $.Data.Term -}}
+{{ end }}
+{{- .Scratch.SetInMap &#34;data&#34; &#34;count&#34; (len .Pages) -}}
+{{- .Scratch.SetInMap &#34;data&#34; &#34;items&#34; (.Scratch.Get &#34;items&#34;) -}}
+{{- .Scratch.SetInMap &#34;output&#34; &#34;data&#34; (.Scratch.Get &#34;data&#34;) -}}
+{{- .Scratch.Get &#34;output&#34; | jsonify -}}</pre></div>
+<p>This is a more idiomatic way to create JSON output. Since JSON is fundamentally a data format and was designed to be easy for machines to process, we should expect <code>jsonify</code> to do a better job of marshaling our JSON than the built-by-hand templates demonstrated earlier in this article. And while it may be a little less obvious to a beginner, using this strategy makes it much easier to change our data structure in the future, and not have to worry about silly things like avoiding trailing commas.</p>
+
+<p>Happy coding!</p>
+
+<div style="margin-top: 2em; padding: 20px 40px;background: #f7f7f7;"><h2>Join us every Friday 📅</h2><p><a href="/categories/frontend-friday/">Frontend Friday</a> is a weekly series where we write in-depth posts about modern web development.</p><p><strong>Next week:</strong> We'll take a look at <a href="https://yakkl.com/blog/master-image-delivery-with-cloudinary/">Cloudinary's image transformations.</a> </p><p><strong>Last week:</strong> We showed you how to <a href="https://yakkl.com/blog/snipcart-brings-ecommerce-static-site/">build a static e-commerce site with Snipcart</a>.</p></div>
+
+<h2 id="have-something-to-add">Have something to add?</h2>
+
+<p><a style="background: #F60; display: inline-block; border-radius: 5px; color: white; padding: 2px 9px; font-size: 14px;" href="https://news.ycombinator.com/item?id=17154766">Discuss on Hacker News</a></p>
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "Enhance Your Hugo JSON API Using Custom Output Formats and Netlify Redirects";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/hugo-json-api-part-2\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/hugo-json-api-part-2.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>5 Ways to Handle Forms on Your Static Site | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="5 Ways to Handle Forms on Your Static Site" />
+<meta property="og:description" content="When I first started exploring the potential of static sites, I was attracted by their speed and simplicity. I knew these benefits came at a cost, however: since static sites can’t run backend code, there are limits to what you can accomplish with a static solution.
+I no longer see things this way.
+JAMStack is not about sacrificing features for the sake of a performant, easy to maintain website. Rather, it is about re-evaluating how much of your desired functionality should be delegated to your web frontend." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/5-ways-to-handle-forms-on-your-static-site/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/06/pencil-and-envelopes.jpg" /><meta property="og:image:alt" content="When I first started exploring the potential of static sites, I was attracted by their speed and simplicity. I knew these benefits came at a cost, however: since static sites can’t run backend code, there are limits to what you can accomplish with a static solution.
+I no longer see things this way.
+JAMStack is not about sacrificing features for the sake of a performant, easy to maintain website. Rather, it is about re-evaluating how much of your desired functionality should be delegated to your web frontend." /><meta property="article:published_time" content="2018-06-15T03:30:00-11:00"/>
+  <meta property="article:modified_time" content="2018-06-15T03:30:13-11:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta itemprop="name" content="5 Ways to Handle Forms on Your Static Site">
+<meta itemprop="description" content="When I first started exploring the potential of static sites, I was attracted by their speed and simplicity. I knew these benefits came at a cost, however: since static sites can’t run backend code, there are limits to what you can accomplish with a static solution.
+I no longer see things this way.
+JAMStack is not about sacrificing features for the sake of a performant, easy to maintain website. Rather, it is about re-evaluating how much of your desired functionality should be delegated to your web frontend."><meta itemprop="datePublished" content="2018-06-15T03:30:00-11:00" /><meta itemprop="dateModified" content="2018-06-15T03:30:13-11:00" /><meta itemprop="wordCount" content="1650"><meta itemprop="image" content="https://yakkl.com/uploads/2018/06/pencil-and-envelopes.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/06/pencil-and-envelopes.jpg"/><meta name="twitter:title" content="5 Ways to Handle Forms on Your Static Site"/>
+<meta name="twitter:description" content="When I first started exploring the potential of static sites, I was attracted by their speed and simplicity. I knew these benefits came at a cost, however: since static sites can’t run backend code, there are limits to what you can accomplish with a static solution.
+I no longer see things this way.
+JAMStack is not about sacrificing features for the sake of a performant, easy to maintain website. Rather, it is about re-evaluating how much of your desired functionality should be delegated to your web frontend."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/06/pencil-and-envelopes.jpg" alt="5 Ways to Handle Forms on Your Static Site" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/06/pencil-and-envelopes.jpg" class="" />
+              
+        </div><div class="container">
+      <h1 class="post--title">5 Ways to Handle Forms on Your Static Site</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">June 15, 2018</span><span>in 
+            <a href="/categories/beyond-static" class="post--category" data-category="beyond static">
+              Beyond static
+            </a>,
+            <a href="/categories/frontend-friday" class="post--category" data-category="frontend-friday">
+              Frontend friday
+            </a></span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<p>When I first started exploring the potential of static sites, I was attracted by their speed and simplicity. I knew these benefits came at a cost, however: since static sites can’t run backend code, there are limits to what you can accomplish with a static solution.</p>
+
+<p>I no longer see things this way.</p>
+
+<p>JAMStack is not about sacrificing features for the sake of a performant, easy to maintain website. Rather, it is about re-evaluating how much of your desired functionality should be delegated to your web frontend. For example, does the same software that distributes your HTML contact form <em>also</em> need to handle submissions from that form?</p>
+
+<p>In this post I will explore five options for handling form submissions with your static site:</p>
+
+<ol>
+<li><a href="#google-forms-https-www-google-com-forms-about">Google Forms</a></li>
+<li><a href="#formkeep-https-formkeep-com">FormKeep</a></li>
+<li><a href="#netlify-forms-https-www-netlify-com-docs-form-handling">Netlify Forms</a></li>
+<li><a href="#formspree-https-formspree-io">Formspree</a></li>
+<li><a href="#formplug-https-danielireson-github-io-formplug-serverless">FormPlug</a></li>
+</ol>
+
+<p>The options presented here range from fully-managed solutions for lean teams, all the way up to self-hosted alternatives for those who want full control.</p>
+
+<h2 id="google-forms-https-www-google-com-forms-about"><a href="https://www.google.com/forms/about/">Google Forms</a></h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/googleforms.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/06/googleforms.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/06/googleforms.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/06/googleforms.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/06/googleforms.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/06/googleforms.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/06/googleforms.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/06/googleforms.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/06/googleforms.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/06/googleforms.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/06/googleforms.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/06/googleforms.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/googleforms.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/googleforms.png" class="" /></p>
+
+<p>Google Forms provides a clean, intuitive form builder UI for creating forms. These forms can then be embedded on your website in an <code>iframe</code> tag. Submissions are visible in the form dashboard under the <strong>Responses</strong> tab.</p>
+
+<p><strong>Best Feature:</strong> Easy-to-use form builder.</p>
+
+<p><strong>Biggest Downside:</strong> Doesn’t integrate nicely with your site. Can’t retrofit existing forms, need to re-create them in Google Forms.</p>
+
+<h3 id="spam-countermeasures">Spam Countermeasures</h3>
+
+<p>Google implements reCAPTCHA for forms that collect email addresses.</p>
+
+<h3 id="extensibility">Extensibility</h3>
+
+<p>Google has a healthy library of add-ons for forms, and also lets you add functionality to your forms via <a href="https://developers.google.com/apps-script/overview">Google Apps Scripts</a>. It’s also easy to export your responses to google sheets for further processing.</p>
+
+<h3 id="using-google-forms">Using Google Forms</h3>
+
+<p>Navigate to the <a href="https://docs.google.com/forms/">Google Forms dashboard</a> and select a form at the top to create a new form. Use the UI to create your form. When your form is finished, click the <strong>Send</strong> button and navigate to the <code>&lt;&gt;</code> tab to view the embed code. Copy this code and paste it anywhere in your document that you want the form to appear.</p>
+
+<h2 id="formkeep-https-formkeep-com"><a href="https://formkeep.com/">FormKeep</a></h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/formkeep.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/06/formkeep.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/06/formkeep.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/06/formkeep.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/06/formkeep.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/06/formkeep.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/06/formkeep.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/06/formkeep.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/06/formkeep.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/06/formkeep.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/06/formkeep.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/06/formkeep.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/formkeep.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/formkeep.png" class="" /></p>
+
+<p>FormKeep is another SaaS offering to handle your form submissions. FormKeep integrates easily with your existing forms, only requiring you to change the <code>action</code> attribute in the form HTML. You can view each form’s submissions in your FormKeep dashboard.</p>
+
+<p><strong>Best Feature:</strong> Lots of integration options.</p>
+
+<p><strong>Biggest Downside:</strong>  No free tier, only limited free trials.</p>
+
+<h3 id="spam-countermeasures-1">Spam Countermeasures</h3>
+
+<p>FormKeep uses a filtering strategy to automatically detect spam. You can also add a reCAPTCHA field to your forms. Further reading: <a href="https://intercom.help/formkeep/frequently-asked-questions/how-does-formkeep-protect-from-spam">How does FormKeep protect from spam?</a></p>
+
+<h3 id="extensibility-1">Extensibility</h3>
+
+<p>FormKeep allows you to add webhooks that will be called when submissions are recieved, and integrates with a handful of services including Zapier.</p>
+
+<h3 id="using-formkeep">Using FormKeep</h3>
+
+<p>After creating your FormKeep account, log in to view your forms and submissions. You can navigate between forms or add a new form from the dropdown in the top right. Navigate to the <strong>Setup</strong> tab to get the unique URL for that form. You will hook your existing HTML form up to FormKeep by adding this  URL to your form’s <code>action</code> attribute.</p>
+
+<p>Before:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;form method=&#34;POST&#34;&gt;
+  &lt;label&gt;Comments:
+    &lt;textarea name=&#34;comments&#34;&gt;&lt;/textarea&gt;
+  &lt;/label&gt;
+&lt;/form&gt;</pre></div>
+<p>After:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">  &lt;form method=&#34;POST&#34; action=&#34;https://formkeep.com/f/$UNIQUE_FORM_KEY&#34;&gt;
+  &lt;label&gt;Comments:
+    &lt;textarea name=&#34;comments&#34;&gt;&lt;/textarea&gt;
+  &lt;/label&gt;
+&lt;/form&gt;</pre></div>
+<h2 id="netlify-forms-https-www-netlify-com-docs-form-handling"><a href="https://www.netlify.com/docs/form-handling/">Netlify Forms</a></h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/netlifyforms.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/06/netlifyforms.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/06/netlifyforms.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/06/netlifyforms.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/06/netlifyforms.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/06/netlifyforms.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/06/netlifyforms.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/06/netlifyforms.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/06/netlifyforms.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/06/netlifyforms.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/06/netlifyforms.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/06/netlifyforms.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/netlifyforms.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/netlifyforms.png" class="" /></p>
+
+<p>Netlify offers a unique approach for integrating forms into your site. There is no JavaScript required, and your form does not post to a different domain: you simply add a <code>netlify</code> attribute to your <code>&lt;form&gt;</code> tag, and you can start receiving submissions in your Netlify dashboard. This is possible because Netlify parses your site’s HTML at deploy time, so they can identify your forms and ensure the necessary form handling code is present in the site’s hosting environment. The downside of this is that this feature is only available if you are using Netlify’s platform to deploy and host your static site.</p>
+
+<p><strong>Best Feature:</strong> Easy integration and highly extensible</p>
+
+<p><strong>Biggest Downside:</strong> Only available if you’re already using Netlify for hosting and deployment. Free tier limited to 100 submissions per month.</p>
+
+<h3 id="spam-countermeasures-2">Spam Countermeasures</h3>
+
+<p>Netlify runs a spam filter against all submissions and will display a captcha only to submissions that it identifies as possible spam.</p>
+
+<p>You have the option of forcing all users to fill out a captcha by including a <code>div</code> with the <code>netlify-recaptcha</code> attribute. Netlify will populate this div with the captcha field.</p>
+
+<p>Netlify also supports a <a href="https://www.netlify.com/docs/form-handling/#honeypot-field">honeypot field</a>. Add the name of this field to your form via the <code>netlify-honeypot</code> attribute.</p>
+
+<h3 id="extensibility-2">Extensibility</h3>
+
+<p>Netlify’s form solution is highly extensible. Forms and submissions are accessible via an API, you can add webhooks to be triggered on new submissions, and they are currently beta testing an <a href="https://zapier.com/developer/invite/27442/6c1b6a3bbcf86c07c0a0f7dfe2d0327c/?utm_source=Netlify+and+BitBalloon&amp;utm_campaign=7897bcd976-Netlify_Newsletter_8_Zapier&amp;utm_medium=email&amp;utm_term=0_200b533eb5-7897bcd976-">integration with Zapier</a>.</p>
+
+<h3 id="using-netlify-forms">Using Netlify Forms</h3>
+
+<p>Just add the <code>netlify</code> attribute to your form, and ensure your form has a <code>name</code>. For the following example, we will also demonstrate adding a honeypot field.</p>
+
+<p>Before:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;form method=&#34;POST&#34;&gt;
+  &lt;label&gt;Comments:
+    &lt;textarea name=&#34;comments&#34;&gt;&lt;/textarea&gt;
+  &lt;/label&gt;
+&lt;/form&gt;</pre></div>
+<p>After:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;form name=&#34;comments&#34; method=&#34;POST&#34; netlify-honeypot=&#34;hpfield&#34; netlify&gt;
+  &lt;div class=&#34;hpot&#34;&gt;
+    &lt;label&gt;Leave this field empty: &lt;input name=&#34;hpfield&#34;&gt;&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;label&gt;Comments:
+    &lt;textarea name=&#34;comments&#34;&gt;&lt;/textarea&gt;
+  &lt;/label&gt;
+&lt;/form&gt;
+
+// style.css
+.hpot {
+  display: none;
+}</pre></div>
+<h2 id="formspree-https-formspree-io"><a href="https://formspree.io/">Formspree</a></h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/formspree.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/06/formspree.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/06/formspree.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/06/formspree.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/06/formspree.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/06/formspree.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/06/formspree.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/06/formspree.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/06/formspree.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/06/formspree.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/06/formspree.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/06/formspree.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/formspree.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/formspree.png" class="" /></p>
+
+<p>Of all the options presented here, Formspree provides the shortest path to adding submission handling to an existing form. Formspree works by receiving submissions at <code>https://formspree.io/$YOUR_EMAIL</code> and will forward the submission data to the email address specified in that URL. Unfortunately, this means that the only way to view submissions is through your email inbox, though users who register and upgrade to the Gold plan can view their submissions in Formspree’s dashboard.</p>
+
+<p>Formspree is also an open source project (<a href="https://github.com/formspree/formspree">view on Github</a>,) and they provide instructions on how to run your own instance of Formspree on Heroku.</p>
+
+<p><strong>Best Feature:</strong> Open source, can run your own instance on Heroku</p>
+
+<p><strong>Biggest Downside:</strong> Submissions are only persisted in email (for free plan)</p>
+
+<h3 id="spam-countermeasures-3">Spam Countermeasures</h3>
+
+<p>Formspree uses reCAPTCHA to identify spam submissions. You can also add a honeypot field to your form with the name <code>_gotcha</code>.</p>
+
+<h3 id="extensibility-3">Extensibility</h3>
+
+<p>Formspree doesn’t offer any extension opportunities out of the box.</p>
+
+<h3 id="using-formspree">Using Formspree</h3>
+
+<p>You can start using Formspree without even visiting their website. Just point your form to <code>https://formspree.io/$YOUR_EMAIL</code> where <code>$YOUR_EMAIL</code> is the email you want submissions to be sent to. Once the form is configured correctly, submit it once. You should then receive an email from Formspree asking you to confirm your email address.</p>
+
+<div class="shortcode-tip"><p>If you use the same form on multiple URLs, you will have to perform this confirmation step for each URL.</p>
+
+</div>
+
+<p>Once again we will demonstrate adding a honeypot field in the below example.</p>
+
+<p>Before:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;form method=&#34;POST&#34;&gt;
+  &lt;label&gt;Comments:
+    &lt;textarea name=&#34;comments&#34;&gt;&lt;/textarea&gt;
+  &lt;/label&gt;
+&lt;/form&gt;</pre></div>
+<p>After:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;form method=&#34;POST&#34; action=&#34;https://formspree.io/you@example.com&#34;&gt;
+  &lt;div class=&#34;hpot&#34;&gt;
+    &lt;label&gt;Leave this field empty: &lt;input name=&#34;_gotcha&#34;&gt;&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;label&gt;Comments:
+    &lt;textarea name=&#34;comments&#34;&gt;&lt;/textarea&gt;
+  &lt;/label&gt;
+&lt;/form&gt;
+
+// style.css
+.hpot {
+  display: none;
+}</pre></div>
+<h2 id="formplug-https-danielireson-github-io-formplug-serverless"><a href="https://danielireson.github.io/formplug-serverless/">FormPlug</a></h2>
+
+<p><a href="https://github.com/danielireson/formplug-serverless">
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/formplug.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/06/formplug.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/06/formplug.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/06/formplug.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/06/formplug.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/06/formplug.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/06/formplug.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/06/formplug.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/06/formplug.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/06/formplug.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/06/formplug.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/06/formplug.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/formplug.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/formplug.png" class="" /></a></p>
+
+<p>FormPlug is an option for power users who want full control over the code that handles their submissions. FormPlug is an open source project built with the <a href="https://serverless.com/">Serverless Framework</a>. The code runs on AWS Lambda and uses Amazon SES to send emails.</p>
+
+<p><strong>Best Features:</strong> Free and open source. Uses Serverless Framework so it’s relatively easy to install on your AWS environment.</p>
+
+<p><strong>Biggest Downside:</strong>  Submissions are persisted in email, like Formspree</p>
+
+<h3 id="spam-countermeasures-4">Spam Countermeasures</h3>
+
+<p>FormPlug also offers a honeypot field using the name <code>_honeypot</code>. In my experience, honeypot fields are reasonably effective on their own. They don’t seem very hard to thwart, though, and I wouldn’t be surprised if at some point they become utterly useless.</p>
+
+<p>FormPlug also allows you to <a href="https://github.com/danielireson/formplug-serverless#encryption">encrypt your email address</a> so it isn’t exposed on the frontend.</p>
+
+<h3 id="extensibility-4">Extensibility</h3>
+
+<p>Similar to Formspree, FormPlug doesn’t offer any extensibility out of the box. Since it’s open source, you always have the option of forking it and implementing your own extension at least.</p>
+
+<h3 id="using-formplug">Using FormPlug</h3>
+
+<p>To use FormPlug, you will need an AWS account. Follow the <a href="https://github.com/danielireson/formplug-serverless#setup">setup instructions</a> to install FormPlug to your AWS environment.</p>
+
+<p>To hook your form up to FormPlug, retrieve the API Gateway URL for your FormPlug installation from the AWS console. Add this URL as the <code>action</code> attribute for your form, and insert the email that you want to receive submissions into a hidden field with the name of <code>_to</code>.</p>
+
+<p>We will again demonstrate using the honeypot field in our example.</p>
+
+<p>Before:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;form method=&#34;POST&#34;&gt;
+  &lt;label&gt;Comments:
+    &lt;textarea name=&#34;comments&#34;&gt;&lt;/textarea&gt;
+  &lt;/label&gt;
+&lt;/form&gt;</pre></div>
+<p>After:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;form method=&#34;POST&#34; action=&#34;https://$API_GATEWAY_URL&#34;&gt;
+  &lt;input type=&#34;hidden&#34; name=&#34;_to&#34; value=&#34;you@example.com&#34; /&gt;
+  &lt;div class=&#34;hpot&#34;&gt;
+    &lt;label&gt;Leave this field empty: &lt;input name=&#34;_honeypot&#34;&gt;&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;label&gt;Comments:
+    &lt;textarea name=&#34;comments&#34;&gt;&lt;/textarea&gt;
+  &lt;/label&gt;
+&lt;/form&gt;
+
+// style.css
+.hpot {
+  display: none;
+}</pre></div>
+<h2 id="finding-the-form-solution-that-s-right-for-you">Finding the Form Solution That’s Right For You</h2>
+
+<p>Each of these solutions have different strengths and weaknesses. There is no one solution that stands out as the best; the utility of each depends on your needs. If you still aren’t sure which one to go with, here’s a brief summary of each one’s strengths:</p>
+
+<ul>
+<li>Your organization will appreciate <strong>Google Forms</strong> if you have non-developers involved in the form creation process.</li>
+<li><strong>Netlify Forms</strong> is an excellent option if you already use Netlify for deploying and hosting your static site.</li>
+<li>You might like <strong>FormKeep</strong> if you have a high volume of submissions and want to automate as much as possible with its Zapier integration.</li>
+<li>If your needs are simple and you don’t want to devote a lot of time and money to forms, <strong>Formspree</strong> will get you up and running quickly.</li>
+<li>Code warriors who prefer to own their services will like <strong>FormPlug</strong>.</li>
+</ul>
+
+<p>Regardless of which option you choose, these form handlers demonstrate that you can easily add dynamic behavior to your static site. The next time you decide that a static site is a bad choice for your use case, take a moment and consider: should your web frontend be responsible for this feature, or can you use some imagination and technical know-how to get the best of both worlds?</p>
+
+<div style="margin-top: 2em; padding: 20px 40px;background: #f7f7f7;"><h2>Join us every Friday 📅</h2><p><a href="/categories/frontend-friday/">Frontend Friday</a> is a weekly series where we write in-depth posts about modern web development.</p><p><strong>Next week:</strong> We'll show you a <a href="https://yakkl.com/blog/ubuild-a-new-theme-for-static-sites-using-blocks/"> modular Jekyll theme</a> built for use with Yakkl.  </p><p><strong>Last week:</strong> We discovered <a href="https://yakkl.com/blog/for-static-sites-theres-no-excuse-not-to-use-a-cdn/">how a CDN works</a> with your static site.</p></div>
+
+<h2 id="have-something-to-add">Have something to add?</h2>
+
+<p><a style="background: #F60; display: inline-block; border-radius: 5px; color: white; padding: 2px 9px; font-size: 14px;" href="https://news.ycombinator.com/item?id=17320887">Discuss on Hacker News</a></p>
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "5 Ways to Handle Forms on Your Static Site";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/5-ways-to-handle-forms-on-your-static-site\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/5-ways-to-handle-forms-on-your-static-site.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Fields | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Fields" />
+<meta property="og:description" content="Text Single line text input. Displayed for Front Matter values that are short strings. For example, a page title.
+--- title: &#34;My New Page Title!&#34; --- See detailed documentation
+Textarea Multi-line text input. Displayed for Front Matter values that are long strings. For example, a page description.
+--- description: &#34;Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your RSS feed&#39;s site description." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/settings/fields/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg" /><meta property="og:image:alt" content="Text Single line text input. Displayed for Front Matter values that are short strings. For example, a page title.
+--- title: &#34;My New Page Title!&#34; --- See detailed documentation
+Textarea Multi-line text input. Displayed for Front Matter values that are long strings. For example, a page description.
+--- description: &#34;Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your RSS feed&#39;s site description." /><meta property="article:published_time" content="2017-12-31T04:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2017-04-23T04:00:00&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="docs" />
+  <meta itemprop="name" content="Fields">
+<meta itemprop="description" content="Text Single line text input. Displayed for Front Matter values that are short strings. For example, a page title.
+--- title: &#34;My New Page Title!&#34; --- See detailed documentation
+Textarea Multi-line text input. Displayed for Front Matter values that are long strings. For example, a page description.
+--- description: &#34;Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your RSS feed&#39;s site description."><meta itemprop="datePublished" content="2017-12-31T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2017-04-23T04:00:00&#43;00:00" /><meta itemprop="wordCount" content="671"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg"/><meta name="twitter:title" content="Fields"/>
+<meta name="twitter:description" content="Text Single line text input. Displayed for Front Matter values that are short strings. For example, a page title.
+--- title: &#34;My New Page Title!&#34; --- See detailed documentation
+Textarea Multi-line text input. Displayed for Front Matter values that are long strings. For example, a page description.
+--- description: &#34;Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your RSS feed&#39;s site description."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-docs kind-page type-docs ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container docs">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the docs..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul><div class="docs-nav-items"><h3>Welcome</h3>
+    <ul><li><a href="/docs/welcome/">Introduction</a></li></ul><h3>Quick Start</h3>
+    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li><li><a href="/docs/quickstart/setup-site/">Setup Your Site</a></li><li><a href="/docs/quickstart/configure-cms/">Configure the CMS</a></li></ul><h3>Git Sync</h3>
+    <ul><li><a href="/docs/git-sync/">Connecting to a Source Provider</a></li><li><a href="/docs/git-sync/github/">GitHub</a></li><li><a href="/docs/git-sync/gitlab/">GitLab</a></li><li><a href="/docs/git-sync/bitbucket/">Bitbucket</a></li><li><a href="/docs/git-sync/azure-devops/">Azure DevOps</a></li><li><a href="/docs/git-sync/manual-setup/">Manual Setup</a></li></ul><h3>Editing</h3>
+    <ul><li><a href="/docs/editing/">Managing Content</a></li><li><a href="/docs/editing/markdown-editor/">Markdown Editor</a></li><li><a href="/docs/editing/front-matter/">Front Matter</a></li><li><a href="/docs/editing/data-files/">Data Files</a></li><li><a href="/docs/editing/menus/">Menus</a></li><li><a href="/docs/editing/media-library/">Media Library</a></li><li><a href="/docs/editing/remote-admin/">Remote Admin</a></li></ul><h3>Media</h3>
+    <ul><li><a href="/docs/media/">Storing Media Files</a></li></ul><h3>Settings &amp; Configuration</h3>
+    <ul><li><a href="/docs/settings/">All Settings</a></li><li><a href="/docs/settings/front-matter-templates/">Front Matter Templates</a></li><li><a href="/docs/settings/fields/" class="active">Fields</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#text">Text</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#textarea">Textarea</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#number">Number</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#toggle">Toggle</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#select">Select</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#datetime">Datetime</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#color-picker">Color Picker</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#tags-field">Tags Field</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#sortable-list-field">Sortable List Field</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#file-upload">File Upload</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#multi-file-upload">Multi-File Upload</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#field-group">Field Group</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#repeatable-field-group">Repeatable Field Group</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#include-template">Include Template</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#blocks">Blocks</a>
+            </li></ul><li><a href="/docs/settings/content-sections/">Sidebar Configuration</a></li><li><a href="/docs/settings/config-files/">Config Files</a></li><li><a href="/docs/settings/snippets/">Snippets</a></li><li><a href="/docs/settings/collaborators/">Collaborators &amp; Teams</a></li></ul><h3>Organizations</h3>
+    <ul><li><a href="/docs/collaboration/organizations/">About Organizations</a></li></ul><h3>Previews</h3>
+    <ul></ul><h3>Hosting</h3>
+    <ul><li><a href="/docs/hosting/">Hosting Options</a></li><li><a href="/docs/hosting/s3-cloudfront-stack/">AWS</a></li><li><a href="/docs/hosting/github-pages/">GitHub Pages</a></li><li><a href="/docs/hosting/ftp/">FTP/SFTP</a></li><li><a href="/docs/hosting/webhooks/">Webhooks</a></li></ul><h3>Developer Guides</h3>
+    <ul><li><a href="/docs/guides/developing-with-hugo/">Hugo</a></li><li><a href="/docs/guides/developing-with-jekyll/">Jekyll</a></li><li><a href="/docs/guides/developing-with-gatsby/">Gatsby</a></li></ul><h3>Other</h3>
+    <ul><li><a href="/docs/troubleshooting/">Troubleshooting</a></li><li><a href="/docs/faqs/">Frequently Asked Questions</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="/docs/import-button/">Import Button</a></li><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul><h3>Pro</h3>
+    <ul><li><a href="/docs/pro/features/pro-plans/">Pro Plans</a></li><li><a href="/docs/pro/features/audit-logging/">Audit Logging</a></li><li><a href="/docs/pro/features/single-sign-on/">Single Sign-on</a></li></ul></div></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><main class="docs-container">
+    <div class="sidebar">
+      <aside class="sidebar-inner">
+        <h2>
+          <a href="/docs">
+            Docs
+          </a>
+        </h2><div class="docs-nav-items"><h3>Welcome</h3>
+    <ul><li><a href="/docs/welcome/">Introduction</a></li></ul><h3>Quick Start</h3>
+    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li><li><a href="/docs/quickstart/setup-site/">Setup Your Site</a></li><li><a href="/docs/quickstart/configure-cms/">Configure the CMS</a></li></ul><h3>Git Sync</h3>
+    <ul><li><a href="/docs/git-sync/">Connecting to a Source Provider</a></li><li><a href="/docs/git-sync/github/">GitHub</a></li><li><a href="/docs/git-sync/gitlab/">GitLab</a></li><li><a href="/docs/git-sync/bitbucket/">Bitbucket</a></li><li><a href="/docs/git-sync/azure-devops/">Azure DevOps</a></li><li><a href="/docs/git-sync/manual-setup/">Manual Setup</a></li></ul><h3>Editing</h3>
+    <ul><li><a href="/docs/editing/">Managing Content</a></li><li><a href="/docs/editing/markdown-editor/">Markdown Editor</a></li><li><a href="/docs/editing/front-matter/">Front Matter</a></li><li><a href="/docs/editing/data-files/">Data Files</a></li><li><a href="/docs/editing/menus/">Menus</a></li><li><a href="/docs/editing/media-library/">Media Library</a></li><li><a href="/docs/editing/remote-admin/">Remote Admin</a></li></ul><h3>Media</h3>
+    <ul><li><a href="/docs/media/">Storing Media Files</a></li></ul><h3>Settings &amp; Configuration</h3>
+    <ul><li><a href="/docs/settings/">All Settings</a></li><li><a href="/docs/settings/front-matter-templates/">Front Matter Templates</a></li><li><a href="/docs/settings/fields/" class="active">Fields</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#text">Text</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#textarea">Textarea</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#number">Number</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#toggle">Toggle</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#select">Select</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#datetime">Datetime</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#color-picker">Color Picker</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#tags-field">Tags Field</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#sortable-list-field">Sortable List Field</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#file-upload">File Upload</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#multi-file-upload">Multi-File Upload</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#field-group">Field Group</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#repeatable-field-group">Repeatable Field Group</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#include-template">Include Template</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/fields/#blocks">Blocks</a>
+            </li></ul><li><a href="/docs/settings/content-sections/">Sidebar Configuration</a></li><li><a href="/docs/settings/config-files/">Config Files</a></li><li><a href="/docs/settings/snippets/">Snippets</a></li><li><a href="/docs/settings/collaborators/">Collaborators &amp; Teams</a></li></ul><h3>Organizations</h3>
+    <ul><li><a href="/docs/collaboration/organizations/">About Organizations</a></li></ul><h3>Previews</h3>
+    <ul></ul><h3>Hosting</h3>
+    <ul><li><a href="/docs/hosting/">Hosting Options</a></li><li><a href="/docs/hosting/s3-cloudfront-stack/">AWS</a></li><li><a href="/docs/hosting/github-pages/">GitHub Pages</a></li><li><a href="/docs/hosting/ftp/">FTP/SFTP</a></li><li><a href="/docs/hosting/webhooks/">Webhooks</a></li></ul><h3>Developer Guides</h3>
+    <ul><li><a href="/docs/guides/developing-with-hugo/">Hugo</a></li><li><a href="/docs/guides/developing-with-jekyll/">Jekyll</a></li><li><a href="/docs/guides/developing-with-gatsby/">Gatsby</a></li></ul><h3>Other</h3>
+    <ul><li><a href="/docs/troubleshooting/">Troubleshooting</a></li><li><a href="/docs/faqs/">Frequently Asked Questions</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="/docs/import-button/">Import Button</a></li><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul><h3>Pro</h3>
+    <ul><li><a href="/docs/pro/features/pro-plans/">Pro Plans</a></li><li><a href="/docs/pro/features/audit-logging/">Audit Logging</a></li><li><a href="/docs/pro/features/single-sign-on/">Single Sign-on</a></li></ul></div></aside>
+    </div>
+    <section class="docs-content">
+      <div class="container md-content">
+        <h1>Fields</h1>
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<h2 id="text">Text</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/text-preview.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/text-preview.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/text-preview.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/text-preview.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/text-preview.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/text-preview.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/text-preview.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/text-preview.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/text-preview.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/text-preview.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/text-preview.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/text-preview.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/text-preview.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/text-preview.png" class="" /></p>
+
+<p>Single line text input. Displayed for <em>Front Matter values</em> that are short strings. For example, a page title.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+title: <span style="color:#e6db74">&#34;My New Page Title!&#34;</span>
+---</code></pre></div>
+<p><a href="/docs/settings/fields/text">See detailed documentation</a></p>
+
+<hr />
+
+<h2 id="textarea">Textarea</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/textarea-preview.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/textarea-preview.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/textarea-preview.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/textarea-preview.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/textarea-preview.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/textarea-preview.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/textarea-preview.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/textarea-preview.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/textarea-preview.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/textarea-preview.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/textarea-preview.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/textarea-preview.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/textarea-preview.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/textarea-preview.png" class="" /></p>
+
+<p>Multi-line text input. Displayed for <em>Front Matter values</em> that are long strings. For example, a page description.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">---
+description: &#34;Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your RSS feed&#39;s site description.&#34;
+---</pre></div>
+<p><a href="/docs/settings/fields/textarea">See detailed documentation</a></p>
+
+<hr />
+
+<h2 id="number">Number</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/number-preview.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/number-preview.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/number-preview.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/number-preview.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/number-preview.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/number-preview.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/number-preview.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/number-preview.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/number-preview.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/number-preview.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/number-preview.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/number-preview.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/number-preview.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/number-preview.png" class="" /></p>
+
+<p>A stepped number input. Displayed for <em>Front Matter values</em> that are integers. For example, page weight.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+weight: <span style="color:#ae81ff">1</span>
+number: <span style="color:#ae81ff">3.14</span>
+---</code></pre></div>
+<p><a href="/docs/settings/fields/number">See detailed documentation</a></p>
+
+<hr />
+
+<h2 id="toggle">Toggle</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/toggle-preview.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/toggle-preview.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/toggle-preview.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/toggle-preview.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/toggle-preview.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/toggle-preview.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/toggle-preview.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/toggle-preview.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/toggle-preview.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/toggle-preview.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/toggle-preview.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/toggle-preview.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/toggle-preview.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/toggle-preview.png" class="" /></p>
+
+<p>True or false toggle. Displayed for <em>Front Matter values</em> that are booleans. For example, a feature toggle.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+show_feature: <span style="color:#66d9ef">true</span>
+---</code></pre></div>
+<p><a href="/docs/settings/fields/toggle">See detailed documentation</a></p>
+
+<hr />
+
+<h2 id="select">Select</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/select-preview.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/select-preview.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/select-preview.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/select-preview.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/select-preview.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/select-preview.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/select-preview.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/select-preview.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/select-preview.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/select-preview.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/select-preview.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/select-preview.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/select-preview.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/select-preview.png" class="" /></p>
+
+<p>Multiple options displayed in a dropdown. Can be used for <em>Front Matter values</em> that are strings, but should be restricted to a set of options. Options can be sourced from existing content, data files, or manually provided. For example, a page&rsquo;s author.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+author: <span style="color:#e6db74">&#34;scott-gallant&#34;</span>
+---</code></pre></div>
+<p><a href="/docs/settings/fields/select">See detailed documentation</a></p>
+
+<hr />
+
+<h2 id="datetime">Datetime</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/datetime-preview.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/datetime-preview.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/datetime-preview.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/datetime-preview.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/datetime-preview.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/datetime-preview.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/datetime-preview.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/datetime-preview.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/datetime-preview.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/datetime-preview.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/datetime-preview.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/datetime-preview.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/datetime-preview.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/datetime-preview.png" class="" /></p>
+
+<p>Date and time picker. Used for <em>Front Matter values</em> that are valid date strings. Can be restricted to only date or time values. For example, page created date or page publish date.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+date: <span style="color:#e6db74">2017-12-31T12:00:00</span>+<span style="color:#ae81ff">00</span>:<span style="color:#ae81ff">00</span>
+publish_date: <span style="color:#e6db74">2018-01-07T12:00:00</span>+<span style="color:#ae81ff">00</span>:<span style="color:#ae81ff">00</span>
+---</code></pre></div>
+<p><a href="/docs/settings/fields/datetime">See detailed documentation</a></p>
+
+<hr />
+
+<h2 id="color-picker">Color Picker</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/05/colorpicker-field-ui.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/05/colorpicker-field-ui.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/05/colorpicker-field-ui.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/05/colorpicker-field-ui.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/05/colorpicker-field-ui.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/05/colorpicker-field-ui.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/05/colorpicker-field-ui.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/05/colorpicker-field-ui.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/05/colorpicker-field-ui.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/05/colorpicker-field-ui.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/05/colorpicker-field-ui.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/05/colorpicker-field-ui.png 1920w" sizes="auto" alt="Color Picker field UI" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/05/colorpicker-field-ui.png" class="" /></p>
+
+<p>A color picker. Useful for <em>Front Matter values</em> that are used to render color. Can be saved as RGB or hex value.</p>
+
+<p><a href="/docs/settings/fields/color-picker">See detailed documentation</a></p>
+
+<hr />
+
+<h2 id="tags-field">Tags Field</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/tags-preview.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/tags-preview.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/tags-preview.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/tags-preview.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/tags-preview.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/tags-preview.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/tags-preview.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/tags-preview.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/tags-preview.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/tags-preview.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/tags-preview.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/tags-preview.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/tags-preview.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/tags-preview.png" class="" /></p>
+
+<p>A list of options displayed as tags. Used for <em>Front Matter values</em> that are an array of strings. For example, page tags.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+tags:
+    - hugo
+    - jekyll
+    - static-site-generators
+---</code></pre></div>
+<p><a href="/docs/settings/fields/tags">See detailed documentation</a></p>
+
+<hr />
+
+<h2 id="sortable-list-field">Sortable List Field</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/sortable-list-preview.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/sortable-list-preview.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/sortable-list-preview.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/sortable-list-preview.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/sortable-list-preview.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/sortable-list-preview.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/sortable-list-preview.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/sortable-list-preview.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/sortable-list-preview.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/sortable-list-preview.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/sortable-list-preview.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/sortable-list-preview.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/sortable-list-preview.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/sortable-list-preview.png" class="" /></p>
+
+<p>A list of options displayed in a list. Used for <em>Front Matter values</em> that are an array of strings. Can be configured to restrict options in a dropdown. For example, page authors or related pages.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+authors:
+    - <span style="color:#e6db74">&#34;scott-gallant&#34;</span>
+    - <span style="color:#e6db74">&#34;jordan-patterson&#34;</span>
+---</code></pre></div>
+<p><a href="/docs/settings/fields/sortable-list">See detailed documentation</a></p>
+
+<hr />
+
+<h2 id="file-upload">File Upload</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/file-preview.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/file-preview.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/file-preview.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/file-preview.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/file-preview.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/file-preview.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/file-preview.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/file-preview.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/file-preview.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/file-preview.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/file-preview.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/file-preview.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/file-preview.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/file-preview.png" class="" /></p>
+
+<p>File upload input that adds uploads to the <em><a href="/docs/editing/media-library/">Media Library</a></em>. Used for <em>Front Matter values</em> that are a string ending with a file extension. For example, a featured image.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+banner: <span style="color:#e6db74">&#34;/uploads/2017/12/31/banner_image.jpg&#34;</span>
+extra_style: <span style="color:#e6db74">&#34;/css/extra_styles.css&#34;</span>
+extra_script: <span style="color:#e6db74">&#34;/js/extra_script.js&#34;</span>
+---</code></pre></div>
+<p><a href="/docs/settings/fields/file-upload/">See detailed documentation</a></p>
+
+<hr />
+
+<h2 id="multi-file-upload">Multi-File Upload</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/multi-file-preview.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/multi-file-preview.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/multi-file-preview.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/multi-file-preview.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/multi-file-preview.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/multi-file-preview.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/multi-file-preview.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/multi-file-preview.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/multi-file-preview.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/multi-file-preview.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/multi-file-preview.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/multi-file-preview.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/multi-file-preview.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/multi-file-preview.png" class="" /></p>
+
+<p>Gallery of media files. Used for <em>Front Matter values</em> that are an array of strings ending with a file extension. For example, an image carousel.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+carousel:
+    - <span style="color:#e6db74">&#34;/uploads/2017/12/31/mountains.jpg&#34;</span>
+    - <span style="color:#e6db74">&#34;/uploads/2017/12/31/field.jpg&#34;</span>
+    - <span style="color:#e6db74">&#34;/uploads/2017/12/31/cabin.jpg&#34;</span>
+
+extra_styles:
+    - <span style="color:#e6db74">&#34;/css/extra_styles.css&#34;</span>
+
+extra_scripts:
+    - <span style="color:#e6db74">&#34;/js/extra_script.js&#34;</span>
+---</code></pre></div>
+<p><a href="/docs/settings/fields/multi-file-upload/">See detailed documentation</a></p>
+
+<hr />
+
+<h2 id="field-group">Field Group</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/field-group-preview.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/field-group-preview.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/field-group-preview.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/field-group-preview.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/field-group-preview.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/field-group-preview.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/field-group-preview.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/field-group-preview.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/field-group-preview.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/field-group-preview.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/field-group-preview.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/field-group-preview.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/field-group-preview.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/field-group-preview.png" class="" /></p>
+
+<p>Group of <em>Front Matter Fields</em>. Used for <em>Front Matter values</em> that are an object. For example, your site&rsquo;s footer information.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+footer:
+    copyright: <span style="color:#e6db74">&#34;© 2017 Acme Inc.&#34;</span>
+    privacy_policy: <span style="color:#e6db74">&#34;/privacy.md&#34;</span>
+    terms_of_service: <span style="color:#e6db74">&#34;/terms.md&#34;</span>
+---</code></pre></div>
+<p><a href="/docs/settings/fields/field-group">See detailed documentation</a></p>
+
+<hr />
+
+<h2 id="repeatable-field-group">Repeatable Field Group</h2>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/repeatable-field-group-preview.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/repeatable-field-group-preview.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/repeatable-field-group-preview.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/repeatable-field-group-preview.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/repeatable-field-group-preview.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/repeatable-field-group-preview.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/repeatable-field-group-preview.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/repeatable-field-group-preview.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/repeatable-field-group-preview.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/repeatable-field-group-preview.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/repeatable-field-group-preview.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/repeatable-field-group-preview.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/repeatable-field-group-preview.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/repeatable-field-group-preview.png" class="" /></p>
+
+<p>List of Field Groups. Used for <em>Front Matter values</em> that are an array of like-objects. For example, a list of authors.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+authors:
+    - name: Scott Gallant
+      bio: CEO &amp; Co-founder
+      identifier: scott-gallant
+    - name: Jordan Patterson
+      bio: CTO &amp; Co-founder
+      identifier: jordan-patterson
+---</code></pre></div>
+<p><a href="/docs/settings/fields/repeatable-field-group">See detailed documentation</a></p>
+
+<h2 id="include-template">Include Template</h2>
+
+<p>Include the fields of another <em>Front Matter Template</em> into the current one. Good for commonly-reused front matter fields like SEO information.</p>
+
+<p><a href="/docs/settings/fields/include-template">See detailed documentation</a></p>
+
+<h2 id="blocks">Blocks</h2>
+
+<p>A <em>Blocks</em> field is similar to a Repeatable Field Group, except that it supports <em>unlike</em> objects. Blocks fields are great for things like dynamic page layouts: a series of sections where each section may consist of different fields.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/04/blocks-content-ui.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/04/blocks-content-ui.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/04/blocks-content-ui.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/04/blocks-content-ui.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/04/blocks-content-ui.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/04/blocks-content-ui.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/04/blocks-content-ui.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/04/blocks-content-ui.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/04/blocks-content-ui.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/04/blocks-content-ui.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/04/blocks-content-ui.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/04/blocks-content-ui.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/04/blocks-content-ui.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/04/blocks-content-ui.png" class="" /></p>
+
+<p>Blocks fields work by including <em>other</em> front matter templates. You specify which templates can be used in your blocks field when creating the Front Matter Template. When adding content to a Blocks field, you can select which of these templates to add from a dropdown.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#960050;background-color:#1e0010">+++</span>
+[[<span style="color:#a6e22e">blocks</span>]]
+<span style="color:#a6e22e">background_style</span> = <span style="color:#e6db74">&#34;Brand Color&#34;</span>
+<span style="color:#a6e22e">heading</span> = <span style="color:#e6db74">&#34;Features&#34;</span>
+<span style="color:#a6e22e">size</span> = <span style="color:#e6db74">&#34;Small&#34;</span>
+<span style="color:#a6e22e">template</span> = <span style="color:#e6db74">&#34;hero-section&#34;</span>
+[[<span style="color:#a6e22e">blocks</span>]]
+<span style="color:#a6e22e">background_style</span> = <span style="color:#e6db74">&#34;Light&#34;</span>
+<span style="color:#a6e22e">content</span> = <span style="color:#e6db74">&#34;[Bulma](https://bulma.io/) is a modern, responsive CSS framework with a flexbox-based grid system. &#34;</span>
+<span style="color:#a6e22e">heading</span> = <span style="color:#e6db74">&#34;Built With Bulma&#34;</span>
+<span style="color:#a6e22e">image</span> = <span style="color:#e6db74">&#34;/uploads/2018/04/19/bulma-logo.png&#34;</span>
+<span style="color:#a6e22e">image_position</span> = <span style="color:#e6db74">&#34;Left&#34;</span>
+<span style="color:#a6e22e">template</span> = <span style="color:#e6db74">&#34;media-feature&#34;</span>
+<span style="color:#960050;background-color:#1e0010">+++</span></code></pre></div>
+<p><a href="/docs/settings/fields/blocks">See detailed documentation</a></p>
+
+
+        <nav class="pagination"><a href="/docs/settings/front-matter-templates/" rel="prev"><span class="prev-doc">Front Matter Templates</span></a><a href="/docs/settings/content-sections/" rel="next"><span class="next-doc">Sidebar Configuration</span></a></nav><hr />
+        <div class="doc--info">
+          <span class="doc--meta-label">Last updated on</span>
+          <span class="doc--date">April 23, 2017</span>
+        </div>
+        <div class="post--feedback">
+          <p><small>Caught a mistake or want to contribute to the docs? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/docs/settings/fields.md" target="_blank">Github</a>!</small></p>
+        </div></div>
+    </section>
+  </main><footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

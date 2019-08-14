@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Write Better JavaScript With Webpack | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content="This post will explore why Webpack is the right choice for bundling your JavaScript application. If you’ve never used a build tool for your frontend assets, Webpack is a great place to start.  /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Write Better JavaScript With Webpack" />
+<meta property="og:description" content="This post will explore why Webpack is the right choice for bundling your JavaScript application. If you’ve never used a build tool for your frontend assets, Webpack is a great place to start. " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/write-better-javascript-with-webpack/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/03/write-better-javascript-with-webpack.png" /><meta property="og:image:alt" content="This post will explore why Webpack is the right choice for bundling your JavaScript application. If you’ve never used a build tool for your frontend assets, Webpack is a great place to start. " /><meta property="article:published_time" content="2018-03-30T12:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2018-03-30T12:00:00&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta property="article:tag" content="webpack" /><meta name="news_keywords" content="webpack" /><meta itemprop="name" content="Write Better JavaScript With Webpack">
+<meta itemprop="description" content="This post will explore why Webpack is the right choice for bundling your JavaScript application. If you’ve never used a build tool for your frontend assets, Webpack is a great place to start. "><meta itemprop="datePublished" content="2018-03-30T12:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-03-30T12:00:00&#43;00:00" /><meta itemprop="wordCount" content="1248"><meta itemprop="image" content="https://yakkl.com/uploads/2018/03/write-better-javascript-with-webpack.png">
+  <meta itemprop="keywords" content="webpack," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/03/write-better-javascript-with-webpack.png"/><meta name="twitter:title" content="Write Better JavaScript With Webpack"/>
+<meta name="twitter:description" content="This post will explore why Webpack is the right choice for bundling your JavaScript application. If you’ve never used a build tool for your frontend assets, Webpack is a great place to start. "/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/03/write-better-javascript-with-webpack.png" alt="Write Better JavaScript With Webpack" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/03/write-better-javascript-with-webpack.png" class="" />
+              
+        </div><div class="container">
+      <h1 class="post--title">Write Better JavaScript With Webpack</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">March 30, 2018</span><span>in 
+            <a href="/categories/frontend-friday" class="post--category" data-category="frontend-friday">
+              Frontend friday
+            </a>,
+            <a href="/categories/development-tools" class="post--category" data-category="development-tools">
+              Development tools
+            </a></span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<p>I get it. The JavaScript ecosystem is exhausting. There exists an <a href="https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f">abundance of tools and frameworks</a>, and each one wants to rescue you from the shortcomings of its peers. Attempting to learn and keep up with these tools takes time and energy that you would rather devote to your project. Reducing cognitive overhead is a core component of Yakkl.com&rsquo;s philosophy — we designed a static site CMS that is easy to set up and use. A good tool shouldn&rsquo;t get in your way!</p>
+
+<h2 id="the-problem">The Problem</h2>
+
+<p>Writing complex client-side code is <strong>painful</strong> without some help. You already know that a well-organized codebase is easier to understand and maintain, but that can be difficult to accomplish when you’re just throwing a bunch of files in <code>&lt;script&gt;</code>  tags. On top of that, <strong>best practices dictate that all of your code should be served up in a single file.</strong></p>
+
+<p>Many solutions in this space, such as Gulp, can be used to smash a bunch of JavaScript files together into a single bundle. This is a great improvement — but is it really enough? We’re left with a linear dependency chain and relying on global variables to share information between our separate files.</p>
+
+<h3 id="a-better-way">A Better Way</h3>
+
+<p>This post will explore why Webpack is the right choice for bundling your JavaScript application. If you’ve never used a build tool for your frontend assets, Webpack is a great place to start. If you’re already comfortable using a task runner like Gulp, delegating the asset bundling to Webpack will provide you with a more sophisticated organization and dependency management strategy.</p>
+
+<p>Webpack <strong>helps you write better code</strong> and <strong>gets out of your way</strong> so you can focus on making great software.</p>
+
+<h2 id="webpack-vs-gulp">Webpack vs. Gulp</h2>
+
+<p>Maybe you’ve heard this before: <strong>Gulp is a task runner, Webpack is a module bundler.</strong> What does that actually mean?</p>
+
+<p><strong>Gulp is a great automation tool.</strong> It allows developers to set up complex file processing pipelines using JavaScript, and run them as simple commands. However, when it comes to packaging your JavaScript application, the previously-mentioned file smashing is about as far as it can go. If code in file A depends on code in file B, you need to tell Gulp to include file A first. This can be done directly in the Gulp configuration, or by maintaining a separate manifest file for use with a plugin like <a href="http://use-asset-builder.austinpray.com/">asset-builder</a>. As you add more files and your dependency tree grows, this can become a chore to maintain.</p>
+
+<div style="text-align: center;">
+
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/03/webpack_fighter_of_the_gulpstack_champion_of_the_bundle.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/03/webpack_fighter_of_the_gulpstack_champion_of_the_bundle.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/03/webpack_fighter_of_the_gulpstack_champion_of_the_bundle.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/03/webpack_fighter_of_the_gulpstack_champion_of_the_bundle.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/03/webpack_fighter_of_the_gulpstack_champion_of_the_bundle.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/03/webpack_fighter_of_the_gulpstack_champion_of_the_bundle.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/03/webpack_fighter_of_the_gulpstack_champion_of_the_bundle.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/03/webpack_fighter_of_the_gulpstack_champion_of_the_bundle.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/03/webpack_fighter_of_the_gulpstack_champion_of_the_bundle.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/03/webpack_fighter_of_the_gulpstack_champion_of_the_bundle.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/03/webpack_fighter_of_the_gulpstack_champion_of_the_bundle.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/03/webpack_fighter_of_the_gulpstack_champion_of_the_bundle.png 1920w" sizes="auto" alt="He&#39;s a master of resolving the modules for everyone" title="He&#39;s a master of resolving the modules for everyone" class="" />
+</div>
+
+<p><strong>Complex dependency resolution is Webpack’s specialty.</strong> You specify a file that serves as your application’s <strong>entry point</strong>, and Webpack will recursively process module imports in your code to build a dependency graph.  When it’s all done, Webpack emits your JavaScript in a single bundle file. There&rsquo;s no need to tell Webpack the order in which it should put your files together; it figures it out by reading your code.</p>
+
+<p>Gulp’s dependency resolution capability is limited and <strong>requires you to explicitly define your dependency chain.</strong> Webpack uses the <strong>dependency logic built into your code.</strong></p>
+
+<h2 id="writing-modular-code">Writing Modular Code</h2>
+
+<p>In order for Webpack to work its magic, your code needs to be written as <strong>JavaScript Modules.</strong> A JavaScript Module is a single JavaScript file that <strong>exports</strong> pieces of functionality for use in other parts of the code. Code in other files can then <strong>import</strong> this module in order to use it.</p>
+
+<p>Webpack supports two standards for Module configuration: <strong>EcmaScript</strong> and <strong>CommonJS</strong>. The following examples demonstrate how you would configure a module defined in <code>hello.js</code> to be loaded by a file named <code>app.js</code> in each of these standards:</p>
+
+<h3 id="ecmascript-module-syntax">EcmaScript Module Syntax</h3>
+
+<p><strong>hello.js</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">export function hello() {
+    console.log(&#39;Hello World!&#39;);
+};</pre></div>
+<p><strong>app.js</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">import {hello} from &#39;./hello&#39;;
+hello();</pre></div>
+<p>The EcmaScript standard uses the <code>export</code> and <code>import</code> keywords.</p>
+
+<h3 id="commonjs-module-syntax">CommonJS Module Syntax</h3>
+
+<p><strong>hello.js</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">module.exports = function() {
+    console.log(&#39;Hello World!&#39;);
+};</pre></div>
+<p><strong>app.js</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">const hello = require(&#39;./hello&#39;);
+hello();</pre></div>
+<p>The CommonJS standard works by assigning the exported code to <code>module.exports</code> and importing it by calling the <code>require()</code> function.</p>
+
+<div class="shortcode-tip"><p>If you aren’t sure which syntax to use, stick to writing EcmaScript Modules. It is still helpful to know both of these options, as you will likely encounter third-party libraries that use the CommonJS syntax and you will thus need to use <code>require()</code> to import them into your code.</p>
+
+</div>
+
+<h2 id="intuitive-dependency-resolution">Intuitive Dependency Resolution</h2>
+
+<p>Webpack’s dependency resolution is <strong>intuitive</strong> because you don’t need to look at the Webpack configuration to understand what’s going on. You only need to know where the <strong>entry point</strong> is, and this will usually be obvious. This is helpful for new contributors to your project: they can understand the relationships in your code without having to understand the details of your build configuration.</p>
+
+<h2 id="configuring-webpack">Configuring Webpack</h2>
+
+<p>Let’s set up the simplest possible configuration to understand the core components of Webpack. Start by setting up the following file structure:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">src/
+    app.js
+webpack.config.js</code></pre></div>
+<p>By default, Webpack looks for configuration in a file called <code>webpack.config.js</code>. Next, let’s install the Webpack modules by running the following terminal commands:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">npm init -y
+npm install --save-dev webpack webpack-cli</code></pre></div>
+<p>Now that Webpack is installed in the project, open up <code>webpack.config.js</code> in a text editor and add the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">var path = require(&#39;path&#39;);
+module.exports = {
+    entry: &#39;./src/app.js&#39;,
+    output: {
+        path: path.resolve(__dirname, &#39;dist&#39;),
+        filename: &#39;bundle.js&#39;
+    },
+};</pre></div>
+<p>That’s all you need for a bare-bones Webpack config: define the <strong>entry point</strong> and the <strong>output file</strong>. Webpack requires an absolute path for the output, so we need to use the <code>path</code> module to resolve this at runtime.</p>
+
+<p>We can then run Webpack by invoking the CLI command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">./node_modules/webpack-cli/bin/webpack.js</code></pre></div>
+<p>This will read <code>src/app.js</code> and compile it into <code>dist/bundle.js</code>. Once the command completes, our project should look like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">dist/
+    bundle.js
+src/
+    app.js
+package.json
+webpack.config.js</code></pre></div>
+<h2 id="using-npm-scripts">Using NPM Scripts</h2>
+
+<p>A common strategy for streamlining your build CLI is to add custom scripts to the <code>scripts</code> property in your <code>package.json</code> file. You can then invoke these scripts with <code>npm run SCRIPT_NAME</code>.</p>
+
+<p>Open your <code>package.json</code> file in a text editor and locate the <code>scripts</code> section:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;my-webpack-demo&#34;</span>,
+    <span style="color:#960050;background-color:#1e0010">...</span>
+    <span style="color:#f92672">&#34;scripts&#34;</span>: {
+    <span style="color:#f92672">&#34;test&#34;</span>: <span style="color:#e6db74">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>,
+    },
+    <span style="color:#960050;background-color:#1e0010">...</span>
+}</code></pre></div>
+<p>The default <code>package.json</code> comes with one script called <code>test</code> that just returns an error message. Let’s add two more:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;my-webpack-demo&#34;</span>,
+    <span style="color:#960050;background-color:#1e0010">...</span>
+    <span style="color:#f92672">&#34;scripts&#34;</span>: {
+    <span style="color:#f92672">&#34;test&#34;</span>: <span style="color:#e6db74">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>,
+    <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;./node_modules/webpack-cli/bin/webpack.js&#34;</span>,
+    <span style="color:#f92672">&#34;watch&#34;</span>: <span style="color:#e6db74">&#34;./node_modules/webpack-cli/bin/webpack.js --watch&#34;</span>
+    },
+    <span style="color:#960050;background-color:#1e0010">...</span>
+}</code></pre></div>
+<p>Now we can run our Webpack build by simply calling <code>npm run build</code>. We have also added a <code>watch</code> script that passes the <code>--watch</code> flag to <code>webpack-cli</code>. When invoked with this flag, Webpack will watch our files and automatically run the build when changes are detected.</p>
+
+<p>Congratulations! You are now writing modular JavaScript, and you have a build process that puts it all together for you.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<p>We have only scratched the surface here: Webpack is capable of much more than this, but bundling JavaScript modules is its core feature. Next time, we will explore Webpack’s <strong>loaders</strong> and <strong>plugins</strong> in order to optimize your JavaScript bundle, and using the <strong>development server</strong> for live reloading of your browser. If you want to get started right away, go ahead and dive into the <a href="https://webpack.js.org/concepts/">Webpack documentation</a>.</p>
+
+<div style="padding: 20px 40px;background: #f7f7f7;">  
+<h2>Join us every Friday 📅</h2>  
+<p><a href="/categories/frontend-friday/">Frontend Friday</a> is a weekly series where we write in-depth posts about modern web development.</p>  
+<p><strong>Next week:</strong> We’ll compare the usability and features of Hugo and Jekyll to help you decide <a href="https://yakkl.com/blog/hugo-and-jekyll-compared/">which static site generator is right for you</a></p>  
+<p><strong>Last week:</strong> We looked into CI/CD: <a href="https://yakkl.com/blog/automate-deploy-w-circle-ci/">Automating Your Static Site Deployment with CircleCI</a>.</p>  
+</div>
+
+<h2 id="have-something-to-add">Have something to add?</h2>
+
+<p><a style="background: #F60; display: inline-block; border-radius: 5px; color: white; padding: 2px 9px; font-size: 14px;" href="https://news.ycombinator.com/item?id=16718162">Discuss on Hacker News</a></p>
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "Write Better JavaScript With Webpack";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/write-better-javascript-with-webpack\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/write-better-javascript-with-webpack.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

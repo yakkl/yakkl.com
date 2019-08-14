@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vuepress on Yakkl.com</title>
+    <link>https://yakkl.com/categories/vuepress/</link>
+    <description>Recent content in Vuepress on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Fri, 12 Oct 2018 02:00:25 -1100</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/categories/vuepress/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An Introduction to Theming in VuePress</title>
+      <link>https://yakkl.com/blog/an-introduction-to-theming-in-vuepress/</link>
+      <pubDate>Fri, 12 Oct 2018 02:00:25 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/an-introduction-to-theming-in-vuepress/</guid>
+      <description>When I first looked at VuePress, I marveled at how quickly you could install it alongside your project&amp;rsquo;s existing markdown docs to create a polished documentation website. This is without a doubt one of VuePress’ biggest strengths, but documentation is not the only thing it can do. VuePress is a highly flexible static site generator, and provides the ability to completely customize the way your pages are built via its Layout component.</description>
+    </item>
+    
+    <item>
+      <title>Using JSON Configuration With VuePress</title>
+      <link>https://yakkl.com/blog/using-json-configuration-with-vuepress/</link>
+      <pubDate>Fri, 21 Sep 2018 05:43:34 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/using-json-configuration-with-vuepress/</guid>
+      <description>Here at Yakkl, we think VuePress is pretty cool. When it came time to set our sights on supporting SSGs beyond Hugo and Jekyll, we selected VuePress as our guinea pig. Our adoption of VuePress has helped to highlight the differences among the variety of Static Site Generators, and move us in a direction that will enable users of SSGs beyond Hugo and Jekyll to take advantage of Yakkl’s content manager.</description>
+    </item>
+    
+    <item>
+      <title>VuePress Brings Your Documentation to Life</title>
+      <link>https://yakkl.com/blog/vuepress-brings-your-documentation-to-life/</link>
+      <pubDate>Fri, 10 Aug 2018 15:48:09 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/vuepress-brings-your-documentation-to-life/</guid>
+      <description>VuePress is a static site generator based on Vue JavaScript framework. With the first release appearing back in April and the current version being 0.14.1, VuePress is a young project that shows a lot of promise.
+VuePress has the flexibility to build any static site, but it particularly excels at working with documentation. In this article, I’ll show you how to adapt your docs to VuePress for documentation that survives on Github, but thrives on its own.</description>
+    </item>
+    
+  </channel>
+</rss>

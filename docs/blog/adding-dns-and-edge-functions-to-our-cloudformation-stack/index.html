@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Creating Lambda@Edge and Route 53 Resources with CloudFormation | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Creating Lambda@Edge and Route 53 Resources with CloudFormation" />
+<meta property="og:description" content="Previously, I showed you how to automatically provision AWS resources with CloudFormation. CloudFormation provides a concise, declarative syntax for configuring a “stack” of AWS resources. Given the sizable catalog of services provided by AWS, and the need to connect services together for most use cases, being able to declare a stack of connected services all together in a single configuration file will help you keep track of your project’s infrastructure and reduce the likelihood of misconfiguration." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/adding-dns-and-edge-functions-to-our-cloudformation-stack/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/09/mihai-fischer-715069-unsplash.jpg" /><meta property="og:image:alt" content="Previously, I showed you how to automatically provision AWS resources with CloudFormation. CloudFormation provides a concise, declarative syntax for configuring a “stack” of AWS resources. Given the sizable catalog of services provided by AWS, and the need to connect services together for most use cases, being able to declare a stack of connected services all together in a single configuration file will help you keep track of your project’s infrastructure and reduce the likelihood of misconfiguration." /><meta property="article:published_time" content="2017-12-07T04:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2018-09-14T16:55:46&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta itemprop="name" content="Creating Lambda@Edge and Route 53 Resources with CloudFormation">
+<meta itemprop="description" content="Previously, I showed you how to automatically provision AWS resources with CloudFormation. CloudFormation provides a concise, declarative syntax for configuring a “stack” of AWS resources. Given the sizable catalog of services provided by AWS, and the need to connect services together for most use cases, being able to declare a stack of connected services all together in a single configuration file will help you keep track of your project’s infrastructure and reduce the likelihood of misconfiguration."><meta itemprop="datePublished" content="2017-12-07T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-09-14T16:55:46&#43;00:00" /><meta itemprop="wordCount" content="1695"><meta itemprop="image" content="https://yakkl.com/uploads/2018/09/mihai-fischer-715069-unsplash.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/09/mihai-fischer-715069-unsplash.jpg"/><meta name="twitter:title" content="Creating Lambda@Edge and Route 53 Resources with CloudFormation"/>
+<meta name="twitter:description" content="Previously, I showed you how to automatically provision AWS resources with CloudFormation. CloudFormation provides a concise, declarative syntax for configuring a “stack” of AWS resources. Given the sizable catalog of services provided by AWS, and the need to connect services together for most use cases, being able to declare a stack of connected services all together in a single configuration file will help you keep track of your project’s infrastructure and reduce the likelihood of misconfiguration."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/09/mihai-fischer-715069-unsplash.jpg" alt="Creating Lambda@Edge and Route 53 Resources with CloudFormation" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/09/mihai-fischer-715069-unsplash.jpg" class="" />
+              
+        </div><div class="container">
+      <h1 class="post--title">Creating Lambda@Edge and Route 53 Resources with CloudFormation</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">September 14, 2018</span><span>in 
+            <a href="/categories/beyond-static" class="post--category" data-category="beyond static">
+              Beyond static
+            </a>,
+            <a href="/categories/frontend-friday" class="post--category" data-category="frontend-friday">
+              Frontend friday
+            </a></span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<p>Previously, I showed you how to <a href="https://yakkl.com/blog/automate-your-static-hosting-environment-with-aws-cloudformation/">automatically provision AWS resources with CloudFormation</a>. CloudFormation provides a concise, declarative syntax for configuring a “stack” of AWS resources. Given the sizable catalog of services provided by AWS, and the need to connect services together for most use cases, being able to declare a stack of connected services all together in a single configuration file will help you keep track of your project’s infrastructure and reduce the likelihood of misconfiguration.</p>
+
+<h2 id="our-cloudformation-stack">Our CloudFormation Stack</h2>
+
+<p>The stack we worked on last time set up a hosting environment for a static website, with an S3 bucket to hold the files, and a CloudFront distribution to serve these files to the public via a CDN. Our end result left a few things to be desired. In this article, we’re going to cover <strong>attaching a Lambda function</strong> to our CloudFront distribution to improve our URL handling, using a custom domain with CloudFront by <strong>creating a DNS record in Route 53</strong>, and <strong>creating a TLS certificate via</strong> <strong>Certificate Manager</strong> to serve our site over HTTPS.</p>
+
+<h2 id="default-directory-index">Default Directory Index</h2>
+
+<p>There is one significant problem with our current CloudFormation stack that makes it incompatible with the standard behavior of most Static Site Generators.</p>
+
+<p>One of the clever tricks employed by many static sites is the ability to use “pretty” URLs by relying on the default behavior of most webservers. For example, instead of a page being located at <code>https://example.com/about.html</code>, many developers prefer a URI that does not include the file extension:  <code>https://example.com/about/</code>. This behavior is easy to achieve by placing the HTML for the “about” page in a file at <code>/about/index.html</code>. Most webservers, by default, will load the <code>index.html</code> file when the requested URI references a directory instead of a single file.</p>
+
+<p>CloudFront, unfortunately, does not do this by default. While you can configure a <strong>Default Root Object</strong> for your CloudFront distribution, this only tells CloudFront which file to load when a user requests the homepage. Subpages, like the <code>/about/</code> page in our example, cannot benefit from this behavior. This makes CloudFront an unappealing choice for anyone who uses a static site generator!</p>
+
+<p>Fortunately, we can use <strong>Lambda@Edge</strong> to tweak the behavior of our CloudFront distribution. <strong>Lambda@Edge</strong> allows us to run a function on our CloudFront edge nodes in response to requests.</p>
+
+<h3 id="setting-up-permissions-for-our-lambda-function">Setting Up Permissions For Our Lambda Function</h3>
+
+<p>We need to create an IAM Role for our Lambda function. We can use the standard Lambda permissions by adding the policy to <code>ManagedPolicyArns</code>.</p>
+
+<p>Recall that all resources should be declared inside of the <code>Resources:</code> section of our CloudFormation template. We define our role as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">LambdaRole:
+  Type: &#39;AWS::IAM::Role&#39;
+  Properties:
+    AssumeRolePolicyDocument:
+      Version: &#39;2012-10-17&#39;
+      Statement:
+      - Effect: Allow
+        Principal:
+          Service:
+          - &#39;lambda.amazonaws.com&#39;
+          - &#39;edgelambda.amazonaws.com&#39;
+        Action: &#39;sts:AssumeRole&#39;
+    ManagedPolicyArns:
+    - &#39;arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole&#39;</pre></div>
+<h3 id="creating-the-lambda-function">Creating the Lambda Function</h3>
+
+<p>To create the function, we create a new resource of type <code>AWS::Lambda::Function</code>. We can then include the code of our Lambda function directly in the template:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">LambdaFunction:
+  Type: &#39;AWS::Lambda::Function&#39;
+  Properties:
+    Code:
+      ZipFile: !Sub |
+        &#39;use strict&#39;;
+        const regex = /\.[a-z0-9]+$/;
+        const indexDocument = &#39;${DefaultRootObject}&#39;;
+        exports.handler = (event, context, cb) =&gt; {
+            const cf = event.Records[0].cf;
+            const config = cf.config;
+            const request = cf.request;
+            if (request.uri.endsWith(&#39;/&#39;)) {
+              cb(null, Object.assign({}, request, {uri: `${!request.uri}${!indexDocument}`}));
+            } else if (request.uri.endsWith(`/${!indexDocument}`)) {
+              cb(null, {
+                status: &#39;302&#39;,
+                statusDescription: &#39;Found&#39;,
+                headers: {
+                  location: [{
+                    key: &#39;Location&#39;,
+                    value: request.uri.substr(0, request.uri.length - indexDocument.length),
+                  }],
+                }
+              });
+            } else if (!regex.test(request.uri)) {
+              cb(null, {
+                status: &#39;302&#39;,
+                statusDescription: &#39;Found&#39;,
+                headers: {
+                  location: [{
+                    key: &#39;Location&#39;,
+                    value: `${!request.uri}/`,
+                  }],
+                }
+              });
+            } else {
+              cb(null, request);
+            }
+        };
+    Handler: &#39;index.handler&#39;
+    MemorySize: 128
+    Role: !GetAtt &#39;LambdaRole.Arn&#39;
+    Runtime: &#39;nodejs6.10&#39;
+    Timeout: 5</pre></div>
+<p>This function does three things:</p>
+
+<ul>
+<li>When the URI ends with a <code>/</code>, the function appends <code>index.html</code> before forwarding the request to the S3 Bucket. URIs that end with a <code>/</code> are considered the canonical version of the URI.</li>
+<li>When the URI ends with <code>/index.html</code>, the function issues a 302 redirect to the canonical URI (<code>index.html</code> is truncated from the URI)</li>
+<li>When the URI is anything that does not end in a <code>/</code> or a file extension, a <code>/</code> is appended to the URI and a 302 redirect is issued.</li>
+</ul>
+
+<p>Non-canonical URIs are redirected to prevent duplicate content penalties from search engine crawlers.</p>
+
+<p>Note that we are using the <code>!Sub</code> template function to insert template Parameters into our function. In our case, we are grabbing the value of the <code>DefaultRootObject</code> parameter that we defined last time.</p>
+
+<div class="shortcode-tip"><h4 d="escaping-javascript-template-syntax">Escaping JavaScript Template Syntax</h4><p>We are using JavaScript template syntax in our Lambda function to interpolate variable values in strings. This syntax normally looks the same as interpolating template parameters using <code>!Sub</code>. Because of this, we use <code>!</code> to escape JavaScript template variables when using them in a string passed to <code>!Sub</code>, like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">`${!request.uri}${!indexDocument}`</pre></div>
+</div>
+
+<h3 id="versioning-the-lambda-function">Versioning the Lambda Function</h3>
+
+<p>We can’t attach a Lambda function directly to a CloudFront distribution. We need to create a <em>version</em> of our function, and attach this version to the distribution. A Lambda version is a snapshot of the code at a particular point in time. If the function is changed, it will not affect the behavior of our CloudFront distribution until a new version is created and attached in place of the old one.</p>
+
+<p>Let’s create the <code>AWS::Lambda::Version</code> resource:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">VersionedLambdaFunction:
+    Type: &#39;AWS::Lambda::Version&#39;
+    Properties:
+      FunctionName: !Ref LambdaFunction</pre></div>
+<h3 id="modifying-the-cloudfront-distribution">Modifying the CloudFront Distribution</h3>
+
+<p>To attach the Lambda function to our CloudFront distribution, all we have to do is add <code>LambdaFunctionAssociations</code> to our <code>DefaultCacheBehavior</code> object, tell it we want this function to respond to an <code>origin-request</code>, and give it an ARN. Remember, the ARN we provide must belong to the <em>version</em> ******of our Lambda function that we just created, not the function itself, or CloudFormation will fail to create the stack.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">CloudFrontDistribution:
+  Type: &#39;AWS::CloudFront::Distribution&#39;
+  Properties:
+    DistributionConfig:
+    # ...
+      DefaultCacheBehavior:
+        LambdaFunctionAssociations:
+            - EventType: &#39;origin-request&#39;
+              LambdaFunctionARN: !Ref VersionedLambdaFunction
+    DefaultRootObject: &#39;&#39;</pre></div>
+<p>Additionally, we need to remove the <code>DefaultRootObject</code> value here. Leaving it in will now result in a redirect loop due to the behavior programmed into our Lambda function.</p>
+
+<p>With this Lambda@Edge function in place, CloudFront will now correctly handle requests to our static site. We can use this CloudFormation template to create a fully functional static website hosting stack that is accessed from a <strong>.cloudfront.net</strong> subdomain. Configuring access to our website from a custom domain only takes a couple extra steps!</p>
+
+<h2 id="automatically-creating-dns-records">Automatically Creating DNS Records</h2>
+
+<p><strong>Route 53</strong> is Amazon’s DNS web service. Using Route 53 in our CloudFormation template, we can automatically create a record to point a custom domain to our CloudFront distribution.</p>
+
+<h3 id="specifying-the-hosted-zone">Specifying the Hosted Zone</h3>
+
+<p>Our template will assume the user has already set up a Hosted Zone for their domain. When domains are registered via Route 53, AWS will create this Hosted Zone for you automatically.</p>
+
+<p>In order to know which records we should be creating, we will add two more parameters to our CloudFormation template, under the <code>Parameters</code> section:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Domain:
+  Description: &#39;The domain of your website.&#39;
+  Type: String
+HostedZoneID:
+  Description: &#39;The ID of your hosted zone in Route 53&#39;
+  Type: &#39;AWS::Route53::HostedZone::Id&#39;</pre></div>
+<p>Note the <code>Type</code> of the <code>HostedZoneID</code> parameter, <code>AWS::Route53::HostedZone::Id</code>. This is one of CloudFormation’s special parameter types, and will allow the user to pick from a dropdown of their Hosted Zones instead of having to manually input the Zone ID.</p>
+
+<h3 id="creating-the-record-set">Creating the Record Set</h3>
+
+<p>We want to create an A record in our Hosted Zone, and use Route 53’s special Alias feature to connect it to an AWS resource.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Route53Record:
+  Type: &#39;AWS::Route53::RecordSet&#39;
+  Properties:
+    HostedZoneId: !Ref HostedZoneID
+    Name: !Ref Domain
+    Type: A
+    AliasTarget:
+      HostedZoneId: Z2FDTNDATAQYW2 # This Zone ID is used for any CloudFront Distribution
+      DNSName: !GetAtt &#39;CloudFrontDistribution.DomainName&#39;</pre></div>
+<p>The <code>HostedZoneId</code> of any CloudFront distribution will always be <code>Z2FDTNDATAQYW2</code>, so we can hard code that into our template.</p>
+
+<h3 id="adding-the-domain-to-cloudfront">Adding the Domain to CloudFront</h3>
+
+<p>We also need to add our domain as an alias for our CloudFront distribution. To do this, we add it to the <code>Aliases</code> field in the <code>DistributionConfig</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">CloudFrontDistribution:
+  Type: &#39;AWS::CloudFront::Distribution&#39;
+  Properties:
+    DistributionConfig:
+      Aliases:
+      - !Ref Domain
+      # ...</pre></div>
+<h2 id="requesting-a-certificate-via-certificate-manager">Requesting a Certificate Via Certificate Manager</h2>
+
+<p>Finally, let’s create a TLS certificate so we can serve our site over HTTPS. To do that, create a resource of type <code>AWS::CertificateManager::Certificate</code> with a <code>ValidationMethod</code> of DNS.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Cert:
+  Type: &#39;AWS::CertificateManager::Certificate&#39;
+  Properties:
+    DomainName: !Ref Domain
+    ValidationMethod: DNS</pre></div>
+<div class="shortcode-warning"><p>When creating a certificate with Certificate Manager, the creation of your CloudFront stack will stall until certificate validation is complete. You need to manually add the DNS record to verify the certificate once it’s created, and be aware that validation can take up to 30 minutes.</p>
+
+</div>
+
+<div class="shortcode-warning"><p>Using Certificate Manager with CloudFront requires that your CloudFormation stack be created in the <strong>us-east-1 (N. Virginia)</strong> region.</p>
+
+</div>
+
+<p>We need to make one final modification to our CloudFront distribution’s <code>DistributionConfig</code> to add this certificate:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">CloudFrontDistribution:
+  Type: &#39;AWS::CloudFront::Distribution&#39;
+  Properties:
+    DistributionConfig:
+      Aliases:
+      - !Ref Domain
+      ViewerCertificate:
+        AcmCertificateArn: !Ref Cert
+        SslSupportMethod: &#39;sni-only&#39;
+      # ...</pre></div>
+<h2 id="a-fully-capable-static-hosting-stack">A Fully-Capable Static Hosting Stack</h2>
+
+<p>With these additions, our CloudFormation template can now be used to create a complete static hosting environment. To do this, we created resources from six different services:</p>
+
+<ul>
+<li>An S3 Bucket to store the HTML of our website,</li>
+<li>A CloudFront distribution to optimize the delivery of our content,</li>
+<li>A Lambda@Edge function to give us control over our URI structure,</li>
+<li>A Route 53 Record Set to make our site accessible from our custom domain,</li>
+<li>A TLS Certificate from Certificate Manager to make our site available over HTTPS, and</li>
+<li>Some IAM Roles and Policies to tie it all together.</li>
+</ul>
+
+<p>Considering that AWS has <a href="https://aws.amazon.com/products/">over 90 different services</a>, it’s clear that our use case has only scratched the surface of what a tool like CloudFormation is capable of. <a href="https://serverless.com/">Serverless Framework</a>, for example, uses CloudFormation under the hood to make it easy to build sophisticated serverless applications. As the popularity and complexity of cloud services grows, the ability to express infrastructure as code is more important than ever. If you choose to host on AWS, you should definitely have CloudFormation in your arsenal.</p>
+
+<div class="shortcode-tip"><h4 d="try-it-out">Try it out</h4><p>Click the button below to launch our static site hosting stack. <br />
+<a target="_blank" title="Launch S3+Cloudfront Stack" href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=my-static-website&templateURL=https:%2F%2Fs3.amazonaws.com%2Fdwalkr-cf-templates%2Fadvanced-route53-acm.yml">
+
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png 1920w" sizes="auto" alt="Launch stack button" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png" class="no-lightbox" />
+</a></p>
+
+</div>
+
+<div style="margin-top: 2em; padding: 20px 40px;background: #f7f7f7;">
+    <h2>Join us every Friday 📅</h2>
+    <p><a href="/categories/frontend-friday/">Frontend Friday</a> is a weekly series where we write in-depth posts about modern web development.</p>
+    <p><strong>Next week:</strong> TBD </p>
+    <p><strong>Last week:</strong> We took our first steps with CloudFormation to <a href="https://yakkl.com/blog/automate-your-static-hosting-environment-with-aws-cloudformation/">create a static hosting environment</a>.</p>
+</div>
+
+<h2 id="have-something-to-add">Have something to add?</h2>
+
+<p><a style="background: #F60; display: inline-block; border-radius: 5px; color: white; padding: 2px 9px; font-size: 14px;" href="https://news.ycombinator.com/item?id=18057153">Discuss on Hacker News</a></p>
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "Creating Lambda@Edge and Route 53 Resources with CloudFormation";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/adding-dns-and-edge-functions-to-our-cloudformation-stack\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/adding-dns-and-edge-functions-to-our-cloudformation-stack.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

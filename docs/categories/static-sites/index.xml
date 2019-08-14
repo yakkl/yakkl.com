@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Static Sites on Yakkl.com</title>
+    <link>https://yakkl.com/categories/static-sites/</link>
+    <description>Recent content in Static Sites on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Mon, 26 Nov 2018 16:30:05 +0000</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/categories/static-sites/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Is it Time to Move on From WordPress?</title>
+      <link>https://yakkl.com/blog/is-it-time-to-move-on-from-wordpress/</link>
+      <pubDate>Mon, 26 Nov 2018 16:30:05 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/is-it-time-to-move-on-from-wordpress/</guid>
+      <description>WordPress 5.0 has been released, and with it comes their much-hyped new editing experience, Gutenberg. The inclusion of Gutenberg in this release has caused no shortage of acrimony in the WordPress community. The new editor is opt-out as opposed to opt-in (and opting out requires installing yet another plugin), and is such a significant departure from their original content editor that it is guaranteed to cause major issues with third-party plugins and themes (Gutenberg, for example, does not support WordPress’ meta box API, an essential component of customizing the current editing interface used by countless plugins.</description>
+    </item>
+    
+    <item>
+      <title>uBuild: A New Jekyll Theme Using Blocks</title>
+      <link>https://yakkl.com/blog/ubuild-a-new-theme-for-static-sites-using-blocks/</link>
+      <pubDate>Fri, 22 Jun 2018 14:00:06 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/ubuild-a-new-theme-for-static-sites-using-blocks/</guid>
+      <description>Back in April we announced a feature that we believed was a game-changer for static site content managers. Blocks was here to introduce a way for you to put together sites using pre-composed site snippets inside Yakkl.
+While we did our best to show you how to set them up and give you an idea of how powerful they could be, we noticed that getting to know Blocks and figuring out how to set them up from scratch wasn&amp;rsquo;t as self-explanatory as we had hoped.</description>
+    </item>
+    
+  </channel>
+</rss>

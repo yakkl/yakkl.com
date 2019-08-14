@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Sidebar Configuration | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Sidebar Configuration" />
+<meta property="og:description" content="You can define which areas (folders) of your site contain editable content files via the sections parameter in your .yakkl/settings.yml configuration file.
+A content section in Yakkl is primarily defined by the path to the folder containing content files, and a glob to match against the contents of that folder.
+Options    Key Description Type Default     type Type of content directory,document,heading,jekyll-pages,jekyll-posts directory   label Text to display in Yakkl menu String N/A   path Path to folder from repository root (only applies to directory type) String N/A   match Glob of files to match inside of path (only applies to directory type) String (Fileglob) **/*   exclude Glob pattern of files to exclude (only applies to directory type) String (Fileglob) None   create Restrictions on creating new content items all, documents, none all   templates Control Which Front Matter Templates can be used in section Array All templates   new_doc_ext File extension for new documents created in this section String Value of New File Format in Yakkl Settings   read_only Prevent content from being edited (only applies to document type) Boolean false    Sidebar Order Sections will appear in the sidebar in the same order they are defined." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/settings/content-sections/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/01/OGimage-01-3x.jpg" /><meta property="og:image:alt" content="You can define which areas (folders) of your site contain editable content files via the sections parameter in your .yakkl/settings.yml configuration file.
+A content section in Yakkl is primarily defined by the path to the folder containing content files, and a glob to match against the contents of that folder.
+Options    Key Description Type Default     type Type of content directory,document,heading,jekyll-pages,jekyll-posts directory   label Text to display in Yakkl menu String N/A   path Path to folder from repository root (only applies to directory type) String N/A   match Glob of files to match inside of path (only applies to directory type) String (Fileglob) **/*   exclude Glob pattern of files to exclude (only applies to directory type) String (Fileglob) None   create Restrictions on creating new content items all, documents, none all   templates Control Which Front Matter Templates can be used in section Array All templates   new_doc_ext File extension for new documents created in this section String Value of New File Format in Yakkl Settings   read_only Prevent content from being edited (only applies to document type) Boolean false    Sidebar Order Sections will appear in the sidebar in the same order they are defined." /><meta property="article:published_time" content="2018-07-24T04:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2018-10-24T04:00:00&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="docs" />
+  <meta itemprop="name" content="Sidebar Configuration">
+<meta itemprop="description" content="You can define which areas (folders) of your site contain editable content files via the sections parameter in your .yakkl/settings.yml configuration file.
+A content section in Yakkl is primarily defined by the path to the folder containing content files, and a glob to match against the contents of that folder.
+Options    Key Description Type Default     type Type of content directory,document,heading,jekyll-pages,jekyll-posts directory   label Text to display in Yakkl menu String N/A   path Path to folder from repository root (only applies to directory type) String N/A   match Glob of files to match inside of path (only applies to directory type) String (Fileglob) **/*   exclude Glob pattern of files to exclude (only applies to directory type) String (Fileglob) None   create Restrictions on creating new content items all, documents, none all   templates Control Which Front Matter Templates can be used in section Array All templates   new_doc_ext File extension for new documents created in this section String Value of New File Format in Yakkl Settings   read_only Prevent content from being edited (only applies to document type) Boolean false    Sidebar Order Sections will appear in the sidebar in the same order they are defined."><meta itemprop="datePublished" content="2018-07-24T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-10-24T04:00:00&#43;00:00" /><meta itemprop="wordCount" content="988"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/OGimage-01-3x.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/OGimage-01-3x.jpg"/><meta name="twitter:title" content="Sidebar Configuration"/>
+<meta name="twitter:description" content="You can define which areas (folders) of your site contain editable content files via the sections parameter in your .yakkl/settings.yml configuration file.
+A content section in Yakkl is primarily defined by the path to the folder containing content files, and a glob to match against the contents of that folder.
+Options    Key Description Type Default     type Type of content directory,document,heading,jekyll-pages,jekyll-posts directory   label Text to display in Yakkl menu String N/A   path Path to folder from repository root (only applies to directory type) String N/A   match Glob of files to match inside of path (only applies to directory type) String (Fileglob) **/*   exclude Glob pattern of files to exclude (only applies to directory type) String (Fileglob) None   create Restrictions on creating new content items all, documents, none all   templates Control Which Front Matter Templates can be used in section Array All templates   new_doc_ext File extension for new documents created in this section String Value of New File Format in Yakkl Settings   read_only Prevent content from being edited (only applies to document type) Boolean false    Sidebar Order Sections will appear in the sidebar in the same order they are defined."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-docs kind-page type-docs ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container docs">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the docs..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul><div class="docs-nav-items"><h3>Welcome</h3>
+    <ul><li><a href="/docs/welcome/">Introduction</a></li></ul><h3>Quick Start</h3>
+    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li><li><a href="/docs/quickstart/setup-site/">Setup Your Site</a></li><li><a href="/docs/quickstart/configure-cms/">Configure the CMS</a></li></ul><h3>Git Sync</h3>
+    <ul><li><a href="/docs/git-sync/">Connecting to a Source Provider</a></li><li><a href="/docs/git-sync/github/">GitHub</a></li><li><a href="/docs/git-sync/gitlab/">GitLab</a></li><li><a href="/docs/git-sync/bitbucket/">Bitbucket</a></li><li><a href="/docs/git-sync/azure-devops/">Azure DevOps</a></li><li><a href="/docs/git-sync/manual-setup/">Manual Setup</a></li></ul><h3>Editing</h3>
+    <ul><li><a href="/docs/editing/">Managing Content</a></li><li><a href="/docs/editing/markdown-editor/">Markdown Editor</a></li><li><a href="/docs/editing/front-matter/">Front Matter</a></li><li><a href="/docs/editing/data-files/">Data Files</a></li><li><a href="/docs/editing/menus/">Menus</a></li><li><a href="/docs/editing/media-library/">Media Library</a></li><li><a href="/docs/editing/remote-admin/">Remote Admin</a></li></ul><h3>Media</h3>
+    <ul><li><a href="/docs/media/">Storing Media Files</a></li></ul><h3>Settings &amp; Configuration</h3>
+    <ul><li><a href="/docs/settings/">All Settings</a></li><li><a href="/docs/settings/front-matter-templates/">Front Matter Templates</a></li><li><a href="/docs/settings/fields/">Fields</a></li><li><a href="/docs/settings/content-sections/" class="active">Sidebar Configuration</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/content-sections/#options">Options</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/content-sections/#examples">Examples</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/content-sections/#configuring-data-file-sections">Configuring Data File Sections</a>
+            </li></ul><li><a href="/docs/settings/config-files/">Config Files</a></li><li><a href="/docs/settings/snippets/">Snippets</a></li><li><a href="/docs/settings/collaborators/">Collaborators &amp; Teams</a></li></ul><h3>Organizations</h3>
+    <ul><li><a href="/docs/collaboration/organizations/">About Organizations</a></li></ul><h3>Previews</h3>
+    <ul></ul><h3>Hosting</h3>
+    <ul><li><a href="/docs/hosting/">Hosting Options</a></li><li><a href="/docs/hosting/s3-cloudfront-stack/">AWS</a></li><li><a href="/docs/hosting/github-pages/">GitHub Pages</a></li><li><a href="/docs/hosting/ftp/">FTP/SFTP</a></li><li><a href="/docs/hosting/webhooks/">Webhooks</a></li></ul><h3>Developer Guides</h3>
+    <ul><li><a href="/docs/guides/developing-with-hugo/">Hugo</a></li><li><a href="/docs/guides/developing-with-jekyll/">Jekyll</a></li><li><a href="/docs/guides/developing-with-gatsby/">Gatsby</a></li></ul><h3>Other</h3>
+    <ul><li><a href="/docs/troubleshooting/">Troubleshooting</a></li><li><a href="/docs/faqs/">Frequently Asked Questions</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="/docs/import-button/">Import Button</a></li><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul><h3>Pro</h3>
+    <ul><li><a href="/docs/pro/features/pro-plans/">Pro Plans</a></li><li><a href="/docs/pro/features/audit-logging/">Audit Logging</a></li><li><a href="/docs/pro/features/single-sign-on/">Single Sign-on</a></li></ul></div></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><main class="docs-container">
+    <div class="sidebar">
+      <aside class="sidebar-inner">
+        <h2>
+          <a href="/docs">
+            Docs
+          </a>
+        </h2><div class="docs-nav-items"><h3>Welcome</h3>
+    <ul><li><a href="/docs/welcome/">Introduction</a></li></ul><h3>Quick Start</h3>
+    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li><li><a href="/docs/quickstart/setup-site/">Setup Your Site</a></li><li><a href="/docs/quickstart/configure-cms/">Configure the CMS</a></li></ul><h3>Git Sync</h3>
+    <ul><li><a href="/docs/git-sync/">Connecting to a Source Provider</a></li><li><a href="/docs/git-sync/github/">GitHub</a></li><li><a href="/docs/git-sync/gitlab/">GitLab</a></li><li><a href="/docs/git-sync/bitbucket/">Bitbucket</a></li><li><a href="/docs/git-sync/azure-devops/">Azure DevOps</a></li><li><a href="/docs/git-sync/manual-setup/">Manual Setup</a></li></ul><h3>Editing</h3>
+    <ul><li><a href="/docs/editing/">Managing Content</a></li><li><a href="/docs/editing/markdown-editor/">Markdown Editor</a></li><li><a href="/docs/editing/front-matter/">Front Matter</a></li><li><a href="/docs/editing/data-files/">Data Files</a></li><li><a href="/docs/editing/menus/">Menus</a></li><li><a href="/docs/editing/media-library/">Media Library</a></li><li><a href="/docs/editing/remote-admin/">Remote Admin</a></li></ul><h3>Media</h3>
+    <ul><li><a href="/docs/media/">Storing Media Files</a></li></ul><h3>Settings &amp; Configuration</h3>
+    <ul><li><a href="/docs/settings/">All Settings</a></li><li><a href="/docs/settings/front-matter-templates/">Front Matter Templates</a></li><li><a href="/docs/settings/fields/">Fields</a></li><li><a href="/docs/settings/content-sections/" class="active">Sidebar Configuration</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/content-sections/#options">Options</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/content-sections/#examples">Examples</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/content-sections/#configuring-data-file-sections">Configuring Data File Sections</a>
+            </li></ul><li><a href="/docs/settings/config-files/">Config Files</a></li><li><a href="/docs/settings/snippets/">Snippets</a></li><li><a href="/docs/settings/collaborators/">Collaborators &amp; Teams</a></li></ul><h3>Organizations</h3>
+    <ul><li><a href="/docs/collaboration/organizations/">About Organizations</a></li></ul><h3>Previews</h3>
+    <ul></ul><h3>Hosting</h3>
+    <ul><li><a href="/docs/hosting/">Hosting Options</a></li><li><a href="/docs/hosting/s3-cloudfront-stack/">AWS</a></li><li><a href="/docs/hosting/github-pages/">GitHub Pages</a></li><li><a href="/docs/hosting/ftp/">FTP/SFTP</a></li><li><a href="/docs/hosting/webhooks/">Webhooks</a></li></ul><h3>Developer Guides</h3>
+    <ul><li><a href="/docs/guides/developing-with-hugo/">Hugo</a></li><li><a href="/docs/guides/developing-with-jekyll/">Jekyll</a></li><li><a href="/docs/guides/developing-with-gatsby/">Gatsby</a></li></ul><h3>Other</h3>
+    <ul><li><a href="/docs/troubleshooting/">Troubleshooting</a></li><li><a href="/docs/faqs/">Frequently Asked Questions</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="/docs/import-button/">Import Button</a></li><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul><h3>Pro</h3>
+    <ul><li><a href="/docs/pro/features/pro-plans/">Pro Plans</a></li><li><a href="/docs/pro/features/audit-logging/">Audit Logging</a></li><li><a href="/docs/pro/features/single-sign-on/">Single Sign-on</a></li></ul></div></aside>
+    </div>
+    <section class="docs-content">
+      <div class="container md-content">
+        <h1>Sidebar Configuration</h1>
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<p>You can define which areas (folders) of your site contain editable content files via the <code>sections</code> parameter in your <code>.yakkl/settings.yml</code> configuration file.</p>
+
+<p>A content section in Yakkl is primarily defined by the path to the folder containing content files, and a <a href="/docs/guides/misc/working-with-globs/">glob</a> to match against the contents of that folder.</p>
+
+<h2 id="options">Options</h2>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>Type of content</td>
+<td><code>directory</code>,<code>document</code>,<code>heading</code>,<code>jekyll-pages</code>,<code>jekyll-posts</code></td>
+<td><code>directory</code></td>
+</tr>
+
+<tr>
+<td><code>label</code></td>
+<td>Text to display in Yakkl menu</td>
+<td>String</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<td><code>path</code></td>
+<td>Path to folder from repository root (only applies to <code>directory</code> type)</td>
+<td>String</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<td><code>match</code></td>
+<td>Glob of files to match inside of path (only applies to <code>directory</code> type)</td>
+<td>String (Fileglob)</td>
+<td><code>**/*</code></td>
+</tr>
+
+<tr>
+<td><code>exclude</code></td>
+<td>Glob pattern of files to exclude (only applies to <code>directory</code> type)</td>
+<td>String (Fileglob)</td>
+<td>None</td>
+</tr>
+
+<tr>
+<td><code>create</code></td>
+<td>Restrictions on creating new content items</td>
+<td><code>all</code>, <code>documents</code>, <code>none</code></td>
+<td><code>all</code></td>
+</tr>
+
+<tr>
+<td><code>templates</code></td>
+<td>Control Which Front Matter Templates can be used in section</td>
+<td>Array</td>
+<td>All templates</td>
+</tr>
+
+<tr>
+<td><code>new_doc_ext</code></td>
+<td>File extension for new documents created in this section</td>
+<td>String</td>
+<td>Value of <strong>New File Format</strong> in Yakkl Settings</td>
+</tr>
+
+<tr>
+<td><code>read_only</code></td>
+<td>Prevent content from being edited (only applies to <code>document</code> type)</td>
+<td>Boolean</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+
+
+<h3 id="sidebar-order"><em>Sidebar Order</em></h3>
+
+<p>Sections will appear in the sidebar in the same order they are defined.</p>
+
+<h3 id="type">Type</h3>
+
+<p>The <code>type</code> parameter is used by Yakkl to determine how to handle the files defined in the content section.</p>
+
+<dl class="attribute-list">
+<dt>
+    <p>Directory
+<br /><code>directory</code></p>
+
+</dt>
+<dd>
+    <p><code>directory</code> is the default type for sidebar sections. A <code>directory</code> section will search for content files according to the <code>path</code> and <code>match</code> configuration.</p>
+
+</dd>
+
+<dt>
+    <p>Document
+<br /><code>document</code></p>
+
+</dt>
+<dd>
+    <p>A <code>document</code> section can be used to allow a single document to be edited. Use the <code>path</code> option to specify the path to the file you want to be edited. Use the <a href="#read-only">read_only</a> option to prevent this document from being edited in Yakkl.</p>
+
+</dd>
+
+<dt>
+    <p>Heading
+<br /><code>heading</code></p>
+
+</dt>
+<dd>
+    <p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/08/sidebar-headings.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/08/sidebar-headings.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/08/sidebar-headings.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/08/sidebar-headings.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/08/sidebar-headings.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/08/sidebar-headings.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/08/sidebar-headings.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/08/sidebar-headings.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/08/sidebar-headings.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/08/sidebar-headings.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/08/sidebar-headings.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/08/sidebar-headings.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/08/sidebar-headings.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/08/sidebar-headings.png" class="" />
+The <code>heading</code> section type can be used to separate your sidebar sections into logical groups. A section of type <code>heading</code> only needs to specify a label for the heading.</p>
+
+</dd>
+
+<dt>
+    <p>Jekyll Pages &amp; Jekyll Posts
+<br /><code>jekyll-pages</code>
+<br /><code>jekyll-posts</code></p>
+
+</dt>
+<dd>
+    <p>The other two options are <code>jekyll-pages</code> and <code>jekyll-posts</code>, which will follow special rules for Jekyll&rsquo;s <a href="https://jekyllrb.com/docs/pages/">page</a> and <a href="https://jekyllrb.com/docs/posts/">post</a> content types.</p>
+
+</dd>
+</dl>
+
+<div class="shortcode-warning"><p>The <code>jekyll-pages</code> and <code>jekyll-posts</code> section types should only be used with Jekyll sites. Additionally, you can only have one <code>jekyll-pages</code> section and one <code>jekyll-posts</code> section per site.</p>
+
+</div>
+
+<h3 id="path">Path</h3>
+
+<p>The <code>path</code> parameter should be a path to the directory that holds this section&rsquo;s content files, relative to the root of your repository. This setting only applies to sections of type <code>directory</code>.</p>
+
+<div class="shortcode-tip"><p>Because the path is relative to your project root, users configuring content sections for their Hugo site will want to prefix all of their paths with <code>content/</code>.</p>
+
+</div>
+
+<h3 id="match">Match</h3>
+
+<div class="shortcode-tip"><p>Read our short guide on <a href="/docs/guides/misc/working-with-globs/">working with globs</a> for advice on how to configure the <code>match</code> and <code>exclude</code> parameters for sidebars.</p>
+
+</div>
+
+<p>The <code>match</code> parameter should be a <a href="/docs/guides/misc/working-with-globs/">glob pattern</a> that matches the files you want to be able to edit for this content section. Files that don&rsquo;t match this pattern will be ignored. This setting only applies to sections of type <code>directory</code>.</p>
+
+<p>The default <code>match</code> value is <code>**/*</code> which will match all files, including any files in subdirectories.</p>
+
+<div class="shortcode-warning"><p>You can use the <code>match</code> parameter to separate a single directory into multiple content sections, but take care to ensure that no files overlap between sections. This may cause unexpected behavior.</p>
+
+</div>
+
+<h3 id="exclude">Exclude</h3>
+
+<p>The <code>exclude</code> parameter allows you to exclude files and paths from your <code>directory</code> sections. <code>exclude</code> accepts a <a href="/docs/guides/misc/working-with-globs/">glob pattern</a> just like <code>match</code>.</p>
+
+<div class="shortcode-tip"><h4 d="excluding-files-from-jekyll-pages">Excluding files from Jekyll pages</h4><p>For a <code>jekyll-pages</code> section, Yakkl will use the value of the <code>exclude</code> parameter in your <a href="https://jekyllrb.com/docs/configuration/">Jekyll configuration</a>.</p>
+
+</div>
+
+<h3 id="create">Create</h3>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/10/create-directory-ui.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/10/create-directory-ui.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/10/create-directory-ui.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/10/create-directory-ui.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/10/create-directory-ui.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/10/create-directory-ui.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/10/create-directory-ui.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/10/create-directory-ui.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/10/create-directory-ui.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/10/create-directory-ui.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/10/create-directory-ui.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/10/create-directory-ui.png 1920w" sizes="auto" alt="By default, users can create both files and directories" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/10/create-directory-ui.png" class="" /></p>
+
+<p>The <code>create</code> parameter allows you to specify whether new files can be created for the section.</p>
+
+<ul>
+<li><code>all</code>: Users can create new files and folders</li>
+<li><code>documents</code>: Users can create new files, but not new folders</li>
+<li><code>none</code>: Users can edit existing files, but cannot create new ones</li>
+</ul>
+
+<h3 id="templates">Templates</h3>
+
+<p>Pass in an array of Front Matter Template filenames (without their extension) to limit the available Front Matter Templates when creating a new content item in this section. The templates will be shown in the dropdown in the same order they are listed here, with the first template being the default selection. If only one template is defined, the template selection dropdown will not appear when adding new content.</p>
+
+<h3 id="new-document-file-extension">New Document File Extension</h3>
+
+<p>The <code>new_doc_ext</code> parameter lets you specify the extension to be used for new files created in this content section. You can specify a file extension with or without the extension delimiter (the <code>.</code>). The default file extension is whatever you have set as the <strong>New Page Extension</strong> in your site settings.</p>
+
+<h3 id="read-only">Read Only</h3>
+
+<p>The <code>read_only</code> setting only applies to <code>document</code> sections. This will prevent the document from being editable in Yakkl, only showing the contents of the document on the page. When used with a markdown document, the markdown will be converted to HTML and rendered appropriately. Read-only document sections are a great way to include documentation for your editors that can be accessed directly from the Yakkl sidebar.</p>
+
+<h2 id="examples">Examples</h2>
+
+<p>Jekyll site with pages, posts, and a custom collection:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sections:
+
+- type: document
+  label: Help
+  path: README.md
+  read_only: true
+
+- type: heading
+  label: Content
+
+- type: jekyll-pages
+  label: Pages
+
+- type: jekyll-posts
+  label: Posts
+
+- type: directory
+  path: _events
+  label: Events
+  templates:
+  - event</pre></div>
+<p>Multilingual Hugo Blog:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sections:
+
+- type: heading
+  label: English
+
+- type: directory
+  path: &#34;content/posts&#34;
+  match: &#34;**/*.en.md&#34;
+  label: Posts
+  new_doc_ext: &#34;.en.md&#34;
+
+- type: heading
+  label: Français
+
+- type: directory
+  path: &#34;content/posts&#34;
+  match: &#34;**/*.fr.md&#34;
+  label: Posts
+  new_doc_ext: &#34;.fr.md&#34;</pre></div>
+<h2 id="configuring-data-file-sections">Configuring Data File Sections</h2>
+
+<p>When using the <a href="/docs/editing/data-files/#datafile-sections">Datafile Sections</a> behavior, Yakkl will include data files when collecting content in a sidebar section. The <code>directory</code> type can be used with the <code>match</code> and <code>new_doc_ext</code> options to create a section that allows to creation and management of data files similar to the behavior of markdown content.</p>
+
+<h3 id="datafile-section-example">Datafile Section Example</h3>
+
+<p>Access an entire directory of data files:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sections:
+- type: directory
+  label: Data
+  path: data
+  match: &#34;*.toml&#34;
+  new_doc_ext: &#34;.toml&#34;
+  create: all</pre></div>
+<p>Access a specific data file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sections:
+- type: document
+  label: Authors
+  path: _data/authors.yml</pre></div>
+
+        <nav class="pagination"><a href="/docs/settings/fields/" rel="prev"><span class="prev-doc">Fields</span></a><a href="/docs/settings/config-files/" rel="next"><span class="next-doc">Config Files</span></a></nav><hr />
+        <div class="doc--info">
+          <span class="doc--meta-label">Last updated on</span>
+          <span class="doc--date">October 24, 2018</span>
+        </div>
+        <div class="post--feedback">
+          <p><small>Caught a mistake or want to contribute to the docs? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/docs/settings/content-sections.md" target="_blank">Github</a>!</small></p>
+        </div></div>
+    </section>
+  </main><footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

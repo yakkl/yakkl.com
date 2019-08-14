@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>uBuild: A New Jekyll Theme Using Blocks | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content="In April we announced a feature that we believed was a game-changer for static site content managers. Blocks was here to introduce a way for you to put together sites using pre-composed site snippets inside Yakkl.
+
+While we did our best to show you how to set them up and give you an idea of how powerful they could be, we noticed that getting to know Blocks and figuring out how to set them up from scratch wasn&#39;t as self-explanatory as we had hoped. We needed something that would guide people to success. /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="uBuild: A New Jekyll Theme Using Blocks" />
+<meta property="og:description" content="In April we announced a feature that we believed was a game-changer for static site content managers. Blocks was here to introduce a way for you to put together sites using pre-composed site snippets inside Yakkl.
+
+While we did our best to show you how to set them up and give you an idea of how powerful they could be, we noticed that getting to know Blocks and figuring out how to set them up from scratch wasn&#39;t as self-explanatory as we had hoped. We needed something that would guide people to success." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/ubuild-a-new-theme-for-static-sites-using-blocks/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/06/theme-2" /><meta property="og:image:alt" content="In April we announced a feature that we believed was a game-changer for static site content managers. Blocks was here to introduce a way for you to put together sites using pre-composed site snippets inside Yakkl.
+
+While we did our best to show you how to set them up and give you an idea of how powerful they could be, we noticed that getting to know Blocks and figuring out how to set them up from scratch wasn&#39;t as self-explanatory as we had hoped. We needed something that would guide people to success." /><meta property="article:published_time" content="2018-06-21T04:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2018-06-22T14:00:06&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta itemprop="name" content="uBuild: A New Jekyll Theme Using Blocks">
+<meta itemprop="description" content="In April we announced a feature that we believed was a game-changer for static site content managers. Blocks was here to introduce a way for you to put together sites using pre-composed site snippets inside Yakkl.
+
+While we did our best to show you how to set them up and give you an idea of how powerful they could be, we noticed that getting to know Blocks and figuring out how to set them up from scratch wasn&#39;t as self-explanatory as we had hoped. We needed something that would guide people to success."><meta itemprop="datePublished" content="2018-06-21T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-06-22T14:00:06&#43;00:00" /><meta itemprop="wordCount" content="1364"><meta itemprop="image" content="https://yakkl.com/uploads/2018/06/theme-2">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/06/theme-2"/><meta name="twitter:title" content="uBuild: A New Jekyll Theme Using Blocks"/>
+<meta name="twitter:description" content="In April we announced a feature that we believed was a game-changer for static site content managers. Blocks was here to introduce a way for you to put together sites using pre-composed site snippets inside Yakkl.
+
+While we did our best to show you how to set them up and give you an idea of how powerful they could be, we noticed that getting to know Blocks and figuring out how to set them up from scratch wasn&#39;t as self-explanatory as we had hoped. We needed something that would guide people to success."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/06/theme-2" alt="uBuild: A New Jekyll Theme Using Blocks" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/06/theme-2" class="" />
+              
+        </div><div class="container">
+      <h1 class="post--title">uBuild: A New Jekyll Theme Using Blocks</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">June 22, 2018</span><span>in 
+            <a href="/categories/jekyll" class="post--category" data-category="jekyll">
+              Jekyll
+            </a>,
+            <a href="/categories/hugo" class="post--category" data-category="hugo">
+              Hugo
+            </a>,
+            <a href="/categories/static-sites" class="post--category" data-category="static sites">
+              Static sites
+            </a>,
+            <a href="/categories/cms" class="post--category" data-category="cms">
+              Cms
+            </a></span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<p>Back in April <a href="https://yakkl.com/blog/blocks-give-your-editors-the-power-to-build-pages/">we announced a feature</a> that we believed was a game-changer for static site content managers. <a href="https://yakkl.com/blog/sawmill-layout-composer-for-hugo-and-yakkl/#/">Blocks</a> was here to introduce a way for you to put together sites using pre-composed site snippets inside Yakkl.</p>
+
+<p>While we did our best to show you how to set them up and give you an idea of how powerful they could be, we noticed that getting to know Blocks and figuring out how to set them up from scratch wasn&rsquo;t as self-explanatory as we had hoped. We needed something that would guide people to success.</p>
+
+<p>Enter our brand-new theme for Jekyll: <strong>uBuild</strong>. This fully-responsive theme comes with 16 design blocks to put together your favorite site. Our Norwegian designer <a href="https://twitter.com/nichlaswa">@nichlaswa</a> made sure it looked stunning but see for yourself</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/all-blocks.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/06/all-blocks.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/06/all-blocks.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/06/all-blocks.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/06/all-blocks.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/06/all-blocks.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/06/all-blocks.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/06/all-blocks.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/06/all-blocks.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/06/all-blocks.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/06/all-blocks.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/06/all-blocks.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/all-blocks.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/all-blocks.png" class="" /></p>
+
+<p><a href="https://yakkl.github.io/ubuild-jekyll/">Take a look at our live demo</a> to get a feel for what your pages will look like!</p>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<ol>
+<li><a href="https://github.com/yakkl/ubuild-jekyll">Fork the repo</a> and import the site into Yakkl (or click on the Import Button below).</li>
+<li>Click on &lsquo;Add New&rsquo; in Yakkl and select the Page-Builder template.</li>
+<li>Add and customize the available Blocks and preview them as you go along.</li>
+<li>Read the rest of this article and create your own Blocks!</li>
+</ol>
+
+<h2 id="even-quicker-start">Even Quicker Start</h2>
+
+<p>You can use the button below to automatically copy the <code>ubuild-jekyll</code> repo to your Git provider of choice, and immediately import the site to your Yakkl dashboard.</p>
+
+<div id="import-ubuild-theme-button" data-proofer-ignore>
+<div class="create-site-block">
+    <h2>Make it Your Own</h2>
+    <a target="_blank" href="https://yakkl.com/quick-startrepo=yakkl/ubuild-jekyll&amp;engine=jekyll" class="create-site-button">Import Jekyll uBuild Now</a>
+</div>
+
+
+</div>
+
+<h2 id="the-theme">The Theme</h2>
+
+<p>We built this theme to work out-of-the-box with or without Yakkl. All content is controlled through Front Matter: as we mentioned in our previous article about Blocks, <a href="https://yakkl.com/blog/sawmill-layout-composer-for-hugo-and-yakkl/#3-making-front-matter-modular">building the entire page from front matter</a> allows us to take a modular approach to our theme. Each component is completely self-contained and configured via Blocks.</p>
+
+<p>The theme consists of seven sections:</p>
+
+<ul>
+<li>Navigation Bar</li>
+<li>Hero Section</li>
+<li>Content Feature</li>
+<li>1-2-3 columns</li>
+<li>Details Section</li>
+<li>Call-To-Action</li>
+<li>Footer</li>
+</ul>
+
+<p>Each section has 1-3 alternatives you can choose from and can easily be added and rearranged. Once you understand how Blocks work you can create new Blocks using simple HTML and CSS.</p>
+
+<h2 id="how-does-it-work">How does it work?</h2>
+
+<p>This theme is created to give you a starting point for adding page builder functionality to your own site. We hope it&rsquo;ll help you whether you use it out-of-the-box or as a starting point to learn how to implement your own Blocks.</p>
+
+<p>A regular Block is simply an HTML template inside the <code>_includes</code> directory. For clarity, we prepend all our Block filenames with <code>block-</code>. Hence the filename for our <code>text-1</code> Block is <code>block-text-1.html</code>. Let&rsquo;s have a look at the <code>text-1</code> Block!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;section class=&#34;block block-text-1&#34;&gt;
+  &lt;div class=&#34;container&#34;&gt;
+    &lt;div class=&#34;columns&#34;&gt;
+      &lt;div class=&#34;column headline&#34;&gt;
+        &lt;h3&gt;{{ section.headline }}&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;column text&#34;&gt;
+        {{ section.content }}
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre></div>
+<p>There&rsquo;s nothing irregular about the HTML snippet. A Block is just an <code>include</code> template.</p>
+
+<div class="shortcode-tip"><p>We iterate over all the defined blocks in <a href="https://github.com/yakkl/ubuild-jekyll/blob/f5f19ca6faf3a492c4b12e3a30de435f32299f65/_layouts/blocks.html"><code>_layouts/blocks.html</code></a> and scope all of the block values inside of a variable called <code>section</code>. Within our block include, we will call any block-specific values from the <code>section</code> variable.</p>
+
+</div>
+
+<p>Let&rsquo;s include the above Block in our Front Matter!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">---
+title: Title
+layout: blocks
+date: 2018-06-21 00:00:00 +0000
+page_sections:
+- template: detail-content
+  block: text-1
+  headline: Headline
+  content: &#34;&lt;p&gt;This is some content!&lt;/p&gt;&#34;
+---</pre></div>
+<p>Blocks work through the power of Front Matter. It is the Front Matter where we set all the necessary values to set up our Blocks. We can see in the Front Matter above that we point to a <code>layout</code> called <code>blocks</code>. We will have to create that layout in the next step; it is where we tell Jekyll how to generally include our Blocks. The Front Matter for this page also has an array called <code>page_sections</code>. This is where we add our specific Block details.</p>
+
+<p>The <code>template</code> variable is automatically added by Yakkl when you&rsquo;re using Blocks. This variable contains the name of the Front Matter Template used to construct the block. We are also introducing a variable called <code>block</code>, which we add to our Front Matter Templates as a hidden field. We will use this value to identify which template to include.</p>
+
+<div class="shortcode-tip"><p>Using the additional <code>block</code> variable helps to give us a <strong>loose coupling</strong> between our Front Matter Templates and the actual layout code. If we make changes to the names of our Front Matter Templates, we don&rsquo;t have to go in and edit the filenames of all of our includes.</p>
+
+</div>
+
+<p>In the next step we create a file called <code>blocks</code> inside our <code>_layouts</code> directory, which is going to loop over our Front Matter array, <code>page_sections</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">{% include head.html %}
+{% for section in page.page_sections %}
+{% include block-{{ section.block }}.html %}
+{% endfor %}
+{% include footer.html %}</pre></div>
+<p>In the code above two things happen. First, we are looping through the Front Matter array called <code>page_sections</code>, this was defined on the <code>page</code> level, which is why we need to add this to our loop definition. For each item in our array we fetch the <code>block</code> value and prepend it with our standard identifier for Blocks <code>block-</code> and end with the <code>.html</code> ending.</p>
+
+<p>That&rsquo;s it for our code! Now any Block can be added simply by using Front Matter.</p>
+
+<h2 id="blocks-yakkl">Blocks + Yakkl</h2>
+
+<p>As we figured out in the previous section, defining and adding Front Matter is all that is necessary to add and customize Blocks. Since Yakkl offers a UI to manage Front Matter, we can use the uBuild theme and any Blocks implementation without having to look at the code. Yakkl uses <a href="https://yakkl.com/docs/settings/front-matter-templates/">Front Matter Templates</a>, a powerful tool that works like a blueprint for Front Matter of all the different types of content you have across your site.</p>
+
+<div class="shortcode-tip"><p>Since uBuild is already set up for Yakkl, all you need to do to get started is to <a href="https://yakkl.com/quick-start?repo=yakkl/ubuild-jekyll&engine=jekyll" data-proofer-ignore>import the theme into your Yakkl dashboard.</a></p>
+
+</div>
+
+<p>Once the layout and styling for a Block is created, it can be added and customized in Yakkl. You simply need to create a Front Matter Template for each Block and set the <code>is Partial</code> toggle to true.</p>
+
+<p>Let&rsquo;s have another look at our <code>text-1</code> Block example!</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/text-1-block-settings.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/06/text-1-block-settings.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/06/text-1-block-settings.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/06/text-1-block-settings.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/06/text-1-block-settings.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/06/text-1-block-settings.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/06/text-1-block-settings.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/06/text-1-block-settings.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/06/text-1-block-settings.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/06/text-1-block-settings.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/06/text-1-block-settings.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/06/text-1-block-settings.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/text-1-block-settings.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/text-1-block-settings.png" class="" /></p>
+
+<p>For this Block we only need to add two Text fields (one for <code>block</code> and one for <code>title</code>) and one Textarea field (for <code>content</code>). And don&rsquo;t forget to toggle <code>is Partial</code>, so that you can add it to another Front Matter Template.</p>
+
+<div class="shortcode-tip"><p>Front Matter Templates can also be set in <code>.yml</code> files inside the <code>.yakkl.com</code> directory.</p>
+
+</div>
+
+<p>In our last step we need to make sure that there is one Front Matter Template that knows about all the different Partials. For this purpose Yakkl offers the Field called Blocks.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/page-builder.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/06/page-builder.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/06/page-builder.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/06/page-builder.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/06/page-builder.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/06/page-builder.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/06/page-builder.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/06/page-builder.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/06/page-builder.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/06/page-builder.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/06/page-builder.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/06/page-builder.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/page-builder.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/page-builder.png" class="" /></p>
+
+<p>Create a new Front Matter Template, let&rsquo;s call it Page-Builder and make sure all Partial Front Matter Templates are added under <code>Templates</code>. This Front Matter Template is NOT a partial, make sure that it&rsquo;s turned off.</p>
+
+<p>In this last step we are going to create a new page with Blocks. Simply navigate to <code>Pages</code> in the content section and click on <code>add new</code> in the upper-left corner. In the new modal you choose a title for the page and select the Page-Builder template we just made. Click on Create to proceed.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/page-section.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/06/page-section.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/06/page-section.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/06/page-section.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/06/page-section.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/06/page-section.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/06/page-section.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/06/page-section.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/06/page-section.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/06/page-section.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/06/page-section.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/06/page-section.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/page-section.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/06/page-section.png" class="" /></p>
+
+<p>Now all that&rsquo;s left to do is to choose the Blocks you&rsquo;d like to add and select them using the Page Section drop down. Click on <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd" stroke="currentcolor" stroke-width="1.2"><path d="M12 18c6 0 10-6 10-6s-4-6-10-6-10 6-10 6 4 6 10 6z"></path><circle cx="12" cy="12" r="2"></circle></g></svg> and preview your site.</p>
+
+<h2 id="moving-forward-with-blocks">Moving Forward With Blocks</h2>
+
+<p>We think an open-source theme is a great start but we&rsquo;d like to know your thoughts to make it even better. As we add Blocks to this theme and look for ways to improve the Blocks feature we&rsquo;d love to have your <a href="https://github.com/yakkl/ubuild-jekyll/issues">feedback, ideas and contributions</a>.</p>
+
+<p>We believe awesome stuff can be built with Blocks, and plan to explore this more in the future. In the meantime, we&rsquo;d love for you to share with the community what you&rsquo;ve built using Yakkl Blocks. <a href="https://join.slack.com/t/yakkl/shared_invite/enQtNzEzNzYwNzg0NjQyLWRiNjM5Y2NiMzcxOTgxNzg4OTA3ZjRiZDFlMmY5ZmRjZGUyMGM3ZDc0ZTg5NWMwMmIyNjIzMGE4OTIyZDY5NDM">Join our community Slack</a> or tag us on Twitter (<a href="https://twitter.com/yakkl">@yakklofficial</a>) to let us know!</p>
+
+<div style="margin-top: 2em; padding: 20px 40px;background: #f7f7f7;"><h2>Join us every Friday 📅</h2><p><a href="/categories/frontend-friday/">Frontend Friday</a> is a weekly series where we write in-depth posts about modern web development.</p><p><strong>Next week:</strong> We'll show you <a href="https://yakkl.com/blog/3-tips-for-mastering-blocks/">some tips for using blocks.</a></p><p><strong>Last week:</strong> We looked at ways to <a href="https://yakkl.com/blog/5-ways-to-handle-forms-on-your-static-site/">handle forms on your static site.</a></p></div>
+
+<h2 id="have-something-to-add">Have something to add?</h2>
+
+<p><a style="background: #F60; display: inline-block; border-radius: 5px; color: white; padding: 2px 9px; font-size: 14px;" href="https://news.ycombinator.com/item?id=17374309">Discuss on Hacker News</a></p>
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "uBuild: A New Jekyll Theme Using Blocks";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/ubuild-a-new-theme-for-static-sites-using-blocks\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/ubuild-a-new-theme-for-static-sites-using-blocks.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

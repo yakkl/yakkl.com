@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Yakkl.com</title>
+    <link>https://yakkl.com/tags/hugo/</link>
+    <description>Recent content in Hugo on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Fri, 18 May 2018 14:36:07 +0000</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Snipcart Brings E‑Commerce to Your Static Site </title>
+      <link>https://yakkl.com/blog/snipcart-brings-ecommerce-static-site/</link>
+      <pubDate>Fri, 18 May 2018 14:36:07 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/snipcart-brings-ecommerce-static-site/</guid>
+      <description>Picture this: it&amp;rsquo;s 2018, and your client needs an online store. You know that static sites are great: they&amp;rsquo;re easy to scale, have a minimal attack surface, and are very fast. However, since a static site can&amp;rsquo;t run backend code, it won&amp;rsquo;t be able to do some things necessary for e-commerce, such as process customer orders. Can you really use a static site to operate an e-commerce storefront?
+Of course you can!</description>
+    </item>
+    
+    <item>
+      <title>Instant Production-Ready Scaffolding With Create-Static-Site</title>
+      <link>https://yakkl.com/blog/instant-production-ready-scaffolding-with-create-static-site/</link>
+      <pubDate>Fri, 27 Apr 2018 09:38:55 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/instant-production-ready-scaffolding-with-create-static-site/</guid>
+      <description>Create React App is a utility provided by the Facebook team in support of the React JavaScript framework. The goal of Create React App is to allow developers to quickly bootstrap a React project without having to spend time sorting out the build pipeline. With over 47,000 stars on Github (over half as many as the actual React library,) Create React App&amp;rsquo;s popularity speaks for itself.
+The success and utility of Create React App has inspired the Yakkl.</description>
+    </item>
+    
+  </channel>
+</rss>

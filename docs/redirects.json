@@ -1,0 +1,585 @@
+[{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/welcome/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/plans/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/pricing/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/faq/what-versions-of-hugo-do-you-support/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/faqs/hugo-version/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/image-handling-with-yakkl-s3-and-imgix/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/announcing-image-handling-with-s3/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/faqs/glossary"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/faqs/glossary/content-files/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/deployment-and-management/deploying-with-github-pages/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/hosting/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/faq/how-do-i-download-a-backup-of-my-site/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/faqs/backups/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/blocks-editors-build-pages/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/blocks-give-your-editors-the-power-to-build-pages/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/a-new-and-improved-media-library"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/a-new-and-improved-media-library/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/contact/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/support/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/faq/use-a-cname-for-you-hugo-and-github-pages-site/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/troubleshooting/cname/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/troubleshooting/assets-not-loading"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/troubleshooting/css-js-and-media-not-working/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/field-group-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/field-group/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/image-file-upload-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/file-upload/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/gallery-multi-file-upload-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/multi-file-upload/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/repeatable-field-group-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/repeatable-field-group/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/select-field/data/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/select/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/sortable-list-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/sortable-list/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/tags-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/tags/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/text-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/text/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/textarea-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/textarea/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/toggle-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/toggle/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/discontinuing-zip-sites"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/discontinuing-zip-sites/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/introducing-yakkl-config-files"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/introducing-forestry-config-files/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/wysiwyg-formatting-in-front-matter"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/wysiwyg-formatting-in-front-matter/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/big-improvements-to-front-matter-templates"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/big-improvements-to-front-matter-templates/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/a-hugo-update-everyone-should-be-talking-about"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/a-hugo-update-everyone-should-be-talking-about/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/improved-collaboration-and-more"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/improved-collaboration-and-more/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/layout-improvements"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/layout-improvements/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/bigger-better-editor"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/bigger-better-editor/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/introducing-media-management"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/introducing-media-management/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/march-27th-service-outage"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/march-27th-service-outage/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/front-matter-templates"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/front-matter-templates/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/the-new-yakkl"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/the-new-forestry-io/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/yakkl-gitlab"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/forestry-gitlab/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/choose-static"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/choose-static/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/yakkl-techstars-2016"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/forestryio-techstars-2016/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/faq/what-versions-of-jekyll-and-plugins-does-yakkl-support/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/faqs/jekyll-version/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/faq/what-changes-will-yakkl-make-to-my-repository/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/faqs/forestry-changed-code/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/managing-content/managing-content/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/editing/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-hugo/intro/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-hugo/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-jekyll/intro/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-jekyll/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/managing-content/editing-content/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/editing/markdown-editor/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/setting-up-a-site/front-matter-templates/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/front-matter-templates/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-hugo/project-structure/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-hugo/project-structure/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-jekyll/project-structure/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-jekyll/project-structure/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-hugo/templating/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-hugo/templating/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-jekyll/templating/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-jekyll/templating/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/quickstart/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/quickstart/tour/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/site-configuration/front-matter-templates/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/editing/front-matter/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-hugo/static-files/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-hugo/static-files/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-jekyll/static-files"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-jekyll/static-files/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/managing-content/data-files/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/editing/data-files/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-hugo/asset-pipeline/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-hugo/asset-pipeline/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-jekyll/asset-pipeline/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-jekyll/asset-pipeline/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/faq/where-do-uploaded-images-get-saved/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/editing/media-library/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/site-configuration/web-hooks/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/hosting/webhooks/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-hugo/environments/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-hugo/environments/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-jekyll/environments/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-jekyll/environments/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/settings/collaborators/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/collaborators/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/managing-content/menus/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/editing/menus/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-hugo/local-development/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-hugo/local-development/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-jekyll/local-development/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-jekyll/local-development/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/site-configuration/project-paths/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/editing/remote-admin/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-hugo/short-codes/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-hugo/short-codes/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-jekyll/plugins"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-jekyll/plugins/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-hugo/misc/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-hugo/misc/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/developing-with-jekyll/misc/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/guides/developing-with-jekyll/misc/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/join-our-slack-community"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/join-our-slack-community/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/why-we-built-yakkl"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/why-we-built-yakkl/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/faq/github-organization-access/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/git-sync/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/faq/github-organization-access/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/git-sync/github/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/date-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/datetime/"}
+}]

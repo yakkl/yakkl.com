@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Using JSON Configuration With VuePress | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Using JSON Configuration With VuePress" />
+<meta property="og:description" content="Here at Yakkl, we think VuePress is pretty cool. When it came time to set our sights on supporting SSGs beyond Hugo and Jekyll, we selected VuePress as our guinea pig. Our adoption of VuePress has helped to highlight the differences among the variety of Static Site Generators, and move us in a direction that will enable users of SSGs beyond Hugo and Jekyll to take advantage of Yakkl’s content manager." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/using-json-configuration-with-vuepress/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/09/mixing-board.jpg" /><meta property="og:image:alt" content="Here at Yakkl, we think VuePress is pretty cool. When it came time to set our sights on supporting SSGs beyond Hugo and Jekyll, we selected VuePress as our guinea pig. Our adoption of VuePress has helped to highlight the differences among the variety of Static Site Generators, and move us in a direction that will enable users of SSGs beyond Hugo and Jekyll to take advantage of Yakkl’s content manager." /><meta property="article:published_time" content="2018-09-21T05:43:00-11:00"/>
+  <meta property="article:modified_time" content="2018-09-21T05:43:34-11:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta itemprop="name" content="Using JSON Configuration With VuePress">
+<meta itemprop="description" content="Here at Yakkl, we think VuePress is pretty cool. When it came time to set our sights on supporting SSGs beyond Hugo and Jekyll, we selected VuePress as our guinea pig. Our adoption of VuePress has helped to highlight the differences among the variety of Static Site Generators, and move us in a direction that will enable users of SSGs beyond Hugo and Jekyll to take advantage of Yakkl’s content manager."><meta itemprop="datePublished" content="2018-09-21T05:43:00-11:00" /><meta itemprop="dateModified" content="2018-09-21T05:43:34-11:00" /><meta itemprop="wordCount" content="1065"><meta itemprop="image" content="https://yakkl.com/uploads/2018/09/mixing-board.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/09/mixing-board.jpg"/><meta name="twitter:title" content="Using JSON Configuration With VuePress"/>
+<meta name="twitter:description" content="Here at Yakkl, we think VuePress is pretty cool. When it came time to set our sights on supporting SSGs beyond Hugo and Jekyll, we selected VuePress as our guinea pig. Our adoption of VuePress has helped to highlight the differences among the variety of Static Site Generators, and move us in a direction that will enable users of SSGs beyond Hugo and Jekyll to take advantage of Yakkl’s content manager."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/09/mixing-board.jpg" alt="Using JSON Configuration With VuePress" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/09/mixing-board.jpg" class="" />
+              
+        </div><div class="container">
+      <h1 class="post--title">Using JSON Configuration With VuePress</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">September 21, 2018</span><span>in 
+            <a href="/categories/vuepress" class="post--category" data-category="vuepress">
+              Vuepress
+            </a>,
+            <a href="/categories/frontend-friday" class="post--category" data-category="frontend-friday">
+              Frontend friday
+            </a></span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<p>Here at Yakkl, <a href="https://yakkl.com/blog/vuepress-brings-your-documentation-to-life/">we think VuePress is pretty cool</a>. When it came time to set our sights on supporting SSGs beyond Hugo and Jekyll, <a href="https://yakkl.com/blog/vuepress-support-beta/">we selected VuePress as our guinea pig</a>. Our adoption of VuePress has helped to highlight the differences among the variety of Static Site Generators, and move us in a direction that will enable users of SSGs beyond Hugo and Jekyll to take advantage of Yakkl’s content manager.</p>
+
+<h2 id="vuepress-config-file">VuePress’ Config File</h2>
+
+<p>One way that VuePress differs from Hugo and Jekyll is its configuration file. VuePress sites are configured by exporting a configuration object from a <code>config.js</code> file. This is an <em>extremely</em> common pattern with JavaScript tools: other JavaScript SSGs such as Gatsby and Next.js, and build tools like Webpack all share this same approach to configuration.</p>
+
+<p>Hugo and Jekyll, on the other hand, store their configuration in a YAML, TOML, or JSON file. This is an important distinction, as those file formats are for representing data. A <code>.js</code> file, on the other hand, is a script that can be executed. This matters to us, because configuration values for Hugo and Jekyll can be edited in the Yakkl UI. Trying to extract configuration values from VuePress’ <code>config.js</code> file to make them editable in Yakkl would be a much harder task.</p>
+
+<h2 id="creating-a-json-config-file-for-vuepress">Creating a JSON Config File for VuePress</h2>
+
+<p>Using a JavaScript file for your configuration adds a lot of flexibility. You can insert dynamic values, load external modules, and pass in complex data types like functions and objects with methods. We can use this flexibility to our advantage in order to solve our configuration problem. All we have to do is extract the values that we want to edit in Yakkl into a separate JSON file, and load that JSON file in <code>config.js</code>.</p>
+
+<p>To demonstrate this, I will show you how I updated our <a href="https://github.com/yakkl/portfolio-vuepress">VuePress demo site</a> to make some of its configuration editable in Yakkl.</p>
+
+<h3 id="decide-what-is-configurable">Decide What is Configurable</h3>
+
+<p>It may not make sense to expose all of the data in your <code>config.js</code> file to your Yakkl collaborators. Extracting configuration into a separate file lets us decide which configuration elements we want.</p>
+
+<p>Let’s start from our initial configuration file at <code>portfolio/.vuepress/config.js</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">module.exports = {
+  title: &#34;Acme&#34;,
+  description: &#34;creative agency&#34;,
+  base: &#34;/&#34;,
+  themeConfig: {
+    logo: &#34;/upload/logo.svg&#34;,
+    footer: &#34;Ⓒ Acme&#34;,
+    nav: [
+      { text: &#34;Works&#34;, link: &#34;/&#34;, position: &#34;left&#34;, external: false },
+      { text: &#34;Instagram&#34;, link: &#34;https://www.instagram.com/its.nwa/&#34;, position: &#34;left&#34;, external: true },
+      { text: &#34;Say hi!&#34;, link: &#34;mailto:sayhi@mydomain.com&#34;, position: &#34;right&#34;, external: true },
+      { text: &#39;Journal&#39;, link: &#39;/journal/&#39;, position: &#39;right&#39;, external: false },
+    ]
+  },
+  head: [
+    [&#39;link&#39;, { rel: &#34;icon&#34;, href: &#34;favicon-32x32.png&#34; }]
+  ],
+  markdown: {
+    anchor: {
+      permalink: false
+    }
+  }
+};</pre></div>
+<p>Looking at this, I’ve decided that our Yakkl-editable configuration file should be able to control the <strong>title</strong>, <strong>description</strong>, <strong>logo</strong>, <strong>footer</strong>, <strong>favicon</strong>, and <strong>navigation</strong>. Let’s take that data and put it in JSON in <code>portfolio/config.json</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">{
+    &#34;title&#34;: &#34;Acme&#34;,
+    &#34;description&#34;: &#34;Creative Agency&#34;,
+    &#34;logo&#34;: &#34;/upload/logo.svg&#34;,
+    &#34;footer&#34;: &#34;Ⓒ Acme&#34;,
+    &#34;favicon&#34;: &#34;favicon-32x32.png&#34;,
+    &#34;navigation&#34;: [
+      {
+        &#34;text&#34;: &#34;Works&#34;,
+        &#34;link&#34;: &#34;/&#34;,
+        &#34;position&#34;: &#34;left&#34;,
+        &#34;external&#34;: false
+      },
+      {
+        &#34;text&#34;: &#34;Instagram&#34;,
+        &#34;link&#34;: &#34;https://www.instagram.com/its.nwa&#34;,
+        &#34;position&#34;: &#34;left&#34;,
+        &#34;external&#34;: true
+      },
+      {
+        &#34;text&#34;: &#34;Say hi!&#34;,
+        &#34;link&#34;: &#34;mailto:sayhi@mydomain.com&#34;,
+        &#34;position&#34;: &#34;right&#34;,
+        &#34;external&#34;: true
+      },
+      {
+        &#34;text&#34;: &#34;Journal&#34;,
+        &#34;link&#34;: &#34;/journal/&#34;,
+        &#34;position&#34;: &#34;right&#34;,
+        &#34;external&#34;: false
+      }
+    ]
+  }</pre></div>
+<h3 id="loading-json-in-the-config-file">Loading JSON in the Config File</h3>
+
+<p>Passing this JSON data through to our <code>config.js</code> is very easy! We start by adding the following line to the top of <code>portfolio/.vuepress/config.js</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">const config = require(&#39;../config.json&#39;);</pre></div>
+<p>Importing our JSON file with <code>require</code> will automatically parse the JSON and turn it into a usable JavaScript object. Note that we import it from one directory above the current one, because our <code>config.json</code> file is outside of the <code>.vuepress</code> directory that contains our <code>config.js</code> file.</p>
+
+<p>Now that our config object has been imported and stored in a variable named <code>config</code>, we access the data like we would any other object in JavaScript. Here’s the complete <code>config.js</code> file after our updates:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">const config = require(&#39;../config.json&#39;);
+module.exports = {
+  title: config.title,
+  description: config.description,
+  base: &#34;/&#34;,
+  themeConfig: {
+    logo: config.logo,
+    footer: config.footer,
+    nav: config.navigation,
+  },
+  head: [
+    [&#39;link&#39;, { rel: &#34;icon&#34;, href: config.favicon }]
+  ],
+  markdown: {
+    anchor: {
+      permalink: false
+    }
+  }
+};</pre></div>
+<h2 id="editing-your-config-file-in-yakkl">Editing Your Config File in Yakkl</h2>
+
+<p>Now that we have our site configuration extracted into a <code>config.json</code> file, we need to tell Yakkl that there’s a data file here to be configured.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/adding_config_section.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/09/adding_config_section.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/09/adding_config_section.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/09/adding_config_section.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/09/adding_config_section.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/09/adding_config_section.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/09/adding_config_section.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/09/adding_config_section.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/09/adding_config_section.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/09/adding_config_section.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/09/adding_config_section.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/09/adding_config_section.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/adding_config_section.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/adding_config_section.png" class="" /></p>
+
+<p>We can do this by creating a <strong>document section</strong> in our sidebar settings with a path of <code>portfolio/config.json</code>. Yakkl will know, based on the file extension, that this is a data file and not a markdown file and will present us with the data management interface. After saving our sidebar updates and re-importing the site, we should see the Configuration section show up in the sidebar.</p>
+
+<div class="shortcode-tip"><p>You can <a href="https://yakkl.com/docs/editing/data-files/#customizing-fields">apply Front Matter Templates to data files</a> and create Front Matter Templates from existing data files!</p>
+
+</div>
+
+<h2 id="bonus-adding-build-commands">Bonus: Adding Build Commands</h2>
+
+<p>Since we <a href="https://yakkl.com/blog/introducing-custom-build-commands/">just announced support for custom build commands</a>, I also decided to add them to our portfolio site.</p>
+
+<p>When adding build commands for a VuePress site, there are two things we need to make sure of:</p>
+
+<ol>
+<li><code>vuepress</code> is added as a dependency in our <code>package.json</code> file, and</li>
+<li>We use an NPM script to invoke <code>vuepress</code>.</li>
+</ol>
+
+<p>Our demo project already had this handled with a <code>site:build</code> command in its <code>package.json</code> file, so all we have to do is add the following to our configuration in <code>.yakkl/settings.yml</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">build:
+  preview_command: &#34;npm run site:build&#34;
+  publish_command: &#34;npm run site:build&#34;
+  output_directory: &#34;portfolio/.vuepress/dist&#34;</pre></div>
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/preview_button.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/09/preview_button.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/09/preview_button.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/09/preview_button.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/09/preview_button.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/09/preview_button.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/09/preview_button.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/09/preview_button.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/09/preview_button.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/09/preview_button.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/09/preview_button.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/09/preview_button.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/preview_button.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/09/preview_button.png" class="" /></p>
+
+<p>Once our build commands are in place, our VuePress site will display the preview icon when editing pages, and we also have access to deployment settings!</p>
+
+<h2 id="strength-in-numbers">Strength in Numbers</h2>
+
+<p>Pursuing support for other SSGs in Yakkl has led us to many improvements and increased the flexibility of our content management interface. Thanks to recent updates like the <a href="https://yakkl.com/docs/settings/content-sections/">configurable sidebar</a> and <a href="https://yakkl.com/docs/settings/build-commands/">custom build commands</a>, you can now use Yakkl with many workflows that weren’t possible just a few months ago. Looking to the future, we hope to make Yakkl even more configurable and support more SSGs, so that Yakkl can be a tool for all JAMStack devs to take advantage of.</p>
+
+<div style="margin-top: 2em; padding: 20px 40px;background: #f7f7f7;">
+    <h2>Join us every Friday 📅</h2>
+    <p><a href="/categories/frontend-friday/">Frontend Friday</a> is a weekly series where we write in-depth posts about modern web development.</p>
+    <p><strong>Next week:</strong> TBD </p>
+    <p><strong>Last week:</strong> We used AWS CloudFormation to <a href="https://yakkl.com/blog/adding-dns-and-edge-functions-to-our-cloudformation-stack/">set up a hosting stack for a static site</a>.</p>
+</div>
+
+<h2 id="have-something-to-add">Have something to add?</h2>
+
+<p><a style="background: #F60; display: inline-block; border-radius: 5px; color: white; padding: 2px 9px; font-size: 14px;" href="https://news.ycombinator.com/item?id=18041692">Discuss on Hacker News</a></p>
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "Using JSON Configuration With VuePress";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/using-json-configuration-with-vuepress\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/Using-JSON-Configuration-With-VuePress.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

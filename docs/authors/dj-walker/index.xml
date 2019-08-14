@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dj Walker on Yakkl.com</title>
+    <link>https://yakkl.com/authors/dj-walker/</link>
+    <description>Recent content in Dj Walker on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Mon, 29 Apr 2019 14:55:39 +0000</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/authors/dj-walker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Use Yakkl With Azure DevOps Repos</title>
+      <link>https://yakkl.com/blog/use-forestry-with-azure-devops-repos/</link>
+      <pubDate>Mon, 29 Apr 2019 14:55:39 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/use-forestry-with-azure-devops-repos/</guid>
+      <description>Azure DevOps is a suite of code collaboration and deployment tools provided by Microsoft. Azure DevOps includes cloud hosting for git repositories, similar to Github, GitLab, and Bitbucket.
+As of today, you can now import Azure DevOps repositories into Yakkl! Yakkl will sync the contents of your Azure DevOps repository by importing changes when they&amp;rsquo;re pushed to the repo, and committing content updates that you make in Yakkl.
+Importing Azure DevOps Repos to Yakkl Our OAuth-based Quick Setup is not currently available for Azure DevOps repositories, so you must use our manual setup option when connecting to Azure DevOps.</description>
+    </item>
+    
+    <item>
+      <title>Gulp and Webpack: Getting the Best of Both Worlds</title>
+      <link>https://yakkl.com/blog/gulp-and-webpack-best-of-both-worlds/</link>
+      <pubDate>Tue, 16 Apr 2019 09:00:00 -0300</pubDate>
+      
+      <guid>https://yakkl.com/blog/gulp-and-webpack-best-of-both-worlds/</guid>
+      <description>Once upon a time, I told you that Webpack was an excellent tool for managing JavaScript in your web projects. This is because Webpack allows you to write modular JavaScript for the browser, and handles the dependency resolution and file bundling. I contrasted Webpack with Gulp, a stream processor and taskrunner utility that, while it has its place, doesn’t do the sophisticated module bundling that Webpack does. This makes Gulp a less attractive option for packaging your JavaScript files.</description>
+    </item>
+    
+    <item>
+      <title>Full Speed Ahead in 2019</title>
+      <link>https://yakkl.com/blog/full-speed-ahead-in-2019/</link>
+      <pubDate>Mon, 08 Apr 2019 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/full-speed-ahead-in-2019/</guid>
+      <description>We have a big update to share with you today! Today’s release marks the culmination of a lot of feature work, with one major goal in mind:
+We wanna go fast.
+Today, we’re launching:
+ Instant Previews, which will enable your previews to build faster; Git LFS support for media which will speed up Git operations on image-heavy sites; and Gatsby Support, allowing you to use Yakkl with a “blazing fast” Gatsby frontend.</description>
+    </item>
+    
+    <item>
+      <title>Versioning Large Files with Git LFS</title>
+      <link>https://yakkl.com/blog/versioning-large-files-with-git-lfs/</link>
+      <pubDate>Mon, 08 Apr 2019 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/versioning-large-files-with-git-lfs/</guid>
+      <description>I&amp;rsquo;ve written before about the advantages of keeping content in version control. A quick recap of the benefits:
+ Content is portable - just git clone Full content history is available; can rollback changes and recover earlier revisions Content updates can take advantage of the same workflows popular with code: pull&amp;nbsp;request→review→merge  While the benefits are signficant, one of the major pain points of this solution arises when large non-text files are introduced to your content.</description>
+    </item>
+    
+    <item>
+      <title>Is it Time to Move on From WordPress?</title>
+      <link>https://yakkl.com/blog/is-it-time-to-move-on-from-wordpress/</link>
+      <pubDate>Mon, 26 Nov 2018 16:30:05 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/is-it-time-to-move-on-from-wordpress/</guid>
+      <description>WordPress 5.0 has been released, and with it comes their much-hyped new editing experience, Gutenberg. The inclusion of Gutenberg in this release has caused no shortage of acrimony in the WordPress community. The new editor is opt-out as opposed to opt-in (and opting out requires installing yet another plugin), and is such a significant departure from their original content editor that it is guaranteed to cause major issues with third-party plugins and themes (Gutenberg, for example, does not support WordPress’ meta box API, an essential component of customizing the current editing interface used by countless plugins.</description>
+    </item>
+    
+    <item>
+      <title>Data Files, Directories, and Duplicating Pages</title>
+      <link>https://yakkl.com/blog/data-files-directories-and-duplicating-pages/</link>
+      <pubDate>Tue, 23 Oct 2018 03:00:00 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/data-files-directories-and-duplicating-pages/</guid>
+      <description>The lumberjacks have been busy lately! Here&amp;rsquo;s what we&amp;rsquo;ve been up to:
+Agnostic Data File Handling We have removed support for our old way of handling data files. Previously, we used some heuristics to automatically discover data files in your Jekyll and Hugo projects. Data files must now be manually configured by creating sections for them.
+VuePress Now Out of Beta Abstracting data file discovery in our content manager has paved the way for more easily supporting other static site generators.</description>
+    </item>
+    
+    <item>
+      <title>An Introduction to Theming in VuePress</title>
+      <link>https://yakkl.com/blog/an-introduction-to-theming-in-vuepress/</link>
+      <pubDate>Fri, 12 Oct 2018 02:00:25 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/an-introduction-to-theming-in-vuepress/</guid>
+      <description>When I first looked at VuePress, I marveled at how quickly you could install it alongside your project&amp;rsquo;s existing markdown docs to create a polished documentation website. This is without a doubt one of VuePress’ biggest strengths, but documentation is not the only thing it can do. VuePress is a highly flexible static site generator, and provides the ability to completely customize the way your pages are built via its Layout component.</description>
+    </item>
+    
+    <item>
+      <title>Demystifying Hugo Conditionals</title>
+      <link>https://yakkl.com/blog/demystifying-hugo-conditionals/</link>
+      <pubDate>Fri, 28 Sep 2018 16:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/demystifying-hugo-conditionals/</guid>
+      <description>When we published our comparison of Jekyll and Hugo, we got a lot of flak from Hugo die-hards for suggesting that Jekyll had a more intuitive templating syntax. While the intuitiveness of a particular language is somewhat subjective, criticism of Hugo’s template syntax frequently comes up in discussion with other developers.
+Hugo is a great choice for a static site generator: it’s compiled into a static binary, so it’s easy to install on any system, and it’s fast.</description>
+    </item>
+    
+    <item>
+      <title>Using JSON Configuration With VuePress</title>
+      <link>https://yakkl.com/blog/using-json-configuration-with-vuepress/</link>
+      <pubDate>Fri, 21 Sep 2018 05:43:34 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/using-json-configuration-with-vuepress/</guid>
+      <description>Here at Yakkl, we think VuePress is pretty cool. When it came time to set our sights on supporting SSGs beyond Hugo and Jekyll, we selected VuePress as our guinea pig. Our adoption of VuePress has helped to highlight the differences among the variety of Static Site Generators, and move us in a direction that will enable users of SSGs beyond Hugo and Jekyll to take advantage of Yakkl’s content manager.</description>
+    </item>
+    
+    <item>
+      <title>Introducing Custom Build Commands</title>
+      <link>https://yakkl.com/blog/introducing-custom-build-commands/</link>
+      <pubDate>Fri, 21 Sep 2018 05:11:49 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/introducing-custom-build-commands/</guid>
+      <description>We&amp;rsquo;re excited to announce Custom Build Commands! You can now decide what build command should be run for your project.
+Until now Yakkl chose the build command that needed to be run for you, which worked fine for most cases. However, this meant that projects that needed a custom build process were unable to use Yakkl&amp;rsquo;s deployment tools and (in some cases) previews.
+Picking your own commands enables you to really choose your own workflow and give you the flexibility you need.</description>
+    </item>
+    
+    <item>
+      <title>Creating Lambda@Edge and Route 53 Resources with CloudFormation</title>
+      <link>https://yakkl.com/blog/adding-dns-and-edge-functions-to-our-cloudformation-stack/</link>
+      <pubDate>Fri, 14 Sep 2018 16:55:46 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/adding-dns-and-edge-functions-to-our-cloudformation-stack/</guid>
+      <description>Previously, I showed you how to automatically provision AWS resources with CloudFormation. CloudFormation provides a concise, declarative syntax for configuring a “stack” of AWS resources. Given the sizable catalog of services provided by AWS, and the need to connect services together for most use cases, being able to declare a stack of connected services all together in a single configuration file will help you keep track of your project’s infrastructure and reduce the likelihood of misconfiguration.</description>
+    </item>
+    
+    <item>
+      <title>Automate Your Static Hosting Environment With AWS CloudFormation</title>
+      <link>https://yakkl.com/blog/automate-your-static-hosting-environment-with-aws-cloudformation/</link>
+      <pubDate>Fri, 07 Sep 2018 15:04:56 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/automate-your-static-hosting-environment-with-aws-cloudformation/</guid>
+      <description>I love automation. If you’ve been following this blog, you’ll know I’ve written a few times about using continuous integration to automate the deployment of your software. Why stop at deployment? Can we use automation to improve our infrastructure?
+The answer, unsurprisingly, is yes (this would be a pretty short article otherwise.) There are many different tools out there that can be used to automate the provisioning of hosting infrastructure.</description>
+    </item>
+    
+    <item>
+      <title>Create In-App Documentation For Content Editors</title>
+      <link>https://yakkl.com/blog/create-in-app-documentation-for-content-editors/</link>
+      <pubDate>Fri, 31 Aug 2018 16:31:37 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/create-in-app-documentation-for-content-editors/</guid>
+      <description>Say you’re writing some code and you hit a road block: what was the name of that method again? Which parameters do I need to send in this API request? What does this error message mean? At times like this, developers reach for the documentation. Ideally, this documentation is close at hand in order to minimize the interruption to your coding flow.
+Yakkl’s content editor plays an interesting role in the creation of static sites.</description>
+    </item>
+    
+    <item>
+      <title>Migrating to Key-based Authentication</title>
+      <link>https://yakkl.com/blog/migrating-to-key-based-authentication/</link>
+      <pubDate>Tue, 28 Aug 2018 05:00:18 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/migrating-to-key-based-authentication/</guid>
+      <description>Head&amp;rsquo;s up! We&amp;rsquo;re making some changes to how Yakkl authenticates with your Git repos.
+Today, we rolled out an update that uses persistent SSH keys to interact with your repo. Previously, we were relying on OAuth tokens to gain access as needed, but some users were encountering problems with this method as tokens would intermittently expire before they could be refreshed. Using long-lived SSH credentials is intended to solve this problem.</description>
+    </item>
+    
+    <item>
+      <title>In Search of the Best Continuous Deployment Service</title>
+      <link>https://yakkl.com/blog/5-options-for-automating-your-software-deployments/</link>
+      <pubDate>Fri, 24 Aug 2018 05:01:35 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/5-options-for-automating-your-software-deployments/</guid>
+      <description>We’ve written before about the advantages of automated deployment, particularly for static sites. Continuous Integration and Continuous Deployment are a ubiquitous strategy for managing the release of software. There are several options out there for running your CI/CD pipelines, with their own strengths and weaknesses. Which one should you use? In this article, we will look at 5 different services that you can use to build, test, and deploy your code.</description>
+    </item>
+    
+    <item>
+      <title>Keeping Content DRY: Data Relationships In Hugo</title>
+      <link>https://yakkl.com/blog/data-relationships-in-hugo/</link>
+      <pubDate>Fri, 17 Aug 2018 16:05:07 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/data-relationships-in-hugo/</guid>
+      <description>Don’t Repeat Yourself is the perennial mantra of the software developer. It doesn&amp;rsquo;t mean you should never do the same thing twice, but instead refers to having a single, authoritative source of truth for every piece of information used in your software.
+Don&amp;rsquo;t Repeat Yourself is frequently applied to code, where knowledge is susceptible to duplication through the copying and pasting of code blocks where an abstraction should be used instead.</description>
+    </item>
+    
+    <item>
+      <title>VuePress Brings Your Documentation to Life</title>
+      <link>https://yakkl.com/blog/vuepress-brings-your-documentation-to-life/</link>
+      <pubDate>Fri, 10 Aug 2018 15:48:09 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/vuepress-brings-your-documentation-to-life/</guid>
+      <description>VuePress is a static site generator based on Vue JavaScript framework. With the first release appearing back in April and the current version being 0.14.1, VuePress is a young project that shows a lot of promise.
+VuePress has the flexibility to build any static site, but it particularly excels at working with documentation. In this article, I’ll show you how to adapt your docs to VuePress for documentation that survives on Github, but thrives on its own.</description>
+    </item>
+    
+    <item>
+      <title>Creating a Multilingual Blog With Jekyll</title>
+      <link>https://yakkl.com/blog/creating-a-multilingual-blog-with-jekyll/</link>
+      <pubDate>Fri, 03 Aug 2018 03:25:21 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/creating-a-multilingual-blog-with-jekyll/</guid>
+      <description>Reaching an international audience means having international content. Having your content available in multiple languages is great for maximizing your potential audience. On top of that, ensuring your multilingual site’s content is easy to edit is especially important, to enable translators without development experience to work effectively and reduce the incidence of translation errors.
+In this post, I will explore how to set up a Jekyll site to support multiple languages, and use Yakkl to provide an interface for creating translations.</description>
+    </item>
+    
+    <item>
+      <title>Why We Created a Git-Backed Content Manager</title>
+      <link>https://yakkl.com/blog/why-we-created-a-git-backed-content-manager/</link>
+      <pubDate>Fri, 27 Jul 2018 14:31:20 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/why-we-created-a-git-backed-content-manager/</guid>
+      <description>Software developers have long used Version Control Systems for tracking changes to code. Any code project will benefit greatly from using version control, and any developer worth her salt should be wary of a codebase that does not use version control. Version control makes it easy to monitor changes to code, track down bugs, and manage releases.
+Yakkl’s content manager is supported by Git, one of the most popular version control systems available today.</description>
+    </item>
+    
+    <item>
+      <title>Creating a Form Builder With Formspree and Yakkl Blocks</title>
+      <link>https://yakkl.com/blog/form-builder-with-formspree-forestry-blocks/</link>
+      <pubDate>Fri, 20 Jul 2018 01:00:14 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/form-builder-with-formspree-forestry-blocks/</guid>
+      <description>When we announced the Blocks feature, we touted it as a great way to create a page builder for your site. While this use case drove the development of Blocks, we knew there would be other interesting things that could be done with it.
+When I previously showed you how to integrate Snipcart with your Yakkl site, I used Blocks to configure custom fields for Snipcart products. Today, I&amp;rsquo;m going to take that idea to a whole new level by using Blocks to create a full-fledged form builder that your website editors can use to create web forms.</description>
+    </item>
+    
+    <item>
+      <title>Add Functionality to Your Hugo Site With Theme Components</title>
+      <link>https://yakkl.com/blog/add-functionality-to-your-hugo-site-with-theme-components/</link>
+      <pubDate>Fri, 13 Jul 2018 01:05:06 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/add-functionality-to-your-hugo-site-with-theme-components/</guid>
+      <description>Theme Components are a relatively new addition to Hugo, first appearing in the 0.42 release. When Hugo looks for certain files (such as data and layout files,) it will first look in the top level of your project, and then look in the subdirectory of themes/ that matches the theme you have set in config.toml. Previously, you could only specify a single theme in your config.toml file. The way theme components work is pretty simple: they allow you to specify an array of themes in config.</description>
+    </item>
+    
+    <item>
+      <title>3 Tips for Mastering Blocks</title>
+      <link>https://yakkl.com/blog/3-tips-for-mastering-blocks/</link>
+      <pubDate>Fri, 29 Jun 2018 10:00:15 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/3-tips-for-mastering-blocks/</guid>
+      <description>Last week, we brought you a theme for Jekyll that takes advantage of Yakkl’s Blocks feature to build whole page layouts using modular components, called uBuild. This week, I ported uBuild to Hugo to make it available to our Hugo users. When we first announced the Blocks feature, I created a Hugo theme called Sawmill to demonstrate the Blocks&amp;rsquo; page-building capabilities. Since creating that theme, I’ve been using Blocks extensively and have learned a lot about how to use this feature effectively.</description>
+    </item>
+    
+    <item>
+      <title>5 Ways to Handle Forms on Your Static Site</title>
+      <link>https://yakkl.com/blog/5-ways-to-handle-forms-on-your-static-site/</link>
+      <pubDate>Fri, 15 Jun 2018 03:30:13 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/5-ways-to-handle-forms-on-your-static-site/</guid>
+      <description>When I first started exploring the potential of static sites, I was attracted by their speed and simplicity. I knew these benefits came at a cost, however: since static sites can’t run backend code, there are limits to what you can accomplish with a static solution.
+I no longer see things this way.
+JAMStack is not about sacrificing features for the sake of a performant, easy to maintain website. Rather, it is about re-evaluating how much of your desired functionality should be delegated to your web frontend.</description>
+    </item>
+    
+    <item>
+      <title>For Static Sites, There’s No Excuse Not to Use a CDN</title>
+      <link>https://yakkl.com/blog/for-static-sites-theres-no-excuse-not-to-use-a-cdn/</link>
+      <pubDate>Fri, 08 Jun 2018 04:00:11 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/for-static-sites-theres-no-excuse-not-to-use-a-cdn/</guid>
+      <description>Are you getting the most out of your static site? If you’re not hosting your site on a CDN, you definitely aren’t.
+CDNs, or Content Delivery Networks, are commonly used to distribute static resources like images, videos, and client-side code (CSS and JavaScript.) Since a static site is composed entirely of static resources (including the HTML pages,) it is possible to serve the entire website through a CDN!
+In this article, we will explore why you should be using a CDN to host your static site, and how you can do it with Netlify.</description>
+    </item>
+    
+    <item>
+      <title>Mastering Image Delivery With Cloudinary</title>
+      <link>https://yakkl.com/blog/master-image-delivery-with-cloudinary/</link>
+      <pubDate>Fri, 01 Jun 2018 05:00:49 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/master-image-delivery-with-cloudinary/</guid>
+      <description>Applying a responsive strategy for displaying images means more than just adding max-width: 100%; to your image tags. You don&amp;rsquo;t want to display an image that is much larger than the area it occupies, otherwise you’re just wasting bits. You need to deliver scaled-down versions of these images where appropriate.
+A popular way to generate these scaled-down assets is to automatically resize our images during the build process, using something like a gulp task, but that solution isn&amp;rsquo;t perfect.</description>
+    </item>
+    
+    <item>
+      <title>How To Use Hugo&#39;s Image Processing With Yakkl</title>
+      <link>https://yakkl.com/blog/how-to-use-hugo-s-image-processing-with-forestry/</link>
+      <pubDate>Mon, 21 May 2018 20:09:02 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/how-to-use-hugo-s-image-processing-with-forestry/</guid>
+      <description>0.32 update introduced built-in image processing for certain assets. One limitation of this feature is that it only works for page resources, which are page-relative assets stored alongside your posts in the content/ directory of your site. Since Yakkl’s uploads are stored in the static/uploads/ directory by default, these assets cannot be resized in your templates using Hugo’s built-in resizer. This document will provide a step-by-step guide for working around this limitation.</description>
+    </item>
+    
+    <item>
+      <title>Snipcart Brings E‑Commerce to Your Static Site </title>
+      <link>https://yakkl.com/blog/snipcart-brings-ecommerce-static-site/</link>
+      <pubDate>Fri, 18 May 2018 14:36:07 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/snipcart-brings-ecommerce-static-site/</guid>
+      <description>Picture this: it&amp;rsquo;s 2018, and your client needs an online store. You know that static sites are great: they&amp;rsquo;re easy to scale, have a minimal attack surface, and are very fast. However, since a static site can&amp;rsquo;t run backend code, it won&amp;rsquo;t be able to do some things necessary for e-commerce, such as process customer orders. Can you really use a static site to operate an e-commerce storefront?
+Of course you can!</description>
+    </item>
+    
+    <item>
+      <title>Automatically Publish Scheduled Posts For Your Static Site</title>
+      <link>https://yakkl.com/blog/automatically-publish-scheduled-posts-for-static-site/</link>
+      <pubDate>Fri, 04 May 2018 07:10:15 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/automatically-publish-scheduled-posts-for-static-site/</guid>
+      <description>Part of our mission at Yakkl is to dissolve the perceived limitations of static sites. In reality, static sites are easy to understand and integrate with, and the belief that static sites are not capable of feature X is largely a failure of imagination. With a little cleverness and determination, virtually anything is possible on a static platform.
+Previously, we showed you how to set up Algolia with Jekyll as well as with Hugo to make your content searchable.</description>
+    </item>
+    
+    <item>
+      <title>Instant Production-Ready Scaffolding With Create-Static-Site</title>
+      <link>https://yakkl.com/blog/instant-production-ready-scaffolding-with-create-static-site/</link>
+      <pubDate>Fri, 27 Apr 2018 09:38:55 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/instant-production-ready-scaffolding-with-create-static-site/</guid>
+      <description>Create React App is a utility provided by the Facebook team in support of the React JavaScript framework. The goal of Create React App is to allow developers to quickly bootstrap a React project without having to spend time sorting out the build pipeline. With over 47,000 stars on Github (over half as many as the actual React library,) Create React App&amp;rsquo;s popularity speaks for itself.
+The success and utility of Create React App has inspired the Yakkl.</description>
+    </item>
+    
+    <item>
+      <title>Sawmill: A Razor-sharp Layout Composer for Hugo and Yakkl</title>
+      <link>https://yakkl.com/blog/sawmill-layout-composer-for-hugo-and-forestry/</link>
+      <pubDate>Fri, 20 Apr 2018 06:09:13 -1100</pubDate>
+      
+      <guid>https://yakkl.com/blog/sawmill-layout-composer-for-hugo-and-forestry/</guid>
+      <description>When it comes to creating websites, good content strategy is all about turning ideas into HTML with a minimal amount of friction. Whether using a CMS with a web interface or editing content files for a static site generator, content creators need an easy way to create visually interesting and well-structured content.
+Every approach is a compromise between flexibility and ease-of-use. Even if a developer could anticipate all of a content creator&amp;rsquo;s needs, these needs will change over time.</description>
+    </item>
+    
+    <item>
+      <title>Write Better JavaScript With Webpack</title>
+      <link>https://yakkl.com/blog/write-better-javascript-with-webpack/</link>
+      <pubDate>Fri, 30 Mar 2018 12:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/write-better-javascript-with-webpack/</guid>
+      <description>I get it. The JavaScript ecosystem is exhausting. There exists an abundance of tools and frameworks, and each one wants to rescue you from the shortcomings of its peers. Attempting to learn and keep up with these tools takes time and energy that you would rather devote to your project. Reducing cognitive overhead is a core component of Yakkl.com&amp;rsquo;s philosophy — we designed a static site CMS that is easy to set up and use.</description>
+    </item>
+    
+    <item>
+      <title>CircleCI Followup: Deploying Via rsync</title>
+      <link>https://yakkl.com/blog/circleci-deploy-via-rsync/</link>
+      <pubDate>Thu, 29 Mar 2018 12:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/circleci-deploy-via-rsync/</guid>
+      <description>This tutorial was updated on April 3, 2018.
+ In last week&amp;rsquo;s article, we showed you how to automate the deployment of a Hugo site using CircleCI. The example we provided used the awscli utility to deploy the results of your build process to an AWS S3 bucket. In this follow-up, we will show you how to use the rsync utility to deploy your site to any rsync-enabled server.</description>
+    </item>
+    
+    <item>
+      <title>Automate Your Static Site Deployment with CircleCI</title>
+      <link>https://yakkl.com/blog/automate-deploy-w-circle-ci/</link>
+      <pubDate>Fri, 23 Mar 2018 12:38:35 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/automate-deploy-w-circle-ci/</guid>
+      <description>This tutorial was updated on April 3, 2018 to use bep/s3deploy in place of aws/aws-cli.
+ This article is part of our on-going Frontend Friday modern web development series
+Tools like Hugo, Jekyll, and Gatsby have made building static sites a popular and practical choice for developers. One major disadvantage these tools have, however, is the need to regenerate and redeploy their files every time there is new content to publish.</description>
+    </item>
+    
+  </channel>
+</rss>

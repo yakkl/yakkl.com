@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Company on Yakkl.com</title>
+    <link>https://yakkl.com/categories/company/</link>
+    <description>Recent content in Company on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Mon, 12 Aug 2019 10:41:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/categories/company/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Join our Slack community</title>
+      <link>https://yakkl.com/blog/join-our-slack-community/</link>
+      <pubDate>Mon, 12 Aug 2019 10:41:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/join-our-slack-community/</guid>
+      <description>Want to chat with the Yakkl.com community about team collaboration, best-practices, features, and more? Join the slack community here (we&amp;rsquo;ll get back to you ASAP).
+Sign up here: Yakkl.com Community Email  --</description>
+    </item>
+    
+    <item>
+      <title>Why we built Yakkl</title>
+      <link>https://yakkl.com/blog/why-we-built-yakkl/</link>
+      <pubDate>Mon, 12 Aug 2019 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/why-we-built-yakkl/</guid>
+      <description>My friend, Emily, needed a simple website for her restaurant. She&amp;rsquo;s a chef and didn&amp;rsquo;t want to deal with the hassle of DNS, hosting, design, etc. As a recovering freelancer, I offered to help.
+Normally, I would use WordPress for a site like this, but I was fed up with the headaches that comes with maintaining a WordPress site. So, I took an evening and cranked out a simple 1-page static site.</description>
+    </item>
+    
+    <item>
+      <title>Why We Created a Git-Backed Content Manager</title>
+      <link>https://yakkl.com/blog/why-we-created-a-git-backed-content-manager/</link>
+      <pubDate>Fri, 27 Jul 2018 14:31:20 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/why-we-created-a-git-backed-content-manager/</guid>
+      <description>Software developers have long used Version Control Systems for tracking changes to code. Any code project will benefit greatly from using version control, and any developer worth her salt should be wary of a codebase that does not use version control. Version control makes it easy to monitor changes to code, track down bugs, and manage releases.
+Yakkl’s content manager is supported by Git, one of the most popular version control systems available today.</description>
+    </item>
+    
+    <item>
+      <title>March 27th Service Outage</title>
+      <link>https://yakkl.com/blog/march-27th-service-outage/</link>
+      <pubDate>Mon, 27 Mar 2017 21:25:39 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/march-27th-service-outage/</guid>
+      <description>As some of you may have noticed, Yakkl was down for about 2.5 hours between 23:00 UTC March 27 until 01:30 UTC March 28. In the spirit of full disclosure I&amp;rsquo;d like to explain what happened and why.
+Yakkl is a Rails application and from time to time the number of migrations we have get unwieldy. Being an application under rapid development, things are constantly changing and migrations are created sometimes daily.</description>
+    </item>
+    
+    <item>
+      <title>Yakkl.com &#43; Techstars 2016</title>
+      <link>https://yakkl.com/blog/forestryio-techstars-2016/</link>
+      <pubDate>Wed, 06 Jul 2016 19:03:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/forestryio-techstars-2016/</guid>
+      <description>We&amp;rsquo;re stoked to announce that Yakkl.com is going to be part of Techstars NYC. The 90-day program runs from July until the end of September 2016.
+What this means for Yakkl and our users:
+ We&amp;rsquo;re going to be surrounded by some of the brightest minds in New York tech We get to focus intensly on making Yakkl awesome for our users. Stoked to be working 15-hour days! Over $1,000,000 in amazing &amp;ldquo;perks&amp;rdquo; (free stuff) from companies such as Amazon, Digital Ocean, Microsoft, Google, Sendgrid, etc.</description>
+    </item>
+    
+  </channel>
+</rss>

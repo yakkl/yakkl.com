@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Michael Soolee on Yakkl.com</title>
+    <link>https://yakkl.com/authors/michael-soolee/</link>
+    <description>Recent content in Michael Soolee on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Tue, 02 Aug 2016 01:06:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/authors/michael-soolee/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>I can finally choose static</title>
+      <link>https://yakkl.com/blog/choose-static/</link>
+      <pubDate>Tue, 02 Aug 2016 01:06:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/blog/choose-static/</guid>
+      <description>When it comes to the Internet, content is king. A site that has well written content concisely tells the story behind a brand, helps to inform customers about a business&amp;rsquo; products or services and helps guide a user navigate to the information that they seek.
+I&amp;rsquo;ve worked with various organizations in helping them choose the technology that is used to publish content onto their sites. When it came down to making a choice, the publishing platform options were often slimmed down by the need for non-technical users to easily publish content.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Keeping Content DRY: Data Relationships In Hugo | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Keeping Content DRY: Data Relationships In Hugo" />
+<meta property="og:description" content="Don’t Repeat Yourself is the perennial mantra of the software developer. It doesn&rsquo;t mean you should never do the same thing twice, but instead refers to having a single, authoritative source of truth for every piece of information used in your software.
+Don&rsquo;t Repeat Yourself is frequently applied to code, where knowledge is susceptible to duplication through the copying and pasting of code blocks where an abstraction should be used instead." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/data-relationships-in-hugo/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/08/fahrul-azmi-578029-unsplash.jpg" /><meta property="og:image:alt" content="Don’t Repeat Yourself is the perennial mantra of the software developer. It doesn&rsquo;t mean you should never do the same thing twice, but instead refers to having a single, authoritative source of truth for every piece of information used in your software.
+Don&rsquo;t Repeat Yourself is frequently applied to code, where knowledge is susceptible to duplication through the copying and pasting of code blocks where an abstraction should be used instead." /><meta property="article:published_time" content="2017-12-07T04:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2018-08-17T16:05:07&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta itemprop="name" content="Keeping Content DRY: Data Relationships In Hugo">
+<meta itemprop="description" content="Don’t Repeat Yourself is the perennial mantra of the software developer. It doesn&rsquo;t mean you should never do the same thing twice, but instead refers to having a single, authoritative source of truth for every piece of information used in your software.
+Don&rsquo;t Repeat Yourself is frequently applied to code, where knowledge is susceptible to duplication through the copying and pasting of code blocks where an abstraction should be used instead."><meta itemprop="datePublished" content="2017-12-07T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-08-17T16:05:07&#43;00:00" /><meta itemprop="wordCount" content="1358"><meta itemprop="image" content="https://yakkl.com/uploads/2018/08/fahrul-azmi-578029-unsplash.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/08/fahrul-azmi-578029-unsplash.jpg"/><meta name="twitter:title" content="Keeping Content DRY: Data Relationships In Hugo"/>
+<meta name="twitter:description" content="Don’t Repeat Yourself is the perennial mantra of the software developer. It doesn&rsquo;t mean you should never do the same thing twice, but instead refers to having a single, authoritative source of truth for every piece of information used in your software.
+Don&rsquo;t Repeat Yourself is frequently applied to code, where knowledge is susceptible to duplication through the copying and pasting of code blocks where an abstraction should be used instead."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/08/fahrul-azmi-578029-unsplash.jpg" alt="Keeping Content DRY: Data Relationships In Hugo" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/08/fahrul-azmi-578029-unsplash.jpg" class="" />
+              
+        </div><div class="container">
+      <h1 class="post--title">Keeping Content DRY: Data Relationships In Hugo</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">August 17, 2018</span><span>in 
+            <a href="/categories/hugo" class="post--category" data-category="hugo">
+              Hugo
+            </a>,
+            <a href="/categories/frontend-friday" class="post--category" data-category="frontend-friday">
+              Frontend friday
+            </a></span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<p><strong>Don’t Repeat Yourself</strong> is the perennial mantra of the software developer. It doesn&rsquo;t mean you should never do the same thing twice, but instead refers to having a <strong>single, authoritative source of truth</strong> for every piece of information used in your software.</p>
+
+<p><em>Don&rsquo;t Repeat Yourself</em> is frequently applied to code, where knowledge is susceptible to duplication through the copying and pasting of code blocks where an abstraction should be used instead. This wisdom can similarly be applied to your website&rsquo;s content, as updating content that is duplicated across a site can be tedious and error-prone. In this article, I will show you how you can use Hugo to organize and link content items together for a resilient and highly maintainable content strategy.</p>
+
+<h2 id="grouping-pages-with-taxonomies">Grouping Pages With Taxonomies</h2>
+
+<p>Let’s say we have a website that displays information for specific events. We want to include venue information for each event, including the venue’s address.</p>
+
+<p>One way we can do this is with <a href="https://gohugo.io/content-management/taxonomies/">taxonomies</a>. Taxonomies are the primary way to associate pages in Hugo. To add a taxonomy, we just have to add this line to our <code>config.toml</code> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">taxonomies</span>]
+    <span style="color:#a6e22e">venue</span> = <span style="color:#e6db74">&#34;venues&#34;</span></code></pre></div>
+<p>That’s all we need to let Hugo know about a new taxonomy. To use this taxonomy, we use the singular name of the taxonomy as a front matter key for our page:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>title: Party at TJ&#39;s<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>venue: monticello<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>---<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>We hold these truths to be self-evident, that this party is going to rock.</code></pre></div>
+<p>This is an easy way to link items together. Since I added <code>monticello</code>  as the venue for this event, a taxonomy term page will be created at <code>/venues/monticello</code>. This page will display all the events happening at <code>monticello</code>.</p>
+
+<p>To add additional information to our venue, like an address, we can <a href="https://gohugo.io/content-management/taxonomies#add-custom-metadata-to-a-taxonomy-term">create an index page for it</a> at <code>content/venues/monticello/_index.md</code> and adding front matter to that file. This will let us add an address to our venue, but unfortunately, this information is only available on the taxonomy term page. If we want to display this venue information on the event page, there is no way to retrieve it. We need a different solution!</p>
+
+<h2 id="connecting-pages-together">Connecting Pages Together</h2>
+
+<p>Instead of using a taxonomy to keep track of our venues, it might make more sense to add them as pages to their own <strong>content section</strong>. A <a href="https://gohugo.io/content-management/sections/">content section</a> in Hugo is nothing more than a folder inside the <code>content</code> directory containing markdown files.</p>
+
+<p>One reason why you may not want to keep your data in the <code>content</code> section is because, by default, all markdown files in <code>content</code> are turned into HTML pages when the site is generated. However, since version <code>0.35</code>, you can create <strong>headless bundles</strong> in Hugo. A <a href="https://gohugo.io/content-management/page-bundles/#headless-bundle">headless bundle</a> is a collection of pages that will not get published when the site is generated.</p>
+
+<div class="shortcode-warning"><p>You can’t query headless bundles with <code>.Site.Pages</code> or <code>.Site.RegularPages</code>, but you can retrieve a page bundle with <code>.Site.GetPage</code>.</p>
+
+</div>
+
+<p>Let&rsquo;s switch our <code>venues</code> from a taxonomy to a headless bundle. After removing it from the <code>[taxonomy]</code> block in our <code>config.toml</code> file and deleting the file at <code>/content/venues/monticello/_index.md</code>, create  a new file at <code>/content/venues/index.md</code>. To identify the <code>venues</code> section as a headless bundle, insert the following front matter into that file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+headless: <span style="color:#66d9ef">true</span>
+---</code></pre></div>
+<p>This will prevent the generator from creating HTML pages from any markdown files in this folder. Now, to add our venue, we create a file at <code>content/venues/monticello.md</code> with the following content:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+title: Monticello
+address: <span style="color:#ae81ff">931</span> Thomas Jefferson Pkwy, Charlottesville, VA <span style="color:#ae81ff">22902</span>
+---</code></pre></div>
+<p>Our <code>monticello.md</code> file is now the <strong>single source of truth</strong> within our site for information about this venue.</p>
+
+<h3 id="connecting-a-venue-to-an-event">Connecting a Venue to an Event</h3>
+
+<p>Since we’re now using a page and not a taxonomy term for venues, we need to make a small tweak to our event front matter. Instead of inserting the taxonomy term as the front matter value for <code>venue</code>, we will want to insert the filename of the venue file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+title: Party at TJ&#39;s
+venue: monticello.md
+---</code></pre></div>
+<p>We can retrieve the venue data from this filename in our single event template with the following code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-html-template" data-lang="go-html-template"><span style="color:#75715e">{{</span> <span style="color:#66d9ef">with</span> <span style="color:#a6e22e">.Site.GetPage</span> <span style="color:#e6db74">&#34;venues&#34;</span> <span style="color:#75715e">}}</span>
+    <span style="color:#75715e">{{</span> <span style="color:#66d9ef">with</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">index</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">.Resources.Match</span> <span style="color:#a6e22e">$.Params.venue</span><span style="color:#f92672">)</span> <span style="color:#a6e22e">0</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span>
+        &lt;<span style="color:#f92672">p</span>&gt;Venue: <span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Title</span> <span style="color:#75715e">}}</span>&lt;/<span style="color:#f92672">p</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;Address: <span style="color:#75715e">{{</span> <span style="color:#a6e22e">.Params.address</span> <span style="color:#75715e">}}</span>&lt;/<span style="color:#f92672">p</span>&gt;
+    <span style="color:#75715e">{{</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span>
+<span style="color:#75715e">{{</span> <span style="color:#66d9ef">end</span> <span style="color:#75715e">}}</span></code></pre></div>
+<p>We use <code>.Site.GetPage</code> to load up all the items in our <code>venues</code> bundle. It’s a little counterintuitive; <code>GetPage</code> sounds like you’re getting a single page, but when using page bundles you need to use <code>GetPage</code> to access the entire bundle. Once the <code>venues</code> bundle is retrieved, we use <code>.Resources.Match</code> to search all the pages in the bundle to find one whose filename matches the <code>venue</code> in our event front matter. When we find a match, we then output the venue information on the event page.</p>
+
+<p>Keeping our venue information in a single location adds resilience to our content strategy. If an error is made when typing in the venue address, it only needs to be corrected in one place and it will be updated everywhere the venue is referenced. Additionally, users creating new content don’t have to manually enter the venue’s address every time a new event is created with that venue.</p>
+
+<h2 id="page-relationships-with-yakkl">Page Relationships With Yakkl</h2>
+
+<p>One reason I like using page bundles for miscellaneous data is because of how well they play with Yakkl’s content manager. Yakkl’s <strong>configurable sidebar</strong>, <strong>front matter templates</strong>, and <strong>dropdown data sources</strong> all work together to provide a great way to manage these data relationships.</p>
+
+<h3 id="create-a-front-matter-template-for-your-data">Create a Front Matter Template For Your Data</h3>
+
+<p>After importing your site to Yakkl, navigate to the <strong>Front Matter</strong> section in the sidebar. Click the <strong>Add Template</strong> button to create a new template, and name it <strong>Event</strong>. Add a text field named <code>title</code>, and a select field named <code>venue</code>.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/08/dropdown-data-source.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/08/dropdown-data-source.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/08/dropdown-data-source.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/08/dropdown-data-source.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/08/dropdown-data-source.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/08/dropdown-data-source.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/08/dropdown-data-source.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/08/dropdown-data-source.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/08/dropdown-data-source.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/08/dropdown-data-source.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/08/dropdown-data-source.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/08/dropdown-data-source.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/08/dropdown-data-source.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/08/dropdown-data-source.png" class="" /></p>
+
+<p>Select fields in Yakkl’s Front Matter Templates have multiple data source options. Under <strong>Source Type</strong>, select <strong>Pages</strong> to populate the venue dropdown with options from one of your page sections. After selecting <strong>Pages</strong>, you will see another dropdown to select which <strong>Section</strong> to show pages from. Select <strong>Venues</strong> as the section to enable users to select from the pages in your <code>venues</code> page bundle when assigning a venue to an event.</p>
+
+<div class="shortcode-tip"><p>When using pages as a data source, Yakkl saves the full path to the file from the root of your content directory. In our example, the venue is saved as <code>venues/monticello.md</code>. We need to make a small change to our layout code to accomodate this by stripping out the section from the path:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go-text-template" data-lang="go-text-template"><span style="color:#75715e">{{</span> <span style="color:#66d9ef">with</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">index</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">.Resources.Match</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">index</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">last</span> <span style="color:#a6e22e">1</span> <span style="color:#f92672">(</span><span style="color:#a6e22e">split</span> <span style="color:#a6e22e">$.Params.venue</span> <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">))</span> <span style="color:#a6e22e">0</span><span style="color:#f92672">))</span> <span style="color:#a6e22e">0</span><span style="color:#f92672">)</span> <span style="color:#75715e">}}</span></code></pre></div>
+<p>This code gets the basename of your path by splitting the string on the directory separator and using the last item in the resulting slice.</p>
+
+</div>
+
+<h3 id="set-up-your-headless-bundle-as-a-distinct-sidebar-section">Set Up Your Headless Bundle as a Distinct Sidebar Section</h3>
+
+<p>Yakkl’s <strong>configurable sidebar</strong> allows you to configure which content sections can be accessed and edited in Yakkl.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/08/section-template-restriction.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/08/section-template-restriction.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/08/section-template-restriction.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/08/section-template-restriction.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/08/section-template-restriction.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/08/section-template-restriction.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/08/section-template-restriction.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/08/section-template-restriction.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/08/section-template-restriction.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/08/section-template-restriction.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/08/section-template-restriction.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/08/section-template-restriction.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/08/section-template-restriction.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/08/section-template-restriction.png" class="" /></p>
+
+<p>Access the sidebar configuration by navigating to <strong>Settings</strong> and going to the <strong>Sidebar</strong> tab. You will see your content sections listed there. Click on the <strong>Events</strong> section to edit it. Scrolling down to the bottom of the modal that pops up, you will see a dropdown to select the <strong>Available Templates</strong> for this content section. Only allowing a single template here will force all new content to be created with that template, so selecting our recently made <strong>Event</strong> front matter template and nothing else will make sure all new events created will utilize our venue dropdown. Click <strong>Done</strong> and then hit the <strong>Save</strong> button to update your repo with these changes.</p>
+
+<p>Thanks to Yakkl&rsquo;s front matter UI, it&rsquo;s easy to apply this content strategy to your site while keeping things easy for content editors. This tutorial only scratches the surface: by following the wisdom of <strong>Don&rsquo;t Repeat Yourself</strong> and building data relationships with page bundles, Hugo offers a static platform with lots of possibilities!</p>
+
+<div style="margin-top: 2em; padding: 20px 40px;background: #f7f7f7;">
+    <h2>Join us every Friday 📅</h2>
+    <p><a href="/categories/frontend-friday/">Frontend Friday</a> is a weekly series where we write in-depth posts about modern web development.</p>
+    <p><strong>Next week:</strong> We look at the differences between some <a href="https://yakkl.com/blog/5-options-for-automating-your-software-deployments/">popular Continuous Integration Tools</a>. </p>
+    <p><strong>Last week:</strong> We looked at <a href="https://yakkl.com/blog/vuepress-brings-your-documentation-to-life/">VuePress, a static site generator that's great for documentation</a>.</p>
+</div>
+
+<h2 id="have-something-to-add">Have something to add?</h2>
+
+<p><a style="background: #F60; display: inline-block; border-radius: 5px; color: white; padding: 2px 9px; font-size: 14px;" href="https://news.ycombinator.com/item?id=17784971">Discuss on Hacker News</a></p>
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "Keeping Content DRY: Data Relationships In Hugo";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/data-relationships-in-hugo\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/data-relationships-in-hugo.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

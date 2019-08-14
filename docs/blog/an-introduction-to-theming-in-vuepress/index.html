@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>An Introduction to Theming in VuePress | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="An Introduction to Theming in VuePress" />
+<meta property="og:description" content="When I first looked at VuePress, I marveled at how quickly you could install it alongside your project&rsquo;s existing markdown docs to create a polished documentation website. This is without a doubt one of VuePress’ biggest strengths, but documentation is not the only thing it can do. VuePress is a highly flexible static site generator, and provides the ability to completely customize the way your pages are built via its Layout component." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/an-introduction-to-theming-in-vuepress/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/10/markus-spiske-445251-unsplash.jpg" /><meta property="og:image:alt" content="When I first looked at VuePress, I marveled at how quickly you could install it alongside your project&rsquo;s existing markdown docs to create a polished documentation website. This is without a doubt one of VuePress’ biggest strengths, but documentation is not the only thing it can do. VuePress is a highly flexible static site generator, and provides the ability to completely customize the way your pages are built via its Layout component." /><meta property="article:published_time" content="2018-10-12T02:00:00-11:00"/>
+  <meta property="article:modified_time" content="2018-10-12T02:00:25-11:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta itemprop="name" content="An Introduction to Theming in VuePress">
+<meta itemprop="description" content="When I first looked at VuePress, I marveled at how quickly you could install it alongside your project&rsquo;s existing markdown docs to create a polished documentation website. This is without a doubt one of VuePress’ biggest strengths, but documentation is not the only thing it can do. VuePress is a highly flexible static site generator, and provides the ability to completely customize the way your pages are built via its Layout component."><meta itemprop="datePublished" content="2018-10-12T02:00:00-11:00" /><meta itemprop="dateModified" content="2018-10-12T02:00:25-11:00" /><meta itemprop="wordCount" content="1668"><meta itemprop="image" content="https://yakkl.com/uploads/2018/10/markus-spiske-445251-unsplash.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/10/markus-spiske-445251-unsplash.jpg"/><meta name="twitter:title" content="An Introduction to Theming in VuePress"/>
+<meta name="twitter:description" content="When I first looked at VuePress, I marveled at how quickly you could install it alongside your project&rsquo;s existing markdown docs to create a polished documentation website. This is without a doubt one of VuePress’ biggest strengths, but documentation is not the only thing it can do. VuePress is a highly flexible static site generator, and provides the ability to completely customize the way your pages are built via its Layout component."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/10/markus-spiske-445251-unsplash.jpg" alt="An Introduction to Theming in VuePress" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/10/markus-spiske-445251-unsplash.jpg" class="" />
+              
+        </div><div class="container">
+      <h1 class="post--title">An Introduction to Theming in VuePress</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">October 12, 2018</span><span>in 
+            <a href="/categories/vuepress" class="post--category" data-category="vuepress">
+              Vuepress
+            </a></span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<p>When <a href="https://yakkl.com/blog/vuepress-brings-your-documentation-to-life/">I first looked at VuePress</a>, I marveled at how quickly you could install it alongside your project&rsquo;s existing markdown docs to create a polished documentation website. This is without a doubt one of VuePress’ biggest strengths, but documentation is not the only thing it can do. VuePress is a highly flexible static site generator, and provides the ability to completely customize the way your pages are built via its Layout component. In this article, we’ll take a look at some fundamentals of building a blog theme in VuePress.</p>
+
+<div class="shortcode-warning"><h4>Before We Get Started</h4><p>VuePress is built on the Vue.js framework, and a working knowledge of Vue.js will be tremendously helpful in understanding how to create VuePress themes. This guide will attempt to explain some concepts as we go along, but I highly recommend you take a look at the <a href="https://vuejs.org/v2/guide/">Vue.js documentation</a> if you get lost. Don’t be intimidated: Vue is pretty easy to get the hang of!</p>
+
+</div>
+
+<h2 id="creating-a-new-vuepress-site">Creating a New VuePress Site</h2>
+
+<p>If you’re familiar with Jekyll or Hugo, you know that they have their own CLI command to bootstrap a new project, setting up a folder hierarchy that’s compatible with the SSG. VuePress is a little different in this regard, as one of its goals was to adapt to existing project documentation. This means that you are afforded a lot of flexibility in how you want to set up your site. VuePress will search for any Markdown files in the directory where it’s invoked, and any subdirectories, and convert those into pages.</p>
+
+<p>Thus, to create a new VuePress site, we just have to create some markdown files and start writing!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">mkdir vuepress-demo
+cd vuepress-demo
+echo `# Welcome to My Blog!` &gt; index.md</pre></div>
+<p>To turn this into a VuePress site, all we have to do is install VuePress and run it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">yarn init -y
+yarn add vuepress</pre></div>
+<p>Once VuePress finishes installing, open up your <code>package.json</code> file and add a couple scripts:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#34;scripts&#34;: {
+    &#34;dev&#34;: &#34;vuepress dev&#34;,
+    &#34;prod&#34;: &#34;vuepress build&#34;
+}</pre></div>
+<p>Save this, and then run the following command in your terminal:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">yarn dev</pre></div>
+<p>Once this command finishes running, you should see something like this in your terminal:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&gt; VuePress dev server listening at http://localhost:8080/</pre></div>
+<p>Open up <code>http://localhost:8080</code> in your browser, and you’ll see your website!</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/10/vuepress-demo-screen1.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/10/vuepress-demo-screen1.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/10/vuepress-demo-screen1.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/10/vuepress-demo-screen1.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/10/vuepress-demo-screen1.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/10/vuepress-demo-screen1.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/10/vuepress-demo-screen1.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/10/vuepress-demo-screen1.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/10/vuepress-demo-screen1.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/10/vuepress-demo-screen1.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/10/vuepress-demo-screen1.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/10/vuepress-demo-screen1.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/10/vuepress-demo-screen1.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/10/vuepress-demo-screen1.png" class="" /></p>
+
+<p>It’s a bit unremarkable at the moment. Let’s do something about that!</p>
+
+<h2 id="customizing-your-vuepress-site">Customizing Your VuePress Site</h2>
+
+<p>Without any further configuration, VuePress uses its default theme. This theme has some nice features out of the box, and as we’ve mentioned, makes creating a polished documentation website incredibly easy. However, at some point you will surely want to deviate from the stock-standard theme and customize the look &amp; feel of your site.</p>
+
+<h3 id="configuring-vuepress">Configuring VuePress</h3>
+
+<p>VuePress looks in a <code>.vuepress</code> folder inside your project for all of its configuration and layout information. We can configure VuePress by creating a <code>config.js</code> file inside the <code>.vuepress</code> folder.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">mkdir .vuepress
+touch .vuepress/config.js</pre></div>
+<p>This file will export a configuration object that will be used by VuePress. Check out the <a href="https://v0.vuepress.vuejs.org/config/">VuePress Config Reference</a> for all of the available options. For now, we’re just going to set the title of our site, and include the <a href="https://bulma.io/">Bulma</a> stylesheet so we can quickly apply some basic styling to our site.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">module.exports = {
+    title: &#34;My VuePress Site&#34;,
+    head: [
+        [&#39;link&#39;, {rel: &#39;stylesheet&#39;, href: &#39;https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css&#39;}]
+    ]
+}</pre></div>
+<h3 id="creating-a-custom-layout">Creating a Custom Layout</h3>
+
+<p>We can override the layout used by our VuePress site by creating a file named <code>Layout.vue</code> in <code>.vuepress/theme</code>. <code>Layout.vue</code> will be a <a href="https://vuejs.org/v2/guide/single-file-components.html">single file Vue component</a> that will be created for every markdown file in our site.</p>
+
+<div class="shortcode-tip"><p><strong>Single file components</strong> are a unique Vue convention where HTML, styles, and JavaScript related to a component are consolidated in a single file with a <code>.vue</code> extension. An empty Vue component looks something like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;template&gt;
+  &lt;!-- Component markup --&gt;
+&lt;/template&gt;
+&lt;style&gt;
+  /* Include component-specific CSS here */
+&lt;/style&gt;
+&lt;script&gt;
+export default {
+  //... component definition like properties and behaviors goes here
+};
+&lt;/script&gt;</pre></div>
+<p>Note that the <code>&lt;style&gt;</code> section is entirely optional. Since we’re already loading the Bulma CSS framework, we won’t be using <code>&lt;style&gt;</code> in our single-file components.</p>
+
+</div>
+
+<p>Let’s create a basic <code>Layout.vue</code> component. Remember that this file should be located at <code>.vuepress/theme/Layout.vue</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;template&gt;
+    &lt;div&gt;
+        &lt;header class=&#34;hero is-primary&#34;&gt;
+            &lt;div class=&#34;hero-body&#34;&gt;
+                &lt;div class=&#34;container&#34;&gt;
+                    &lt;h1 class=&#34;title&#34;&gt;{{ $site.title }}&lt;/h1&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+        &lt;section class=&#34;section&#34;&gt;
+            &lt;div class=&#34;content container&#34;&gt;
+                &lt;h1&gt;{{ $page.frontmatter.title }}&lt;/h1&gt;
+                &lt;Content /&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {};
+&lt;/script&gt;</pre></div>
+<p>There are three things to make note of here. First, the <code>$site</code> variable, which contains information pertaining to our site as a whole. We can access the <code>title</code> attribute exported in our site’s <code>config.js</code> from this <code>$site</code> variable. Second, the <code>$page</code> variable contains data about the current page. We can add YAML front matter to our markdown files, and access this data in <code>$page.frontmatter</code>.</p>
+
+<p>Finally, there is the markup that renders the content of the page. <code>&lt;Content /&gt;</code> references a built-in Vue component that will render the content of the markdown file as HTML inside of our Layout component.</p>
+
+<div class="shortcode-tip"><p>Be sure to note that we wrapped all of the template markup inside of a single <code>&lt;div&gt;</code>. Vue will throw an error if the markup inside your <code>&lt;template&gt;</code> section doesn’t contain a single top-level element.</p>
+
+</div>
+
+<p>Now that we’re using front matter, we should tweak our <code>index.md</code> file a little bit. Instead of including the title inside of the markdown, let’s move it to the front matter.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">---
+title: Welcome to My Blog!
+---
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed ipsum maximus, volutpat justo in, ullamcorper purus. Etiam sapien nulla, finibus id nisi a, accumsan euismod elit. Nunc auctor ut lacus quis tempus. Pellentesque finibus ut nulla at finibus. Nam porttitor sodales finibus. Fusce efficitur risus eget sodales commodo. 
+Etiam velit sapien, posuere vitae enim eget, eleifend imperdiet nibh. Nunc rutrum neque in cursus euismod. Praesent velit felis, tristique in tincidunt in, euismod eu lorem. Pellentesque in ligula urna. Quisque cursus faucibus elit. Donec sem neque, sollicitudin auctor elementum a, tristique quis elit. Nullam mollis vitae elit id mollis.</pre></div>
+<p>By creating our own layout component in <code>.vuepress/theme/Layout.vue</code>, we are no longer using the default theme. When we restart our dev server with <code>yarn dev</code>, we’ll see our homepage rendered using our custom-built layout component:</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/10/vuepress-demo-screen2.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/10/vuepress-demo-screen2.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/10/vuepress-demo-screen2.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/10/vuepress-demo-screen2.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/10/vuepress-demo-screen2.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/10/vuepress-demo-screen2.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/10/vuepress-demo-screen2.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/10/vuepress-demo-screen2.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/10/vuepress-demo-screen2.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/10/vuepress-demo-screen2.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/10/vuepress-demo-screen2.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/10/vuepress-demo-screen2.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/10/vuepress-demo-screen2.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/10/vuepress-demo-screen2.png" class="" /></p>
+
+<p>Not a bad start, but a blog needs posts, right? About that…</p>
+
+<h2 id="creating-different-layouts">Creating Different Layouts</h2>
+
+<p>In order to make an effective blog, we should have at minimum two different views: a <strong>single</strong> view, for reading a post, and an <strong>index</strong> view, where we can browse a list of posts to select the one we want to read.</p>
+
+<p>To achieve this, I’ve decided to create two new components — <code>Single.vue</code> and <code>Index.vue</code> — and add some logic to <code>Layout.vue</code> to determine which one should be used for that page.</p>
+
+<h3 id="single-view">Single View</h3>
+
+<p>Our <code>Single.vue</code> template is pretty simple:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;template&gt;
+    &lt;div&gt;
+        &lt;div class=&#34;backlink&#34;&gt;
+            &lt;a href=&#34;/&#34;&gt;← Home&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;content&#34;&gt;
+            &lt;h1&gt;{{ $page.frontmatter.title }}&lt;/h1&gt;
+            &lt;Content /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {};
+&lt;/script&gt;</pre></div>
+<p>For simplicity’s sake, I’ve just added a link to navigate back to the homepage on every post. The rest of the template looks a lot like the body of our <code>Layout.vue</code> component.</p>
+
+<h3 id="index-view">Index View</h3>
+
+<p>In our index view, we still want to display the index page’s content, and then display a collection of posts beneath that.</p>
+
+<p>Our template uses <code>v-for</code> to iterate over all of the posts in our <code>posts</code> property. In order to populate the <code>posts</code> variable, we add it to our component as a <a href="https://vuejs.org/v2/guide/computed.html#Computed-Properties">computed property</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;template&gt;
+    &lt;div&gt;
+        &lt;div class=&#34;content&#34;&gt;
+            &lt;h1&gt;{{ $page.frontmatter.title }}&lt;/h1&gt;
+            &lt;Content /&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;articles&#34;&gt;
+            &lt;article class=&#34;post section&#34; v-for=&#34;post in posts&#34;&gt;
+                &lt;h2 class=&#34;subtitle is-4&#34;&gt;{{ post.title }}&lt;/h2&gt;
+                &lt;p&gt;{{ post.frontmatter.excerpt }}&lt;/p&gt;
+                &lt;a :href=&#34;post.path&#34;&gt;Read More →&lt;/a&gt;
+            &lt;/article&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+    computed: {
+        posts() {
+            return this.$site.pages
+                .filter(page =&gt; page.path.endsWith(&#34;.html&#34;) &amp;&amp; page.path.startsWith(this.$page.path))
+                .sort((a, b) =&gt; Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+        }
+    }
+};
+&lt;/script&gt;</pre></div>
+<p><code>this.$site.pages</code> contains all of the pages in our site. By filtering based on the <code>path</code> property of these pages, we include only single pages (those that end in <code>.html</code>) and are descendants of the current page. Finally, we sort them by the date in their front matter.</p>
+
+<h3 id="switching-the-view">Switching the View</h3>
+
+<p>To determine whether to show the <code>Index.vue</code> or <code>Single.vue</code> component, we need to add some logic to our <code>Layout.vue</code> component. We’ll replace the template code that loads the Content component with the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;section class=&#34;section&#34;&gt;
+    &lt;div class=&#34;container&#34;&gt;
+        &lt;Index v-if=&#34;isIndex&#34; /&gt;
+        &lt;Single v-if=&#34;!isIndex&#34; /&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</pre></div>
+<p><code>v-if</code> will only render the component if the statement inside evaluates to true. We will define <code>isIndex</code> as another <strong>computed property</strong>, this time in <code>Layout.vue</code>. <code>isIndex</code> will return true if the page path ends in <code>/</code>, and false otherwise. Since our single pages end in <code>.html</code>, and the index pages end in <code>/</code>, this will ensure that any <code>index.md</code> file runs the <code>Index.vue</code> component, and everything else runs the <code>Single.vue</code> component.</p>
+
+<p>The new <code>Layout.vue</code> looks like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;template&gt;
+    &lt;div&gt;
+        &lt;header class=&#34;hero is-primary&#34;&gt;
+            &lt;div class=&#34;hero-body&#34;&gt;
+                &lt;div class=&#34;container&#34;&gt;
+                    &lt;h1 class=&#34;title&#34;&gt;{{ $site.title }}&lt;/h1&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+        &lt;section class=&#34;section&#34;&gt;
+            &lt;div class=&#34;container&#34;&gt;
+                &lt;Index v-if=&#34;isIndex&#34; /&gt;
+                &lt;Single v-if=&#34;!isIndex&#34; /&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import Index from &#39;./Index&#39;;
+import Single from &#39;./Single&#39;;
+export default {
+    components: {
+        Index,
+        Single
+    },
+    computed: {
+        isIndex() {
+            return this.$page.path.endsWith(&#34;/&#34;);
+        }
+    }
+};
+&lt;/script&gt;</pre></div>
+<p>After we add a couple sample posts, our homepage now displays a list of our posts in addition to the page content:</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/10/vuepress-demo-screen3.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/10/vuepress-demo-screen3.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/10/vuepress-demo-screen3.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/10/vuepress-demo-screen3.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/10/vuepress-demo-screen3.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/10/vuepress-demo-screen3.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/10/vuepress-demo-screen3.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/10/vuepress-demo-screen3.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/10/vuepress-demo-screen3.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/10/vuepress-demo-screen3.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/10/vuepress-demo-screen3.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/10/vuepress-demo-screen3.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/10/vuepress-demo-screen3.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/10/vuepress-demo-screen3.png" class="" /></p>
+
+<h3 id="ejecting-the-default-theme">Ejecting the Default Theme</h3>
+
+<p>Now that you’ve seen some of the basics of how to work with VuePress layouts, you should take a peek under the hood of VuePress’ default theme. Create a new VuePress project and run <code>vuepress eject</code>. This will copy the files for default theme into your <code>.vuepress/theme</code> directory, allowing you to inspect and customize this feature-rich theme.</p>
+
+<p>VuePress is still a newcomer to the static site world: version 1.0 is currently in alpha, and this tutorial was done with version <code>0.14.4</code>. With its slick default theme and simple customization via Vue components, I look forward to seeing what this project  holds in the future.</p>
+
+<h2 id="have-something-to-add">Have something to add?</h2>
+
+<p><a style="background: #F60; display: inline-block; border-radius: 5px; color: white; padding: 2px 9px; font-size: 14px;" href="https://news.ycombinator.com/item?id=18203322">Discuss on Hacker News</a></p>
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "An Introduction to Theming in VuePress";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/an-introduction-to-theming-in-vuepress\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/an-introduction-to-theming-in-vuepress.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

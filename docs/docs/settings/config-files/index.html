@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Config Files | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Config Files" />
+<meta property="og:description" content="Yakkl stores the settings and configuration of the CMS for each site in a .yakkl/ folder in your site’s source code. This allows developers to create default configurations that can be shared between multiple sites, and to deliver source code with Yakkl CMS pre-configured.
+When importing a new site, a .yakkl/ folder will be added to your site’s source. Any changes made to your CMS’ configuration will be committed to your site’s source in this folder." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/settings/config-files/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg" /><meta property="og:image:alt" content="Yakkl stores the settings and configuration of the CMS for each site in a .yakkl/ folder in your site’s source code. This allows developers to create default configurations that can be shared between multiple sites, and to deliver source code with Yakkl CMS pre-configured.
+When importing a new site, a .yakkl/ folder will be added to your site’s source. Any changes made to your CMS’ configuration will be committed to your site’s source in this folder." /><meta property="article:published_time" content="2017-12-31T04:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2018-07-25T04:00:00&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="docs" />
+  <meta itemprop="name" content="Config Files">
+<meta itemprop="description" content="Yakkl stores the settings and configuration of the CMS for each site in a .yakkl/ folder in your site’s source code. This allows developers to create default configurations that can be shared between multiple sites, and to deliver source code with Yakkl CMS pre-configured.
+When importing a new site, a .yakkl/ folder will be added to your site’s source. Any changes made to your CMS’ configuration will be committed to your site’s source in this folder."><meta itemprop="datePublished" content="2017-12-31T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-07-25T04:00:00&#43;00:00" /><meta itemprop="wordCount" content="965"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg"/><meta name="twitter:title" content="Config Files"/>
+<meta name="twitter:description" content="Yakkl stores the settings and configuration of the CMS for each site in a .yakkl/ folder in your site’s source code. This allows developers to create default configurations that can be shared between multiple sites, and to deliver source code with Yakkl CMS pre-configured.
+When importing a new site, a .yakkl/ folder will be added to your site’s source. Any changes made to your CMS’ configuration will be committed to your site’s source in this folder."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-docs kind-page type-docs ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container docs">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the docs..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul><div class="docs-nav-items"><h3>Welcome</h3>
+    <ul><li><a href="/docs/welcome/">Introduction</a></li></ul><h3>Quick Start</h3>
+    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li><li><a href="/docs/quickstart/setup-site/">Setup Your Site</a></li><li><a href="/docs/quickstart/configure-cms/">Configure the CMS</a></li></ul><h3>Git Sync</h3>
+    <ul><li><a href="/docs/git-sync/">Connecting to a Source Provider</a></li><li><a href="/docs/git-sync/github/">GitHub</a></li><li><a href="/docs/git-sync/gitlab/">GitLab</a></li><li><a href="/docs/git-sync/bitbucket/">Bitbucket</a></li><li><a href="/docs/git-sync/azure-devops/">Azure DevOps</a></li><li><a href="/docs/git-sync/manual-setup/">Manual Setup</a></li></ul><h3>Editing</h3>
+    <ul><li><a href="/docs/editing/">Managing Content</a></li><li><a href="/docs/editing/markdown-editor/">Markdown Editor</a></li><li><a href="/docs/editing/front-matter/">Front Matter</a></li><li><a href="/docs/editing/data-files/">Data Files</a></li><li><a href="/docs/editing/menus/">Menus</a></li><li><a href="/docs/editing/media-library/">Media Library</a></li><li><a href="/docs/editing/remote-admin/">Remote Admin</a></li></ul><h3>Media</h3>
+    <ul><li><a href="/docs/media/">Storing Media Files</a></li></ul><h3>Settings &amp; Configuration</h3>
+    <ul><li><a href="/docs/settings/">All Settings</a></li><li><a href="/docs/settings/front-matter-templates/">Front Matter Templates</a></li><li><a href="/docs/settings/fields/">Fields</a></li><li><a href="/docs/settings/content-sections/">Sidebar Configuration</a></li><li><a href="/docs/settings/config-files/" class="active">Config Files</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/config-files/#site-settings">Site Settings</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/config-files/#front-matter-templates">Front Matter Templates</a>
+            </li></ul><li><a href="/docs/settings/snippets/">Snippets</a></li><li><a href="/docs/settings/collaborators/">Collaborators &amp; Teams</a></li></ul><h3>Organizations</h3>
+    <ul><li><a href="/docs/collaboration/organizations/">About Organizations</a></li></ul><h3>Previews</h3>
+    <ul></ul><h3>Hosting</h3>
+    <ul><li><a href="/docs/hosting/">Hosting Options</a></li><li><a href="/docs/hosting/s3-cloudfront-stack/">AWS</a></li><li><a href="/docs/hosting/github-pages/">GitHub Pages</a></li><li><a href="/docs/hosting/ftp/">FTP/SFTP</a></li><li><a href="/docs/hosting/webhooks/">Webhooks</a></li></ul><h3>Developer Guides</h3>
+    <ul><li><a href="/docs/guides/developing-with-hugo/">Hugo</a></li><li><a href="/docs/guides/developing-with-jekyll/">Jekyll</a></li><li><a href="/docs/guides/developing-with-gatsby/">Gatsby</a></li></ul><h3>Other</h3>
+    <ul><li><a href="/docs/troubleshooting/">Troubleshooting</a></li><li><a href="/docs/faqs/">Frequently Asked Questions</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="/docs/import-button/">Import Button</a></li><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul><h3>Pro</h3>
+    <ul><li><a href="/docs/pro/features/pro-plans/">Pro Plans</a></li><li><a href="/docs/pro/features/audit-logging/">Audit Logging</a></li><li><a href="/docs/pro/features/single-sign-on/">Single Sign-on</a></li></ul></div></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><main class="docs-container">
+    <div class="sidebar">
+      <aside class="sidebar-inner">
+        <h2>
+          <a href="/docs">
+            Docs
+          </a>
+        </h2><div class="docs-nav-items"><h3>Welcome</h3>
+    <ul><li><a href="/docs/welcome/">Introduction</a></li></ul><h3>Quick Start</h3>
+    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li><li><a href="/docs/quickstart/setup-site/">Setup Your Site</a></li><li><a href="/docs/quickstart/configure-cms/">Configure the CMS</a></li></ul><h3>Git Sync</h3>
+    <ul><li><a href="/docs/git-sync/">Connecting to a Source Provider</a></li><li><a href="/docs/git-sync/github/">GitHub</a></li><li><a href="/docs/git-sync/gitlab/">GitLab</a></li><li><a href="/docs/git-sync/bitbucket/">Bitbucket</a></li><li><a href="/docs/git-sync/azure-devops/">Azure DevOps</a></li><li><a href="/docs/git-sync/manual-setup/">Manual Setup</a></li></ul><h3>Editing</h3>
+    <ul><li><a href="/docs/editing/">Managing Content</a></li><li><a href="/docs/editing/markdown-editor/">Markdown Editor</a></li><li><a href="/docs/editing/front-matter/">Front Matter</a></li><li><a href="/docs/editing/data-files/">Data Files</a></li><li><a href="/docs/editing/menus/">Menus</a></li><li><a href="/docs/editing/media-library/">Media Library</a></li><li><a href="/docs/editing/remote-admin/">Remote Admin</a></li></ul><h3>Media</h3>
+    <ul><li><a href="/docs/media/">Storing Media Files</a></li></ul><h3>Settings &amp; Configuration</h3>
+    <ul><li><a href="/docs/settings/">All Settings</a></li><li><a href="/docs/settings/front-matter-templates/">Front Matter Templates</a></li><li><a href="/docs/settings/fields/">Fields</a></li><li><a href="/docs/settings/content-sections/">Sidebar Configuration</a></li><li><a href="/docs/settings/config-files/" class="active">Config Files</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/config-files/#site-settings">Site Settings</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/settings/config-files/#front-matter-templates">Front Matter Templates</a>
+            </li></ul><li><a href="/docs/settings/snippets/">Snippets</a></li><li><a href="/docs/settings/collaborators/">Collaborators &amp; Teams</a></li></ul><h3>Organizations</h3>
+    <ul><li><a href="/docs/collaboration/organizations/">About Organizations</a></li></ul><h3>Previews</h3>
+    <ul></ul><h3>Hosting</h3>
+    <ul><li><a href="/docs/hosting/">Hosting Options</a></li><li><a href="/docs/hosting/s3-cloudfront-stack/">AWS</a></li><li><a href="/docs/hosting/github-pages/">GitHub Pages</a></li><li><a href="/docs/hosting/ftp/">FTP/SFTP</a></li><li><a href="/docs/hosting/webhooks/">Webhooks</a></li></ul><h3>Developer Guides</h3>
+    <ul><li><a href="/docs/guides/developing-with-hugo/">Hugo</a></li><li><a href="/docs/guides/developing-with-jekyll/">Jekyll</a></li><li><a href="/docs/guides/developing-with-gatsby/">Gatsby</a></li></ul><h3>Other</h3>
+    <ul><li><a href="/docs/troubleshooting/">Troubleshooting</a></li><li><a href="/docs/faqs/">Frequently Asked Questions</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="/docs/import-button/">Import Button</a></li><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul><h3>Pro</h3>
+    <ul><li><a href="/docs/pro/features/pro-plans/">Pro Plans</a></li><li><a href="/docs/pro/features/audit-logging/">Audit Logging</a></li><li><a href="/docs/pro/features/single-sign-on/">Single Sign-on</a></li></ul></div></aside>
+    </div>
+    <section class="docs-content">
+      <div class="container md-content">
+        <h1>Config Files</h1>
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+
+<p>Yakkl stores the settings and configuration of the CMS for each site in a <code>.yakkl/</code> folder in your site’s source code. This allows developers to create default configurations that can be shared between multiple sites, and to deliver source code with Yakkl CMS pre-configured.</p>
+
+<p>When importing a new site, a <code>.yakkl/</code> folder will be added to your site’s source. Any changes made to your CMS’ configuration will be committed to your site’s source in this folder.</p>
+
+<h2 id="site-settings">Site Settings</h2>
+
+<p>Your site settings are configured from <code>.yakkl/settings.yml</code>.</p>
+
+<p>The following is an example of <code>settings.yml</code> for a Hugo site.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">---
+upload_path: &#34;/static/uploads/:year:/:month:/:day:&#34;
+frontmatter_file_url_template: &#34;/uploads/:year:/:month:/:day:&#34;
+body_file_url_template: &#34;/uploads/:year:/:month:/:day:&#34;
+new_page_extension: md
+auto_deploy: false
+admin_path: &#34;/admin&#34;
+webhook_url: http://example.com/webhook
+sections:
+
+- path: content
+  label: Pages
+  create: all
+  # Imported pages without a FMT assigned
+  # will automatically use &#34;pages&#34;
+
+- path: content/posts
+  label: Posts
+  create: all
+  # use the &#34;templates&#34; parameter to control
+  # which templates can be used for new content
+  # in this section. First listed template
+  # is the default option.
+  templates:
+  - posts
+
+# items in content/secrets is hidden from menu
+- path: content/secrets
+  hidden: true
+
+# items in content/products can be edited but not created
+- path: content/products
+  label: Products
+  create: none
+version: 0.38.1
+---</pre></div>
+<h3 id="options">Options</h3>
+
+<h4 id="site-settings-admin-path">Admin Path <code>admin_path: string</code></h4>
+
+<p>Allows you to configure the path where the Remote Admin will be deployed.</p>
+
+<hr />
+
+<h4 id="site-settings-upload-path">Upload Path <code>upload_path: string</code></h4>
+
+<p>Allows you to configure the path where media assets are uploaded</p>
+
+<hr />
+
+<h4 id="site-settings-front-matter-file-url">Front Matter File URL Template <code>frontmatter_file_url_template: string</code></h4>
+
+<p>Allows you to configure the path that is set when adding images to Front Matter Fields. <em>Note: this value is set at upload time.</em></p>
+
+<hr />
+
+<h4 id="site-settings-body-file-url">Body File URL Template <code>body_file_url_template: string</code></h4>
+
+<p>Allows you to configure the path that is used when adding images to the body of a page. <em>Note: this value is set at upload time.</em></p>
+
+<hr />
+
+<h4 id="site-settings-new-page-extension">New Page Extension <code>new_page_extension: md|html</code></h4>
+
+<p>Allows you to configure whether new pages are created as <code>.md</code> or <code>.html</code> files.</p>
+
+<hr />
+
+<h4 id="site-settings-auto-deploy">Auto Deploy <code>auto_deploy: boolean</code></h4>
+
+<p>Allows you to configure if publishing should be triggered when a commit is made to the source repository.</p>
+
+<hr />
+
+<h4 id="site-settings-webhook-url">Webhook URL <code>webhook_url: string</code></h4>
+
+<p>Allows you to provide a <a href="/docs/hosting/webhooks/">webhook</a> to be triggered when events occur in Yakkl.</p>
+
+<hr />
+
+<h4 id="site-settings-version">Version <em style="font-weight: normal;">(Hugo-only)</em> <code>version: string</code></h4>
+
+<p>This allows you to configure the version of Hugo your site uses. This is limited to the latest versions of Hugo <a href="https://yakkl.com/docs/faq/what-versions-of-hugo-do-you-support/">supported by Yakkl</a>.</p>
+
+<hr />
+
+<h4 id="site-settings-content-sections">Content Sections <code>sections: Array</code></h4>
+
+<p>This setting allows you to tell Yakkl which parts of your site contain editable content files.</p>
+
+<p><a href="/docs/settings/content-sections">View the full Content Section documentation</a></p>
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>Type of content</td>
+<td><code>directory</code>,<code>document</code>,<code>heading</code>,<code>jekyll-pages</code>,<code>jekyll-posts</code></td>
+<td><code>directory</code></td>
+</tr>
+
+<tr>
+<td><code>label</code></td>
+<td>Text to display in Yakkl menu</td>
+<td>String</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<td><code>path</code></td>
+<td>Path to folder from repository root (only applies to <code>directory</code> type)</td>
+<td>String</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<td><code>match</code></td>
+<td>Glob of files to match inside of path (only applies to <code>directory</code> type)</td>
+<td>String (Fileglob)</td>
+<td><code>**/*</code></td>
+</tr>
+
+<tr>
+<td><code>exclude</code></td>
+<td>Glob pattern of files to exclude (only applies to <code>directory</code> type)</td>
+<td>String (Fileglob)</td>
+<td>None</td>
+</tr>
+
+<tr>
+<td><code>create</code></td>
+<td>Restrictions on creating new content items</td>
+<td><code>all</code>, <code>documents</code>, <code>none</code></td>
+<td><code>all</code></td>
+</tr>
+
+<tr>
+<td><code>templates</code></td>
+<td>Control Which Front Matter Templates can be used in section</td>
+<td>Array</td>
+<td>All templates</td>
+</tr>
+
+<tr>
+<td><code>new_doc_ext</code></td>
+<td>File extension for new documents created in this section</td>
+<td>String</td>
+<td>Value of <strong>New File Format</strong> in Yakkl Settings</td>
+</tr>
+
+<tr>
+<td><code>read_only</code></td>
+<td>Prevent content from being edited (only applies to <code>document</code> type)</td>
+<td>Boolean</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+
+
+<h2 id="front-matter-templates">Front Matter Templates</h2>
+
+<p>The configuration files for Front Matter Templates is found in <code>.yakkl/front_matter/templates/</code>. Each Front Matter Template is stored as a separate file.</p>
+
+<p>The following is an example of a front matter template configuration file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">homepage.yml
+---
+pages:
+- index.md
+hide_body: false
+fields:
+- name: title
+  default: &#39;&#39;
+  label: Title
+  hidden: false
+  type: text
+- name: publishDate
+  default: &#39;&#39;
+  label: Date
+  hidden: false
+  type: datetime
+- name: Categories
+  default: []
+  label: Categories
+  hidden: false
+  type: list
+---</pre></div>
+<h3 id="options-1">Options</h3>
+
+<h4 id="fmt-settings-pages">Pages <code>pages: array</code></h4>
+
+<p>Provide an array of relative page paths that you want the front matter template to apply to.</p>
+
+<p>For Jekyll, provide the relative path from the project root, e.g, <code>_posts/2017-01-01-example.md</code>.</p>
+
+<p>For Hugo, provide the relative path from your content directory, e.g, <code>posts/2017-01-01-example.md</code>.</p>
+
+<p><em>Note: if a page is defined in multiple Front Matter Templates, the last Front Matter Template in alphanumerically order will be applied.</em></p>
+
+<hr />
+
+<h4 id="fmt-settings-hide-body">Hide Body <code>hide_body: boolean</code></h4>
+
+<p>Toggle the display of the body editor on or off for this Front Matter Template.</p>
+
+<hr />
+
+<h4 id="fmt-settings-fields">Fields <code>fields: array</code></h4>
+
+<p>The array of fields in this front matter template. They follow a standard format:</p>
+
+<ul>
+<li><code>type</code> <code>string</code> The field type.</li>
+<li><code>name</code> <code>string</code> The name or key of the field</li>
+<li><code>label</code> <code>string</code> The label displayed in the CMS interface</li>
+<li><code>description</code> <code>string</code> Help text that appears above the field</li>
+<li><code>hidden</code> <code>boolean</code> Toggle display of the field in the interface on or off</li>
+<li><code>config</code> <code>object</code> Field-specific configuration options</li>
+<li><code>fields</code> <code>array</code> An array of fields. For field groups and repeatable field groups only.</li>
+</ul>
+
+<p>For a comprehensive overview of field configuration, see the <a href="/docs/settings/fields">field type documentation</a>.</p>
+
+<h3 id="removing-files">Removing Files</h3>
+
+<p>To prevent the accidental deletion of Front Matter Templates, Front Matter Templates <strong>must</strong> be removed using the interface in the CMS.</p>
+
+<p>Any configuration files removed from the repo will remain in the CMS and be re-added to your site’s source on the next save or publish unless removed in Yakkl.</p>
+
+<h3 id="renaming-files">Renaming Files</h3>
+
+<p>Changing the name of a Front Matter Template in Yakkl will rename the config file in the repository.</p>
+
+<p>Changing the file name of a config file in your repository will not rename the Front Matter Template in Yakkl. Instead, a new Front Matter Template will be created with the new name, and the original template will remain in Yakkl.</p>
+
+<h3 id="adding-new-files">Adding New Files</h3>
+
+<p>New Front Matter Templates can be added to your repository, and will be added to the CMS upon import.</p>
+
+<p>Front Matter Template config files have a strict naming convention:</p>
+
+<ul>
+<li>File names must be all lowercase</li>
+<li>File names must use dashes in place of spaces</li>
+<li>File names can not contain underscores or other special characters</li>
+</ul>
+
+<p>E.g, <code>Example Template</code> becomes <code>example-template.yml</code></p>
+
+
+        <nav class="pagination"><a href="/docs/settings/content-sections/" rel="prev"><span class="prev-doc">Sidebar Configuration</span></a><a href="/docs/settings/snippets/" rel="next"><span class="next-doc">Snippets</span></a></nav><hr />
+        <div class="doc--info">
+          <span class="doc--meta-label">Last updated on</span>
+          <span class="doc--date">July 25, 2018</span>
+        </div>
+        <div class="post--feedback">
+          <p><small>Caught a mistake or want to contribute to the docs? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/docs/settings/config-files.md" target="_blank">Github</a>!</small></p>
+        </div></div>
+    </section>
+  </main><footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

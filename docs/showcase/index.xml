@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Showcase on Yakkl.com</title>
+    <link>https://yakkl.com/showcase/</link>
+    <description>Recent content in Showcase on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Sun, 31 Dec 2017 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/showcase/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Boris FX</title>
+      <link>https://yakkl.com/showcase/borisfx/</link>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://yakkl.com/showcase/borisfx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Developer Ecosystem</title>
+      <link>https://yakkl.com/showcase/developerecosystem/</link>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://yakkl.com/showcase/developerecosystem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Small Multiples - Data Visualization Specialists</title>
+      <link>https://yakkl.com/showcase/smallmultiples/</link>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://yakkl.com/showcase/smallmultiples/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yieldmo - Data By Design</title>
+      <link>https://yakkl.com/showcase/yieldmo/</link>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://yakkl.com/showcase/yieldmo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

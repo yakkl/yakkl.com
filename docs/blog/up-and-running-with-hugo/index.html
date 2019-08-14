@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Up &amp; Running With Hugo Part I: Building Your First Site | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content="Build a working static site using Hugo in less than 30 minutes /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Up &amp; Running With Hugo Part I: Building Your First Site" />
+<meta property="og:description" content="Build a working static site using Hugo in less than 30 minutes" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/up-and-running-with-hugo/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_title.png" /><meta property="og:image:alt" content="Build a working static site using Hugo in less than 30 minutes" /><meta property="article:published_time" content="2018-03-09T04:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2018-03-09T05:00:00-04:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta itemprop="name" content="Up &amp; Running With Hugo Part I: Building Your First Site">
+<meta itemprop="description" content="Build a working static site using Hugo in less than 30 minutes"><meta itemprop="datePublished" content="2018-03-09T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-03-09T05:00:00-04:00" /><meta itemprop="wordCount" content="1792"><meta itemprop="image" content="https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_title.png">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_title.png"/><meta name="twitter:title" content="Up &amp; Running With Hugo Part I: Building Your First Site"/>
+<meta name="twitter:description" content="Build a working static site using Hugo in less than 30 minutes"/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_title.png" alt="Up &amp; Running With Hugo Part I: Building Your First Site" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_title.png" class="" />
+              
+        </div><div class="container">
+      <h1 class="post--title">Up &amp; Running With Hugo Part I: Building Your First Site</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">March 9, 2018</span><span>in 
+            <a href="/categories/hugo" class="post--category" data-category="hugo">
+              Hugo
+            </a>,
+            <a href="/categories/frontend-friday" class="post--category" data-category="frontend-friday">
+              Frontend friday
+            </a></span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<!--<div class="shortcode-tip"><p>This guide was most recently updated on <strong>March 9, 2018.</strong></p>
+
+</div>
+
+--- -->
+
+<p>The popular static site generator written in GoLang - <a href="https://gohugo.io" title="Hugo Website">Hugo</a> - has taken the community by storm. It brings all the benefits of a static site generator - 100% Flexibility, Security, Speed - but also steals the show otherwise 👉 <a href="/blog/hugo-vs-jekyll-benchmark/" title="Hugo + Jekyll Benchmarked Article">Hugo + Jekyll Benchmarked</a>. In fact, the <a href="https://yakkl.com" title="yakkl.com">Yakkl.com</a> website is built with Hugo.</p>
+
+<p>For this week on <a href="https://yakkl.com/categories/frontend-friday/" title="frontend friday tag"><em>Frontend Friday</em></a><em>,</em> we&rsquo;ll be covering how to get set up with <a href="https://gohugo.io" title="Hugo Website">Hugo</a> on your local machine, including setting up a theme and customizing it, as well as writing your own CSS &amp; JS.</p>
+
+<p>How is this different from Hugo&rsquo;s Quick Start guide? We&rsquo;ll be using <a href="https://github.com/yakkl/hugo-boilerplate" title="See Hugo Boilerplate on GitHub"><em>Hugo Boilerplate</em></a><em>,</em> a continuously maintained boilerplate project for Hugo sites that offers a modern developer workflow on top of Hugo.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+<li><a href="#1-setting-up-hugo">Setting up Hugo on your local machine</a></li>
+<li><a href="#2-setting-up-your-site">Adding Content &amp; Installing a Theme</a></li>
+<li><a href="#3-customizing-your-site">Customizing Your Site</a></li>
+<li><a href="#4-customizing-your-theme">Customizing Your Theme</a></li>
+<li><a href="#5-next-steps">Next Steps</a></li>
+</ol>
+
+<h2 id="1-setting-up-hugo">1) Setting Up Hugo</h2>
+
+<p>To get started, <a href="https://github.com/yakkl/hugo-boilerplate/archive/master.zip" title="Download from GitHub">download the Hugo Boilerplate</a>, and unzip the archive somewhere on your computer. You&rsquo;ll also have to have <a href="https://nodejs.org">Node.js</a> and <a href="https://www.npmjs.com/">NPM</a> installed, just follow the instructions on <a href="https://nodejs.org/en/download/">Node&rsquo;s download page</a>.</p>
+
+<!-- <div class="shortcode-tip"><p>Already have a Hugo site? In that case, feel free to skip ahead to part two of this guide: <em>Up &amp; Running With Hugo, Part 2: Continuous Integration &amp; Continuous Deployments</em></p>
+
+</div> -->
+
+<p>Hugo generates a project structure for you automatically. In the boilerplate project, this is the <code>hugo/</code> directory. Inside of this directory are various folders containing your site&rsquo;s content, layouts, and assets (e.g, CSS, JS, and images). Take a look at the breakdown of the boilerplates structure outlined below - I left out a few directories and files for clarity:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">.
+├── hugo/                  // The Hugo project; content, data and static files
+|   ├── .yakkl/         // Contains Yakkl.com configuration files
+|   ├── content/           // Where all site content is stored 
+|   ├── data/              // TOML, YAML or JSON files containing site data 
+|   ├── layouts/           // Your site&#39;s layouts
+|   |   ├── partials/      // Your site&#39;s partials
+|   |   ├── shortcodes/    // Your site&#39;s shortcodes
+|   ├── static/            // Where all static files live
+|   |   ├── css/           // Where compiled CSS files live
+|   |   ├── img/           // Where user images are stored
+|   |   ├── js/            // Where compiled JS files live
+|   |   └── svg/           // Where svg are stored
+|   └── config.toml        // The Hugo configuration file
+└─── src/
+     ├── css               // CSS/SCSS source files to be compiled to /css/
+     └── js                // JS source files to be compiled to /js/</pre></div>
+<p>To get the project up and running, open up a terminal window and navigate to the boilerplate folder (either <code>hugo-boilerplate/</code> or <code>hugo-boilerplate-master/</code>):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd path/to/hugo-boilerplate/</pre></div>
+<p>Then install all of the project dependencies by running:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">npm install</pre></div>
+<p>To start the development server and open it up in your browser, simply run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">npm start</pre></div>
+<div class="shortcode-tip"><p>Want to get started without the Hugo Boilerplate - Check out <a href="https://yakkl.com/docs/guides/developing-with-hugo/">our other guide</a>.</p>
+
+</div>
+
+<h2 id="2-setting-up-your-site">2) Setting Up Your Site</h2>
+
+<p>To get started, we&rsquo;re going to add new content to the site. To do so, we&rsquo;ll need to update the content to the <code>hugo/content/</code> folder.</p>
+
+<h2 id="update-a-post">Update A Post</h2>
+
+<p>To start, let&rsquo;s update the example post shipped with the <em>Hugo Boilerplate</em>. Open up <code>hugo/content/posts/example.md</code> in your text editor. You&rsquo;ll see <code>title</code> front matter field and some example markdown content.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">---
+title:  &#34;Welcome to Hugo!&#34;
+---
+You’ll find this post in your `content/posts` directory.
+
+To add new posts, simply add a file in the `content/posts` directory that follows the convention `name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea of how it works.
+
+Hugo also offers powerful support for code snippets:
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+    <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">print_hi</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>) {
+      <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hi, &#34;</span>, <span style="color:#a6e22e">name</span>)
+    }
+    
+    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+      <span style="color:#a6e22e">print_hi</span>(<span style="color:#e6db74">&#34;Tom&#34;</span>)
+    }
+    <span style="color:#75715e">//=&gt; prints &#39;Hi, Tom&#39; to STDOUT.
+</span><span style="color:#75715e"></span>    </code></pre></div>
+
+Check out the [Hugo docs][hugo-docs] for more info on how to get the most out of Hugo. File all bugs/feature requests at [Hugo’s GitHub repo][hugo-gh]. If you have questions, you can ask them on [Hugo Community][hugo-community].
+
+[hugo-docs]: https://gohugo.io/documentation/
+[hugo-gh]:   https://github.com/gohugoio/hugo
+[hugo-community]: https://discourse.gohugo.io/</pre></div>
+<p>This post is missing a date! Try adding it by adding the following to the post&rsquo;s <em>Front Matter</em>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">date: &#34;YYYY-MM-DDTHH:MM:SS-00:00&#34;</pre></div>
+<div class="shortcode-tip"><p><em>Replace</em> <code>YYYY-MM-DDTHH:MM:SS-00:00</code> <em>with a valid date, e.g,</em> <code>2018-01-01T12:42:00-00:00</code>. If your date is in the future, Hugo wont build this post when doing production builds.</p>
+
+</div>
+
+<p>Save your changes and then view the updated post in your browser at <a href="http://localhost:3000/">http://localhost:3000/</a>. The date in front of your &ldquo;Welcome to Hugo!&rdquo; post should have changed.</p>
+
+<h2 id="create-a-new-post">Create A New Post</h2>
+
+<p>Now let&rsquo;s try creating a new post. We&rsquo;ll use Hugo&rsquo;s built-in commands to generate our new post. In the boilerplate, Hugo is added as an NPM dependency, so we can access it by running:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">npm run hugo -- &lt;command&gt; --&lt;param&gt;</pre></div>
+<p>Create your first post by running:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">npm run hugo -- new posts/my-first-post.md</pre></div>
+<p>This will create your new post at <code>hugo/content/posts/my-first-post.md</code> as a markdown file. Open this file in your favorite text editor.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">---
+title: &#34;My First Post&#34;
+date: &#34;2018-01-31T14:24:17-04:00&#34;
+draft: true
+---</pre></div>
+<p>In this file, we have <em>Front Matter</em> (structured metadata for the page) that can be used in your templates. Below the front matter, we can add markdown content as well.</p>
+
+<p>Try adding the following to the file and then save your changes.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">## Hello world
+Hi, I am the *Hugo Boilerplate*. I hope you are enjoying this guide!</pre></div>
+<p>You can view the updated post in your browser at <a href="http://localhost:3000/posts/my-first-post/">http://localhost:3000/posts/my-first-post/</a>.</p>
+
+<h2 id="adding-a-theme">Adding A Theme</h2>
+
+<p>Right now your new site isn&rsquo;t looking very pretty. Let&rsquo;s fix that by adding a pre-built Hugo theme from the <a href="https://themes.gohugo.io/">Hugo Theme Gallery</a>, built by one of Hugo&rsquo;s great community contributors.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_1.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_1.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_1.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_1.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_1.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_1.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_1.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_1.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_1.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_1.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_1.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_1.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_1.png" title="Casper theme by @vjeantet" class="" /></p>
+
+<p>We&rsquo;re going to use the <a href="https://github.com/vjeantet/hugo-theme-casper">Casper</a> theme by <a href="https://github.com/vjeantet"><em>@vjeantet</em></a>. We&rsquo;ll do this by adding the theme to the <code>hugo/themes/</code> directory, specifically <code>hugo/themes/hugo-theme-casper/</code>. You&rsquo;ll have to add these inside your <code>hugo/</code> directory.</p>
+
+<p><a href="https://github.com/vjeantet/hugo-theme-casper/archive/master.zip">Download the theme</a>, unzip the archive and then copy the entire contents to <code>hugo/themes/hugo-theme-casper/</code>.</p>
+
+<p>Next, you&rsquo;ll need to update your site&rsquo;s configuration with any of the theme-specific configurations.</p>
+
+<p>Open <code>hugo/config.toml</code> in your favorite text editor, and replace the contents with the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">baseURL= &#34;/&#34;
+languageCode= &#34;en&#34;
+title= &#34;Hugo Boilerplate&#34;
+paginate = 5
+copyright = &#34;All rights reserved - 2018&#34;
+theme = &#34;hugo-theme-casper&#34;
+disableKinds = [&#34;taxonomy&#34;, &#34;taxonomyTerm&#34;]
+
+[params]
+  description = &#34;Welcome to my website&#34;
+  metadescription = &#34;Used as &#39;description&#39; meta tag for both home and index pages. If not set, &#39;description&#39; will be used instead&#34;
+  cover = &#34;&#34;
+  author = &#34;YOUR_NAME&#34;
+  authorlocation = &#34;Earth, Milky Way Galaxy&#34;
+  authorwebsite = &#34;&#34;
+  authorbio= &#34;&#34;
+  logo = &#34;&#34;
+  hjsStyle = &#34;default&#34;
+  paginatedsections = [&#34;posts&#34;]</pre></div>
+<p><em>For a full list of available configuration docs, see the</em> <a href="https://github.com/vjeantet/hugo-theme-casper#configuration"><em>theme documentation</em></a><em>.</em></p>
+
+<p>Finally, the boilerplate comes with some example layouts for developers that are building from scratch. Let&rsquo;s remove these for now by running:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">rm -r hugo/layouts/</pre></div>
+<p>Now head back over to the browser and check out your updated site!</p>
+
+<h2 id="3-customizing-your-site">3) Customizing Your Site</h2>
+
+<p>Now that we&rsquo;ve set up a basic working site with a theme, you&rsquo;ll probably want to personalize it.</p>
+
+<p>First, we&rsquo;ll customize the site params. Open up <code>hugo/config.toml</code> once more, and update the following as you see fit:</p>
+
+<ul>
+<li><code>title = &quot;Hugo Boilerplate&quot;</code></li>
+<li><code>description = &quot;Welcome to my website&quot;</code></li>
+<li><code>metadescription = &quot;Used as 'description' meta tag for both home and index pages. If not set, 'description' will be used instead&quot;</code></li>
+<li><code>author = &quot;YOUR_NAME&quot;</code></li>
+</ul>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_2.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_2.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_2.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_2.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_2.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_2.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_2.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_2.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_2.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_2.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_2.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_2.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_2.png" title="Casper theme with default styles and content" class="" /></p>
+
+<p>Next, we&rsquo;ll update the default hero image to something else. Open up <code>hugo/config.toml</code> and find <code>\[params\]</code>. Below, find the parameter <code>cover</code> and update it to <code>/img/darius-soodmand-116253.jpg</code>, and save your changes.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_3.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_3.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_3.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_3.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_3.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_3.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_3.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_3.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_3.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_3.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_3.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_3.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_3.png" title="Added a scenic image" class="" /></p>
+
+<p>Now head back to your browser to see your updated site. It won&rsquo;t look exactly like the screenshot above but don&rsquo;t worry we&rsquo;ll get there.</p>
+
+<h2 id="4-customizing-your-theme">4) Customizing Your Theme</h2>
+
+<p>Now that you&rsquo;ve customized your site to be a little more personalized, we&rsquo;ll focus on the most powerful aspect of Hugo and this boilerplate: <strong>powerful yet simple templating.</strong></p>
+
+<p>Earlier we added the Casper theme to the site, which allows Hugo to use all of the HTML layouts stored at <code>hugo/themes/hugo-theme-casper/layouts/</code> to generate your site.</p>
+
+<p>Now, we&rsquo;ll <em>extend</em> the theme by using Hugo&rsquo;s <strong>template inheritance.</strong></p>
+
+<p>Any layouts stored in <code>hugo/layouts/</code> will <em>override</em> any layout with the same name in theme&rsquo;s layouts directory, allowing us to customize our site without messing with the theme.</p>
+
+<h3 id="custom-css-javascript">Custom CSS &amp; Javascript</h3>
+
+<p>Along with <em>Hugo</em>, this boilerplate comes with a development server that automatically post-processes CSS &amp; JS for the browser. Any CSS, JS, or images found in the <code>src/</code> folder will be processed and automatically moved to <code>hugo/static/</code>.</p>
+
+<p>Let&rsquo;s add these to your theme so that you can customize it as needed. We&rsquo;ll copy the base layout of the theme and add the boilerplate&rsquo;s custom CSS and JS files to the layout.</p>
+
+<p>First, we&rsquo;ll copy the header partial of the theme to the <code>hugo/layouts/partials/</code> directory:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">mkdir -p hugo/layouts/partials/
+cp hugo/themes/hugo-theme-casper/layouts/partials/header.html hugo/layouts/partials/header.html</pre></div>
+<p>Open <code>hugo/layouts/partials/header.html</code> in your favorite text editor and find the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;{{ &#34;css/screen.css&#34; | relURL}}&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;{{ &#34;css/nav.css&#34; | relURL}}&#34; /&gt;</pre></div>
+<p>Below this add:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;{{ &#34;css/styles.min.css&#34; | relURL}}&#34; /&gt;</pre></div>
+<p>Next, we&rsquo;ll copy the partial <code>footer.html</code> to the <code>hugo/layouts/partials/</code> directory so we can add our custom JS:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cp hugo/themes/hugo-theme-casper/layouts/partials/footer.html hugo/layouts/partials/footer.html</pre></div>
+<p>Open <code>hugo/layouts/partials/footer.html</code> and find the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;script type=&#34;text/javascript&#34; src=&#34;{{&#34;js/jquery.js&#34; | relURL}}&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;{{&#34;js/jquery.fitvids.js&#34; | relURL}}&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;{{&#34;js/index.js&#34; | relURL}}&#34;&gt;&lt;/script&gt;</pre></div>
+<p>Below this add:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;script type=&#34;text/javascript&#34; src=&#34;{{&#34;js/scripts.min.js&#34; | relURL}}&#34;&gt;&lt;/script&gt;</pre></div>
+<p>Now all of your custom CSS and JS will be used on the site.</p>
+
+<p>Let&rsquo;s give it a try by expanding the height of the main header. Open <code>src/css/styles.css</code> and adding the following to the bottom of the file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">.tag-head.main-header {
+  height: 80vh;
+}</pre></div>
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_4.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_4.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_4.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_4.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_4.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_4.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_4.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_4.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_4.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_4.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_4.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_4.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/03/up_running_w_hugo_I_4.png" title="The final result" class="" /></p>
+
+<p>Head back over to your browser to see the final result!</p>
+
+<h2 id="5-next-steps">5) Next Steps</h2>
+
+<p>Now you&rsquo;re all set to begin building your static site with Hugo!</p>
+
+<p>Feel free to continue using the Casper theme, or start from scratch using the <code>hugo/layouts/</code> directory.</p>
+
+<div class="shortcode-tip"><p>Check out the example files in the <a href="https://github.com/yakkl-templates/hugo-boilerplate/tree/master/hugo/layouts"><em>Boilerplate repository</em></a> if you choose to start from scratch.</p>
+
+</div>
+
+<p>Check out the following further reading to learn more about Hugo:</p>
+
+<ul>
+<li><a href="http://gohugo.io/content-management/organization/">Content Organization in Hugo</a></li>
+<li><a href="http://gohugo.io/templates/introduction/">Introduction to Templating in Hugo</a></li>
+<li><a href="http://gohugo.io/getting-started/configuration/">Hugo configuration options</a></li>
+</ul>
+
+<h3 id="up-next">Up next</h3>
+
+<p>Next week we&rsquo;ll be releasing a post on setting up version control with Git to facilitate continuous integration and continuous deployment to various hosting providers using <a href="https://yakkl.com"><em>Yakkl</em></a><em>,</em> the CMS for static sites built with Hugo and Jekyll.</p>
+
+<div style="padding: 20px 40px;background: #f7f7f7;">  
+<h2>Join us every Friday 📅</h2>  
+<p><a href="/categories/frontend-friday/">Frontend Friday</a> is a weekly series where we write in-depth posts about modern web development.  </p>  
+<p><strong>Next week:</strong> <a href="https://yakkl.com/blog/up-and-running-with-hugo-part-2/">Up & Running with Hugo Part II: Continuous Integration & Continuous Deployments</a></p>  
+<p><strong>Last week:</strong> We looked at integrating a performant search into your static site: <a href="https://yakkl.com/blog/search-with-algolia-in-hugo/">Static search with Hugo + Algolia </a>.</p>  
+</div>
+
+<h2 id="have-something-to-add">Have something to add?</h2>
+
+<p><a style="background: #F60; display: inline-block; border-radius: 5px; color: white; padding: 2px 9px; font-size: 14px;" href="https://news.ycombinator.com/item?id=16552437">Discuss on Hacker News</a></p>
+
+<p><a href="#footer-cta">Subscribe to our newsletter</a> to get updated when the next article is released!</p>
+
+<!--### Last Week
+
+Last week we [released an article](/blog/hugo-and-jekyll-compared/) comparing two of the most popular static site generators, [_Hugo_](https://gohugo.io) and [_Jekyll_](https://jekyllrb.com). Check it out to learn which of these tools are the right tool for you or your business.-->
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "Up \x26 Running With Hugo Part I: Building Your First Site";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/up-and-running-with-hugo\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/up-and-running-with-hugo.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

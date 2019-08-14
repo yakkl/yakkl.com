@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Hosting Options | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Hosting Options" />
+<meta property="og:description" content="Yakkl will stop building and deploying sites on January 1st, 2020. We recommend to use a dedicated CI/CD platform like Netlify. Read our docs on how to deploy with Circle CI.
+ The Hosting settings allow you to use Yakkl to handle deployment of your static site. Yakkl can build your site and then deploy the static files to a hosting provider of your choice.
+Guides Yakkl has a selection of built-in hosting options that make hosting your static site easy." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/hosting/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg" /><meta property="og:image:alt" content="Yakkl will stop building and deploying sites on January 1st, 2020. We recommend to use a dedicated CI/CD platform like Netlify. Read our docs on how to deploy with Circle CI.
+ The Hosting settings allow you to use Yakkl to handle deployment of your static site. Yakkl can build your site and then deploy the static files to a hosting provider of your choice.
+Guides Yakkl has a selection of built-in hosting options that make hosting your static site easy." /><meta property="article:published_time" content="2017-12-31T04:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2017-12-31T04:00:00&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="docs" />
+  <meta itemprop="name" content="Hosting Options">
+<meta itemprop="description" content="Yakkl will stop building and deploying sites on January 1st, 2020. We recommend to use a dedicated CI/CD platform like Netlify. Read our docs on how to deploy with Circle CI.
+ The Hosting settings allow you to use Yakkl to handle deployment of your static site. Yakkl can build your site and then deploy the static files to a hosting provider of your choice.
+Guides Yakkl has a selection of built-in hosting options that make hosting your static site easy."><meta itemprop="datePublished" content="2017-12-31T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2017-12-31T04:00:00&#43;00:00" /><meta itemprop="wordCount" content="493"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg"/><meta name="twitter:title" content="Hosting Options"/>
+<meta name="twitter:description" content="Yakkl will stop building and deploying sites on January 1st, 2020. We recommend to use a dedicated CI/CD platform like Netlify. Read our docs on how to deploy with Circle CI.
+ The Hosting settings allow you to use Yakkl to handle deployment of your static site. Yakkl can build your site and then deploy the static files to a hosting provider of your choice.
+Guides Yakkl has a selection of built-in hosting options that make hosting your static site easy."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-docs kind-page type-docs ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container docs">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the docs..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul><div class="docs-nav-items"><h3>Welcome</h3>
+    <ul><li><a href="/docs/welcome/">Introduction</a></li></ul><h3>Quick Start</h3>
+    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li><li><a href="/docs/quickstart/setup-site/">Setup Your Site</a></li><li><a href="/docs/quickstart/configure-cms/">Configure the CMS</a></li></ul><h3>Git Sync</h3>
+    <ul><li><a href="/docs/git-sync/">Connecting to a Source Provider</a></li><li><a href="/docs/git-sync/github/">GitHub</a></li><li><a href="/docs/git-sync/gitlab/">GitLab</a></li><li><a href="/docs/git-sync/bitbucket/">Bitbucket</a></li><li><a href="/docs/git-sync/azure-devops/">Azure DevOps</a></li><li><a href="/docs/git-sync/manual-setup/">Manual Setup</a></li></ul><h3>Editing</h3>
+    <ul><li><a href="/docs/editing/">Managing Content</a></li><li><a href="/docs/editing/markdown-editor/">Markdown Editor</a></li><li><a href="/docs/editing/front-matter/">Front Matter</a></li><li><a href="/docs/editing/data-files/">Data Files</a></li><li><a href="/docs/editing/menus/">Menus</a></li><li><a href="/docs/editing/media-library/">Media Library</a></li><li><a href="/docs/editing/remote-admin/">Remote Admin</a></li></ul><h3>Media</h3>
+    <ul><li><a href="/docs/media/">Storing Media Files</a></li></ul><h3>Settings &amp; Configuration</h3>
+    <ul><li><a href="/docs/settings/">All Settings</a></li><li><a href="/docs/settings/front-matter-templates/">Front Matter Templates</a></li><li><a href="/docs/settings/fields/">Fields</a></li><li><a href="/docs/settings/content-sections/">Sidebar Configuration</a></li><li><a href="/docs/settings/config-files/">Config Files</a></li><li><a href="/docs/settings/snippets/">Snippets</a></li><li><a href="/docs/settings/collaborators/">Collaborators &amp; Teams</a></li></ul><h3>Organizations</h3>
+    <ul><li><a href="/docs/collaboration/organizations/">About Organizations</a></li></ul><h3>Previews</h3>
+    <ul></ul><h3>Hosting</h3>
+    <ul><li><a href="/docs/hosting/" class="active">Hosting Options</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/hosting/#guides">Guides</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/hosting/#other-options">Other Options</a>
+            </li></ul><li><a href="/docs/hosting/s3-cloudfront-stack/">AWS</a></li><li><a href="/docs/hosting/github-pages/">GitHub Pages</a></li><li><a href="/docs/hosting/ftp/">FTP/SFTP</a></li><li><a href="/docs/hosting/webhooks/">Webhooks</a></li></ul><h3>Developer Guides</h3>
+    <ul><li><a href="/docs/guides/developing-with-hugo/">Hugo</a></li><li><a href="/docs/guides/developing-with-jekyll/">Jekyll</a></li><li><a href="/docs/guides/developing-with-gatsby/">Gatsby</a></li></ul><h3>Other</h3>
+    <ul><li><a href="/docs/troubleshooting/">Troubleshooting</a></li><li><a href="/docs/faqs/">Frequently Asked Questions</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="/docs/import-button/">Import Button</a></li><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul><h3>Pro</h3>
+    <ul><li><a href="/docs/pro/features/pro-plans/">Pro Plans</a></li><li><a href="/docs/pro/features/audit-logging/">Audit Logging</a></li><li><a href="/docs/pro/features/single-sign-on/">Single Sign-on</a></li></ul></div></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><main class="docs-container">
+    <div class="sidebar">
+      <aside class="sidebar-inner">
+        <h2>
+          <a href="/docs">
+            Docs
+          </a>
+        </h2><div class="docs-nav-items"><h3>Welcome</h3>
+    <ul><li><a href="/docs/welcome/">Introduction</a></li></ul><h3>Quick Start</h3>
+    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li><li><a href="/docs/quickstart/setup-site/">Setup Your Site</a></li><li><a href="/docs/quickstart/configure-cms/">Configure the CMS</a></li></ul><h3>Git Sync</h3>
+    <ul><li><a href="/docs/git-sync/">Connecting to a Source Provider</a></li><li><a href="/docs/git-sync/github/">GitHub</a></li><li><a href="/docs/git-sync/gitlab/">GitLab</a></li><li><a href="/docs/git-sync/bitbucket/">Bitbucket</a></li><li><a href="/docs/git-sync/azure-devops/">Azure DevOps</a></li><li><a href="/docs/git-sync/manual-setup/">Manual Setup</a></li></ul><h3>Editing</h3>
+    <ul><li><a href="/docs/editing/">Managing Content</a></li><li><a href="/docs/editing/markdown-editor/">Markdown Editor</a></li><li><a href="/docs/editing/front-matter/">Front Matter</a></li><li><a href="/docs/editing/data-files/">Data Files</a></li><li><a href="/docs/editing/menus/">Menus</a></li><li><a href="/docs/editing/media-library/">Media Library</a></li><li><a href="/docs/editing/remote-admin/">Remote Admin</a></li></ul><h3>Media</h3>
+    <ul><li><a href="/docs/media/">Storing Media Files</a></li></ul><h3>Settings &amp; Configuration</h3>
+    <ul><li><a href="/docs/settings/">All Settings</a></li><li><a href="/docs/settings/front-matter-templates/">Front Matter Templates</a></li><li><a href="/docs/settings/fields/">Fields</a></li><li><a href="/docs/settings/content-sections/">Sidebar Configuration</a></li><li><a href="/docs/settings/config-files/">Config Files</a></li><li><a href="/docs/settings/snippets/">Snippets</a></li><li><a href="/docs/settings/collaborators/">Collaborators &amp; Teams</a></li></ul><h3>Organizations</h3>
+    <ul><li><a href="/docs/collaboration/organizations/">About Organizations</a></li></ul><h3>Previews</h3>
+    <ul></ul><h3>Hosting</h3>
+    <ul><li><a href="/docs/hosting/" class="active">Hosting Options</a></li><ul class="table-of-contents"><li class="level-2">
+              <a href="https://yakkl.com/docs/hosting/#guides">Guides</a>
+            </li><li class="level-2">
+              <a href="https://yakkl.com/docs/hosting/#other-options">Other Options</a>
+            </li></ul><li><a href="/docs/hosting/s3-cloudfront-stack/">AWS</a></li><li><a href="/docs/hosting/github-pages/">GitHub Pages</a></li><li><a href="/docs/hosting/ftp/">FTP/SFTP</a></li><li><a href="/docs/hosting/webhooks/">Webhooks</a></li></ul><h3>Developer Guides</h3>
+    <ul><li><a href="/docs/guides/developing-with-hugo/">Hugo</a></li><li><a href="/docs/guides/developing-with-jekyll/">Jekyll</a></li><li><a href="/docs/guides/developing-with-gatsby/">Gatsby</a></li></ul><h3>Other</h3>
+    <ul><li><a href="/docs/troubleshooting/">Troubleshooting</a></li><li><a href="/docs/faqs/">Frequently Asked Questions</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="/docs/import-button/">Import Button</a></li><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul><h3>Pro</h3>
+    <ul><li><a href="/docs/pro/features/pro-plans/">Pro Plans</a></li><li><a href="/docs/pro/features/audit-logging/">Audit Logging</a></li><li><a href="/docs/pro/features/single-sign-on/">Single Sign-on</a></li></ul></div></aside>
+    </div>
+    <section class="docs-content">
+      <div class="container md-content">
+        <h1>Hosting Options</h1>
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+
+<div class="shortcode-warning"><p><strong>Yakkl will stop building and deploying sites on January 1st, 2020</strong>.<br/>
+We recommend to use a dedicated CI/CD platform like <a href="https://netlify.com">Netlify</a>.<br/>
+Read our docs on <a href="/blog/automate-deploy-w-circle-ci/">how to deploy with Circle CI</a>.</p>
+
+</div>
+
+<p>The Hosting settings allow you to use Yakkl to handle deployment of your static site. Yakkl can build your site and then deploy the <a href="/docs/faqs/glossary/static-files">static files</a> to a hosting provider of your choice.</p>
+
+<h2 id="guides">Guides</h2>
+
+<p>Yakkl has a selection of built-in hosting options that make hosting your static site easy.</p>
+
+<h3 id="commit-to-source-repo-only">Commit to source repo only</h3>
+
+<p>Enabling &ldquo;commit to source repo only&rdquo; will enable Yakkl to only commit changes made in the CMS back to the branch and repository your site was imported from.</p>
+
+<div class="shortcode-tip"><h4 d="continuous-integration">Continuous Integration</h4><p>Looking to deploy your site using a <a href="/docs/faqs/glossary/ci-cd">CI/CD</a> tool like GitLab CI or BitBucket Pipelines? Use <em>Commit to source repo only</em>. This will trigger any CI/CD tool when a change is saved or published in Yakkl.</p>
+
+</div>
+
+<hr />
+
+<h3 id="github-pages">GitHub Pages</h3>
+
+<p>Yakkl can build your site and deploy the generated static files to a branch of a GitHub repository for use with <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+
+<p><a href="/docs/hosting/github-pages">Read the guide</a></p>
+
+<hr />
+
+<!--
+### BitBucket Pages
+
+Yakkl can build your site and deploy the generated static files to a repository on BitBucket configured to use BitBucket pages.
+
+[Read the guide](/docs/hosting/bitbucket-pages)
+
+---
+-->
+
+<h3 id="amazon-s3">Amazon S3</h3>
+
+<p>Yakkl can build your site and deploy the generated static files to an S3 bucket of your choosing.</p>
+
+<p>There are two ways to host a static website with Amazon S3. S3 can be configured to host a website itself, or it can be used as an origin for AWS&rsquo; CloudFront CDN. Using S3 on its own is the simpler option, but using CloudFront is highly recommended.</p>
+
+<div class="shortcode-tip"><p>If you&rsquo;d like to know more about why you should use CloudFront with your S3 Bucket, check out <a href="https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-s3-amazon-cloudfront-a-match-made-in-the-cloud/">this blog post from AWS</a>.</p>
+
+</div>
+
+<p><strong>Guides:</strong></p>
+
+<p><a href="/docs/hosting/s3-cloudfront-stack">Setup an S3 + CloudFront Stack</a> <strong>(Recommended)</strong></p>
+
+<p><a href="/docs/hosting/amazon-s3">Setup an S3 Bucket for Webhosting</a></p>
+
+<p><strong>Resources:</strong></p>
+
+<p><a href="https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-s3-amazon-cloudfront-a-match-made-in-the-cloud/">Amazon S3 + Amazon CloudFront: A Match Made in the Cloud</a> <em>(aws.amazon.com)</em></p>
+
+<hr />
+
+<h3 id="ftp-sftp">FTP/SFTP</h3>
+
+<p>Yakkl can build your site and deploy the generated static files to any FTP/SFTP enabled web-server of your choosing.</p>
+
+<p><a href="/docs/hosting/ftp">Read the guide</a></p>
+
+<h2 id="other-options">Other Options</h2>
+
+<p>In addition to the built-in hosting provider options provided by Yakkl, we provide tutorials for using third-party services with Yakkl.</p>
+
+<h3 id="github-pages-jekyll-integration">GitHub Pages Jekyll Integration</h3>
+
+<p>If you are using Jekyll as your static site generator, GitHub pages can handle building your static site without the support of Yakkl or a CI tool.</p>
+
+<p><a href="/docs/guides/hosting/github-pages-jekyll">Read the guide</a></p>
+
+<h4 id="resources">Resources</h4>
+
+<ul>
+<li><a href="https://about.gitlab.com/features/pages/">GitLab Pages</a></li>
+<li><a href="https://gitlab.com/pages/hugo">Hugo Example Project</a></li>
+<li><a href="https://gitlab.com/groups/pages">Jekyll Example Project</a></li>
+</ul>
+
+<hr />
+
+<h3 id="gitlab-pages-gitlab-ci">GitLab Pages &amp; GitLab CI</h3>
+
+<p>GitLab provides a free CI tool for triggering build and deployment scripts when commits are made to your repository, and has example projects for both Hugo and Jekyll.</p>
+
+<h4 id="resources-1">Resources</h4>
+
+<ul>
+<li><a href="https://about.gitlab.com/features/pages/">GitLab Pages</a></li>
+<li><a href="https://gohugo.io/hosting-and-deployment/hosting-on-gitlab/">GoHugo.io: Host on GitLab</a></li>
+<li><a href="https://gitlab.com/pages/hugo">GitLab.com: Hugo Example Project</a></li>
+<li><a href="https://gitlab.com/groups/pages">GitLab.com: Jekyll Example Project</a></li>
+</ul>
+
+<hr />
+
+<h3 id="bitbucket-pipelines">BitBucket Pipelines</h3>
+
+<p>BitBucket provides a CI tool for triggering build and deployment scripts when commits are made to your repository.</p>
+
+<h4 id="resources-2">Resources</h4>
+
+<ul>
+<li><a href="https://bitbucket.org/product/features/pipelines">BitBucket Pipelines Documentation</a></li>
+<li><a href="https://bitquabit.com/post/automating-hugo-deployments/">Bitquobit.com: Automating Hugo Deployments with BitBucket Pipelines</a></li>
+</ul>
+
+<hr />
+
+<h3 id="webhooks">Webhooks</h3>
+
+<p>Yakkl has <a href="/docs/hosting/webhooks/">outgoing webhooks</a> that can be used to trigger custom build scripts.</p>
+
+<p><a href="https://developer.github.com/webhooks/">GitHub</a>, <a href="https://confluence.atlassian.com/bitbucket/manage-webhooks-735643732.html">BitBucket</a>, and <a href="https://docs.gitlab.com/ce/user/project/integrations/webhooks.html">GitLab</a> also provide support for outgoing webhooks to trigger a custom build script.</p>
+
+
+        <nav class="pagination"><a href="/docs/collaboration/organizations/" rel="prev"><span class="prev-doc">About Organizations</span></a><a href="/docs/hosting/s3-cloudfront-stack/" rel="next"><span class="next-doc">AWS</span></a></nav><hr />
+        <div class="doc--info">
+          <span class="doc--meta-label">Last updated on</span>
+          <span class="doc--date">December 31, 2017</span>
+        </div>
+        <div class="post--feedback">
+          <p><small>Caught a mistake or want to contribute to the docs? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/docs/hosting.md" target="_blank">Github</a>!</small></p>
+        </div></div>
+    </section>
+  </main><footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

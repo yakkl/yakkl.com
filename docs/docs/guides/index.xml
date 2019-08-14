@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guides on Yakkl.com</title>
+    <link>https://yakkl.com/docs/guides/</link>
+    <description>Recent content in Guides on Yakkl.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <lastBuildDate>Sun, 31 Dec 2017 04:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://yakkl.com/docs/guides/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using GitHub Pages to Build Your Jekyll Site</title>
+      <link>https://yakkl.com/docs/guides/hosting/github-pages-jekyll/</link>
+      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/hosting/github-pages-jekyll/</guid>
+      <description>Using Jekyll with GitHub Pages GitHub can handle building your Jekyll site without the need of Yakkl or a CI tool. GitHub will build your Jekyll site each time a new commit is pushed to GitHub and serve it automatically.
+Limitations When using GitHub to build your GitHub Pages site, you are restricted to using the white-listed GitHub Pages Jekyll version and plugins.
+Getting Started This requires the GitHub pages gem.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://yakkl.com/docs/guides/developing-with-hugo/</link>
+      <pubDate>Wed, 24 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-hugo/</guid>
+      <description>Hugo is a fast static site generator, with a lot of enterprise features. If you’re building a large business, publication, or community website Hugo is likely the right choice due to features likes localization, RSS Feed &amp;amp; Sitemap generation, and much more.
+Choose Hugo if you:  Are building a site that requires a lot of enterprise features, such customizable as RSS Feeds, Sitemaps, AMP (Accelerated Mobile Pages), etc. Have a site with more than 500 pages, as Hugo is blazingly fast Feel learning a new language to build your theme templates isn’t a challenge for you.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://yakkl.com/docs/guides/developing-with-jekyll/</link>
+      <pubDate>Wed, 24 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-jekyll/</guid>
+      <description>Jekyll is one of the oldest static site generators available. Built by GitHub, it has tons of community support and is very stable. Additional features can be added onto Jekyll through the use of plugins. It also uses the templating language Liquid, which feels very familiar to developers and is also used by Shopify and other large-scale applications.
+Choose Jekyll if you:  Want a static site generator with great stability and the biggest community.</description>
+    </item>
+    
+    <item>
+      <title>Project Structure</title>
+      <link>https://yakkl.com/docs/guides/developing-with-hugo/project-structure/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-hugo/project-structure/</guid>
+      <description>In Hugo, project structure and naming is fairly rigid other than content structure. You must follow the Hugo guidelines for where content, layouts, data, and static assets must be stored.
+Inside your content folder, you create the structure and organization that works for you.
+For example, a Hugo site may look like this:
+. ├── archetypes/ ├── config.yml ├── data/ | └── members.yml ├── layouts/ | ├── footer.html | └── header.</description>
+    </item>
+    
+    <item>
+      <title>Project Structure</title>
+      <link>https://yakkl.com/docs/guides/developing-with-jekyll/project-structure/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-jekyll/project-structure/</guid>
+      <description>In Jekyll, project structure and naming is very important. The way you structure and name your project directly affects the organization of your built static site.
+For example, a Jekyll site may look like this:
+. ├── _config.yml ├── _data/ | └── members.yml ├── _drafts/ | ├── begin-with-the-crazy-ideas.md | └── on-simplicity-in-technology.md ├── _includes/ | ├── footer.html | └── header.html ├── _layouts/ | ├── default.html | └── post.html ├── _posts/ | ├── 2007-10-29-why-every-programmer-should-play-nethack.</description>
+    </item>
+    
+    <item>
+      <title>Templating</title>
+      <link>https://yakkl.com/docs/guides/developing-with-hugo/templating/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-hugo/templating/</guid>
+      <description>Hugo allows users to build layouts and themes using one of multiple templating languages. By default, Hugo uses Golang’s Go Templates.
+All of the template options are interchangeable, and can be used at the same time.
+Go Templates Go Templates expose Golang as a template language for you to build your layouts and themes with.
+An example of Go Templates:
+&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;{{ .Params.Title }}&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;content&amp;#34;&amp;gt; &amp;lt;p&amp;gt; This is a long page content These lines are all part of the parent p &amp;lt;a href=&amp;#34;/&amp;#34;&amp;gt;Go To Main Page&amp;lt;/a&amp;gt; &amp;lt;/p&amp;gt; Ace Ace templates are inspired by Slim and Jade and will feel very familiar and easier to use if you’re comfortable with either.</description>
+    </item>
+    
+    <item>
+      <title>Templating</title>
+      <link>https://yakkl.com/docs/guides/developing-with-jekyll/templating/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-jekyll/templating/</guid>
+      <description>Jekyll allows users to build their HTML templates using the template language Liquid built and used by the popular eCommerce application Shopify.
+Liquid Liquid is best described as a safe, customer-facing template language for flexible web apps.
+An example of Liquid:
+&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;{{ title }}&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;content&amp;#34;&amp;gt; &amp;lt;p&amp;gt; This is a long page content These lines are all part of the parent p &amp;lt;a href=&amp;#34;/&amp;#34;&amp;gt;Go To Main Page&amp;lt;/a&amp;gt; &amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; See the Front Matter Fields documentation for examples of how to use Yakkl in your templates.</description>
+    </item>
+    
+    <item>
+      <title>Static Files</title>
+      <link>https://yakkl.com/docs/guides/developing-with-hugo/static-files/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-hugo/static-files/</guid>
+      <description>In Hugo, any files/folders found in the static/ directory in the root of your project or the root of your site’s theme will be made available at the root of your built site.
+For example:
+. ├── static/ | ├── image.jpg | └── css/ | └── main.css └── themes/ └── example-theme/ ├── static/ └── script.js Will be built as:
+. ├── image.jpg ├── script.js └── css/ └── main.css If you use any build tools like Gulp or Grunt with Jekyll, please read our Asset Pipeline Doc.</description>
+    </item>
+    
+    <item>
+      <title>Static Files</title>
+      <link>https://yakkl.com/docs/guides/developing-with-jekyll/static-files/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-jekyll/static-files/</guid>
+      <description> In Jekyll, any file in your project that does not have YAML front matter is treated as a static file, and is included in your built site.
+These are files like images, PDFs, CSS, JS, and much more.
+If you use any build tools like Gulp or Grunt with Jekyll, please read our Asset Pipeline Doc.
+Further Reading  Jekyll Static Files Docs  </description>
+    </item>
+    
+    <item>
+      <title>Working with Globs</title>
+      <link>https://yakkl.com/docs/guides/misc/working-with-globs/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/misc/working-with-globs/</guid>
+      <description>Certain configuration values in Yakkl, such as the sidebar match and exclude parameters, accept what is known as a glob. A glob is a string of characters that follows a special syntax, used to match paths in a file tree.
+Basic Syntax  ? matches a single character * matches any number of characters. [abc] matches any one character in the given set [a-z] matches a range. {foo,bar} matches any whole word in the given set  Globstar Two asterisks in sequence (**) is known as a globstar and will match 0 or more subdirectories in the path.</description>
+    </item>
+    
+    <item>
+      <title>Asset Pipeline</title>
+      <link>https://yakkl.com/docs/guides/developing-with-hugo/asset-pipeline/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-hugo/asset-pipeline/</guid>
+      <description>Hugo supports pre-processing CSS files via SCSS, and post-processing via PostCSS.
+Hugo&amp;rsquo;s Built-in Asset Pipeline Using Hugo&amp;rsquo;s asset pipeline, you can use Sass, SCSS, and PostCSS. You can also bundle and minify assets.
+Hugo docs: Pipes
+Best Practices for Gulp, Grunt, and Other Build Tools In order to use external build like Gulp, Grunt, or Webpack with Yakkl&amp;rsquo;s previewing and deployment, you should configure them as follows:
+ Use a NodeJS-based tool installable via NPM and configured in package.</description>
+    </item>
+    
+    <item>
+      <title>Asset Pipeline</title>
+      <link>https://yakkl.com/docs/guides/developing-with-jekyll/asset-pipeline/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-jekyll/asset-pipeline/</guid>
+      <description>If you’re planning on using any preprocessing on your assets (images, CSS, or JS) you’ll need to be careful how you implement this as it affects how Yakkl builds your sites.
+SASS Jekyll supports .sass and .scss processing out of the box. It requires special configuration, so please see Jekyll’s docs on asset processing in the resources below.
+CoffeeScript Jekyll also supports preprocessing CoffeeScript with an officially support gem. It requires special configuration, so please see Jekyll’s docs on asset processing in the resources below.</description>
+    </item>
+    
+    <item>
+      <title>Environments</title>
+      <link>https://yakkl.com/docs/guides/developing-with-hugo/environments/</link>
+      <pubDate>Mon, 24 Jul 2017 20:03:09 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-hugo/environments/</guid>
+      <description>There are three unique developer environments when working with a Hugo site in Yakkl:
+ Local environment this is your local development environment on your own machine. See Local Development for more info.
+ Staging environment this is the environment Yakkl creates when we generate a preview for you. See Previews for more info.
+ Production environment this is the environment Yakkl publishes your site to. See Hosting Options for more info.</description>
+    </item>
+    
+    <item>
+      <title>Environments</title>
+      <link>https://yakkl.com/docs/guides/developing-with-jekyll/environments/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-jekyll/environments/</guid>
+      <description>There are three unique developer environments when working with a Jekyll site in Yakkl:
+ Local environment this is your local development environment on your own machine. See Local Development for more info.
+ Staging environment this is the environment Yakkl creates when we generate a preview for you. See Previews for more info.
+ Production environment this is the environment Yakkl publishes your site to. See Hosting Options for more info.</description>
+    </item>
+    
+    <item>
+      <title>Local Development</title>
+      <link>https://yakkl.com/docs/guides/developing-with-hugo/local-development/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-hugo/local-development/</guid>
+      <description>Hugo allows you to work on your site in a local environment on your computer. It requires you to install the Hugo binary on your local machine.
+For detailed instructions on installing Hugo for your operating system, see the Hugo Docs.
+Working with Git If you set up and imported your site with Git, local development becomes much easier. We recommend you do this.
+To get started, clone your repository to your desktop.</description>
+    </item>
+    
+    <item>
+      <title>Local Development</title>
+      <link>https://yakkl.com/docs/guides/developing-with-jekyll/local-development/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-jekyll/local-development/</guid>
+      <description>Jekyll allows you to work on your site in a local environment on your computer. It requires you to have Ruby, RubyGems and Bundler installed.
+For detailed instructions on installing Ruby for your operating system, see the Ruby Docs.
+Once Ruby and RubyGems are installed, you can install Bundler by running:
+$ gem install bundler Working with Git If you set up and imported your site with Git, local development becomes much easier.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Shortcodes</title>
+      <link>https://yakkl.com/docs/guides/developing-with-hugo/short-codes/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-hugo/short-codes/</guid>
+      <description>You can extend the functionality of markdown in Hugo with short codes. Short codes are special templates that are called when a short code is used inside the content body.
+They can be used to add custom markup, format text, generate HTML elements, or pull in data from external sources.
+Using Short Codes in Yakkl Yakkl provides no interface for using short codes in the editor, but does support using Hugo short codes.</description>
+    </item>
+    
+    <item>
+      <title>Jekyll Plugins</title>
+      <link>https://yakkl.com/docs/guides/developing-with-jekyll/plugins/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-jekyll/plugins/</guid>
+      <description>Jekyll allows you to add Gem-based plugins using your Gemfile. This allows you to add things like CoffeeScript preprocessing.
+Installing Plugins Yakkl supports all third-party Jekyll plugins, and installs them in the same manner they are installed in your local environment.
+Installation generally has three steps:
+ Add the plugin to your Gemfile. If you do not have a Gemfile, you must create one in your project root.
+source &amp;#39;https://rubygems.</description>
+    </item>
+    
+    <item>
+      <title>Misc</title>
+      <link>https://yakkl.com/docs/guides/developing-with-hugo/misc/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-hugo/misc/</guid>
+      <description>Sitemap Hugo comes with support for XML Sitemaps built-in.
+Hugo will export a sitemap.xml file with all of your content using a standard XML template to the root of your built site. You can configure this in your config.yml.
+[sitemap] changefreq: &amp;#34;monthly&amp;#34; priority: 0.5 filename: &amp;#34;sitemap.xml&amp;#34; RSS Feeds Hugo will also generate an RSS feed in the following locations:
+ At the root of your built site In the root of every section directory At the root of every taxonomy directory  You can configure parts of the output of the RSS feeds in your config.</description>
+    </item>
+    
+    <item>
+      <title>Misc</title>
+      <link>https://yakkl.com/docs/guides/developing-with-jekyll/misc/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-jekyll/misc/</guid>
+      <description> Sitemaps/Feeds Jekyll has no built-in support for Sitemaps or Feeds, but there are a multitude of community plugins to add this functionality. See the references below for more info.
+Menus Jekyll does not have built-in support for menus. Yakkl has built a Jekyll menus plugin that integrates with the Menu Manager of the CMS.
+Further Reading  Jekyll Plugins Reference  </description>
+    </item>
+    
+    <item>
+      <title>Developing with Gatsby</title>
+      <link>https://yakkl.com/docs/guides/developing-with-gatsby/</link>
+      <pubDate>Tue, 20 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/guides/developing-with-gatsby/</guid>
+      <description>Gatsby is a highly flexible static site generator that uses ReactJS under the hood. Pages are implemented as React components and the whole site is bundled as a single page app (SPA), but also uses a static site build process to render a static HTML version of the site. The result is a static site that is SEO friendly, but whose UI is hydrated into a React SPA once a page is loaded.</description>
+    </item>
+    
+  </channel>
+</rss>

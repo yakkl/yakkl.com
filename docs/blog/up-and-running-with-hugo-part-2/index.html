@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Up &amp; Running With Hugo, Part 2: Setting up GitHub &amp; Yakkl (CI &amp; CD) | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content="Using Continuous Integration and Continuous Deployment /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Up &amp; Running With Hugo, Part 2: Setting up GitHub &amp; Yakkl (CI &amp; CD)" />
+<meta property="og:description" content="Using Continuous Integration and Continuous Deployment" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/up-and-running-with-hugo-part-2/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/03/up_running_w_hugo_II_1.png" /><meta property="og:image:alt" content="Using Continuous Integration and Continuous Deployment" /><meta property="article:published_time" content="2018-03-16T04:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2018-03-16T15:47:26&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta itemprop="name" content="Up &amp; Running With Hugo, Part 2: Setting up GitHub &amp; Yakkl (CI &amp; CD)">
+<meta itemprop="description" content="Using Continuous Integration and Continuous Deployment"><meta itemprop="datePublished" content="2018-03-16T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-03-16T15:47:26&#43;00:00" /><meta itemprop="wordCount" content="1256"><meta itemprop="image" content="https://yakkl.com/uploads/2018/03/up_running_w_hugo_II_1.png">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/03/up_running_w_hugo_II_1.png"/><meta name="twitter:title" content="Up &amp; Running With Hugo, Part 2: Setting up GitHub &amp; Yakkl (CI &amp; CD)"/>
+<meta name="twitter:description" content="Using Continuous Integration and Continuous Deployment"/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/03/up_running_w_hugo_II_1.png" alt="Up &amp; Running With Hugo, Part 2: Setting up GitHub &amp; Yakkl (CI &amp; CD)" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/03/up_running_w_hugo_II_1.png" class="" />
+              
+        </div><div class="container">
+      <h1 class="post--title">Up &amp; Running With Hugo, Part 2: Setting up GitHub &amp; Yakkl (CI &amp; CD)</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">March 16, 2018</span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<!--<div class="shortcode-tip"><p>This guide was most recently updated on <strong>March 16, 2018.</strong></p>
+
+</div>
+
+--- -->
+
+<p>For this week on <a href="/categories/frontend-friday/" title="frontend friday tag"><em>Frontend Friday</em></a><em>,</em> we have a follow up to <a href="/blog/up-and-running-with-hugo/"><em>Up &amp; Running With Hugo, Part 1: Building Your First Site</em></a>. This week, we cover integrating your repository with GitHub, and setting up continuous integration and continuous deployment with Yakkl.com and some other handy tools.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+<li><a href="#1-introduction">Introduction</a></li>
+<li><a href="#2-setting-up-git">Setting up Git</a></li>
+<li><a href="#3-setting-up-continuous-integration">Setting up Continuous Integration</a></li>
+<li><a href="#4-setting-up-continuous-deployment-with-yakkl">Setting up Continuous Deployment with Yakkl</a></li>
+<li><a href="#next-steps">Next Steps</a></li>
+</ol>
+
+<h2 id="1-introduction">1) Introduction</h2>
+
+<p>Before we continue, you might be asking <em>What is CI &amp; CD..?</em> Let me explain:</p>
+
+<h3 id="continuous-integration-ci">Continuous Integration (CI)</h3>
+
+<p>Continuous Integration (CI) is a development practice where developers check-in code to a version control tool multiple times per day. Each time code is checked-in, an automated build can be performed, allowing developers to identify problems with code quickly.</p>
+
+<h3 id="continuous-delivery-cd">Continuous Delivery (CD)</h3>
+
+<p>Continuous Deployment (CD) is a development practice where any change to software is automatically deployed to a production or staging environment. This allows for real-world testing and enables more rapid delivery.</p>
+
+<div class="shortcode-tip"><p>More on CI &amp; CD in our <a href="https://yakkl.com/docs/faqs/glossary/ci-cd/">Frequently Asked Questions</a>.</p>
+
+</div>
+
+<h3 id="why-are-these-important">Why are these important?</h3>
+
+<p>CI &amp; CD allows you to automate the tedious parts of building websites &ndash; making sure they are built right, and deploying those changes to production or staging environments for your team to review.</p>
+
+<p>Version control also maintains a complete history of all changes that are checked into version control.</p>
+
+<p>This enables developers to quickly roll back changes that don&rsquo;t have the outcome that was desired. <em>(I.e, when a hasty change breaks your whole site! :P)</em></p>
+
+<h2 id="2-setting-up-git">2) Setting up Git</h2>
+
+<p>Git is our version control system, which will enable CI &amp; CD through tools like <a href="https://yakkl.com">Yakkl</a>.</p>
+
+<div class="shortcode-tip"><p>If you&rsquo;re new to Git and don&rsquo;t have Git installed, head over to <a href="https://git-scm.com/downloads">Git download page</a> to download an installer for your OS.</p>
+
+</div>
+
+<p>Next, open your terminal once more and ensure your working path is the <em>Boilerplate</em> project (or any project you would like to connect with git). If not, run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd /PATH/TO/hugo-boilerplate</pre></div>
+<p>Then we&rsquo;ll create a local repository:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">git init</pre></div>
+<p>Next, we&rsquo;ll add all of the files in the project to the local repository:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">git add .</pre></div>
+<p>To see the status of the repository, run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">git status</pre></div>
+<p>Finally, we&rsquo;ll <em>commit</em> these changes to the local repository&rsquo;s version history:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">git commit -am &#34;Init&#34;</pre></div>
+<h3 id="pushing-to-the-remote">Pushing to the Remote</h3>
+
+<p>Up to this point you&rsquo;ve just been working on your <em>local repository.</em> If anything were to happen to your computer, all would be lost!</p>
+
+<p>That&rsquo;s why we set up a <em>remote repository</em> on services like GitHub, BitBucket, or GitLab. That way, our changes are stored in the Cloud and can be shared with your entire team.</p>
+
+<p>Head over to your favorite Git provider and create a new repository.</p>
+
+<p><em>If prompted, ensure you <strong>don&rsquo;t</strong> initialize the repository with a README, license, or a .gitignore file. That will just make things more complicated.</em></p>
+
+<div class="shortcode-tip"><p>If you&rsquo;re new to Git, we recommend you create a <a href="https://github.com/signup">GitHub account</a> and then create a <a href="https://help.github.com/articles/create-a-repo/">GitHub repository</a>.</p>
+
+</div>
+
+<p>Next, grab the <em>Remote URL</em> for your repository, and we&rsquo;ll add it to your local repository. <em>(Instructions for finding this can be found for</em> <a href="https://help.github.com/articles/which-remote-url-should-i-use/"><em>GitHub</em></a> <em>&amp;</em> <a href="https://confluence.atlassian.com/bitbucket/change-the-remote-url-to-your-repository-794212774.html"><em>BitBucket</em></a><em>.)</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">git remote add origin YOUR_REMOTE_URL
+git branch --set-upstream-to origin master</pre></div>
+<p>Verify the URL is correct:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">git remote -v</pre></div>
+<p>Finally, push your local repositories history to the remote repository&rsquo;s <code>master</code> branch:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">git push origin master</pre></div>
+<p>Congrats! You now have your Hugo site set up with version control so that you can easily set up continuous integration and continuous deployment.</p>
+
+<p>Head over to your repository in GitHub, GitLab, or BitBucket to see the updated code.</p>
+
+<h2 id="3-setting-up-continuous-integration">3) Setting Up Continuous Integration</h2>
+
+<p>Now, we&rsquo;ll set up continuous integration for your site. This will allow your developers to ensure that the quality of the code is up to par before pushing it to the remote.</p>
+
+<p>We&rsquo;ll do this using the Node package <a href="https://www.npmjs.com/package/husky"><em>Husky</em></a><em>,</em> which allows you to run tests and other commands based on <a href="http://githooks.com/">Git hooks</a>.</p>
+
+<p>In this case, we&rsquo;re going to use the <code>pre-push</code> hook, to run tests on our CSS and JS, and confirm that our production build checks out before pushing our changes to the remote repository.</p>
+
+<p>To get started, run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">npm install husky --save-dev</pre></div>
+<p>Next, we&rsquo;re going to setup our <code>pre-push</code> test commands. Open up <code>package.json</code> in your favorite text editor, and find the <code>scripts</code> section.</p>
+
+<p>In the <em>Hugo Boilerplate</em>, it will look something like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#34;scripts&#34;: {
+    &#34;start&#34;: &#34;gulp server&#34;,
+    &#34;preview&#34;: &#34;cross-env NODE_ENV=production HUGO_ARGS=preview gulp server&#34;,
+    ...
+  }</pre></div>
+<p>At the bottom of the scripts, add the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&#34;prepush&#34;: &#34;npm run eslint &amp;&amp; npm run stylelint &amp;&amp; npm run build&#34;</pre></div>
+<p>The final <code>package.json</code> should look like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">  &#34;scripts&#34;: {
+    &#34;start&#34;: &#34;gulp server&#34;,
+    &#34;preview&#34;: &#34;cross-env NODE_ENV=production HUGO_ARGS=preview gulp server&#34;,
+    &#34;build&#34;: &#34;cross-env NODE_ENV=production gulp build&#34;,
+    &#34;clean&#34;: &#34;gulp clean&#34;,
+    &#34;hugo&#34;: &#34;node_modules/.bin/hugo --source hugo/&#34;,
+    &#34;eslint&#34;: &#34;./node_modules/eslint/bin/eslint.js src/js/ --ext .js&#34;,
+    &#34;eslint:fix&#34;: &#34;./node_modules/eslint/bin/eslint.js src/js/ --ext .js --fix&#34;,
+    &#34;stylelint&#34;: &#34;npm run stylelint:css &amp;&amp; npm run stylelint:scss&#34;,
+    &#34;stylelint:fix&#34;: &#34;npm run stylelint:css --fix &amp;&amp; npm run stylelint:scss --fix&#34;,
+    &#34;stylelint:css&#34;: &#34;./node_modules/stylelint/bin/stylelint.js src/css/**/*.css&#34;,
+    &#34;stylelint:scss&#34;: &#34;./node_modules/stylelint/bin/stylelint.js src/scss/**/*.scss&#34;,
+    &#34;prepush&#34;: &#34;npm run eslint &amp;&amp; npm run stylelint&#34;
+  },</pre></div>
+<p>Now, lets commit our changes and try pushing them to the remote repository:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">git commit -am &#34;Added Husky for Continuous Integration&#34;
+git push</pre></div>
+<p>You&rsquo;ll see console output from Husky, running our Eslint and Stylelint tasks.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">  6:1  warning  Unexpected console statement  no-console
+  7:1  warning  Unexpected console statement  no-console</pre></div>
+<p>Our tests had warnings because our Javascript has <code>console.logs</code> in it, but didn&rsquo;t fail because it didn&rsquo;t break any of our rules. Pretty handy!</p>
+
+<p>Both Eslint (Javascript) and Stylelint (CSS) can be configured from <code>.eslintrc.yml</code> and <code>.stylelintrc.yml</code> in the root of the boilerplate.</p>
+
+<div class="shortcode-tip"><p>Testing doesn&rsquo;t end here! The sky is the limit. Write your own tests, or try out other common static hosting test suites like <a href="https://github.com/gjtorikian/html-proofer">HTML Proofer</a> or <a href="https://blog.sentry.io/2017/10/23/keep-your-blog-consistent-with-jekyll-and-jest">Jest</a>.</p>
+
+</div>
+
+<h2 id="4-setting-up-continuous-deployment-with-yakkl">4) Setting up Continuous Deployment with Yakkl</h2>
+
+<p>Your final step is to set up continuous deployment with Yakkl, so that each time a commit is pushed to your remote repository,  your site is automatically rebuilt and deployed to your hosting provider!</p>
+
+<div class="shortcode-tip"><p>If you haven&rsquo;t already set up your site in Yakkl, follow our comprehensive <a href="https://yakkl.com/docs/quickstart/setup-site/"><em>quick start guide</em></a> for importing and setting up a site with Yakkl CMS.</p>
+
+</div>
+
+<p>Head over to the <a href="https://yakkl.com">Dashboard</a>, and select your site.</p>
+
+<p>Once inside the CMS, select <em>Settings</em> from the sidebar, and then scroll down to <em>Deployment</em>.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/settings-deployment.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/settings-deployment.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/settings-deployment.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/settings-deployment.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/settings-deployment.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/settings-deployment.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/settings-deployment.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/settings-deployment.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/settings-deployment.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/settings-deployment.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/settings-deployment.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/settings-deployment.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/settings-deployment.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/settings-deployment.png" class="" /></p>
+
+<p>In the <em>Deployment</em> section, we&rsquo;re going to enable to <em>Deploy on Git Push</em> feature, which watches for changes to your repository and automatically publishes your site when one occurs.</p>
+
+<p><strong>Note:</strong> the <em>Deploy on Git Push</em> feature only works when Yakkl is handling deploying of your site. To learn how to set up deployment with Yakkl, see our <a href="https://yakkl.com/docs/hosting/">hosting docs</a>.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<p>Now that you&rsquo;ve completed the <em>Up &amp; Running With Hugo</em> guide, you&rsquo;re all set to make your dive into the world of the JAMStack.</p>
+
+<p>We recommend you head over to the <a href="https://yakkl.com/docs">Yakkl docs</a> to learn how Yakkl can help make managing your static site easier.</p>
+
+<h3 id="up-next">Up next</h3>
+
+<p>This concludes our Hugo + Git + Yakkl.com Introduction. Next week DJ is diving deeper into Continuous Integration and Continuous Delivery using CircleCI - a technology we at Yakkl.com are using every day.</p>
+
+<div style="padding: 20px 40px;background: #f7f7f7;">  
+<h2>Join us every Friday 📅</h2>  
+<p><a href="/categories/frontend-friday/">Frontend Friday</a> is a weekly series where we write in-depth posts about modern web development.</p>  
+<p><strong>Next week:</strong> We'll look into Continuous Integration and Continuous Delivery: <a href="https://yakkl.com/blog/automate-deploy-w-circle-ci/">Automate Your Static Site Deployment with CircleCI</a></p>  
+<p><strong>Last week:</strong> <a href="https://yakkl.com/blog/up-and-running-with-hugo/">Up & Running With Hugo Part I: Building Your First Site</a>.</p>  
+</div>
+
+<h2 id="have-something-to-add">Have something to add?</h2>
+
+<p><a style="background: #F60; display: inline-block; border-radius: 5px; color: white; padding: 2px 9px; font-size: 14px;" href="https://news.ycombinator.com/item?id=16600724">Discuss on Hacker News</a></p>
+
+<p><a href="#footer-cta">Subscribe to our newsletter</a> to get updated when the next article is released!</p>
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "Up \x26 Running With Hugo, Part 2: Setting up GitHub \x26 Yakkl (CI \x26 CD)";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/up-and-running-with-hugo-part-2\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/up-and-running-with-hugo-part-2.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

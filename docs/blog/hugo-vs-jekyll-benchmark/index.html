@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>Hugo vs Jekyll: Benchmarked | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content=" /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="Hugo vs Jekyll: Benchmarked" />
+<meta property="og:description" content="We&rsquo;ve also compared Jekyll &amp; Hugo features across 6 dimensions. Learn More
+ Hugo and Jekyll are the leading static site generators according to StaticGen.com, and both supported by our CMS. We&rsquo;re often asked which tool performs better so we decided to do an analysis.
+TL;DR We ran two tests to measure build times with Hugo and Jekyll. The basic test used the default installation of Jekyll and Hugo to build sites with 10 posts,100 posts, 1,000 posts and 10,000 posts." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/hugo-vs-jekyll-benchmark/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/01/social-image-2.png" /><meta property="og:image:alt" content="We&rsquo;ve also compared Jekyll &amp; Hugo features across 6 dimensions. Learn More
+ Hugo and Jekyll are the leading static site generators according to StaticGen.com, and both supported by our CMS. We&rsquo;re often asked which tool performs better so we decided to do an analysis.
+TL;DR We ran two tests to measure build times with Hugo and Jekyll. The basic test used the default installation of Jekyll and Hugo to build sites with 10 posts,100 posts, 1,000 posts and 10,000 posts." /><meta property="article:published_time" content="2018-01-26T10:22:55&#43;00:00"/>
+  <meta property="article:modified_time" content="2018-01-26T09:22:55&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta itemprop="name" content="Hugo vs Jekyll: Benchmarked">
+<meta itemprop="description" content="We&rsquo;ve also compared Jekyll &amp; Hugo features across 6 dimensions. Learn More
+ Hugo and Jekyll are the leading static site generators according to StaticGen.com, and both supported by our CMS. We&rsquo;re often asked which tool performs better so we decided to do an analysis.
+TL;DR We ran two tests to measure build times with Hugo and Jekyll. The basic test used the default installation of Jekyll and Hugo to build sites with 10 posts,100 posts, 1,000 posts and 10,000 posts."><meta itemprop="datePublished" content="2018-01-26T10:22:55&#43;00:00" /><meta itemprop="dateModified" content="2018-01-26T09:22:55&#43;00:00" /><meta itemprop="wordCount" content="1107"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/social-image-2.png">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/social-image-2.png"/><meta name="twitter:title" content="Hugo vs Jekyll: Benchmarked"/>
+<meta name="twitter:description" content="We&rsquo;ve also compared Jekyll &amp; Hugo features across 6 dimensions. Learn More
+ Hugo and Jekyll are the leading static site generators according to StaticGen.com, and both supported by our CMS. We&rsquo;re often asked which tool performs better so we decided to do an analysis.
+TL;DR We ran two tests to measure build times with Hugo and Jekyll. The basic test used the default installation of Jekyll and Hugo to build sites with 10 posts,100 posts, 1,000 posts and 10,000 posts."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/01/social-image-2.png" alt="Hugo vs Jekyll: Benchmarked" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/01/social-image-2.png" class="" />
+              
+        </div><div class="container">
+      <h1 class="post--title">Hugo vs Jekyll: Benchmarked</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">January 26, 2018</span><span>in 
+            <a href="/categories/frontend-friday" class="post--category" data-category="frontend-friday">
+              Frontend friday
+            </a>,
+            <a href="/categories/hugo" class="post--category" data-category="hugo">
+              Hugo
+            </a>,
+            <a href="/categories/jekyll" class="post--category" data-category="jekyll">
+              Jekyll
+            </a></span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+  
+
+<div class="shortcode-tip"><p>We&rsquo;ve also compared Jekyll &amp; Hugo features across 6 dimensions. <a href="/blog/hugo-and-jekyll-compared/">Learn More</a></p>
+
+</div>
+
+<p>Hugo and Jekyll are the leading static site generators according to <a href="https://staticgen.com">StaticGen.com</a>, and both supported by our <a href="https://yakkl.com">CMS</a>.  We&rsquo;re often asked which tool performs better so we decided to do an analysis.</p>
+
+<h2 id="tl-dr">TL;DR</h2>
+
+<p>We ran two tests to measure build times with <a href="https://gohugo.io">Hugo</a> and <a href="https://jekyllrb.com">Jekyll</a>. The <a href="#the-basic-benchmark">basic test</a> used the default installation of Jekyll and Hugo to build sites with 10 posts,100 posts, 1,000 posts and 10,000 posts.  The <a href="#the-advanced-benchmark">advanced test</a> built those same sites but included common plugins and template code in order to create a similar set of features between the two <a href="/docs/faqs/glossary/static-site-generators/">Static Site Generators</a>. For each build, Hugo proved to be between 23 and 63 times faster than Jekyll!</p>
+
+<p>There are many factors one must consider when choosing a static site generator, but if you&rsquo;re just looking at build times, Hugo wins hands down!</p>
+
+<p><strong>See the data below</strong>, and let us know what your build times are in the conversation on <a href="https://news.ycombinator.com/item?id=16265259">Hacker News</a>.</p>
+
+<h2 id="preparing-the-test">Preparing The Test</h2>
+
+<p>In order to fairly compare Hugo and Jekyll, we needed to ensure they were on an equal playing field.</p>
+
+<p>To do this, we came up with a list of requirements for the test:</p>
+
+<h4 id="equal-content">Equal Content</h4>
+
+<p>For each test, we created a basic YAML content model and then generated sites with <code>10</code>, <code>100</code>, <code>1,000</code>, and <code>10,000</code> posts using this model for both Jekyll and Hugo.</p>
+
+<h4 id="equal-template-structure">Equal template structure</h4>
+
+<p>We didn&rsquo;t want theme template structure to affect build times so we put together <em>archive, single, and taxonomy</em> templates for each test with the minimum amount of HTML markup needed, no CSS or JS to process or compile, and used the same data for both Hugo and Jekyll.</p>
+
+<h4 id="1-1-feature-comparison">1:1 feature comparison</h4>
+
+<p>Each <a href="/docs/faqs/glossary/static-site-generators/">static site generator</a> has a different set of features. For instance, Hugo builds your sitemap, whereas Jekyll requires a plugin to do so.  For this reason, we created two tests.</p>
+
+<ul>
+<li><strong>Basic Test -</strong> Without any plugins</li>
+<li><strong>Advanced Test -</strong> Using common plugins and code to achieve a similar set of features (i.e. sitemaps and feed generation).</li>
+</ul>
+
+<h4 id="running-the-benchmark">Running the Benchmark</h4>
+
+<p>We ran the benchmarks using a simple bash script. Each benchmark runs the build process 13 times recording the <code>real</code> time output from the Unix <code>time</code> command. We took the average of these 13 builds to get our final result.</p>
+
+<h2 id="the-basic-benchmark">The Basic Benchmark</h2>
+
+<p>For the first benchmark, we generated content with a title, a body, and a date in the templates. The content looked like this:</p>
+
+<p><strong>Hugo</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">---
+title: Test 1
+date: 2017-07-17T13:48:56-03:00
+---
+# Page Headline
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna nisl. Donec rhoncus libero eget tristique dapibus. Nullam ultricies ullamcorper ipsum sed lacinia.</pre></div>
+<p><strong>Jekyll</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">---
+title: Test 1
+layout: post
+---
+# Page Headline
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna nisl. Donec rhoncus libero eget tristique dapibus. Nullam ultricies ullamcorper ipsum sed lacinia.</pre></div>
+<hr />
+
+<p>This was the most basic benchmark possible, testing only how fast Hugo and Jekyll build the same number of posts.</p>
+
+<p>As you can see below, Hugo is a clear winner building each site in under 1 second.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-basic-test-1.png" class="" /></p>
+
+<p style="text-align:center;margin-top:-1rem;font-size:.85rem;font-style:italic;">Basic Test with 10, 100, and 1,000 posts.</p>
+
+<p>Plotting a 10,000-page site next to these shows how significant the difference in build-times can become (notice the change in scale of the Y-axis).</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/Hugo-vs-jekyll-basic-test-10k-pages-1.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/Hugo-vs-jekyll-basic-test-10k-pages-1.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/Hugo-vs-jekyll-basic-test-10k-pages-1.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/Hugo-vs-jekyll-basic-test-10k-pages-1.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/Hugo-vs-jekyll-basic-test-10k-pages-1.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/Hugo-vs-jekyll-basic-test-10k-pages-1.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/Hugo-vs-jekyll-basic-test-10k-pages-1.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/Hugo-vs-jekyll-basic-test-10k-pages-1.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/Hugo-vs-jekyll-basic-test-10k-pages-1.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/Hugo-vs-jekyll-basic-test-10k-pages-1.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/Hugo-vs-jekyll-basic-test-10k-pages-1.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/Hugo-vs-jekyll-basic-test-10k-pages-1.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/Hugo-vs-jekyll-basic-test-10k-pages-1.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/Hugo-vs-jekyll-basic-test-10k-pages-1.png" class="" /></p>
+
+<p style="text-align:center;margin-top:-1rem;font-size:.85rem;font-style:italic;">Basic Test with 10, 100, 1,000 and 10,000 posts.</p>
+
+<p>The results from this test are as follows:</p>
+
+<table>
+<thead>
+<tr>
+<th>Generator</th>
+<th>10</th>
+<th>100</th>
+<th>1,000</th>
+<th>10,000</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hugo</td>
+<td>0.05s</td>
+<td>0.08s</td>
+<td>0.34s</td>
+<td>2.95s</td>
+</tr>
+<tr>
+<td>Jekyll</td>
+<td>1.47s</td>
+<td>3.3</td>
+<td>14.38</td>
+<td>187.15</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="the-advanced-benchmark">The Advanced Benchmark</h2>
+
+<p>For the next benchmark, we generated content with a title, body, date, categories, and tags. We enabled the generation of category and tag archives, and also generated an XML sitemap and RSS/Atom Feed.</p>
+
+<p>These are some of the core features a basic blog or documentation site would need, so we felt this was a fair and representative benchmark.</p>
+
+<p>In this case, our content looked like this:</p>
+
+<p><strong>Hugo</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">---
+title: Test 1
+categories:
+  - red
+  - orange
+  - yellow
+  - green
+  - blue
+  - indigo
+  - violet
+tags:
+  - red
+  - orange
+  - yellow
+  - green
+  - blue
+  - indigo
+  - violet
+date: 2017-07-17T14:07:58-03:00
+---
+# Page Headline
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna nisl. Donec rhoncus libero eget tristique dapibus. Nullam ultricies ullamcorper ipsum sed lacinia.</pre></div>
+<p><strong>Jekyll</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">---
+title: test_1
+tags: red orange yellow green blue indigo violet
+categories: red orange yellow green blue indigo violet
+layout: post
+---
+# Page Headline
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget urna nisl. Donec rhoncus libero eget tristique dapibus. Nullam ultricies ullamcorper ipsum sed lacinia.</pre></div>
+<hr />
+
+<p>Looking at the results below, you can see that Hugo is again the winner. It’s clear that as you add complexity to Jekyll the decrease in performance is <em>much</em> more noticeable.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced-test-1.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced-test-1.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced-test-1.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced-test-1.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced-test-1.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced-test-1.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced-test-1.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced-test-1.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced-test-1.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced-test-1.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced-test-1.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced-test-1.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced-test-1.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced-test-1.png" class="" /></p>
+
+<p style="text-align:center;margin-top:-1rem;font-size:.85rem;font-style:italic;">Advanced Test with 10, 100, and 1,000 posts.</p>
+
+<p>Adding a 10,000 page test dwarfs the data from the previous graph.</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced2.png" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced2.png 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced2.png 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced2.png 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced2.png 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced2.png 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced2.png 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced2.png 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced2.png 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced2.png 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced2.png 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced2.png 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced2.png" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-advanced2.png" class="" /></p>
+
+<p style="text-align:center;margin-top:-1rem;font-size:.85rem;font-style:italic;">Advanced Test with 10, 100, 1,000 and 10,000 posts.</p>
+
+<p>The results from the second test are as follows:</p>
+
+<table>
+<thead>
+<tr>
+<th>Generator</th>
+<th>10</th>
+<th>100</th>
+<th>1,000</th>
+<th>10,000</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hugo</td>
+<td>0.06s</td>
+<td>0.12s</td>
+<td>0.65s</td>
+<td>7.46s</td>
+</tr>
+<tr>
+<td>Jekyll</td>
+<td>1.38s</td>
+<td>3.8</td>
+<td>18.42</td>
+<td>218.61</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="other-thoughts">Other Thoughts</h2>
+
+<p>It’s important to note that these tests were run in an environment where all of the necessary components were downloaded and installed beforehand.</p>
+
+<p>Given that Jekyll has plugins where Hugo doesn’t, in cloud or server environments where Gems need to be downloaded, they will add additional time to builds (e.g, Yakkl’s preview feature).</p>
+
+<h4 id="incremental-builds">Incremental Builds</h4>
+
+<p>Both Hugo and Jekyll have a built-in server that provides <em>incremental building</em>. This means that from the moment you spin up the server, they will watch for changes and only rebuild the pages that have changed.</p>
+
+<p>This greatly speeds up build time in a development environment for both generators.</p>
+
+<h2 id="a-clear-winner">A Clear Winner</h2>
+
+<p>Given that most sites aren’t going to be anywhere close to 10,000 posts, we’ll make the final verdict based on average build time over 10, 100, and 1,000 posts…</p>
+
+<p>
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-totals.jpg" srcset="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_320/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-totals.jpg 320w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_497/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-totals.jpg 497w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_674/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-totals.jpg 674w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_851/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-totals.jpg 851w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1028/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-totals.jpg 1028w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1205/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-totals.jpg 1205w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1382/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-totals.jpg 1382w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1559/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-totals.jpg 1559w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1736/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-totals.jpg 1736w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1913/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-totals.jpg 1913w, https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_1920/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-totals.jpg 1920w" sizes="auto" alt="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-totals.jpg" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_640/https://yakkl.com/uploads/2018/01/hugo-vs-jekyll-totals.jpg" class="" /></p>
+
+<p>So as we can see, when it comes to speed and build performance, Hugo is a <em>clear</em> winner.</p>
+
+<p>Don&rsquo;t just take our word for it. <a href="https://www.smashingmagazine.com/">Smashing Magazine</a>, <a href="https://discourse.gohugo.io/t/smashing-magazine-s-redesign-powered-by-hugo-jamstack/5826/9">reportedly</a> builds their 7,500-page Hugo site in 13 seconds and Hugo user <a href="https://twitter.com/darinpope">@darinpope</a> managed to <a href="https://discourse.gohugo.io/t/page-generation-performance-expectations/1335/6">generate 600,000 pages in under 5 minutes</a>.</p>
+
+<div class="shortcode-tip"><p>Check out our <a href="https://yakkl.com/docs/guides/developing-with-hugo/"><strong>Developing with Hugo guide</strong></a> to learn more about building a Hugo site with Yakkl.com.</p>
+
+</div>
+
+<h2 id="what-s-your-experience">What&rsquo;s your experience?</h2>
+
+<p>Do you run a Jekyll or Hugo site? Share your build times in the conversation on Hacker  News.</p>
+
+<p><a style="background: #F60; display: inline-block; border-radius: 5px; color: white; padding: 2px 9px; font-size: 14px;" href="https://news.ycombinator.com/item?id=16265259">Comment on Hacker News</a></p>
+
+<hr />
+
+<p><strong>Next week,</strong> we’ll <a href="/blog/hugo-and-jekyll-compared/">compare the usability and features of Hugo and Jekyll</a> to help you decide which static site generator is right for you.</p>
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "Hugo vs Jekyll: Benchmarked";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/hugo-vs-jekyll-benchmark\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/hugo-vs-jekyll-benchmark.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>

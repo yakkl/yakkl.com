@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><title>CircleCI Followup: Deploying Via rsync | Yakkl.com</title><meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="apple-mobile-web-app-title" content="Yakkl.com" />
+<meta name="application-name" content="Yakkl.com" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="description" content="In this follow-up, we show you how to use CircleCI with the `rsync` utility to deploy your site to any rsync-enabled server /"><meta name="robots" content="index, follow" />
+<meta property="og:title" content="CircleCI Followup: Deploying Via rsync" />
+<meta property="og:description" content="In this follow-up, we show you how to use CircleCI with the `rsync` utility to deploy your site to any rsync-enabled server" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/circleci-deploy-via-rsync/" /><meta property="og:image" content="https://yakkl.com/uploads/2018/03/follow-up-circleci-rsync.png" /><meta property="og:image:alt" content="In this follow-up, we show you how to use CircleCI with the `rsync` utility to deploy your site to any rsync-enabled server" /><meta property="article:published_time" content="2018-03-29T12:00:00&#43;00:00"/>
+  <meta property="article:modified_time" content="2018-03-29T12:00:00&#43;00:00"/><meta property="og:locale" content="en" />
+<meta property="article:section" content="blog" />
+  <meta itemprop="name" content="CircleCI Followup: Deploying Via rsync">
+<meta itemprop="description" content="In this follow-up, we show you how to use CircleCI with the `rsync` utility to deploy your site to any rsync-enabled server"><meta itemprop="datePublished" content="2018-03-29T12:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-03-29T12:00:00&#43;00:00" /><meta itemprop="wordCount" content="935"><meta itemprop="image" content="https://yakkl.com/uploads/2018/03/follow-up-circleci-rsync.png">
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/03/follow-up-circleci-rsync.png"/><meta name="twitter:title" content="CircleCI Followup: Deploying Via rsync"/>
+<meta name="twitter:description" content="In this follow-up, we show you how to use CircleCI with the `rsync` utility to deploy your site to any rsync-enabled server"/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
+<link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#00c7b7" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-KL5HP9Q':true});
+</script> 
+
+
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MRLTPV7');</script>
+<script>
+var featureFlagContent = {};
+</script>
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "https://yakkl.com",
+    "logo": "/img/yakkl-pos-full.svg",
+    "sameAs": ["https://www.twitter.com/yakklofficial"]
+  }
+  </script>
+</head>
+  <body class="section-blog kind-page type-blog ">
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="header container">
+  <div class="left-block">
+    <a href="/" title="Go to homepage" class="logo"></a>
+  </div>
+  <div class="right-block"><div class="search">
+      <input type="search" name="search" placeholder="Search the blog..." class="search--input">
+    </div><nav class="nav">
+      <div class="nav-content">
+        <a href="/" class="mini-nav--logo"></a>
+        <ul class="main-nav-items"><li>
+              <a href="/pricing/" class="nav-item">Pricing</a>
+            </li><li>
+              <a href="/docs/welcome/" class="nav-item">Docs</a>
+            </li><li>
+              <a href="/blog/" class="nav-item">Blog</a>
+            </li><li data-signed-in="false" data-user>
+              <a href="/settings" class="nav-item">My Account</a>
+            </li><li data-signed-out="true">
+              <a href="/login" class="nav-item">Login</a>
+            </li><li class="nav-item" data-signed-in="false">
+                <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
+              </li><li data-signed-out="true">
+              <a class="signup-button button small primary" href="/signup">Sign up</a>
+            </li></ul></div>
+    </nav>
+    <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
+    </div>
+  </div>
+</header><div id="root"></div>
+  <div id="modal-root"></div>
+  <main id="post-container" class="single-post"><div class="post--feature-image">
+            
+  <img src="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/03/follow-up-circleci-rsync.png" alt="CircleCI Followup: Deploying Via rsync" title="https://res.cloudinary.com/yakkl-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://yakkl.com/uploads/2018/03/follow-up-circleci-rsync.png" class="" />
+              
+        </div><div class="container">
+      <h1 class="post--title">CircleCI Followup: Deploying Via rsync</h1>
+      <div class="post--meta"><div class="author">
+          <span class="post--meta-label">Written by</span></div><div class="post--info">
+          <span class="post--meta-label">Posted on</span>
+          <span class="post--date">March 29, 2018</span><span>in 
+            <a href="/categories/cicd" class="post--category" data-category="cicd">
+              Cicd
+            </a></span></div>
+      </div>
+
+      <div class="md-content">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+    
+  
+  
+
+<div class="shortcode-tip"><p>This tutorial was updated on <strong>April 3, 2018</strong>.</p>
+
+</div>
+
+<p>In last week&rsquo;s article, we showed you how to <a href="/blog/automate-deploy-w-circle-ci">automate the deployment of a Hugo site using CircleCI</a>. The example we provided used the <code>awscli</code> utility to deploy the results of your build process to an AWS S3 bucket. In this follow-up, we will show you how to use the <code>rsync</code> utility to deploy your site to any rsync-enabled server.</p>
+
+<h2 id="why-rsync">Why rsync?</h2>
+
+<p><code>rsync</code> is a utility for transferring files between machines. It is a good choice for our use case because:</p>
+
+<ul>
+<li>It is commonly available on Unix systems</li>
+<li>It can compute and send only parts of updated files to minimize network usage and transfer as fast as possible</li>
+<li>It allows us to transfer files using SSH</li>
+</ul>
+
+<p>Unlike our AWS-specific deployment in the previous article, the <code>rsync</code> deployment can be used with a variety of hosting providers and is a good general-purpose solution.</p>
+
+<h2 id="review-the-circleci-config-yml-file">Review: The <em>.circleci/config.yml</em> File</h2>
+
+<p>Recall that we are telling CircleCI how to deploy our site by <a href="/blog/automate-deploy-w-circle-ci#configuring-your-deployment">inserting a configuration file</a> at <code>.circleci/config.yml</code> with the following information:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">version: <span style="color:#ae81ff">2</span>
+jobs:
+  build:
+    docker:
+      - image: cibuilds/hugo:latest
+    working_directory: ~/hugo
+    environment:
+      HUGO_BUILD_DIR: ~/hugo/public
+    steps:
+      - run: apk update <span style="color:#75715e">&amp;&amp;</span> apk add git
+      - checkout
+      - run: git submodule sync <span style="color:#75715e">&amp;&amp;</span> git submodule update --init
+      - run: curl -L https://github.com/bep/s3deploy/releases/download/v2.<span style="color:#ae81ff">0.1</span>/s3deploy_2.<span style="color:#ae81ff">0.</span>1_Linux-64bit.tar.gz <span style="color:#e6db74">| tar xvz
+</span><span style="color:#e6db74">      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+</span><span style="color:#e6db74">      - run: htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html --empty-alt-ignore --disable-external
+</span><span style="color:#e6db74">      - deploy:
+</span><span style="color:#e6db74">          name: deploy
+</span><span style="color:#e6db74">          command: |
+</span><span style="color:#e6db74">            if [ &#34;${CIRCLE_BRANCH}&#34; = &#34;master&#34; ]; then
+</span><span style="color:#e6db74">              ./s3deploy -source=$HUGO_BUILD_DIR -region=us-east-1 -bucket=dwalkr-hugo-demo -path=your-subfolder
+</span><span style="color:#e6db74">            else
+</span><span style="color:#e6db74">              echo &#34;Not master branch, dry run only&#34;
+</span><span style="color:#e6db74">            fi</span></code></pre></div>
+<p>In order to use <code>rsync</code> to deploy instead, a few things will need to be changed:</p>
+
+<ol>
+<li>The <code>s3deploy</code> installation step will be removed.</li>
+<li>An <strong>SSH key</strong> will be added so the CI environment can connect to the hosting server.</li>
+<li>The <strong>hostkey</strong> of the hosting server needs to be added to the CI environment’s <code>known_hosts</code> file.</li>
+<li>The <code>deploy</code> command will be altered to use <code>rsync</code></li>
+</ol>
+
+<h3 id="adding-the-ssh-key">Adding the SSH Key</h3>
+
+<p><video playsinline="true" autoplay="true" muted="" loop="true">
+    <source src="/video/circleci_add_ssh_key.webm" type="video/webm">
+    <source src="/video/circleci_add_ssh_key.webm.mp4" type="video/mp4">
+</video>
+To enable CircleCI to send files to your server via <code>rsync</code>, access your project’s build settings by clicking the cog next to the project name on the <strong>Builds</strong> screen. On the settings screen, locate the <strong>SSH Permissions</strong> link under the Permissions section. Click the <strong>Add SSH Key</strong> button and add your server’s hostname and the contents of the private key.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">          - add_ssh_keys:
+              fingerprints:
+                - <span style="color:#e6db74">&#34;xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx&#34;</span></code></pre></div>
+<p>To import this key into our CI environment, we use the <code>add_ssh_keys</code> step. After adding the SSH key, CircleCI displays the key’s fingerprint on the settings screen. Copy this fingerprint and insert it into the above command, and our build environment will now be able to use the key.</p>
+
+<h3 id="providing-the-hostkey-for-verification">Providing the Hostkey for Verification</h3>
+
+<p>When the CircleCI server attempts to connect to your host, it may prompt you to verify the host key. Prompts are the kryptonite of automation: the CI environment will hang indefinitely, waiting for a user to give it a response. It is possible to disable this verification, but adding the correct key to the <code>known_hosts</code> file is a much better solution. CircleCI doesn’t have a semantic solution for adding host keys, but one option is to add the host key as an environment variable. To add environment variables, go to your project settings and click on the <strong>Environment Variables</strong> link under Build Settings. Click the <strong>Add Variable</strong> button and add a new value named <code>REMOTE_HOSTKEY</code> with the contents of your server’s host key. To obtain the host key, run the following command in your terminal:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh-keyscan your-server-hostname.com</code></pre></div>
+<p>We can then use this variable in our build environment to add the host key to the <code>known_hosts</code> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">          - run: echo $REMOTE_HOSTKEY &gt;<span style="color:#e6db74">&gt; ~/.ssh/known_hosts</span></code></pre></div>
+<h3 id="the-deploy-command">The Deploy Command</h3>
+
+<p>All that’s left is to send the generated static files contained in <code>$HUGO_BUILD_DIR</code> to the destination server.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">          - deploy:
+              name: deploy
+              command: <span style="color:#e6db74">|
+</span><span style="color:#e6db74">                if [ &#34;${CIRCLE_BRANCH}&#34; = &#34;master&#34; ]; then
+</span><span style="color:#e6db74">                  rsync -avce ssh $HUGO_BUILD_DIR your-user@your-host:/path/to/your/website
+</span><span style="color:#e6db74">                else
+</span><span style="color:#e6db74">                  echo &#34;Not master branch, dry run only&#34;
+</span><span style="color:#e6db74">                fi</span></code></pre></div>
+<p><code>rsync</code> has <a href="https://ss64.com/bash/rsync_options.html">a ton of options</a>. The following three are especially useful for our purposes:</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Flag</th>
+<th align="left">What it Does</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><strong>-a</strong></td>
+<td align="left">This configures rsync to run in <strong>archive mode.</strong> Archive mode automatically applies several useful settings such operating recursively on directory trees, preserving symlinks, and preserving file permissions.</td>
+</tr>
+
+<tr>
+<td align="left"><strong>-v</strong></td>
+<td align="left">This will run <code>rsync</code> in verbose mode, which will provide more information to the error log in the event something goes wrong.</td>
+</tr>
+
+<tr>
+<td align="left"><strong>-c</strong></td>
+<td align="left">By default, <code>rsync</code> skips files based on the file modification time. <a href="/blog/automate-deploy-w-circle-ci/">As mentioned in the previous article</a>, this is not optimal for static sites. With this flag, <code>rsync</code> will compute a <strong>checksum</strong> of each file to determine if the contents have changed.</td>
+</tr>
+
+<tr>
+<td align="left"><strong>-e&nbsp;ssh</strong></td>
+<td align="left">This tells <code>rsync</code> that we wish to execute commands on the remote machine via <code>ssh</code>.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="the-final-config-file">The Final Config File</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">    version: <span style="color:#ae81ff">2</span>
+    jobs:
+      build:
+        docker:
+          - image: cibuilds/hugo:latest
+        working_directory: ~/hugo
+        environment:
+          HUGO_BUILD_DIR: ~/hugo/public
+        steps:
+          - run: apk update <span style="color:#75715e">&amp;&amp;</span> apk add git
+          - checkout
+          - run: git submodule sync <span style="color:#75715e">&amp;&amp;</span> git submodule update --init
+          - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+          - run: htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html --empty-alt-ignore --disable-external
+          - add_ssh_keys:
+              fingerprints:
+                - <span style="color:#e6db74">&#34;xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx&#34;</span>
+          - run: echo $REMOTE_HOSTKEY &gt;<span style="color:#e6db74">&gt; ~/.ssh/known_hosts
+</span><span style="color:#e6db74">          - deploy:
+</span><span style="color:#e6db74">              name: deploy
+</span><span style="color:#e6db74">              command: |
+</span><span style="color:#e6db74">                if [ &#34;${CIRCLE_BRANCH}&#34; = &#34;master&#34; ]; then
+</span><span style="color:#e6db74">                  rsync -avce ssh $HUGO_BUILD_DIR your-user@your-host:/path/to/your/website
+</span><span style="color:#e6db74">                else
+</span><span style="color:#e6db74">                  echo &#34;Not master branch, dry run only&#34;
+</span><span style="color:#e6db74">                fi</span></code></pre></div>
+<p>There you have it! Using this configuration you can deploy from your CircleCI environment to a variety of different hosting providers. If <code>rsync</code> isn’t your sauce, you can easily tweak the <code>deploy</code> step to run any commands in your build environment to get your files where they need to go.</p>
+
+<h2 id="have-something-to-add">Have something to add?</h2>
+
+<p><a style="background: #F60; display: inline-block; border-radius: 5px; color: white; padding: 2px 9px; font-size: 14px;" href="https://news.ycombinator.com/item?id=16710224">Discuss on Hacker News</a></p>
+
+      </div>
+
+      <hr /><div class="post--about"></div><aside class="social-sharing">
+  <h2 class="social-sharing--title">Share this article</h2>
+  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_reddit"></a>
+    <a class="a2a_button_hacker_news"></a>
+  </div>
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.linkname = "CircleCI Followup: Deploying Via rsync";
+  a2a_config.linkurl = "https://yakkl.com\/blog\/circleci-deploy-via-rsync\/";
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+</aside>
+<div class="post--feedback">
+        <p><small>Caught a mistake or want to contribute to the blog? Edit this page on <a href="https://github.com/yakkl/yakkl.com/edit/master/hugo/content/blog/circleci-deploy-via-rsync.md" target="_blank">Github</a>!</small></p>
+      </div></div>
+    
+  </main><div id="slide-in-cta" class="slide-in-cta container">
+  <img class="slide-in-cta--close toggle-close" src="/img/navtoggle-close.svg" onClick="closeSlideIn()" alt="Close nav">
+  <h2 class="slide-in-cta--title" style="margin-bottom: initial;">Want to hear it first?</h2>
+  <p class="slide-in-cta--text">Subscribe to our newsletter to get the posts directly in your inbox.</p>
+  <br></div>
+
+<script type="text/javascript">
+  
+  var slideInSeen = false
+  var scrollTimer, lastScrollFireTime = 0;
+
+  window.onscroll = function() {
+    if (slideInSeen == false) {
+      
+      var minScrollTime = 1000;
+      var now = new Date().getTime();
+
+      function checkSlideIn() {
+        
+        let d = document.documentElement;
+        let offset = window.pageYOffset + window.innerHeight;
+        let height = document.getElementById("post-container").scrollHeight * 0.5; 
+
+        if (offset >= height && slideInSeen == false) {
+          
+          document.getElementById("slide-in-cta").style.transform = "translateX(0)";
+          slideInSeen = true;
+        }
+      }
+
+      if (!scrollTimer) {
+        
+          if (now - lastScrollFireTime > (3 * minScrollTime)) {
+              checkSlideIn();   
+              lastScrollFireTime = now;
+          }
+          scrollTimer = setTimeout(function() {
+              scrollTimer = null;
+              lastScrollFireTime = new Date().getTime();
+              checkSlideIn();
+          }, minScrollTime);
+      }
+    }
+  };
+
+  function closeSlideIn() {
+    document.getElementById("slide-in-cta").style.transform = "translateX(100%)";
+  };
+</script>
+<section class="section section-cta center" id="footer-cta">
+  <div class="container">
+    <h2 class="section--title">Build amazing team collaboration</h2>
+    <p class="section--sub is-center">We have the tools to manage your team collaboration. Ready to try Yakkl?</p>
+    <br><br><a href="https://yakkl.com/signup" class="button primary">Get started for free</a>
+      </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://yakkl.com" title="Go to homepage">
+          <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
+        </a>
+      </div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+  </div>
+  <div class="lower-footer">
+    <div class="container">
+      <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
+      <div class="contact">
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+    </div>
+  </div>
+</footer>
+
+<script async src="/js/ads.min.js?dbe708d79522b1e10e053ef8a97ae937" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+
+<script src="/js/scripts.min.js?de9a41a6960f79982edc4ff76a4a16cb" type="text/javascript"></script>
+
+<aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+      <div class="search-header--sticky">
+        <div class="search-results--stats">
+          <div id="stats"></div>
+          <a href="https://algolia.com" target="_blank"><img src="/img/logos/search-by-algolia.svg" alt="Powered by Algolia" width="100" class="search-results--poweredby" /></a>
+        </div>
+        <div class="search-results--filters"></div>
+      </div>
+    </section>
+    <section class="section section-search-results">
+    </section>
+  </div>
+</aside></body>
+</html>
