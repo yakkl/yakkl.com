@@ -46,10 +46,12 @@ features:
 #     alt: Editor friendly interface
 #   direction: rtl
 #   class: section-sync
+#permalink: "/img/commits-illustration.png"
+
 - headline: Be the HERO!
   textline: Your team will love not having "channel sprawl" and having topics of discussion within channels.
   visual:
-    permalink: "/img/commits-illustration.png"
+    permalink: 
     alt: Editor workflow
   direction: vertical
   class: section-sync
