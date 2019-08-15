@@ -36,39 +36,38 @@ features:
     alt: Dev workflow
   direction: ltr
   class: section-roots
-- headline: Empower your editors
-  textline: |
-    Your editing team deserves a powerful admin interface. Customize each page with Yakkl's rich editing fields.
+# - headline: Empower your editors
+#   textline: |
+#     Your editing team deserves a powerful admin interface. Customize each page with Yakkl's rich editing fields.
 
-    Login from your **yoursite.com/admin**. With Yakkl Remote, your site will transcend static.
-  visual:
-    permalink: "/img/editor-illustration-02.png"
-    alt: Editor friendly interface
-  direction: rtl
-  class: section-sync
-- headline: Your entire team will be making commits
-  textline: Your editing team won't even realize they're writing Markdown and committing
-    to your repo.
+#     Login from your **yoursite.com/admin**. With Yakkl Remote, your site will transcend static.
+#   visual:
+#     permalink: "/img/editor-illustration-02.png"
+#     alt: Editor friendly interface
+#   direction: rtl
+#   class: section-sync
+- headline: Be the HERO!
+  textline: Your team will love not having "channel sprawl" and having topics of discussion within channels.
   visual:
     permalink: "/img/commits-illustration.png"
     alt: Editor workflow
   direction: vertical
   class: section-sync
-- headline: Own Your Content
-  textline: |
-    Instead of having your content locked behind your CMS's database, we just commit it to your git repository.
+# - headline: Own Your Content
+#   textline: |
+#     Instead of having your content locked behind your CMS's database, we just commit it to your git repository.
 
-    We make it easy for you to grab your content and walk away, although we don't think you will ;)
-  visual:
-    permalink: "/img/deploy-illustration-03.png"
-    alt: Simple deployment
-  direction: ltr
-  class: section-automated
-- headline: Host where you want
-  textline: Your static site can live anywhere you want — including on Netlify, Amazon
-    S3, or GitHub Pages.
-  direction: vertical
-  class: section-deploy
+#     We make it easy for you to grab your content and walk away, although we don't think you will ;)
+#   visual:
+#     permalink: "/img/deploy-illustration-03.png"
+#     alt: Simple deployment
+#   direction: ltr
+#   class: section-automated
+# - headline: Host where you want
+#   textline: Your static site can live anywhere you want — including on Netlify, Amazon
+#     S3, or GitHub Pages.
+#   direction: vertical
+#   class: section-deploy
 cta:
   headline: Build amazing secure team collaboration
   textline: We have the tools to manage your collaboration. Ready to try Yakkl?
