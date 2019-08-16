@@ -1,7 +1,7 @@
 baseurl = "https://yakkl.com"
 copyright = "Copyright (c) 2019 Yakkl.com."
 defaultContentLanguage = "en"
-destination = "../dist/"
+destination = "../docs/"
 enableEmoji = true
 enableRobotsTXT = true
 languageCode = "en"
@@ -120,8 +120,9 @@ pattern = "2006"
 weight = 10
 [social]
 email = "support@yakkl.com"
-slack = "https://join.slack.com/t/yakkl/shared_invite/enQtNzEzNzYwNzg0NjQyLWRiNjM5Y2NiMzcxOTgxNzg4OTA3ZjRiZDFlMmY5ZmRjZGUyMGM3ZDc0ZTg5NWMwMmIyNjIzMGE4OTIyZDY5NDM"
+slack = "https://yakkl.com/blog/2019-08-15-join-our-slack-channel"
 twitter = "yakklofficial"
+instagram = "yakklofficial"
 [taxonomies]
 author = "authors"
 category = "categories"
