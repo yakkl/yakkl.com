@@ -7,19 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
-    <lastBuildDate>Mon, 12 Aug 2019 04:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Aug 2019 12:00:00 -0300</lastBuildDate>
     
 	<atom:link href="https://yakkl.com/authors/hans-jones/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Why we built Yakkl</title>
-      <link>https://yakkl.com/blog/why-we-built-yakkl/</link>
-      <pubDate>Mon, 12 Aug 2019 04:00:00 +0000</pubDate>
+      <title>Beta version of Yakkl</title>
+      <link>https://yakkl.com/blog/2019-08-15-yakkl/</link>
+      <pubDate>Thu, 15 Aug 2019 12:00:00 -0300</pubDate>
       
-      <guid>https://yakkl.com/blog/why-we-built-yakkl/</guid>
-      <description>My friend, Emily, needed a simple website for her restaurant. She&amp;rsquo;s a chef and didn&amp;rsquo;t want to deal with the hassle of DNS, hosting, design, etc. As a recovering freelancer, I offered to help.
-Normally, I would use WordPress for a site like this, but I was fed up with the headaches that comes with maintaining a WordPress site. So, I took an evening and cranked out a simple 1-page static site.</description>
+      <guid>https://yakkl.com/blog/2019-08-15-yakkl/</guid>
+      <description>Today, we announce the first beta of the open-sourced version of Yakkl which can be found at Yakkl Github Repo. This beta release will give you a glimpse into what is coming and it includes not only channels but topics so you do not have to put up with &amp;ldquo;Channel Sprawl&amp;rdquo;.
+Geek Speak The coming beta release will also remove some of the older Puppet deployment options and bash scripts.</description>
     </item>
     
   </channel>

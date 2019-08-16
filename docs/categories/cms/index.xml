@@ -7,44 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
-    <lastBuildDate>Mon, 03 Jun 2019 12:53:59 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Mar 2019 16:00:00 -1100</lastBuildDate>
     
 	<atom:link href="https://yakkl.com/categories/cms/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Introducing Site-based permissions and Teams</title>
-      <link>https://yakkl.com/blog/introducing-teams/</link>
-      <pubDate>Mon, 03 Jun 2019 12:53:59 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/introducing-teams/</guid>
-      <description>We are introducing changes to improve the way you manage collaborators on your sites.
-Our previous model had a few limitations that we wanted to address:
- Adding a user to an organization gave each of your members access to all organization sites. The only way to give users &amp;ldquo;developer&amp;rdquo; or &amp;ldquo;admin&amp;rdquo; permissions on a site was to make them a &amp;ldquo;developer&amp;rdquo; or &amp;ldquo;admin&amp;rdquo; across the entire organization. Guests on an individual site were restricted to &amp;ldquo;editor&amp;rdquo; permissions (No access to edit front matter templates or site settings)  Site-specific access levels The available roles for users within an organizations are now &amp;ldquo;Member&amp;rdquo; or &amp;ldquo;Owner&amp;rdquo;.</description>
-    </item>
-    
-    <item>
-      <title>Use Yakkl With Azure DevOps Repos</title>
-      <link>https://yakkl.com/blog/use-forestry-with-azure-devops-repos/</link>
-      <pubDate>Mon, 29 Apr 2019 14:55:39 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/use-forestry-with-azure-devops-repos/</guid>
-      <description>Azure DevOps is a suite of code collaboration and deployment tools provided by Microsoft. Azure DevOps includes cloud hosting for git repositories, similar to Github, GitLab, and Bitbucket.
-As of today, you can now import Azure DevOps repositories into Yakkl! Yakkl will sync the contents of your Azure DevOps repository by importing changes when they&amp;rsquo;re pushed to the repo, and committing content updates that you make in Yakkl.
-Importing Azure DevOps Repos to Yakkl Our OAuth-based Quick Setup is not currently available for Azure DevOps repositories, so you must use our manual setup option when connecting to Azure DevOps.</description>
-    </item>
-    
-    <item>
-      <title>Full Speed Ahead in 2019</title>
-      <link>https://yakkl.com/blog/full-speed-ahead-in-2019/</link>
-      <pubDate>Mon, 08 Apr 2019 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/full-speed-ahead-in-2019/</guid>
-      <description>We have a big update to share with you today! Today’s release marks the culmination of a lot of feature work, with one major goal in mind:
-We wanna go fast.
-Today, we’re launching:
- Instant Previews, which will enable your previews to build faster; Git LFS support for media which will speed up Git operations on image-heavy sites; and Gatsby Support, allowing you to use Yakkl with a “blazing fast” Gatsby frontend.</description>
-    </item>
     
     <item>
       <title>2019/03/15 Changelog</title>
@@ -53,145 +19,6 @@ Today, we’re launching:
       
       <guid>https://yakkl.com/docs/changelog/2018-01-09-changelog/</guid>
       <description>Bug Fixes  Default Values: Fixed a bug where default values were not being set when creating documents.  Enhancements  Settings Navigation: Mobile view for Settings removes the tabs in favour of a dropdown field. Preview Errors Notification: The notification for preview errors now contains a link to our troubleshooting doc. Document Sorting: Started to persist the document sorting method between visits. Media View: Started to persist the media view preference between visits.</description>
-    </item>
-    
-    <item>
-      <title>Announcing Image Handling with S3 🖼️ &#43; Update Billing Contact Information 💵 and more</title>
-      <link>https://yakkl.com/blog/announcing-image-handling-with-s3/</link>
-      <pubDate>Wed, 09 Jan 2019 23:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/announcing-image-handling-with-s3/</guid>
-      <description>Happy New Year! We&amp;rsquo;re starting into 2019 with an exciting new feature.
-Today we can announce support for S3 as an image storage provider for Yakkl. The S3 integration makes it possible to efficiently store, organize and deliver images while keeping the editing experience in Yakkl simple and clean.
-Editors, marketers and writers can continue to use the Yakkl Media Library without even knowing that they are using S3 in the backend.</description>
-    </item>
-    
-    <item>
-      <title>Data Files, Directories, and Duplicating Pages</title>
-      <link>https://yakkl.com/blog/data-files-directories-and-duplicating-pages/</link>
-      <pubDate>Tue, 23 Oct 2018 03:00:00 -1100</pubDate>
-      
-      <guid>https://yakkl.com/blog/data-files-directories-and-duplicating-pages/</guid>
-      <description>The lumberjacks have been busy lately! Here&amp;rsquo;s what we&amp;rsquo;ve been up to:
-Agnostic Data File Handling We have removed support for our old way of handling data files. Previously, we used some heuristics to automatically discover data files in your Jekyll and Hugo projects. Data files must now be manually configured by creating sections for them.
-VuePress Now Out of Beta Abstracting data file discovery in our content manager has paved the way for more easily supporting other static site generators.</description>
-    </item>
-    
-    <item>
-      <title>Introducing Custom Build Commands</title>
-      <link>https://yakkl.com/blog/introducing-custom-build-commands/</link>
-      <pubDate>Fri, 21 Sep 2018 05:11:49 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/introducing-custom-build-commands/</guid>
-      <description>We&amp;rsquo;re excited to announce Custom Build Commands! You can now decide what build command should be run for your project.
-Until now Yakkl chose the build command that needed to be run for you, which worked fine for most cases. However, this meant that projects that needed a custom build process were unable to use Yakkl&amp;rsquo;s deployment tools and (in some cases) previews.
-Picking your own commands enables you to really choose your own workflow and give you the flexibility you need.</description>
-    </item>
-    
-    <item>
-      <title>Block Labels 🔖, Read-Only Docs 📝😍 and More</title>
-      <link>https://yakkl.com/blog/block-labels-read-only-docs-and-more/</link>
-      <pubDate>Wed, 05 Sep 2018 00:40:51 -1100</pubDate>
-      
-      <guid>https://yakkl.com/blog/block-labels-read-only-docs-and-more/</guid>
-      <description>Last week we added a bunch of features to make your life a little easier!
-You are shaping Yakkl every day with your feedback and this is exactly what happened with this improvement. You made us aware that Blocks can get hard to navigate when you add the same Block multiple times. To make this easier you can now add a display_field to label your Blocks.
-We believe the best way to explain intricate settings or features is documentation right at your fingertips.</description>
-    </item>
-    
-    <item>
-      <title>Migrating to Key-based Authentication</title>
-      <link>https://yakkl.com/blog/migrating-to-key-based-authentication/</link>
-      <pubDate>Tue, 28 Aug 2018 05:00:18 -1100</pubDate>
-      
-      <guid>https://yakkl.com/blog/migrating-to-key-based-authentication/</guid>
-      <description>Head&amp;rsquo;s up! We&amp;rsquo;re making some changes to how Yakkl authenticates with your Git repos.
-Today, we rolled out an update that uses persistent SSH keys to interact with your repo. Previously, we were relying on OAuth tokens to gain access as needed, but some users were encountering problems with this method as tokens would intermittently expire before they could be refreshed. Using long-lived SSH credentials is intended to solve this problem.</description>
-    </item>
-    
-    <item>
-      <title>Support for VuePress [Beta]</title>
-      <link>https://yakkl.com/blog/vuepress-support-beta/</link>
-      <pubDate>Fri, 10 Aug 2018 08:36:10 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/vuepress-support-beta/</guid>
-      <description>VuePress support is here! 🎉🎉🎉
-Support for Static Site Generators (SSGs), beyond Jekyll and Hugo, was on our roadmap for a while now. In fact, Jordan mentioned adding other SSGs to Yakkl back when our first beta was leaked on Producthunt two years ago.
-Why did you make us wait? We love to create a great content management experience and make an app that is as easy-to-use for developers as it is for editors.</description>
-    </item>
-    
-    <item>
-      <title>Snippets, Custom Content Sections and More</title>
-      <link>https://yakkl.com/blog/snippets-custom-content-sections-and-more/</link>
-      <pubDate>Tue, 31 Jul 2018 01:28:03 -1100</pubDate>
-      
-      <guid>https://yakkl.com/blog/snippets-custom-content-sections-and-more/</guid>
-      <description>I&amp;rsquo;m happy to announce some new features today! ☀️
-Long awaited, our Snippets feature is finally here. Our Hugo users felt especially strong about using Hugo&amp;rsquo;s powerful Shortcodes feature in Yakkl. You can now add HTML snippets to your Markdown Editor whether you&amp;rsquo;re using Hugo or Jekyll.
-Moreover, the team has continued to improve the sidebar. We added advanced configuration of content sections so you can control the structure of your content in Yakkl.</description>
-    </item>
-    
-    <item>
-      <title>Customize Your Sidebar and Limit Front Matter Templates to Sections</title>
-      <link>https://yakkl.com/blog/customize-sidebar-and-assign-front-matter-templates/</link>
-      <pubDate>Wed, 04 Jul 2018 02:17:18 -1100</pubDate>
-      
-      <guid>https://yakkl.com/blog/customize-sidebar-and-assign-front-matter-templates/</guid>
-      <description>Another week full of new features! While the marketing team launched the Blocks theme uBuild for Jekyll and Hugo, the development team kept working on new product features.
-Making the sidebar configurable was really high up on your wish list and this week we made it happen. Some of you also wanted to limit access to Front Matter Templates to specific content sections. You can do that now, too.</description>
-    </item>
-    
-    <item>
-      <title>uBuild: A New Jekyll Theme Using Blocks</title>
-      <link>https://yakkl.com/blog/ubuild-a-new-theme-for-static-sites-using-blocks/</link>
-      <pubDate>Fri, 22 Jun 2018 14:00:06 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/ubuild-a-new-theme-for-static-sites-using-blocks/</guid>
-      <description>Back in April we announced a feature that we believed was a game-changer for static site content managers. Blocks was here to introduce a way for you to put together sites using pre-composed site snippets inside Yakkl.
-While we did our best to show you how to set them up and give you an idea of how powerful they could be, we noticed that getting to know Blocks and figuring out how to set them up from scratch wasn&amp;rsquo;t as self-explanatory as we had hoped.</description>
-    </item>
-    
-    <item>
-      <title>Hugo Support for All Versions, Sorting for Pages and more</title>
-      <link>https://yakkl.com/blog/hugo-support-sorting-for-pages-and-more/</link>
-      <pubDate>Mon, 18 Jun 2018 23:32:20 -1100</pubDate>
-      
-      <guid>https://yakkl.com/blog/hugo-support-sorting-for-pages-and-more/</guid>
-      <description>We just made a big change to how we handle Hugo projects and introduced a few new features that make it easier to stay organized.
-Hugo Support for All Versions 🔥🔥🔥 Hugo has a great developer community that is constantly pushing new versions out. Until now you sometimes had to wait a few months until you were able to use the latest version of Hugo with Yakkl as we were trying to catch up.</description>
-    </item>
-    
-    <item>
-      <title>Renaming Files and Improving Editing in a Team</title>
-      <link>https://yakkl.com/blog/renaming-files-and-improving-team-editing/</link>
-      <pubDate>Fri, 08 Jun 2018 04:39:03 -1100</pubDate>
-      
-      <guid>https://yakkl.com/blog/renaming-files-and-improving-team-editing/</guid>
-      <description>It’s a cloudy day ☁️ here on Prince Edward Island, the perfect opportunity to announce some new features.
-Over the past couple weeks, we were hard at work to improve the editor experience for our Git-backed content manager. Renaming files is just one of those updates. We also needed to improve notifications and indicators to make working in a team on Yakkl easier.
-Renaming Files ✍️ Freshly out — you can now change the name for your content files with Yakkl.</description>
-    </item>
-    
-    <item>
-      <title>Cloudinary Integration, Data File Templates and Other Features</title>
-      <link>https://yakkl.com/blog/cloudinary-integration/</link>
-      <pubDate>Mon, 28 May 2018 15:12:40 -1100</pubDate>
-      
-      <guid>https://yakkl.com/blog/cloudinary-integration/</guid>
-      <description>Image Transformation and Responsive Image Delivery Today we&amp;rsquo;re proud to announce an easy way to optimize your image delivery with a Cloudinary integration for Yakkl.
-As a developer you can now use the super fast Cloudinary CDN and store your assets outside your repository. While at the same time your editors can use Yakkl&amp;rsquo;s Media Library and Editor to upload and manage Cloudinary assets without even knowing it.
-It&amp;rsquo;s as simple as adding your cloud name, API key and secret to your site&amp;rsquo;s settings to get started.</description>
-    </item>
-    
-    <item>
-      <title>Blocks - Give Your Editors the Power to Build Pages</title>
-      <link>https://yakkl.com/blog/blocks-give-your-editors-the-power-to-build-pages/</link>
-      <pubDate>Thu, 19 Apr 2018 14:41:00 -1100</pubDate>
-      
-      <guid>https://yakkl.com/blog/blocks-give-your-editors-the-power-to-build-pages/</guid>
-      <description>Today we introduce Blocks - a powerful Field Type that enables your editors to build entire landing pages from scratch and create rich blog post layouts with a pre-defined code template, we call it a Block Template.
-This feature was inspired by CraftCMS&amp;rsquo; Matrix fields and the Wordpress Plugin Advanced Custom Fields.
-What is Blocks? Blocks is a Field Type that is made up of multiple templates, so-called Block Templates.</description>
     </item>
     
     <item>
@@ -205,26 +32,6 @@ Bug Fixes  Documentation: Links to documentation were updated Github Authenticat
     </item>
     
     <item>
-      <title>HTML File Contents are Moving to Plaintext Editor</title>
-      <link>https://yakkl.com/blog/discontinuing-wysiwyg-editor-new-focus-on-markdown/</link>
-      <pubDate>Sun, 15 Apr 2018 21:57:29 -1100</pubDate>
-      
-      <guid>https://yakkl.com/blog/discontinuing-wysiwyg-editor-new-focus-on-markdown/</guid>
-      <description>We are not changing or removing the Markdown WYSIWYG editor. Our Markdown editor will continue to offer both plaintext and WYSIWYG input modes. In fact, removing the HTML WYSIWYG editor will allow us to focus on making the Markdown editor even better.
- The HTML WYSIWYG Editor has proven to be less and less the state-of-the-art content editing experience it once set out to be. Considering the issues the HTML WYSIWYG Editor causes and the merits Markdown provides we made the decision to discontinue our WYSIWYG HTML Editor on 5/11/2018.</description>
-    </item>
-    
-    <item>
-      <title>New Pricing</title>
-      <link>https://yakkl.com/blog/new-pricing-organization-accounts/</link>
-      <pubDate>Wed, 28 Mar 2018 12:38:35 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/new-pricing-organization-accounts/</guid>
-      <description>We’re excited to announce new pricing!
-Now, the Personal plan supports unlimited sites and up to 3 free Guest users per site (a “Guest” is a single-site user with limited permissions, similar to an “editor”). The Starter plan also supports unlimited sites, but is designed for larger teams who need to manage many users across their sites and branches. Finally, our Enterprise plan is designed for large organizations with special requirements.</description>
-    </item>
-    
-    <item>
       <title>2018/01/29 Changelog</title>
       <link>https://yakkl.com/docs/changelog/2018-1-29-changelog/</link>
       <pubDate>Mon, 29 Jan 2018 14:40:49 +0000</pubDate>
@@ -234,153 +41,12 @@ Now, the Personal plan supports unlimited sites and up to 3 free Guest users per
     </item>
     
     <item>
-      <title>Changes &amp; Improvements to the Media Library</title>
-      <link>https://yakkl.com/blog/a-new-and-improved-media-library/</link>
-      <pubDate>Thu, 11 Jan 2018 04:00:00 +1400</pubDate>
-      
-      <guid>https://yakkl.com/blog/a-new-and-improved-media-library/</guid>
-      <description>We&amp;rsquo;ve got great improvements to share with you from Yakkl.com, involving Yakkl’s Media Library.
-The Media Library allows content editors to easily upload images, videos, and much more without needing to understand Git.
-Single Upload Directory We&amp;rsquo;ve received a lot of feedback from the community about which media should be displayed in the media library.
-Yakkl used to display media from all folders throughout the project. Not all of these folders are useful for your editors, and resulted in theme assets, favicons, and other media being displayed.</description>
-    </item>
-    
-    <item>
       <title>2018/01/09 Changelog</title>
       <link>https://yakkl.com/docs/changelog/2018-1-9-changelog/</link>
       <pubDate>Tue, 09 Jan 2018 15:02:44 +0000</pubDate>
       
       <guid>https://yakkl.com/docs/changelog/2018-1-9-changelog/</guid>
       <description> Bug Fixes  Front matter template: fix for editing/unediting FMT fields didn&amp;rsquo;t always update the UI git deploy settings: Clarified copy surrounding the Deploy on Git Push feature. inline code: input rule for inline code no longer marks up the previous character.  </description>
-    </item>
-    
-    <item>
-      <title>Discontinuing Zip-imported Sites</title>
-      <link>https://yakkl.com/blog/discontinuing-zip-sites/</link>
-      <pubDate>Thu, 12 Oct 2017 14:54:52 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/discontinuing-zip-sites/</guid>
-      <description>Letting developers import a site from a zip archive is a feature that a lot of our users have made use of. However, with our strong focus on Git-backed workflows, we feel that that sites imported with zips have been providing a unsatisfactory experience.
-At Yakkl, we believe Git-backed content management systems are the future of content management, and that using a Git repository is the best way to manage sites.</description>
-    </item>
-    
-    <item>
-      <title>Introducing Yakkl Config Files</title>
-      <link>https://yakkl.com/blog/introducing-forestry-config-files/</link>
-      <pubDate>Wed, 30 Aug 2017 16:09:44 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/introducing-forestry-config-files/</guid>
-      <description>Introducing Yakkl Config Files Last month we released a big update to Front Matter Templates, which provided an unprecedented level of control over the user interface content editors use to edit their Hugo and Jekyll sites with.
-Today we’re introducing a new feature to equally empower developers: Yakkl Config Files.
-Config files allow developers to create and manage the settings and Front Matter Templates of a site directly in the Git Repo.</description>
-    </item>
-    
-    <item>
-      <title>WYSIWYG Formatting in Front Matter</title>
-      <link>https://yakkl.com/blog/wysiwyg-formatting-in-front-matter/</link>
-      <pubDate>Wed, 26 Jul 2017 11:26:03 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/wysiwyg-formatting-in-front-matter/</guid>
-      <description>This week we’ve got a small, but very useful update we&amp;rsquo;re excited to share with you.
-WYSIWYG Formatting in Textareas Our textarea Front Matter field has been upgraded to allow for WYSIWYG input. Enjoy being able to add bold, italic, underline, and code formatting.
-Enable WYSIWYG for Textareas You can enable the WYSIWYG features by enabling the “WYSIWYG” toggle on any textarea Front Matter field.
-Give Us Feedback While the WYSIWYG features are inline only right now, we’re looking to develop this field into a truly powerful tool.</description>
-    </item>
-    
-    <item>
-      <title>Big Improvements to Front Matter Templates</title>
-      <link>https://yakkl.com/blog/big-improvements-to-front-matter-templates/</link>
-      <pubDate>Mon, 10 Jul 2017 10:00:00 -0300</pubDate>
-      
-      <guid>https://yakkl.com/blog/big-improvements-to-front-matter-templates/</guid>
-      <description>We&amp;rsquo;ve got great improvements to share with you from Yakkl.com, involving Yakkl’s Front Matter Templates.
-Front Matter Templates allow you to customize the UI of your front matter fields in Yakkl, providing the tools necessary to create the exact CMS you need.
-Improved Editing Experience Yakkl&amp;rsquo;s Front Matter Template editor is now two-paned. A preview of your fields is on the left, giving you a realistic preview of how they will appear when editing content.</description>
-    </item>
-    
-    <item>
-      <title>Improved Collaboration &amp; More</title>
-      <link>https://yakkl.com/blog/improved-collaboration-and-more/</link>
-      <pubDate>Tue, 20 Jun 2017 16:30:00 -0300</pubDate>
-      
-      <guid>https://yakkl.com/blog/improved-collaboration-and-more/</guid>
-      <description>Document Locking &amp;amp; Collaboration To prevent accidental overwrites and the tango of content editing, we’ve added in a locking feature to your content and data files. If you attempt to edit a page another user is editing, you’ll get a notification.
-We’ve also made collaboration more powerful by making drafts shared. If you make changes to a document without publishing, the rest of your team will see these changes when they view the page.</description>
-    </item>
-    
-    <item>
-      <title>Announcing Layout Improvements</title>
-      <link>https://yakkl.com/blog/layout-improvements/</link>
-      <pubDate>Wed, 14 Jun 2017 09:00:00 -0300</pubDate>
-      
-      <guid>https://yakkl.com/blog/layout-improvements/</guid>
-      <description>We’ve been hard at work this month at Yakkl.com, focusing on improving the editing experience and overall usability of the application and we’re excited to announce that it’s already here! We’ve got 3 updates to share with you that will make using Yakkl much more enjoyable.
-New Editor &amp;amp; Layout Improvements We&amp;rsquo;ve built a new editor that makes editing your content much easier and so much more enjoyable. We&amp;rsquo;ve also improved the app&amp;rsquo;s UI altogether.</description>
-    </item>
-    
-    <item>
-      <title>3 Reasons Why Our New Editor Is Our Best Static Site Editor Yet</title>
-      <link>https://yakkl.com/blog/bigger-better-editor/</link>
-      <pubDate>Tue, 30 May 2017 14:01:35 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/bigger-better-editor/</guid>
-      <description>For the past few weeks, Nichlas and Nolan have been hard at work on the Yakkl content editor. We wanted to make the easiest-to-use, most configurable static site content editor ever built. With their hard work, we now have some big improvements to share that get us that much closer. We’ve built a new and improved editor that makes managing your site easier and more effective than ever before. Both on the desktop and on mobile devices.</description>
-    </item>
-    
-    <item>
-      <title>Introducing Media Management</title>
-      <link>https://yakkl.com/blog/introducing-media-management/</link>
-      <pubDate>Mon, 17 Apr 2017 11:46:07 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/introducing-media-management/</guid>
-      <description>We all love working with Markdown but one of it&amp;rsquo;s biggest limitations is adding images to your content. That&amp;rsquo;s why we&amp;rsquo;re happy to announce the Yakkl.com Media Manager. Nolan and Nichlas put a lot of work into crafting an amazing UX for this, so we hope you like it. --
-Media Manager Drag multiple files Handy if you have large image galleries.
-Manage other files Also manage non-image files like PDFs, text files, etc.</description>
-    </item>
-    
-    <item>
-      <title>March 27th Service Outage</title>
-      <link>https://yakkl.com/blog/march-27th-service-outage/</link>
-      <pubDate>Mon, 27 Mar 2017 21:25:39 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/march-27th-service-outage/</guid>
-      <description>As some of you may have noticed, Yakkl was down for about 2.5 hours between 23:00 UTC March 27 until 01:30 UTC March 28. In the spirit of full disclosure I&amp;rsquo;d like to explain what happened and why.
-Yakkl is a Rails application and from time to time the number of migrations we have get unwieldy. Being an application under rapid development, things are constantly changing and migrations are created sometimes daily.</description>
-    </item>
-    
-    <item>
-      <title>Customize the UI with Front Matter Templates</title>
-      <link>https://yakkl.com/blog/front-matter-templates/</link>
-      <pubDate>Mon, 13 Feb 2017 10:47:46 -0500</pubDate>
-      
-      <guid>https://yakkl.com/blog/front-matter-templates/</guid>
-      <description>Does the following sound familiar? You set up a WP site, hand it off to a non-dev, and then they point to some unused part of the UI and say:
- &#34;What does this do?&#34;
- To which you sheepishly reply:
- &#34;Oh, that doesn&#39;t do anything...just ignore it.&#34;
- A CMS often feels like a work-around, designed for some other purpose.
-Front Matter Templates (FMTs) FMTs allow you to customize the presentation of your UI fields in your CMS.</description>
-    </item>
-    
-    <item>
-      <title>The New Yakkl.com</title>
-      <link>https://yakkl.com/blog/the-new-forestry-io/</link>
-      <pubDate>Tue, 01 Nov 2016 19:36:26 -0400</pubDate>
-      
-      <guid>https://yakkl.com/blog/the-new-forestry-io/</guid>
-      <description>We&amp;rsquo;re happy to announce some huge improvements to Yakkl.com, our CMS for Jekyll and Hugo sites.
-Before I outline what&amp;rsquo;s new, I want to thank everyone who has been testing this while it was in beta (you know who you are). Your help was crucial and we&amp;rsquo;re going to continue to build an awesome CMS that you love. 👊
-What&amp;rsquo;s new: New Editor We totally rebuilt our WYSIWYG editor (inspired by Medium.</description>
-    </item>
-    
-    <item>
-      <title>Yakkl &#43; GitLab</title>
-      <link>https://yakkl.com/blog/forestry-gitlab/</link>
-      <pubDate>Tue, 06 Sep 2016 23:45:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/forestry-gitlab/</guid>
-      <description>Now you can add a Yakkl.com CMS to your GitLab.com static site (Jekyll or Hugo).
-I&amp;rsquo;ve been a GitLab user since their very first release in Oct of 2011. I worked at a design agency and converted everything over from SVN to Git and used an internal GitLab installation. I remember submitting a few bugs and Dmitriy was quick to fix them. We loved GitLab then, and still do today.</description>
     </item>
     
   </channel>

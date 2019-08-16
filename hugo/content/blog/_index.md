@@ -25,5 +25,8 @@ aliases: []
 menu:
   main:
     weight: 4
-
+  footer:
+    parent: Product
+    weight: 4
+    
 ---

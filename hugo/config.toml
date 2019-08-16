@@ -48,11 +48,6 @@ identifier = "userdashboard"
 name = "Dashboard"
 url = "https://yakkl.com/dashboard"
 weight = 7
-[[menu.main]]
-identifier = "login"
-name = "Login"
-url = "https://yakkl.com/login"
-weight = 6
 [outputFormats.Algolia]
 baseName = "algolia"
 isPlainText = true

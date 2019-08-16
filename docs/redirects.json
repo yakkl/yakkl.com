@@ -8,94 +8,6 @@
         "ReplaceKeyPrefixWith":"/docs/welcome/"}
 },{
     "Condition": {
-        "KeyPrefixEquals": "/docs/faqs/glossary"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/docs/faqs/glossary/content-files/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/blocks-editors-build-pages/"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/blocks-give-your-editors-the-power-to-build-pages/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/docs/faq/how-do-i-download-a-backup-of-my-site/"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/docs/faqs/backups/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/a-new-and-improved-media-library"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/a-new-and-improved-media-library/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/docs/front-matter-fields/field-group-field/"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/docs/settings/fields/field-group/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/docs/front-matter-fields/image-file-upload-field/"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/docs/settings/fields/file-upload/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/docs/front-matter-fields/gallery-multi-file-upload-field/"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/docs/settings/fields/multi-file-upload/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/docs/front-matter-fields/repeatable-field-group-field/"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/docs/settings/fields/repeatable-field-group/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/docs/front-matter-fields/select-field/data/"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/docs/settings/fields/select/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/docs/front-matter-fields/sortable-list-field/"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/docs/settings/fields/sortable-list/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/docs/front-matter-fields/tags-field/"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/docs/settings/fields/tags/"}
-},{
-    "Condition": {
         "KeyPrefixEquals": "/docs/front-matter-fields/text-field/"
     },
     "Redirect": {
@@ -120,124 +32,20 @@
         "ReplaceKeyPrefixWith":"/docs/settings/fields/toggle/"}
 },{
     "Condition": {
-        "KeyPrefixEquals": "/blog/post/discontinuing-zip-sites"
+        "KeyPrefixEquals": "/docs/faqs/glossary"
     },
     "Redirect": {
         "HttpRedirectCode": "301",
         "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/discontinuing-zip-sites/"}
+        "ReplaceKeyPrefixWith":"/docs/faqs/glossary/content-files/"}
 },{
     "Condition": {
-        "KeyPrefixEquals": "/blog/post/introducing-yakkl-config-files"
+        "KeyPrefixEquals": "/docs/faq/how-do-i-download-a-backup-of-my-site/"
     },
     "Redirect": {
         "HttpRedirectCode": "301",
         "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/introducing-forestry-config-files/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/wysiwyg-formatting-in-front-matter"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/wysiwyg-formatting-in-front-matter/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/big-improvements-to-front-matter-templates"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/big-improvements-to-front-matter-templates/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/a-hugo-update-everyone-should-be-talking-about"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/a-hugo-update-everyone-should-be-talking-about/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/improved-collaboration-and-more"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/improved-collaboration-and-more/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/layout-improvements"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/layout-improvements/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/bigger-better-editor"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/bigger-better-editor/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/introducing-media-management"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/introducing-media-management/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/march-27th-service-outage"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/march-27th-service-outage/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/front-matter-templates"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/front-matter-templates/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/the-new-yakkl"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/the-new-forestry-io/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/yakkl-gitlab"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/forestry-gitlab/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/choose-static"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/choose-static/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/yakkl-techstars-2016"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/forestryio-techstars-2016/"}
+        "ReplaceKeyPrefixWith":"/docs/faqs/backups/"}
 },{
     "Condition": {
         "KeyPrefixEquals": "/plans/"
@@ -296,20 +104,12 @@
         "ReplaceKeyPrefixWith":"/docs/settings/collaborators/"}
 },{
     "Condition": {
-        "KeyPrefixEquals": "/blog/post/join-our-slack-community"
+        "KeyPrefixEquals": "/blog/post/2019-08-15-yakkl"
     },
     "Redirect": {
         "HttpRedirectCode": "301",
         "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/join-our-slack-community/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/blog/post/why-we-built-yakkl"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/why-we-built-yakkl/"}
+        "ReplaceKeyPrefixWith":"/blog/2019-08-15-yakkl/"}
 },{
     "Condition": {
         "KeyPrefixEquals": "/docs/front-matter-fields/date-field/"
@@ -320,18 +120,66 @@
         "ReplaceKeyPrefixWith":"/docs/settings/fields/datetime/"}
 },{
     "Condition": {
-        "KeyPrefixEquals": "/blog/image-handling-with-yakkl-s3-and-imgix/"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/blog/announcing-image-handling-with-s3/"}
-},{
-    "Condition": {
         "KeyPrefixEquals": "/docs/faq/what-versions-of-hugo-do-you-support/"
     },
     "Redirect": {
         "HttpRedirectCode": "301",
         "Protocol": "https",
         "ReplaceKeyPrefixWith":"/docs/faqs/hugo-version/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/field-group-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/field-group/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/image-file-upload-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/file-upload/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/gallery-multi-file-upload-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/multi-file-upload/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/repeatable-field-group-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/repeatable-field-group/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/select-field/data/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/select/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/sortable-list-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/sortable-list/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/tags-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/tags/"}
 }]

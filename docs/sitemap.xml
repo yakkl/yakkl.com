@@ -115,8 +115,8 @@
     <loc>https://yakkl.com/docs/beta-testers/</loc>
     <lastmod>2018-11-21T04:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/blog/join-our-slack-community/</loc>
-    <lastmod>2019-08-12T10:41:00+00:00</lastmod>
+    <loc>https://yakkl.com/blog/2019-08-15-yakkl/</loc>
+    <lastmod>2019-08-15T12:00:00-03:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/careers/</loc>
     <lastmod>2019-08-12T04:00:00+00:00</lastmod>
@@ -127,14 +127,8 @@
     <loc>https://yakkl.com/</loc>
     <lastmod>2019-08-12T04:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/blog/why-we-built-yakkl/</loc>
-    <lastmod>2019-08-12T04:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/changelog/2019-08-06-changelog/</loc>
     <lastmod>2019-08-06T09:34:25+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/full-text-searching-with-postgres/</loc>
-    <lastmod>2019-08-01T14:07:06-03:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2019-07-26-changelog/</loc>
     <lastmod>2019-07-26T05:28:56-03:00</lastmod>
@@ -144,9 +138,6 @@
   </url><url>
     <loc>https://yakkl.com/docs/changelog/changelog-2019-06-24/</loc>
     <lastmod>2019-06-24T12:00:00-03:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/introducing-teams/</loc>
-    <lastmod>2019-06-03T12:53:59+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/careers/software-engineer-2019/</loc>
     <lastmod>2019-05-31T15:00:00+00:00</lastmod>
@@ -169,23 +160,11 @@
     <loc>https://yakkl.com/docs/changelog/2019-04-29-changelog/</loc>
     <lastmod>2019-04-29T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/blog/use-forestry-with-azure-devops-repos/</loc>
-    <lastmod>2019-04-29T14:55:39+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/changelog/changelog-2019-04-23/</loc>
     <lastmod>2019-04-23T04:00:00-03:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2019-04-05-changelog/</loc>
     <lastmod>2019-04-18T12:00:00-03:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/gulp-and-webpack-best-of-both-worlds/</loc>
-    <lastmod>2019-04-16T09:00:00-03:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/full-speed-ahead-in-2019/</loc>
-    <lastmod>2019-04-08T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/versioning-large-files-with-git-lfs/</loc>
-    <lastmod>2019-04-08T04:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/careers/developer-evangelist/</loc>
     <lastmod>2019-04-04T03:00:00+00:00</lastmod>
@@ -205,14 +184,8 @@
     <loc>https://yakkl.com/docs/changelog/2019-03-01-changelog/</loc>
     <lastmod>2019-03-01T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/blog/how-i-reduced-my-jekyll-build-time-by-61/</loc>
-    <lastmod>2019-02-06T02:00:00-11:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/changelog/2019-02-04-changelog/</loc>
     <lastmod>2019-02-04T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/announcing-image-handling-with-s3/</loc>
-    <lastmod>2019-01-09T23:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-12-18-changelog/</loc>
     <lastmod>2018-12-18T16:54:05+00:00</lastmod>
@@ -223,23 +196,14 @@
     <loc>https://yakkl.com/docs/changelog/2018-11-27-changelog/</loc>
     <lastmod>2018-11-27T17:51:59+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/blog/is-it-time-to-move-on-from-wordpress/</loc>
-    <lastmod>2018-11-26T16:30:05+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-10-30-changelog/</loc>
     <lastmod>2018-10-30T14:10:25+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/data-files-directories-and-duplicating-pages/</loc>
-    <lastmod>2018-10-23T03:00:00-11:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-10-18-changelog/</loc>
     <lastmod>2018-10-18T15:02:43+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-10-16-changelog/</loc>
     <lastmod>2018-10-16T15:02:43+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/an-introduction-to-theming-in-vuepress/</loc>
-    <lastmod>2018-10-12T02:00:25-11:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-10-11-changelog/</loc>
     <lastmod>2018-10-11T13:24:24+00:00</lastmod>
@@ -250,29 +214,14 @@
     <loc>https://yakkl.com/docs/changelog/20181001-changelog/</loc>
     <lastmod>2018-10-01T17:25:01+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/blog/demystifying-hugo-conditionals/</loc>
-    <lastmod>2018-09-28T16:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/changelog/20180928-changelog/</loc>
     <lastmod>2018-09-28T14:19:04+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/using-json-configuration-with-vuepress/</loc>
-    <lastmod>2018-09-21T05:43:34-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/introducing-custom-build-commands/</loc>
-    <lastmod>2018-09-21T05:11:49+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/20180919-changelog/</loc>
     <lastmod>2018-09-19T18:50:56+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/blog/adding-dns-and-edge-functions-to-our-cloudformation-stack/</loc>
-    <lastmod>2018-09-14T16:55:46+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-09-14-changelog/</loc>
     <lastmod>2018-09-14T13:26:06+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/custom-configuration-for-data-files/</loc>
-    <lastmod>2018-09-13T13:36:32+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-09-12-changelog/</loc>
     <lastmod>2018-09-12T14:19:59+00:00</lastmod>
@@ -283,44 +232,20 @@
     <loc>https://yakkl.com/docs/changelog/2018-09-07-changelog/</loc>
     <lastmod>2018-09-07T18:14:55+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/blog/automate-your-static-hosting-environment-with-aws-cloudformation/</loc>
-    <lastmod>2018-09-07T15:04:56+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/block-labels-read-only-docs-and-more/</loc>
-    <lastmod>2018-09-05T00:40:51-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/create-in-app-documentation-for-content-editors/</loc>
-    <lastmod>2018-08-31T16:31:37+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-08-30-changelog/</loc>
     <lastmod>2018-08-30T14:40:13+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-08-29-changelog/</loc>
     <lastmod>2018-08-29T14:34:09+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/blog/migrating-to-key-based-authentication/</loc>
-    <lastmod>2018-08-28T05:00:18-11:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-08-28-changelog/</loc>
     <lastmod>2018-08-28T14:30:53+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/5-options-for-automating-your-software-deployments/</loc>
-    <lastmod>2018-08-24T05:01:35-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/data-relationships-in-hugo/</loc>
-    <lastmod>2018-08-17T16:05:07+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-08-17-changelog/</loc>
     <lastmod>2018-08-17T14:11:09+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-08-15-changelog/</loc>
     <lastmod>2018-08-15T13:53:36+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/vuepress-brings-your-documentation-to-life/</loc>
-    <lastmod>2018-08-10T15:48:09+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/vuepress-support-beta/</loc>
-    <lastmod>2018-08-10T08:36:10+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-08-10-changelog/</loc>
     <lastmod>2018-08-09T20:19:00+00:00</lastmod>
@@ -331,74 +256,14 @@
     <loc>https://yakkl.com/docs/changelog/2018-08-06-changelog/</loc>
     <lastmod>2018-08-06T19:07:22+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/blog/creating-a-multilingual-blog-with-jekyll/</loc>
-    <lastmod>2018-08-03T03:25:21-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/snippets-custom-content-sections-and-more/</loc>
-    <lastmod>2018-07-31T01:28:03-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/why-we-created-a-git-backed-content-manager/</loc>
-    <lastmod>2018-07-27T14:31:20+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/settings/snippets/</loc>
     <lastmod>2018-07-20T13:58:59+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/form-builder-with-formspree-forestry-blocks/</loc>
-    <lastmod>2018-07-20T01:00:14-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/add-functionality-to-your-hugo-site-with-theme-components/</loc>
-    <lastmod>2018-07-13T01:05:06-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/harness-the-power-of-static-to-create-presentations/</loc>
-    <lastmod>2018-07-06T04:00:46+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/customize-sidebar-and-assign-front-matter-templates/</loc>
-    <lastmod>2018-07-04T02:17:18-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/3-tips-for-mastering-blocks/</loc>
-    <lastmod>2018-06-29T10:00:15+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/ubuild-a-new-theme-for-static-sites-using-blocks/</loc>
-    <lastmod>2018-06-22T14:00:06+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/hugo-support-sorting-for-pages-and-more/</loc>
-    <lastmod>2018-06-18T23:32:20-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/5-ways-to-handle-forms-on-your-static-site/</loc>
-    <lastmod>2018-06-15T03:30:13-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/renaming-files-and-improving-team-editing/</loc>
-    <lastmod>2018-06-08T04:39:03-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/for-static-sites-theres-no-excuse-not-to-use-a-cdn/</loc>
-    <lastmod>2018-06-08T04:00:11-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/master-image-delivery-with-cloudinary/</loc>
-    <lastmod>2018-06-01T05:00:49-11:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/settings/fields/color-picker/</loc>
     <lastmod>2018-05-29T00:00:00-04:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/blog/cloudinary-integration/</loc>
-    <lastmod>2018-05-28T15:12:40-11:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-5-28-changelog/</loc>
     <lastmod>2018-05-28T17:24:44+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/hugo-json-api-part-2/</loc>
-    <lastmod>2018-05-25T05:13:41-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/how-to-use-hugo-s-image-processing-with-forestry/</loc>
-    <lastmod>2018-05-21T20:09:02-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/snipcart-brings-ecommerce-static-site/</loc>
-    <lastmod>2018-05-18T14:36:07+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/automatically-publish-scheduled-posts-for-static-site/</loc>
-    <lastmod>2018-05-04T07:10:15-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/instant-production-ready-scaffolding-with-create-static-site/</loc>
-    <lastmod>2018-04-27T09:38:55-11:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/settings/fields/blocks/</loc>
     <lastmod>2018-04-23T00:00:00+00:00</lastmod>
@@ -406,47 +271,8 @@
     <loc>https://yakkl.com/docs/settings/fields/include-template/</loc>
     <lastmod>2018-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/blog/sawmill-layout-composer-for-hugo-and-forestry/</loc>
-    <lastmod>2018-04-20T06:09:13-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/blocks-give-your-editors-the-power-to-build-pages/</loc>
-    <lastmod>2018-04-19T14:41:00-11:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-4-9-changelog/</loc>
     <lastmod>2018-04-19T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/discontinuing-wysiwyg-editor-new-focus-on-markdown/</loc>
-    <lastmod>2018-04-15T21:57:29-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/build-a-json-api-with-hugo/</loc>
-    <lastmod>2018-04-13T16:00:27+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/hugo-and-jekyll-compared/</loc>
-    <lastmod>2018-04-06T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/write-better-javascript-with-webpack/</loc>
-    <lastmod>2018-03-30T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/circleci-deploy-via-rsync/</loc>
-    <lastmod>2018-03-29T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/new-pricing-organization-accounts/</loc>
-    <lastmod>2018-03-28T12:38:35+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/automate-deploy-w-circle-ci/</loc>
-    <lastmod>2018-03-23T12:38:35+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/up-and-running-with-hugo-part-2/</loc>
-    <lastmod>2018-03-16T15:47:26+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/up-and-running-with-hugo/</loc>
-    <lastmod>2018-03-09T05:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/search-with-algolia-in-hugo/</loc>
-    <lastmod>2018-03-02T05:00:00-04:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/search-with-algolia-in-jekyll/</loc>
-    <lastmod>2018-02-06T14:08:22+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-2-9-changelog/</loc>
     <lastmod>2018-01-29T17:03:23+00:00</lastmod>
@@ -456,12 +282,6 @@
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-1-29-changelog/</loc>
     <lastmod>2018-01-29T14:40:49+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/hugo-vs-jekyll-benchmark/</loc>
-    <lastmod>2018-01-26T09:22:55+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/a-new-and-improved-media-library/</loc>
-    <lastmod>2018-01-11T04:00:00+14:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-1-9-changelog/</loc>
     <lastmod>2018-01-09T15:02:44+00:00</lastmod>
@@ -499,188 +319,37 @@
     <loc>https://yakkl.com/docs/settings/fields/toggle/</loc>
     <lastmod>2017-12-31T04:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/blog/discontinuing-zip-sites/</loc>
-    <lastmod>2017-10-12T14:54:52+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/introducing-forestry-config-files/</loc>
-    <lastmod>2017-08-30T16:09:44+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/wysiwyg-formatting-in-front-matter/</loc>
-    <lastmod>2017-07-26T11:26:03+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/big-improvements-to-front-matter-templates/</loc>
-    <lastmod>2017-07-10T10:00:00-03:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/a-hugo-update-everyone-should-be-talking-about/</loc>
-    <lastmod>2017-06-26T12:00:00-03:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/improved-collaboration-and-more/</loc>
-    <lastmod>2017-06-20T16:30:00-03:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/layout-improvements/</loc>
-    <lastmod>2017-06-14T09:00:00-03:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/bigger-better-editor/</loc>
-    <lastmod>2017-05-30T14:01:35+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/introducing-media-management/</loc>
-    <lastmod>2017-04-17T11:46:07+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/march-27th-service-outage/</loc>
-    <lastmod>2017-03-27T21:25:39+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/front-matter-templates/</loc>
-    <lastmod>2017-02-13T10:47:46-05:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/the-new-forestry-io/</loc>
-    <lastmod>2016-11-01T19:36:26-04:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/forestry-gitlab/</loc>
-    <lastmod>2016-09-06T23:45:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/choose-static/</loc>
-    <lastmod>2016-08-02T01:06:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/blog/forestryio-techstars-2016/</loc>
-    <lastmod>2016-07-06T19:03:00+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/authors/</loc>
     <priority>0</priority>
   </url><url>
-    <loc>https://yakkl.com/categories/beyond-static/</loc>
-    <lastmod>2018-09-14T16:55:46+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/tags/blocks/</loc>
-    <lastmod>2018-06-29T10:00:15+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
     <loc>https://yakkl.com/categories/</loc>
-    <lastmod>2018-09-14T16:55:46+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/authors/chris-macrae/</loc>
-    <lastmod>2019-08-12T10:41:00+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/tags/ci-cd/</loc>
-    <lastmod>2018-08-24T05:01:35-11:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/categories/cicd/</loc>
-    <lastmod>2018-03-29T12:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://yakkl.com/categories/cms/</loc>
-    <lastmod>2019-06-03T12:53:59+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/authors/colin-garvey/</loc>
-    <lastmod>2019-02-06T02:00:00-11:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/categories/company/</loc>
-    <lastmod>2019-08-12T10:41:00+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/categories/development-tools/</loc>
-    <lastmod>2018-03-30T12:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/authors/dj-walker/</loc>
-    <lastmod>2019-04-29T14:55:39+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/categories/engineering/</loc>
-    <lastmod>2019-08-01T14:07:06-03:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/categories/frontend-friday/</loc>
-    <lastmod>2018-09-28T16:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/tags/frontend-friday/</loc>
-    <lastmod>2018-04-27T09:38:55-11:00</lastmod>
+    <lastmod>2019-03-14T16:00:00-11:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://yakkl.com/authors/hans-jones/</loc>
-    <lastmod>2019-08-12T04:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/categories/hugo/</loc>
-    <lastmod>2018-09-28T16:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/tags/hugo/</loc>
-    <lastmod>2018-05-18T14:36:07+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/categories/jekyll/</loc>
-    <lastmod>2019-02-06T02:00:00-11:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/tags/jekyll/</loc>
-    <lastmod>2018-04-27T09:38:55-11:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/authors/jordan-patterson/</loc>
-    <lastmod>2019-08-01T14:07:06-03:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/authors/josh-dzielak/</loc>
-    <lastmod>2018-07-06T04:00:46+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/authors/michael-soolee/</loc>
-    <lastmod>2016-08-02T01:06:00+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/tags/postgres/</loc>
-    <lastmod>2019-08-01T14:07:06-03:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/authors/r%C3%A9gis-philibert/</loc>
-    <lastmod>2018-05-25T05:13:41-11:00</lastmod>
+    <lastmod>2019-08-15T12:00:00-03:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://yakkl.com/authors/scott-gallant/</loc>
     <lastmod>2019-05-31T15:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>https://yakkl.com/tags/search/</loc>
-    <lastmod>2019-08-01T14:07:06-03:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/authors/sebastian-engels/</loc>
-    <lastmod>2019-01-09T23:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
     <loc>https://yakkl.com/showcase/</loc>
     <lastmod>2017-12-31T00:00:00-04:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>https://yakkl.com/categories/static-sites/</loc>
-    <lastmod>2018-11-26T16:30:05+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
     <loc>https://yakkl.com/tags/</loc>
-    <lastmod>2018-06-29T10:00:15+00:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://yakkl.com/authors/team-yakkl/</loc>
     <lastmod>2019-08-06T09:34:25+00:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>https://yakkl.com/categories/vuepress/</loc>
-    <lastmod>2018-10-12T02:00:25-11:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/tags/webpack/</loc>
-    <lastmod>2018-03-30T12:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url><url>
-    <loc>https://yakkl.com/tags/wordpress/</loc>
-    <lastmod>2018-11-26T16:30:05+00:00</lastmod>
+    <loc>https://yakkl.com/categories/yakkl/</loc>
+    <lastmod>2019-08-15T12:00:00-03:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://yakkl.com/authors/yakkl-team/</loc>

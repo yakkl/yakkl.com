@@ -21,7 +21,7 @@ Bug Fixes  Documentation: Links to documentation were updated Github Authenticat
   <meta itemprop="name" content="2018/04/09 Changelog">
 <meta itemprop="description" content=" Hugo Support for v0.38.1 We updated our support to Hugo v0.38.1 and below. See Hugo News
 Bug Fixes  Documentation: Links to documentation were updated Github Authentication: Increased timeout length and added a more descriptive message on timeout Import: Fixed a bug that prevents a complete list of repositories being listed for Bitbucket users Import: Fixed a bug that prevents import if the config filename was provided in the import path Media: White images can now be detected in the Media Library Notifications: Team members of an Organization now receive notifications without having to refresh the page Redirect: Removing a site from an Organization does not redirect to My Sites anymore UI: Fixed cropping of icons in CMS sidebar UI: Added a more descriptive explanation to the repo step in the starter template flow User Roles: Manage Guests is now unavailable to Guests of a particular site  "><meta itemprop="datePublished" content="2018-04-09T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-04-19T12:00:00&#43;00:00" /><meta itemprop="wordCount" content="146"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg">
-  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+  <meta itemprop="keywords" content="hans-jones,scott-gallant,team-yakkl,yakkl-team,cms,yakkl," /><meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg"/><meta name="twitter:title" content="2018/04/09 Changelog"/>
 <meta name="twitter:description" content=" Hugo Support for v0.38.1 We updated our support to Hugo v0.38.1 and below. See Hugo News
 Bug Fixes  Documentation: Links to documentation were updated Github Authentication: Increased timeout length and added a more descriptive message on timeout Import: Fixed a bug that prevents a complete list of repositories being listed for Bitbucket users Import: Fixed a bug that prevents import if the config filename was provided in the import path Media: White images can now be detected in the Media Library Notifications: Team members of an Organization now receive notifications without having to refresh the page Redirect: Removing a site from an Organization does not redirect to My Sites anymore UI: Fixed cropping of icons in CMS sidebar UI: Added a more descriptive explanation to the repo step in the starter template flow User Roles: Manage Guests is now unavailable to Guests of a particular site  "/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
@@ -79,8 +79,6 @@ var featureFlagContent = {};
               <a href="/blog/" class="nav-item">Blog</a>
             </li><li data-signed-in="false" data-user>
               <a href="/settings" class="nav-item">My Account</a>
-            </li><li data-signed-out="true">
-              <a href="/login" class="nav-item">Login</a>
             </li><li class="nav-item" data-signed-in="false">
                 <a class="signup-button button small primary" href="/dashboard">Dashboard</a>
               </li><li data-signed-out="true">
@@ -253,7 +251,7 @@ var featureFlagContent = {};
           <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
         </a>
       </div><div class="column">
-        <span class="footer-title">Product</span><ul><li><a href="/docs/welcome/">Docs</a></li></ul></div><div class="column">
+        <span class="footer-title">Product</span><ul><li><a href="/docs/welcome/">Docs</a></li><li><a href="/blog/">Blog</a></li></ul></div><div class="column">
         <span class="footer-title">Company</span><ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
   </div>
   <div class="lower-footer">

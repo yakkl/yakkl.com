@@ -24,17 +24,6 @@ Sign up for free today.
     </item>
     
     <item>
-      <title>Introducing Site-based permissions and Teams</title>
-      <link>https://yakkl.com/blog/introducing-teams/</link>
-      <pubDate>Mon, 03 Jun 2019 12:53:59 +0000</pubDate>
-      
-      <guid>https://yakkl.com/blog/introducing-teams/</guid>
-      <description>We are introducing changes to improve the way you manage collaborators on your sites.
-Our previous model had a few limitations that we wanted to address:
- Adding a user to an organization gave each of your members access to all organization sites. The only way to give users &amp;ldquo;developer&amp;rdquo; or &amp;ldquo;admin&amp;rdquo; permissions on a site was to make them a &amp;ldquo;developer&amp;rdquo; or &amp;ldquo;admin&amp;rdquo; across the entire organization. Guests on an individual site were restricted to &amp;ldquo;editor&amp;rdquo; permissions (No access to edit front matter templates or site settings)  Site-specific access levels The available roles for users within an organizations are now &amp;ldquo;Member&amp;rdquo; or &amp;ldquo;Owner&amp;rdquo;.</description>
-    </item>
-    
-    <item>
       <title>2019/03/15 Changelog</title>
       <link>https://yakkl.com/docs/changelog/2018-01-09-changelog/</link>
       <pubDate>Thu, 14 Mar 2019 16:00:00 -1100</pubDate>

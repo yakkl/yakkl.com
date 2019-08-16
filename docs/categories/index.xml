@@ -7,107 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
-    <lastBuildDate>Fri, 14 Sep 2018 16:55:46 +0000</lastBuildDate>
     
 	<atom:link href="https://yakkl.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Beyond Static</title>
-      <link>https://yakkl.com/categories/beyond-static/</link>
-      <pubDate>Fri, 14 Sep 2018 16:55:46 +0000</pubDate>
-      
-      <guid>https://yakkl.com/categories/beyond-static/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cicd</title>
-      <link>https://yakkl.com/categories/cicd/</link>
-      <pubDate>Thu, 29 Mar 2018 12:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/categories/cicd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Cms</title>
       <link>https://yakkl.com/categories/cms/</link>
-      <pubDate>Mon, 03 Jun 2019 12:53:59 +0000</pubDate>
+      <pubDate>Thu, 14 Mar 2019 16:00:00 -1100</pubDate>
       
       <guid>https://yakkl.com/categories/cms/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Company</title>
-      <link>https://yakkl.com/categories/company/</link>
-      <pubDate>Mon, 12 Aug 2019 10:41:00 +0000</pubDate>
+      <title>Yakkl</title>
+      <link>https://yakkl.com/categories/yakkl/</link>
+      <pubDate>Thu, 15 Aug 2019 12:00:00 -0300</pubDate>
       
-      <guid>https://yakkl.com/categories/company/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Development Tools</title>
-      <link>https://yakkl.com/categories/development-tools/</link>
-      <pubDate>Fri, 30 Mar 2018 12:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/categories/development-tools/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Engineering</title>
-      <link>https://yakkl.com/categories/engineering/</link>
-      <pubDate>Thu, 01 Aug 2019 14:07:06 -0300</pubDate>
-      
-      <guid>https://yakkl.com/categories/engineering/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Frontend Friday</title>
-      <link>https://yakkl.com/categories/frontend-friday/</link>
-      <pubDate>Fri, 28 Sep 2018 16:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/categories/frontend-friday/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://yakkl.com/categories/hugo/</link>
-      <pubDate>Fri, 28 Sep 2018 16:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/categories/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jekyll</title>
-      <link>https://yakkl.com/categories/jekyll/</link>
-      <pubDate>Wed, 06 Feb 2019 02:00:00 -1100</pubDate>
-      
-      <guid>https://yakkl.com/categories/jekyll/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Static Sites</title>
-      <link>https://yakkl.com/categories/static-sites/</link>
-      <pubDate>Mon, 26 Nov 2018 16:30:05 +0000</pubDate>
-      
-      <guid>https://yakkl.com/categories/static-sites/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vuepress</title>
-      <link>https://yakkl.com/categories/vuepress/</link>
-      <pubDate>Fri, 12 Oct 2018 02:00:25 -1100</pubDate>
-      
-      <guid>https://yakkl.com/categories/vuepress/</guid>
+      <guid>https://yakkl.com/categories/yakkl/</guid>
       <description></description>
     </item>
     

@@ -16,7 +16,7 @@
 
   {{- if .visual -}}
       <div class="factory-video desktop-only {{ .class }}">
-        <img src="{{ .visual.permalink }}" width="auto" height="auto" alt="{{ .visual.alt | default .permalink }}" />
+        <img src="{{ .visual.permalink }}" alt="{{ .visual.alt | default .permalink }}" />
       </div>
     {{- else if .video -}}{{- with .video -}}
     <video playsinline autoplay muted loop poster="{{ .fallbackVisual }}" class="factory-video desktop-only {{ .class }}">
