@@ -7,10 +7,10 @@ expirydate: 2030-01-01 04:00:00 +0000
 date: 2017-12-31 04:00:00 +0000
 images:
 - "/uploads/2018/01/OGimage-01-docs-3x.jpg"
-menu:
-  docs:
-    parent: Pro
-    weight: 1
+# menu:
+#   docs:
+#     parent: Pro
+#     weight: 1
 ---
 
 Organizations on the Pro Plan have access to certain enterprise features, please [contact us](https://app.hubspot.com/meetings/dan67/yakkl-cms) if you would like to upgrade your plan.

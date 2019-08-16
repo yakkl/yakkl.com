@@ -21,7 +21,7 @@ Today, we rolled out an update that uses persistent SSH keys to interact with yo
   <meta itemprop="name" content="Migrating to Key-based Authentication">
 <meta itemprop="description" content="Head&rsquo;s up! We&rsquo;re making some changes to how Yakkl authenticates with your Git repos.
 Today, we rolled out an update that uses persistent SSH keys to interact with your repo. Previously, we were relying on OAuth tokens to gain access as needed, but some users were encountering problems with this method as tokens would intermittently expire before they could be refreshed. Using long-lived SSH credentials is intended to solve this problem."><meta itemprop="datePublished" content="2018-08-28T02:00:00-11:00" /><meta itemprop="dateModified" content="2018-08-28T05:00:18-11:00" /><meta itemprop="wordCount" content="332"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/OGimage-01-3x.jpg">
-  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/OGimage-01-3x.jpg"/><meta name="twitter:title" content="Migrating to Key-based Authentication"/>
 <meta name="twitter:description" content="Head&rsquo;s up! We&rsquo;re making some changes to how Yakkl authenticates with your Git repos.
 Today, we rolled out an update that uses persistent SSH keys to interact with your repo. Previously, we were relying on OAuth tokens to gain access as needed, but some users were encountering problems with this method as tokens would intermittently expire before they could be refreshed. Using long-lived SSH credentials is intended to solve this problem."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
@@ -74,8 +74,6 @@ var featureFlagContent = {};
       <div class="nav-content">
         <a href="/" class="mini-nav--logo"></a>
         <ul class="main-nav-items"><li>
-              <a href="/pricing/" class="nav-item">Pricing</a>
-            </li><li>
               <a href="/docs/welcome/" class="nav-item">Docs</a>
             </li><li>
               <a href="/blog/" class="nav-item">Blog</a>
@@ -239,8 +237,8 @@ Your browser does not support the video tag.
           <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
         </a>
       </div><div class="column">
-        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
-        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+        <span class="footer-title">Product</span><ul><li><a href="/docs/welcome/">Docs</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
   </div>
   <div class="lower-footer">
     <div class="container">

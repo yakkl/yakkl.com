@@ -18,10 +18,10 @@ private: false
 weight: 
 aliases: []
 photo_credit: ''
-menu:
-  footer:
-    weight: 1
-    parent: Company
+# menu: 
+#   footer:
+#     weight: 1
+#     parent: Company
 
 ---
 We’re a small, growing team, headquartered in New York City with half our staff working remotely. We take our time hiring, and we hire for the person, not simply for the role. We’re a diverse team that values collaboration, respect and empathy. We strive to reflect those values in our hiring process.  

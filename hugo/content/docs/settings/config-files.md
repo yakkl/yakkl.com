@@ -7,10 +7,10 @@ date: 2018-07-25 04:00:00 +0000
 layout: single
 images:
 - "/uploads/2018/01/OGimage-01-docs-3x.jpg"
-menu:
-  docs:
-    parent: Settings & Configuration
-    weight: 5
+# menu:
+#   docs:
+#     parent: Settings & Configuration
+#     weight: 5
 
 ---
 Yakkl stores the settings and configuration of the CMS for each site in a `.yakkl/` folder in your site’s source code. This allows developers to create default configurations that can be shared between multiple sites, and to deliver source code with Yakkl CMS pre-configured.

@@ -13,25 +13,25 @@
     
     
     <item>
-      <title>Introduction</title>
-      <link>https://yakkl.com/docs/welcome/</link>
-      <pubDate>Mon, 12 Aug 2019 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/welcome/</guid>
-      <description>Introduction Yakkl.com is a Git-backed CMS (content management system) for websites and web products built using static site generators. Yakkl bridges the gap between developers and their teams, by making development fun and easy, while providing powerful content management for their teams.
-Sign up for free today, or learn more about our pricing for teams.
- What is Yakkl? The main thing to understand is that Yakkl &amp;ndash; unlike other content management systems &amp;ndash; is entirely backed by Git.</description>
-    </item>
-    
-    <item>
       <title>About Organizations</title>
       <link>https://yakkl.com/docs/collaboration/organizations/</link>
-      <pubDate>Mon, 27 May 2019 04:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Aug 2019 04:00:00 +0000</pubDate>
       
       <guid>https://yakkl.com/docs/collaboration/organizations/</guid>
       <description>Organizations are available from our starter plan.
 Organizations enable you to manage groups of users across multiple sites. Teams or individuals within an organization can have their access levels applied on a per-site basis.
 Create an Organization You can create an organization on your dashboard by clicking on Create Organization in the left sidebar. Once you have filled in your information and named the organization, you can proceed by clicking Create.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://yakkl.com/docs/welcome/</link>
+      <pubDate>Mon, 12 Aug 2019 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/welcome/</guid>
+      <description>Introduction Yakkl.com is a Secure Team Collaboration platform that allows you and your team to stay caught up on topics of discussions in a simple and organized manner without creating &amp;ldquo;Channel Sprawl&amp;rdquo;. If you&amp;rsquo;re yakkling with the person next to you or multiple timezones away, Yakkl keeps all of your communications organized into Topics so you can pickup where you left off.
+Sign up for free today.
+ Advantages Choosing to build a static site and use a Git-backed CMS comes with a multitude of advantages over the traditional Monolithic CMS:</description>
     </item>
     
     <item>
@@ -43,48 +43,6 @@ Create an Organization You can create an organization on your dashboard by click
       <description>You can define which areas (folders) of your site contain editable content files via the sections parameter in your .yakkl/settings.yml configuration file.
 A content section in Yakkl is primarily defined by the path to the folder containing content files, and a glob to match against the contents of that folder.
 Options    Key Description Type Default     type Type of content directory,document,heading,jekyll-pages,jekyll-posts directory   label Text to display in Yakkl menu String N/A   path Path to folder from repository root (only applies to directory type) String N/A   match Glob of files to match inside of path (only applies to directory type) String (Fileglob) **/*   exclude Glob pattern of files to exclude (only applies to directory type) String (Fileglob) None   create Restrictions on creating new content items all, documents, none all   templates Control Which Front Matter Templates can be used in section Array All templates   new_doc_ext File extension for new documents created in this section String Value of New File Format in Yakkl Settings   read_only Prevent content from being edited (only applies to document type) Boolean false    Sidebar Order Sections will appear in the sidebar in the same order they are defined.</description>
-    </item>
-    
-    <item>
-      <title>Connecting to a Source Provider</title>
-      <link>https://yakkl.com/docs/git-sync/</link>
-      <pubDate>Mon, 27 Aug 2018 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/git-sync/</guid>
-      <description>Yakkl saves changes to your content by committing back to your Git repository. Adding a site to Yakkl first requires that the source code for your site is available through one of our supported source providers. When setting up a new site in Yakkl, you will be prompted to connect to your preferred source provider to link your repository.
-Currently, Yakkl supports the use of Github, GitLab, Bitbucket, and Azure DevOps Repos as source providers.</description>
-    </item>
-    
-    <item>
-      <title>GitHub</title>
-      <link>https://yakkl.com/docs/git-sync/github/</link>
-      <pubDate>Mon, 27 Aug 2018 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/git-sync/github/</guid>
-      <description>DisclaimerThis guide assumes you already have an existing GitHub account and repository with a Jekyll or Hugo project. If you don&amp;rsquo;t have an existing project, check out our Quick start guide, which contains guides and resources for building your first static site.
- Yakkl allows you to import your static site through public and private GitHub repositories. This allows Yakkl to sync any changes made by editors in Yakkl to be committed back to GitHub.</description>
-    </item>
-    
-    <item>
-      <title>Storing Media Files</title>
-      <link>https://yakkl.com/docs/media/</link>
-      <pubDate>Fri, 25 May 2018 20:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/media/</guid>
-      <description>Yakkl provides multiple options for media storage.
-Git The most basic option for storing media is to commit it to your git repo like the rest of your content. This is the default setting for new projects.
-If your site has a large number of media files, we highly recommend implementing Git LFS on your repository. Yakkl will be able to handle Git LFS media for repositories hosted on GitHub and GitLab.</description>
-    </item>
-    
-    <item>
-      <title>Hosting Options</title>
-      <link>https://yakkl.com/docs/hosting/</link>
-      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/hosting/</guid>
-      <description>Yakkl will stop building and deploying sites on January 1st, 2020. We recommend to use a dedicated CI/CD platform like Netlify. Read our docs on how to deploy with Circle CI.
- The Hosting settings allow you to use Yakkl to handle deployment of your static site. Yakkl can build your site and then deploy the static files to a hosting provider of your choice.
-Guides Yakkl has a selection of built-in hosting options that make hosting your static site easy.</description>
     </item>
     
     <item>
@@ -110,38 +68,6 @@ For example: If I am an active Yakkl.com user, and I am invited to join Pro Org 
     </item>
     
     <item>
-      <title>Managing Content</title>
-      <link>https://yakkl.com/docs/editing/</link>
-      <pubDate>Tue, 28 Mar 2017 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/editing/</guid>
-      <description>Yakkl allows developers and editors to manage their website in a variety of different ways. This enables developers to build powerful, static sites while empowering editors to take full control over their content.
-For more information on developer and editor roles see user roles
-Pages The most basic type of content in Yakkl is a page. Pages are any ungrouped content in your static site, such as an about page or contact page.</description>
-    </item>
-    
-    <item>
-      <title>Markdown Editor</title>
-      <link>https://yakkl.com/docs/editing/markdown-editor/</link>
-      <pubDate>Wed, 29 May 2019 04:00:00 -0300</pubDate>
-      
-      <guid>https://yakkl.com/docs/editing/markdown-editor/</guid>
-      <description>The markdown editor is the main way of editing content in Yakkl. Your content&amp;rsquo;s front matter is shown on the left, and your content&amp;rsquo;s markdown body is shown on the right.
-An editing environment based on markdown allows for fast formatting and a seamless authoring experience, which focuses entirely on the content being created. Markup is translated to visual formatting on-the-fly to provide the best experience possible.
-Markdown formatting The markdown editor works just like any other online WYSIWYG editor.</description>
-    </item>
-    
-    <item>
-      <title>Configure the CMS</title>
-      <link>https://yakkl.com/docs/quickstart/configure-cms/</link>
-      <pubDate>Wed, 08 May 2019 06:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/quickstart/configure-cms/</guid>
-      <description>You setup your site with Yakkl and now you&amp;rsquo;re ready to configure your CMS. This doc will go over:
- Setting up the content sections that appear in the CMS sidebar Setting up correct paths for images and other media Enabling and configuring your site&amp;rsquo;s preview Configuring your content model (the fields used on each page, post, etc)  Setting up Sidebar Content Sections You are able to configure content sections to control what content editors have access to in the CMS.</description>
-    </item>
-    
-    <item>
       <title>Front Matter Templates</title>
       <link>https://yakkl.com/docs/settings/front-matter-templates/</link>
       <pubDate>Thu, 18 Apr 2019 04:00:00 +0000</pubDate>
@@ -149,58 +75,6 @@ Markdown formatting The markdown editor works just like any other online WYSIWYG
       <guid>https://yakkl.com/docs/settings/front-matter-templates/</guid>
       <description>DisclaimerThis guide assumes you already have an understanding of Front Matter and how it works with Yakkl. If this isn&amp;rsquo;t the case, you can read up on it in the Front Matter doc.
  What are Front Matter Templates? Front Matter Templates (FMTs) enable developers to fully customize the interface of the Markdown and HTML editors. You can think of them as the content model for your front matter.</description>
-    </item>
-    
-    <item>
-      <title>GitHub Pages</title>
-      <link>https://yakkl.com/docs/hosting/github-pages/</link>
-      <pubDate>Wed, 12 Dec 2018 05:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/hosting/github-pages/</guid>
-      <description>Yakkl will stop building and deploying sites on January 1st, 2020. We recommend to use a dedicated CI/CD platform like Netlify. Read our docs on how to deploy with Circle CI.
- This guide assumes you already have an existing Yakkl Account, GitHub account, and a repository with a project. If you don&amp;rsquo;t have an existing project, check out our Quick start guide, which contains guides and resources for building your first static site.</description>
-    </item>
-    
-    <item>
-      <title>Audit Logging</title>
-      <link>https://yakkl.com/docs/pro/features/audit-logging/</link>
-      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/pro/features/audit-logging/</guid>
-      <description>Changes to resources are recorded in realtime and exportable in CSV format with headers included.
-Log Format Organization, site, and user are recorded if applicable. Timestamps are UTC and the IP address may be either IPv4 or IPv6.
-   Organization Site Actor Action Fields IPAddress Timestamp     Yakkl Wiki Britney site.create {&amp;quot;name&amp;quot;:{&amp;quot;as&amp;quot;:&amp;quot;Wiki&amp;quot;}} 127.0.0.1 2019-02-21 22:45:28 UTC   Yakkl Yakkl Wiki Britney site.update {&amp;quot;name&amp;quot;:{&amp;quot;from&amp;quot;:&amp;quot;Wiki&amp;quot;,&amp;quot;to&amp;quot;:&amp;quot;Yakkl Wiki&amp;quot;}} 127.</description>
-    </item>
-    
-    <item>
-      <title>GitLab</title>
-      <link>https://yakkl.com/docs/git-sync/gitlab/</link>
-      <pubDate>Thu, 06 Apr 2017 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/git-sync/gitlab/</guid>
-      <description>DisclaimerThis guide assumes you already have an existing GitLab account and repository with a Jekyll or Hugo project. If you don&amp;rsquo;t have an existing project, check out our Quick start guide, which contains guides and resources for building your first static site.
- Yakkl&amp;rsquo;s allows you to import your static site through public and private GitLab repositories. This allows Yakkl to sync any changes made by editors in Yakkl to be comitted back to GitLab.</description>
-    </item>
-    
-    <item>
-      <title>Setup Your Site</title>
-      <link>https://yakkl.com/docs/quickstart/setup-site/</link>
-      <pubDate>Thu, 23 Mar 2017 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/quickstart/setup-site/</guid>
-      <description>This doc will walk you through:
- Setting up your site repository with Yakkl Making your first commit by publishing some changes  Import Site from Repo Sign up for a free account with Yakkl.com then add a new site from your dashboard.
-If you don&amp;rsquo;t have a Jekyll, Hugo, VuePress, or Gatsby site already, click the link in the bottom of the setup window to launch the demo site.</description>
-    </item>
-    
-    <item>
-      <title>Bitbucket</title>
-      <link>https://yakkl.com/docs/git-sync/bitbucket/</link>
-      <pubDate>Mon, 27 Aug 2018 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/git-sync/bitbucket/</guid>
-      <description>DisclaimerThis guide assumes you already have an existing Bitbucket account and repository with a Jekyll or Hugo project. If you don&amp;rsquo;t have an existing project, check out our Quick start guide, which contains guides and resources for building your first static site.
- Yakkl allows you to import your static site through Bitbucket repositories. This allows Yakkl to sync any changes made by editors in Yakkl to be comitted back to Bitbucket.</description>
     </item>
     
     <item>
@@ -227,36 +101,15 @@ Textarea Multi-line text input. Displayed for Front Matter values that are long 
     </item>
     
     <item>
-      <title>Azure DevOps</title>
-      <link>https://yakkl.com/docs/git-sync/azure-devops/</link>
-      <pubDate>Mon, 29 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/git-sync/azure-devops/</guid>
-      <description>Yakkl supports syncing with static sites stored in Azure DevOps repos.
-Currently, in order to use Azure DevOps as a source provider, you must use Manual Setup to set up the repository connection.
-Getting Started To set up a site whose code is hosted on Azure DevOps, click the Add Site button on your dashboard, and select Azure DevOps as a source provider. You will notice that the Quick Setup via OAuth toggle automatically switches off, because Quick Setup is not available for Azure DevOps repos.</description>
-    </item>
-    
-    <item>
-      <title>Manual Setup</title>
-      <link>https://yakkl.com/docs/git-sync/manual-setup/</link>
-      <pubDate>Mon, 29 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/git-sync/manual-setup/</guid>
-      <description>The manual setup option can be used to set up your project without having to authenticate with your source provider through Yakkl.
-Using Manual Setup  To perform manual setup of a project, disable the &amp;ldquo;Quick Setup via OAuth&amp;rdquo; toggle on the Select your git provider screen.
-Before you can continue, you must still select the git provider you are using. This is necessary so Yakkl can correctly interpret webhook payloads and other communication from the provider.</description>
-    </item>
-    
-    <item>
       <title>Product Tour</title>
       <link>https://yakkl.com/docs/quickstart/tour/</link>
-      <pubDate>Wed, 12 Dec 2018 04:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Aug 2019 04:00:00 +0000</pubDate>
       
       <guid>https://yakkl.com/docs/quickstart/tour/</guid>
-      <description>Overview This tour will walk you through setting up your first site in Yakkl. It demonstrates the primary features and editing functionality of the CMS.
-Getting Started  Sign up for a Yakkl account, and then navigate to the dashboard.
- Click &amp;ldquo;Try our Jekyll starter template!&amp;rdquo; Select your Git Provider from the list of options. Bitbucket users need to copy the demo repository to their account and select &amp;ldquo;Jekyll&amp;rdquo; in the first step.</description>
+      <description>Overview This tour will be a walk through of Yakkl showing you how to get the most out of a Secure Team Collaboration platform.
+Getting Started  Sign up for a Yakkl account.
+ Something cool from Yakkl here :)  Congrats, you&amp;rsquo;re ready to yakkl!
+Yakkl is Open Sourced and hosted on (GitHub. If you or your team wants to run Yakkl on your own systems then please feel free to clone the repo.</description>
     </item>
     
     <item>
@@ -270,80 +123,6 @@ When importing a new site, a .yakkl/ folder will be added to your site’s sourc
     </item>
     
     <item>
-      <title>Amazon S3</title>
-      <link>https://yakkl.com/docs/hosting/amazon-s3/</link>
-      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/hosting/amazon-s3/</guid>
-      <description>Yakkl will stop building and deploying sites on January 1st, 2020. We recommend to use a dedicated CI/CD platform like Netlify. Read our docs on how to deploy with Circle CI.
- The following guide will show you how to configure web hosting directly from an Amazon S3 bucket. However, Amazon recommends using CloudFront to serve S3 content instead of serving directly from S3.
-If you wish to create a website hosting stack with S3 and CloudFront together, please see our Static Site Hosting on AWS documentation.</description>
-    </item>
-    
-    <item>
-      <title>Front Matter</title>
-      <link>https://yakkl.com/docs/editing/front-matter/</link>
-      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/editing/front-matter/</guid>
-      <description>What is Front Matter? Front Matter is structured metadata that lives at the top of your content files that allows you to add custom variables to your pages. Depending on your static site generator, Front Matter can be defined in a variety of formats including YAML, TOML, and JSON.
-For example, YAML Front Matter may look like this:
---- title: Homepage --- ## Welcome to the homepage! Thanks for visiting our site!</description>
-    </item>
-    
-    <item>
-      <title>Static Site Hosting on AWS</title>
-      <link>https://yakkl.com/docs/hosting/s3-cloudfront-stack/</link>
-      <pubDate>Mon, 18 Sep 2017 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/hosting/s3-cloudfront-stack/</guid>
-      <description>Yakkl will stop building and deploying sites on January 1st, 2020. We recommend to use a dedicated CI/CD platform like Netlify. Read our docs on how to deploy with Circle CI.
- This guide assumes you already have an existing Yakkl Account, Amazon AWS Account, and a static site connected to Yakkl. If you don&amp;rsquo;t have an existing project, check out our Quick start guide, which contains guides and resources for building your first static site.</description>
-    </item>
-    
-    <item>
-      <title>Data Files</title>
-      <link>https://yakkl.com/docs/editing/data-files/</link>
-      <pubDate>Fri, 25 May 2018 20:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/editing/data-files/</guid>
-      <description>Data files are pieces of content that don’t belong to a specific page or piece of content. They are commonly used for managing content like social media handles and links, contact information, and branding (e.g, logo images and site colours).
-Datafile Sections You can configure access to data files with Sidebar Sections, explicitly adding them to the sidebar like the rest of your content. In this case, your Sidebar Configuration will display the data editing UI for JSON, YAML, and TOML files instead of the default content UI.</description>
-    </item>
-    
-    <item>
-      <title>FTP/SFTP</title>
-      <link>https://yakkl.com/docs/hosting/ftp/</link>
-      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/hosting/ftp/</guid>
-      <description>Yakkl will stop building and deploying sites on January 1st, 2020. We recommend to use a dedicated CI/CD platform like Netlify. Read our docs on how to deploy with Circle CI.
- Overview In order for Yakkl to deploy your site via FTP/SFTP, you will need:
- A webserver with FTP/SFTP support A valid FTP username and password The port your FTP server uses  If you are hosting your static site on an FTP server, you should be aware that Yakkl will delete all files from your destination directory before writing the new, updated files.</description>
-    </item>
-    
-    <item>
-      <title>Media Library</title>
-      <link>https://yakkl.com/docs/editing/media-library/</link>
-      <pubDate>Fri, 25 May 2018 20:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/editing/media-library/</guid>
-      <description>The Media Library allows content editors to easily manage the media for your site. This allows content editors to easily add images, PDFs, and GIFs to their content without having to use Git.
-Managing Media The Media Library allows you to upload and delete media files. It also allows editors to insert media uploads into the File Upload and Multi-File Upload front matter fields, and the content body.
-Uploading Media To upload media files to the Media Library, navigate to the Media Library page in Yakkl, and follow these instructions:</description>
-    </item>
-    
-    <item>
-      <title>Webhooks</title>
-      <link>https://yakkl.com/docs/hosting/webhooks/</link>
-      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/hosting/webhooks/</guid>
-      <description>Overview Yakkl supports outgoing webhooks to notify third-party applications about events that occur in Yakkl. This allows developers to trigger custom deployments, send out notifications, and much more.
-Events that support webhooks  When your site is published When your site is imported  What can you do with a webhook?  Trigger cache invalidation every time someone publishes your site Trigger a custom build script when someone publishes your site  Setting up webhooks Navigate to the Settings page in the CMS, and under Webhook URL specify the URL endpoint that you want outgoing webhooks to post to.</description>
-    </item>
-    
-    <item>
       <title>Collaborators &amp; Teams</title>
       <link>https://yakkl.com/docs/settings/collaborators/</link>
       <pubDate>Tue, 28 Mar 2017 04:00:00 +0000</pubDate>
@@ -353,29 +132,6 @@ Events that support webhooks  When your site is published When your site is impo
 On personal sites Sites that are not part of an organization are personal sites. On those sites you can add up to 3 collaborators. Each collaborator can be an admin, developer or editor.
 Upgrade to our starter plan if you need more collaborators.
 Managing Collaborators Admins and organization owners can manage site collaborators.</description>
-    </item>
-    
-    <item>
-      <title>Menus</title>
-      <link>https://yakkl.com/docs/editing/menus/</link>
-      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/editing/menus/</guid>
-      <description>Menus allow content editors to easily manage existing menus in your site, such as site navigation and sidebars using a simple drag-and-drop interface.
-Adding New Menus Yakkl will automatically display menus found in your site, and allow content editors to manage menu items from existing content in your site, or to external links on the internet.
-Using with Hugo The Menu Manager integrates directly with Hugo&amp;rsquo;s menu system. See Hugo&amp;rsquo;s documentation on setting up your first menu.</description>
-    </item>
-    
-    <item>
-      <title>Remote Admin</title>
-      <link>https://yakkl.com/docs/editing/remote-admin/</link>
-      <pubDate>Sun, 31 Dec 2017 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/editing/remote-admin/</guid>
-      <description>The Remote Admin allows editors to access and manage your site without leaving your domain.
-This is great for large businesses or white-label solutions where you don’t want your users accessing the CMS through the Yakkl website.
-Setting up the Remote Admin To set up the Remote Admin, go to the Settings page for your site, found under “Site” in the sidebar of your CMS.
-Select the General tab, and find the Project Paths option.</description>
     </item>
     
     <item>

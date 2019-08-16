@@ -19,10 +19,10 @@ cta:
 private: false
 weight: 
 aliases: []
-menu:
-  docs:
-    parent: Settings & Configuration
-    weight: 6
+# menu:
+#   docs:
+#     parent: Settings & Configuration
+#     weight: 6
 
 ---
 **Snippets** in Yakkl are pre-defined chunks of text that can be inserted into your content. You can put anything in a snippet that you might normally insert into your content, but they are especially useful in conjunction with [shortcodes](https://gohugo.io/content-management/shortcodes/) in Hugo or certain [Liquid tags](https://jekyllrb.com/docs/plugins/tags/) in Jekyll.

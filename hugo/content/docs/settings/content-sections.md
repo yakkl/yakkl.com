@@ -5,10 +5,10 @@ publishdate: 2018-07-24 04:00:00 +0000
 expirydate: 2030-01-01 04:00:00 +0000
 date: 2018-10-24 04:00:00 +0000
 layout: single
-menu:
-  docs:
-    parent: Settings & Configuration
-    weight: 4
+# menu:
+#   docs:
+#     parent: Settings & Configuration
+#     weight: 4
 
 ---
 You can define which areas (folders) of your site contain editable content files via the `sections` parameter in your `.yakkl/settings.yml` configuration file.

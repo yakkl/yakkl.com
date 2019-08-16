@@ -54,15 +54,6 @@ To answer that question, we’ll take a look at the features, speed, and extensi
     </item>
     
     <item>
-      <title>Could not locate Gemfile or .bundle/ directory</title>
-      <link>https://yakkl.com/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory/</link>
-      <pubDate>Thu, 22 Feb 2018 11:56:06 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory/</guid>
-      <description>When I view an error log from Yakkl I see: Could not locate Gemfile or .bundle/ directory What this error means Gemfiles include a list of project dependencies and where to find them. Bundler is a dependency manager for the Ruby programming language that can read Gemfiles, resolve the dependency graph and install those gems. Jekyll is a ruby application and can use Bundler to manage your project dependencies. Yakkl requires that your Jekyll projects contain a Gemfile at the root of the repository.</description>
-    </item>
-    
-    <item>
       <title>Jekyll Search with Algolia and Webtasks</title>
       <link>https://yakkl.com/blog/search-with-algolia-in-jekyll/</link>
       <pubDate>Tue, 06 Feb 2018 14:08:22 +0000</pubDate>

@@ -18,7 +18,7 @@
 <meta property="article:section" content="blog" />
   <meta itemprop="name" content="How To Use Hugo&#39;s Image Processing With Yakkl">
 <meta itemprop="description" content="0.32 update introduced built-in image processing for certain assets. One limitation of this feature is that it only works for page resources, which are page-relative assets stored alongside your posts in the content/ directory of your site. Since Yakkl’s uploads are stored in the static/uploads/ directory by default, these assets cannot be resized in your templates using Hugo’s built-in resizer. This document will provide a step-by-step guide for working around this limitation."><meta itemprop="datePublished" content="2018-05-22T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-05-21T20:09:02-11:00" /><meta itemprop="wordCount" content="409"><meta itemprop="image" content="https://yakkl.com/uploads/2018/04/hugo-yakkl-img-processing.png">
-  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/04/hugo-yakkl-img-processing.png"/><meta name="twitter:title" content="How To Use Hugo&#39;s Image Processing With Yakkl"/>
 <meta name="twitter:description" content="0.32 update introduced built-in image processing for certain assets. One limitation of this feature is that it only works for page resources, which are page-relative assets stored alongside your posts in the content/ directory of your site. Since Yakkl’s uploads are stored in the static/uploads/ directory by default, these assets cannot be resized in your templates using Hugo’s built-in resizer. This document will provide a step-by-step guide for working around this limitation."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
 <link rel="stylesheet" href="/css/styles.min.css?2479b735eb41edf4192519e16f1ea4c7" type="text/css" /><link rel="manifest" href="/favicons/manifest.json" />
@@ -70,8 +70,6 @@ var featureFlagContent = {};
       <div class="nav-content">
         <a href="/" class="mini-nav--logo"></a>
         <ul class="main-nav-items"><li>
-              <a href="/pricing/" class="nav-item">Pricing</a>
-            </li><li>
               <a href="/docs/welcome/" class="nav-item">Docs</a>
             </li><li>
               <a href="/blog/" class="nav-item">Blog</a>
@@ -288,8 +286,8 @@ headless: <span style="color:#66d9ef">true</span>
           <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
         </a>
       </div><div class="column">
-        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
-        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+        <span class="footer-title">Product</span><ul><li><a href="/docs/welcome/">Docs</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
   </div>
   <div class="lower-footer">
     <div class="container">

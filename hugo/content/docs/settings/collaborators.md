@@ -10,10 +10,10 @@ date: 2017-03-28T04:00:00.000+00:00
 layout: single
 images:
 - "/uploads/2018/01/OGimage-01-docs-3x.jpg"
-menu:
-  docs:
-    parent: Settings & Configuration
-    weight: 7
+# menu:
+#   docs:
+#     parent: Settings & Configuration
+#     weight: 7
 
 ---
 Yakkl allows you to define how you work as teams or with collaborators. Teams are available from [our starter plan](/pricing).

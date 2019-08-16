@@ -18,9 +18,9 @@
       <pubDate>Mon, 12 Aug 2019 04:00:00 +0000</pubDate>
       
       <guid>https://yakkl.com/docs/welcome/</guid>
-      <description>Introduction Yakkl.com is a Git-backed CMS (content management system) for websites and web products built using static site generators. Yakkl bridges the gap between developers and their teams, by making development fun and easy, while providing powerful content management for their teams.
-Sign up for free today, or learn more about our pricing for teams.
- What is Yakkl? The main thing to understand is that Yakkl &amp;ndash; unlike other content management systems &amp;ndash; is entirely backed by Git.</description>
+      <description>Introduction Yakkl.com is a Secure Team Collaboration platform that allows you and your team to stay caught up on topics of discussions in a simple and organized manner without creating &amp;ldquo;Channel Sprawl&amp;rdquo;. If you&amp;rsquo;re yakkling with the person next to you or multiple timezones away, Yakkl keeps all of your communications organized into Topics so you can pickup where you left off.
+Sign up for free today.
+ Advantages Choosing to build a static site and use a Git-backed CMS comes with a multitude of advantages over the traditional Monolithic CMS:</description>
     </item>
     
     <item>
@@ -51,15 +51,6 @@ Our previous model had a few limitations that we wanted to address:
       <guid>https://yakkl.com/docs/changelog/2018-4-9-changelog/</guid>
       <description> Hugo Support for v0.38.1 We updated our support to Hugo v0.38.1 and below. See Hugo News
 Bug Fixes  Documentation: Links to documentation were updated Github Authentication: Increased timeout length and added a more descriptive message on timeout Import: Fixed a bug that prevents a complete list of repositories being listed for Bitbucket users Import: Fixed a bug that prevents import if the config filename was provided in the import path Media: White images can now be detected in the Media Library Notifications: Team members of an Organization now receive notifications without having to refresh the page Redirect: Removing a site from an Organization does not redirect to My Sites anymore UI: Fixed cropping of icons in CMS sidebar UI: Added a more descriptive explanation to the repo step in the starter template flow User Roles: Manage Guests is now unavailable to Guests of a particular site  </description>
-    </item>
-    
-    <item>
-      <title>Could not locate Gemfile or .bundle/ directory</title>
-      <link>https://yakkl.com/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory/</link>
-      <pubDate>Thu, 22 Feb 2018 11:56:06 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory/</guid>
-      <description>When I view an error log from Yakkl I see: Could not locate Gemfile or .bundle/ directory What this error means Gemfiles include a list of project dependencies and where to find them. Bundler is a dependency manager for the Ruby programming language that can read Gemfiles, resolve the dependency graph and install those gems. Jekyll is a ruby application and can use Bundler to manage your project dependencies. Yakkl requires that your Jekyll projects contain a Gemfile at the root of the repository.</description>
     </item>
     
     <item>

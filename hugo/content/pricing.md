@@ -27,11 +27,11 @@ cta:
   textline: ''
   calls_to_action: []
 private: false
-menu:
-  footer:
-    parent: Product
-    weight: 1
-  main:
-    weight: 1
+# menu: 
+#   footer:
+#     parent: Product
+#     weight: 1 
+#   main:
+#     weight: 1
 
 ---

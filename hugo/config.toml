@@ -19,54 +19,14 @@ hrefTargetBlank = false
 latexDashes = true
 plainIDAnchors = true
 [[menu.docs]]
-name = "Pro"
-weight = 12
-[[menu.docs]]
-name = "Other"
-weight = 11
-[[menu.docs]]
-name = "Developer Guides"
-weight = 10
-[[menu.docs]]
-name = "Hosting"
-weight = 9
-[[menu.docs]]
-name = "Previews"
-weight = 8
-[[menu.docs]]
 name = "Organizations"
 weight = 7
-[[menu.docs]]
-name = "Settings & Configuration"
-weight = 6
-[[menu.docs]]
-name = "Media"
-weight = 5
-[[menu.docs]]
-name = "Git Sync"
-weight = 3
-[[menu.docs]]
-name = "Editing"
-weight = 4
 [[menu.docs]]
 name = "Quick Start"
 weight = 2
 [[menu.docs]]
 name = "Welcome"
 weight = 1
-[[menu.faqs]]
-name = "Glossary"
-weight = 2
-[[menu.footer]]
-name = "Roadmap"
-parent = "Product"
-url = "https://yakkl.com/"
-weight = 7
-[[menu.footer]]
-name = "Status"
-parent = "Product"
-url = "https://status.yakkl.com"
-weight = 6
 [[menu.footer]]
 name = "Company"
 weight = 2
@@ -118,7 +78,7 @@ ghrepo_edit = "https://github.com/yakkl/yakkl.com/edit/master/hugo/content/"
 ghrepo_new = "https://github.com/yakkl/yakkl.com/issues/new"
 gtmid = "GTM-MRLTPV7"
 images = ["/uploads/2018/01/OGimage-01-3x.jpg"]
-mixpanelid = "8aaf5d792dd5bf875adae0b2adac8900"
+mixpanelid = ""
 [params.algolia]
 params = ["tags", "categories", "authors"]
 vars = ["date", "description", "dir", "path", "expirydate", "fuzzywordcount", "keywords", "kind", "lang", "lastmod", "permalink", "publishdate", "readingtime", "relpermalink", "summary", "title", "type", "url", "weight", "wordcount", "section"]
@@ -161,7 +121,7 @@ name = "tags"
 weight = 100
 [[related.indices]]
 name = "date"
-pattern = "2019"
+pattern = "2006"
 weight = 10
 [social]
 email = "support@yakkl.com"

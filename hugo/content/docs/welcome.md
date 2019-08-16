@@ -36,21 +36,13 @@ menu:
 ---
 ## Introduction
 
-Yakkl.com is a Git-backed CMS (content management system) for websites and web products built using [**_static site generators_**](https://yakkl.com/docs/faqs/glossary/static-site-generators/ "Static Site Generators"). Yakkl bridges the gap between developers and their teams, by making development fun and easy, while providing powerful content management for their teams.
+Yakkl.com is a Secure Team Collaboration platform that allows you and your team to stay caught up on topics of discussions in a simple and organized manner without creating "Channel Sprawl". If you're yakkling with the person next to you or multiple timezones away, Yakkl keeps all of your communications organized into Topics so you can pickup where you left off.
 
 {{% tip %}}
 
-[**Sign up**](https://yakkl.com/signup "Yakkl CMS Sign Up") for free today, or learn more about our [**pricing**](https://yakkl.com/pricing "Yakkl.com's Pricing") for teams.
+[**Sign up**](https://yakkl.com/signup "Yakkl") for free today.
 
 {{% /tip %}}
-
-## What is Yakkl?
-
-The main thing to understand is that Yakkl -- unlike other content management systems -- is entirely backed by Git.
-
-To put it simply, Yakkl is an editor-friendly interface over Git. This means that developers and editors can now use the same workflow and tool set.
-
-This also means that all of your content and code always belongs to you, and is not stored in a database in the cloud out of your reach.
 
 ## Advantages
 
@@ -60,10 +52,12 @@ Choosing to build a static site and use a Git-backed CMS comes with a multitude 
 
 Static sites don't require a complicated server setup to allow for the dynamic rendering of pages. This means your sites download faster for visitors, can handle insane volumes of traffic, and have much fewer touch points that are vulnerable to hacking.
 
-### Continuous Deployment
+### Warning! Geek Speak
 
-Unlike traditional content management systems, your codebase _is_ your website. That means developers can work on changes to the website locally, and then push to Git and automatically have them deployed to production.
+Yakkl runs on modern infrastructure Industrialized Kubernetes automation platform called [Epiphany](https://github.com/epiphany-platform/epiphany). Epiphany is built with Enterprise grade security, deployment, patch management, monitoring, centralized logging, Kafka high-speed messaging, clustered data stores and can run on any cloud or on-premise (your data center).
 
-### Unified Workflow
+Since Yakkl runs on Epiphany, the deployment, event messaging, databases and security are handled automatically which keeps Yakkl's services easy to work on and enhance.
 
-Gone are the days of developers and editors having completely separate workflows. Developers and editors now work in sync with Git, providing unparalleled ability to deliver quickly and easily.
+### Open-source
+
+I know, can you believe it? Something this awesome is fully open-sourced - you're welcome! Go to [Github](https://github.com/yakkl/yakkl) and fork it. Don't forget to 'star' and 'follow' - Thank you!

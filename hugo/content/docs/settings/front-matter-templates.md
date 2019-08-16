@@ -12,10 +12,10 @@ date: 2019-04-18 04:00:00 +0000
 layout: single
 images:
 - "/uploads/2018/01/OGimage-01-docs-3x.jpg"
-menu:
-  docs:
-    parent: Settings & Configuration
-    weight: 2
+# menu:
+#   docs:
+#     parent: Settings & Configuration
+#     weight: 2
 
 ---
 {{% tip "Disclaimer" %}}

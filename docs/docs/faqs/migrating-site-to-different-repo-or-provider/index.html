@@ -21,7 +21,7 @@ Every time you make a change to your settings Yakkl immediately commits those ch
   <meta itemprop="name" content="How to Migrate a Site to a Different Repo or Git Provider">
 <meta itemprop="description" content="If you consider switching to a different provider or there is an issue with your current import of your repository in Yakkl, you might consider deleting your current import of your repository and importing it as a new site.
 Every time you make a change to your settings Yakkl immediately commits those changes to your .yakkl folder in the repository. This ensures that your settings persists through different imports of the same site."><meta itemprop="datePublished" content="2019-01-15T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2019-01-15T04:00:00&#43;00:00" /><meta itemprop="wordCount" content="188"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/OGimage-01-3x.jpg">
-  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/OGimage-01-3x.jpg"/><meta name="twitter:title" content="How to Migrate a Site to a Different Repo or Git Provider"/>
 <meta name="twitter:description" content="If you consider switching to a different provider or there is an issue with your current import of your repository in Yakkl, you might consider deleting your current import of your repository and importing it as a new site.
 Every time you make a change to your settings Yakkl immediately commits those changes to your .yakkl folder in the repository. This ensures that your settings persists through different imports of the same site."/><meta name="twitter:site" content="@yakklofficial"/><meta name="generator" content="Hugo 0.51" />
@@ -74,8 +74,6 @@ var featureFlagContent = {};
       <div class="nav-content">
         <a href="/" class="mini-nav--logo"></a>
         <ul class="main-nav-items"><li>
-              <a href="/pricing/" class="nav-item">Pricing</a>
-            </li><li>
               <a href="/docs/welcome/" class="nav-item">Docs</a>
             </li><li>
               <a href="/blog/" class="nav-item">Blog</a>
@@ -88,9 +86,8 @@ var featureFlagContent = {};
               </li><li data-signed-out="true">
               <a class="signup-button button small primary" href="/signup">Sign up</a>
             </li></ul><div class="docs-nav-items"><h3>FAQs</h3>
-    <ul></ul><h3>Glossary</h3>
-    <ul><li><a href="/docs/faqs/glossary/static-sites/">Static Sites</a></li><li><a href="/docs/faqs/glossary/static-site-generators/">Static Site Generators</a></li><li><a href="/docs/faqs/glossary/static-files/">Static Files</a></li><li><a href="/docs/faqs/glossary/content-files/">Content Files</a></li><li><a href="/docs/faqs/glossary/ci-cd/">CI/CD</a></li><li><a href="/docs/faqs/glossary/front-matter/">Front Matter</a></li></ul><h3>FAQs</h3>
-    <ul><li><a href="/docs/faqs/migrating-site-to-different-repo-or-provider/" class="active">How to Migrate a Site to a Different Repo or Git Provider</a></li><li><a href="/docs/faqs/how-to-use-yaml-json-front-matter-w-hugo/">How to use YAML or JSON for Front Matter with Hugo?</a></li><li><a href="/docs/faqs/timezones/">Yakkl Isn&#39;t Using My Timezone Setting!</a></li><li><a href="/docs/faqs/transferring-site/">How To Transfer a Site to an Organization?</a></li><li><a href="/docs/faqs/cancel-legacy-plan/">How To Cancel/Downgrade a Per-Site Plan?</a></li><li><a href="/docs/faqs/forestry-changed-code/">Why did Yakkl edit my files?</a></li><li><a href="/docs/faqs/jekyll-version/">What versions of Jekyll do you support?</a></li><li><a href="/docs/faqs/forestry-files/">Why did Yakkl add files to my repo?</a></li><li><a href="/docs/faqs/hugo-version/">What versions of Hugo do you support?</a></li><li><a href="/docs/faqs/front-matter-fallbacks/">How do I set fallback/hidden values for Front Matter?</a></li><li><a href="/docs/faqs/deploying-to-bitbucket/">Why Can&#39;t I Deploy to a Bitbucket Branch?</a></li><li><a href="/docs/faqs/backups/">How do I backup my site?</a></li></ul></div></div>
+    <ul><li><a href="/docs/faqs/migrating-site-to-different-repo-or-provider/" class="active">How to Migrate a Site to a Different Repo or Git Provider</a></li><li><a href="/docs/faqs/how-to-use-yaml-json-front-matter-w-hugo/">How to use YAML or JSON for Front Matter with Hugo?</a></li><li><a href="/docs/faqs/timezones/">Yakkl Isn&#39;t Using My Timezone Setting!</a></li><li><a href="/docs/faqs/transferring-site/">How To Transfer a Site to an Organization?</a></li><li><a href="/docs/faqs/cancel-legacy-plan/">How To Cancel/Downgrade a Per-Site Plan?</a></li><li><a href="/docs/faqs/forestry-changed-code/">Why did Yakkl edit my files?</a></li><li><a href="/docs/faqs/jekyll-version/">What versions of Jekyll do you support?</a></li><li><a href="/docs/faqs/forestry-files/">Why did Yakkl add files to my repo?</a></li><li><a href="/docs/faqs/hugo-version/">What versions of Hugo do you support?</a></li><li><a href="/docs/faqs/front-matter-fallbacks/">How do I set fallback/hidden values for Front Matter?</a></li><li><a href="/docs/faqs/deploying-to-bitbucket/">Why Can&#39;t I Deploy to a Bitbucket Branch?</a></li><li><a href="/docs/faqs/backups/">How do I backup my site?</a></li></ul><h3>Glossary</h3>
+    <ul><li><a href="/docs/faqs/glossary/static-sites/">Static Sites</a></li><li><a href="/docs/faqs/glossary/static-site-generators/">Static Site Generators</a></li><li><a href="/docs/faqs/glossary/static-files/">Static Files</a></li><li><a href="/docs/faqs/glossary/content-files/">Content Files</a></li><li><a href="/docs/faqs/glossary/ci-cd/">CI/CD</a></li><li><a href="/docs/faqs/glossary/front-matter/">Front Matter</a></li></ul></div></div>
     </nav>
     <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
     </div>
@@ -103,9 +100,8 @@ var featureFlagContent = {};
             Docs
           </a>
         </h2><div class="docs-nav-items"><h3>FAQs</h3>
-    <ul></ul><h3>Glossary</h3>
-    <ul><li><a href="/docs/faqs/glossary/static-sites/">Static Sites</a></li><li><a href="/docs/faqs/glossary/static-site-generators/">Static Site Generators</a></li><li><a href="/docs/faqs/glossary/static-files/">Static Files</a></li><li><a href="/docs/faqs/glossary/content-files/">Content Files</a></li><li><a href="/docs/faqs/glossary/ci-cd/">CI/CD</a></li><li><a href="/docs/faqs/glossary/front-matter/">Front Matter</a></li></ul><h3>FAQs</h3>
-    <ul><li><a href="/docs/faqs/migrating-site-to-different-repo-or-provider/" class="active">How to Migrate a Site to a Different Repo or Git Provider</a></li><li><a href="/docs/faqs/how-to-use-yaml-json-front-matter-w-hugo/">How to use YAML or JSON for Front Matter with Hugo?</a></li><li><a href="/docs/faqs/timezones/">Yakkl Isn&#39;t Using My Timezone Setting!</a></li><li><a href="/docs/faqs/transferring-site/">How To Transfer a Site to an Organization?</a></li><li><a href="/docs/faqs/cancel-legacy-plan/">How To Cancel/Downgrade a Per-Site Plan?</a></li><li><a href="/docs/faqs/forestry-changed-code/">Why did Yakkl edit my files?</a></li><li><a href="/docs/faqs/jekyll-version/">What versions of Jekyll do you support?</a></li><li><a href="/docs/faqs/forestry-files/">Why did Yakkl add files to my repo?</a></li><li><a href="/docs/faqs/hugo-version/">What versions of Hugo do you support?</a></li><li><a href="/docs/faqs/front-matter-fallbacks/">How do I set fallback/hidden values for Front Matter?</a></li><li><a href="/docs/faqs/deploying-to-bitbucket/">Why Can&#39;t I Deploy to a Bitbucket Branch?</a></li><li><a href="/docs/faqs/backups/">How do I backup my site?</a></li></ul></div></aside>
+    <ul><li><a href="/docs/faqs/migrating-site-to-different-repo-or-provider/" class="active">How to Migrate a Site to a Different Repo or Git Provider</a></li><li><a href="/docs/faqs/how-to-use-yaml-json-front-matter-w-hugo/">How to use YAML or JSON for Front Matter with Hugo?</a></li><li><a href="/docs/faqs/timezones/">Yakkl Isn&#39;t Using My Timezone Setting!</a></li><li><a href="/docs/faqs/transferring-site/">How To Transfer a Site to an Organization?</a></li><li><a href="/docs/faqs/cancel-legacy-plan/">How To Cancel/Downgrade a Per-Site Plan?</a></li><li><a href="/docs/faqs/forestry-changed-code/">Why did Yakkl edit my files?</a></li><li><a href="/docs/faqs/jekyll-version/">What versions of Jekyll do you support?</a></li><li><a href="/docs/faqs/forestry-files/">Why did Yakkl add files to my repo?</a></li><li><a href="/docs/faqs/hugo-version/">What versions of Hugo do you support?</a></li><li><a href="/docs/faqs/front-matter-fallbacks/">How do I set fallback/hidden values for Front Matter?</a></li><li><a href="/docs/faqs/deploying-to-bitbucket/">Why Can&#39;t I Deploy to a Bitbucket Branch?</a></li><li><a href="/docs/faqs/backups/">How do I backup my site?</a></li></ul><h3>Glossary</h3>
+    <ul><li><a href="/docs/faqs/glossary/static-sites/">Static Sites</a></li><li><a href="/docs/faqs/glossary/static-site-generators/">Static Site Generators</a></li><li><a href="/docs/faqs/glossary/static-files/">Static Files</a></li><li><a href="/docs/faqs/glossary/content-files/">Content Files</a></li><li><a href="/docs/faqs/glossary/ci-cd/">CI/CD</a></li><li><a href="/docs/faqs/glossary/front-matter/">Front Matter</a></li></ul></div></aside>
     </div>
     <section class="docs-content">
       <div class="container md-content">
@@ -167,7 +163,7 @@ var featureFlagContent = {};
 </div>
 
 
-        <nav class="pagination"><a href="/docs/faqs/glossary/front-matter/" rel="prev"><span class="prev-doc">Front Matter</span></a><a href="/docs/faqs/how-to-use-yaml-json-front-matter-w-hugo/" rel="next"><span class="next-doc">How to use YAML or JSON for Front Matter with Hugo?</span></a></nav><hr />
+        <nav class="pagination"><a href="/docs/faqs/how-to-use-yaml-json-front-matter-w-hugo/" rel="next"><span class="next-doc">How to use YAML or JSON for Front Matter with Hugo?</span></a></nav><hr />
         <div class="doc--info">
           <span class="doc--meta-label">Last updated on</span>
           <span class="doc--date">January 15, 2019</span>
@@ -184,8 +180,8 @@ var featureFlagContent = {};
           <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
         </a>
       </div><div class="column">
-        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
-        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+        <span class="footer-title">Product</span><ul><li><a href="/docs/welcome/">Docs</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
   </div>
   <div class="lower-footer">
     <div class="container">

@@ -24,7 +24,7 @@ For example: If I am an active Yakkl.com user, and I am invited to join Pro Org 
 <meta itemprop="description" content="Organizations on the Pro Plan have access to certain enterprise features, please contact us if you would like to upgrade your plan.
 Subdomains Users within a pro organization will access the app through *organization-subdomain*.yakkl.com instead of app.yakkl.com. A separate user account will be created for each of a users subdomains.
 For example: If I am an active Yakkl.com user, and I am invited to join Pro Org A, a separate user account will be created scoped to Pro Org A, which I can access through pro-org-a."><meta itemprop="datePublished" content="2017-12-31T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2017-12-31T04:00:00&#43;00:00" /><meta itemprop="wordCount" content="86"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg">
-  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
+  <meta itemprop="keywords" content="chris-macrae,colin-garvey,dj-walker,hans-jones,jordan-patterson,josh-dzielak,michael-soolee,régis-philibert,scott-gallant,sebastian-engels,team-yakkl,yakkl-team,beyond-static,cicd,cms,company,development-tools,engineering,frontend-friday,hugo,jekyll,static-sites,vuepress,blocks,ci/cd,frontend-friday,hugo,jekyll,postgres,search,webpack,wordpress," /><meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/OGimage-01-docs-3x.jpg"/><meta name="twitter:title" content="Pro Plans"/>
 <meta name="twitter:description" content="Organizations on the Pro Plan have access to certain enterprise features, please contact us if you would like to upgrade your plan.
 Subdomains Users within a pro organization will access the app through *organization-subdomain*.yakkl.com instead of app.yakkl.com. A separate user account will be created for each of a users subdomains.
@@ -78,8 +78,6 @@ var featureFlagContent = {};
       <div class="nav-content">
         <a href="/" class="mini-nav--logo"></a>
         <ul class="main-nav-items"><li>
-              <a href="/pricing/" class="nav-item">Pricing</a>
-            </li><li>
               <a href="/docs/welcome/" class="nav-item">Docs</a>
             </li><li>
               <a href="/blog/" class="nav-item">Blog</a>
@@ -93,19 +91,9 @@ var featureFlagContent = {};
               <a class="signup-button button small primary" href="/signup">Sign up</a>
             </li></ul><div class="docs-nav-items"><h3>Welcome</h3>
     <ul><li><a href="/docs/welcome/">Introduction</a></li></ul><h3>Quick Start</h3>
-    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li><li><a href="/docs/quickstart/setup-site/">Setup Your Site</a></li><li><a href="/docs/quickstart/configure-cms/">Configure the CMS</a></li></ul><h3>Git Sync</h3>
-    <ul><li><a href="/docs/git-sync/">Connecting to a Source Provider</a></li><li><a href="/docs/git-sync/github/">GitHub</a></li><li><a href="/docs/git-sync/gitlab/">GitLab</a></li><li><a href="/docs/git-sync/bitbucket/">Bitbucket</a></li><li><a href="/docs/git-sync/azure-devops/">Azure DevOps</a></li><li><a href="/docs/git-sync/manual-setup/">Manual Setup</a></li></ul><h3>Editing</h3>
-    <ul><li><a href="/docs/editing/">Managing Content</a></li><li><a href="/docs/editing/markdown-editor/">Markdown Editor</a></li><li><a href="/docs/editing/front-matter/">Front Matter</a></li><li><a href="/docs/editing/data-files/">Data Files</a></li><li><a href="/docs/editing/menus/">Menus</a></li><li><a href="/docs/editing/media-library/">Media Library</a></li><li><a href="/docs/editing/remote-admin/">Remote Admin</a></li></ul><h3>Media</h3>
-    <ul><li><a href="/docs/media/">Storing Media Files</a></li></ul><h3>Settings &amp; Configuration</h3>
-    <ul><li><a href="/docs/settings/">All Settings</a></li><li><a href="/docs/settings/front-matter-templates/">Front Matter Templates</a></li><li><a href="/docs/settings/fields/">Fields</a></li><li><a href="/docs/settings/content-sections/">Sidebar Configuration</a></li><li><a href="/docs/settings/config-files/">Config Files</a></li><li><a href="/docs/settings/snippets/">Snippets</a></li><li><a href="/docs/settings/collaborators/">Collaborators &amp; Teams</a></li></ul><h3>Organizations</h3>
-    <ul><li><a href="/docs/collaboration/organizations/">About Organizations</a></li></ul><h3>Previews</h3>
-    <ul></ul><h3>Hosting</h3>
-    <ul><li><a href="/docs/hosting/">Hosting Options</a></li><li><a href="/docs/hosting/s3-cloudfront-stack/">AWS</a></li><li><a href="/docs/hosting/github-pages/">GitHub Pages</a></li><li><a href="/docs/hosting/ftp/">FTP/SFTP</a></li><li><a href="/docs/hosting/webhooks/">Webhooks</a></li></ul><h3>Developer Guides</h3>
-    <ul><li><a href="/docs/guides/developing-with-hugo/">Hugo</a></li><li><a href="/docs/guides/developing-with-jekyll/">Jekyll</a></li><li><a href="/docs/guides/developing-with-gatsby/">Gatsby</a></li></ul><h3>Other</h3>
-    <ul><li><a href="/docs/troubleshooting/">Troubleshooting</a></li><li><a href="/docs/faqs/">Frequently Asked Questions</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="/docs/import-button/">Import Button</a></li><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul><h3>Pro</h3>
-    <ul><li><a href="/docs/pro/features/pro-plans/" class="active">Pro Plans</a></li><ul class="table-of-contents"><li class="level-2">
-              <a href="https://yakkl.com/docs/pro/features/pro-plans/#subdomains">Subdomains</a>
-            </li></ul><li><a href="/docs/pro/features/audit-logging/">Audit Logging</a></li><li><a href="/docs/pro/features/single-sign-on/">Single Sign-on</a></li></ul></div></div>
+    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li></ul><h3>Organizations</h3>
+    <ul></ul><h3>Other</h3>
+    <ul><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul></div></div>
     </nav>
     <div class="mini-nav--toggle"><img class="toggle-open" src="/img/navtoggle-open.svg" alt="Open nav"><img class="toggle-close" src="/img/navtoggle-close.svg" alt="Close nav">
     </div>
@@ -119,19 +107,9 @@ var featureFlagContent = {};
           </a>
         </h2><div class="docs-nav-items"><h3>Welcome</h3>
     <ul><li><a href="/docs/welcome/">Introduction</a></li></ul><h3>Quick Start</h3>
-    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li><li><a href="/docs/quickstart/setup-site/">Setup Your Site</a></li><li><a href="/docs/quickstart/configure-cms/">Configure the CMS</a></li></ul><h3>Git Sync</h3>
-    <ul><li><a href="/docs/git-sync/">Connecting to a Source Provider</a></li><li><a href="/docs/git-sync/github/">GitHub</a></li><li><a href="/docs/git-sync/gitlab/">GitLab</a></li><li><a href="/docs/git-sync/bitbucket/">Bitbucket</a></li><li><a href="/docs/git-sync/azure-devops/">Azure DevOps</a></li><li><a href="/docs/git-sync/manual-setup/">Manual Setup</a></li></ul><h3>Editing</h3>
-    <ul><li><a href="/docs/editing/">Managing Content</a></li><li><a href="/docs/editing/markdown-editor/">Markdown Editor</a></li><li><a href="/docs/editing/front-matter/">Front Matter</a></li><li><a href="/docs/editing/data-files/">Data Files</a></li><li><a href="/docs/editing/menus/">Menus</a></li><li><a href="/docs/editing/media-library/">Media Library</a></li><li><a href="/docs/editing/remote-admin/">Remote Admin</a></li></ul><h3>Media</h3>
-    <ul><li><a href="/docs/media/">Storing Media Files</a></li></ul><h3>Settings &amp; Configuration</h3>
-    <ul><li><a href="/docs/settings/">All Settings</a></li><li><a href="/docs/settings/front-matter-templates/">Front Matter Templates</a></li><li><a href="/docs/settings/fields/">Fields</a></li><li><a href="/docs/settings/content-sections/">Sidebar Configuration</a></li><li><a href="/docs/settings/config-files/">Config Files</a></li><li><a href="/docs/settings/snippets/">Snippets</a></li><li><a href="/docs/settings/collaborators/">Collaborators &amp; Teams</a></li></ul><h3>Organizations</h3>
-    <ul><li><a href="/docs/collaboration/organizations/">About Organizations</a></li></ul><h3>Previews</h3>
-    <ul></ul><h3>Hosting</h3>
-    <ul><li><a href="/docs/hosting/">Hosting Options</a></li><li><a href="/docs/hosting/s3-cloudfront-stack/">AWS</a></li><li><a href="/docs/hosting/github-pages/">GitHub Pages</a></li><li><a href="/docs/hosting/ftp/">FTP/SFTP</a></li><li><a href="/docs/hosting/webhooks/">Webhooks</a></li></ul><h3>Developer Guides</h3>
-    <ul><li><a href="/docs/guides/developing-with-hugo/">Hugo</a></li><li><a href="/docs/guides/developing-with-jekyll/">Jekyll</a></li><li><a href="/docs/guides/developing-with-gatsby/">Gatsby</a></li></ul><h3>Other</h3>
-    <ul><li><a href="/docs/troubleshooting/">Troubleshooting</a></li><li><a href="/docs/faqs/">Frequently Asked Questions</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="/docs/import-button/">Import Button</a></li><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul><h3>Pro</h3>
-    <ul><li><a href="/docs/pro/features/pro-plans/" class="active">Pro Plans</a></li><ul class="table-of-contents"><li class="level-2">
-              <a href="https://yakkl.com/docs/pro/features/pro-plans/#subdomains">Subdomains</a>
-            </li></ul><li><a href="/docs/pro/features/audit-logging/">Audit Logging</a></li><li><a href="/docs/pro/features/single-sign-on/">Single Sign-on</a></li></ul></div></aside>
+    <ul><li><a href="/docs/quickstart/tour/">Product Tour</a></li></ul><h3>Organizations</h3>
+    <ul></ul><h3>Other</h3>
+    <ul><li><a href="/docs/beta-testers/">Beta Testers</a></li></ul></div></aside>
     </div>
     <section class="docs-content">
       <div class="container md-content">
@@ -162,7 +140,7 @@ var featureFlagContent = {};
 For example: If I am an active Yakkl.com user, and I am invited to join <strong>Pro Org A</strong>, a separate user account will be created scoped to <strong>Pro Org A</strong>, which I can access through <code>pro-org-a.yakkl.com</code>.</p>
 
 
-        <nav class="pagination"><a href="/docs/beta-testers/" rel="prev"><span class="prev-doc">Beta Testers</span></a><a href="/docs/pro/features/audit-logging/" rel="next"><span class="next-doc">Audit Logging</span></a></nav><hr />
+        <nav class="pagination"></nav><hr />
         <div class="doc--info">
           <span class="doc--meta-label">Last updated on</span>
           <span class="doc--date">December 31, 2017</span>
@@ -179,8 +157,8 @@ For example: If I am an active Yakkl.com user, and I am invited to join <strong>
           <img src="/img/yakkl-pos-symbol.svg" width="auto" height="24" alt="Yakkl Logo">
         </a>
       </div><div class="column">
-        <span class="footer-title">Product</span><ul><li><a href="/pricing/">Pricing</a></li><li><a href="/docs/guides/">Guides</a></li><li><a href="/docs/welcome/">Docs</a></li><li><a href="/docs/changelog/">Changelog</a></li><li><a href="https://status.yakkl.com">Status</a></li><li><a href="https://yakkl.com/">Roadmap</a></li></ul></div><div class="column">
-        <span class="footer-title">Company</span><ul><li><a href="/careers/">Careers</a></li><li><a href="/support/">Support</a></li><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+        <span class="footer-title">Product</span><ul><li><a href="/docs/welcome/">Docs</a></li></ul></div><div class="column">
+        <span class="footer-title">Company</span><ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
   </div>
   <div class="lower-footer">
     <div class="container">

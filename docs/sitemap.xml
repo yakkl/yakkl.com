@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yakkl.com/docs/collaboration/organizations/</loc>
+    <lastmod>2019-08-15T04:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://yakkl.com/docs/welcome/</loc>
     <lastmod>2019-08-12T04:00:00+00:00</lastmod>
   </url><url>
@@ -9,9 +12,6 @@
   </url><url>
     <loc>https://yakkl.com/support/</loc>
     <lastmod>2019-08-12T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/collaboration/organizations/</loc>
-    <lastmod>2019-05-27T04:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/faqs/migrating-site-to-different-repo-or-provider/</loc>
     <lastmod>2019-01-15T04:00:00+00:00</lastmod>
@@ -25,17 +25,8 @@
     <loc>https://yakkl.com/docs/faqs/timezones/</loc>
     <lastmod>2018-10-24T04:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/docs/git-sync/</loc>
-    <lastmod>2018-08-27T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/git-sync/github/</loc>
-    <lastmod>2018-08-27T04:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/faqs/hugo-version/</loc>
     <lastmod>2018-08-20T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/media/</loc>
-    <lastmod>2018-05-25T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/faqs/cancel-legacy-plan/</loc>
     <lastmod>2018-03-28T04:00:00+00:00</lastmod>
@@ -53,12 +44,6 @@
     <lastmod>2017-12-31T04:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/faqs/glossary/front-matter/</loc>
-    <lastmod>2017-12-31T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/</loc>
-    <lastmod>2017-12-31T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/hosting/</loc>
     <lastmod>2017-12-31T04:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/faqs/backups/</loc>
@@ -82,12 +67,6 @@
     <loc>https://yakkl.com/docs/faqs/glossary/static-sites/</loc>
     <lastmod>2017-12-31T04:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/docs/troubleshooting/</loc>
-    <lastmod>2017-12-31T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/hosting/github-pages-jekyll/</loc>
-    <lastmod>2017-12-31T04:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/faqs/jekyll-version/</loc>
     <lastmod>2017-12-31T04:00:00+00:00</lastmod>
   </url><url>
@@ -97,23 +76,8 @@
     <loc>https://yakkl.com/docs/faqs/forestry-changed-code/</loc>
     <lastmod>2017-12-31T04:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/docs/editing/</loc>
-    <lastmod>2017-03-28T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-hugo/</loc>
-    <lastmod>2013-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-jekyll/</loc>
-    <lastmod>2013-07-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/terms/</loc>
     <lastmod>2019-08-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/editing/markdown-editor/</loc>
-    <lastmod>2019-05-29T04:00:00-03:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/quickstart/configure-cms/</loc>
-    <lastmod>2019-05-08T06:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/settings/front-matter-templates/</loc>
     <lastmod>2019-04-18T04:00:00+00:00</lastmod>
@@ -121,125 +85,26 @@
     <loc>https://yakkl.com/docs/faqs/how-to-use-yaml-json-front-matter-w-hugo/</loc>
     <lastmod>2019-01-15T04:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/docs/hosting/github-pages/</loc>
-    <lastmod>2018-12-12T05:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/pro/features/audit-logging/</loc>
-    <lastmod>2017-12-31T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-hugo/project-structure/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-jekyll/project-structure/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/git-sync/gitlab/</loc>
-    <lastmod>2017-04-06T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/quickstart/setup-site/</loc>
-    <lastmod>2017-03-23T04:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/privacy/</loc>
     <lastmod>2019-08-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/git-sync/bitbucket/</loc>
-    <lastmod>2018-08-27T04:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/pro/features/single-sign-on/</loc>
     <lastmod>2017-12-31T04:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-hugo/templating/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-jekyll/templating/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/settings/fields/</loc>
     <lastmod>2017-04-23T04:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://yakkl.com/docs/quickstart/tour/</loc>
+    <lastmod>2019-08-15T04:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/blog/</loc>
     <lastmod>2019-08-12T04:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/docs/git-sync/azure-devops/</loc>
-    <lastmod>2019-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/git-sync/manual-setup/</loc>
-    <lastmod>2019-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/quickstart/tour/</loc>
-    <lastmod>2018-12-12T04:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/settings/config-files/</loc>
     <lastmod>2018-07-25T04:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/docs/hosting/amazon-s3/</loc>
-    <lastmod>2017-12-31T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/editing/front-matter/</loc>
-    <lastmod>2017-12-31T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/hosting/s3-cloudfront-stack/</loc>
-    <lastmod>2017-09-18T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-hugo/static-files/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-jekyll/static-files/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/misc/working-with-globs/</loc>
-    <lastmod>2018-11-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/editing/data-files/</loc>
-    <lastmod>2018-05-25T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/hosting/ftp/</loc>
-    <lastmod>2017-12-31T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-hugo/asset-pipeline/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-jekyll/asset-pipeline/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/editing/media-library/</loc>
-    <lastmod>2018-05-25T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/hosting/webhooks/</loc>
-    <lastmod>2017-12-31T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-hugo/environments/</loc>
-    <lastmod>2017-07-24T20:03:09+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-jekyll/environments/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/settings/collaborators/</loc>
     <lastmod>2017-03-28T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/editing/menus/</loc>
-    <lastmod>2017-12-31T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-hugo/local-development/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-jekyll/local-development/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/editing/remote-admin/</loc>
-    <lastmod>2017-12-31T04:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-hugo/short-codes/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-jekyll/plugins/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-hugo/misc/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-jekyll/misc/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/import-button/</loc>
     <lastmod>2018-10-02T04:00:00+00:00</lastmod>
@@ -277,12 +142,6 @@
     <loc>https://yakkl.com/docs/changelog/2019-06-28-changelog/</loc>
     <lastmod>2019-06-28T15:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/docs/troubleshooting/build-issues-for-sites-in-subdirectories/</loc>
-    <lastmod>2019-06-28T14:36:06+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/careers-wip/</loc>
-    <lastmod>2019-06-24T17:53:50-03:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/changelog/changelog-2019-06-24/</loc>
     <lastmod>2019-06-24T12:00:00-03:00</lastmod>
   </url><url>
@@ -306,9 +165,6 @@
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2019-05-03-changelog/</loc>
     <lastmod>2019-05-03T11:00:00-03:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/troubleshooting/using-private-submodules/</loc>
-    <lastmod>2019-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2019-04-29-changelog/</loc>
     <lastmod>2019-04-29T15:00:00+00:00</lastmod>
@@ -370,9 +226,6 @@
     <loc>https://yakkl.com/blog/is-it-time-to-move-on-from-wordpress/</loc>
     <lastmod>2018-11-26T16:30:05+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/docs/guides/developing-with-gatsby/</loc>
-    <lastmod>2018-11-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-10-30-changelog/</loc>
     <lastmod>2018-10-30T14:10:25+00:00</lastmod>
   </url><url>
@@ -420,9 +273,6 @@
   </url><url>
     <loc>https://yakkl.com/blog/custom-configuration-for-data-files/</loc>
     <lastmod>2018-09-13T13:36:32+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/troubleshooting/migrate-select-fields-to-new-data-file-sections/</loc>
-    <lastmod>2018-09-13T09:37:36+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-09-12-changelog/</loc>
     <lastmod>2018-09-12T14:19:59+00:00</lastmod>
@@ -508,9 +358,6 @@
     <loc>https://yakkl.com/blog/3-tips-for-mastering-blocks/</loc>
     <lastmod>2018-06-29T10:00:15+00:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/docs/troubleshooting/unexpected-status-code-connection-expected-but-not-available/</loc>
-    <lastmod>2018-06-28T14:08:09+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/blog/ubuild-a-new-theme-for-static-sites-using-blocks/</loc>
     <lastmod>2018-06-22T14:00:06+00:00</lastmod>
   </url><url>
@@ -552,9 +399,6 @@
   </url><url>
     <loc>https://yakkl.com/blog/instant-production-ready-scaffolding-with-create-static-site/</loc>
     <lastmod>2018-04-27T09:38:55-11:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/troubleshooting/gitlab-ssh-error/</loc>
-    <lastmod>2018-04-24T08:26:34-11:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/settings/fields/blocks/</loc>
     <lastmod>2018-04-23T00:00:00+00:00</lastmod>
@@ -601,14 +445,8 @@
     <loc>https://yakkl.com/blog/search-with-algolia-in-hugo/</loc>
     <lastmod>2018-03-02T05:00:00-04:00</lastmod>
   </url><url>
-    <loc>https://yakkl.com/docs/troubleshooting/could-not-locate-gemfile-or-bundle-directory/</loc>
-    <lastmod>2018-02-22T11:56:06+00:00</lastmod>
-  </url><url>
     <loc>https://yakkl.com/blog/search-with-algolia-in-jekyll/</loc>
     <lastmod>2018-02-06T14:08:22+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/troubleshooting/using-a-git-submodule-for-your-theme/</loc>
-    <lastmod>2018-02-01T10:37:36+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-2-9-changelog/</loc>
     <lastmod>2018-01-29T17:03:23+00:00</lastmod>
@@ -627,15 +465,6 @@
   </url><url>
     <loc>https://yakkl.com/docs/changelog/2018-1-9-changelog/</loc>
     <lastmod>2018-01-09T15:02:44+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/troubleshooting/cant-publish-preview-or-save/</loc>
-    <lastmod>2018-01-02T15:23:56+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/troubleshooting/cname/</loc>
-    <lastmod>2018-01-02T15:23:56+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/docs/troubleshooting/css-js-and-media-not-working/</loc>
-    <lastmod>2018-01-02T11:53:51+00:00</lastmod>
   </url><url>
     <loc>https://yakkl.com/docs/settings/fields/field-group/</loc>
     <lastmod>2017-12-31T00:00:00-04:00</lastmod>
@@ -714,10 +543,6 @@
   </url><url>
     <loc>https://yakkl.com/blog/forestryio-techstars-2016/</loc>
     <lastmod>2016-07-06T19:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://yakkl.com/tags/</loc>
-    <lastmod>2013-07-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url><url>
     <loc>https://yakkl.com/authors/</loc>
     <priority>0</priority>
@@ -839,7 +664,7 @@
     <priority>0</priority>
   </url><url>
     <loc>https://yakkl.com/tags/</loc>
-    <lastmod>2013-07-24T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-29T10:00:15+00:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://yakkl.com/authors/team-yakkl/</loc>
