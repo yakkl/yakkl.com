@@ -24,7 +24,7 @@ Options    Key Description Type Default     type Type of content directory,docum
 <meta itemprop="description" content="You can define which areas (folders) of your site contain editable content files via the sections parameter in your .yakkl/settings.yml configuration file.
 A content section in Yakkl is primarily defined by the path to the folder containing content files, and a glob to match against the contents of that folder.
 Options    Key Description Type Default     type Type of content directory,document,heading,jekyll-pages,jekyll-posts directory   label Text to display in Yakkl menu String N/A   path Path to folder from repository root (only applies to directory type) String N/A   match Glob of files to match inside of path (only applies to directory type) String (Fileglob) **/*   exclude Glob pattern of files to exclude (only applies to directory type) String (Fileglob) None   create Restrictions on creating new content items all, documents, none all   templates Control Which Front Matter Templates can be used in section Array All templates   new_doc_ext File extension for new documents created in this section String Value of New File Format in Yakkl Settings   read_only Prevent content from being edited (only applies to document type) Boolean false    Sidebar Order Sections will appear in the sidebar in the same order they are defined."><meta itemprop="datePublished" content="2018-07-24T04:00:00&#43;00:00" /><meta itemprop="dateModified" content="2018-10-24T04:00:00&#43;00:00" /><meta itemprop="wordCount" content="988"><meta itemprop="image" content="https://yakkl.com/uploads/2018/01/OGimage-01-3x.jpg">
-  <meta itemprop="keywords" content="hans-jones,scott-gallant,team-yakkl,yakkl-team,cms,yakkl," /><meta name="twitter:card" content="summary_large_image"/>
+  <meta itemprop="keywords" content="hans-jones,scott-gallant,team-yakkl,yakkl-team,cms,company,yakkl," /><meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:image:src" content="https://yakkl.com/uploads/2018/01/OGimage-01-3x.jpg"/><meta name="twitter:title" content="Sidebar Configuration"/>
 <meta name="twitter:description" content="You can define which areas (folders) of your site contain editable content files via the sections parameter in your .yakkl/settings.yml configuration file.
 A content section in Yakkl is primarily defined by the path to the folder containing content files, and a glob to match against the contents of that folder.
@@ -449,13 +449,19 @@ The <code>heading</code> section type can be used to separate your sidebar secti
         </a>
       </div><div class="column">
         <span class="footer-title">Product</span><ul><li><a href="/docs/welcome/">Docs</a></li><li><a href="/blog/">Blog</a></li></ul></div><div class="column">
-        <span class="footer-title">Company</span><ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div></div>
+        <span class="footer-title">Company</span><ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div><div class="column">
+        <p>Join our slack community and get daily
+        updates on product updates.</p>
+        <a href="https://join.slack.com/t/yakkl/shared_invite/enQtNzEzNzYwNzg0NjQyLWRiNjM5Y2NiMzcxOTgxNzg4OTA3ZjRiZDFlMmY5ZmRjZGUyMGM3ZDc0ZTg5NWMwMmIyNjIzMGE4OTIyZDY5NDM" target="_blank">
+          <img class="slack-logo" src="/img/logos/slack.svg" width="auto" height="24" alt="Slack">
+        </a>
+      </div></div>
   </div>
   <div class="lower-footer">
     <div class="container">
       <div>&copy; 2017-2019 Yakkl.com. All rights reserved.</div>
       <div class="contact">
-        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
+        <ul><li><a href="https://twitter.com/yakklofficial" target="_blank"><img src="/img/logos/twitter.svg" height="16" alt="Twitter"></a></li><li><a href="https://join.slack.com/t/yakkl/shared_invite/enQtNzEzNzYwNzg0NjQyLWRiNjM5Y2NiMzcxOTgxNzg4OTA3ZjRiZDFlMmY5ZmRjZGUyMGM3ZDc0ZTg5NWMwMmIyNjIzMGE4OTIyZDY5NDM" target="_blank"><img src="/img/logos/slack-symbol.svg" height="16" alt="Slack"></a></li><li><a href="mailto:support@yakkl.com"><img src="/img/email.svg" height="12" alt="Email"></a></li></div>
     </div>
   </div>
 </footer>

@@ -11,21 +11,21 @@ authors:
   fullName: Yakkl Team
   shortBio: ''
   twitter: yakklofficial
-  title: "Yakkl Ethusiasts \U0001F332"
-# - avatar: "/uploads/2017/12/Scott_Gallant_square.png"
-#   bio: ''
-#   firstName: Scott
-#   fullName: Scott Gallant
-#   lastName: Gallant
-#   shortBio: ''
-#   twitter: scottgallant
-#   title: CEO & co-founder
-# - avatar: "/uploads/2018/01/avatar_400x400.jpeg"
-#   bio: ''
-#   firstName: Jordan
-#   lastName: Patterson
-#   fullName: Jordan Patterson
-#   shortBio: 'CTO and Co-founder of <a href=''https://yakkl.com'' title=''Yakkl.com
-#     CMS''>Yakkl.com</a>. Backend developer, systems guy, father, builder of houses'
-#   twitter: jpatterson
-#   title: CTO and co-founder
+  title: "Yakkl Ethusiasts 💜"
+- avatar: "/img/hans.png"
+  bio: 'Latest gig - Global Head of R&D of very large entity. Loves coding and creating software.'
+  firstName: Hans
+  fullName: Hans Jones
+  lastName: Jones
+  shortBio: ''
+  twitter: hanscj1
+  title: Chief Bottle Washer
+- avatar: "/img/austin.png"
+  bio: ''
+  firstName: Austin
+  lastName: Jones
+  fullName: Austin Jones
+  shortBio: 'CEO and Co-Founder of <a href=''https://yakkl.com'' title=''Yakkl.com
+    CMS''>Yakkl.com</a>. Frontend developer and social media marketing guy.'
+  twitter: acjones212
+  title: CEO and Co-Founder

@@ -8,6 +8,14 @@
         "ReplaceKeyPrefixWith":"/docs/welcome/"}
 },{
     "Condition": {
+        "KeyPrefixEquals": "/docs/front-matter-fields/tags-field/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/docs/settings/fields/tags/"}
+},{
+    "Condition": {
         "KeyPrefixEquals": "/docs/front-matter-fields/text-field/"
     },
     "Redirect": {
@@ -104,12 +112,20 @@
         "ReplaceKeyPrefixWith":"/docs/settings/collaborators/"}
 },{
     "Condition": {
-        "KeyPrefixEquals": "/blog/post/2019-08-15-yakkl"
+        "KeyPrefixEquals": "/blog/post/yakkl-beta-announcement"
     },
     "Redirect": {
         "HttpRedirectCode": "301",
         "Protocol": "https",
         "ReplaceKeyPrefixWith":"/blog/2019-08-15-yakkl/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/blog/post/join-our-slack-community"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/blog/2019-08-15-join-our-slack-channel/"}
 },{
     "Condition": {
         "KeyPrefixEquals": "/docs/front-matter-fields/date-field/"
@@ -174,12 +190,4 @@
         "HttpRedirectCode": "301",
         "Protocol": "https",
         "ReplaceKeyPrefixWith":"/docs/settings/fields/sortable-list/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/docs/front-matter-fields/tags-field/"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/docs/settings/fields/tags/"}
 }]

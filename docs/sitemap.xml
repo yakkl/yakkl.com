@@ -118,6 +118,9 @@
     <loc>https://yakkl.com/blog/2019-08-15-yakkl/</loc>
     <lastmod>2019-08-15T12:00:00-03:00</lastmod>
   </url><url>
+    <loc>https://yakkl.com/blog/2019-08-15-join-our-slack-channel/</loc>
+    <lastmod>2019-08-15T10:41:00+00:00</lastmod>
+  </url><url>
     <loc>https://yakkl.com/careers/</loc>
     <lastmod>2019-08-12T04:00:00+00:00</lastmod>
   </url><url>
@@ -327,6 +330,10 @@
   </url><url>
     <loc>https://yakkl.com/categories/cms/</loc>
     <lastmod>2019-03-14T16:00:00-11:00</lastmod>
+    <priority>0</priority>
+  </url><url>
+    <loc>https://yakkl.com/categories/company/</loc>
+    <lastmod>2019-08-15T10:41:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
     <loc>https://yakkl.com/authors/hans-jones/</loc>

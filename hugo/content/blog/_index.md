@@ -1,7 +1,7 @@
 ---
 title: Blog
 headline: The Yakkl Blog
-textline: Welcome to the Yakkl blog! Read of the yakking...
+textline: Welcome to the Yakkl blog! Read all of the yakkling...
 weight: 4
 outputs:
 - HTML
