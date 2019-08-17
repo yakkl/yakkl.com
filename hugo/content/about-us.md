@@ -24,4 +24,6 @@ menu: []
 draft: true
 
 ---
-Yakkl is built on the principals of an Open Organization that believes in truly secure team collaboration no matter if you're sitting next to a team member or they reside on the other side of the world.
+Yakkl is built on the principals of an Open Organization that believes in truly secure team collaboration no matter if you're sitting next to a team member or they reside on the other side of the world. 
+
+Yakkl is a trademark of LambdaStack, LLC

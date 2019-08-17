@@ -1,12 +1,14 @@
 .footer {
   background: $color-white;
   color: $color-dark;
+  border-top: 1px solid $color-grey;
   font-size: 0.8rem;
   letter-spacing: 0.025em;
-  padding: 4rem 0 0;
+  padding: 1rem 0 0;
   position: relative;
   z-index: 1;
-
+  margin-top: -6rem;
+  
   /* Ensure intercom doesn't cover anything... */
   @media screen and (max-width: 48em) {
     padding-bottom: 3rem;
@@ -36,6 +38,7 @@
 
   .column {
     overflow: hidden;
+    padding: 0; /* take away the margin */
   }
 
   .column:nth-child(1) {

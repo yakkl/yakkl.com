@@ -5,10 +5,10 @@ title: Product Tour
 authors: []
 publishdate: 2019-08-15 04:00:00 +0000
 expirydate: 2030-01-01 04:00:00 +0000
-weight: 4
+weight: 1
 date: 2019-08-15 04:00:00 +0000
 images:
-- "/uploads/2018/01/OGimage-01-docs-3x.jpg"
+- "/uploads/2019/08/yakkl-blur.png"
 menu:
   docs:
     parent: Quick Start
@@ -23,7 +23,7 @@ This tour will be a walk through of Yakkl showing you how to get the most out of
 
 ## Getting Started
 
-{{% pretty_screenshot img="/uploads/2019/07/select-generator.png" %}}
+{{% pretty_screenshot img="/uploads/2019/08/yakkl-blur.png" %}}
 
 [Sign up](https://yakkl.com/signup) for a Yakkl account.
 

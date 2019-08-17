@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Secure Team Collaboration on Yakkl.com</title>
+    <title>Secure Team Collaboration on Yakkl</title>
     <link>https://yakkl.com/</link>
-    <description>Recent content in Secure Team Collaboration on Yakkl.com</description>
+    <description>Recent content in Secure Team Collaboration on Yakkl</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <copyright>Copyright (c) 2019 LambdaStack, LLC.</copyright>
     <lastBuildDate>Mon, 12 Aug 2019 04:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://yakkl.com/index.xml" rel="self" type="application/rss+xml" />
@@ -21,6 +21,18 @@
       <description>Organizations are available from our starter plan.
 Organizations enable you to manage groups of users across multiple sites. Teams or individuals within an organization can have their access levels applied on a per-site basis.
 Create an Organization You can create an organization on your dashboard by clicking on Create Organization in the left sidebar. Once you have filled in your information and named the organization, you can proceed by clicking Create.</description>
+    </item>
+    
+    <item>
+      <title>Product Tour</title>
+      <link>https://yakkl.com/docs/quickstart/tour/</link>
+      <pubDate>Thu, 15 Aug 2019 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/quickstart/tour/</guid>
+      <description>Overview This tour will be a walk through of Yakkl showing you how to get the most out of a Secure Team Collaboration platform.
+Getting Started  Sign up for a Yakkl account.
+ Something cool from Yakkl here :)  Congrats, you&amp;rsquo;re ready to yakkl!
+Yakkl is Open Sourced and hosted on (GitHub. If you or your team wants to run Yakkl on your own systems then please feel free to clone the repo.</description>
     </item>
     
     <item>
@@ -278,7 +290,7 @@ New Lines New lines will be normalized so that all line endings are the same.</d
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://yakkl.com/terms/</guid>
-      <description>YAKKL (&amp;ldquo;YAKKL&amp;rdquo; / &amp;ldquo;WE&amp;rdquo; / &amp;ldquo;US&amp;rdquo;) OWNS AND OPERATES THE WEBSITE LOCATED AT HTTPS://YAKKL.COM (&amp;ldquo;WEBSITE&amp;rdquo;). THESE TERMS OF USE APPLY TO ALL USERS OF THE WEBSITE, INCLUDING USERS WHO UPLOAD ANY MATERIALS TO THE WEBSITE, USERS SUBSCRIBE FOR AN ACCOUNT AND WHO USE SERVICES PROVIDED THROUGH THIS WEBSITE, AND USERS WHO SIMPLY VIEW THE CONTENT ON OR AVAILABLE THROUGH THIS WEBSITE (&amp;ldquo;YOU&amp;rdquo; / &amp;ldquo;USERS&amp;rdquo;).
+      <description>LambdaStack, LLC (&amp;ldquo;YAKKL&amp;rdquo; / &amp;ldquo;WE&amp;rdquo; / &amp;ldquo;US&amp;rdquo;) OWNS THE BRAND OF YAKKL AND OPERATES THE WEBSITE LOCATED AT HTTPS://YAKKL.COM (&amp;ldquo;WEBSITE&amp;rdquo;). THESE TERMS OF USE APPLY TO ALL USERS OF THE WEBSITE, INCLUDING USERS WHO UPLOAD ANY MATERIALS TO THE WEBSITE, USERS SUBSCRIBE FOR AN ACCOUNT AND WHO USE SERVICES PROVIDED THROUGH THIS WEBSITE, AND USERS WHO SIMPLY VIEW THE CONTENT ON OR AVAILABLE THROUGH THIS WEBSITE (&amp;ldquo;YOU&amp;rdquo; / &amp;ldquo;USERS&amp;rdquo;).
 BY USING THIS WEBSITE YOU INDICATE YOUR ACCEPTANCE OF THESE TERMS OF USE.</description>
     </item>
     
@@ -308,8 +320,8 @@ BY USING THIS WEBSITE YOU INDICATE YOUR ACCEPTANCE OF THESE TERMS OF USE.</descr
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://yakkl.com/privacy/</guid>
-      <description>1. Introduction Yakkl.com, (“Yakkl.com”, “we”, “us”) has created this Privacy Policy (“Privacy Policy”) in order to set out how we collect, use, and disclose personal information through our open source Secure Team Collaboration platform and applications (collectively, the “Platform”).
-The privacy of our customers (“Customers”) and their end users (“End Users”) is of great importance to us. By visiting our Sites located at yakkl.com (collectively, the “Site”) or using the Platform in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy and you hereby consent to the collection, use and disclosure of your Personal Information in accordance with this Privacy Policy.</description>
+      <description>1. Introduction LambdaStack, LLC, (“Yakkl”, “we”, “us”, &amp;ldquo;LambdaStack&amp;rdquo;) has created this Privacy Policy (“Privacy Policy”) in order to set out how we collect, use, and disclose personal information through our open source Secure Team Collaboration platform and applications (collectively, the “Platform”).
+The privacy of our customers (“Customers”) and their end users (“End Users”) is of great importance to us. By visiting our Sites located at yakkl.com(collectively, the “Site”) or using the Platform in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy and you hereby consent to the collection, use and disclosure of your Personal Information in accordance with this Privacy Policy.</description>
     </item>
     
     <item>
@@ -333,18 +345,6 @@ Attributes  Email FirstName LastName Teams (for Cloud Enterprise, as a list of T
 --- title: &amp;#34;My New Page Title!&amp;#34; --- See detailed documentation
 Textarea Multi-line text input. Displayed for Front Matter values that are long strings. For example, a page description.
 --- description: &amp;#34;Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your RSS feed&amp;#39;s site description.</description>
-    </item>
-    
-    <item>
-      <title>Product Tour</title>
-      <link>https://yakkl.com/docs/quickstart/tour/</link>
-      <pubDate>Thu, 15 Aug 2019 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/quickstart/tour/</guid>
-      <description>Overview This tour will be a walk through of Yakkl showing you how to get the most out of a Secure Team Collaboration platform.
-Getting Started  Sign up for a Yakkl account.
- Something cool from Yakkl here :)  Congrats, you&amp;rsquo;re ready to yakkl!
-Yakkl is Open Sourced and hosted on (GitHub. If you or your team wants to run Yakkl on your own systems then please feel free to clone the repo.</description>
     </item>
     
     <item>

@@ -7,7 +7,7 @@
       <div class="feature-block {{ .direction | default "ltr" }}">
         {{- if eq .direction "rtl" -}}{{- with .visual -}}
         <div class="feature-block--illu illu-shadow--left">
-          {{- partial "cloudinary/image" (dict "pg" $.pg "preset" "feature" "image" .permalink "alt" (.alt | default .permalink)) }}
+          {{- partial "image" (dict "pg" $.pg "preset" "feature" "image" .permalink "alt" (.alt | default .permalink)) }}
         </div>
         {{- end -}}{{- end -}}
         <div class="feature-block--copy">
@@ -48,7 +48,7 @@
               <div class="feature-block--illu illu-shadow--left">
                 {{- if .visual -}}
                 {{- with .visual -}}
-                  {{- partial "cloudinary/image" (dict "pg" $.pg "preset" "feature" "image" .permalink "alt" (.alt | default .permalink)) }}
+                  {{- partial "image" (dict "pg" $.pg "preset" "feature" "image" .permalink "alt" (.alt | default .permalink)) }}
                 {{- end -}}
                 {{- else if .video -}}
                 {{- with .video -}}
@@ -58,7 +58,7 @@
                     {{- end -}}
                 </video>
                 <div class="mobile-only">
-                  {{- partial "cloudinary/image" (dict "pg" $.pg "preset" "feature" "image" .permalink "alt" (.alt | default .permalink)) }}
+                  {{- partial "image" (dict "pg" $.pg "preset" "feature" "image" .permalink "alt" (.alt | default .permalink)) }}
                 </div>
                 {{- end -}}
                 {{- end -}}
@@ -101,12 +101,12 @@
         </script>{{- end -}}
         {{- if eq .direction "ltr" -}}{{- with .visual -}}
         <div class="feature-block--illu illu-shadow--right">
-          {{- partial "cloudinary/image" (dict "pg" $.pg "preset" "feature" "image" .permalink "alt" (.alt | default .permalink)) }}
+          {{- partial "image" (dict "pg" $.pg "preset" "feature" "image" .permalink "alt" (.alt | default .permalink)) }}
         </div>
         {{- end -}}{{- end -}}
         {{- if eq .direction "vertical" -}}{{- with .visual -}}
         <div class="feature-block--illu illu-shadow--right">
-          {{- partial "cloudinary/image" (dict "pg" $.pg "image" .permalink "alt" (.alt | default .permalink) "min_width" "320" "max_width" "4230" "steps" "15" "sizes" "100vw") }}
+          {{- partial "image" (dict "pg" $.pg "image" .permalink "alt" (.alt | default .permalink) "min_width" "320" "max_width" "4230" "steps" "15" "sizes" "100vw") }}
         </div>
         {{- end -}}{{- end -}}
       </div>

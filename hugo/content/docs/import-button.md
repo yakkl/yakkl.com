@@ -42,22 +42,16 @@ We have provided three SVG buttons for your use:
 ### Brand Color
 
 <div class="vert-level">
-  <img style="min-height: 2em;" class="no-lightbox" src="https://assets.yakkl.com/import-to-yakkl.svg" /> 
-  <code>https://assets.yakkl.com/import-to-yakkl.svg</code>
+  <img style="min-height: 2em;" class="no-lightbox" src="https://yakkl.com/import-to-yakkl.svg" /> 
+  <code>https://yakkl.com/import-to-yakkl.svg</code>
 </div>
 
 ### Light
 <div class="vert-level">
-  <img style="min-height: 2em;" class="no-lightbox" src="https://assets.yakkl.com/import-to-yakklW.svg" /> <code>https://assets.yakkl.com/import-to-yakklW.svg</code>
+  <img style="min-height: 2em;" class="no-lightbox" src="https://yakkl.com/import-to-yakkl.svg" /> <code>https://yakkl.com/import-to-yakkl.svg</code>
 </div>
 
 ### Dark
 <div class="vert-level">
-  <img style="min-height: 2em;" class="no-lightbox" src="https://assets.yakkl.com/import-to-yakklK.svg" /> <code>https://assets.yakkl.com/import-to-yakklK.svg</code>
+  <img style="min-height: 2em;" class="no-lightbox" src="https://yakkl.com/import-to-yakkl.svg" /> <code>https://yakkl.com/import-to-yakkl.svg</code>
 </div>
-
-## Button Generator
-
-You can use our button generator below to create the appropriate markup for your button.
-
-{{% add_site_button_generator %}}

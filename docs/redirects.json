@@ -1,11 +1,11 @@
 [{
     "Condition": {
-        "KeyPrefixEquals": "/docs/"
+        "KeyPrefixEquals": "/docs/quickstart/"
     },
     "Redirect": {
         "HttpRedirectCode": "301",
         "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/docs/welcome/"}
+        "ReplaceKeyPrefixWith":"/docs/quickstart/tour/"}
 },{
     "Condition": {
         "KeyPrefixEquals": "/docs/front-matter-fields/tags-field/"
@@ -56,12 +56,12 @@
         "ReplaceKeyPrefixWith":"/docs/faqs/backups/"}
 },{
     "Condition": {
-        "KeyPrefixEquals": "/plans/"
+        "KeyPrefixEquals": "/docs/"
     },
     "Redirect": {
         "HttpRedirectCode": "301",
         "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/pricing/"}
+        "ReplaceKeyPrefixWith":"/docs/welcome/"}
 },{
     "Condition": {
         "KeyPrefixEquals": "/docs/faq/what-versions-of-jekyll-and-plugins-does-yakkl-support/"
@@ -88,20 +88,12 @@
         "ReplaceKeyPrefixWith":"/docs/settings/front-matter-templates/"}
 },{
     "Condition": {
-        "KeyPrefixEquals": "/contact/"
+        "KeyPrefixEquals": "/plans/"
     },
     "Redirect": {
         "HttpRedirectCode": "301",
         "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/support/"}
-},{
-    "Condition": {
-        "KeyPrefixEquals": "/docs/quickstart/"
-    },
-    "Redirect": {
-        "HttpRedirectCode": "301",
-        "Protocol": "https",
-        "ReplaceKeyPrefixWith":"/docs/quickstart/tour/"}
+        "ReplaceKeyPrefixWith":"/pricing/"}
 },{
     "Condition": {
         "KeyPrefixEquals": "/settings/collaborators/"
@@ -126,6 +118,14 @@
         "HttpRedirectCode": "301",
         "Protocol": "https",
         "ReplaceKeyPrefixWith":"/blog/2019-08-15-join-our-slack-channel/"}
+},{
+    "Condition": {
+        "KeyPrefixEquals": "/contact/"
+    },
+    "Redirect": {
+        "HttpRedirectCode": "301",
+        "Protocol": "https",
+        "ReplaceKeyPrefixWith":"/support/"}
 },{
     "Condition": {
         "KeyPrefixEquals": "/docs/front-matter-fields/date-field/"

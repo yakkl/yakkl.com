@@ -11,9 +11,9 @@
       {{- $.Scratch.SetInMap "url" $key $value -}}
     {{- end -}}
   {{- end -}}
-  {{- partial "cloudinary/image" ($.Scratch.Get "url") -}}
+  {{- partial "cloudinary/image-orig" ($.Scratch.Get "url") -}}
 {{- else if and (.Get 0) (.Get 1) -}}
   {{- $alt := (index .Params 2) | default "" -}}
   {{- $title := (index .Params 3) | default "" -}}
-  {{- partial "cloudinary/image" (dict "pg" $ "preset" (.Get 0) "image" (.Get 1) "alt" $alt "title" $title) -}}
+  {{- partial "cloudinary/image-orig" (dict "pg" $ "preset" (.Get 0) "image" (.Get 1) "alt" $alt "title" $title) -}}
 {{- end -}}

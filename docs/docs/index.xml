@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Documentation on Yakkl.com</title>
+    <title>Documentation on Yakkl</title>
     <link>https://yakkl.com/docs/index.xml</link>
-    <description>Recent content in Documentation on Yakkl.com</description>
+    <description>Recent content in Documentation on Yakkl</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <copyright>Copyright (c) 2019 LambdaStack, LLC.</copyright>
     <lastBuildDate>Mon, 12 Aug 2019 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://yakkl.com/docs/index.xml" rel="self" type="application/rss+xml" />
@@ -21,6 +21,18 @@
       <description>Organizations are available from our starter plan.
 Organizations enable you to manage groups of users across multiple sites. Teams or individuals within an organization can have their access levels applied on a per-site basis.
 Create an Organization You can create an organization on your dashboard by clicking on Create Organization in the left sidebar. Once you have filled in your information and named the organization, you can proceed by clicking Create.</description>
+    </item>
+    
+    <item>
+      <title>Product Tour</title>
+      <link>https://yakkl.com/docs/quickstart/tour/</link>
+      <pubDate>Thu, 15 Aug 2019 04:00:00 +0000</pubDate>
+      
+      <guid>https://yakkl.com/docs/quickstart/tour/</guid>
+      <description>Overview This tour will be a walk through of Yakkl showing you how to get the most out of a Secure Team Collaboration platform.
+Getting Started  Sign up for a Yakkl account.
+ Something cool from Yakkl here :)  Congrats, you&amp;rsquo;re ready to yakkl!
+Yakkl is Open Sourced and hosted on (GitHub. If you or your team wants to run Yakkl on your own systems then please feel free to clone the repo.</description>
     </item>
     
     <item>
@@ -98,18 +110,6 @@ Attributes  Email FirstName LastName Teams (for Cloud Enterprise, as a list of T
 --- title: &amp;#34;My New Page Title!&amp;#34; --- See detailed documentation
 Textarea Multi-line text input. Displayed for Front Matter values that are long strings. For example, a page description.
 --- description: &amp;#34;Write an awesome description for your new site here. It will appear in your document head meta (for Google search results) and in your RSS feed&amp;#39;s site description.</description>
-    </item>
-    
-    <item>
-      <title>Product Tour</title>
-      <link>https://yakkl.com/docs/quickstart/tour/</link>
-      <pubDate>Thu, 15 Aug 2019 04:00:00 +0000</pubDate>
-      
-      <guid>https://yakkl.com/docs/quickstart/tour/</guid>
-      <description>Overview This tour will be a walk through of Yakkl showing you how to get the most out of a Secure Team Collaboration platform.
-Getting Started  Sign up for a Yakkl account.
- Something cool from Yakkl here :)  Congrats, you&amp;rsquo;re ready to yakkl!
-Yakkl is Open Sourced and hosted on (GitHub. If you or your team wants to run Yakkl on your own systems then please feel free to clone the repo.</description>
     </item>
     
     <item>

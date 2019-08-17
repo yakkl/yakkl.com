@@ -14,9 +14,9 @@
           </div>
         </div> 
         {{- with .visual -}}
-        <!-- <div class="feature-block--illu illu-shadow--right">
-          {{- partial "cloudinary/image" (dict "pg" $.pg "preset" "feature" "image" .permalink "alt" (.alt | default .permalink)) }}
-        </div> -->
+        <div class="feature-block--illu illu-shadow--right">
+          {{- partial "image" (dict "pg" $.pg "preset" "feature" "image" .permalink "alt" (.alt | default .permalink)) }}
+        </div>
         {{- end -}}
         <!-- <div class="feature-block--illu illu-shadow--right">
             <div style="display: flex;"><div style="text-align: right;padding: 0 40px;"><h1>1.</h1></div><div><h3>Import Starter-Kit</h3><p>This first step imports a sample repository into your Git account and connects it with Yakkl.</p></div></div>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Frequently Asked Questions on Yakkl.com</title>
+    <title>Frequently Asked Questions on Yakkl</title>
     <link>https://yakkl.com/docs/faqs/</link>
-    <description>Recent content in Frequently Asked Questions on Yakkl.com</description>
+    <description>Recent content in Frequently Asked Questions on Yakkl</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <copyright>Copyright (c) 2019 LambdaStack, LLC.</copyright>
     <lastBuildDate>Sun, 31 Dec 2017 04:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://yakkl.com/docs/faqs/index.xml" rel="self" type="application/rss+xml" />

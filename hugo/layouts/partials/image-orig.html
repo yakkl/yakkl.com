@@ -2,6 +2,7 @@
     {{/* Setup */}}
     {{- $page := .pg -}}
     {{- $page.Scratch.SetInMap "url" "image" .image -}}
+
     {{- $lazySizes := $page.Site.Params.cloudinary.lazysizes.enabled -}}
 
     {{/* Get preset */}}
@@ -20,40 +21,43 @@
     {{- end -}}
 
     {{/* Generate the img src */}}
-    {{- $src := partial "cloudinary/url.html" ($page.Scratch.Get "url") -}}
+    {{/* - $src := partial "cloudinary/url.html" ($page.Scratch.Get "url") - */}}
     
+    {{ $src := .image }}
+    {{ $placeholder := .image }}
+
     {{/* Generate the img placeholder */}}
-    {{- $quality := index ($page.Scratch.Get "url") "quality" -}}
-    {{- $page.Scratch.SetInMap "url" "quality" "10" -}}
-    {{- $placeholder := partial "cloudinary/url.html" ($page.Scratch.Get "url") -}}
-    {{- $page.Scratch.SetInMap "url" "quality" $quality -}}
+    {{/*- $quality := index ($page.Scratch.Get "url") "quality" -*/}}
+    {{/*- $page.Scratch.SetInMap "url" "quality" "10" -*/}}
+    {{/*- $placeholder := partial "cloudinary/url.html" ($page.Scratch.Get "url") -*/}}
+    {{/*- $page.Scratch.SetInMap "url" "quality" $quality -*/}}
     
     {{/* Generate srcset */}}
-    {{- $min_width := (int .min_width) | default (int $preset.min_width) -}}
-    {{- $max_width := (int .max_width) | default (int $preset.max_width) -}}
-    {{- $steps := (int .steps) | default (int $preset.steps) -}}
-    {{- if and (and $min_width $max_width) $steps -}}
+    {{/*- $min_width := (int .min_width) | default (int $preset.min_width) -*/}}
+    {{/*- $max_width := (int .max_width) | default (int $preset.max_width) -*/}}
+    {{/*- $steps := (int .steps) | default (int $preset.steps) -*/}}
+    {{/*- if and (and $min_width $max_width) $steps -*/}}
       {{/* Add min and max to srcset */}}
-      {{- $page.Scratch.SetInMap "url" "width" $min_width -}}
-      {{- $min := partial "cloudinary/url.html" ($page.Scratch.Get "url") -}}
-      {{- $page.Scratch.SetInMap "url" "width" $max_width -}}
-      {{- $max := partial "cloudinary/url.html" ($page.Scratch.Get "url") -}}
-      {{- $page.Scratch.SetInMap (string $src) (string $min_width) (printf "%s%s%s%s" $min " " (string $min_width) "w") -}}
-      {{- $page.Scratch.SetInMap (string $src) (string $max_width) (printf "%s%s%s%s" $max " " (string $max_width) "w") -}}
+      {{/*- $page.Scratch.SetInMap "url" "width" $min_width -*/}}
+      {{/*- $min := partial "cloudinary/url.html" ($page.Scratch.Get "url") -*/}}
+      {{/*- $page.Scratch.SetInMap "url" "width" $max_width -*/}}
+      {{/*- $max := partial "cloudinary/url.html" ($page.Scratch.Get "url") -*/}}
+      {{/*- $page.Scratch.SetInMap (string $src) (string $min_width) (printf "%s%s%s%s" $min " " (string $min_width) "w") -*/}}
+      {{/*- $page.Scratch.SetInMap (string $src) (string $max_width) (printf "%s%s%s%s" $max " " (string $max_width) "w") -*/}}
 
       {{/* Add between steps to srcset */}}
-      {{- $step_size := div (sub $max_width $min_width) (sub $steps 1) -}}
-      {{- range seq $steps -}}
-          {{- $width := add (mul . $step_size) $min_width -}}
-          {{- $page.Scratch.SetInMap "url" "width" $width -}}
-          {{- $item := partial "cloudinary/url.html" ($page.Scratch.Get "url") -}}
-          {{ if and (lt $width $max_width) (gt $width $min_width) -}}
-            {{- $page.Scratch.SetInMap (string $src) (string $width) (printf "%s%s%s%s" $item " " (string $width) "w") -}}
-          {{- end -}}
-      {{- end -}}
-      {{- $breakpoints := $page.Scratch.Get (string $src) -}}
-      {{- $page.Scratch.Set "srcset" (delimit $breakpoints ", ") -}}
-    {{- end -}}
+      {{/*- $step_size := div (sub $max_width $min_width) (sub $steps 1) -*/}}
+      {{/*- range seq $steps -*/}}
+          {{/*- $width := add (mul . $step_size) $min_width -*/}}
+          {{/*- $page.Scratch.SetInMap "url" "width" $width -*/}}
+          {{/*- $item := partial "cloudinary/url.html" ($page.Scratch.Get "url") -*/}}
+          {{/* if and (lt $width $max_width) (gt $width $min_width) -*/}}
+            {{/*- $page.Scratch.SetInMap (string $src) (string $width) (printf "%s%s%s%s" $item " " (string $width) "w") -*/}}
+          {{/*- end -*/}}
+      {{/*- end -*/}}
+      {{/*- $breakpoints := $page.Scratch.Get (string $src) -*/}}
+      {{/*- $page.Scratch.Set "srcset" (delimit $breakpoints ", ") -*/}}
+    {{/*- end -*/}}
     {{- $srcset := $page.Scratch.Get "srcset" -}}
 
     {{/* Get sizes */}}

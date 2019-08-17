@@ -13,9 +13,9 @@ menu:
 ---
 ## 1. Introduction
 
-Yakkl.com, (“**Yakkl.com**”, “**we**”, “**us**”) has created this Privacy Policy (“**Privacy Policy**”) in order to set out how we collect, use, and disclose personal information through our open source Secure Team Collaboration platform and applications (collectively, the “**Platform**”).
+LambdaStack, LLC, (“**Yakkl**”, “**we**”, “**us**”, "LambdaStack") has created this Privacy Policy (“**Privacy Policy**”) in order to set out how we collect, use, and disclose personal information through our open source Secure Team Collaboration platform and applications (collectively, the “**Platform**”).
 
-The privacy of our customers (“**Customers**”) and their end users (“**End Users**”) is of great importance to us. By visiting our Sites located at [yakkl.com](https://yakkl.com) (collectively, the “**Site**”) or using the Platform in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy and you hereby consent to the collection, use and disclosure of your Personal Information in accordance with this Privacy Policy.
+The privacy of our customers (“**Customers**”) and their end users (“**End Users**”) is of great importance to us. By visiting our Sites located at [yakkl.com](https://yakkl.com)(collectively, the “**Site**”) or using the Platform in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy and you hereby consent to the collection, use and disclosure of your Personal Information in accordance with this Privacy Policy.
 
 ## 2. What does this Privacy Policy Cover?
 
@@ -27,7 +27,7 @@ This Privacy Policy does not apply to the practices of companies that we do not 
 
 ### 3.1 User Information
 
-In order to use the Platform, our Customers and their End Users may be required to register for an account to login to the Platform. Yakkl.com collects an End User’s name and email address when the individual registers for an account (“**User Information**”). Yakkl.com uses the User Information to:
+In order to use the Platform, our Customers and their End Users may be required to register for an account to login to the Platform. Yakkl collects an End User’s name and email address when the individual registers for an account (“**User Information**”). Yakkl uses the User Information to:
 
 * Provide, operate, maintain and improve the Platform;
 * Send technical notices, updates, security alerts and support and administrative messages;
@@ -39,7 +39,7 @@ In order to use the Platform, our Customers and their End Users may be required 
 
 ### 3.2 Customers and Prospects
 
-We collect names, email addresses and other business contact information about individuals who represent our Customers as well as individuals who we consider to be prospective Customers and business partners (“**Prospects**”). We use the information to contact Prospects with information about Yakkl.com products and services. When a Customer’s representative uses the Platform, Yakkl.com tracks activity on the Platform for the purposes set out in Section 3.1.
+We collect names, email addresses and other business contact information about individuals who represent our Customers as well as individuals who we consider to be prospective Customers and business partners (“**Prospects**”). We use the information to contact Prospects with information about Yakkl products and services. When a Customer’s representative uses the Platform, Yakkl tracks activity on the Platform for the purposes set out in Section 3.1.
 
 If you opt-in to receive marketing communications from us, we will keep you up to date on our products and services.  You may withdraw your consent to receiving marketing communications from us at any time by following the opt-out instructions in each communication, or by contacting us at the email address below in Section 10.
 
@@ -51,13 +51,13 @@ As you visit or browse the Site, we collect information about the device and bro
 
 A cookie is a small amount of data, which may include a unique identifier. Cookies are sent to your browser from a website and stored on your device. We assign a different cookie to each device that accesses our Site.
 
-Cookies are required for End Users to log in to Platform accounts. We use cookies to recognize devices and provide a personalized experience on our Platform. In particular, Yakkl.com uses session cookies containing encrypted information to allow the system to uniquely identify you while you are logged in, which is linked to account User Information. This information allows Yakkl.com to process your online transactions and requests. Session cookies help us make sure you are who you say you are after you’ve logged in and are required in order to use the Platform.
+Cookies are required for End Users to log in to Platform accounts. We use cookies to recognize devices and provide a personalized experience on our Platform. In particular, Yakkl uses session cookies containing encrypted information to allow the system to uniquely identify you while you are logged in, which is linked to account User Information. This information allows Yakkl to process your online transactions and requests. Session cookies help us make sure you are who you say you are after you’ve logged in and are required in order to use the Platform.
 
-On the Site, we have cookies that are used to track potential customers through the site. These cookies are used to target email campaigns, track users across Intercom chat sessions. Yakkl.com uses the following service providers to administer cookies: Mixpanel, Google Analytics, and Intercom. If you disable cookies, you may not be able to take advantage of all the features of the Site and/or Platform. We do not link any of the information we use in cookies to any personally identifiable information submitted by you when you are on the Site.
+On the Site, we have cookies that are used to track potential customers through the site. These cookies are used to target email campaigns, track users across Intercom chat sessions. Yakkl uses the following service providers to administer cookies: Mixpanel, Google Analytics, and Intercom. If you disable cookies, you may not be able to take advantage of all the features of the Site and/or Platform. We do not link any of the information we use in cookies to any personally identifiable information submitted by you when you are on the Site.
 
 ## 4. Storage Location and Transfer of Personal Information
 
-Yakkl.com processes and stores its data, including Personal Information, on servers located in Canada and the United States. Yakkl.com transfers data to the third-party service providers described in Sections 5.1.
+Yakkl processes and stores its data, including Personal Information, on servers located in Canada and the United States. Yakkl transfers data to the third-party service providers described in Sections 5.1.
 
 By submitting Personal Information or otherwise using the Platform, you agree to this transfer, storing or processing of your Personal Information in Canada and the United States. You acknowledge and agree that your Personal Information may be accessible to law enforcement and governmental agencies in Canada and the U.S. under lawful access regimes or court order.
 
@@ -65,7 +65,7 @@ By submitting Personal Information or otherwise using the Platform, you agree to
 
 ### 5.1 Service Providers and Business Partners
 
-We may from time to time employ third parties to perform tasks on our behalf and we may need to share Account Information and other Personal Information with them to provide certain services. Unless we tell you differently, such third parties do not have any right to use the Personal Information we share with them beyond what is necessary for them to provide the tasks and services on our behalf. The third parties we may engage include companies and individuals employed by us to facilitate our services, including the provision of maintenance services, database management, Web analytics, customer relationship management and general improvement of the Platform, and businesses who engage our services (to the extent provided for above). Yakkl.com uses the following subprocessors: Amazon Web Services, Google Analytics, and Mailgun.
+We may from time to time employ third parties to perform tasks on our behalf and we may need to share Account Information and other Personal Information with them to provide certain services. Unless we tell you differently, such third parties do not have any right to use the Personal Information we share with them beyond what is necessary for them to provide the tasks and services on our behalf. The third parties we may engage include companies and individuals employed by us to facilitate our services, including the provision of maintenance services, database management, Web analytics, customer relationship management and general improvement of the Platform, and businesses who engage our services (to the extent provided for above). Yakkl uses the following subprocessors: Amazon Web Services, Google Analytics, and Mailgun.
 
 ### 5.2 Business Transfers
 
@@ -97,9 +97,9 @@ We will make every reasonable effort to keep your Personal Information accurate 
 
 ## 8. Residents of the European Economic Area ("EEA")
 
-Yakkl.com generally processes Personal Information in order to fulfill contracts we have with our Customers and End Users and to pursue our legitimate business interests listed above. Otherwise, Yakkl.com will obtain express consent from an individual in respect of processing of Personal Information if required by law to do so.
+Yakkl generally processes Personal Information in order to fulfill contracts we have with our Customers and End Users and to pursue our legitimate business interests listed above. Otherwise, Yakkl will obtain express consent from an individual in respect of processing of Personal Information if required by law to do so.
 
-Individuals located in the EEA have certain rights under European law (including under the General Data Protection Regulation) with respect to Personal Information, including the right to request access to, obtain, correct, amend, delete, or limit the use of your personal data. Individual End Users, Customers or prospective Customers located in to the EEA who wish to exercise these rights, should contact Yakkl.com using the contact information below in Section 10.
+Individuals located in the EEA have certain rights under European law (including under the General Data Protection Regulation) with respect to Personal Information, including the right to request access to, obtain, correct, amend, delete, or limit the use of your personal data. Individual End Users, Customers or prospective Customers located in to the EEA who wish to exercise these rights, should contact Yakkl using the contact information below in Section 10.
 
 Individuals also have the right to make complaints to regulatory authorities in respect of our privacy practices.
 
@@ -109,4 +109,4 @@ We may amend this Privacy Policy from time to time. Use of Personal Information 
 
 ## 10. Additional Information
 
-Questions regarding this Privacy Policy or Yakkl.com’s privacy practices should be directed to our Privacy Officer at info@yakkl.com
+Questions regarding this Privacy Policy or Yakkl’s privacy practices should be directed to our Privacy Officer at info@yakkl.com

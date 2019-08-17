@@ -1,0 +1,41 @@
+{{- if and .pg (isset . "image") -}}
+    {{/* Setup */}}
+    {{- $page := .pg -}}
+    {{- $page.Scratch.SetInMap "url" "image" .image -}}
+
+    {{- $lazySizes := $page.Site.Params.cloudinary.lazysizes.enabled -}}
+
+    {{/* Get preset */}}
+    {{- $presetName := .preset | default "default" -}}
+    {{- $presets := $page.Site.Params.cloudinary.presets | default (dict) -}}
+    {{- $preset := index $presets $presetName -}}
+
+    {{/* Add presets params to the map */}}
+    {{- range $key, $value := $preset -}}
+        {{- $page.Scratch.SetInMap "url" $key $value -}}
+    {{- end -}}
+
+    {{/* Add passed in params to map, overwriting preset */}}
+    {{- range $key, $value := . -}}
+        {{- $page.Scratch.SetInMap "url" $key $value -}}
+    {{- end -}}
+    
+    {{- $srcset := $page.Scratch.Get "srcset" -}}
+
+    {{/* Get sizes */}}
+    {{- $sizes := .sizes | default $preset.sizes -}}
+
+    {{/* Output img */}}
+    {{- template "img" (dict "pg" $page "src" .image "srcset" $srcset "placeholder" .image "sizes" $sizes "alt" .alt "title" .title "useLazySizes" $lazySizes "class" .class ) -}}
+{{- end -}}
+{{/* "pg", "src", "srcset", "placeholder", "original", "alt", "title", "useLazySizes" */}}
+{{- define "img" -}}
+  {{/* Sanitize */}}
+  {{- $src := trim .src " " | safeURL | safeHTMLAttr -}}
+  {{- $srcset := trim .srcset " " -}}
+  {{- $sizes := trim .sizes " " -}}
+  {{- $placeholder := trim (.pg.Site.Params.cloudinary.lazysizes.placeholder | default .placeholder) " " | safeURL | safeHTMLAttr -}}
+  {{- $title := trim (.title | default $src) " " | safeHTMLAttr -}}
+  {{/* Output image */}}
+  <img{{ if $.useLazySizes }} src="{{ $placeholder }}"{{ end }}{{ if $.useLazySizes }} data-src{{ else }} src{{ end }}="{{ $src }}"{{ if $srcset }}{{ if $.useLazySizes }} {{ printf "data-srcset=\"%s\"" $srcset | safeHTMLAttr }}{{ else }} {{ printf "srcset=\"%s\"" $srcset | safeHTMLAttr }}{{ end }}{{ end }}{{ with .sizes }}{{ if $.useLazySizes }} data-sizes{{ else }} sizes{{ end }}="{{ . }}"{{ end }} alt="{{ trim (.alt | default $src) " "}}" title="{{ $title }}"{{ if $.useLazySizes }} class="lazyload {{ .class }}"{{ else }} class="{{ .class }}"{{ end }} />
+{{- end -}}

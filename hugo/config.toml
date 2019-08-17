@@ -1,5 +1,5 @@
 baseurl = "https://yakkl.com"
-copyright = "Copyright (c) 2019 Yakkl.com."
+copyright = "Copyright (c) 2019 LambdaStack, LLC."
 defaultContentLanguage = "en"
 destination = "../docs/"
 enableEmoji = true
@@ -12,15 +12,12 @@ pygmentsCodefences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsStyle = "monokai"
 relativeURLs = false
-title = "Yakkl.com"
+title = "Yakkl"
 [blackfriday]
 angledQuotes = false
 hrefTargetBlank = false
 latexDashes = true
 plainIDAnchors = true
-[[menu.docs]]
-name = "Organizations"
-weight = 7
 [[menu.docs]]
 name = "Quick Start"
 weight = 2
@@ -72,13 +69,13 @@ ghrepo = "https://github.com/yakkl/yakkl.com"
 ghrepo_edit = "https://github.com/yakkl/yakkl.com/edit/master/hugo/content/"
 ghrepo_new = "https://github.com/yakkl/yakkl.com/issues/new"
 gtmid = "GTM-MRLTPV7"
-images = ["/uploads/2018/01/OGimage-01-3x.jpg"]
+images = [""]
 mixpanelid = ""
 [params.algolia]
 params = ["tags", "categories", "authors"]
 vars = ["date", "description", "dir", "path", "expirydate", "fuzzywordcount", "keywords", "kind", "lang", "lastmod", "permalink", "publishdate", "readingtime", "relpermalink", "summary", "title", "type", "url", "weight", "wordcount", "section"]
 [params.cloudinary]
-cloud_name = "yakkl-demo"
+cloud_name = ""
 use_upload = false
 [params.cloudinary.lazysizes]
 enabled = false

@@ -30,4 +30,5 @@ I know, right? Why do we have a Slack channel? Simple, Slack is a good tool but 
 Want to chat with the Yakkl community about best-practices, features, and more? Join the slack community here (we'll get back to you ASAP).
 
 Sign up here:
-<span style="text-decoration-style: initial; text-decoration-color: initial;"><u><a href="https://join.slack.com/t/yakkl/shared_invite/enQtNzEzNzYwNzg0NjQyLWRiNjM5Y2NiMzcxOTgxNzg4OTA3ZjRiZDFlMmY5ZmRjZGUyMGM3ZDc0ZTg5NWMwMmIyNjIzMGE4OTIyZDY5NDM">Yakkl Community</a></u></span>
+<span style="text-decoration-style: initial; text-decoration-color: initial;"><u><a href="https://join.slack.com/t/yakkl/shared_invite/enQtNzEzNzYwNzg0NjQyLWRiNjM5Y2NiMzcxOTgxNzg4OTA3ZjRiZDFlMmY5ZmRjZGUyMGM3ZDc0ZTg5NWMwMmIyNjIzMGE4OTIyZDY5NDM">Slack Yakkl Community</a></u>
+</span>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Careers on Yakkl.com</title>
+    <title>Careers on Yakkl</title>
     <link>https://yakkl.com/careers/</link>
-    <description>Recent content in Careers on Yakkl.com</description>
+    <description>Recent content in Careers on Yakkl</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>Copyright (c) 2019 Yakkl.com.</copyright>
+    <copyright>Copyright (c) 2019 LambdaStack, LLC.</copyright>
     <lastBuildDate>Mon, 12 Aug 2019 04:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://yakkl.com/careers/index.xml" rel="self" type="application/rss+xml" />

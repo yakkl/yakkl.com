@@ -30,10 +30,7 @@
     {{ $page.Scratch.SetInMap "url" "title" $title }}
     {{ $page.Scratch.SetInMap "url" "image" $image }}
     {{ $page.Scratch.SetInMap "url" "class" $class }}
-    {{ if not (in $image "https://res.cloudinary.com/") }}
-      {{ $replacement := (partial "cloudinary/image" ($page.Scratch.Get "url")) }}
-    {{ $page.Scratch.Set "content" (replace $content $value $replacement) }}
-    {{ end }}
+    {{ $page.Scratch.Set "content" (replace $content $value $image) }}
   {{ end }}
   {{- ($page.Scratch.Get "content") | safeHTML -}}
 {{- end -}}
