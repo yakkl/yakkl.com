@@ -104,7 +104,7 @@
         "ReplaceKeyPrefixWith":"/docs/settings/collaborators/"}
 },{
     "Condition": {
-        "KeyPrefixEquals": "/blog/post/yakkl-beta-announcement"
+        "KeyPrefixEquals": "/blog/post/yakkl-alpha-announcement"
     },
     "Redirect": {
         "HttpRedirectCode": "301",

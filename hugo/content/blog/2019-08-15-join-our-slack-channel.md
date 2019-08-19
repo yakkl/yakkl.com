@@ -5,7 +5,7 @@ title: Join our Slack community
 publishdate: 2019-08-15 10:41:00 +0000
 expirydate: 2030-01-01 04:00:00 +0000
 authors:
-- hans-jones
+- austin-jones
 excerpt: Chat with the Yakkl community about anything!
 images:
 - "/uploads/2019/08/slack.png"

@@ -9,23 +9,22 @@ authors:
     Yakkl.com is an open-source secure team collaboration product that allows you to model your collaboration around how you model your teams.
   firstName: Yakkl.com
   fullName: Yakkl Team
-  shortBio: ''
+  shortBio: 'Team of passionate React and Microservices developers building very cool stuff.'
   twitter: yakklofficial
   title: "Yakkl Ethusiasts 💜"
 - avatar: "/img/hans.png"
-  bio: 'Latest gig - Global Head of R&D of very large entity. Loves coding and creating software.'
+  bio: 'Latest gig - Global Head of R&D of very large entity. Loves advising, coding and creating software.'
   firstName: Hans
   fullName: Hans Jones
   lastName: Jones
   shortBio: ''
   twitter: hanscj1
-  title: Bottle Washer
-- avatar: "/img/austin.png"
-  bio: ''
+  title: R&D Advisor
+- avatar: "/img/austin.jpg"
+  bio: 'CEO and avid music lover and even writes a blog called http://unbowedonline.com'
   firstName: Austin
   lastName: Jones
   fullName: Austin Jones
-  shortBio: 'CEO and Co-Founder of <a href=''https://yakkl.com'' title=''Yakkl.com
-    CMS''>Yakkl.com</a>. Frontend developer and social media marketing guy.'
+  shortBio: 'CEO and Co-Founder of <a href=''https://yakkl.com'' title=''Yakkl.com''>Yakkl.com</a>. Frontend developer and social media marketing guy.'
   twitter: acjones212
   title: CEO and Co-Founder
