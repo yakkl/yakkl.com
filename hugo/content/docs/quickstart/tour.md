@@ -23,7 +23,7 @@ This tour will be a walk through of Yakkl showing you how to get the most out of
 
 ## Getting Started
 
-{{% pretty_screenshot img="/uploads/2019/08/yakkl-blur.png" %}}
+{{% pretty_screenshot img="/uploads/2019/07/select-generator.png" %}}
 
 [Sign up](https://yakkl.com/signup) for a Yakkl account.
 
