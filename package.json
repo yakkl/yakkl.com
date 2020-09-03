@@ -66,7 +66,7 @@
     "html-loader": "^0.5.5",
     "hugo-bin": "^0.39.0",
     "laggard": "^2.0.1",
-    "lazysizes": "^4.1.8",
+    "lazysizes": "^5.2.1",
     "ldclient-js": "^2.10.2",
     "postcss-browser-reporter": "^0.5.0",
     "postcss-cachebuster": "^0.1.6",
