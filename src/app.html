@@ -5,8 +5,9 @@
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
+
 		<!-- Sendinblue Conversations {literal} -->
-		<script>
+		<!-- <script>
 			(function(d, w, c) {
 					w.SibConversationsID = '624351ba13d37e494865cd40';
 					w[c] = w[c] || function() {
@@ -17,10 +18,23 @@
 					s.src = 'https://conversations-widget.sendinblue.com/sib-conversations.js';
 					if (d.head) d.head.appendChild(s);
 			})(document, window, 'SibConversations');
-		</script>
+		</script> -->
 		<!-- /Sendinblue Conversations {/literal} -->		
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+
+		<script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.7.2/dist/cookieconsent.js"></script>
+		<script src="/js/cookie_consent.js"></script>
+		
+		<script type="text/plain" data-cookiecategory="analytics" src="/js/analytics.js" defer></script>
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
+		<script type="text/plain" data-cookiecategory="targeting" src="/js/targeting.js" defer></script>
+		<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=a8b2t0khih&ev=PageView&noscript=1"/></noscript>
+		<!-- Start of yakklhelp Zendesk Widget script -->
+		<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=2d849b7d-722c-4c41-abd2-ed530740d95e"> </script>
+		<!-- End of yakklhelp Zendesk Widget script -->			
+</body>
 </html>

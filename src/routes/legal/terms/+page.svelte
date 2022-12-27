@@ -1,0 +1,166 @@
+<script>
+  import Header from "$lib/header/Header.svelte";
+  import Gradient from "$lib/backgrounds/Gradient.svelte";
+  import Footer from "$lib/footer/Footer.svelte";
+</script>
+
+<Gradient>
+  <Header/>
+    <!-- svelte-ignore missing-declaration -->
+    <div class="relative w-full px-6 py-10 overflow-hidden md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-10 lg:pb-15">
+      <div class="mt-8 prose prose-slate max-w-prose mx-auto prose-sm">
+<div class="mt-1 max-w-7xl pl-1 pr-1">
+  <!-- <div class=" max-w-md mt-2 mx-auto"> -->
+      <div class="mt-3 mr-2 mb-2 w-full h-[680px] text-xs p-2  text-gray-900 border-black dark:border-white dark:text-white overflow-scroll">
+
+        <h1 class="mb-1 text-xl text-center tracking-tight font-extrabold text-gray-900 dark:text-white">Terms of Service/Privacy Policy</h1>
+        <p class="mb-2 text-base text-center"><em>Last Updated: December 21, 2022</em></p>
+        <br/>
+        <blockquote class="text-xs border border-1 border-black dark:border-white p-1">
+        <p class="font-bold">NOTHING ON OUR SITE OR PRODUCT/SERVICES ARE FINANCIAL ADVICE. DO YOUR OWN RESEARCH FIRST!</p>
+        <p class="mt-1">Notice: LambdaStackio.com, our opensource platform, nor YAKKL.com collects anything except your email if you elect to join the free email newsletter. If you join the email service then see email data use in <a class="underline" href="https://yakkl.com/legal/privacy">Privacy Policy</a>. Both LambdaStack, LLC and YAKKL (owned by LambdaStack, LLC) may be referenced here as "LambdaStack", "LambdaStack, LLC/YAKKL", "YAKKL" or "YAKKL.com".</p>
+        </blockquote>
+
+        <h2 class="mt-2 font-bold">The Gist</h2>
+        <p>We, the folks at LambdaStack, LLC (YAKKL™), are on a mission to make web3 a better place. We hope you love our products and services — from YAKKL™ Smart Wallet to secure backup systems to management tools for distributed blockchain companies to the next great idea that we haven't even thought of yet — as much as we love creating them.
+        These Terms of Service (“Terms”) describe our commitments to you, and your rights and responsibilities when using our services. Our Privacy Policy ("Privacy") describes our commitment to keep your Personal Information secure. Please read them carefully and reach out to us if you have any questions. <strong>These Terms include a mandatory arbitration provision in Section 16. If you don't agree to these Terms, don't use our services.</strong></p>
+
+        <h2 class="mt-2 font-bold">Terms of Service</h2>
+        <p class="mt-2">These Terms govern your access to and use of the products and services we provide through or for YAKKL.com and <a target="_blank" rel="noreferrer" class="underline" href="https://www.lambdastackio.com">LambdaStack Services</a>. Please note though that the operators of those websites may also have their own separate terms of use.
+        For some of Automattic's other products, services, and programs, additional or separate terms may apply.
+        Please read these Terms carefully before accessing or using our Services. By accessing or using any part of our Services, you agree to be bound by all of the Terms and all other operating rules, policies, and procedures that we may publish via the Services from time to time (collectively, the “Agreement”). You also agree that we may automatically change, update, or add on to our Services, and this Agreement will apply to any changes.</p>
+
+        <h2 class="mt-2 font-bold">1. Who's Who</h2>
+        <p class="mt-2">“You” means any individual or entity using our Products/Services. If you use our Products/Services on behalf of another person or entity, you represent and warrant that you're authorized to accept the Agreement on that person's or entity's behalf, that by using using our Product/Services you&#39;re accepting the Agreement on behalf of that person or entity, and that if you, or that person or entity, violates the Agreement, you and that person or entity agree to be responsible to us.
+        Please see below to determine which entity your Agreement is with, which depends on where you reside and which Product/Services you use.</p>
+
+        <h2 class="mt-2 font-bold">2. Your Account</h2>
+        <p class="mt-2"><strong>IF</strong> using our Product/Services requires an account, you agree to provide us with complete and accurate information and to keep the information current so that we can communicate with you about your account. We may need to send you emails about notable updates (like changes to our Terms of Service or Privacy Policy), or to let you know about legal inquiries or complaints we receive about the ways you use our Product/Services so you can make informed choices in response.
+        We may limit your access to our Services until we're able to verify your account information, like your email address.</p>
+        <p class="mt-2">When you create a YAKKL account, we consider that to be an inquiry about our products and services, which means that we may also contact you to share more details about what we have to offer (i.e., marketing). Don't worry — if you aren't interested, you can opt out of the marketing communications, whether it's an email, phone call, or text message.</p>
+        <p class="mt-2">You're solely responsible and liable for all activity under your account. You're also fully responsible for maintaining the security of your account (which includes keeping your password and secret phrase secure). We're not liable for any acts or omissions by you, including any damages of any kind incurred as a result of your acts or omissions.</p>
+        <p class="mt-2">Don't share or misuse your access credentials. And notify us immediately of any unauthorized uses of your account or of any other breach of security. If we believe your account has been compromised, we may suspend or disable it - depending on elected services.</p>
+        <p class="mt-2">If you&#39;d like to learn about how we handle the data you provide us, please see our <a class="underline" href="https://yakkl.com/legal/privacy">Privacy Policy</a>.</p>
+
+        <h2 class="mt-2 font-bold">3. Minimum Age Requirements</h2>
+        <p class="mt-2">Our Services are not directed to children. You're not allowed to access or use our Services if you're under the age of 18. If you register as a user or otherwise use our Services, you represent that you're at least 18. You may use our Services only if you can legally form a binding contract with us. In other words, if you're under 18 years of age (or the legal age of majority where you live), you can only use our Services under the supervision of a parent or legal guardian who agrees to the Agreement.</p>
+
+        <h2 class="mt-2 font-bold">4. Responsibility of Accounts</h2>
+        <p class="mt-2">We don't reviewed, and can't review, your account content. So, for example:</p>
+        <ul class="mt-1">
+          <li>We don't have any control over third-party websites or potential scammers.</li>
+          <li>A link to or from one of our Services does not represent or imply that we endorse any third-party.</li>
+          <li>We don't endorse any Content or represent that Content is accurate, useful, or not harmful. Content could be offensive, indecent, or objectionable; include technical inaccuracies, typographical mistakes, or other errors; or violate or infringe the privacy, publicity rights, intellectual property rights, or other proprietary rights of third parties.</li>
+          <li>You're fully responsible for the activities and transactions you perform, and any harm resulting from that. It's your responsibility to ensure that you are not doing anything illegal or potentially falling victom to scammers.</li>
+          <li>We aren't responsible for any harm resulting from anyone's access, use, purchase, or downloading of Content, or for any harm resulting from third-parties. You're responsible for taking the necessary precautions to protect yourself and your computer systems from viruses, worms, Trojan horses, and other harmful or destructive content.</li>
+          <li>We follow encryption guidelines but do not store passwords or secret phrases in plain text. This means you MUST secure your password and secret phrase so you can recover your account and possibly your funds.</li>
+          <li>We are not a party to, and will have no responsibility or liability for, any communications, transactions, interactions, or disputes between you and anyone else.</li>
+        </ul>
+        <p class="mt-2">Please note that additional third-party terms and conditions may apply to Content you download, copy, purchase, send, receive or use.</p>
+
+        <h2 class="mt-2 font-bold">5. Fees, Payment, and Renewal</h2>
+        <h3 class="mt-1 font-bold">a. LambdaStack or YAKKL Fees (if any)</h3>
+        <p class="mt-2"><strong>Fees for Paid Services.</strong> Some of our Services may be offered for a fee. It will be very clear and require acknowledgement. By using a Paid Service, you agree to pay the specified fees. Depending on the Paid Service, there may be one-time fees, recurring fees, transaction fees, or transaction/revenue-based fees. For recurring fees, we'll bill or charge you in the automatically-renewing interval (such as monthly or annually) you select, on a pre-pay basis until you cancel, which you can do at any time by contacting the relevant support team.</p>
+        <p class="mt-2"><strong>Taxes.</strong> To the extent permitted by law, or unless explicitly stated otherwise, all fees do not include applicable federal, provincial, state, local or other governmental sales, value-added, goods and services, harmonized or other taxes, fees, or charges (“Taxes”). You're responsible for paying all applicable Taxes relating to your use of our Services, your sells, or your purchases. If we're obligated to pay or collect Taxes on the fees you've paid or will pay, you're responsible for those Taxes, and we may collect payment.</p>
+        <p class="mt-2"><strong>Payment.</strong> If your payment fails, Paid Services are otherwise not paid for or paid for on time (for example, if you contact your bank, credit card company or crypto exchange to decline or reverse the charge of fees for Paid Services), or we suspect a payment is fraudulent, we may immediately cancel or revoke your access to Paid Services without notice to you. Your crypto account is your crypto account and we have no access to it.</p>
+        <p class="mt-2"><strong>Automatic Renewal.</strong> To ensure uninterrupted service, recurring Paid Services are automatically renewed. This means that unless you cancel a Paid Service before the end of the applicable subscription period, it will automatically renew, and you authorize us to use any payment mechanism we have on record for you, like credit cards or PayPal, or crypto to collect the then-applicable subscription fee as well as any Taxes. By default, your Paid Services will be renewed for the same interval as your original subscription period, so for example, if you purchase a one-year subscription for an advanced security plan, you'll be charged each year for access for another 12-month period. We may charge your account up to one month before the end of the subscription period to make sure pesky billing issues don't inadvertently disrupt your access to our Services. The date for the automatic renewal is based on the date of the original purchase and cannot be changed. If you've purchased access to multiple services, you may have multiple renewal dates.</p>
+        <p class="mt-2">To review renewal dates and manage subscriptions for any other Paid Services, please consult the respective Service's website portal or contact the support team. You'll need to check your email (including in spam or other filters) for any reminder emails we might send you before your Paid Services renew.</p>
+        <p class="mt-2"><strong>Cancelling Automatic Renewal.</strong> You can manage and cancel your Paid Services at the respective Service's website portal.</p>
+        <p class="mt-2">If auto-renew is successfully turned off, you'll see the date on which your subscription expires. If you have multiple Paid Services to cancel, repeat this process for each subscription.</p>
+        <p class="mt-2"><strong>Fees and Changes.</strong> We may change our fees at any time in accordance with these Terms and requirements under applicable law. This means that we may change our fees going forward, start charging fees for Services that were previously free, or remove or update features or functionality that were previously included in the fees. If you don't agree with the changes, you must cancel your Paid Service.</p>
+        <p class="mt-2"><strong>No-Show Policy.</strong> We may have a “no-show policy” for some Paid Services that require your participation. For instance, this may mean that if you don't show up or are late for a scheduled session or training, you'll still be charged and won't be entitled to a refund.</p>
+        <p class="mt-2"><strong>Refunds.</strong> We may have a refund policy for some of our Paid Services, and we'll also provide refunds if required by law. In all other cases, there are no refunds and all payments are final.</p>
+
+        <h2 class="mt-2 font-bold">6. Feedback</h2>
+        <p class="mt-2">We love hearing from you and are always looking to improve our Services. When you share comments, ideas, or feedback with us, you agree that we&#39;re free to use them without any restriction or compensation to you.</p>
+
+        <h2 class="mt-2 font-bold">7. General Representation and Warranty</h2>
+        <p class="mt-2">Our mission is to make the web3 a better place, and our Services are designed to give you control and ownership over your crypto and crypto related services. We encourage you to express yourself freely, subject to a few requirements. In particular, you represent and warrant that your use of our Services:</p>
+        <ul class="mt-1">
+          <li>Will be in strict accordance with the Agreement;</li>
+          <li>Will comply with all applicable laws and regulations (including, without limitation, all applicable laws regarding online conduct and acceptable content, privacy, data protection, the transmission of technical data exported from the United States or the country in which you reside, the use or provision of financial services, notification and consumer protection, unfair competition, and false advertising);</li>
+          <li>Will not be for any unlawful purposes, to perform money laundrying, use account(s) to purchase or sell illegal items or services, or in furtherance of illegal activities;</li>
+          <li>Will not be involved with any scamming activities of any kind;</li>
+          <li>Will not infringe or misappropriate the intellectual property rights of LambdaStack, YAKKL, or any third party;</li>
+          <li>Will not overburden or interfere with our systems or impose an unreasonable or disproportionately large load on our infrastructure, as determined by us in our sole discretion;</li>
+          <li>Will not disclose the personal information of others;</li>
+          <li>Will not interfere with, disrupt, or attack any service or network;</li>
+          <li>Will not be used to create, distribute, or enable material that is, facilitates, or operates in conjunction with, malware, spyware, adware, or other malicious programs or code;</li>
+          <li>Will not involve reverse engineering, decompiling, disassembling, deciphering, or otherwise attempting to derive the source code for the Services or any related technology that is not open source; and</li>
+          <li>Will not involve renting, leasing, loaning, selling, or reselling the Services or related data without our consent.</li>
+        </ul>
+
+        <h2 class="mt-2 font-bold">8. Specific Service Terms</h2>
+        <p class="mt-2">Added as each account/services comes online.</p>
+
+        <h2 class="mt-2 font-bold">9. Copyright Infringement and DMCA Policy</h2>
+        <p class="mt-2">As we ask others to respect our intellectual property rights, we respect the intellectual property rights of others. If you believe any Content violates your copyright, please see our <a class="underline" href="https://yakkl.com/legal/dmca-notice">Digital Millennium Copyright Act (“DMCA”) Policy</a> and send us a notice.</p>
+
+        <h2 class="mt-2 font-bold">10. Intellectual Property</h2>
+        <p class="mt-2">The Agreement doesn't transfer any LambdaStack or third-party intellectual property to you, and all right, title, and interest in and to such property remains (as between LambdaStack and you) solely with LambdaStack. LambdaStack, YAKKL, and all other trademarks, service marks, graphics, and logos used in connection with our websites or Services are trademarks or registered trademarks of LambdaStack (or LambdaStack's licensors). Other trademarks, service marks, graphics, and logos used in connection with our Services may be the trademarks of other third parties. Using our Services doesn't grant you any right or license to reproduce or otherwise use any LambdaStack or third-party trademarks.</p>
+
+        <h2 class="mt-2 font-bold">11. Third-Party Services</h2>
+        <p class="mt-2">While using the Services, you may enable, use, or purchase services, products, software, embeds, or applications (like themes, extensions, plugins, or code blocks) provided or manufactured by a third party or yourself (“Third-Party Services”).</p>
+        <p class="mt-2">If you use any Third-Party Services, you understand that:</p>
+        <ul class="mt-1">
+          <li>Third-Party Services aren't vetted, endorsed, or controlled by YAKKL.</li>
+          <li>Any use of a Third-Party Service is at your own risk, and we won't be responsible or liable to anyone for Third-Party Services.</li>
+          <li>Your use is solely between you and the respective third party (“Third Party”) and is governed by the Third Party's terms and policies.</li>
+          <li>Some Third-Party Services may request or require access to your data — be careful and never share passwords or secret phrases (not even with us).</li>
+          <li>If you have questions or concerns about how a Third-Party Service operates or need support, contact the Third Party directly.</li>
+        </ul>
+        <p class="mt-2">If applicable - In rare cases we may at our discretion, suspend, disable, or remove Third-Party Services.</p>
+
+        <h2 class="mt-2 font-bold">12. Changes</h2>
+        <p class="mt-2">We may update, change, or discontinue any aspect of our Services at any time. Since we're constantly updating our Services, we sometimes have to change the legal terms under which they're offered. The Agreement may only be modified by a written amendment signed by an authorized executive of LambdaStack, LLC/YAKKL, or if LambdaStack posts a revised version. We'll let you know when there are changes: we'll post them here and update the “Last Updated” date, and we may also post on one of our blogs or send you an email or other communication before the changes become effective. Your continued use of our Services after the new terms take effect will be subject to the new terms, so if you disagree with the changes in the new terms, you should stop using our Services. To the extent you have an existing subscription, you may be eligible for a refund.</p>
+
+        <h2 class="mt-2 font-bold">13. Termination</h2>
+        <p class="mt-2">We may terminate your access to all or any part of our Services at any time, with or without cause, with or without notice, effective immediately. We have the right (though not the obligation) to, in our sole discretion, (i) refuse or remove any content (if applicable) that, in our reasonable opinion, violates any the Agreement or any LambdaStack, LLC/YAKKL policy, or is in any way harmful or objectionable, (ii) ask you to make adjustments, restrict the resources or terminate your access to the Services, if we believe your website's or application's bandwidth usage burdens our systems (which is rare and typically only occurs when a website or application is used by multiple sites or applications), or (iii) terminate or deny access to and use of any of our Services to any individual or entity for any reason. We will have no obligation to provide a refund of any fees previously paid.</p>
+        <p class="mt-2">You can stop using our Services at any time, or, if you use a Paid Service, you can cancel at any time, subject to the Fees, Payment, and Renewal section of these Terms.</p>
+
+        <h2 class="mt-2 font-bold">14. Disclaimers</h2>
+        <p class="mt-2">Our Services are provided “as is.” LambdaStack, LLC/YAKKL and its suppliers and licensors hereby disclaim all warranties of any kind, express or implied, including, without limitation, the warranties of merchantability, fitness for a particular purpose and non-infringement. Neither LambdaStack, LLC/YAKKL, nor its suppliers and licensors, makes any warranty that our Services will be error free or that access thereto will be continuous or uninterrupted. You understand that you download from, or otherwise obtain content or services through, or send/receive transactions using our Services at your own discretion and risk.</p>
+
+        <h2 class="mt-2 font-bold">15. Jurisdiction and Applicable Law.</h2>
+        <p class="mt-2">Except to the extent any applicable law provides otherwise, the Agreement and any access to or use of our Services will be governed by the laws of the state of Georgia, U.S.A., excluding its conflict of law provisions. The proper venue for any disputes arising out of or relating to the Agreement and any access to or use of our Services that are not otherwise subject to arbitration (as indicated below) will be the state and federal courts located in Bartow County, Georgia.</p>
+
+        <h2 class="mt-2 font-bold">16. Arbitration Agreement</h2>
+        <p class="mt-2">Except for claims for injunctive or equitable relief or claims regarding intellectual property rights (which may be brought in any competent court without the posting of a bond), any dispute arising under the Agreement shall be finally settled in accordance with the Comprehensive Arbitration Rules of the Judicial Arbitration and Mediation Service, Inc. (“JAMS”) by three arbitrators appointed in accordance with such Rules. The arbitration shall take place in Cartersville, Georgia, in the English language and the arbitral decision may be enforced in any court. The prevailing party in any action or proceeding to enforce the Agreement shall be entitled to costs and attorneys' fees.</p>
+
+        <h2 class="mt-2 font-bold">17. Limitation of Liability</h2>
+        <p class="mt-2">In no event will LambdaStack, LLC/YAKKL, or its suppliers, partners, or licensors, be liable (including for any third-party products or services purchased or used through our Services) with respect to any subject matter of the Agreement under any contract, negligence, strict liability or other legal or equitable theory for: (i) any special, incidental or consequential damages; (ii) the cost of procurement for substitute products or services; (iii) for interruption of use or loss or corruption of data; or (iv) for any amounts or the fees paid by you to LambdaStack, LLC/YAKKL under the Agreement during the twelve (12) month period prior to the cause of action, whichever is greater. LambdaStack, LLC/YAKKL shall have no liability for any failure or delay due to matters beyond its reasonable control. The foregoing shall not apply to the extent prohibited by applicable law.</p>
+
+        <h2 class="mt-2 font-bold">18. Indemnification</h2>
+        <p class="mt-2">You agree to indemnify and hold harmless LambdaStack, LLC/YAKKL, its contractors, and its licensors, and their respective directors, officers, employees, and agents from and against any and all losses, liabilities, demands, damages, costs, claims, and expenses, including attorneys' fees, arising out of or related to your use of our Services, including but not limited to your violation of the Agreement or any agreement with a provider of third-party services used in connection with the Services, Content that you post, any ecommerce activities conducted through your or another user's website or application, and anything you build on top of our infrastructure or environment.</p>
+
+        <h2 class="mt-2 font-bold">19. US Economic Sanctions</h2>
+        <p class="mt-2">You may not use the Services if such use is inconsistent with U.S. sanctions law or if you are on any list maintained by a U.S. government authority relating to designated, restricted or prohibited persons.</p>
+
+        <h2 class="mt-2 font-bold">20. Data Processing Agreement</h2>
+        <p class="mt-2">If you need a data processing agreement (DPA) with us for the GDPR requirements that apply to us as a data processor for your services, please go to <a class="underline" href="https://yakkl.com/legal/privacy">Privacy Policy</a>.</p>
+
+        <h2 class="mt-2 font-bold">21. Translation</h2>
+        <p class="mt-2">These Terms were originally written in English (US). We may translate these terms into other languages, and in the event of a conflict between a translated version of these Terms and the English version, the English version will control.</p>
+
+        <h2 class="mt-2 font-bold">22. Miscellaneous</h2>
+        <p class="mt-2">The Agreement (together with any other terms we provide that apply to any specific Service) constitutes the entire agreement between LambdaStack, LLC/YAKKL and you concerning our Services. If any part of the Agreement is unlawful, void, or unenforceable, that part is severable from the Agreement, and does not affect the validity or enforceability of the rest of the Agreement. A waiver by either party of any term or condition of the Agreement or any breach thereof, in any one instance, will not waive such term or condition or any subsequent breach thereof.</p>
+        <p class="mt-2">LambdaStack may assign its rights under the Agreement without condition. You may only assign your rights under the Agreement with our prior written consent.</p>
+
+        <hr/>
+
+        <h1 class="mb-1 text-xl text-center tracking-tight font-extrabold text-gray-300 dark:text-white">Disclaimer</h1>
+        <p class="mb-2 text-base text-center"><em>Last Updated: December 21, 2022</em></p>
+        <blockquote class="text-xs border border-1 border-black dark:border-white p-1">
+        <p class="font-bold">NOTHING ON OUR SITE OR PRODUCT/SERVICES ARE FINANCIAL ADVICE. DO YOUR OWN RESEARCH FIRST!</p>
+        <p class="mt-2">Full Disclaimer, EULA, Terms and Conditions, and Full Privacy Policy can be found on <a class="underline" href="https://yakkl.com/legal/privacy">yakkl.com</a>.</p>
+        </blockquote>
+        <p class="mt-2">The Company assumes no responsibility for errors or omissions in the contents of the Product/Service.</p>
+        <p class="mt-2">In no event shall the Company be liable for any special, direct, indirect, consequential, or incidental damages or any damages whatsoever, whether in an action of contract, negligence or other tort, arising out of or in connection with the use of the Service or the contents of the Service. The Company reserves the right to make additions, deletions, or modifications to the contents on the Product/Service at any time without prior notice. </p>
+        <p class="mt-2">The Company does not warrant that the Product/Service is free of viruses or other harmful components.</p>
+        <p class="mb-2 text-base text-center"><em>Last Updated: December 21, 2022</em></p>
+      </div>  
+    </div>
+  </div>
+</div>
+  <Footer/>
+  </Gradient>
