@@ -14,31 +14,31 @@
         <p class="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">What makes us different</p>
       </div>
       <div class="relative z-10 mx-auto max-w-prose text-base lg:mx-0 lg:max-w-5xl lg:pr-72">
-        <p class="text-lg text-gray-500">To express what makes us different in one word - experience! Andy Jassy, CEO of Amazon, said it like this, "there is no compression algorithm for actual experience." There is so much misinformation with one crypto product or blockchain saying they can do 'whatever - insert the buzzword of the moment here' when they simply don't know what they don't know. Most have never built real production systems that can handle load or muchless businesses that have solid processes builtin from day one.</p>
+        <p class="text-lg text-gray-500">To express what makes us different in one word - experience! Andy Jassy, CEO of Amazon, said it like this, "there is no compression algorithm for actual experience." There is so much misinformation with one crypto product or blockchain saying they can do 'whatever - insert the buzzword of the moment here' when they simply don't know what they don't know. Most may have never built real production systems that can handle load or muchless businesses that have solid processes builtin from day one.</p>
       </div>
       <div class="lg:grid lg:grid-cols-2 lg:items-start lg:gap-8">
         <div class="relative z-10">
           <div class="prose prose-indigo mx-auto text-gray-500 lg:max-w-none">
             <p>There are some really good talented resources that will enter the Web3 market in the next year or two that actually know what they are doing. Those that are actually good that are in the market today may survive but the others will not. Why? Here are a few possible reasons:</p>
             <ul>
-              <li>Some have a combined experience of maybe 10 years (5 people with 2 actual years in something other than what matters)</li>
-              <li>Most are more from an academia world, just read the whitepapers. I would be more interested in technical roadmaps, scalable architectures with disaster recovery factored in, incident response processes or any processes, and maybe a real business plan with experience</li>
-              <li>Lack of any reasonable regulation. I don't mean regulations from politians (that will most likely not work). SEC and experienced industry representatives working together</li>
+              <li>Some may have a combined experience of maybe 10 years (e.g., 5 people with 2 actual years in something other than what matters)</li>
+              <li>Most seem to be from an academia world, just read the whitepapers. I would be more interested in technical roadmaps, scalable architectures with disaster recovery factored in, incident response processes or any processes, and maybe a real business plan with experience</li>
+              <li>Lack of any reasonable regulation. I don't mean regulations from politians (that will most likely not work). SEC and experienced industry leaders working together</li>
             </ul>
-            <p>Another problem area is the misinformation coming from "influencers." Some think of themselves as the "Guardian of the Galaxy (crypto edition)" when in reality they create potentially more issues than they actually help with. Just go to TikTok, Youtube, Twitter, and others and it will not take long to see all of this in action.</p>
+            <p>Another problem area is the misinformation coming from "influencers." Some seem to think of themselves as the "Guardian of the Galaxy (crypto edition)" when in reality they potentially create more issues than they actually help with. Just go to TikTok, Youtube, Twitter, and others and it will not take long to see all of this in action.</p>
             <h3>We're here to help</h3>
-            <p>We have brought many years of actual experience architecting, building out infrastructures that can support scale, and applications that are user friendly. Our first product is called YAKKL Smare Wallet. It is user friendly, highly secure, and powerful! If you are someone new to crypto you no longer have to go to three or four places and setup accounts just to get started. I found the process very user unfriendly and confusing.</p>
-            <p>Today, the user can download the Chrome Extension in their browser, enter in basic information and they are ready to go. If the user has no crypto then they can simply buy cryptocurrencies or NFTs through YAKKL. They can also sell their digital assets or even swap them with others without ever having to leave the wallet. We also added the feature that allows our users to track addresses (accounts) they may have on exchanges so that they can easily view their complete portfolio in one view.</p>
-            <p>There are so many incredible features to simply list here. YAKKL Smart Wallet is FREE!
+            <p>We have brought many years of actual experience architecting, building out infrastructures that can support scale, and applications that are user friendly. Our first product is called YAKKL™ Smart Wallet. It's user friendly, highly secure, and powerful! If you are someone new to crypto you no longer have to go to three or four places and setup accounts just to get started. I found the process very user unfriendly and confusing.</p>
+            <p>Today, a user can download the Chrome Extension in their browser, enter in basic information and they are ready to go - simple! If the user has no crypto then they can simply buy cryptocurrencies or NFTs through YAKKL™ integrated third parties. The user can also sell their digital assets or even swap them with others without ever having to leave the wallet. We also added the feature that allows our users to track addresses (accounts) they may have on exchanges so that they can easily view their complete portfolio in one view. We call these Watch Accounts.</p>
+            <p>There are so many incredible features to simply list here. YAKKL™ Smart Wallet (Basic Edition) is FREE. The pricing page has all of the many options.
             </p>
           </div>
           <div class="mx-auto mt-10 flex max-w-prose text-base lg:max-w-none">
             <div class="rounded-md shadow">
-              <a href="/cta/getting-started" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Get started (free)</a>
+              <a href="/pricing/#experienced" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Get started (free)</a>
             </div>
-            <div class="ml-4 rounded-md shadow">
+            <!-- <div class="ml-4 rounded-md shadow">
               <a href="/#features" class="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50">Learn more</a>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="relative mx-auto mt-12 max-w-prose text-base lg:mt-0 lg:max-w-none">
@@ -58,7 +58,7 @@
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                 </svg>
                 <p class="relative">
-                  I have a solid track record and have had the luxury of working at high-levels at some of the brands you know of or use almost daily.  One such brand was Bloomberg where I focused on infrastructure required to support high-speed trading and more in the fintech space. 2022 has taught everyone a lot about "what not to do" in the crypto ecosystem and the lack of actual experience in building out what it takes to operate a company and products that can truly scale. At YAKKL, you get all of that and so much more!
+                  I have a solid track record and have had the luxury of working at high-levels at some of the brands you know of or use almost daily.  One such brand was Bloomberg where I focused on infrastructure required to support high-speed trading and more in the fintech space. 2022 has taught everyone a lot about "what not to do" in the crypto ecosystem and the lack of actual experience in building out what it takes to operate a company and products that can truly scale. At YAKKL™, you get all of that and so much more!
                 </p>
               </div>
             </div>
@@ -68,7 +68,7 @@
               </span>
               <span class="relative ml-4 font-semibold leading-6 text-indigo-300 sm:ml-24 sm:pl-1">
                 <span class="font-semibold text-white sm:inline">Hans Jones</span>
-                <span class="sm:inline">CEO/CTO at YAKKL</span>
+                <span class="sm:inline">CEO/CTO at YAKKL™</span>
               </span>
             </cite>
           </blockquote>

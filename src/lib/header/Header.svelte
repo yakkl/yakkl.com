@@ -19,7 +19,7 @@
     <a
       class="inline-block h-14 px-7 mt-0 md:py-3 py-2 bg-indigo-600 text-white font-bold text-lg leading-snug rounded-md shadow-md hover:bg-indigo-700 hover:shadow-md focus:bg-indogo-700 focus:shadow-md focus:outline-none focus:ring-0 active:bg-indigo-800 active:shadow-md transition duration-150 ease-in-out w-full"
       data-mdb-ripple="true" data-mdb-ripple-color="light"
-      href="/cta/getting-started">
+      href="/pricing">
       <div class="inline-flex items-center align-middle">
         <span>Get started (free)</span>
       </div>
@@ -29,12 +29,20 @@
   <NavUl {hidden}>
     <NavLi href="/#features" >Features</NavLi>
     <NavLi href="https://yakkl.pub" target="_blank">Blog</NavLi>
-    <NavLi href="https://yakklhelp.zendesk.com" target="_blank">Docs</NavLi>
-    <NavLi href="/#newsletter">Newsletter (sign up)</NavLi>
+    <NavLi href="https://yakkl.freshdesk.com" target="_blank">Docs</NavLi>
+    <NavLi href="/#newsletter">Newsletter</NavLi>
+    <NavLi href="/pricing">Pricing</NavLi>
+    <NavLi id="nav-crypto" class="cursor-pointer"><Chevron aligned>Crypto</Chevron></NavLi>
+    <Dropdown triggeredBy="#nav-crypto" class="w-44 z-20">
+      <DropdownItem href="/crypto/buy">Buy</DropdownItem>
+      <DropdownItem href="/crypto/buy">Sell</DropdownItem>
+      <DropdownItem href="/crypto/buy">Swap</DropdownItem>
+    </Dropdown>
     <NavLi id="nav-menu1" class="cursor-pointer"><Chevron aligned>Company</Chevron></NavLi>
     <Dropdown triggeredBy="#nav-menu1" class="w-44 z-20">
       <DropdownItem href="/company/about">About</DropdownItem>
-      <DropdownItem href="/company/newsletter">Newsletters</DropdownItem>
+      <DropdownItem href="/company/partnering">Partnering</DropdownItem>
+      <!-- <DropdownItem href="/company/newsletter">Newsletters</DropdownItem> -->
       <DropdownItem href="/company/contactus">Contact Us</DropdownItem>
       <!-- <DropdownDivider /> -->
       <!-- <DropdownItem>Sign out</DropdownItem> -->

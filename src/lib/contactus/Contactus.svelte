@@ -1,10 +1,11 @@
 
-<div class="bg-gray-100">
+<div class="">
   <div class="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
     <div class="relative bg-white shadow-xl">
       <h2 class="sr-only">Contact us</h2>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3">
+      <!-- lg:grid-cols-3 -->
+      <div class="grid grid-cols-1 ">
         <!-- Contact information -->
         <div class="relative overflow-hidden bg-indigo-700 py-10 px-6 sm:px-10 xl:p-12">
           <div class="pointer-events-none absolute inset-0 sm:hidden" aria-hidden="true">
@@ -41,7 +42,7 @@
             </svg>
           </div>
           <h3 class="text-lg font-medium text-white">Contact information</h3>
-          <p class="mt-6 max-w-3xl text-base text-indigo-50">We look forward to hearing from you. Complete the form and submit. Simple!</p>
+          <p class="mt-6 max-w-3xl text-base text-indigo-50">We look forward to hearing from you.</p>
           <dl class="mt-8 space-y-6">
             <dt><span class="sr-only">Email</span></dt>
             <dd class="flex text-base text-indigo-50">
@@ -49,18 +50,94 @@
               <svg class="h-6 w-6 flex-shrink-0 text-indigo-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
               </svg>
-              <span class="ml-3">support@yakkl.com</span>
+              <span class="ml-3 underline"><a href="mailto:investors@yakkl.com" target="_blank">investors@yakkl.com</a></span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 mt-2.5 -mr-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="ml-3">This mailbox is monitored for <span class="underline">investor relations only!</span></span>
             </dd>
           </dl>
+          <dl class="mt-8 space-y-6">
+            <dt><span class="sr-only">Email</span></dt>
+            <dd class="flex text-base text-indigo-50">
+              <!-- Heroicon name: outline/envelope -->
+              <svg class="h-6 w-6 flex-shrink-0 text-indigo-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              <span class="ml-3 underline"><a href="mailto:partners@yakkl.com" target="_blank">partners@yakkl.com</a></span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 mt-2.5 -mr-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="ml-3">This mailbox is monitored for business development, collaboration, or affiliate opportunities</span>
+            </dd>
+          </dl>
+          <dl class="mt-8 space-y-6">
+            <dt><span class="sr-only">Email</span></dt>
+            <dd class="flex text-base text-indigo-50">
+              <!-- Heroicon name: outline/envelope -->
+              <svg class="h-6 w-6 flex-shrink-0 text-indigo-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              <span class="ml-3 underline"><a href="mailto:sales@yakkl.com" target="_blank">sales@yakkl.com</a></span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 mt-2.5 -mr-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="ml-3">This mailbox is monitored for all things sales related</span>
+            </dd>
+          </dl>
+          <dl class="mt-8 space-y-6">
+            <dt><span class="sr-only">Email</span></dt>
+            <dd class="flex text-base text-indigo-50">
+              <!-- Heroicon name: outline/envelope -->
+              <svg class="h-6 w-6 flex-shrink-0 text-indigo-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              <span class="ml-3 underline"><a href="mailto:billing@yakkl.com" target="_blank">billing@yakkl.com</a></span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3 ml-2 mt-2.5 -mr-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="ml-3">This mailbox is monitored for all things billing related</span>
+            </dd>
+          </dl>
+          <dl class="mt-8 space-y-6">
+            <div class="border rounded-lg">
+            <dt><span class="sr-only">Email</span></dt>
+            <dd class="flex text-base text-indigo-50">
+              <!-- Heroicon name: outline/envelope -->
+              <svg class="h-6 w-6 flex-shrink-0 text-indigo-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              <span class="ml-3 underline"><a href="mailto:support@yakkl.com" target="_blank">support@yakkl.com</a></span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2 mt-1.5 -mr-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span class="ml-3">This mailbox is anything support or general question related. BEST option is to click on the live chat button on the bottom right of all pages! If our AI bot can't handle your question then we look forward to assisting anyway we can</span>
+            </dd>
+          </div>
+          </dl>
           <ul class="mt-8 flex space-x-12">
-            <li>
+            <!-- <li>
               <a class="text-indigo-200 hover:text-indigo-100" target="_blank" rel="noreferrer" href="https://facebook.com/yakklcrypto">
                 <span class="sr-only">Facebook</span>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" aria-hidden="true">
                   <path d="M22.258 1H2.242C1.556 1 1 1.556 1 2.242v20.016c0 .686.556 1.242 1.242 1.242h10.776v-8.713h-2.932V11.39h2.932V8.887c0-2.906 1.775-4.489 4.367-4.489 1.242 0 2.31.093 2.62.134v3.037l-1.797.001c-1.41 0-1.683.67-1.683 1.653v2.168h3.362l-.438 3.396h-2.924V23.5h5.733c.686 0 1.242-.556 1.242-1.242V2.242C23.5 1.556 22.944 1 22.258 1" fill="currentColor" />
                 </svg>
               </a>
-            </li>
+            </li> -->
+            <!-- <li>
+              <a class="text-indigo-200 hover:text-indigo-100" target="_blank" rel="noreferrer" href="...yakklcrypto">
+                <span class="sr-only">Telegram</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" aria-hidden="true">
+                  <path d="M22.258 1H2.242C1.556 1 1 1.556 1 2.242v20.016c0 .686.556 1.242 1.242 1.242h10.776v-8.713h-2.932V11.39h2.932V8.887c0-2.906 1.775-4.489 4.367-4.489 1.242 0 2.31.093 2.62.134v3.037l-1.797.001c-1.41 0-1.683.67-1.683 1.653v2.168h3.362l-.438 3.396h-2.924V23.5h5.733c.686 0 1.242-.556 1.242-1.242V2.242C23.5 1.556 22.944 1 22.258 1" fill="currentColor" />
+                </svg>
+              </a>
+            </li> -->
+            <!-- <li>
+              <a class="text-indigo-200 hover:text-indigo-100" target="_blank" rel="noreferrer" href="https://discord.com/yakkl">
+                <span class="sr-only">Discord</span>
+                <i class="fa-brands fa-discord"></i>
+              </a>
+            </li> -->
             <li>
               <a class="text-indigo-200 hover:text-indigo-100" rel="noreferrer" target="_blank" href="https://github.com/yakkl">
                 <span class="sr-only">GitHub</span>
@@ -81,7 +158,7 @@
         </div>
 
         <!-- Contact form -->
-        <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
+        <!-- <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
           <h3 class="text-lg font-medium text-gray-900">Send us a message</h3>
           <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
             <div>
@@ -130,7 +207,7 @@
               <button type="submit" class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">Submit</button>
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

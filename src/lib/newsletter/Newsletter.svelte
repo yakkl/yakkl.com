@@ -2,16 +2,16 @@
   <section class="container mx-auto px-6">
     <div class="w-full lg:flex items-center">
       <div id="emailCTA" class="w-full lg:w-1/2">
-        <h2 class="text-md lg:text-2xl text-gray-600">Crypto, Smart Wallets, Blockchain, NFTs, and more...</h2>
+        <h2 class="text-md lg:text-2xl text-gray-600">Crypto, Smart Wallets, NFTs, Blockchain, Infrastructure, and more...</h2>
         <h1 class="text-5xl lg:text-6xl font-bold text-indigo-600 mb-2 lg:mb-6">Making Crypto Easy</h1>
         <p class="text-md lg:text-xl font-light text-gray-800 mb-8">
           Web3, where crypto lives, is far more challenging than most are used to. For cryptocurrencies (crypto), 
-          you have to setup an account with an Exchange, get a good crypto wallet (big hole here), link your banking 
+          you have to setup an account with an Exchange, get a good crypto wallet (no great option until now), link your banking 
           information, and then you are ready.
         </p>
         <p class="text-md lg:text-xl font-light text-gray-800 mb-8">
           Annoucing the <span class="font-bold text-indigo-600">YAKKL™ Smart Wallet</span>. A smart wallet that has 
-          <span class="underline">no equal</span>! In the coming days, we will be releasing the YAKKL™ Smart Wallet Google Chrome Extension 
+          <span class="underline">no equal</span>! We're releasing the YAKKL™ Smart Wallet Google Chrome Extension 
           in a limited release. A limited release simply means that only a certain number of users will be allowed to 
           download the Chrome Extension. This is for stress testing and final tweaks. After that, everyone is welcome! 
           So, stay informed and be notified by signing up. You can unsubscribe at anytime.

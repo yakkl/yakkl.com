@@ -12,7 +12,7 @@
         alt="YAKKL Logo"
         name="YAKKL™"
       />
-      <div class="text-[9px] text-gray-500 mt-1 sm:mr-2 text-justify">
+      <div class="text-[9px] text-gray-500 mt-1 sm:mr-6 mb-5 md:mb-0 text-justify">
         YAKKL™ is a software platform ONLY and does not conduct any independent diligence on or substantive review of any blockchain asset, digital currency, cryptocurrency or associated funds. You are fully and solely responsible for evaluating your investments, for determining whether you will exchange blockchain assets based on your own, and for all your decisions as to whether to exchange blockchain assets with the Exodus in app exchange feature. In many cases, blockchain assets you exchange on the basis of your research may not increase in value, and may decrease in value. Similarly, blockchain assets you exchange on the basis of your research may increase in value after your exchange.
         Past performance is not indicative of future results. Any investment in blockchain assets involves the risk of loss of part or all of your investment. The value of the blockchain assets you exchange is subject to market and other investment risks.
         YAKKL users are responsible for storing their own recovery phrase. If the recovery phrase is lost, the user might not be able to retrieve their private keys.
@@ -25,6 +25,7 @@
           <FooterLinkGroup class="text-xs">
             <FooterLink liClass="mb-4" href="/">YAKKL™ Smart Wallet</FooterLink>
             <FooterLink liClass="mb-4" href="/#features">Features</FooterLink>
+            <FooterLink liClass="mb-4" href="/pricing">Pricing</FooterLink>
           </FooterLinkGroup>
         </div>
         <div>
@@ -38,9 +39,9 @@
         <div>
           <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Support</h2>
           <FooterLinkGroup class="text-xs">
-            <FooterLink liClass="mb-4" href="https://yakklhelp.zendesk.com">Documentation</FooterLink>
-            <FooterLink liClass="mb-4" href="https://yakklhelp.zendesk.com">Support Ticket</FooterLink>
-            <FooterLink liClass="mb-4" href="https://yakklhelp.zendesk.com">FAQ</FooterLink>
+            <FooterLink liClass="mb-4" href="https://yakkl.freshdesk.com">Documentation</FooterLink>
+            <FooterLink liClass="mb-4" href="https://yakkl.freshdesk.com">Support Ticket</FooterLink>
+            <FooterLink liClass="mb-4" href="https://yakkl.freshdesk.com">FAQ</FooterLink>
           </FooterLinkGroup>
         </div>
         <div>
@@ -48,16 +49,18 @@
           <FooterLinkGroup class="text-xs">
             <FooterLink liClass="mb-4" href="/company/about">About</FooterLink>
             <FooterLink liClass="mb-4" href="https://yakkl.pub">Blog</FooterLink>
-            <FooterLink liClass="mb-4" href="/company/newsletter">Newsletter</FooterLink>
-            <FooterLink liClass="mb-4" href="/company/press">Press</FooterLink>
+            <FooterLink liClass="mb-4" href="/company/contactus">Contact Us</FooterLink>
+            <!-- <FooterLink liClass="mb-4" href="/company/newsletter">Newsletter</FooterLink> -->
+            <FooterLink liClass="mb-4" href="/company/partnering">Partnering</FooterLink>
+            <!-- <FooterLink liClass="mb-4" href="/company/press">Press</FooterLink> -->
           </FooterLinkGroup>
         </div>
         <div>
           <h2 class="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Follow us</h2>
           <FooterLinkGroup class="text-xs">
             <FooterLink liClass="mb-4" href="https://twitter.com/yakklcrypto">Twitter</FooterLink>
-            <FooterLink liClass="mb-4" href="/">Discord</FooterLink>
-            <FooterLink liClass="mb-4" href="/">TikTok</FooterLink>
+            <!-- <FooterLink liClass="mb-4" href="/">Discord</FooterLink>
+            <FooterLink liClass="mb-4" href="/">TikTok</FooterLink> -->
           </FooterLinkGroup>
         </div>
         <div>
@@ -74,7 +77,7 @@
   </div>
   <hr class="my-4 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-4" />
   <div class="sm:flex sm:items-center sm:justify-between mr-20">
-    <FooterCopyright href="/" by="YAKKL™" class="text-left"/>
+    <FooterCopyright href="/" by="YAKKL™ - LambdaStack, LLC" class="text-left"/>
     <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
       <FooterIcon target="_blank" href="https://facebook.com/yakklcrypto" class="text-gray-400 hover:text-gray-900">
       <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
