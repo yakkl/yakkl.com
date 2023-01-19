@@ -32,16 +32,16 @@
           <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Crypto</h2>
           <FooterLinkGroup class="text-xs">
             <FooterLink liClass="mb-4" href="/crypto/buy">Buy</FooterLink>
-            <FooterLink liClass="mb-4" href="/crypto/sell">Sell</FooterLink>
-            <FooterLink liClass="mb-4" href="/crypto/swap">Swap</FooterLink>
+            <FooterLink liClass="mb-4" href="/crypto/buy">Sell</FooterLink>
+            <FooterLink liClass="mb-4" href="/crypto/buy">Swap</FooterLink>
           </FooterLinkGroup>
         </div>
         <div>
           <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Support</h2>
           <FooterLinkGroup class="text-xs">
-            <FooterLink liClass="mb-4" href="https://yakkl.freshdesk.com">Documentation</FooterLink>
-            <FooterLink liClass="mb-4" href="https://yakkl.freshdesk.com">Support Ticket</FooterLink>
-            <FooterLink liClass="mb-4" href="https://yakkl.freshdesk.com">FAQ</FooterLink>
+            <!-- <FooterLink liClass="mb-4" href="https://yakkl.freshdesk.com/support/home">Documentation</FooterLink> -->
+            <FooterLink liClass="mb-4" href="https://yakkl.freshdesk.com/support/home">Support Ticket</FooterLink>
+            <FooterLink liClass="mb-4" href="https://yakkl.freshdesk.com/support/home">FAQ</FooterLink>
           </FooterLinkGroup>
         </div>
         <div>
@@ -49,7 +49,7 @@
           <FooterLinkGroup class="text-xs">
             <FooterLink liClass="mb-4" href="/company/about">About</FooterLink>
             <FooterLink liClass="mb-4" href="https://yakkl.pub">Blog</FooterLink>
-            <FooterLink liClass="mb-4" href="/company/contactus">Contact Us</FooterLink>
+            <FooterLink liClass="mb-4" href="/company/contactus">Contact us</FooterLink>
             <!-- <FooterLink liClass="mb-4" href="/company/newsletter">Newsletter</FooterLink> -->
             <FooterLink liClass="mb-4" href="/company/partnering">Partnering</FooterLink>
             <!-- <FooterLink liClass="mb-4" href="/company/press">Press</FooterLink> -->

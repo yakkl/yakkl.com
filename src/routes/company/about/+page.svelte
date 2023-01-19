@@ -14,7 +14,7 @@
         <p class="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">What makes us different</p>
       </div>
       <div class="relative z-10 mx-auto max-w-prose text-base lg:mx-0 lg:max-w-5xl lg:pr-72">
-        <p class="text-lg text-gray-500">To express what makes us different in one word - experience! Andy Jassy, CEO of Amazon, said it like this, "there is no compression algorithm for actual experience." There is so much misinformation with one crypto product or blockchain saying they can do 'whatever - insert the buzzword of the moment here' when they simply don't know what they don't know. Most may have never built real production systems that can handle load or muchless businesses that have solid processes builtin from day one.</p>
+        <p class="prose prose-indigo text-gray-500">To express what makes us different in one word - experience! Andy Jassy, CEO of Amazon, said it like this, "there is no compression algorithm for actual experience." There is so much misinformation with one crypto product or blockchain saying they can do 'whatever - insert the buzzword of the moment here' when they simply don't know what they don't know. Most may have never built real production systems that can handle load or muchless businesses that have solid processes builtin from day one.</p>
       </div>
       <div class="lg:grid lg:grid-cols-2 lg:items-start lg:gap-8">
         <div class="relative z-10">
@@ -34,7 +34,7 @@
           </div>
           <div class="mx-auto mt-10 flex max-w-prose text-base lg:max-w-none">
             <div class="rounded-md shadow">
-              <a href="/pricing/#experienced" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Get started (free)</a>
+              <a href="/pricing/#premium" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Get started (free)</a>
             </div>
             <!-- <div class="ml-4 rounded-md shadow">
               <a href="/#features" class="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50">Learn more</a>

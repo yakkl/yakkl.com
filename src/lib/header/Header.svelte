@@ -21,15 +21,15 @@
       data-mdb-ripple="true" data-mdb-ripple-color="light"
       href="/pricing">
       <div class="inline-flex items-center align-middle">
-        <span>Get started (free)</span>
+        <span>Get started today</span>
       </div>
     </a>
     <NavHamburger on:click={toggle} />
   </div>
   <NavUl {hidden}>
     <NavLi href="/#features" >Features</NavLi>
-    <NavLi href="https://yakkl.pub" target="_blank">Blog</NavLi>
-    <NavLi href="https://yakkl.freshdesk.com" target="_blank">Docs</NavLi>
+    <NavLi href="https://yakkl.pub/?utm_source=yakkl_site&utm_medium=reflink&utm_campaign=yakkl_site_reflink" target="_blank">Blog</NavLi>
+    <!-- <NavLi href="https://yakkl.freshdesk.com/?utm_source=yakkl_site&utm_medium=reflink&utm_campaign=yakkl_site_reflink" target="_blank">Docs</NavLi> -->
     <NavLi href="/#newsletter">Newsletter</NavLi>
     <NavLi href="/pricing">Pricing</NavLi>
     <NavLi id="nav-crypto" class="cursor-pointer"><Chevron aligned>Crypto</Chevron></NavLi>
