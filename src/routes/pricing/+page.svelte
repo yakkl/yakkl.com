@@ -97,17 +97,18 @@
               <path id="Path_712" data-name="Path 712" d="M332.23,375.422l-74.046,11.4a3.875,3.875,0,0,1-1.188,0l-74.045-11.4a3.991,3.991,0,0,1-3.361-3.962c-.3.3,155.985-.253,156,0A3.992,3.992,0,0,1,332.23,375.422Z" transform="translate(-179.591 -371.392)"></path>
             </svg>
           </div> -->
-          <div id="premium" class="p-6 h-[295px] grid grid-rows-7 gap-2">
+          <!-- grid-rows-7 gap-2 -->
+          <div id="premium" class="p-6 h-[295px] grid grid-rows-6">
             <p class="absolute top-0 -translate-y-1/2 transform rounded-full bg-indigo-500 py-1.5 px-4 text-sm font-semibold text-white">Most popular</p>
             <h2 class="text-lg font-medium leading-6 text-gray-900">Premium</h2>
             <p class=" text-sm text-gray-500 row-span-2">When you need more horsepower, features, and security options.</p>
-            <p class="row-span-1">
+            <p class="row-span-2">
               <span class="text-xl font-bold tracking-tight text-gray-900">21 Days Free - $0 Today</span>
             </p>
               <!-- svelte-ignore security-anchor-rel-noreferrer -->
-              <a href="/billing?term=annual" target="_blank" class="w-full row-span-1 rounded-md border border-transparent bg-purple-600 py-2 text-center text-sm font-semibold text-white hover:bg-purple-700">Annual billing $119.88/yr</a>
+              <a href="/billing?term=annual" target="_blank" class="w-full row-span-1 rounded-md border border-transparent bg-purple-600 py-2 text-center text-sm font-semibold text-white hover:bg-purple-700">Annual billing $9.99/yr</a>
               <!-- svelte-ignore security-anchor-rel-noreferrer -->
-              <a href="/billing?term=monthly" target="_blank" class="w-full row-span-1 rounded-md border border-transparent bg-purple-600 py-2 text-center text-sm font-semibold text-white hover:bg-purple-700">Monthly billing $14.99/mo</a>
+              <!-- <a href="/billing?term=monthly" target="_blank" class="w-full row-span-1 rounded-md border border-transparent bg-purple-600 py-2 text-center text-sm font-semibold text-white hover:bg-purple-700">Monthly billing $14.99/mo</a> -->
           </div>
           <div class="px-6 pt-6 pb-8">
             <h3 class="text-sm font-medium text-gray-900">What's included</h3>
@@ -135,6 +136,14 @@
                   <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                 </svg>
                 <span class="text-sm text-gray-500">Ability to save multi-encrypted emergency kit. This allows for storage on encrypted drives, devices, and backups</span>
+              </li>
+
+              <li class="flex space-x-3">
+                <!-- Heroicon name: mini/check -->
+                <svg class="h-5 w-5 flex-shrink-0 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-sm text-gray-500">Transaction Notes. Add a memo or note to any given transaction so you know what it was for later</span>
               </li>
 
               <li class="flex space-x-3">
