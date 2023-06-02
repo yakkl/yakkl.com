@@ -29,7 +29,7 @@
       <div class="mt-12 space-y-4 sm:mt-16 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:mx-auto lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-4">
         <div class="divide-y divide-gray-200 rounded-lg border border-gray-200 shadow-lg">
           <div class="p-6 h-[295px] grid grid-rows-6">
-            <h2 class="text-lg font-medium leading-6 text-gray-900">Basics</h2>
+            <h2 class="text-lg font-medium leading-6 text-gray-900">Standard</h2>
             <p class="text-sm text-gray-500 row-span-2">All the basics needed for securely managing digital assets (crypto, NFTs, ...).</p>
             <p class="row-span-2">
               <span class="text-2xl font-bold tracking-tight text-gray-900">$0</span>
@@ -99,7 +99,7 @@
           </div> -->
           <!-- grid-rows-7 gap-2 -->
           <div id="premium" class="p-6 h-[295px] grid grid-rows-6">
-            <p class="absolute top-0 -translate-y-1/2 transform rounded-full bg-indigo-500 py-1.5 px-4 text-sm font-semibold text-white">Most popular</p>
+            <!-- <p class="absolute top-0 -translate-y-1/2 transform rounded-full bg-indigo-500 py-1.5 px-4 text-sm font-semibold text-white">Most popular</p> -->
             <h2 class="text-lg font-medium leading-6 text-gray-900">Premium</h2>
             <p class=" text-sm text-gray-500 row-span-2">When you need more horsepower, features, and security options.</p>
             <p class="row-span-2">
@@ -119,7 +119,7 @@
                 <svg class="h-5 w-5 flex-shrink-0 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                 </svg>
-                <span class="text-sm text-gray-500">Everything in Basic version - plus...</span>
+                <span class="text-sm text-gray-500">Everything in Standard version - plus...</span>
               </li>
 
               <li class="flex space-x-3">

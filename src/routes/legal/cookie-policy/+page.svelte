@@ -60,7 +60,7 @@
         
         <h3>Examples</h3>
         
-        <p>Below are examples of the cookies set by LambdaStack, with explanations of their purpose. Some of these cookies are set across our whole network, whereas some are specific to individual services. Please note that this is not an exhaustive list, but rather aims to be representative. Information about cookies that may be set by third parties, such as our ads partners, is below. Additionally, we occasionally set referrer cookies.</p>
+        <p>Below are examples of the cookies set by YAKKL, with explanations of their purpose. Some of these cookies are set across our whole network, whereas some are specific to individual services. Please note that this is not an exhaustive list, but rather aims to be representative. Information about cookies that may be set by third parties, such as our ads partners, is below. Additionally, we occasionally set referrer cookies.</p>
         
         <p>In addition, people and companies that use our services to publish or host their own sites may place additional cookies. We provide more information on these cookies below.</p>
         
@@ -105,7 +105,7 @@
           </thead>
           <tbody>
             <td>ads</td>
-            <td>Tracks if a visitor has clicked an ad before on any of the LambdaStack sites</td>
+            <td>Tracks if a visitor has clicked an ad before on any of the YAKKL sites</td>
           </tbody>
         </table>
         
@@ -167,11 +167,11 @@
         
         <h3>Our Internal Analytics Tool</h3>
         
-        <p>In order to better understand how our services are used, we monitor certain user activities that take place within our products, including page views and clicks on any links used when managing a site via our dashboards. We call each one of these actions an “event.” Analytics events are attached to your WordPress.com account and are handled via a first party system that Automattic owns and maintains. In general, we record the following data for each event: IP address, WordPress.com user ID and username, WordPress.com-connected site ID (for sites not hosted on WordPress.com), user agent, referring URL, timestamp of event, browser language, and country code. We use this information to improve our products, make our marketing to you more relevant, personalize your experience, and for the other purposes described in our [Privacy Policy](https://www.lambdastackio.com/legals/privacy/). You may opt out of our analytics program through your user settings. By doing so, you won’t share information with our analytics tool about events or actions that happen after the opt-out, while logged in to your WordPress.com account. Note that opting out does not disable the functionality of the actions we track - for example, if you publish a post, we will still have record of that (don’t worry!), but for an event or action after you opt out, we will not have other data associated with that action or event in the analytics tool.</p>
+        <p>In order to better understand how our services are used, we monitor certain user activities that take place within our products, including page views and clicks on any links used when managing a site via our dashboards. We call each one of these actions an “event.” Analytics events are attached to your WordPress.com account and are handled via a first party system that Automattic owns and maintains. In general, we record the following data for each event: IP address, WordPress.com user ID and username, WordPress.com-connected site ID (for sites not hosted on WordPress.com), user agent, referring URL, timestamp of event, browser language, and country code. We use this information to improve our products, make our marketing to you more relevant, personalize your experience, and for the other purposes described in our [Privacy Policy](https://yakkl.com/legals/privacy/). You may opt out of our analytics program through your user settings. By doing so, you won’t share information with our analytics tool about events or actions that happen after the opt-out, while logged in to your WordPress.com account. Note that opting out does not disable the functionality of the actions we track - for example, if you publish a post, we will still have record of that (don’t worry!), but for an event or action after you opt out, we will not have other data associated with that action or event in the analytics tool.</p>
         
         <h3>Consent for Advertising Cookies on Our Sites</h3>
         
-        <p>You may see a “cookie banner” on our websites and dashboards. If you are visiting one of our sites from the EU, then we do not set, or allow our ad partners to set, cookies that are used to show you targeted ads before you click to accept. When you consent in this manner, we and our advertising partners may set advertising cookies on the site you are visiting and on our other websites, dashboards, and services, which we use to show you advertisements about our various LambdaStack products. We’ll display the banner to you periodically, just in case you change your mind.</p>
+        <p>You may see a “cookie banner” on our websites and dashboards. If you are visiting one of our sites from the EU, then we do not set, or allow our ad partners to set, cookies that are used to show you targeted ads before you click to accept. When you consent in this manner, we and our advertising partners may set advertising cookies on the site you are visiting and on our other websites, dashboards, and services, which we use to show you advertisements about our various YAKKL products. We’ll display the banner to you periodically, just in case you change your mind.</p>
         
         <h3>**Consent and Choices for Advertisements on Our Users’ Sites Through Our Ads Program**</h3>
         

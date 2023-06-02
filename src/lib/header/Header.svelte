@@ -47,6 +47,7 @@
       <!-- <DropdownDivider /> -->
       <!-- <DropdownItem>Sign out</DropdownItem> -->
     </Dropdown>
+    <NavLi href="/investors">Investors</NavLi>
   </NavUl>
 </Navbar>
 
