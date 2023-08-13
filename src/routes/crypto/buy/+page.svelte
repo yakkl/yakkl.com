@@ -18,7 +18,7 @@
     <Timeline>
       <TimelineItem title="Purchased, Sold and Swapped Crypto from YAKKL" date="December 2022">
         <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-          Since I can buy, sell, and swap crypto from within YAKKL, I have no need for a centralized exchange.
+          Since I can buy, sell, and swap crypto from within YAKKL®, I have no need for a centralized exchange.
         </p>
         <Button color="alternative"
           >Details<svg
@@ -37,9 +37,9 @@
           Imported in wallets from Metamask, Exodus, Tally Ho, Trust Wallet, and more.
         </p>
       </TimelineItem>
-      <TimelineItem title="Downloaded YAKKL Smart Wallet" date="October 2022">
+      <TimelineItem title="Downloaded YAKKL® Smart Wallet" date="October 2022">
         <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-          Downloaded the YAKKL Smart Wallet from Google Chrome.
+          Downloaded the YAKKL® Smart Wallet from Google Chrome Store.
         </p>
       </TimelineItem>
     </Timeline>

@@ -1,6 +1,6 @@
 {
-	"name": "yakklwebsite",
-	"version": "0.0.1",
+	"name": "yakkl.com",
+	"version": "1.0.1",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",

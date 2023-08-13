@@ -105,7 +105,7 @@
           </thead>
           <tbody>
             <td>ads</td>
-            <td>Tracks if a visitor has clicked an ad before on any of the YAKKL sites</td>
+            <td>Tracks if a visitor has clicked an ad before on any of the YAKKL® sites</td>
           </tbody>
         </table>
         
@@ -171,7 +171,7 @@
         
         <h3>Consent for Advertising Cookies on Our Sites</h3>
         
-        <p>You may see a “cookie banner” on our websites and dashboards. If you are visiting one of our sites from the EU, then we do not set, or allow our ad partners to set, cookies that are used to show you targeted ads before you click to accept. When you consent in this manner, we and our advertising partners may set advertising cookies on the site you are visiting and on our other websites, dashboards, and services, which we use to show you advertisements about our various YAKKL products. We’ll display the banner to you periodically, just in case you change your mind.</p>
+        <p>You may see a “cookie banner” on our websites and dashboards. If you are visiting one of our sites from the EU, then we do not set, or allow our ad partners to set, cookies that are used to show you targeted ads before you click to accept. When you consent in this manner, we and our advertising partners may set advertising cookies on the site you are visiting and on our other websites, dashboards, and services, which we use to show you advertisements about our various YAKKL® products. We’ll display the banner to you periodically, just in case you change your mind.</p>
         
         <h3>**Consent and Choices for Advertisements on Our Users’ Sites Through Our Ads Program**</h3>
         
