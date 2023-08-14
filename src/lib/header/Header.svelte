@@ -1,6 +1,7 @@
 <script>
   import { goto } from '$app/navigation';
-  import { Button, Navbar, NavBrand, NavLi, NavUl, NavHamburger, Dropdown, DropdownItem, Chevron, DropdownDivider } from 'flowbite-svelte';
+  import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Dropdown, DropdownItem } from 'flowbite-svelte';
+  import { Icon } from 'flowbite-svelte-icons';
 </script>
 
 <Navbar let:hidden let:toggle>
@@ -32,13 +33,13 @@
     <!-- <NavLi href="https://yakkl.freshdesk.com/?utm_source=yakkl_site&utm_medium=reflink&utm_campaign=yakkl_site_reflink" target="_blank">Docs</NavLi> -->
     <NavLi href="/#newsletter">Newsletter</NavLi>
     <NavLi href="/pricing">Pricing</NavLi>
-    <NavLi id="nav-crypto" class="cursor-pointer"><Chevron aligned>Crypto</Chevron></NavLi>
+    <NavLi id="nav-crypto" class="cursor-pointer">Crypto<Icon name="chevron-down-solid" class="w-3 h-3 ml-2 text-white dark:text-white" /></NavLi>
     <Dropdown triggeredBy="#nav-crypto" class="w-44 z-20">
       <DropdownItem href="/crypto/buy">Buy</DropdownItem>
       <DropdownItem href="/crypto/buy">Sell</DropdownItem>
       <DropdownItem href="/crypto/buy">Swap</DropdownItem>
     </Dropdown>
-    <NavLi id="nav-menu1" class="cursor-pointer"><Chevron aligned>Company</Chevron></NavLi>
+    <NavLi id="nav-menu1" class="cursor-pointer">Company<Icon name="chevron-down-solid" class="w-3 h-3 ml-2 text-white dark:text-white" /></NavLi>
     <Dropdown triggeredBy="#nav-menu1" class="w-44 z-20">
       <DropdownItem href="/company/about">About</DropdownItem>
       <DropdownItem href="/company/partnering">Partnering</DropdownItem>
