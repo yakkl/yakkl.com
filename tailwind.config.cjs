@@ -36,8 +36,35 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
+    require("daisyui"),
     require('flowbite/plugin'),
   ],
   darkMode: 'class',
+  daisyui: {
+    styled: true,
+    themes: true,
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
+    prefix: "",
+    darkTheme: "yakkl",
+    themes: [
+      {
+        yakkl: {
+          "primary": "#6d28d9",
+          "secondary": "#6366f1",
+          "accent": "#1FB2A5",
+          "neutral": "#191D24",
+          "base-100": "#2A303C",
+          "info": "#3ABFF8",
+          "success": "#36D399",
+          "warning": "#FBBD23",
+          "error": "#F87272",
+        },
+      },
+      "light", "dark", "corporate", "luxury", "dracula", "business",
+    ],
+  }
 };
 

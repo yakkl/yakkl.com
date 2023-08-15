@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<title>YAKKL® Smart Wallet</title>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com https://cdn.jsdelivr.net https://sibforms.com">
+		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://js.stripe.com https://crypto-js.stripe.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://cdn.jsdelivr.net https://sibforms.com">
 
 		<script src="/js/fontawesome-8d8e5192b2.js"></script>
+		
+		<script src="https://js.stripe.com/v3/"></script>
+		<script src="https://crypto-js.stripe.com/crypto-onramp-outer.js"></script>
 
 		%sveltekit.head%
 		<!-- https://fw-cdn.com https://yakkl-75a01f702b9220a16726725.freshchat.com -->
@@ -32,5 +36,5 @@
 		</script>		
 		<!-- <script type="text/plain" data-cookiecategory="targeting" src="/js/targeting.js" defer></script> -->
 		<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=a8b2t0khih&ev=PageView&noscript=1"/></noscript>
-</body>
+	</body>
 </html>
