@@ -126,7 +126,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">Buy, sell or swap</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">You can now buy, sell or swap crypto right from your wallet and you maintain control of your account at all times! No more worrying if some exchange goes out of business. <span class="inline-flex items-center rounded-full bg-blue-100 hover:bg-blue-200 px-2.5 py-0.5 text-xs font-medium text-blue-800">In testing</span>
+            <p class="mt-2 text-base leading-7 text-indigo-200">You can now buy, sell or swap crypto right from your wallet and you maintain control of your account at all times! No more worrying if some exchange goes out of business. <span class="inline-flex items-center rounded-full bg-blue-100 hover:bg-blue-200 px-2.5 py-0.5 text-xs font-medium text-blue-800">Sell/Swap in testing</span>
             </p>
           </div>
         </div>
