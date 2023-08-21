@@ -1,8 +1,8 @@
   <!-- Hero section -->
   <div class="lg:relative">
-    <img class="absolute -z-10 inset-0 w-full h-[35%] xs:h-[20%] md:h-[40%] object-cover" src="/images/hero_purplewaves.jpg" alt="">
+    <img class="absolute -z-10 inset-0 w-full h-[40%] object-cover" src="/images/hero_purplewaves.jpg" alt="">
 
-    <div class="flex flex-col md:flex-row mx-auto w-full max-w-7xl pt-8 pb-10  lg:py-36 text-left">
+    <div class="flex flex-col md:flex-row mx-auto w-full max-w-7xl pt-12 pb-10 lg:py-36 text-left">
       <div class="flex flex-col px-4 sm:px-8 lg:w-1/2 xl:pr-16">
         <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
           <span class="block xl:inline">A Smart Wallet</span>
