@@ -21,7 +21,7 @@
   <div class="flex md:order-2">
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <a
-      class="inline-block h-14 px-7 mt-0 md:py-3 py-2 bg-indigo-600 text-white font-bold text-lg leading-snug rounded-md shadow-md hover:bg-indigo-700 hover:shadow-md focus:bg-indogo-700 focus:shadow-md focus:outline-none focus:ring-0 active:bg-indigo-800 active:shadow-md transition duration-150 ease-in-out w-full"
+      class="inline-block h-10 px-7 mt-0 py-2 bg-indigo-600 text-white font-bold text-lg leading-snug rounded-md shadow-md hover:bg-indigo-700 hover:shadow-md focus:bg-indogo-700 focus:shadow-md focus:outline-none focus:ring-0 active:bg-indigo-800 active:shadow-md transition duration-150 ease-in-out w-full"
       data-mdb-ripple="true" data-mdb-ripple-color="light"
       href="https://chrome.google.com/webstore/detail/1-yakkl%C2%AE-smart-wallet/dpmfhilhjlhhakpbieclcghochdofeao?utm_source=yakkl_web">
       <div class="inline-flex items-center align-middle">
