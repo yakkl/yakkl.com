@@ -1,0 +1,27 @@
+<script lang="ts">
+  import CTAPopup from "$lib/components/CTAPopup.svelte";
+
+  let label = "Subscribe - Newsletter!";
+  let description = "You can always unsubscribe later!";
+  let buttonText = "Subscribe";
+
+</script>
+
+
+<CTAPopup>
+  <div class="z-30 max-w-xl flex flex-col gap-4 p-6">
+
+    <h3 class="font-bold text-4xl md:text-6xl text-center">{label}</h3>
+    <div class="text-xl md:text-2xl text-center">{description}</div>
+
+    <div class="text-center">
+      <button class="btn">{buttonText}</button>
+    </div>
+
+  </div> 
+</CTAPopup>
+
+
+<div class="text-base-content">
+  <p>Put something here</p>
+</div>
