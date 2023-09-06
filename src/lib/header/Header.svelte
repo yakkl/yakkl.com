@@ -34,7 +34,7 @@
       target="_blank"
       href="https://mvkeokyhfp4.typeform.com/to/jTTm4117?utm_source=yakkl_web&utm_medium=typeform&utm_campaign=survey&utm_content=crypto_awareness">
       <div class="inline-flex items-center align-middle">
-        <span>Need your help - Today!</span>
+        <span>We need your input - FREE YAKKL!</span>
       </div>
     </a>
     <NavHamburger on:click={toggle} />
