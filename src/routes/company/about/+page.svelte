@@ -14,7 +14,10 @@
         <p class="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">What makes us different</p>
       </div>
       <div class="relative z-10 mx-auto max-w-prose text-base lg:mx-0 lg:max-w-5xl lg:pr-72">
-        <p class="prose prose-indigo text-gray-500">To express what makes us different in one word - experience! Andy Jassy, CEO of Amazon, said it like this, "there is no compression algorithm for actual experience." There is so much misinformation with one crypto product or blockchain saying they can do 'whatever - insert the buzzword of the moment here' when they simply don't know what they don't know. Most may have never built real production systems that can handle load or muchless businesses that have solid processes builtin from day one.</p>
+        <p class="prose prose-indigo text-gray-800">To express what makes us different in one word - <span class="font-bold">experience</span>! </p>
+        <p class="prose prose-indigo text-gray-800 font-extrabold lg:max-w-xl mt-2">Andy Jassy, CEO of Amazon, said it like this, "there is no compression algorithm for actual experience!"</p>
+        
+        <p class="prose prose-indigo text-gray-500 mt-4">There is so much misinformation with one crypto product or blockchain saying they can do 'whatever - insert the buzzword of the moment here' when they simply don't know what they don't know. Most may have never built real production systems that can handle load or muchless businesses that have solid processes builtin from day one.</p>
       </div>
       <div class="lg:grid lg:grid-cols-2 lg:items-start lg:gap-8">
         <div class="relative z-10">
@@ -27,9 +30,9 @@
             </ul>
             <p>Another problem area is the misinformation coming from "influencers." Some seem to think of themselves as the "Guardian of the Galaxy (crypto edition)" when in reality they potentially create more issues than they actually help with. Just go to TikTok, Youtube, Twitter, and others and it will not take long to see all of this in action.</p>
             <h3>We're here to help</h3>
-            <p>We have brought many years of actual experience architecting, building out infrastructures that can support scale, and applications that are user friendly. Our first product is called YAKKL®  Smart Wallet. It's user friendly, highly secure, and powerful! If you are someone new to crypto you no longer have to go to three or four places and setup accounts just to get started. I found the process very user unfriendly and confusing.</p>
+            <p>We have brought many years of actual experience architecting, building out infrastructures that can support scale, and applications that are user friendly. Our first product is called YAKKL®  Smart Vault. It's user friendly, highly secure, and powerful! If you are someone new to crypto you no longer have to go to three or four places and setup accounts just to get started. I found the process very user unfriendly and confusing.</p>
             <p>Today, a user can download the Chrome Extension in their browser, enter in basic information and they are ready to go - simple! If the user has no crypto then they can simply buy cryptocurrencies or NFTs through YAKKL®  integrated third parties. The user can also sell their digital assets or even swap them with others without ever having to leave the wallet. We also added the feature that allows our users to track addresses (accounts) they may have on exchanges so that they can easily view their complete portfolio in one view. We call these Watch Accounts.</p>
-            <p>There are so many incredible features to simply list here. YAKKL®  Smart Wallet (Basic Edition) is FREE. The pricing page has all of the many options.
+            <p>There are so many incredible features to simply list here. YAKKL®  Smart Vault (Basic Edition) is FREE. The pricing page has all of the many options.
             </p>
           </div>
           <div class="mx-auto mt-10 flex max-w-prose text-base lg:max-w-none">
@@ -58,7 +61,7 @@
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                 </svg>
                 <p class="relative">
-                  I have a solid track record and have had the luxury of working at high-levels at some of the brands you know of or use almost daily.  One such brand was Bloomberg where I focused on infrastructure required to support high-speed trading and more in the fintech space. 2022 has taught everyone a lot about "what not to do" in the crypto ecosystem and the lack of actual experience in building out what it takes to operate a company and products that can truly scale. At YAKKL® , you get all of that and so much more!
+                  I have a solid track record and have had the luxury of working at high-levels at some of the brands you know of or use almost daily.  One such brand was Bloomberg where I focused on infrastructure required to support high-speed trading and more in the fintech space. The last few years have taught everyone a lot about <span class="underline font-bold">"what not to do" in the crypto ecosystem and the lack of actual experience in building</span> out what it takes to operate a company and products that can truly scale. At YAKKL®, you get all of that and so much more!
                 </p>
               </div>
             </div>

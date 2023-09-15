@@ -22,7 +22,7 @@
         </blockquote>
 
         <h2 class="mt-2 font-bold">The Gist</h2>
-        <p>We, the folks at YAKKL, Inc. (YAKKL® ), are on a mission to make web3 a better place. We hope you love our products and services — from YAKKL®  Smart Wallet to secure backup systems to management tools for distributed blockchain companies to the next great idea that we haven't even thought of yet — as much as we love creating them.
+        <p>We, the folks at YAKKL, Inc. (YAKKL® ), are on a mission to make web3 a better place. We hope you love our products and services — from YAKKL®  Smart Vault to secure backup systems to management tools for distributed blockchain companies to the next great idea that we haven't even thought of yet — as much as we love creating them.
         These Terms of Service (“Terms”) describe our commitments to you, and your rights and responsibilities when using our services. Our Privacy Policy ("Privacy") describes our commitment to keep your Personal Information secure. Please read them carefully and reach out to us if you have any questions. <strong>These Terms include a mandatory arbitration provision in Section 16. If you don't agree to these Terms, don't use our services.</strong></p>
 
         <h2 class="mt-2 font-bold">Terms of Service</h2>

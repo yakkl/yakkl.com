@@ -25,7 +25,7 @@
         <div>
           <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Solutions</h2>
           <FooterLinkGroup class="text-xs">
-            <FooterLink liClass="mb-4" href="/">YAKKL®  Smart Wallet</FooterLink>
+            <FooterLink liClass="mb-4" href="/">YAKKL®  Smart Vault</FooterLink>
             <FooterLink liClass="mb-4" href="/#features">Features</FooterLink>
             <FooterLink liClass="mb-4" href="/pricing">Pricing</FooterLink>
           </FooterLinkGroup>

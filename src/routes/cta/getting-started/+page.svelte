@@ -12,7 +12,7 @@
           <span class="block">Boost your productivity.</span>
           <span class="block">Start using YAKKL® today.</span>
         </h2>
-        <p class="mt-4 text-lg leading-6 text-indigo-200">Finally, a Smart Crypto Wallet that delivers!</p>
+        <p class="mt-4 text-lg leading-6 text-indigo-200">Finally, a Smart Crypto Vault that delivers!</p>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <a href="" class="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50 sm:w-auto">Download for free</a>
       </div>

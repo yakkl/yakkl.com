@@ -12,7 +12,7 @@
       alt="YAKKL® Logo"
     />
     <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white hidden md:inline-flex" >
-      YAKKL® Smart Wallet
+      YAKKL® Smart Vault
     </span>
     <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white md:invisible" >
       YAKKL®

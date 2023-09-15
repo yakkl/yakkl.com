@@ -5,12 +5,12 @@
     <div class="flex flex-col md:flex-row mx-auto w-full max-w-7xl pt-12 pb-10 lg:py-36 text-left">
       <div class="flex flex-col px-4 sm:px-8 lg:w-1/2 xl:pr-16">
         <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-          <span class="block xl:inline">A Smart Wallet</span>
+          <span class="block xl:inline">A Smart Vault</span>
           <span class="block text-white xl:inline">we have all dreamed of!</span>
         </h1>
         <p class="mx-auto mt-44 max-w-md text-lg text-gray-500 sm:mt-38 sm:text-xl md:max-w-3xl">
-          <!-- The YAKKL®  Smart Wallet offers highly secure storage for your digital assets, with an easy-to-use interface that prioritizes user experience. With YAKKL, you can easily and safely manage your cryptocurrencies, making transactions and tracking your portfolio with confidence. Plus, our cutting-edge security measures ensure that your assets are always protected. -->
-          Introducing the YAKKL® Smart Wallet, the simplest way to buy, sell, and swap cryptocurrencies. Gone are the days of crypto being a hassle and difficult to get into. Our easy-to-use features, built-in AI support, and advanced security options make crypto accessible to everyone. YAKKL® is the perfect solution for everyone. Try YAKKL®  today and experience the future of crypto!          
+          <!-- The YAKKL®  Smart Vault offers highly secure storage for your digital assets, with an easy-to-use interface that prioritizes user experience. With YAKKL, you can easily and safely manage your cryptocurrencies, making transactions and tracking your portfolio with confidence. Plus, our cutting-edge security measures ensure that your assets are always protected. -->
+          Introducing the YAKKL® Smart Vault, the simplest way to buy, sell, and swap cryptocurrencies. Gone are the days of crypto being a hassle and difficult to get into. Our easy-to-use features, built-in AI support, and advanced security options make crypto accessible to everyone. YAKKL® is the perfect solution for everyone. Try YAKKL®  today and experience the future of crypto!          
         </p>
         <div class="mx-auto mt-10 sm:flex sm:justify-center lg:justify-start">
           <div class="">
@@ -18,7 +18,7 @@
           </div>
         </div>
         <p class="mx-auto mt-3 font-semibold italic max-w-md text-md text-gray-500 sm:text-md md:mt-5 md:max-w-3xl">
-          <!-- "Secure your assets, simplify your life with the YAKKL®  Smart Wallet." -->
+          <!-- "Secure your assets, simplify your life with the YAKKL®  Smart Vault." -->
           YAKKL® is the perfect solution for novice and experienced users alike. Now is the time to join the YAKKL® community!
         </p>
       </div>

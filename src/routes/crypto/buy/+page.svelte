@@ -62,7 +62,7 @@
       <TimelineItem title="Enter your purchase method (bank, debit, or creditcard) and make purchase" date="Step 3">
         <p class="text-base font-normal text-gray-500 dark:text-gray-300">
           You will be prompted to enter your Ethereum address (assuming Ethereum for this explanation). That address DOES NOT have to be managed by YAKKL®, it can be managed by any wallet you choose. This is one of the great things about self-custody, you're in control. <br/><br/>
-          There are help prompts to explain any fees and what things mean. Once you have made your purchase, Stripe will submit your purchase to the blockchain and wait on confirmation. You can always check YAKKL® Smart Wallet for your transaction status (assuming YAKKL® manages it). If it has been processed, you will see it in your wallet. If it has not been processed, you will see it in your wallet as pending. <br/><br/>
+          There are help prompts to explain any fees and what things mean. Once you have made your purchase, Stripe will submit your purchase to the blockchain and wait on confirmation. You can always check YAKKL® Smart Vault for your transaction status (assuming YAKKL® manages it). If it has been processed, you will see it in your wallet. If it has not been processed, you will see it in your wallet as pending. <br/><br/>
           <span class="font-medium">GREAT! You have now purchased your first crypto. You can now use it to buy, sell, swap, or send to anyone you choose. You can also use it to pay for goods and services. If YAKKL® manages your address and keys then you can track everything knowing you are completely secure!</span>
         </p>
       </TimelineItem>

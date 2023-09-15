@@ -1,12 +1,12 @@
   <!-- Features -->
   <div class="bg-indigo-700">
     <div id="features" class="mx-auto max-w-4xl px-6 py-20 sm:py-20 lg:max-w-7xl lg:px-8 lg:py-20">
-      <h2 class="text-4xl font-bold tracking-tight text-white">The Smart Wallet built for efficiency, simplicity, and performance.</h2>
+      <h2 class="text-4xl font-bold tracking-tight text-white">The Smart Vault built for efficiency, simplicity, and performance.</h2>
       <p class="mt-6 max-w-3xl text-lg leading-8 text-indigo-200">
         Onboarding in the crypto world has been <span class="font-bold text-white">difficult until NOW!!</span>
       </p>
       <p class="mt-2 max-w-3xl text-lg leading-8 text-indigo-200">
-        Today - Onboarding is simple with the <span class="font-bold text-white">YAKKL®  Smart Wallet</span>! Here are only a few key features you will find with YAKKL® . 
+        Today - Onboarding is simple with the <span class="font-bold text-white">YAKKL® Smart Vault</span>! Here are only a few key benefits you will find with YAKKL® . 
       </p>
       <div class="mt-20 grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
         <div>
@@ -34,8 +34,8 @@
             </span>
           </div>
           <div class="mt-6">
-            <h3 class="text-lg font-semibold leading-8 text-white">Manage Accounts</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Manage as many accounts as you like with ease. Import from other wallets or export. YAKKL®  also provides an emergency kit for every account!</p>
+            <h3 class="text-lg font-semibold leading-8 text-white">Manage Wallet Accounts</h3>
+            <p class="mt-2 text-base leading-7 text-indigo-200">Manage as many portfolio wallet accounts and subportfolio wallet accoounts as you like with ease. Import from other wallets or export. YAKKL® also provides an emergency kit for every account!</p>
           </div>
         </div>
 
@@ -50,7 +50,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">Secure Emergency Kit</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">No more having some 12 or 24 word phrase that you have to write down. YAKKL®  automatically gives you the option to print and securely save an emergency kit with everything you need to restore an account if needed.</p>
+            <p class="mt-2 text-base leading-7 text-indigo-200">No more having some 12 or 24 word phrase that you have to write down. YAKKL® automatically gives you the option to print and securely save an emergency kit with everything you need to restore an account if needed.</p>
           </div>
         </div>
 
@@ -142,7 +142,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">Multiple cryptocurrencies</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">YAKKL®  currently supports Ethereum and other Ethereum based cryptocurrencies. We are working on supporting other coins and tokens. <span class="inline-flex items-center rounded-full bg-blue-100 hover:bg-blue-200 px-2.5 py-0.5 text-xs font-medium text-blue-800">In testing</span></p>
+            <p class="mt-2 text-base leading-7 text-indigo-200">YAKKL® currently supports Ethereum and other Ethereum based cryptocurrencies. We are working on supporting other coins and tokens. <span class="inline-flex items-center rounded-full bg-blue-100 hover:bg-blue-200 px-2.5 py-0.5 text-xs font-medium text-blue-800">In testing</span></p>
           </div>
         </div>
 
