@@ -92,7 +92,7 @@
             Are there any training videos or ebooks on YAKKL® and/or Crypto?
           </div>
           <div class="collapse-content italic ml-4"> 
-            <p>We are creating our YAKKL® University but it's not available at the moment. However, you can visit <a href="https://cryptogramps.fans?utm_medium=link&utm_source=yakkl_faq" target="_blank" class="text-blue-600">Crypto Gramps.</a> Crypto Gramps is building out a series of ebooks on crypto from beginner to technical professionals. There are a number of how-to videos available as well. Who knows, you may even see grandkids and puppies! BTW, Crypto Gramps was the primary architect and core contributor to YAKKL®.</p>
+            <p>We are creating our YAKKL® University but it's not available at the moment. However, you can visit <a href="https://cryptogramps.fans?utm_medium=link&utm_source=yakkl_faq" target="_blank" class="text-blue-600">Crypto Gramps.</a> Crypto Gramps is building out a series of ebooks on crypto from beginner to technical professionals. There are a number of how-to videos available as well. Who knows, you may even see grandkids and puppies! BTW, Crypto Gramps was the primary architect and core contributor to YAKKL®. </p>
           </div>
         </div>
       </div>
