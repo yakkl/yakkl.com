@@ -7,24 +7,22 @@
 		<meta content="YAKKL® Smart Vault" property="twitter:title">
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://js.stripe.com https://crypto-js.stripe.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://cdn.jsdelivr.net https://sibforms.com https://widget.freshworks.com">
-
+		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://js.stripe.com https://crypto-js.stripe.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://cdn.jsdelivr.net https://sibforms.com ">
+		<!-- https://widget.freshworks.com  -->
 		<script src="/js/fontawesome-8d8e5192b2.js"></script>
 		
 		<script src="https://js.stripe.com/v3/"></script>
 		<script src="https://crypto-js.stripe.com/crypto-onramp-outer.js"></script>
 
 		%sveltekit.head%
-		<!-- https://fw-cdn.com https://yakkl-75a01f702b9220a16726725.freshchat.com -->
-		<!-- <script src='https://fw-cdn.com/2395728/2996213.js' chat='true'></script> -->
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 
 		<script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.7.2/dist/cookieconsent.js"></script>
-		<script src="/js/cookie_consent.js"></script>
-		
+		<script src="/js/cookie_consent.js"></script>         
+
 		<script type="text/plain" data-cookiecategory="analytics" src="/js/analytics.js" defer></script>
 		<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 		<!-- Google tag (gtag.js) -->
@@ -33,10 +31,9 @@
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
-
 			gtag('config', 'G-ZBFFBXMZS2');
 		</script>		
-		<script>
+		<!-- <script>
 			window.fwSettings={
 			'widget_id':150000004106
 			};
@@ -45,7 +42,7 @@
 		<script type='text/javascript' src='https://widget.freshworks.com/widgets/150000004106.js' async defer></script>
 		<script type='text/javascript'>
 			FreshworksWidget('show');
-		</script>
+		</script> -->
 		<!-- <script type="text/plain" data-cookiecategory="targeting" src="/js/targeting.js" defer></script> -->
 		<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=a8b2t0khih&ev=PageView&noscript=1"/></noscript>
 	</body>

@@ -22,7 +22,6 @@
         <h1 class="text-2xl lg:text-4xl font-bold text-indigo-600 my-2 lg:my-6">Stay in touch!</h1>
           <!-- svelte-ignore a11y-missing-attribute -->
           <iframe src="https://embeds.beehiiv.com/c52993ff-d645-4353-832b-cffdc65a14ce?slim=true" data-test-id="beehiiv-embed" height="52" width="100%" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
-          
       </div>
   </section>
 
