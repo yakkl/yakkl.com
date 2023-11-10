@@ -62,7 +62,7 @@
         <!-- <DropdownItem>Sign out</DropdownItem> -->
       </Dropdown>
     </NavLi>
-    <NavLi href="/investors">Investors</NavLi>
+    <!-- <NavLi href="/investors">Investors</NavLi> -->
     <NavLi href="/university/support">Support</NavLi>
   </NavUl>
 </Navbar>

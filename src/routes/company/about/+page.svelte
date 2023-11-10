@@ -71,7 +71,7 @@
               </span>
               <span class="relative ml-4 font-semibold leading-6 text-indigo-300 sm:ml-24 sm:pl-1">
                 <span class="font-semibold text-white sm:inline">Hans Jones</span>
-                <span class="sm:inline">CEO/CTO at YAKKL® </span>
+                <span class="sm:inline">Interim CTO and Advisor</span>
               </span>
             </cite>
           </blockquote>
