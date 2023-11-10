@@ -47,7 +47,7 @@
             Does YAKKL® have different versions and are they FREE?
           </div>
           <div class="collapse-content italic ml-4"> 
-            <p>Great question! YAKKL® has different versions, 'standard' and 'premier'. Our 'enterprise' and 'institution' releases will be available in 2024. The 'standard' version is free. The 'premier' version has a very small annual subscription fee to offset 3rd party fees due to the level of security and network availability. However, for 2023, the 'premier' version is also FREE!</p>
+            <p>Great question! YAKKL® has different versions, 'standard' and 'premier'. Our 'enterprise' and 'institution' releases will be available in 2024. The 'standard' version is free. The 'premier' version has a very small annual subscription fee to offset 3rd party fees due to the level of security and network availability. However, until Jan 1, 2025, the 'premier' version is FREE!</p>
           </div>
         </div>
         <div class="collapse collapse-arrow join-item border border-base-300">
@@ -86,7 +86,7 @@
             <p>For now, the easiest way is to email <a href="mailto:support@yakkl.com" class="text-blue-600" target="_blank">support@yakkl.com</a>. There are other ways coming soon.</p>
           </div>
         </div>
-        <div class="collapse collapse-arrow join-item border border-base-300">
+        <!-- <div class="collapse collapse-arrow join-item border border-base-300">
           <input type="radio" name="my-accordion-1" class="w-full"/> 
           <div class="collapse-title text-xl font-medium">
             Are there any training videos or ebooks on YAKKL® and/or Crypto?
@@ -94,7 +94,7 @@
           <div class="collapse-content italic ml-4"> 
             <p>We are creating our YAKKL® University but it's not available at the moment. However, you can visit <a href="https://cryptogramps.fans?utm_medium=link&utm_source=yakkl_faq" target="_blank" class="text-blue-600">Crypto Gramps.</a> Crypto Gramps is building out a series of ebooks on crypto from beginner to technical professionals. There are a number of how-to videos available as well. Who knows, you may even see grandkids and puppies! BTW, Crypto Gramps was the primary architect and core contributor to YAKKL®. </p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
