@@ -20,14 +20,16 @@
     <div class="mx-auto max-w-7xl px-6 pt-24 lg:px-8">
       <div class="sm:align-center sm:flex sm:flex-col">
         <h1 class="text-5xl font-bold tracking-tight text-gray-900 sm:text-center">Pricing Plans</h1>
-        <p class="mt-5 text-xl text-gray-500 sm:text-center">Start exploring crypto for <span class="font-extrabold">FREE</span>! The Premier version is FREE until Jan 1, 2025 - Wow! Click on 'Get started today' and download/install your YAKKL® Smart Vault - Chrome Browser Extension.</p> <!--Business and Enterprise/Institution levels unlock additional features specific for multi-divisional enterprises and global institutions.</p>-->
+        <p class="mt-5 text-xl text-gray-500 sm:text-center">Start exploring crypto for <span class="font-extrabold">FREE</span>! Wow! Click on 'Get started today' and download/install your YAKKL® Smart Vault - Chrome Browser Extension.</p> <!--Business and Enterprise/Institution levels unlock additional features specific for multi-divisional enterprises and global institutions.</p>-->
         <!-- <div class="relative mt-6 flex self-center rounded-lg bg-gray-100 p-0.5 sm:mt-8">
           <button type="button" class="relative w-1/2 whitespace-nowrap rounded-md border-gray-200 bg-white py-2 text-sm font-medium text-gray-900 shadow-sm focus:z-10 focus:outline-none focus:ring-2 focus:ring-purple-500 sm:w-auto sm:px-8">Monthly billing</button>
           <button type="button" class="relative ml-0.5 w-1/2 whitespace-nowrap rounded-md border border-transparent py-2 text-sm font-medium text-gray-700 focus:z-10 focus:outline-none focus:ring-2 focus:ring-purple-500 sm:w-auto sm:px-8">Yearly billing</button>
         </div> -->
       </div>
-      <div class="mt-12 space-y-4 sm:mt-16 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:mx-auto lg:max-w-4xl xl:mx-0 xl:max-w-none xl:grid-cols-2">
-        <div class="divide-y divide-gray-200 rounded-lg border border-gray-200 shadow-lg">
+      <div class="mt-12 space-y-4 sm:mt-16  lg:mx-auto lg:max-w-4xl xl:mx-0 xl:max-w-none ">
+
+        <!-- sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 xl:grid-cols-2 -->
+        <!-- <div class="divide-y divide-gray-200 rounded-lg border border-gray-200 shadow-lg">
           <div class="p-6 h-[295px] grid grid-rows-6">
             <h2 class="text-xl font-bold leading-6 text-gray-900 text-center">Standard</h2>
             <p class="text-sm text-gray-500 row-span-2">All the basics needed for securely managing digital assets (crypto, NFTs, ...).</p>
@@ -35,13 +37,98 @@
               <span class="text-2xl font-bold tracking-tight text-gray-900">$0</span>
               <span class="text-base font-medium text-gray-500">/free</span>
             </p>
-            <!-- svelte-ignore a11y-invalid-attribute -->
+            
             <a href="https://chrome.google.com/webstore/detail/1-yakkl%C2%AE-smart-wallet/dpmfhilhjlhhakpbieclcghochdofeao?utm_source=yakkl_web" class=" w-full rounded-md border border-transparent bg-purple-600 py-2 text-center text-sm font-semibold text-white hover:bg-purple-700">Get started today</a>
+          </div>
+          <div class="px-6 pt-6 pb-8">
+            <h3 class="text-sm font-medium text-gray-900">What's included</h3>
+            
+            <ul role="list" class="mt-6 space-y-4">
+              <li class="flex space-x-3">
+            
+                <svg class="h-5 w-5 flex-shrink-0 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-sm text-gray-500">Easy to use interface</span>
+              </li>
+
+              <li class="flex space-x-3">
+                
+                <svg class="h-5 w-5 flex-shrink-0 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-sm text-gray-500">Ability to buy, sell, and swap</span>
+              </li>
+
+              <li class="flex space-x-3">
+                
+                <svg class="h-5 w-5 flex-shrink-0 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-sm text-gray-500">Automatically print off Standard Emergency Kit (per account)</span>
+              </li>
+              <li class="flex space-x-3">
+                
+                <svg class="h-5 w-5 flex-shrink-0 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-sm text-gray-500">AI enhanced YAKKL-GPT built-in</span>
+              </li>
+              <li class="flex space-x-3">
+                
+                <svg class="h-5 w-5 flex-shrink-0 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-sm text-gray-500">Ethereum and EVM based coins/tokens</span>
+              </li>
+              <li class="flex space-x-3">
+                
+                <svg class="h-5 w-5 flex-shrink-0 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-sm text-gray-500">Easily manage your NFTs</span>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+
+
+
+
+
+        <div class="relative z-10 divide-y divide-gray-200 rounded-lg border border-gray-200 shadow-2xl">
+          <!-- <div class="flex flex-col rounded-t-lg fill-indigo-600 bg-indigo-600 w-[156px] h-10 border-none">
+            <span class="flex flex-col text-gray-100 uppercase text-center font-bold">Recommended</span>
+            <svg class="flex flex-col" xmlns="http://www.w3.org/2000/svg" width="156" height="15.476" viewBox="0 0 156 15.476">
+              <path id="Path_712" data-name="Path 712" d="M332.23,375.422l-74.046,11.4a3.875,3.875,0,0,1-1.188,0l-74.045-11.4a3.991,3.991,0,0,1-3.361-3.962c-.3.3,155.985-.253,156,0A3.992,3.992,0,0,1,332.23,375.422Z" transform="translate(-179.591 -371.392)"></path>
+            </svg>
+          </div> -->
+          <!-- grid-rows-7 gap-2 -->
+          <div id="premium" class="p-6 h-[295px] grid grid-rows-6">
+            <!-- <p class="absolute top-0 -translate-y-1/2 transform rounded-full bg-indigo-500 py-1.5 px-4 text-sm font-semibold text-white">Most popular</p> -->
+            <h2 class="text-xl font-bold leading-6 text-gray-900 text-center">YAKKL Premier</h2>
+            <p class=" text-sm text-gray-500 row-span-2">When you need more horsepower, features, and security options. Easily manage all of your crypto with an easy to use and intuitive interface!</p>
+            <div class="row-span-2 text-center">
+              <p class="text-xl font-bold tracking-tight text-gray-900">FREE!!</p>  <!--Days Free - $0 Today</span> -->
+              <p class="text-sm tracking-tight text-gray-500">Now FREE!!</p>
+            </div>
+              <!-- svelte-ignore security-anchor-rel-noreferrer -->
+              <!-- <a href="/billing?term=annual" target="_blank" class="w-full row-span-1 rounded-md border border-transparent bg-purple-600 py-2 text-center text-sm font-semibold text-white hover:bg-purple-700">Annual billing $9.99/yr</a> -->
+              <a href="https://chrome.google.com/webstore/detail/1-yakkl%C2%AE-smart-wallet/dpmfhilhjlhhakpbieclcghochdofeao?utm_source=yakkl_web" class=" w-full rounded-md border border-transparent bg-purple-600 py-2 text-center text-sm font-semibold text-white hover:bg-purple-700">Get started today</a>
+              <!-- svelte-ignore security-anchor-rel-noreferrer -->
+              <!-- <a href="/billing?term=monthly" target="_blank" class="w-full row-span-1 rounded-md border border-transparent bg-purple-600 py-2 text-center text-sm font-semibold text-white hover:bg-purple-700">Monthly billing $14.99/mo</a> -->
           </div>
           <div class="px-6 pt-6 pb-8">
             <h3 class="text-sm font-medium text-gray-900">What's included</h3>
             <!-- svelte-ignore a11y-no-redundant-roles -->
             <ul role="list" class="mt-6 space-y-4">
+              <!-- <li class="flex space-x-3"> -->
+                <!-- Heroicon name: mini/check -->
+                <!-- <svg class="h-5 w-5 flex-shrink-0 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-sm text-gray-500">Everything in Standard version - plus...</span>
+              </li> -->
               <li class="flex space-x-3">
                 <!-- Heroicon name: mini/check -->
                 <svg class="h-5 w-5 flex-shrink-0 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -85,43 +172,6 @@
                   <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
                 </svg>
                 <span class="text-sm text-gray-500">Easily manage your NFTs</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="relative z-10 divide-y divide-gray-200 rounded-lg border border-gray-200 shadow-2xl">
-          <!-- <div class="flex flex-col rounded-t-lg fill-indigo-600 bg-indigo-600 w-[156px] h-10 border-none">
-            <span class="flex flex-col text-gray-100 uppercase text-center font-bold">Recommended</span>
-            <svg class="flex flex-col" xmlns="http://www.w3.org/2000/svg" width="156" height="15.476" viewBox="0 0 156 15.476">
-              <path id="Path_712" data-name="Path 712" d="M332.23,375.422l-74.046,11.4a3.875,3.875,0,0,1-1.188,0l-74.045-11.4a3.991,3.991,0,0,1-3.361-3.962c-.3.3,155.985-.253,156,0A3.992,3.992,0,0,1,332.23,375.422Z" transform="translate(-179.591 -371.392)"></path>
-            </svg>
-          </div> -->
-          <!-- grid-rows-7 gap-2 -->
-          <div id="premium" class="p-6 h-[295px] grid grid-rows-6">
-            <!-- <p class="absolute top-0 -translate-y-1/2 transform rounded-full bg-indigo-500 py-1.5 px-4 text-sm font-semibold text-white">Most popular</p> -->
-            <h2 class="text-xl font-bold leading-6 text-gray-900 text-center">Premier</h2>
-            <p class=" text-sm text-gray-500 row-span-2">When you need more horsepower, features, and security options.</p>
-            <div class="row-span-2 text-center">
-              <p class="text-xl font-bold tracking-tight text-gray-900">FREE until Jan 1, 2025!</p>  <!--Days Free - $0 Today</span> -->
-              <p class="text-sm tracking-tight text-gray-500">Normally - $5/month or $29.99/year</p>
-            </div>
-              <!-- svelte-ignore security-anchor-rel-noreferrer -->
-              <!-- <a href="/billing?term=annual" target="_blank" class="w-full row-span-1 rounded-md border border-transparent bg-purple-600 py-2 text-center text-sm font-semibold text-white hover:bg-purple-700">Annual billing $9.99/yr</a> -->
-              <a href="https://chrome.google.com/webstore/detail/1-yakkl%C2%AE-smart-wallet/dpmfhilhjlhhakpbieclcghochdofeao?utm_source=yakkl_web" class=" w-full rounded-md border border-transparent bg-purple-600 py-2 text-center text-sm font-semibold text-white hover:bg-purple-700">Get started today</a>
-              <!-- svelte-ignore security-anchor-rel-noreferrer -->
-              <!-- <a href="/billing?term=monthly" target="_blank" class="w-full row-span-1 rounded-md border border-transparent bg-purple-600 py-2 text-center text-sm font-semibold text-white hover:bg-purple-700">Monthly billing $14.99/mo</a> -->
-          </div>
-          <div class="px-6 pt-6 pb-8">
-            <h3 class="text-sm font-medium text-gray-900">What's included</h3>
-            <!-- svelte-ignore a11y-no-redundant-roles -->
-            <ul role="list" class="mt-6 space-y-4">
-              <li class="flex space-x-3">
-                <!-- Heroicon name: mini/check -->
-                <svg class="h-5 w-5 flex-shrink-0 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-                </svg>
-                <span class="text-sm text-gray-500">Everything in Standard version - plus...</span>
               </li>
 
               <li class="flex space-x-3">
