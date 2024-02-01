@@ -7,7 +7,7 @@
 		<meta content="YAKKL® Smart Vault" property="twitter:title">
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://js.stripe.com https://crypto-js.stripe.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://cdn.jsdelivr.net https://sibforms.com ">
+		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://js.stripe.com https://crypto-js.stripe.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://cdn.jsdelivr.net https://sibforms.com https://unpkg.com">
 		<!-- https://widget.freshworks.com  -->
 		<script src="/js/fontawesome-8d8e5192b2.js"></script>
 		
@@ -33,16 +33,74 @@
 			gtag('js', new Date());
 			gtag('config', 'G-ZBFFBXMZS2');
 		</script>		
-		<!-- <script>
-			window.fwSettings={
-			'widget_id':150000004106
-			};
-			!function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}() 
-		</script>
-		<script type='text/javascript' src='https://widget.freshworks.com/widgets/150000004106.js' async defer></script>
-		<script type='text/javascript'>
-			FreshworksWidget('show');
+		<!-- <script type="module">
+			import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js'
+	
+			const canvas = document.createElement('canvas')
+const ctx = canvas.getContext('2d')
+
+// Define the waveform gradient
+const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height * 1.35)
+gradient.addColorStop(0, '#656666') // Top color
+gradient.addColorStop((canvas.height * 0.7) / canvas.height, '#656666') // Top color
+gradient.addColorStop((canvas.height * 0.7 + 1) / canvas.height, '#ffffff') // White line
+gradient.addColorStop((canvas.height * 0.7 + 2) / canvas.height, '#ffffff') // White line
+gradient.addColorStop((canvas.height * 0.7 + 3) / canvas.height, '#B1B1B1') // Bottom color
+gradient.addColorStop(1, '#B1B1B1') // Bottom color
+
+// Define the progress gradient
+const progressGradient = ctx.createLinearGradient(0, 0, 0, canvas.height * 1.35)
+progressGradient.addColorStop(0, '#EE772F') // Top color
+progressGradient.addColorStop((canvas.height * 0.7) / canvas.height, '#EB4926') // Top color
+progressGradient.addColorStop((canvas.height * 0.7 + 1) / canvas.height, '#ffffff') // White line
+progressGradient.addColorStop((canvas.height * 0.7 + 2) / canvas.height, '#ffffff') // White line
+progressGradient.addColorStop((canvas.height * 0.7 + 3) / canvas.height, '#F6B094') // Bottom color
+progressGradient.addColorStop(1, '#F6B094') // Bottom color
+
+			const wavesurfer = WaveSurfer.create({
+				container: document.body,
+				waveColor: gradient, //'rgb(200, 0, 200)',
+				progressColor: progressGradient, //'rgb(100, 0, 100)',
+				url: 'audio.wav',
+				  // Set a bar width
+  barWidth: 2,
+  // Optionally, specify the spacing between bars
+  //barGap: 1,
+  // And the bar radius
+  //barRadius: 2,
+
+			})
+			
+//			wavesurfer.on('click', () => {
+//				wavesurfer.play()
+//			})
+wavesurfer.on('interaction', () => {
+	wavesurfer.playPause()
+})
+
+// Hover effect
+{
+  const hover = document.querySelector('#hover')
+  const waveform = document.querySelector('#waveform')
+  waveform.addEventListener('pointermove', (e) => (hover.style.width = `${e.offsetX}px`))
+}
+
+// Current time & duration
+{
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60)
+    const secondsRemainder = Math.round(seconds) % 60
+    const paddedSeconds = `0${secondsRemainder}`.slice(-2)
+    return `${minutes}:${paddedSeconds}`
+  }
+
+  const timeEl = document.querySelector('#time')
+  const durationEl = document.querySelector('#duration')
+  wavesurfer.on('decode', (duration) => (durationEl.textContent = formatTime(duration)))
+  wavesurfer.on('timeupdate', (currentTime) => (timeEl.textContent = formatTime(currentTime)))
+}
 		</script> -->
+
 		<!-- <script type="text/plain" data-cookiecategory="targeting" src="/js/targeting.js" defer></script> -->
 		<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=a8b2t0khih&ev=PageView&noscript=1"/></noscript>
 	</body>
