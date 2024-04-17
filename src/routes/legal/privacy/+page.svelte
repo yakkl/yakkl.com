@@ -172,7 +172,7 @@
         </li>
         <li><p>Analytics.</p>
         <ul>
-        <li>We use analytics providers, including Google Analytics, which uses cookies and similar technologies to collect and analyze information about the use of the website and report on activities and trends. This service may also collect information regarding the use of other websites, apps, and online resources. You can learn about Google’s practices by going to <a href="www.google.com/policies/privacy/partners/">Google Privacy &amp; Terms</a>, and exercise the opt-out provided by Google by downloading the Google Analytics opt-out browser add-on, available at <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics Opt-out</a>.</li>
+        <li>We use analytics providers, including Google Analytics, which uses cookies and similar technologies to collect and analyze information about the use of the website and report on activities and trends. This service may also collect information regarding the use of other websites, apps, and online resources. You can learn about Google’s practices by going to https://www.google.com/policies/privacy/partners/ (Google Privacy &amp; Terms), and exercise the opt-out provided by Google by downloading the Google Analytics opt-out browser add-on, available at https://tools.google.com/dlpage/gaoptout (Google Analytics Opt-out).</li>
         </ul>
         </li>
         </ul>

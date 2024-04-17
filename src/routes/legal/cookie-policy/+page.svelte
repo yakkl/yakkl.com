@@ -161,7 +161,7 @@
         
         <h3>Controlling Cookies</h3>
         
-        <p>Visitors may wish to restrict the use of cookies or completely prevent them from being set. Most browsers provide for ways to control cookie behavior such as the length of time they are stored – either through built-in functionality or by utilizing third party plugins. If you disable cookies, please be aware that some of the features of our service may not function correctly. To find out more on how to manage and delete cookies, visit aboutcookies.org. For more details on your choices regarding use of your web browsing activity for interest-based advertising visit <a href="http://youronlinechoices.eu">youronlinechoices.eu</a> (EU based) or <a href="http://optout.aboutads.info">optout.aboutads.info</a> (US based).</p> 
+        <p>Visitors may wish to restrict the use of cookies or completely prevent them from being set. Most browsers provide for ways to control cookie behavior such as the length of time they are stored – either through built-in functionality or by utilizing third party plugins. If you disable cookies, please be aware that some of the features of our service may not function correctly. To find out more on how to manage and delete cookies, visit aboutcookies.org. For more details on your choices regarding use of your web browsing activity for interest-based advertising visit <a href="https://youronlinechoices.eu">youronlinechoices.eu</a> (EU based) or <a href="https://optout.aboutads.info">optout.aboutads.info</a> (US based).</p> 
         
         <p>On a mobile device, you may also be to adjust your settings to limit tracking.</p>
         
