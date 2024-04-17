@@ -4,7 +4,7 @@
   import Footer from "$lib/footer/Footer.svelte";
 </script>
 
-<Gradient>
+<!-- <Gradient> -->
   <Header/>
   <div class="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
     <div class="relative bg-white shadow-xl">
@@ -13,7 +13,7 @@
       <!-- lg:grid-cols-3 -->
       <div class="grid grid-cols-1 ">
         <!-- Contact information -->
-        <div class="relative overflow-hidden bg-indigo-700 py-10 px-6 sm:px-10 xl:p-12">
+        <div class="relative overflow-hidden bg-gray-700 py-10 px-6 sm:px-10 xl:p-12">
           <div class="pointer-events-none absolute inset-0 sm:hidden" aria-hidden="true">
             <svg class="absolute inset-0 h-full w-full" width="343" height="388" viewBox="0 0 343 388" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
               <path d="M-99 461.107L608.107-246l707.103 707.107-707.103 707.103L-99 461.107z" fill="url(#linear1)" fill-opacity=".1" />
@@ -48,18 +48,18 @@
             </svg>
           </div>
           <h3 class="text-lg font-medium text-white">Partnering Information</h3>
-          <p class="mt-6 max-w-3xl text-base text-indigo-50">
+          <p class="mt-6 max-w-3xl text-base text-gray-50">
             If you are interested in partnering in anyway that makes sense, then we look forward to hearing from you. This is a work in process so we're open to creative ideas! Here are a few items on the roadmap:
           </p>
-          <ol class="ml-5 list-disc text-base text-indigo-50">
+          <ol class="ml-5 list-disc text-base text-gray-50">
             <li class="ml-5">Affliate Partner</li>
             <li class="ml-5">Collaboration Partner</li>
           </ol>
           <dl class="mt-8 space-y-6">
             <dt><span class="sr-only">Email</span></dt>
-            <dd class="flex text-base text-indigo-50">
+            <dd class="flex text-base text-gray-50">
               <!-- Heroicon name: outline/envelope -->
-              <svg class="h-6 w-6 flex-shrink-0 text-indigo-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <svg class="h-6 w-6 flex-shrink-0 text-gray-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
               </svg>
               <span class="ml-3 underline"><a href="mailto:partners@yakkl.com" target="_blank">partners@yakkl.com</a></span>
@@ -75,4 +75,4 @@
   </div>
 
   <Footer/>
-</Gradient>
+<!-- </Gradient> -->

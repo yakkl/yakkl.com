@@ -7,7 +7,7 @@
   import Footer from '$lib/footer/Footer.svelte';
 </script>
 
-<Gradient>
+<!-- <Gradient> -->
 
   <Header/>
 
@@ -19,4 +19,4 @@
 
   <Footer/>
 
-</Gradient>
+<!-- </Gradient> -->

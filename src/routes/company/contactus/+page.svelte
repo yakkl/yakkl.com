@@ -5,10 +5,10 @@
   import Contactus from "$lib/contactus/Contactus.svelte";
 </script>
 
-<Gradient>
+<!-- <Gradient> -->
   <Header/>
 
   <Contactus/>
   
   <Footer/>
-</Gradient>
+<!-- </Gradient> -->

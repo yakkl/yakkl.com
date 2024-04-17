@@ -12,7 +12,7 @@
   // https://buy.stripe.com/cN2cOA3KTf1R9va9AB - monthly
 </script>
 
-<Gradient>
+<!-- <Gradient> -->
   <Header/>
 
   <!-- Pricing with four tiers and toggle -->
@@ -20,7 +20,7 @@
     <div class="mx-auto max-w-7xl px-6 pt-24 lg:px-8">
       <div class="sm:align-center sm:flex sm:flex-col">
         <h1 class="text-5xl font-bold tracking-tight text-gray-900 sm:text-center">Pricing Plans</h1>
-        <p class="mt-5 text-xl text-gray-500 sm:text-center">Start exploring crypto for <span class="font-extrabold">FREE</span>! Wow! Click on 'Get started today' and download/install your YAKKL® Smart Vault - Chrome Browser Extension.</p> <!--Business and Enterprise/Institution levels unlock additional features specific for multi-divisional enterprises and global institutions.</p>-->
+        <p class="mt-5 text-xl text-gray-500 sm:text-center">Start exploring crypto for <span class="font-extrabold">FREE</span>! Wow! Click on 'Get started today' and download/install your YAKKL® Smart Wallet - Chrome Browser Extension.</p> <!--Business and Enterprise/Institution levels unlock additional features specific for multi-divisional enterprises and global institutions.</p>-->
         <!-- <div class="relative mt-6 flex self-center rounded-lg bg-gray-100 p-0.5 sm:mt-8">
           <button type="button" class="relative w-1/2 whitespace-nowrap rounded-md border-gray-200 bg-white py-2 text-sm font-medium text-gray-900 shadow-sm focus:z-10 focus:outline-none focus:ring-2 focus:ring-purple-500 sm:w-auto sm:px-8">Monthly billing</button>
           <button type="button" class="relative ml-0.5 w-1/2 whitespace-nowrap rounded-md border border-transparent py-2 text-sm font-medium text-gray-700 focus:z-10 focus:outline-none focus:ring-2 focus:ring-purple-500 sm:w-auto sm:px-8">Yearly billing</button>
@@ -97,7 +97,7 @@
 
 
         <div class="relative z-10 divide-y divide-gray-200 rounded-lg border border-gray-200 shadow-2xl">
-          <!-- <div class="flex flex-col rounded-t-lg fill-indigo-600 bg-indigo-600 w-[156px] h-10 border-none">
+          <!-- <div class="flex flex-col rounded-t-lg fill-gray-600 bg-gray-600 w-[156px] h-10 border-none">
             <span class="flex flex-col text-gray-100 uppercase text-center font-bold">Recommended</span>
             <svg class="flex flex-col" xmlns="http://www.w3.org/2000/svg" width="156" height="15.476" viewBox="0 0 156 15.476">
               <path id="Path_712" data-name="Path 712" d="M332.23,375.422l-74.046,11.4a3.875,3.875,0,0,1-1.188,0l-74.045-11.4a3.991,3.991,0,0,1-3.361-3.962c-.3.3,155.985-.253,156,0A3.992,3.992,0,0,1,332.23,375.422Z" transform="translate(-179.591 -371.392)"></path>
@@ -105,7 +105,7 @@
           </div> -->
           <!-- grid-rows-7 gap-2 -->
           <div id="premium" class="p-6 h-[295px] grid grid-rows-6">
-            <!-- <p class="absolute top-0 -translate-y-1/2 transform rounded-full bg-indigo-500 py-1.5 px-4 text-sm font-semibold text-white">Most popular</p> -->
+            <!-- <p class="absolute top-0 -translate-y-1/2 transform rounded-full bg-gray-500 py-1.5 px-4 text-sm font-semibold text-white">Most popular</p> -->
             <h2 class="text-xl font-bold leading-6 text-gray-900 text-center">YAKKL Premier</h2>
             <p class=" text-sm text-gray-500 row-span-2">When you need more horsepower, features, and security options. Easily manage all of your crypto with an easy to use and intuitive interface!</p>
             <div class="row-span-2 text-center">
@@ -114,7 +114,7 @@
             </div>
               <!-- svelte-ignore security-anchor-rel-noreferrer -->
               <!-- <a href="/billing?term=annual" target="_blank" class="w-full row-span-1 rounded-md border border-transparent bg-purple-600 py-2 text-center text-sm font-semibold text-white hover:bg-purple-700">Annual billing $9.99/yr</a> -->
-              <a href="https://chrome.google.com/webstore/detail/1-yakkl%C2%AE-smart-wallet/dpmfhilhjlhhakpbieclcghochdofeao?utm_source=yakkl_web" class=" w-full rounded-md border border-transparent bg-purple-600 py-2 text-center text-sm font-semibold text-white hover:bg-purple-700">Get started today</a>
+              <a href="https://chrome.google.com/webstore/detail/1-yakkl%C2%AE-smart-wallet/dpmfhilhjlhhakpbieclcghochdofeao?utm_source=yakkl_web" class=" w-full rounded-md border border-transparent bg-gray-600 py-2 text-center text-sm font-semibold text-white hover:bg-gray-700">Get started today</a>
               <!-- svelte-ignore security-anchor-rel-noreferrer -->
               <!-- <a href="/billing?term=monthly" target="_blank" class="w-full row-span-1 rounded-md border border-transparent bg-purple-600 py-2 text-center text-sm font-semibold text-white hover:bg-purple-700">Monthly billing $14.99/mo</a> -->
           </div>
@@ -390,6 +390,6 @@
     </div>
   </div>
   <Footer/>
-</Gradient>
+<!-- </Gradient> -->
 <!-- Add a logo cloud -->
 <!-- Add testimonial -->

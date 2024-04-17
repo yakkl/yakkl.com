@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>YAKKL® Smart Vault</title>
+		<title>YAKKL® Smart Wallet</title>
 		<meta charset="utf-8" />
-		<meta content="YAKKL® Smart Vault" property="og:title">
-		<meta content="YAKKL® Smart Vault" property="twitter:title">
+		<meta content="YAKKL® Smart Wallet" property="og:title">
+		<meta content="YAKKL® Smart Wallet" property="twitter:title">
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://js.stripe.com https://crypto-js.stripe.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://cdn.jsdelivr.net https://sibforms.com https://unpkg.com">
@@ -17,8 +17,10 @@
 		%sveltekit.head%
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
+	<body data-sveltekit-preload-data="hover" style="background-color: white">
+		<!-- Should take a look at dark mode again! Remove the style above and set it correctly for tailwind -->
+		<!-- <div style="display: contents">%sveltekit.body%</div> -->
+		<div>%sveltekit.body%</div>
 
 		<script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.7.2/dist/cookieconsent.js"></script>
 		<script src="/js/cookie_consent.js"></script>         

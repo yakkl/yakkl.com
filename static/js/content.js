@@ -999,7 +999,7 @@
     const DEFAULT_POPUP_WIDTH = 428;
     const DEFAULT_POPUP_HEIGHT = 926;
     const DEFAULT_EXT_HEIGHT = 926;
-    const DEFAULT_TITLE = "#1 YAKKL®  Smart Vault";
+    const DEFAULT_TITLE = "#1 YAKKL®  Smart Wallet";
     const DEFAULT_DERIVED_PATH_ETH = "m/44'/60'/";
     const DEFAULT_YAKKL_NETWORKS = "yakklNetworks";
     const STORAGE_YAKKL_SETTINGS = "yakklSettings";

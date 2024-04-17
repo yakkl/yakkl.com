@@ -3,12 +3,12 @@
 
 </script>
 
-<Footer footerType="socialmedia" class="mt-4 border border-t">
+<Footer footerType="socialmedia" class="border border-t">
   <div class="md:flex md:justify-between flex-row">
     <div class="flex flex-col sm:w-full sm:mb-6 md:mb-0 md:w-[30%] lg:w-[40%] xl:w-[60%]">
       <FooterBrand
         href="/"
-        src="/images/logo128x128.png"
+        src="/images/logoBullFav-Black128x128.png"
         alt="YAKKL® Logo"
         name="YAKKL® "
       />
@@ -25,9 +25,9 @@
         <div>
           <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Solutions</h2>
           <FooterLinkGroup class="text-xs">
-            <FooterLink liClass="mb-4" href="/">YAKKL®  Smart Vault</FooterLink>
+            <FooterLink liClass="mb-4" href="/">YAKKL® Smart Wallet</FooterLink>
             <FooterLink liClass="mb-4" href="/#features">Features</FooterLink>
-            <FooterLink liClass="mb-4" href="/pricing">Pricing</FooterLink>
+            <!-- <FooterLink liClass="mb-4" href="/pricing">Pricing</FooterLink> -->
           </FooterLinkGroup>
         </div>
         <div>
@@ -42,8 +42,8 @@
           <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Support</h2>
           <FooterLinkGroup class="text-xs">
             <!-- <FooterLink liClass="mb-4" href="https://yakkl.freshdesk.com/support/home">Documentation</FooterLink> -->
-            <FooterLink liClass="mb-4" href="https://yakkl.freshdesk.com/support/home">Support Ticket</FooterLink>
-            <FooterLink liClass="mb-4" href="https://yakkl.freshdesk.com/support/home">FAQ</FooterLink>
+            <FooterLink liClass="mb-4" href="/university/support/">Help</FooterLink>
+            <!-- <FooterLink liClass="mb-4" href="https://yakkl.freshdesk.com/support/home">FAQ</FooterLink> -->
           </FooterLinkGroup>
         </div>
         <div>
@@ -54,7 +54,7 @@
             <FooterLink liClass="mb-4" href="/company/contactus">Contact us</FooterLink>
             <!-- <FooterLink liClass="mb-4" href="/company/newsletter">Newsletter</FooterLink> -->
             <FooterLink liClass="mb-4" href="/company/partnering">Partnering</FooterLink>
-            <FooterLink liClass="mb-4" href="/investors">Investors</FooterLink>
+            <!-- <FooterLink liClass="mb-4" href="/investors">Investors</FooterLink> -->
           </FooterLinkGroup>
         </div>
         <div>
@@ -69,7 +69,7 @@
           <h2 class="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Legal</h2>
           <FooterLinkGroup class="text-xs">
             <FooterLink liClass="mb-4" href="/legal/privacy">Privacy Policy</FooterLink>
-            <FooterLink liClass="mb-4" href="/legal/terms">Terms & Conditions</FooterLink>
+            <FooterLink liClass="mb-4" href="/legal/terms">Terms of Service</FooterLink>
             <FooterLink liClass="mb-4" href="/legal/cookie-policy">Cookie Policy</FooterLink>
             <FooterLink liClass="mb-4" href="/legal/disclaimer">Disclaimer</FooterLink>
           </FooterLinkGroup>

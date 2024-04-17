@@ -39,7 +39,7 @@ module.exports = {
     require("daisyui"),
     require('flowbite/plugin'),
   ],
-  darkMode: 'class',
+  // darkMode: 'class',
   // daisyui: {
   //   styled: true,
   //   themes: true,

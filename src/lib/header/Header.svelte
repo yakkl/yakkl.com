@@ -7,29 +7,29 @@
 <Navbar let:hidden let:toggle>
   <NavBrand href="/">
     <img
-      src="/images/logo48x48.png"
+      src="/images/logoBullFav-Black48x48.png"
       class="mr-3 h-6 sm:h-9"
       alt="YAKKL® Logo"
     />
     <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white hidden md:inline-flex" >
-      YAKKL® Smart Vault
+      YAKKL® Smart Wallet
     </span>
     <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white md:invisible" >
       YAKKL®
     </span>
   </NavBrand>
-  <div class="flex md:order-2">
+  <div class="flex md:order-2 dark:bg-white">
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <a
-      class="inline-block h-10 px-7 mt-0 py-2 bg-indigo-600 text-white font-bold text-lg leading-snug rounded-md shadow-md hover:bg-indigo-700 hover:shadow-md focus:bg-indogo-700 focus:shadow-md focus:outline-none focus:ring-0 active:bg-indigo-800 active:shadow-md transition duration-150 ease-in-out w-full"
+      class="inline-block h-10 px-7 mt-0 py-2 bg-gray-800 text-white font-bold text-lg leading-snug rounded-md shadow-md hover:bg-gray-500 hover:shadow-md focus:bg-gray-800 focus:shadow-md focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-md transition duration-150 ease-in-out w-full"
       data-mdb-ripple="true" data-mdb-ripple-color="light"
       href="https://chrome.google.com/webstore/detail/1-yakkl%C2%AE-smart-wallet/dpmfhilhjlhhakpbieclcghochdofeao?utm_source=yakkl_web">
       <div class="inline-flex items-center align-middle">
-        <span>Get started today</span>
+        <span>Get Started</span>
       </div>
     </a>
     <!-- <a
-      class="inline-block h-10 px-7 mt-0 py-2 bg-indigo-600 text-white font-bold text-lg leading-snug rounded-md shadow-md hover:bg-indigo-700 hover:shadow-md focus:bg-indogo-700 focus:shadow-md focus:outline-none focus:ring-0 active:bg-indigo-800 active:shadow-md transition duration-150 ease-in-out w-full"
+      class="inline-block h-10 px-7 mt-0 py-2 bg-gray-600 text-white font-bold text-lg leading-snug rounded-md shadow-md hover:bg-gray-700 hover:shadow-md focus:bg-indogo-700 focus:shadow-md focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-md transition duration-150 ease-in-out w-full"
       data-mdb-ripple="true" data-mdb-ripple-color="light"
       target="_blank"
       href="https://mvkeokyhfp4.typeform.com/to/jTTm4117?utm_source=yakkl_web&utm_medium=typeform&utm_campaign=survey&utm_content=crypto_awareness">

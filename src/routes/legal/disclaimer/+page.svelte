@@ -3,7 +3,7 @@
   import Gradient from "$lib/backgrounds/Gradient.svelte";
   import Footer from "$lib/footer/Footer.svelte";
 </script>
-<Gradient>
+<!-- <Gradient> -->
   <Header/>
   <div class="relative w-full px-6 py-12 overflow-scroll md:max-w-7xl md:mx-auto">
     <div class="mt-8 prose prose-slate mx-auto prose-sm max-w-full">
@@ -17,4 +17,4 @@
     </div>
   </div>
 <Footer/>
-</Gradient>
+<!-- </Gradient> -->

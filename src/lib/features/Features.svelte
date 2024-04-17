@@ -1,12 +1,12 @@
   <!-- Features -->
-  <div class="bg-indigo-700">
+  <div class="bg-gray-700">
     <div id="features" class="mx-auto max-w-4xl px-6 py-20 sm:py-20 lg:max-w-7xl lg:px-8 lg:py-20">
-      <h2 class="text-4xl font-bold tracking-tight text-white">The Smart Vault built for efficiency, simplicity, and performance.</h2>
-      <p class="mt-6 max-w-3xl text-lg leading-8 text-indigo-200">
+      <h2 class="text-4xl font-bold tracking-tight text-white">The Smart Wallet built for efficiency, simplicity, and performance.</h2>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-gray-200">
         Onboarding in the crypto world has been <span class="font-bold text-white">difficult until NOW!!</span>
       </p>
-      <p class="mt-2 max-w-3xl text-lg leading-8 text-indigo-200">
-        Today - Onboarding is simple with the <span class="font-bold text-white">YAKKL® Smart Vault</span>! Here are only a few key benefits you will find with YAKKL® . 
+      <p class="mt-2 max-w-3xl text-lg leading-8 text-gray-200">
+        Today - Onboarding is simple with the <span class="font-bold text-white">YAKKL® Smart Wallet</span>! Here are only a few key benefits you will find with YAKKL® . 
       </p>
       <div class="mt-20 grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
         <div>
@@ -20,7 +20,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">Great User Experience</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Day-to-day actions are always visible. No having to dig through multiple layers of menus to find something.</p>
+            <p class="mt-2 text-base leading-7 text-gray-200">Day-to-day actions are always visible. No having to dig through multiple layers of menus to find something.</p>
           </div>
         </div>
 
@@ -35,7 +35,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">Manage Wallet Accounts</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Manage as many portfolio wallet accounts and subportfolio wallet accoounts as you like with ease. Import from other wallets or export. YAKKL® also provides an emergency kit for every account!</p>
+            <p class="mt-2 text-base leading-7 text-gray-200">Manage as many portfolio wallet accounts and subportfolio wallet accoounts as you like with ease. Import from other wallets or export. YAKKL® also provides an emergency kit for every account!</p>
           </div>
         </div>
 
@@ -50,7 +50,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">Secure Emergency Kit</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">No more having some 12 or 24 word phrase that you have to write down. YAKKL® automatically gives you the option to print and securely save an emergency kit with everything you need to restore an account if needed.</p>
+            <p class="mt-2 text-base leading-7 text-gray-200">No more having some 12 or 24 word phrase that you have to write down. YAKKL® automatically gives you the option to print and securely save an emergency kit with everything you need to restore an account if needed.</p>
           </div>
         </div>
 
@@ -65,7 +65,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">Super Secure</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Security is a primary tenant by design. Auto locks with flexible options. Redactions of security risks. Multiple data points for encryption.</p>
+            <p class="mt-2 text-base leading-7 text-gray-200">Security is a primary tenant by design. Auto locks with flexible options. Redactions of security risks. Multiple data points for encryption.</p>
           </div>
         </div>
 
@@ -80,7 +80,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">Portfolio Tracking</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Know where you stand at any momement in time. You can even track accounts from exchanges, wallets, or anywhere. Now you know your complete crypto picture.</p>
+            <p class="mt-2 text-base leading-7 text-gray-200">Know where you stand at any momement in time. You can even track accounts from exchanges, wallets, or anywhere. Now you know your complete crypto picture.</p>
           </div>
         </div>
 
@@ -95,7 +95,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">Watch Accounts</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Now you can watch accounts that are not part of your portfolio. You can watch large crypto accounts to see when they are moving crypto in or out.</p>
+            <p class="mt-2 text-base leading-7 text-gray-200">Now you can watch accounts that are not part of your portfolio. You can watch large crypto accounts to see when they are moving crypto in or out.</p>
           </div>
         </div>
 
@@ -110,7 +110,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">NFTs / Smart Contracts</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Manage your NFT assets, NFT market place, and a lot more. <span class="inline-flex items-center rounded-full bg-blue-100 hover:bg-blue-200 px-2.5 py-0.5 text-xs font-medium text-blue-800">In testing</span>
+            <p class="mt-2 text-base leading-7 text-gray-200">Manage your NFT assets, NFT market place, and a lot more. <span class="inline-flex items-center rounded-full bg-gray-100 hover:bg-gray-200 px-2.5 py-0.5 text-xs font-medium text-gray-800">In testing</span>
             </p>
           </div>
         </div>
@@ -126,7 +126,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">Buy, sell or swap</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">You can now buy, sell or swap crypto right from your wallet and you maintain control of your account at all times! No more worrying if some exchange goes out of business. <span class="inline-flex items-center rounded-full bg-blue-100 hover:bg-blue-200 px-2.5 py-0.5 text-xs font-medium text-blue-800">Sell/Swap in testing</span>
+            <p class="mt-2 text-base leading-7 text-gray-200">You can now buy, sell or swap crypto right from your wallet and you maintain control of your account at all times! No more worrying if some exchange goes out of business. <span class="inline-flex items-center rounded-full bg-gray-100 hover:bg-gray-200 px-2.5 py-0.5 text-xs font-medium text-gray-800">Sell/Swap in testing</span>
             </p>
           </div>
         </div>
@@ -142,7 +142,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">Multiple cryptocurrencies</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">YAKKL® currently supports Ethereum and other Ethereum based cryptocurrencies. We are working on supporting other coins and tokens. <span class="inline-flex items-center rounded-full bg-blue-100 hover:bg-blue-200 px-2.5 py-0.5 text-xs font-medium text-blue-800">In testing</span></p>
+            <p class="mt-2 text-base leading-7 text-gray-200">YAKKL® currently supports Ethereum and other Ethereum based cryptocurrencies. We are working on supporting other coins and tokens. <span class="inline-flex items-center rounded-full bg-gray-100 hover:bg-gray-200 px-2.5 py-0.5 text-xs font-medium text-gray-800">In testing</span></p>
           </div>
         </div>
 
@@ -157,7 +157,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">Reporting</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Print reports and other important information. <span class="inline-flex items-center rounded-full bg-blue-100 hover:bg-blue-200 px-2.5 py-0.5 text-xs font-medium text-blue-800">Coming soon</span></p>
+            <p class="mt-2 text-base leading-7 text-gray-200">Print reports and other important information. <span class="inline-flex items-center rounded-full bg-gray-100 hover:bg-gray-200 px-2.5 py-0.5 text-xs font-medium text-gray-800">Coming soon</span></p>
           </div>
         </div>
 
@@ -172,7 +172,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">Integrations</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">Integrate with accounting, tax, and other software. <span class="inline-flex items-center rounded-full bg-blue-100 hover:bg-blue-200 px-2.5 py-0.5 text-xs font-medium text-blue-800">Coming soon</span></p>
+            <p class="mt-2 text-base leading-7 text-gray-200">Integrate with accounting, tax, and other software. <span class="inline-flex items-center rounded-full bg-gray-100 hover:bg-gray-200 px-2.5 py-0.5 text-xs font-medium text-gray-800">Coming soon</span></p>
           </div>
         </div>
 
@@ -187,7 +187,7 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">User Requested Features</h3>
-            <p class="mt-2 text-base leading-7 text-indigo-200">We're nothing without YOU! We will be releasing a simple feature request tracking system and possibly rewards to go along with it - get involved! </p>
+            <p class="mt-2 text-base leading-7 text-gray-200">We're nothing without YOU! We will be releasing a simple feature request tracking system and possibly rewards to go along with it - get involved! </p>
           </div>
         </div>
 

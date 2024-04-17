@@ -1,18 +1,16 @@
 <script>
   import Header from "$lib/header/Header.svelte";
-  // import Gradient from "$lib/backgrounds/Gradient.svelte";
+  import Gradient from "$lib/backgrounds/Gradient.svelte";
   import Footer from "$lib/footer/Footer.svelte";
 </script>
 
 <!-- <Gradient> -->
   <Header/>
     <!-- svelte-ignore missing-declaration -->
-    <!-- <div class="relative w-full px-6 py-12 overflow-hidden md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
-      <div class="mt-8 prose prose-slate max-w-prose mx-auto prose-sm"> -->
-        <div class="relative w-full px-4 sm:px-6 lg:px-8 overflow-hidden mx-auto py-8">
-          <div class="mt-8 prose prose-indigo max-w-full mx-auto md:mx-20 lg:mx-40 prose-sm">
+    <div class="relative w-full px-6 py-12 overflow-hidden md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
+      <div class="mt-8 prose prose-slate max-w-prose mx-auto prose-sm">
         <blockquote>
-        Our <a href="https://yakkl.com/legal/privacy">Privacy Policy</a> explains our principles when it comes to the collection, processing, and storage of your information. This policy specifically explains how we, our partners, and users of our services deploy cookies, as well as the options you have to control them.
+        Our [Privacy Policy](https://yakkl.com/legal/privacy/) explains our principles when it comes to the collection, processing, and storage of your information. This policy specifically explains how we, our partners, and users of our services deploy cookies, as well as the options you have to control them.
         </blockquote>
         
         <h3>What are cookies?</h3>
@@ -161,15 +159,15 @@
         
         <h3>Controlling Cookies</h3>
         
-        <p>Visitors may wish to restrict the use of cookies or completely prevent them from being set. Most browsers provide for ways to control cookie behavior such as the length of time they are stored – either through built-in functionality or by utilizing third party plugins. If you disable cookies, please be aware that some of the features of our service may not function correctly. To find out more on how to manage and delete cookies, visit aboutcookies.org. For more details on your choices regarding use of your web browsing activity for interest-based advertising visit <a href="http://youronlinechoices.eu">youronlinechoices.eu</a> (EU based) or <a href="http://optout.aboutads.info">optout.aboutads.info</a> (US based).</p> 
+        <p>Visitors may wish to restrict the use of cookies or completely prevent them from being set. Most browsers provide for ways to control cookie behavior such as the length of time they are stored – either through built-in functionality or by utilizing third party plugins. If you disable cookies, please be aware that some of the features of our service may not function correctly. To find out more on how to manage and delete cookies, visit aboutcookies.org. For more details on your choices regarding use of your web browsing activity for interest-based advertising visit [youronlinechoices.eu](http://youronlinechoices.eu) (EU based) or [optout.aboutads.info](http://optout.aboutads.info) (US based).</p> 
         
         <p>On a mobile device, you may also be to adjust your settings to limit tracking.</p>
         
-        <p>Some analytics services we use, which place their own cookies or web tags on your browser, offer their own opt out choices. For example, you can opt out of Google Analytics by installing <a href="https://tools.google.com/dlpage/gaoptout">Google’s opt-out browser add-on</a>, from Hotjar by using the <a href="https://www.hotjar.com/legals/compliance/opt-out">Do Not Track header</a>, and from Nielsen by clicking the opt out link found within <a href="https://www.nielsen.com/us/en/legals/privacy-statement/digital-measurement/">Nielsen's Privacy Statement</a>".</p>
+        <p>Some analytics services we use, which place their own cookies or web tags on your browser, offer their own opt out choices. For example, you can opt out of Google Analytics by installing [Google’s opt-out browser add-on](https://tools.google.com/dlpage/gaoptout), from Hotjar by using the [Do Not Track header](https://www.hotjar.com/legals/compliance/opt-out), and from Nielsen by clicking the opt out link found within [Nielsen's Privacy Statement](https://www.nielsen.com/us/en/legals/privacy-statement/digital-measurement/).</p>
         
         <h3>Our Internal Analytics Tool</h3>
         
-        <p>In order to better understand how our services are used, we monitor certain user activities that take place within our products, including page views and clicks on any links used when managing a site via our dashboards. We call each one of these actions an “event.” Analytics events are attached to your WordPress.com account and are handled via a first party system that Automattic owns and maintains. In general, we record the following data for each event: IP address, WordPress.com user ID and username, WordPress.com-connected site ID (for sites not hosted on WordPress.com), user agent, referring URL, timestamp of event, browser language, and country code. We use this information to improve our products, make our marketing to you more relevant, personalize your experience, and for the other purposes described in our <a href="https://yakkl.com/legal/privacy">Privacy Policy</a>. You may opt out of our analytics program through your user settings. By doing so, you won’t share information with our analytics tool about events or actions that happen after the opt-out, while logged in to your WordPress.com account. Note that opting out does not disable the functionality of the actions we track - for example, if you publish a post, we will still have record of that (don’t worry!), but for an event or action after you opt out, we will not have other data associated with that action or event in the analytics tool.</p>
+        <p>In order to better understand how our services are used, we monitor certain user activities that take place within our products, including page views and clicks on any links used when managing a site via our dashboards. We call each one of these actions an “event.” Analytics events are attached to your WordPress.com account and are handled via a first party system that Automattic owns and maintains. In general, we record the following data for each event: IP address, WordPress.com user ID and username, WordPress.com-connected site ID (for sites not hosted on WordPress.com), user agent, referring URL, timestamp of event, browser language, and country code. We use this information to improve our products, make our marketing to you more relevant, personalize your experience, and for the other purposes described in our [Privacy Policy](https://yakkl.com/legals/privacy/). You may opt out of our analytics program through your user settings. By doing so, you won’t share information with our analytics tool about events or actions that happen after the opt-out, while logged in to your WordPress.com account. Note that opting out does not disable the functionality of the actions we track - for example, if you publish a post, we will still have record of that (don’t worry!), but for an event or action after you opt out, we will not have other data associated with that action or event in the analytics tool.</p>
         
         <h3>Consent for Advertising Cookies on Our Sites</h3>
         
@@ -183,64 +181,10 @@
         
         <h3>Contact Us</h3>
         
-        <p>If you have any questions about our use of cookies, you can find the most relevant contact details in our <a href="https://yakkl.com/legal/privacy">Privacy Policy</a>.</p>
+        <p>If you have any questions about our use of cookies, you can find the most relevant contact details in our [Privacy Policy](https://yakkl.com/legal/privacy/).</p>
 
       </div>
     </div>
 
   <Footer/>
 <!-- </Gradient> -->
-
-<style>
-  /* h1 {
-    @apply mb-1 text-xl text-center tracking-tight font-extrabold text-black dark:text-white;
-  } */
-  
-  p {
-    @apply mb-2;
-  }
-
-  /* em {
-    @apply not-italic;
-  } */
-
-  blockquote {
-    @apply text-xs border border-black dark:border-white p-1;
-  }
-
-  /* blockquote p {
-    @apply font-bold mt-1;
-  } */
-
-  blockquote p a {
-    @apply underline;
-  } 
-
-  /* h2 {
-    @apply mt-2 font-bold;
-  } */
-
-  p {
-    @apply mt-2;
-  }
-
-  /* strong {
-    @apply not-italic;
-  } */
-
-  ul {
-    @apply mt-1;
-  }
-
-  h3 {
-    @apply mt-1 font-bold;
-  } 
-
-  a {
-    @apply underline;
-  }
-
-  /* h1:last-of-type {
-    @apply text-gray-300;
-  } */
-</style>

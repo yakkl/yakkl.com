@@ -4,7 +4,7 @@
   import Footer from "$lib/footer/Footer.svelte";
 </script>
 
-<Gradient>
+<!-- <Gradient> -->
   <Header/>
     <!-- svelte-ignore missing-declaration -->
     <div class="relative w-full px-6 py-10 overflow-hidden md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-10 lg:pb-15">
@@ -17,4 +17,4 @@
       </div>
     </div>
   <Footer/>
-</Gradient>
+<!-- </Gradient> -->

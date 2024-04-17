@@ -7,7 +7,7 @@
 
 </script>
 
-<Gradient>
+<!-- <Gradient> -->
   <Header/>
   <div class="m-20">
     <Heading tag="h1" class='mb-4'>Need <Mark>HELP</Mark>?</Heading>
@@ -16,7 +16,7 @@
     </P>
   </div>
 
-  <div class="divider text-primary">FAQ</div>
+  <div class="divider text-gray-800">FAQ</div>
 
 
   <div class="justify-center flex">
@@ -26,7 +26,7 @@
         <div class="collapse collapse-arrow join-item border border-base-300">
           <input type="radio" name="my-accordion-1" checked="checked" class="w-full"/> 
           <div class="collapse-title text-xl font-medium">
-            Where can I find YAKKL® Smart Vault to download?
+            Where can I find YAKKL® Smart Wallet to download?
           </div>
           <div class="collapse-content italic ml-4"> 
             <p>Click the 'Get started today' button at the top of the page.</p>
@@ -56,7 +56,7 @@
             Does YAKKL® have other products available or planned?
           </div>
           <div class="collapse-content italic ml-4"> 
-            <p>The YAKKL® Smart Vault (with two different versions) is the only product line today. However, we have an aggressive product roadmap the includes 'enterprise' and 'institution' releases plus additional tax and portfolio products planned due to the recent tax rulings.</p>
+            <p>The YAKKL® Smart Wallet (with two different versions) is the only product line today. However, we have an aggressive product roadmap the includes 'enterprise' and 'institution' releases plus additional tax and portfolio products planned due to the recent tax rulings.</p>
           </div>
         </div>
         <div class="collapse collapse-arrow join-item border border-base-300">
@@ -83,7 +83,7 @@
             How do I communicate with YAKKL® Support?
           </div>
           <div class="collapse-content italic ml-4"> 
-            <p>For now, the easiest way is to email <a href="mailto:support@yakkl.com" class="text-blue-600" target="_blank">support@yakkl.com</a>. There are other ways coming soon.</p>
+            <p>For now, the easiest way is to email <a href="mailto:support@yakkl.com" class="text-gray-600" target="_blank">support@yakkl.com</a>. There are other ways coming soon.</p>
           </div>
         </div>
         <!-- <div class="collapse collapse-arrow join-item border border-base-300">
@@ -92,7 +92,7 @@
             Are there any training videos or ebooks on YAKKL® and/or Crypto?
           </div>
           <div class="collapse-content italic ml-4"> 
-            <p>We are creating our YAKKL® University but it's not available at the moment. However, you can visit <a href="https://cryptogramps.fans?utm_medium=link&utm_source=yakkl_faq" target="_blank" class="text-blue-600">Crypto Gramps.</a> Crypto Gramps is building out a series of ebooks on crypto from beginner to technical professionals. There are a number of how-to videos available as well. Who knows, you may even see grandkids and puppies! BTW, Crypto Gramps was the primary architect and core contributor to YAKKL®. </p>
+            <p>We are creating our YAKKL® University but it's not available at the moment. However, you can visit <a href="https://cryptogramps.fans?utm_medium=link&utm_source=yakkl_faq" target="_blank" class="text-gray-600">Crypto Gramps.</a> Crypto Gramps is building out a series of ebooks on crypto from beginner to technical professionals. There are a number of how-to videos available as well. Who knows, you may even see grandkids and puppies! BTW, Crypto Gramps was the primary architect and core contributor to YAKKL®. </p>
           </div>
         </div> -->
       </div>
@@ -116,11 +116,11 @@
       <TimelineItem title="Enter your purchase method (bank, debit, or creditcard) and make purchase" date="Step 3">
         <p class="text-base font-normal text-gray-500 dark:text-gray-300">
           You will be prompted to enter your Ethereum address (assuming Ethereum for this explanation). That address DOES NOT have to be managed by YAKKL®, it can be managed by any wallet you choose. This is one of the great things about self-custody, you're in control. <br/><br/>
-          There are help prompts to explain any fees and what things mean. Once you have made your purchase, Stripe will submit your purchase to the blockchain and wait on confirmation. You can always check YAKKL® Smart Vault for your transaction status (assuming YAKKL® manages it). If it has been processed, you will see it in your wallet. If it has not been processed, you will see it in your wallet as pending. <br/><br/>
+          There are help prompts to explain any fees and what things mean. Once you have made your purchase, Stripe will submit your purchase to the blockchain and wait on confirmation. You can always check YAKKL® Smart Wallet for your transaction status (assuming YAKKL® manages it). If it has been processed, you will see it in your wallet. If it has not been processed, you will see it in your wallet as pending. <br/><br/>
           <span class="font-medium">GREAT! You have now purchased your first crypto. You can now use it to buy, sell, swap, or send to anyone you choose. You can also use it to pay for goods and services. If YAKKL® manages your address and keys then you can track everything knowing you are completely secure!</span>
         </p>
       </TimelineItem>
     </Timeline>
   </div> -->
   <Footer/>
-</Gradient>
+<!-- </Gradient> -->
