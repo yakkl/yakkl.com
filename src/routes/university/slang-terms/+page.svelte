@@ -10,7 +10,7 @@ import Header from "$lib/header/Header.svelte";
     <div class="relative w-full px-4 sm:px-6 lg:px-8 overflow-hidden mx-auto py-8">
       <div class="mt-8 prose prose-indigo max-w-full mx-auto md:mx-20 lg:mx-40 prose-sm">
 
-        <h1>Crypto Slang You Need to Know</h1>
+        <h1>Crypto Terms and Slang You Need to Know</h1>
         <p>If you're interviewing for a job in the crypto and web3 industry, it's essential to be familiar with the lingo. Our world is filled with jargon and slang that may seem confusing initially, but knowing these terms is critical for understanding the industry and communicating effectively with your colleagues. In this blog post, we'll cover some of the crucial crypto slang you need to know to succeed in cryptocurrency. From "HODL" to "smart contracts" to "moonshot," we'll break down the meaning and significance of these terms, so you can walk into your following crypto interview feeling confident and prepared.</p>
         <ol>
         <li><strong>Address</strong>: A string of characters that represents an unique account that allows you to send or receive cryptocurrencies. Think of it like a checking account but you own it instead of the bank.</li>

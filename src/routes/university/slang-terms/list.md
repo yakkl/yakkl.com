@@ -1,4 +1,4 @@
-# Crypto Slang You Need to Know
+# Crypto Terms and Slang You Need to Know
 
 If you're interviewing for a job in the crypto and web3 industry, it's essential to be familiar with the lingo. Our world is filled with jargon and slang that may seem confusing initially, but knowing these terms is critical for understanding the industry and communicating effectively with your colleagues. In this blog post, we'll cover some of the crucial crypto slang you need to know to succeed in cryptocurrency. From "HODL" to "smart contracts" to "moonshot," we'll break down the meaning and significance of these terms, so you can walk into your following crypto interview feeling confident and prepared.
 
