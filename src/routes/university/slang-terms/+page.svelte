@@ -105,7 +105,9 @@ import Header from "$lib/header/Header.svelte";
         <li><strong>Paper Hands</strong>: Selling a cryptocurrency investment at the first sign of trouble or loss.</li>
         <li><strong>Plankton</strong>: Small-scale investors with limited holdings in a particular cryptocurrency.</li>
         <li><strong>Private Key</strong>: A secret string of characters used to access and manage a cryptocurrency wallet.</li>
-        <li><strong>Proof of Steak</strong>: A humorous term used to describe the process of using cryptocurrency gains to buy expensive meals or luxury items, such as steak dinners.</li>
+        <li><strong>Proof of Stake</strong>: A consensus protocol in some blockchains as a way of validating transactions. For example, Ethereum requires 32 ETH per validator. Some of the staked ETH can be taken by the network if a validator did not act in the best interest of the blockchain. Validators also receive rewards so there is a high incentive to follow the rules.</li>
+        <li><strong>Proof of 'Steak'</strong>: A humorous term used to describe the process of using cryptocurrency gains to buy expensive meals or luxury items, such as steak dinners.</li>
+        <li><strong>Proof of Work</strong>: A consensus protocol that requires what are known as "miners." Each miner races to solve some complex equation, depending on the blockchain, and the one that is first gets the reward. For example, Bitcoin uses a Proof of Work which is why you often hear that miners are using so much energy.</li>
         <li><strong>Public Key</strong>: A string of characters derived from a private key, used as an address to receive cryptocurrency.</li>
         <li><strong>Pump and Dump</strong>: A manipulative scheme to artificially inflate a cryptocurrency's price before selling at a higher price.</li>
         <li><strong>Ramen Profitability</strong>: A state in which a cryptocurrency miner's profits are sufficient to cover their basic living expenses, such as the cost of ramen noodles.</li>
