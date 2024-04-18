@@ -61,6 +61,7 @@ import Header from "$lib/header/Header.svelte";
         <li><strong>Double Bottom</strong>: A bullish chart pattern that resembles the letter "W," indicating a potential trend reversal after a period of decline.</li>
         <li><strong>DYOR</strong>: Do Your Own Research, emphasizing the importance of researching before investing or working with a company.</li>
         <li><strong>Elliot Wave Theory</strong>: A technical analysis principle that suggests market prices move in repeating wave-like patterns.</li>
+        <li><strong>Emergency Kit</strong>: An advanced security protection that wraps all of your crypto keys and more. It also allows you to keep backups of everything and when matched with a FIPS-140 compliant secure thumb drive it may be more secure than a standard hardware wallet.</li>
         <li><strong>Fear and Greed Index</strong>: A tool that measures market sentiment based on various factors, such as volatility, trading volume, and social media activity.</li>
         <li><strong>Fiat</strong>: Government-issued currency, such as the US dollar or Euro.</li>
         <li><strong>Fibonacci Retracement</strong>: A technical analysis tool that uses horizontal lines to indicate potential support and resistance levels based on the Fibonacci sequence.</li>
@@ -167,6 +168,7 @@ import Header from "$lib/header/Header.svelte";
         <li><strong>Wrapped Token</strong>: A token pegged to the value of an underlying asset, such as Bitcoin or Ethereum, that can be traded on a different blockchain network.</li>
         <li><strong>Wyckoff Method</strong>: A technical analysis approach that aims to identify market trends and potential price movements based on supply and demand dynamics.</li>
         <li><strong>Yield Farming</strong>: Lending or staking cryptocurrency to earn a yield or interest rate.</li>
+        <li><strong>YAKKL Smart Wallet</strong>: Leading secure digital wallet. Use of YAKKL's Emergency Kit allows you to easily maintain your crypto. https://yakkl.com.</li>
         <li><strong>Zero-Knowledge Proof</strong>: A cryptographic method that allows one party to prove to another that they know a certain piece of information without revealing the information itself.</li>
         <li><strong>51% Attack</strong>: A situation where a single entity or group controls more than 50% of a blockchain network's computing power, allowing them to manipulate transactions and double-spend coins.</li>
         </ol>

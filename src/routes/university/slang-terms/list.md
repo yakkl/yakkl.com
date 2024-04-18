@@ -50,114 +50,116 @@ If you're interviewing for a job in the crypto and web3 industry, it's essential
 46. **Double Bottom**: A bullish chart pattern that resembles the letter "W," indicating a potential trend reversal after a period of decline.
 47. **DYOR**: Do Your Own Research, emphasizing the importance of researching before investing or working with a company.
 48. **Elliot Wave Theory**: A technical analysis principle that suggests market prices move in repeating wave-like patterns.
-49. **Fear and Greed Index**: A tool that measures market sentiment based on various factors, such as volatility, trading volume, and social media activity.
-50. **Fiat**: Government-issued currency, such as the US dollar or Euro.
-51. **Fibonacci Retracement**: A technical analysis tool that uses horizontal lines to indicate potential support and resistance levels based on the Fibonacci sequence.
-52. **Flappening**: A hypothetical event in which the market capitalization of Litecoin surpasses that of Bitcoin Cash, similar to the concept of the "Flippening" between Ethereum and Bitcoin.
-53. **Flash Loan**: A cryptocurrency loan issued and repaid within the same transaction.
-54. **Flippening**: The hypothetical event of Ethereum surpassing Bitcoin's market cap.
-55. **Floor**: The lowest price available for an NFT in a collection, the minimum amount you need to buy one.
-56. **FOMO**: Fear of Missing Out, describing someone compulsively taking a trade without understanding why.
-57. **FUD**: Fear, Uncertainty, and Doubt, often spread to manipulate market sentiment.
-58. **Fundamentals**: The underlying factors that drive a cryptocurrency's value.
-59. **Gas**: The fee paid to execute a transaction on the Ethereum blockchain.
-60. **Gas War**: A situation where multiple transactions compete for limited space in a blockchain block, resulting in higher fees and longer confirmation times.
-61. **Gasless**: A transaction on the Ethereum blockchain that does not require users to pay a gas fee.
-62. **Gwei**: A unit of measurement for Ethereum transaction fees, equal to 0.000000001 ETH.
-63. **Halving**: A scheduled event in which the block reward for mining new bitcoins is cut in half, occurring roughly every four years.
-64. **Hardware Wallet**: AKA Cold Wallet - Stores digital assets off-line, making them secure from bad actors but more difficult to use. With advancements in security, cold wallets / hardware wallets are not as important.
-65. **Hash Rate**: The total combined computational power used to mine and process transactions on a proof-of-work blockchain.
-66. **Hot Wallet**: Is an online wallet and easily accessible. Most popular but security is a concern unless using a wallet like YAKKL Smart Wallet. YAKKL is one of the most secure wallets available.
-67. **HODL**: A misspelling of "hold," meaning to hold onto a cryptocurrency investment for the long term.
-68. **HODL Waves**: A chart that visualizes the holding behavior of Bitcoin investors over time, showing the proportion of coins that have remained unmoved for various periods.
-69. **ICO**: Initial Coin Offering, a fundraising method for new cryptocurrency projects.
-70. **ICO Bubble**: The period in 2017-2018 when the popularity of Initial Coin Offerings (ICOs) led to a significant increase in cryptocurrency prices, followed by a sharp decline.
-71. **IYKYK**: If You Know, You Know, signaling that only insiders will understand the text references.
-72. **Immutable**: Data that cannot be changed or modified by anyone after its creation, the core defining feature of a blockchain.
-73. **JOMO**: Joy of Missing Out, a term used to describe the feeling of contentment or relief that comes from not investing in a particular cryptocurrency or participating in a specific trend.
-74. **Kimchi Premium**: The difference in cryptocurrency prices between South Korean exchanges and global exchanges, often resulting in higher prices on South Korean platforms due to local market conditions and regulations.
-75. **KYC**: Know Your Customer, a process used by businesses to verify the identity of their clients to prevent fraud and money laundering.
-76. **Lambo**: Short for Lamborghini, a term used to describe the aspirational wealth and lifestyle associated with successful cryptocurrency investing.
-77. **Layer 1**: A base network or blockchain, such as Bitcoin or Ethereum.
-78. **Layer 2**: A scaling solution built on top of an existing blockchain to improve transaction speed and reduce costs.
-79. **Lazy Minting**: A process in which an NFT is created only when it is purchased, rather than being pre-minted and stored on the blockchain.
-80. **LFG**: Let's F***ing Go! Used to signal extreme excitement and positivity about a new project.
-81. **Liquidity Mining**: Providing liquidity to a decentralized exchange or DeFi platform in exchange for rewards.
-82. **Liquidation Cascade**: A situation in which a series of liquidations in leveraged trading positions triggers further liquidations, leading to a rapid decline in a cryptocurrency's price.
-83. **Long Squeeze**: A situation in which investors who have taken long positions in a cryptocurrency are forced to sell their holdings due to a sudden price decline, further exacerbating the price drop.
-84. **Mainnet**: The live, fully functional version of a blockchain network, as opposed to a testnet.
-85. **Maxi**: Maximalist, someone who believes that one particular crypto is the only viable one by far and predominantly invests in it.
-86. **MCAP**: Market Capitalization, the total value of a cryptocurrency, calculated by multiplying its price by its circulating supply.
-87. **McAfee Effect**: The impact on a cryptocurrency's price following a positive or negative tweet or statement by John McAfee, a well-known figure in the crypto community.
-88. **Mempool**: A waiting area for transactions that have been submitted but not yet included in a block.
-89. **Merkle Tree**: A data structure used in blockchain technology to efficiently and securely verify the integrity of large datasets.
-90. **Metaverse**: A digital universe with all the aspects of the real world — real-time interactions and economies.
-91. **Miner Capitulation**: A situation in which cryptocurrency miners sell their holdings en masse, often in response to declining prices or increased mining difficulty.
-92. **Mining**: The process of validating transactions and adding new blocks to a proof-of-work blockchain, rewarding miners with cryptocurrency.
-93. **Mint**: The creation of a new NFT token, turns a digital file into a crypto collectible or digital asset.
-94. **Moon (to the moon)**: Hoping that a specific token's price will explode, hitting the moon.
-95. **Moon Bag**: A small portion of a cryptocurrency investment that an investor holds in case the price "goes to the moon."
-96. **Moonshot**: A high-risk, high-reward investment opportunity in the cryptocurrency market.
-97. **Multisig**: Short for multi-signature, a type of digital signature that requires multiple parties to approve a transaction.
-98. **NFT**: Non Fungible Token, a unique digital object that confers ownership of a virtual good, like a digital artwork or online collectible.
-99. **Nocoiner, No-Coiner, or NC**: Someone who does not hold any cryptocurrency.
-100. **Node**: A computer connected to a blockchain network that helps validate and relay transactions.
-101. **Nonce**: A random number used in the mining process to generate a unique hash for each block.
-102. **Noob**: A newcomer to the world of cryptocurrency, often lacking knowledge and experience in trading and investing.
-103. **Normies**: People outside of the industry who don't necessarily understand the foundations of crypto and web3.
-104. **Oracle**: A system that provides real-world data to smart contracts on a blockchain.
-105. **Paper Hands**: Selling a cryptocurrency investment at the first sign of trouble or loss.
-106. **Permissionless**: Often used to describe blockchains, a system where no entity can regulate who can use it and how.
-107. **Plankton**: Small-scale investors with limited holdings in a particular cryptocurrency.
-108. **Private Key**: A secret string of characters used to access and manage a cryptocurrency wallet.
-109. **Proof of Stake**: A consensus protocol in some blockchains as a way of validating transactions. For example, Ethereum requires 32 ETH per validator. Some of the staked ETH can be taken by the network if a validator did not act in the best interest of the blockchain. Validators also receive rewards so there is a high incentive to follow the rules.
-110. **Proof of "Steak"**: A humorous term used to describe the process of using cryptocurrency gains to buy expensive meals or luxury items, such as steak dinners.
-111. **Proof of Work**: A consensus protocol that requires what are known as "miners." Each miner races to solve some complex equation, depending on the blockchain, and the one that is first gets the reward. For example, Bitcoin uses a Proof of Work which is why you often hear that miners are using so much energy.
-112. **Public Key**: A string of characters derived from a private key, used as an address to receive cryptocurrency.
-113. **Pump and Dump**: A manipulative scheme to artificially inflate a cryptocurrency's price before selling at a higher price.
-114. **Ramen Profitability**: A state in which a cryptocurrency miner's profits are sufficient to cover their basic living expenses, such as the cost of ramen noodles.
-115. **Relative Strength Index (RSI)**: A technical analysis indicator that measures the speed and magnitude of a cryptocurrency's price changes to identify overbought or oversold conditions.
-116. **Rekt**: A significant loss or failure in the cryptocurrency market.
-117. **Rug Pull**: A type of crypto scam where the liquidity of a new cryptocurrency is quickly removed from a decentralized exchange, causing the underlying price of the security to collapse and the original creators of the project to become rich.
-118. **Satoshi**: The smallest unit of Bitcoin, named after its pseudonymous creator Satoshi Nakamoto.
-119. **Satoshi Cycle**: A theory that suggests the price of Bitcoin moves in predictable patterns based on the halving cycle.
-120. **Sats**: Short for Satoshis, the smallest unit of Bitcoin (0.00000001 BTC).
-121. **Sats Stacking**: The practice of accumulating Bitcoin by regularly purchasing small amounts, measured in satoshis (sats).
-122. **Seed Phrase**: A series of words that unlocks your crypto wallet. It’s like your bank account number, your social security number, date of birth, home address, and ATM pin — all in one. If someone gets it, they can take all your Crypto assets.
-123. **Sharding**: A scaling technique used by some blockchain networks, dividing the network into smaller partitions or shards that can process transactions independently.
-124. **Shill**: Over-promoting a project, usually with some financial motivation.
-125. **Shitcoin**: A derogatory term for a cryptocurrency that has little to no value or utility, often created as a scam or joke.
-126. **Short Squeeze**: A situation in which investors who have taken short positions in a cryptocurrency are forced to buy back their positions due to a sudden price increase, further driving up the price.
-127. **Smart Contract**: A self-executing contract with the terms of the agreement directly written into code.
-128. **Smart Wallet**: A hot wallet with multiple levels of security and encryption. Some, such as YAKKL Smart Wallet with it's Emergency Kit, can possibly replace the need for a cold wallet or hardware wallet.
-129. **Stablecoin**: A type of cryptocurrency whose value is pegged to a stable asset, such as the U.S. dollar or gold.
-130. **Staking**: Using your crypto to secure a Proof-of-Stake (POS) network and earn rewards.
-131. **Stale Blocks**: Blocks on a blockchain network that are valid but not added to the main chain.
-132. **Social Token**: A type of cryptocurrency that a brand, community, or influencer can use to monetize themselves.
-133. **Testnet**: A testing environment for a blockchain network, used to test new features and upgrades before deploying them to the mainnet.
-134. **Token**: A representation of an asset, can be held, traded, or staked to earn interest TRUSTLESS — an environment where there is no centralized authority such as a bank.
-135. **Token Velocity**: The speed at which tokens change hands within a particular ecosystem, which can affect their value and utility.
-136. **Token Vesting**: The process of gradually releasing tokens to their owners over a set period, often used to prevent large-scale selling and price manipulation.
-137. **Tokenomics**: The economic model and characteristics of a cryptocurrency, including its supply, distribution, and incentive mechanisms.
-138. **TradFi**: Short for traditional finance, referring to everything in the financial world that is not crypto.
-139. **Trustless**: A system that does not require trust in a central authority or third party to function.
-140. **Volatility**: The degree of fluctuation in the price of a cryptocurrency over time.
-141. **WAGMI**: We're All Gonna Make It, expressing optimism about the future of the crypto market.
-142. **Wallet**: A software program or physical device used to store, send, and receive cryptocurrencies.
-143. **Wallet Address**: A unique string of characters used to receive cryptocurrency, derived from a public key.
-144. **Wash Trading**: A form of market manipulation in which an investor simultaneously buys and sells a cryptocurrency to create artificial trading volume and influence the price.
-145. **Weak Hands**: Investors who are prone to selling their cryptocurrency holdings at the first sign of market volatility or negative news, often resulting in losses.
-146. **Web3**: A term referring to the next generation of the internet, built on decentralized technologies like blockchain.
-147. **Whale**: An individual or entity holding a large amount of a particular cryptocurrency.
-148. **Whale Alert**: A real-time notification service that alerts traders and investors when large cryptocurrency transactions occur.
-149. **Whale Pump**: A sudden increase in a cryptocurrency's price caused by large-scale buying by a wealthy investor or group.
-150. **Whale Watching**: Monitoring large cryptocurrency transactions to predict market trends and potential price movements.
-151. **Whitepaper**: A document released by a cryptocurrency project outlining its purpose, technology, and roadmap.
-152. **Wrapped Token**: A token pegged to the value of an underlying asset, such as Bitcoin or Ethereum, that can be traded on a different blockchain network.
-153. **Wyckoff Method**: A technical analysis approach that aims to identify market trends and potential price movements based on supply and demand dynamics.
-154. **Yield Farming**: Lending or staking cryptocurrency to earn a yield or interest rate.
-155. **Zero-Knowledge Proof**: A cryptographic method that allows one party to prove to another that they know a certain piece of information without revealing the information itself.
-156. **51% Attack**: A situation where a single entity or group controls more than 50% of a blockchain network's computing power, allowing them to manipulate transactions and double-spend coins.
+49. **Emergency Kit**: An advanced security protection that wraps all of your crypto keys and more. It also allows you to keep backups of everything and when matched with a FIPS-140 compliant secure thumb drive it may be more secure than a standard hardware wallet.
+50. **Fear and Greed Index**: A tool that measures market sentiment based on various factors, such as volatility, trading volume, and social media activity.
+51. **Fiat**: Government-issued currency, such as the US dollar or Euro.
+52. **Fibonacci Retracement**: A technical analysis tool that uses horizontal lines to indicate potential support and resistance levels based on the Fibonacci sequence.
+53. **Flappening**: A hypothetical event in which the market capitalization of Litecoin surpasses that of Bitcoin Cash, similar to the concept of the "Flippening" between Ethereum and Bitcoin.
+54. **Flash Loan**: A cryptocurrency loan issued and repaid within the same transaction.
+55. **Flippening**: The hypothetical event of Ethereum surpassing Bitcoin's market cap.
+56. **Floor**: The lowest price available for an NFT in a collection, the minimum amount you need to buy one.
+57. **FOMO**: Fear of Missing Out, describing someone compulsively taking a trade without understanding why.
+58. **FUD**: Fear, Uncertainty, and Doubt, often spread to manipulate market sentiment.
+59. **Fundamentals**: The underlying factors that drive a cryptocurrency's value.
+60. **Gas**: The fee paid to execute a transaction on the Ethereum blockchain.
+61. **Gas War**: A situation where multiple transactions compete for limited space in a blockchain block, resulting in higher fees and longer confirmation times.
+62. **Gasless**: A transaction on the Ethereum blockchain that does not require users to pay a gas fee.
+63. **Gwei**: A unit of measurement for Ethereum transaction fees, equal to 0.000000001 ETH.
+64. **Halving**: A scheduled event in which the block reward for mining new bitcoins is cut in half, occurring roughly every four years.
+65. **Hardware Wallet**: AKA Cold Wallet - Stores digital assets off-line, making them secure from bad actors but more difficult to use. With advancements in security, cold wallets / hardware wallets are not as important.
+66. **Hash Rate**: The total combined computational power used to mine and process transactions on a proof-of-work blockchain.
+67. **Hot Wallet**: Is an online wallet and easily accessible. Most popular but security is a concern unless using a wallet like YAKKL Smart Wallet. YAKKL is one of the most secure wallets available.
+68. **HODL**: A misspelling of "hold," meaning to hold onto a cryptocurrency investment for the long term.
+69. **HODL Waves**: A chart that visualizes the holding behavior of Bitcoin investors over time, showing the proportion of coins that have remained unmoved for various periods.
+70. **ICO**: Initial Coin Offering, a fundraising method for new cryptocurrency projects.
+71. **ICO Bubble**: The period in 2017-2018 when the popularity of Initial Coin Offerings (ICOs) led to a significant increase in cryptocurrency prices, followed by a sharp decline.
+72. **IYKYK**: If You Know, You Know, signaling that only insiders will understand the text references.
+73. **Immutable**: Data that cannot be changed or modified by anyone after its creation, the core defining feature of a blockchain.
+74. **JOMO**: Joy of Missing Out, a term used to describe the feeling of contentment or relief that comes from not investing in a particular cryptocurrency or participating in a specific trend.
+75. **Kimchi Premium**: The difference in cryptocurrency prices between South Korean exchanges and global exchanges, often resulting in higher prices on South Korean platforms due to local market conditions and regulations.
+76. **KYC**: Know Your Customer, a process used by businesses to verify the identity of their clients to prevent fraud and money laundering.
+77. **Lambo**: Short for Lamborghini, a term used to describe the aspirational wealth and lifestyle associated with successful cryptocurrency investing.
+78. **Layer 1**: A base network or blockchain, such as Bitcoin or Ethereum.
+79. **Layer 2**: A scaling solution built on top of an existing blockchain to improve transaction speed and reduce costs.
+80. **Lazy Minting**: A process in which an NFT is created only when it is purchased, rather than being pre-minted and stored on the blockchain.
+81. **LFG**: Let's F***ing Go! Used to signal extreme excitement and positivity about a new project.
+82. **Liquidity Mining**: Providing liquidity to a decentralized exchange or DeFi platform in exchange for rewards.
+83. **Liquidation Cascade**: A situation in which a series of liquidations in leveraged trading positions triggers further liquidations, leading to a rapid decline in a cryptocurrency's price.
+84. **Long Squeeze**: A situation in which investors who have taken long positions in a cryptocurrency are forced to sell their holdings due to a sudden price decline, further exacerbating the price drop.
+85. **Mainnet**: The live, fully functional version of a blockchain network, as opposed to a testnet.
+86. **Maxi**: Maximalist, someone who believes that one particular crypto is the only viable one by far and predominantly invests in it.
+87. **MCAP**: Market Capitalization, the total value of a cryptocurrency, calculated by multiplying its price by its circulating supply.
+88. **McAfee Effect**: The impact on a cryptocurrency's price following a positive or negative tweet or statement by John McAfee, a well-known figure in the crypto community.
+89. **Mempool**: A waiting area for transactions that have been submitted but not yet included in a block.
+90. **Merkle Tree**: A data structure used in blockchain technology to efficiently and securely verify the integrity of large datasets.
+91. **Metaverse**: A digital universe with all the aspects of the real world — real-time interactions and economies.
+92. **Miner Capitulation**: A situation in which cryptocurrency miners sell their holdings en masse, often in response to declining prices or increased mining difficulty.
+93. **Mining**: The process of validating transactions and adding new blocks to a proof-of-work blockchain, rewarding miners with cryptocurrency.
+94. **Mint**: The creation of a new NFT token, turns a digital file into a crypto collectible or digital asset.
+95. **Moon (to the moon)**: Hoping that a specific token's price will explode, hitting the moon.
+96. **Moon Bag**: A small portion of a cryptocurrency investment that an investor holds in case the price "goes to the moon."
+97. **Moonshot**: A high-risk, high-reward investment opportunity in the cryptocurrency market.
+98. **Multisig**: Short for multi-signature, a type of digital signature that requires multiple parties to approve a transaction.
+99. **NFT**: Non Fungible Token, a unique digital object that confers ownership of a virtual good, like a digital artwork or online collectible.
+100. **Nocoiner, No-Coiner, or NC**: Someone who does not hold any cryptocurrency.
+101. **Node**: A computer connected to a blockchain network that helps validate and relay transactions.
+102. **Nonce**: A random number used in the mining process to generate a unique hash for each block.
+103. **Noob**: A newcomer to the world of cryptocurrency, often lacking knowledge and experience in trading and investing.
+104. **Normies**: People outside of the industry who don't necessarily understand the foundations of crypto and web3.
+105. **Oracle**: A system that provides real-world data to smart contracts on a blockchain.
+106. **Paper Hands**: Selling a cryptocurrency investment at the first sign of trouble or loss.
+107. **Permissionless**: Often used to describe blockchains, a system where no entity can regulate who can use it and how.
+108. **Plankton**: Small-scale investors with limited holdings in a particular cryptocurrency.
+109. **Private Key**: A secret string of characters used to access and manage a cryptocurrency wallet.
+110. **Proof of Stake**: A consensus protocol in some blockchains as a way of validating transactions. For example, Ethereum requires 32 ETH per validator. Some of the staked ETH can be taken by the network if a validator did not act in the best interest of the blockchain. Validators also receive rewards so there is a high incentive to follow the rules.
+111. **Proof of "Steak"**: A humorous term used to describe the process of using cryptocurrency gains to buy expensive meals or luxury items, such as steak dinners.
+112. **Proof of Work**: A consensus protocol that requires what are known as "miners." Each miner races to solve some complex equation, depending on the blockchain, and the one that is first gets the reward. For example, Bitcoin uses a Proof of Work which is why you often hear that miners are using so much energy.
+113. **Public Key**: A string of characters derived from a private key, used as an address to receive cryptocurrency.
+114. **Pump and Dump**: A manipulative scheme to artificially inflate a cryptocurrency's price before selling at a higher price.
+115. **Ramen Profitability**: A state in which a cryptocurrency miner's profits are sufficient to cover their basic living expenses, such as the cost of ramen noodles.
+116. **Relative Strength Index (RSI)**: A technical analysis indicator that measures the speed and magnitude of a cryptocurrency's price changes to identify overbought or oversold conditions.
+117. **Rekt**: A significant loss or failure in the cryptocurrency market.
+118. **Rug Pull**: A type of crypto scam where the liquidity of a new cryptocurrency is quickly removed from a decentralized exchange, causing the underlying price of the security to collapse and the original creators of the project to become rich.
+119. **Satoshi**: The smallest unit of Bitcoin, named after its pseudonymous creator Satoshi Nakamoto.
+120. **Satoshi Cycle**: A theory that suggests the price of Bitcoin moves in predictable patterns based on the halving cycle.
+121. **Sats**: Short for Satoshis, the smallest unit of Bitcoin (0.00000001 BTC).
+122. **Sats Stacking**: The practice of accumulating Bitcoin by regularly purchasing small amounts, measured in satoshis (sats).
+123. **Seed Phrase**: A series of words that unlocks your crypto wallet. It’s like your bank account number, your social security number, date of birth, home address, and ATM pin — all in one. If someone gets it, they can take all your Crypto assets.
+124. **Sharding**: A scaling technique used by some blockchain networks, dividing the network into smaller partitions or shards that can process transactions independently.
+125. **Shill**: Over-promoting a project, usually with some financial motivation.
+126. **Shitcoin**: A derogatory term for a cryptocurrency that has little to no value or utility, often created as a scam or joke.
+127. **Short Squeeze**: A situation in which investors who have taken short positions in a cryptocurrency are forced to buy back their positions due to a sudden price increase, further driving up the price.
+128. **Smart Contract**: A self-executing contract with the terms of the agreement directly written into code.
+129. **Smart Wallet**: A hot wallet with multiple levels of security and encryption. Some, such as YAKKL Smart Wallet with it's Emergency Kit, can possibly replace the need for a cold wallet or hardware wallet.
+130. **Stablecoin**: A type of cryptocurrency whose value is pegged to a stable asset, such as the U.S. dollar or gold.
+131. **Staking**: Using your crypto to secure a Proof-of-Stake (POS) network and earn rewards.
+132. **Stale Blocks**: Blocks on a blockchain network that are valid but not added to the main chain.
+133. **Social Token**: A type of cryptocurrency that a brand, community, or influencer can use to monetize themselves.
+134. **Testnet**: A testing environment for a blockchain network, used to test new features and upgrades before deploying them to the mainnet.
+135. **Token**: A representation of an asset, can be held, traded, or staked to earn interest TRUSTLESS — an environment where there is no centralized authority such as a bank.
+136. **Token Velocity**: The speed at which tokens change hands within a particular ecosystem, which can affect their value and utility.
+137. **Token Vesting**: The process of gradually releasing tokens to their owners over a set period, often used to prevent large-scale selling and price manipulation.
+138. **Tokenomics**: The economic model and characteristics of a cryptocurrency, including its supply, distribution, and incentive mechanisms.
+139. **TradFi**: Short for traditional finance, referring to everything in the financial world that is not crypto.
+140. **Trustless**: A system that does not require trust in a central authority or third party to function.
+141. **Volatility**: The degree of fluctuation in the price of a cryptocurrency over time.
+142. **WAGMI**: We're All Gonna Make It, expressing optimism about the future of the crypto market.
+143. **Wallet**: A software program or physical device used to store, send, and receive cryptocurrencies.
+144. **Wallet Address**: A unique string of characters used to receive cryptocurrency, derived from a public key.
+145. **Wash Trading**: A form of market manipulation in which an investor simultaneously buys and sells a cryptocurrency to create artificial trading volume and influence the price.
+146. **Weak Hands**: Investors who are prone to selling their cryptocurrency holdings at the first sign of market volatility or negative news, often resulting in losses.
+147. **Web3**: A term referring to the next generation of the internet, built on decentralized technologies like blockchain.
+148. **Whale**: An individual or entity holding a large amount of a particular cryptocurrency.
+149. **Whale Alert**: A real-time notification service that alerts traders and investors when large cryptocurrency transactions occur.
+150. **Whale Pump**: A sudden increase in a cryptocurrency's price caused by large-scale buying by a wealthy investor or group.
+151. **Whale Watching**: Monitoring large cryptocurrency transactions to predict market trends and potential price movements.
+152. **Whitepaper**: A document released by a cryptocurrency project outlining its purpose, technology, and roadmap.
+153. **Wrapped Token**: A token pegged to the value of an underlying asset, such as Bitcoin or Ethereum, that can be traded on a different blockchain network.
+154. **Wyckoff Method**: A technical analysis approach that aims to identify market trends and potential price movements based on supply and demand dynamics.
+155. **Yield Farming**: Lending or staking cryptocurrency to earn a yield or interest rate.
+156. **YAKKL Smart Wallet**: Leading secure digital wallet. Use of YAKKL's Emergency Kit allows you to easily maintain your crypto. https://yakkl.com.
+157. **Zero-Knowledge Proof**: A cryptographic method that allows one party to prove to another that they know a certain piece of information without revealing the information itself.
+158. **51% Attack**: A situation where a single entity or group controls more than 50% of a blockchain network's computing power, allowing them to manipulate transactions and double-spend coins.
 
 Congratulations on making it through this extensive list of crypto slang and terminology! By familiarizing yourself with these terms, you'll be well-equipped to navigate the complex and ever-evolving world of cryptocurrency and blockchain technology.
 
