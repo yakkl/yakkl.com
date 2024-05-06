@@ -30,14 +30,14 @@
             <!-- <FooterLink liClass="mb-4" href="/pricing">Pricing</FooterLink> -->
           </FooterLinkGroup>
         </div>
-        <div>
+        <!-- <div>
           <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Crypto</h2>
           <FooterLinkGroup class="text-xs">
             <FooterLink liClass="mb-4" href="/crypto/buy">Buy</FooterLink>
             <FooterLink liClass="mb-4" href="/crypto/buy">Sell</FooterLink>
             <FooterLink liClass="mb-4" href="/crypto/buy">Swap</FooterLink>
           </FooterLinkGroup>
-        </div>
+        </div> -->
         <div>
           <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Support</h2>
           <FooterLinkGroup class="text-xs">

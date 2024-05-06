@@ -1041,6 +1041,7 @@
     const PATH_SETTINGS = "/settings";
     const PATH_WEB3 = "/web3";
     const PATH_ETHEREUM_TRANSACTIONS_SEND = "/accounts/ethereum/transactions/send";
+    // We currently do not offer any buy/sell functionality nor do we have a swap feature
     const PATH_ETHEREUM_TRANSACTIONS_SWAP = "/accounts/ethereum/transactions/swap";
     const PATH_ETHEREUM_TRANSACTIONS_SELL = "/accounts/ethereum/transactions/sell";
     const PATH_ETHEREUM_TRANSACTIONS_STAKE = "/accounts/ethereum/transactions/stake";

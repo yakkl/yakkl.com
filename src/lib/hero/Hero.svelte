@@ -10,7 +10,7 @@
         <img class="self-center " src="/images/yakkl-dream.png" alt="">
         <p class="mx-auto mt-10 max-w-md text-lg text-gray-500 sm:mt-10 sm:text-xl md:max-w-3xl">
           <!-- The YAKKL®  Smart Wallet offers highly secure storage for your digital assets, with an easy-to-use interface that prioritizes user experience. With YAKKL, you can easily and safely manage your cryptocurrencies, making transactions and tracking your portfolio with confidence. Plus, our cutting-edge security measures ensure that your assets are always protected. -->
-          Introducing the YAKKL® Smart Wallet, the simplest way to buy, sell, and swap cryptocurrencies. Gone are the days of crypto being a hassle and difficult to get into. Our easy-to-use features, built-in AI support, and advanced security options make crypto accessible to everyone. YAKKL® is the perfect solution for everyone. Try YAKKL®  today and experience the future of crypto!          
+          Introducing the YAKKL® Smart Wallet, the simplest way to manage and secure your cryptocurrencies. Gone are the days of crypto being a hassle and difficult to get into. Our easy-to-use features, built-in AI support, and advanced security options make crypto accessible to everyone. YAKKL® is the perfect solution for everyone. Try YAKKL®  today and experience the future of crypto!          
         </p>
         <div class="mx-auto mt-10 sm:flex sm:justify-center lg:justify-start">
           <div class="">
