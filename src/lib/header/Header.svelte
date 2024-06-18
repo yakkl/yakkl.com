@@ -54,7 +54,7 @@
     </NavLi> -->
     <NavLi id="nav-menu1" class="cursor-pointer">Company<Icon name="chevron-down-solid" class="w-3 h-3 ml-2 text-white dark:text-white" />
       <Dropdown triggeredBy="#nav-menu1" class="w-44 z-20">
-        <DropdownItem href="/company/about">About</DropdownItem>
+        <!-- <DropdownItem href="/company/about">About</DropdownItem> -->
         <DropdownItem href="/company/partnering">Partnering</DropdownItem>
         <!-- <DropdownItem href="/company/newsletter">Newsletters</DropdownItem> -->
         <DropdownItem href="/company/contactus">Contact Us</DropdownItem>

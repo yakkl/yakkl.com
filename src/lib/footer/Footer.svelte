@@ -49,7 +49,7 @@
         <div>
           <h2 class="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Company</h2>
           <FooterLinkGroup class="text-xs">
-            <FooterLink liClass="mb-4" href="/company/about">About</FooterLink>
+            <!-- <FooterLink liClass="mb-4" href="/company/about">About</FooterLink> -->
             <!-- <FooterLink liClass="mb-4" href="https://yakkl.pub">Blog</FooterLink> -->
             <FooterLink liClass="mb-4" href="/company/contactus">Contact us</FooterLink>
             <!-- <FooterLink liClass="mb-4" href="/company/newsletter">Newsletter</FooterLink> -->
