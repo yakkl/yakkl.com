@@ -43,6 +43,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-markdown": "^0.3.0"
+		"svelte-markdown": "^0.4.1"
 	}
 }
