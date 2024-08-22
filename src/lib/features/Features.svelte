@@ -116,7 +116,7 @@
           </div>
         </div>
 
-        <!-- <div>
+        <div>
           <div>
             <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-white bg-opacity-10">
               <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -126,10 +126,10 @@
           </div>
           <div class="mt-6">
             <h3 class="text-lg font-semibold leading-8 text-white">Buy, sell or swap</h3>
-            <p class="mt-2 text-base leading-7 text-gray-200">You can now buy, sell or swap crypto right from your wallet and you maintain control of your account at all times! No more worrying if some exchange goes out of business. <span class="inline-flex items-center rounded-full bg-gray-100 hover:bg-gray-200 px-2.5 py-0.5 text-xs font-medium text-gray-800">Sell/Swap in testing</span>
+            <p class="mt-2 text-base leading-7 text-gray-200">You can now buy, sell or swap crypto right from your wallet and you maintain control of your account at all times! No more worrying if some exchange goes out of business. <span class="inline-flex items-center rounded-full bg-gray-100 hover:bg-gray-200 px-2.5 py-0.5 text-xs font-medium text-gray-800">Swapping is in testing</span>
             </p>
           </div>
-        </div> -->
+        </div>
 
         <div>
           <div>

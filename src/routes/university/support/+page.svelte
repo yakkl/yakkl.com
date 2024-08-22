@@ -47,7 +47,7 @@
             Does YAKKL® have different versions and are they FREE?
           </div>
           <div class="collapse-content italic ml-4"> 
-            <p>Great question! YAKKL® has different versions, 'standard' and 'premier'. Our 'enterprise' and 'institution' releases will be available in 2024. The 'standard' version is free. The 'premier' version has a very small annual subscription fee to offset 3rd party fees due to the level of security and network availability. However, until Jan 1, 2025, the 'premier' version is FREE!</p>
+            <p>Great question! YAKKL® has different versions, 'standard' and 'premier'. Our 'enterprise' and 'institution' releases will be available late 2024 or early 2025. The 'standard' version is free. The 'premier' version has a very small annual subscription fee to offset 3rd party fees due to the level of security and network availability. </p>
           </div>
         </div>
         <div class="collapse collapse-arrow join-item border border-base-300">
@@ -66,6 +66,7 @@
           </div>
           <div class="collapse-content italic ml-4"> 
             <p>Glad you asked?  If there is anything not behaving as you expect then let us know. If something you are trying to do is complicated or confusing then let us know your thoughts on how to improve it. If an expected feature is missing or you can't easily find it then please let us know and be as detailed as you like. We welcome all feedback!</p>
+            <p>Also, if you are a developer and want to contribute, please click the Github logo and it will take you to the open source repo.</p>
           </div>
         </div>
         <div class="collapse collapse-arrow join-item border border-base-300">

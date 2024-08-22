@@ -1,112 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>YAKKL® Smart Wallet</title>
-		<meta charset="utf-8" />
-		<meta content="YAKKL® Smart Wallet" property="og:title">
-		<meta content="YAKKL® Smart Wallet" property="twitter:title">
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://js.stripe.com https://crypto-js.stripe.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://cdn.jsdelivr.net https://sibforms.com https://unpkg.com https://cdn.amplitude.com">
-		<!-- https://widget.freshworks.com  -->
-		
-		<script src="https://cdn.amplitude.com/libs/analytics-browser-2.6.2-min.js.gz"></script><script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.1.9-min.js.gz"></script><script src="https://cdn.amplitude.com/libs/plugin-autocapture-browser-0.9.0-min.js.gz"></script><script>window.amplitude.init('d06fa418890d73dbbf76400dd298190c');window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.add(window.amplitudeAutocapturePlugin.plugin());</script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YAKKL® Smart Wallet | Secure Crypto Management</title>
 
-		<script src="/js/fontawesome-8d8e5192b2.js"></script>
-		
-		<script src="https://js.stripe.com/v3/"></script>
-		<script src="https://crypto-js.stripe.com/crypto-onramp-outer.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="%sveltekit.assets%/favicon.png">
+    <link rel="apple-touch-icon" href="%sveltekit.assets%/apple-touch-icon.png">
 
-		%sveltekit.head%
-		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-	</head>
-	<body data-sveltekit-preload-data="hover" style="background-color: white">
-		<!-- Should take a look at dark mode again! Remove the style above and set it correctly for tailwind -->
-		<div style="display: contents">%sveltekit.body%</div>
-		<!-- <div>%sveltekit.body%</div> -->
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="YAKKL® Smart Wallet - A secure, open-source cryptocurrency wallet for managing your digital assets. Available on Google Chrome store.">
+    <meta name="keywords" content="YAKKL, Smart Wallet, Cryptocurrency, Blockchain, Digital Assets, Open Source">
+    <meta name="author" content="YAKKL">
 
-		<script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.7.2/dist/cookieconsent.js"></script>
-		<script src="/js/cookie_consent.js"></script>         
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yakkl.com/?utm_source=yakkl&utm_medium=website">
+    <meta property="og:title" content="YAKKL® Smart Wallet | Secure Crypto Management">
+    <meta property="og:description" content="Manage your digital assets securely with YAKKL® Smart Wallet. Open-source and available on Google Chrome store.">
+    <meta property="og:image" content="https://yakkl.com/og-image.jpeg">
 
-		<script type="text/plain" data-cookiecategory="analytics" src="/js/analytics.js" defer></script>
-		<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRLTPV7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBFFBXMZS2"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-ZBFFBXMZS2');
-		</script>		
-		<!-- <script type="module">
-			import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js'
-	
-			const canvas = document.createElement('canvas')
-const ctx = canvas.getContext('2d')
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yakkl.com/?utm_source=yakkl&utm_medium=website">
+    <meta property="twitter:title" content="YAKKL® Smart Wallet | Secure Crypto Management">
+    <meta property="twitter:description" content="Manage your digital assets securely with YAKKL® Smart Wallet. Open-source and available on Google Chrome store.">
+    <meta property="twitter:image" content="https://yakkl.com/twitter-image.jpeg">
 
-// Define the waveform gradient
-const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height * 1.35)
-gradient.addColorStop(0, '#656666') // Top color
-gradient.addColorStop((canvas.height * 0.7) / canvas.height, '#656666') // Top color
-gradient.addColorStop((canvas.height * 0.7 + 1) / canvas.height, '#ffffff') // White line
-gradient.addColorStop((canvas.height * 0.7 + 2) / canvas.height, '#ffffff') // White line
-gradient.addColorStop((canvas.height * 0.7 + 3) / canvas.height, '#B1B1B1') // Bottom color
-gradient.addColorStop(1, '#B1B1B1') // Bottom color
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://js.stripe.com https://crypto-js.stripe.com https://www.googletagmanager.com https://www.google.com https://www.gstatic.com https://cdn.jsdelivr.net https://sibforms.com https://unpkg.com https://cdn.amplitude.com">
 
-// Define the progress gradient
-const progressGradient = ctx.createLinearGradient(0, 0, 0, canvas.height * 1.35)
-progressGradient.addColorStop(0, '#EE772F') // Top color
-progressGradient.addColorStop((canvas.height * 0.7) / canvas.height, '#EB4926') // Top color
-progressGradient.addColorStop((canvas.height * 0.7 + 1) / canvas.height, '#ffffff') // White line
-progressGradient.addColorStop((canvas.height * 0.7 + 2) / canvas.height, '#ffffff') // White line
-progressGradient.addColorStop((canvas.height * 0.7 + 3) / canvas.height, '#F6B094') // Bottom color
-progressGradient.addColorStop(1, '#F6B094') // Bottom color
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/js/fontawesome-8d8e5192b2.js" as="script">
+    <link rel="preload" href="https://js.stripe.com/v3/" as="script">
+    <link rel="preload" href="https://crypto-js.stripe.com/crypto-onramp-outer.js" as="script">
 
-			const wavesurfer = WaveSurfer.create({
-				container: document.body,
-				waveColor: gradient, //'rgb(200, 0, 200)',
-				progressColor: progressGradient, //'rgb(100, 0, 100)',
-				url: 'audio.wav',
-				  // Set a bar width
-  barWidth: 2,
-  // Optionally, specify the spacing between bars
-  //barGap: 1,
-  // And the bar radius
-  //barRadius: 2,
+    <!-- Amplitude Analytics -->
+    <script async src="https://cdn.amplitude.com/libs/analytics-browser-2.6.2-min.js.gz"></script>
+    <script async src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.1.9-min.js.gz"></script>
+    <script async src="https://cdn.amplitude.com/libs/plugin-autocapture-browser-0.9.0-min.js.gz"></script>
+    <script>
+        window.addEventListener('load', function() {
+            window.amplitude.init('d06fa418890d73dbbf76400dd298190c');
+            window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));
+            window.amplitude.add(window.amplitudeAutocapturePlugin.plugin());
+        });
+    </script>
 
-			})
-			
-//			wavesurfer.on('click', () => {
-//				wavesurfer.play()
-//			})
-wavesurfer.on('interaction', () => {
-	wavesurfer.playPause()
-})
+    <!-- External Scripts -->
+    <script defer src="/js/fontawesome-8d8e5192b2.js"></script>
+    <script defer src="https://js.stripe.com/v3/"></script>
+    <script defer src="https://crypto-js.stripe.com/crypto-onramp-outer.js"></script>
 
-// Hover effect
-{
-  const hover = document.querySelector('#hover')
-  const waveform = document.querySelector('#waveform')
-  waveform.addEventListener('pointermove', (e) => (hover.style.width = `${e.offsetX}px`))
-}
+    %sveltekit.head%
 
-// Current time & duration
-{
-  const formatTime = (seconds) => {
-    const minutes = Math.floor(seconds / 60)
-    const secondsRemainder = Math.round(seconds) % 60
-    const paddedSeconds = `0${secondsRemainder}`.slice(-2)
-    return `${minutes}:${paddedSeconds}`
-  }
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
 
-  const timeEl = document.querySelector('#time')
-  const durationEl = document.querySelector('#duration')
-  wavesurfer.on('decode', (duration) => (durationEl.textContent = formatTime(duration)))
-  wavesurfer.on('timeupdate', (currentTime) => (timeEl.textContent = formatTime(currentTime)))
-}
-		</script> -->
+    <!-- Cookie Consent -->
+    <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.7.2/dist/cookieconsent.js"></script>
+    <script src="/js/cookie_consent.js"></script>         
 
-		<!-- <script type="text/plain" data-cookiecategory="targeting" src="/js/targeting.js" defer></script> -->
-		<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=a8b2t0khih&ev=PageView&noscript=1"/></noscript>
-	</body>
+    <script type="text/plain" data-cookiecategory="analytics" src="/js/analytics.js" defer></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBFFBXMZS2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZBFFBXMZS2');
+    </script>		
+
+    <!-- Facebook Pixel (Noscript) -->
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=a8b2t0khih&ev=PageView&noscript=1"/></noscript>
+</body>
 </html>

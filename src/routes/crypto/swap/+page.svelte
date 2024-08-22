@@ -6,6 +6,9 @@
 
 <!-- <Gradient> -->
   <Header/>
-
+  <div>
+    <h1>Swap</h1>
+    <p>Swapping will be here shortly.
+  </div>
   <Footer/>
 <!-- </Gradient> -->

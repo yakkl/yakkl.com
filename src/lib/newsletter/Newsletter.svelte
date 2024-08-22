@@ -11,10 +11,7 @@
         </p>
         <p class="text-md lg:text-xl font-light text-gray-800 mb-8">
           Annoucing the <span class="font-bold text-gray-600">YAKKL® Smart Wallet</span>. A smart wallet that has 
-          <span class="font-bold">no equal</span>! We're releasing the YAKKL® Smart Wallet Google Chrome Extension 
-          in a limited release. A limited release simply means that only a certain number of users will be allowed to 
-          download the Chrome Extension. This is for stress testing and final tweaks. After that, everyone is welcome! 
-          So, stay informed and be notified by signing up. You can unsubscribe at anytime.
+          <span class="font-bold">no equal</span>! We're releasing the YAKKL® Smart Wallet Google Chrome Extension Standard edition for FREE!
         </p>
       </div>
       <div id="formEmailSubscribe" class="w-full lg:w-1/2 px-10 md:px-20 bg-gray-200 h-[200px]">

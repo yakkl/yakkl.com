@@ -13,3 +13,7 @@ chains.json
 **/experimentals
 **/new-experimentals
 
+**/pricing
+**/ai
+/src/routes/university/ethereum
+
