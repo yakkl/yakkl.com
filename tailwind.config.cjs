@@ -30,6 +30,9 @@ module.exports = {
       maxWidth: {
         '8xl': '88rem',
       },
+      borderRadius: {
+        '4xl': '2rem',
+      },
     }
   },
   plugins: [

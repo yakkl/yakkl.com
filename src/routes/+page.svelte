@@ -9,9 +9,11 @@
 
 <!-- <Gradient> -->
 
-  <Header/>
+  <!-- <Header/> -->
 
-  <Hero/>
+  <Hero>
+    <Header />
+  </Hero>
 
   <Features/>
 

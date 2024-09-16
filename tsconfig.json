@@ -3,6 +3,8 @@
 	"compilerOptions": {
 		"plugins": [{ "name": "vite-plugin-iso-import" }],
 		"allowSyntheticDefaultImports": true,
-		"ignoreDeprecations": "5.0"
-	}
+		"ignoreDeprecations": "5.0",
+		"types": ["svelte", "@sveltejs/kit"],
+	},
+	"include": ["src/**/*", "src/**/*", "src/**/*.d.ts", "src/app.d.ts"],
 }
