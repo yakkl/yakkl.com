@@ -1,9 +1,9 @@
 <script>
   import { browser as browserSvelte } from "$app/environment";
-  import Header from "$lib/header/Header.svelte";
-  import Gradient from "$lib/backgrounds/Gradient.svelte";
-  import Footer from "$lib/footer/Footer.svelte";
-  import { Timeline, TimelineItem, Button, Heading, P, Mark } from 'flowbite-svelte';
+  import Header from "$lib/components/Header.svelte";
+  import Footer from "$lib/components/Footer.svelte";
+  import { Timeline, TimelineItem, Heading, P, Mark } from 'flowbite-svelte';
+	import Content from "$lib/components/Content.svelte";
 
   let standaloneOnramp;
   let redirectUrl;
@@ -21,9 +21,7 @@
 
 </script>
 
-<!-- <Gradient> -->
-  <Header/>
-  
+<Content>  
   <div class="m-20 bg-white">
     <Heading tag="h1" class='mb-4'>Regain <Mark>control</Mark> over your buys, sells, swaps</Heading>
     <P>
@@ -74,5 +72,4 @@
     </div>
   </div>
 
-  <Footer/>
-<!-- </Gradient> -->
+</Content>

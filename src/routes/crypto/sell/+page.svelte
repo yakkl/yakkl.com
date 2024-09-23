@@ -1,14 +1,12 @@
 <script>
-  import Header from "$lib/header/Header.svelte";
-  import Gradient from "$lib/backgrounds/Gradient.svelte";
-  import Footer from "$lib/footer/Footer.svelte";
+  import Content from '$lib/components/Content.svelte';
+  import PageHeader from '$lib/components/PageHeader.svelte';
 </script>
 
-<!-- <Gradient> -->
-  <Header/>
-  <div>
-    <h1>Sell</h1>
-    <p>Selling will be here shortly.</p>
-  </div>
-  <Footer/>
-<!-- </Gradient> -->
+<Content>
+  <PageHeader>
+    <span slot="smallTitle">Selling</span>
+    <span slot="largeTitle">Sell through a centralized exchange such as Coinbase, Kraken, Binance, or others if you wish to convert your crypto to fiat (cash).</span>
+  </PageHeader>
+
+</Content>

@@ -1,4 +1,4 @@
-<div id="newsletter" class="block bg-white">
+<div id="newsletter" class="block bg-white pt-8">
   <section class="container mx-auto px-6">
     <div class="w-full lg:flex items-center">
       <div id="emailCTA" class="w-full lg:w-1/2">
@@ -14,9 +14,9 @@
           <span class="font-bold">no equal</span>! We're releasing the YAKKL® Smart Wallet Google Chrome Extension Standard edition for FREE!
         </p>
       </div>
-      <div id="formEmailSubscribe" class="w-full lg:w-1/2 px-10 md:px-20 bg-gray-200 h-[200px]">
+      <div id="formEmailSubscribe" class="w-full lg:w-1/2 px-10 md:px-20 bg-gray-200 h-[200px] rounded-3xl">
 
-        <h1 class="text-2xl lg:text-4xl font-bold text-gray-600 my-2 lg:my-6">Stay in touch!</h1>
+        <h1 class="text-2xl lg:text-4xl font-bold text-gray-600 my-2 lg:my-6">Stay in the know!</h1>
           <!-- svelte-ignore a11y-missing-attribute -->
           <iframe src="https://embeds.beehiiv.com/c52993ff-d645-4353-832b-cffdc65a14ce?slim=true" data-test-id="beehiiv-embed" height="52" width="100%" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
       </div>

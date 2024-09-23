@@ -1,14 +1,12 @@
 <script>
-  import Header from "$lib/header/Header.svelte";
-  import Gradient from "$lib/backgrounds/Gradient.svelte";
-  import Footer from "$lib/footer/Footer.svelte";
+  import Content from '$lib/components/Content.svelte';
+  import PageHeader from '$lib/components/PageHeader.svelte';
 </script>
 
-<!-- <Gradient> -->
-  <Header/>
-  <div>
-    <h1>Swap</h1>
-    <p>Swapping will be here shortly.
-  </div>
-  <Footer/>
-<!-- </Gradient> -->
+<Content>
+  <PageHeader>
+    <span slot="smallTitle">Swapping</span>
+    <span slot="largeTitle">Uniswap Swapping is being tested. It will be fully released shortly.</span>
+  </PageHeader>
+
+</Content>

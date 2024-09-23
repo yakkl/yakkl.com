@@ -1,7 +1,7 @@
 <script>
-import Header from "$lib/header/Header.svelte";
+import Header from "$lib/components/Header.svelte";
   // import Gradient from "$lib/backgrounds/Gradient.svelte";
-  import Footer from "$lib/footer/Footer.svelte";
+  import Footer from "$lib/components/Footer.svelte";
 </script>
 
 <!-- <Gradient> -->

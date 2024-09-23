@@ -1,25 +1,16 @@
 <script>
-  import { browser as browserSvelte } from "$app/environment";
-  import Header from "$lib/header/Header.svelte";
-  import Gradient from "$lib/backgrounds/Gradient.svelte";
-  import Footer from "$lib/footer/Footer.svelte";
-  import { Timeline, TimelineItem, Button, Heading, P, Mark } from 'flowbite-svelte';
-
+  // Import the reusable Content component and PageHeader
+  import Content from '$lib/components/Content.svelte';
+  import PageHeader from '$lib/components/PageHeader.svelte';
 </script>
 
-<!-- <Gradient> -->
-  <Header/>
-  <div class="m-20">
-    <Heading tag="h1" class='mb-4'>Need <Mark>HELP</Mark>?</Heading>
-    <P>
-      Below is an <span class="underline">FAQ</span> of the most common questions:
-    </P>
-  </div>
+<Content>
+  <PageHeader>
+    <span slot="smallTitle">Support FAQ</span>
+    <span slot="largeTitle">Below is an <span class="underline">FAQ</span> of the most common questions:</span>
+  </PageHeader>
 
-  <div class="divider text-gray-800">FAQ</div>
-
-
-  <div class="justify-center flex">
+  <div class="justify-center flex mt-14">
     <div class="border-base-300 bg-base-100 rounded-box flex min-h-[6rem] md:min-w-[45rem] 2xl:min-w-[70rem] max-w-4xl flex-wrap items-center justify-center gap-2 overflow-x-hidden border bg-cover bg-top p-4">
 
       <div class="join join-vertical w-full">
@@ -99,6 +90,14 @@
       </div>
     </div>
   </div>
+  
+  <div class="mt-12" /> <!-- Spacer -->
+
+</Content>
+
+
+
+
 
   <!-- <div class="mx-20 flex flex-col md:flex-row">
     <Timeline class="">
@@ -123,5 +122,3 @@
       </TimelineItem>
     </Timeline>
   </div> -->
-  <Footer/>
-<!-- </Gradient> -->

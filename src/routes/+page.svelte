@@ -1,24 +1,20 @@
 <script>
-  import Gradient from '$lib/backgrounds/Gradient.svelte';
-  import Header from '$lib/header/Header.svelte';
-  import Hero from '$lib/hero/Hero.svelte';
-  import Features from '$lib/features/Features.svelte';
-  import Newsletter from '$lib/newsletter/Newsletter.svelte';
-  import Footer from '$lib/footer/Footer.svelte';
+  import Header from '$lib/components/Header.svelte';
+  import Hero from '$lib/components/Hero.svelte';
+  import Features from '$lib/components/Features.svelte';
+  import Newsletter from '$lib/components/Newsletter.svelte';
+  import Content from '$lib/components/Content.svelte';
 </script>
 
-<!-- <Gradient> -->
-
-  <!-- <Header/> -->
+<Content showHeader={false} isHomePage={true}>
 
   <Hero>
-    <Header />
+    <Header isHomePage=true transparent=true />
   </Hero>
 
   <Features/>
 
   <Newsletter/>
 
-  <Footer/>
+</Content>
 
-<!-- </Gradient> -->
